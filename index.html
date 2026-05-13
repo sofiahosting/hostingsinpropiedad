@@ -1478,11 +1478,17 @@
       <form id="mc-waitlist-form" action="https://github.us8.list-manage.com/subscribe/post?u=b6e40ec0a713bd6b97f9d4422&amp;id=273eed67f7&amp;f_id=006fdae1f0" method="post" target="mc-waitlist-iframe">
         <input class="modal-input" type="text" name="FNAME" placeholder="Tu nombre" required>
         <input class="modal-input" type="email" name="EMAIL" placeholder="Tu correo electrónico" required>
-        <!-- Tag as lista de espera -->
-        <input type="hidden" name="tags" value="lista de espera">
-        <input type="hidden" name="MMERGE6" value="lista de espera">
+        <!-- Hidden field to identify lista de espera subscribers -->
+        <input type="hidden" name="MMERGE3" value="lista de espera">
         <div style="position:absolute;left:-5000px;" aria-hidden="true">
           <input type="text" name="b_b6e40ec0a713bd6b97f9d4422_273eed67f7" tabindex="-1" value="">
+        </div>
+        <!-- Consent checkbox -->
+        <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:1rem;background:var(--beige);border-radius:10px;padding:12px 14px;text-align:left;">
+          <input type="checkbox" id="waitlist-consent" style="margin-top:3px;width:16px;height:16px;flex-shrink:0;accent-color:#7BA7C4;cursor:pointer;" required>
+          <label for="waitlist-consent" style="font-size:13px;color:var(--mid);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.6;cursor:pointer;">
+            Acepto recibir correos de Sofía Retif sobre el lanzamiento de Hosting Sin Propiedad. Puedo cancelar cuando quiera.
+          </label>
         </div>
         <button type="submit" class="modal-btn" onclick="handleWaitlist(event)">Quiero mi precio especial →</button>
       </form>

@@ -16,6 +16,8 @@
     --beige-dark: #E8DDC8;
     --gold: #C8A96E;
     --gold-dark: #A8893E;
+  --rose: #C87D87;
+  --rose-pale: #F7EDEF;
     --dark: #2C2820;
     --mid: #6B6355;
     --white: #FDFAF5;
@@ -90,7 +92,7 @@
   }
   .hero h1 em {
     font-style: italic;
-    color: #F5EFE4;
+    color: #C87D87;
   }
   .hero-sub {
     font-size: 17px;
@@ -125,7 +127,7 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: var(--gold);
+    background: var(--rose);
     color: white;
     font-size: 15px;
     font-weight: 500;
@@ -585,7 +587,7 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: var(--gold);
+    background: var(--rose);
     color: white;
     font-size: 16px;
     font-weight: 500;
@@ -729,7 +731,7 @@
     padding: 15px;
     border-radius: 50px;
     border: none;
-    background: var(--gold);
+    background: var(--rose);
     color: white;
     font-size: 15px;
     font-weight: 500;
@@ -743,6 +745,142 @@
   .modal-success { display: none; }
   .modal-success.show { display: block; }
   .modal-form.hide { display: none; }
+
+
+  /* ASESORÍA 1:1 */
+  .consulta {
+    padding: 5rem 6%;
+    background: var(--white);
+  }
+  .consulta-box {
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #2C2820, #3d352b);
+    border-radius: 24px;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .consulta-box::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    background: rgba(200,125,135,0.12);
+  }
+  .consulta-content { position: relative; z-index: 1; }
+  .consulta-badge {
+    display: inline-block;
+    background: rgba(200,125,135,0.18);
+    color: var(--rose);
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 2px; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 99px;
+    border: 1px solid rgba(200,125,135,0.35);
+    margin-bottom: 1.25rem;
+  }
+  .consulta-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px; font-weight: 700;
+    color: white; line-height: 1.25;
+    margin-bottom: 1rem;
+  }
+  .consulta-content p {
+    font-size: 14px; color: rgba(255,255,255,0.65);
+    font-weight: 300; line-height: 1.7;
+    margin-bottom: 1.5rem; max-width: 440px;
+  }
+  .consulta-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 1.75rem; }
+  .consulta-item {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 13px; color: rgba(255,255,255,0.85);
+  }
+  .consulta-check {
+    width: 18px; height: 18px; border-radius: 50%;
+    background: var(--rose);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 9px; color: white; flex-shrink: 0; margin-top: 1px;
+  }
+  .consulta-card {
+    position: relative; z-index: 1;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 18px;
+    padding: 2rem;
+    text-align: center;
+  }
+  .consulta-price-label {
+    font-size: 11px; color: rgba(255,255,255,0.45);
+    text-transform: uppercase; letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+  }
+  .consulta-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 44px; font-weight: 700;
+    color: white; line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+  .consulta-price span { font-size: 16px; opacity: 0.6; font-family: 'DM Sans', sans-serif; }
+  .consulta-duration {
+    font-size: 12px; color: rgba(255,255,255,0.45);
+    margin-bottom: 1.5rem;
+  }
+  .consulta-btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%;
+    background: var(--rose); color: white;
+    font-size: 15px; font-weight: 500; font-family: 'DM Sans', sans-serif;
+    padding: 16px; border-radius: 50px; border: none; cursor: pointer;
+    box-shadow: 0 8px 28px rgba(200,125,135,0.35);
+    text-decoration: none;
+    transition: transform 0.2s ease;
+  }
+  .consulta-btn:hover { transform: translateY(-2px); }
+  .consulta-note {
+    font-size: 11px; color: rgba(255,255,255,0.4);
+    margin-top: 0.75rem; line-height: 1.5;
+  }
+  @media (max-width: 768px) {
+    .consulta-box { grid-template-columns: 1fr; padding: 2rem; }
+  }
+
+
+  .cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.95);
+    color: #2C2820;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'DM Sans', sans-serif;
+    padding: 14px 28px;
+    border-radius: 50px;
+    border: 1.5px solid rgba(255,255,255,0.95);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin-left: 12px;
+  }
+  .cta-secondary:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+  .hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  @media (max-width: 600px) {
+    .hero-buttons { flex-direction: column; align-items: stretch; gap: 10px; }
+    .cta-secondary { margin-left: 0; justify-content: center; }
+  }
 
 </style>
 </head>
@@ -767,10 +905,15 @@
       </div>
       <p style="margin:0;font-size:14px;color:rgba(255,255,255,0.9);font-weight:300;"><strong style="font-weight:500;">+120 alumnos</strong> ya empezaron en Latinoamérica</p>
     </div>
-    <a href="#" onclick="event.preventDefault();openWaitlist()" class="cta-hero">
-      Quiero mi lugar en la lista →
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <div class="hero-buttons">
+      <a href="#" onclick="event.preventDefault();openWaitlist()" class="cta-hero">
+        Quiero mi lugar en la lista →
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://calendly.com/sofiaretif" target="_blank" class="cta-secondary">
+        Agendar llamada 1:1
+      </a>
+    </div>
   </div>
   <div class="hero-img">
     <svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:860px;border-radius:20px;overflow:hidden;box-shadow:0 32px 80px rgba(20,18,30,0.35)">
@@ -819,11 +962,11 @@
   <text x="52" y="151" font-family="Arial,sans-serif" font-size="11" fill="white" opacity="0.7">sin ser dueño de una propiedad</text>
 
   <!-- Badge -->
-  <rect x="52" y="165" width="100" height="20" rx="10" fill="#C8A96E" opacity="0.95"/>
+  <rect x="52" y="165" width="100" height="20" rx="10" fill="#C87D87" opacity="0.95"/>
   <text x="68" y="179" font-family="Arial,sans-serif" font-size="10" fill="white" font-weight="600">By Sofía Retif</text>
 
   <!-- Stars -->
-  <text x="52" y="205" font-family="Arial,sans-serif" font-size="13" fill="#F5C842">★★★★★</text>
+  <text x="52" y="205" font-family="Arial,sans-serif" font-size="13" fill="#C87D87">★★★★★</text>
   <text x="122" y="204" font-family="Arial,sans-serif" font-size="10" fill="white" opacity="0.5">4.8 · 120 alumnos</text>
 
   <!-- Play button overlay — centered on right half -->
@@ -849,7 +992,7 @@
   <text x="51" y="347" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white">1</text>
   <text x="76" y="338" font-family="Arial,sans-serif" font-size="12" font-weight="600" fill="#1a1830">Fundamentos del arbitraje</text>
   <text x="76" y="352" font-family="Arial,sans-serif" font-size="10" fill="#6B6355">Clase activa · 3 videos</text>
-  <rect x="492" y="336" width="52" height="14" rx="7" fill="#C8A96E"/>
+  <rect x="492" y="336" width="52" height="14" rx="7" fill="#C87D87"/>
   <text x="500" y="347" font-family="Arial,sans-serif" font-size="9" fill="white" font-weight="600">Activo</text>
 
   <rect x="32" y="370" width="556" height="40" rx="6" fill="white" stroke="#e8e3d8" stroke-width="1"/>
@@ -910,7 +1053,7 @@
   <rect x="671" y="370" width="132" height="7" rx="2" fill="white" opacity="0.45"/>
   <rect x="671" y="382" width="72" height="5" rx="2" fill="white" opacity="0.2"/>
 
-  <rect x="632" y="418" width="244" height="42" rx="10" fill="#C8A96E"/>
+  <rect x="632" y="418" width="244" height="42" rx="10" fill="#C87D87"/>
   <rect x="672" y="433" width="162" height="12" rx="3" fill="white" opacity="0.92"/>
 
   <line x1="620" y1="52" x2="620" y2="560" stroke="#1e1e35" stroke-width="1"/>
@@ -1010,11 +1153,11 @@
     <div class="module-item"><div class="module-num">10</div><div><div class="module-title">Escalar y crecer a largo plazo</div><div class="module-desc">Cómo pasar de una propiedad a varias sin perder calidad, y cómo posicionarte para construir un negocio sostenible en el tiempo.</div></div></div>
     <!-- BONO FREEDOM METHOD -->
     <div style="margin-top:1.5rem;background:linear-gradient(135deg,#1D4E5F,#2A6B80);border-radius:14px;padding:1.5rem;display:flex;gap:14px;align-items:flex-start;">
-      <div style="min-width:44px;height:44px;border-radius:10px;background:#C8A96E;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;">🎥</div>
+      <div style="min-width:44px;height:44px;border-radius:10px;background:#C87D87;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;">🎥</div>
       <div>
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap;">
           <span style="font-size:15px;font-weight:600;color:white;">Bono exclusivo — Airbnb Freedom Method</span>
-          <span style="background:#C8A96E;color:white;font-size:10px;font-weight:700;padding:3px 10px;border-radius:99px;letter-spacing:1px;">INCLUIDO</span>
+          <span style="background:#C87D87;color:white;font-size:10px;font-weight:700;padding:3px 10px;border-radius:99px;letter-spacing:1px;">INCLUIDO</span>
         </div>
         <p style="font-size:13px;color:rgba(255,255,255,0.8);line-height:1.6;margin:0;">Acceso completo a todas las clases grabadas del curso en vivo que di. Estrategias avanzadas que complementan el curso principal, editadas para que sientas que lo tomaste en tiempo real.</p>
       </div>
@@ -1128,7 +1271,7 @@
               <span>Baja (30%)</span><span>Normal (65%)</span><span>Alta (95%)</span>
             </div>
           </div>
-          <button onclick="calcMostrarEmail()" style="width:100%;padding:15px;border-radius:50px;border:none;background:#C8A96E;color:white;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;margin-bottom:8px;">Ver mi resultado →</button>
+          <button onclick="calcMostrarEmail()" style="width:100%;padding:15px;border-radius:50px;border:none;background:#C87D87;color:white;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;margin-bottom:8px;">Ver mi resultado →</button>
           <button onclick="calcStep(2)" style="width:100%;padding:10px;border-radius:50px;border:none;background:none;color:var(--mid);font-size:13px;font-family:'DM Sans',sans-serif;cursor:pointer;">← Regresar</button>
         </div>
 
@@ -1158,7 +1301,7 @@
               Acepto recibir contenido de Sofía Retif sobre Airbnb y negocios digitales. Puedo cancelar cuando quiera.
             </label>
           </div>
-          <button onclick="calcMostrarResultado()" style="width:100%;padding:15px;border-radius:50px;border:none;background:#C8A96E;color:white;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;">Ver mi resultado →</button>
+          <button onclick="calcMostrarResultado()" style="width:100%;padding:15px;border-radius:50px;border:none;background:#C87D87;color:white;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;">Ver mi resultado →</button>
           <p style="font-size:11px;color:var(--mid);margin-top:0.75rem;opacity:0.7;">Sin spam · Solo tu resultado</p>
         </div>
 
@@ -1279,10 +1422,10 @@
     // CTA
     if (es_rentable || puede_mejorar) {
       html += `<div style="background:linear-gradient(135deg,#2C2820,#4A4235);border-radius:16px;padding:1.75rem;text-align:center;margin-bottom:1rem;">
-        <span style="display:inline-block;background:rgba(200,169,110,0.2);color:#C8A96E;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:99px;border:1px solid rgba(200,169,110,0.35);margin-bottom:0.75rem;">¡Próximo lanzamiento!</span>
+        <span style="display:inline-block;background:rgba(200,125,135,0.15);color:#C87D87;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:99px;border:1px solid rgba(200,169,110,0.35);margin-bottom:0.75rem;">¡Próximo lanzamiento!</span>
         <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:white;margin-bottom:0.5rem;line-height:1.3;">Aprende exactamente cómo hacerlo en ${ciudad}</h3>
         <p style="font-size:13px;color:rgba(255,255,255,0.6);font-weight:300;line-height:1.6;margin-bottom:1.25rem;">En <strong style="color:white;">Hosting Sin Propiedad</strong> te enseño paso a paso cómo conseguir una propiedad, amueblarla, publicarla y automatizarla.</p>
-        <a href="#" onclick="event.preventDefault();openWaitlist()" target="_blank" style="display:inline-block;background:#C8A96E;color:white;font-size:15px;font-weight:500;padding:14px 32px;border-radius:50px;text-decoration:none;">Únete a la lista de espera →</a>
+        <a href="#" onclick="event.preventDefault();openWaitlist()" target="_blank" style="display:inline-block;background:#C87D87;color:white;font-size:15px;font-weight:500;padding:14px 32px;border-radius:50px;text-decoration:none;">Únete a la lista de espera →</a>
       </div>`;
     } else {
       html += `<div style="background:var(--beige);border-radius:12px;padding:1.5rem;border:1px solid var(--beige-dark);margin-bottom:1rem;">
@@ -1296,7 +1439,7 @@
       <div style="background:linear-gradient(135deg,#2C2820,#4A4235);border-radius:16px;padding:1.75rem;text-align:center;margin-bottom:1rem;">
         <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:white;margin-bottom:0.5rem;">Aprende a encontrar la propiedad correcta</h3>
         <p style="font-size:13px;color:rgba(255,255,255,0.6);font-weight:300;line-height:1.6;margin-bottom:1.25rem;">En <strong style="color:white;">Hosting Sin Propiedad</strong> te enseño cómo validar mercados y maximizar ingresos en cualquier ciudad.</p>
-        <a href="#" onclick="event.preventDefault();openWaitlist()" target="_blank" style="display:inline-block;background:#C8A96E;color:white;font-size:15px;font-weight:500;padding:14px 32px;border-radius:50px;text-decoration:none;">Únete a la lista de espera →</a>
+        <a href="#" onclick="event.preventDefault();openWaitlist()" target="_blank" style="display:inline-block;background:#C87D87;color:white;font-size:15px;font-weight:500;padding:14px 32px;border-radius:50px;text-decoration:none;">Únete a la lista de espera →</a>
       </div>`;
     }
 
@@ -1393,25 +1536,25 @@
   <p class="section-sub">Personas reales que aplicaron el sistema.</p>
   <div class="testi-grid">
     <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
+      <div class="testi-stars" style="color:#C87D87;">★★★★★</div>
       <p class="testi-text">"Empecé el curso sin saber absolutamente nada y en tres semanas ya tenía mi primera propiedad publicada. El módulo de negociación con el dueño fue clave."</p>
       <div class="testi-name">Valeria M.</div>
       <div class="testi-loc">Guadalajara, México</div>
     </div>
     <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
+      <div class="testi-stars" style="color:#C87D87;">★★★★★</div>
       <p class="testi-text">"Lo que más me gustó fue que todo es aplicable. No hay relleno. Y la calculadora de rentabilidad me ahorró de tomar una mala decisión con la primera propiedad."</p>
       <div class="testi-name">Andrés C.</div>
       <div class="testi-loc">Bogotá, Colombia</div>
     </div>
     <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
+      <div class="testi-stars" style="color:#C87D87;">★★★★★</div>
       <p class="testi-text">"Pensé que necesitaba mucho dinero para arrancar. El curso me demostró que no. Ya llevo dos meses con mi primer espacio y el retorno superó lo que esperaba."</p>
       <div class="testi-name">Lucía R.</div>
       <div class="testi-loc">Buenos Aires, Argentina</div>
     </div>
     <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
+      <div class="testi-stars" style="color:#C87D87;">★★★★★</div>
       <p class="testi-text">"El módulo de precios dinámicos me cambió todo. En el primer mes recuperé la inversión del curso y tuve ganancia. No esperaba resultados tan rápido."</p>
       <div class="testi-name">Carlos M.</div>
       <div class="testi-loc">Ciudad de México</div>
@@ -1458,6 +1601,32 @@
   <div class="garantia">
     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C8A96E" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
     <div class="garantia-text"><strong>Tu inversión está protegida.</strong><br>Hotmart ofrece garantía de reembolso. Si el curso no es lo que esperabas, lo puedes solicitar sin preguntas.</div>
+  </div>
+</section>
+
+<!-- ASESORÍA 1:1 -->
+<section class="consulta">
+  <div class="consulta-box">
+    <div class="consulta-content">
+      <span class="consulta-badge">Acompañamiento personalizado</span>
+      <h2>¿Quieres ayuda personalizada con tu caso específico?</h2>
+      <p>Si ya tomaste el curso o quieres ir más rápido, agenda una asesoría 1:1 conmigo. Revisamos tu situación, tu ciudad, tus números y armamos un plan de acción concreto para tu negocio.</p>
+      <div class="consulta-list">
+        <div class="consulta-item"><div class="consulta-check">✓</div>Sesión 1:1 por videollamada conmigo</div>
+        <div class="consulta-item"><div class="consulta-check">✓</div>Análisis de tu ciudad y propiedad (si ya tienes)</div>
+        <div class="consulta-item"><div class="consulta-check">✓</div>Plan de acción personalizado para tu caso</div>
+        <div class="consulta-item"><div class="consulta-check">✓</div>Resumen y próximos pasos por escrito</div>
+      </div>
+    </div>
+    <div class="consulta-card">
+      <div class="consulta-price-label">Asesoría 1:1</div>
+      <div class="consulta-price">$200 <span>USD</span></div>
+      <div class="consulta-duration">60–120 minutos · Por videollamada</div>
+      <a href="https://calendly.com/sofiaretif" target="_blank" class="consulta-btn">
+        Agendar asesoría →
+      </a>
+      <p class="consulta-note">Responderás algunas preguntas antes de elegir tu horario, para asegurar que esta sesión sea útil para tu caso.</p>
+    </div>
   </div>
 </section>
 

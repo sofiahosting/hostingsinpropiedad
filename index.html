@@ -951,6 +951,39 @@
   .link-sub { font-size: 12px; color: var(--mid); margin-top: 2px; font-weight: 300; }
   .link-arrow { color: var(--sky); font-size: 18px; flex-shrink: 0; }
 
+  /* LEAD MAGNET */
+  .leadmagnet { padding: 4rem 6%; background: var(--beige); }
+  .leadmagnet-box {
+    max-width: 820px; margin: 0 auto;
+    background: linear-gradient(135deg, var(--sky) 0%, #9BBDD6 100%);
+    border-radius: 22px; padding: 2.75rem 3rem;
+    display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+    flex-wrap: wrap; position: relative; overflow: hidden;
+  }
+  .leadmagnet-box::before {
+    content: ''; position: absolute; top: -60px; right: -40px;
+    width: 220px; height: 220px; border-radius: 50%; background: rgba(255,255,255,0.12);
+  }
+  .leadmagnet-text { position: relative; z-index: 1; flex: 1; min-width: 280px; }
+  .leadmagnet-text h3 {
+    font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 600;
+    color: white; margin-bottom: 0.5rem; line-height: 1.25;
+  }
+  .leadmagnet-text p { font-size: 15px; color: rgba(255,255,255,0.9); font-weight: 300; line-height: 1.6; }
+  .leadmagnet-btn {
+    position: relative; z-index: 1; flex-shrink: 0;
+    display: inline-flex; align-items: center; gap: 8px;
+    background: white; color: var(--sky-deep);
+    font-size: 15px; font-weight: 500; font-family: 'DM Sans', sans-serif;
+    padding: 15px 28px; border-radius: 50px; border: none; cursor: pointer;
+    box-shadow: 0 8px 28px rgba(20,40,60,0.18); transition: transform 0.2s ease;
+  }
+  .leadmagnet-btn:hover { transform: translateY(-2px); }
+  @media (max-width: 600px) {
+    .leadmagnet-box { padding: 2rem 1.5rem; }
+    .leadmagnet-btn { width: 100%; justify-content: center; }
+  }
+
 </style>
 </head>
 <body>
@@ -1568,6 +1601,17 @@
     <div class="obj"><div class="obj-q">No sé si funciona en mi ciudad</div><div class="obj-a">El boom de Airbnb en Latinoamérica está apenas comenzando. En el curso te enseño a validar si tu ciudad tiene demanda real antes de dar un solo paso.</div></div>
     <div class="obj"><div class="obj-q">No sé nada de tecnología ni de negocios</div><div class="obj-a">El curso está diseñado para alguien que empieza desde cero. Cada paso está explicado como si fuera la primera vez que lo ves.</div></div>
     <div class="obj"><div class="obj-q">Ya probé otras cosas y no me funcionaron</div><div class="obj-a">Este no es un curso de teoría. Es el sistema exacto que yo uso hoy. Tienes acceso a los mismos guiones, plantillas y herramientas que a mí me funcionaron.</div></div>
+  </div>
+</section>
+
+<!-- LEAD MAGNET -->
+<section class="leadmagnet">
+  <div class="leadmagnet-box">
+    <div class="leadmagnet-text">
+      <h3>¿Aún no estás list@ para comprar?</h3>
+      <p>Descarga gratis mi guía para empezar en el arbitraje de Airbnb y recibe un cupón de descuento para el curso.</p>
+    </div>
+    <button class="leadmagnet-btn" onclick="openWaitlist()">Descargar guía gratis →</button>
   </div>
 </section>
 

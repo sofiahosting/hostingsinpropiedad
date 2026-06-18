@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1200px; height:630px; }
+  .card {
+    width:1200px; height:630px;
+    position:relative; overflow:hidden;
+    background:linear-gradient(150deg,#7BA7C4 0%,#5C8AAD 45%,#2F6188 100%);
+    font-family:'DM Sans',sans-serif;
+    padding:72px 80px;
+    display:flex; flex-direction:column; justify-content:space-between;
+  }
+  .c1 { position:absolute; top:-160px; right:-120px; width:520px; height:520px; border-radius:50%; background:rgba(255,255,255,0.07); }
+  .c2 { position:absolute; bottom:-200px; left:-120px; width:480px; height:480px; border-radius:50%; background:rgba(200,169,110,0.12); }
+  .top { position:relative; z-index:2; }
+  .eyebrow {
+    display:inline-block; background:#C87D87; color:#fff;
+    font-size:18px; font-weight:500; letter-spacing:3px; text-transform:uppercase;
+    padding:9px 22px; border-radius:99px; margin-bottom:34px;
+    border:1px solid rgba(255,255,255,0.3);
+  }
+  h1 {
+    font-family:'Playfair Display',serif; font-weight:700;
+    font-size:74px; line-height:1.1; color:#fff; max-width:920px;
+    text-shadow:0 2px 24px rgba(20,40,60,0.25);
+  }
+  h1 em { font-style:italic; color:#F3D9DC; }
+  .sub {
+    margin-top:26px; font-size:26px; font-weight:300;
+    color:rgba(255,255,255,0.92); max-width:760px; line-height:1.5;
+  }
+  .bottom { position:relative; z-index:2; display:flex; align-items:center; justify-content:space-between; }
+  .who { display:flex; align-items:center; gap:18px; }
+  .avatar {
+    width:64px; height:64px; border-radius:50%;
+    background:linear-gradient(135deg,#B8D4E8,#EAF3F9);
+    border:3px solid rgba(255,255,255,0.7);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Playfair Display',serif; font-weight:700; font-size:26px; color:#2F6188;
+  }
+  .who .name { font-size:24px; font-weight:500; color:#fff; }
+  .who .url { font-size:17px; color:rgba(255,255,255,0.75); margin-top:2px; }
+  .stats { display:flex; gap:34px; }
+  .stat { text-align:center; }
+  .stat .n { font-family:'Playfair Display',serif; font-weight:700; font-size:34px; color:#fff; }
+  .stat .l { font-size:13px; letter-spacing:1px; text-transform:uppercase; color:rgba(255,255,255,0.7); margin-top:2px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="c1"></div>
+    <div class="c2"></div>
+    <div class="top">
+      <span class="eyebrow">Curso de arbitraje de Airbnb</span>
+      <h1>Gana dinero con rentas cortas <em>sin tener</em> ninguna propiedad</h1>
+      <p class="sub">El sistema para generar ingresos estables con Airbnb — sin comprar nada.</p>
+    </div>
+    <div class="bottom">
+      <div class="who">
+        <div class="avatar">SR</div>
+        <div>
+          <div class="name">Sofía Retif</div>
+          <div class="url">sofiaretif.com</div>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="n">+120</div><div class="l">alumnos</div></div>
+        <div class="stat"><div class="n">10h</div><div class="l">por semana</div></div>
+        <div class="stat"><div class="n">$0–5k</div><div class="l">inversión</div></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

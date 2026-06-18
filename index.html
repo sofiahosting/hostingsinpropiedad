@@ -4,23 +4,48 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hosting Sin Propiedad · Sofía Retif</title>
+<meta name="description" content="Aprende arbitraje de Airbnb y genera ingresos con rentas cortas sin tener ninguna propiedad. Curso práctico paso a paso para Latinoamérica + asesoría 1:1.">
+<meta name="author" content="Sofía Retif">
+<link rel="canonical" href="https://sofiaretif.com/">
+
+<!-- Open Graph (preview al compartir en redes/WhatsApp) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sofiaretif.com/">
+<meta property="og:title" content="Gana dinero con rentas cortas sin tener ninguna propiedad">
+<meta property="og:description" content="El sistema que usé para generar ingresos estables con Airbnb sin comprar nada. Curso práctico + asesoría 1:1 con Sofía Retif.">
+<meta property="og:image" content="https://sofiaretif.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_LA">
+<meta property="og:site_name" content="Sofía Retif · Hosting Sin Propiedad">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gana dinero con rentas cortas sin tener ninguna propiedad">
+<meta name="twitter:description" content="Curso práctico de arbitraje de Airbnb para Latinoamérica + asesoría 1:1 con Sofía Retif.">
+<meta name="twitter:image" content="https://sofiaretif.com/og-image.jpg">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiM3QkE3QzQiLz4KICA8cGF0aCBkPSJNMzIgMTQgQzMyIDE0IDE4IDMwIDE4IDM4IEMxOCA0NSAyNC4zIDUwIDMyIDUwIEMzOS43IDUwIDQ2IDQ1IDQ2IDM4IEM0NiAzMCAzMiAxNCAzMiAxNFoiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjk1Ii8+CiAgPGNpcmNsZSBjeD0iMzIiIGN5PSIzNiIgcj0iNiIgZmlsbD0iIzdCQTdDNCIvPgo8L3N2Zz4=">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --sky: #7BA7C4;
-    --sky-light: #B8D4E8;
-    --sky-pale: #EAF3F9;
-    --beige: #F5EFE4;
-    --beige-dark: #E8DDC8;
-    --gold: #C8A96E;
+    /* ===== PALETA DE MARCA — Sofía Retif =====
+       Azul protagonista. Estos son los ÚNICOS colores permitidos.
+       Para cambiar un color en toda la web, edita solo aquí. */
+    --sky: #7BA7C4;        /* Azul marca (firma, fondos, acentos) */
+    --sky-deep: #2F6188;   /* Azul profundo — BOTONES / ACCIONES */
+    --sky-deeper: #234B6B; /* Azul profundo hover */
+    --sky-light: #B8D4E8;  /* Azul claro (degradados, detalles) */
+    --sky-pale: #EAF3F9;   /* Azul pálido (fondos suaves) */
+    --beige: #F5EFE4;      /* Arena cálida (fondos) */
+    --beige-dark: #E8DDC8; /* Arena oscura (bordes/divisores) */
+    --gold: #C8A96E;       /* Dorado premium (bonos) — uso mínimo */
     --gold-dark: #A8893E;
-  --rose: #C87D87;
-  --rose-pale: #F7EDEF;
-    --dark: #2C2820;
-    --mid: #6B6355;
-    --white: #FDFAF5;
+    --rose: #C87D87;       /* Rosa acento — SOLO ofertas/urgencia/badges */
+    --rose-pale: #F7EDEF;
+    --dark: #2C2820;       /* Texto oscuro / títulos */
+    --mid: #6B6355;        /* Texto medio / subtítulos */
+    --white: #FDFAF5;      /* Blanco hueso (fondo base) */
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -42,7 +67,7 @@
     overflow: hidden;
     padding: 0 6% 0;
   }
-  .hero::befomuy {
+  .hero::before {
     content: '';
     position: absolute;
     top: -20%;
@@ -70,8 +95,7 @@
   }
   .hero-eyebrow {
     display: inline-block;
-    background: rgba(255,255,255,0.2);
-    backdrop-filter: blur(8px);
+    background: #C87D87;
     color: white;
     font-size: 12px;
     font-weight: 500;
@@ -127,7 +151,7 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: var(--rose);
+    background: var(--sky-deep);
     color: white;
     font-size: 15px;
     font-weight: 500;
@@ -135,12 +159,12 @@
     border-radius: 50px;
     text-decoration: none;
     transition: all 0.2s;
-    box-shadow: 0 8px 32px rgba(200,169,110,0.4);
+    box-shadow: 0 8px 32px rgba(47,97,136,0.4);
   }
   .cta-hero:hover {
-    background: var(--gold-dark);
+    background: var(--sky-deeper);
     transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(200,169,110,0.5);
+    box-shadow: 0 12px 40px rgba(35,75,107,0.5);
   }
   .cta-hero svg { width: 18px; height: 18px; }
   .hero-img {
@@ -437,7 +461,7 @@
     gap: 8px;
     align-items: flex-start;
   }
-  .obj-q::befomuy {
+  .obj-q::before {
     content: '"';
     font-family: 'Playfair Display', serif;
     font-size: 28px;
@@ -543,7 +567,7 @@
     position: relative;
     overflow: hidden;
   }
-  .cta-final::befomuy {
+  .cta-final::before {
     content: '';
     position: absolute;
     top: -100px;
@@ -587,7 +611,7 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: var(--rose);
+    background: var(--sky-deep);
     color: white;
     font-size: 16px;
     font-weight: 500;
@@ -595,15 +619,15 @@
     border-radius: 50px;
     text-decoration: none;
     transition: all 0.2s;
-    box-shadow: 0 8px 40px rgba(200,169,110,0.35);
+    box-shadow: 0 8px 40px rgba(47,97,136,0.45);
     position: relative;
     z-index: 1;
     margin-top: 0.5rem;
   }
   .cta-btn-final:hover {
-    background: var(--gold-dark);
+    background: var(--sky-deeper);
     transform: translateY(-2px);
-    box-shadow: 0 12px 50px rgba(200,169,110,0.5);
+    box-shadow: 0 12px 50px rgba(35,75,107,0.55);
   }
   .cta-sub { font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 1rem; position: relative; z-index: 1; }
   .garantia {
@@ -731,7 +755,7 @@
     padding: 15px;
     border-radius: 50px;
     border: none;
-    background: var(--rose);
+    background: var(--sky-deep);
     color: white;
     font-size: 15px;
     font-weight: 500;
@@ -740,7 +764,7 @@
     transition: background 0.2s;
     margin-top: 4px;
   }
-  .modal-btn:hover { background: var(--gold-dark); }
+  .modal-btn:hover { background: var(--sky-deeper); }
   .modal-note { font-size: 11px; color: var(--mid); margin-top: 0.75rem; opacity: 0.7; }
   .modal-success { display: none; }
   .modal-success.show { display: block; }
@@ -833,10 +857,10 @@
   .consulta-btn {
     display: inline-flex; align-items: center; justify-content: center; gap: 8px;
     width: 100%;
-    background: var(--rose); color: white;
+    background: var(--sky-deep); color: white;
     font-size: 15px; font-weight: 500; font-family: 'DM Sans', sans-serif;
     padding: 16px; border-radius: 50px; border: none; cursor: pointer;
-    box-shadow: 0 8px 28px rgba(200,125,135,0.35);
+    box-shadow: 0 8px 28px rgba(47,97,136,0.4);
     text-decoration: none;
     transition: transform 0.2s ease;
   }
@@ -882,6 +906,51 @@
     .cta-secondary { margin-left: 0; justify-content: center; }
   }
 
+  /* LINKS HUB (link-in-bio) */
+  .links-hub {
+    background: linear-gradient(160deg, var(--sky-pale) 0%, var(--white) 100%);
+    padding: 5rem 6%;
+    text-align: center;
+  }
+  .links-hub-inner { max-width: 480px; margin: 0 auto; }
+  .links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 2.5rem;
+  }
+  .link-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--white);
+    border: 1px solid var(--beige-dark);
+    border-radius: 16px;
+    padding: 16px 20px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    text-align: left;
+  }
+  .link-row:hover {
+    border-color: var(--sky);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(47,97,136,0.12);
+  }
+  .link-icon {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: var(--sky-pale);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .link-icon svg { width: 22px; height: 22px; color: var(--sky-deep); }
+  .link-row.primary .link-icon { background: var(--sky-deep); }
+  .link-row.primary .link-icon svg { color: white; }
+  .link-text { flex: 1; }
+  .link-title { font-size: 15px; font-weight: 500; color: var(--dark); }
+  .link-sub { font-size: 12px; color: var(--mid); margin-top: 2px; font-weight: 300; }
+  .link-arrow { color: var(--sky); font-size: 18px; flex-shrink: 0; }
+
 </style>
 </head>
 <body>
@@ -906,9 +975,8 @@
       <p style="margin:0;font-size:14px;color:rgba(255,255,255,0.9);font-weight:300;"><strong style="font-weight:500;">+120 alumnos</strong> ya empezaron en Latinoamérica</p>
     </div>
     <div class="hero-buttons">
-      <a href="#" onclick="event.preventDefault();openWaitlist()" class="cta-hero">
-        Quiero mi lugar en la lista →
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      <a href="https://pay.hotmart.com/N101179190K" target="_blank" class="cta-hero">
+        Acceder al curso →
       </a>
       <a href="https://calendly.com/sofiahosting" target="_blank" class="cta-secondary">
         Agendar llamada 1:1
@@ -1271,7 +1339,7 @@
               <span>Baja (30%)</span><span>Normal (65%)</span><span>Alta (95%)</span>
             </div>
           </div>
-          <button onclick="calcMostrarEmail()" style="width:100%;padding:15px;border-radius:50px;border:none;background:#C87D87;color:white;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;margin-bottom:8px;">Ver mi resultado →</button>
+          <button onclick="calcMostrarEmail()" style="width:100%;padding:15px;border-radius:50px;border:none;background:var(--sky-deep);color:white;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;margin-bottom:8px;">Ver mi resultado →</button>
           <button onclick="calcStep(2)" style="width:100%;padding:10px;border-radius:50px;border:none;background:none;color:var(--mid);font-size:13px;font-family:'DM Sans',sans-serif;cursor:pointer;">← Regresar</button>
         </div>
 
@@ -1301,7 +1369,7 @@
               Acepto recibir contenido de Sofía Retif sobre Airbnb y negocios digitales. Puedo cancelar cuando quiera.
             </label>
           </div>
-          <button onclick="calcMostrarResultado()" style="width:100%;padding:15px;border-radius:50px;border:none;background:#C87D87;color:white;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;">Ver mi resultado →</button>
+          <button onclick="calcMostrarResultado()" style="width:100%;padding:15px;border-radius:50px;border:none;background:var(--sky-deep);color:white;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;">Ver mi resultado →</button>
           <p style="font-size:11px;color:var(--mid);margin-top:0.75rem;opacity:0.7;">Sin spam · Solo tu resultado</p>
         </div>
 
@@ -1422,10 +1490,10 @@
     // CTA
     if (es_rentable || puede_mejorar) {
       html += `<div style="background:linear-gradient(135deg,#2C2820,#4A4235);border-radius:16px;padding:1.75rem;text-align:center;margin-bottom:1rem;">
-        <span style="display:inline-block;background:rgba(200,125,135,0.15);color:#C87D87;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:99px;border:1px solid rgba(200,169,110,0.35);margin-bottom:0.75rem;">¡Próximo lanzamiento!</span>
+        <span style="display:inline-block;background:rgba(200,125,135,0.15);color:#C87D87;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:99px;border:1px solid rgba(200,169,110,0.35);margin-bottom:0.75rem;">Disponible ahora · 20% OFF lanzamiento</span>
         <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:white;margin-bottom:0.5rem;line-height:1.3;">Aprende exactamente cómo hacerlo en ${ciudad}</h3>
         <p style="font-size:13px;color:rgba(255,255,255,0.6);font-weight:300;line-height:1.6;margin-bottom:1.25rem;">En <strong style="color:white;">Hosting Sin Propiedad</strong> te enseño paso a paso cómo conseguir una propiedad, amueblarla, publicarla y automatizarla.</p>
-        <a href="#" onclick="event.preventDefault();openWaitlist()" target="_blank" style="display:inline-block;background:#C87D87;color:white;font-size:15px;font-weight:500;padding:14px 32px;border-radius:50px;text-decoration:none;">Únete a la lista de espera →</a>
+        <a href="https://pay.hotmart.com/N101179190K" target="_blank" style="display:inline-block;background:#C87D87;color:white;font-size:15px;font-weight:500;padding:14px 32px;border-radius:50px;text-decoration:none;">Acceder al curso →</a>
       </div>`;
     } else {
       html += `<div style="background:var(--beige);border-radius:12px;padding:1.5rem;border:1px solid var(--beige-dark);margin-bottom:1rem;">
@@ -1439,7 +1507,7 @@
       <div style="background:linear-gradient(135deg,#2C2820,#4A4235);border-radius:16px;padding:1.75rem;text-align:center;margin-bottom:1rem;">
         <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:white;margin-bottom:0.5rem;">Aprende a encontrar la propiedad correcta</h3>
         <p style="font-size:13px;color:rgba(255,255,255,0.6);font-weight:300;line-height:1.6;margin-bottom:1.25rem;">En <strong style="color:white;">Hosting Sin Propiedad</strong> te enseño cómo validar mercados y maximizar ingresos en cualquier ciudad.</p>
-        <a href="#" onclick="event.preventDefault();openWaitlist()" target="_blank" style="display:inline-block;background:#C87D87;color:white;font-size:15px;font-weight:500;padding:14px 32px;border-radius:50px;text-decoration:none;">Únete a la lista de espera →</a>
+        <a href="https://pay.hotmart.com/N101179190K" target="_blank" style="display:inline-block;background:#C87D87;color:white;font-size:15px;font-weight:500;padding:14px 32px;border-radius:50px;text-decoration:none;">Acceder al curso →</a>
       </div>`;
     }
 
@@ -1565,9 +1633,9 @@
 
 <!-- CTA FINAL -->
 <section class="cta-final">
-  <span class="section-label">¡Próximo lanzamiento!</span>
-  <h2 class="section-title">Sé el primero en acceder</h2>
-  <p class="section-sub">Estoy regrabando el curso para hacerlo mejor. Únete a la lista de espera y obtén precio especial.</p>
+  <span class="section-label">🎉 ¡Ya está disponible!</span>
+  <h2 class="section-title">Tu lugar te está esperando</h2>
+  <p class="section-sub">Usa el código <strong>LANZAMIENTO</strong> al pagar y obtén 20% de descuento. Oferta de lanzamiento por tiempo limitado.</p>
   <div class="includes">
     <div class="include-row"><div class="include-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>10 módulos con clases prácticas en video</div>
     <div class="include-row"><div class="include-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>Contratos, mensajes, calculadora y checklists descargables</div>
@@ -1584,10 +1652,14 @@
     </div>
     <p style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:0.35rem;font-family:'DM Sans',sans-serif;">o desde <strong style="color:white;">$297 MXN / mes</strong> · Hasta 12 meses sin intereses</p>
     <p style="font-size:12px;color:rgba(255,255,255,0.35);margin-top:0.25rem;font-family:'DM Sans',sans-serif;">Acceso de por vida · Pago seguro vía Hotmart</p>
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(200,125,135,0.15);border:1px dashed #C87D87;border-radius:10px;padding:10px 20px;margin-top:1.25rem;">
+      <span style="font-size:13px;color:rgba(255,255,255,0.7);font-family:'DM Sans',sans-serif;">Usa el código</span>
+      <span style="font-family:'Courier New',monospace;font-size:15px;font-weight:700;color:#C87D87;letter-spacing:2px;">LANZAMIENTO</span>
+      <span style="font-size:13px;color:rgba(255,255,255,0.7);font-family:'DM Sans',sans-serif;">· 20% OFF</span>
+    </div>
   </div>
-  <a href="#" onclick="event.preventDefault();openWaitlist()" class="cta-btn-final">
-    Quiero acceder al curso
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  <a href="https://pay.hotmart.com/N101179190K" target="_blank" class="cta-btn-final">
+    Acceder al curso →
   </a>
   <p class="cta-sub">Pago seguro · Acceso inmediato · Hotmart</p>
   <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:1rem;position:relative;z-index:1;">
@@ -1630,8 +1702,65 @@
   </div>
 </section>
 
+<!-- LINKS HUB -->
+<section class="links-hub">
+  <div class="links-hub-inner">
+    <span class="section-label">Todo en un solo lugar</span>
+    <h2 class="section-title">Mis enlaces</h2>
+    <p class="section-sub">Empieza por donde quieras: el curso, una asesoría conmigo o audita tu Airbnb gratis.</p>
+    <div class="links-list">
+
+      <a href="https://pay.hotmart.com/N101179190K" target="_blank" rel="noopener" class="link-row primary">
+        <div class="link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h2l2.4 12.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg></div>
+        <div class="link-text">
+          <div class="link-title">Acceder al curso</div>
+          <div class="link-sub">Hosting Sin Propiedad · Hotmart</div>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <a href="https://calendly.com/sofiahosting" target="_blank" rel="noopener" class="link-row">
+        <div class="link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+        <div class="link-text">
+          <div class="link-title">Asesoría 1:1 conmigo</div>
+          <div class="link-sub">Agenda una videollamada · Calendly</div>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <a href="https://auditbnb.com" target="_blank" rel="noopener" class="link-row">
+        <div class="link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+        <div class="link-text">
+          <div class="link-title">Audita tu Airbnb gratis</div>
+          <div class="link-sub">Descubre si tu ciudad es rentable · auditbnb.com</div>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <a href="https://www.instagram.com/sofiahosting_" target="_blank" rel="noopener" class="link-row">
+        <div class="link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></div>
+        <div class="link-text">
+          <div class="link-title">Instagram</div>
+          <div class="link-sub">@sofiahosting_</div>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <a href="https://www.tiktok.com/@sofiahosting" target="_blank" rel="noopener" class="link-row">
+        <div class="link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></div>
+        <div class="link-text">
+          <div class="link-title">TikTok</div>
+          <div class="link-sub">@sofiahosting</div>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
 <footer>
-  <p>© 2025 Sofia Hosting · <a href="https://www.instagram.com/sofiahosting_" target="_blank">@sofiahosting_</a> · <a href="https://www.tiktok.com/@sofiahosting" target="_blank">@sofiahosting</a></p>
+  <p>© 2026 Sofía Retif · Hosting Sin Propiedad · <a href="https://www.instagram.com/sofiahosting_" target="_blank" rel="noopener">@sofiahosting_</a> · <a href="https://www.tiktok.com/@sofiahosting" target="_blank" rel="noopener">@sofiahosting</a></p>
 </footer>
 
 <!-- WAITLIST MODAL -->
@@ -1640,15 +1769,15 @@
     <button class="modal-close" onclick="closeModal()">×</button>
 
     <div class="modal-form" id="modalForm">
-      <span class="modal-badge">🔔 Precio especial de lanzamiento</span>
-      <h3 class="modal-title">Sé el primero en enterarte cuando abra</h3>
-      <p class="modal-sub">Estoy regrabando el curso desde cero para hacerlo mejor. Quienes se unan a la lista de espera reciben un <strong>precio especial de lanzamiento</strong> antes que nadie.</p>
+      <span class="modal-badge">🎁 Recurso gratis</span>
+      <h3 class="modal-title">¿Aún no estás list@ para comprar?</h3>
+      <p class="modal-sub">Déjame tu correo y te envío mi <strong>guía gratuita</strong> para empezar en el arbitraje de Airbnb, además de un <strong>cupón de descuento</strong> para cuando decidas dar el paso.</p>
 
       <form id="mc-waitlist-form" action="https://github.us8.list-manage.com/subscribe/post?u=b6e40ec0a713bd6b97f9d4422&amp;id=273eed67f7&amp;f_id=006fdae1f0" method="post" target="mc-waitlist-iframe">
         <input class="modal-input" type="text" name="FNAME" placeholder="Tu nombre" required>
         <input class="modal-input" type="email" name="EMAIL" placeholder="Tu correo electrónico" required>
-        <!-- Hidden field to identify lista de espera subscribers -->
-        <input type="hidden" name="MMERGE3" value="lista de espera">
+        <!-- Hidden field to identify lead magnet subscribers -->
+        <input type="hidden" name="MMERGE3" value="lead magnet">
         <div style="position:absolute;left:-5000px;" aria-hidden="true">
           <input type="text" name="b_b6e40ec0a713bd6b97f9d4422_273eed67f7" tabindex="-1" value="">
         </div>
@@ -1656,19 +1785,19 @@
         <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:1rem;background:var(--beige);border-radius:10px;padding:12px 14px;text-align:left;">
           <input type="checkbox" id="waitlist-consent" style="margin-top:3px;width:16px;height:16px;flex-shrink:0;accent-color:#7BA7C4;cursor:pointer;" required>
           <label for="waitlist-consent" style="font-size:13px;color:var(--mid);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.6;cursor:pointer;">
-            Acepto recibir correos de Sofía Retif sobre el lanzamiento de Hosting Sin Propiedad. Puedo cancelar cuando quiera.
+            Acepto recibir correos de Sofía Retif sobre Hosting Sin Propiedad. Puedo cancelar cuando quiera.
           </label>
         </div>
-        <button type="submit" class="modal-btn" onclick="handleWaitlist(event)">Quiero mi precio especial →</button>
+        <button type="submit" class="modal-btn" onclick="handleWaitlist(event)">Enviarme la guía gratis →</button>
       </form>
       <iframe name="mc-waitlist-iframe" style="display:none;"></iframe>
-      <p class="modal-note">Sin spam. Te aviso cuando abra y eso es todo.</p>
+      <p class="modal-note">Sin spam. Solo contenido útil para tu negocio.</p>
     </div>
 
     <div class="modal-success" id="modalSuccess">
       <div style="font-size:48px;margin-bottom:1rem;">🎉</div>
-      <h3 class="modal-title">¡Ya estás en la lista!</h3>
-      <p class="modal-sub">Te aviso en cuanto abra el curso con tu precio especial de lanzamiento. Revisa tu email.</p>
+      <h3 class="modal-title">¡Listo! Revisa tu correo</h3>
+      <p class="modal-sub">Te acabo de enviar tu guía gratuita y tu cupón de descuento. Revisa tu bandeja (y la carpeta de spam por si acaso).</p>
       <button class="modal-btn" onclick="closeModal()" style="margin-top:0.5rem;">Cerrar</button>
     </div>
   </div>

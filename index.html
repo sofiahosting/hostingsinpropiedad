@@ -137,12 +137,11 @@
     position: absolute; left: 0; right: 0; bottom: -8px;
     width: 100%; height: 13px; overflow: visible;
   }
-  .hero-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.75rem; }
-  .hero-chip {
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 99px; padding: 7px 14px; font-size: 13px; color: #fff; font-weight: 300;
-  }
+  .hero-chips { display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 1.75rem; }
+  .hero-chip { border-radius: 99px; padding: 7px 15px; font-size: 13px; font-weight: 500; backdrop-filter: blur(4px); }
+  .hero-chip.c-gold { background: rgba(230,197,124,0.18); border: 1px solid rgba(230,197,124,0.5); color: #F0DCA8; }
+  .hero-chip.c-rose { background: rgba(200,125,135,0.22); border: 1px solid rgba(200,125,135,0.55); color: #F3C9CE; }
+  .hero-chip.c-sky { background: rgba(184,212,232,0.22); border: 1px solid rgba(184,212,232,0.55); color: #DCEBF7; }
   .hero-sub {
     font-size: 17px;
     color: rgba(255,255,255,0.9);
@@ -1151,6 +1150,16 @@
   .sofia-life { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 1.5rem; }
   .sofia-life img { width: 100%; height: 150px; object-fit: cover; border-radius: 12px; display: block; }
 
+  /* ===== GALERÍA LIFESTYLE ===== */
+  .lifestyle { background: linear-gradient(160deg, var(--sky-pale) 0%, var(--beige) 100%); padding: 5rem 6%; text-align: center; position: relative; overflow: hidden; }
+  .lifestyle .hand { font-family: 'Caveat', cursive; font-weight: 700; font-size: 28px; color: var(--sky-deep); margin-bottom: 2px; }
+  .lifestyle-grid { column-count: 3; column-gap: 16px; max-width: 900px; margin: 2.5rem auto 0; }
+  .lifestyle-grid figure { break-inside: avoid; margin: 0 0 16px; position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(44,40,32,0.12); }
+  .lifestyle-grid img { width: 100%; display: block; transition: transform .4s ease; }
+  .lifestyle-grid figure:hover img { transform: scale(1.05); }
+  .lifestyle-grid figcaption { position: absolute; left: 12px; bottom: 12px; background: rgba(255,255,255,0.92); color: var(--sky-deep); font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 99px; }
+  @media (max-width: 760px) { .lifestyle-grid { column-count: 2; } }
+
 </style>
 
 <!-- Datos estructurados (SEO / resultados enriquecidos) -->
@@ -1215,6 +1224,11 @@
     <span class="hero-eyebrow">Curso práctico · Disponible ahora</span>
     <h1>Gana dinero con rentas cortas <span class="uline"><em>sin tener</em><svg viewBox="0 0 200 13" preserveAspectRatio="none"><path d="M3 9 C 55 2, 145 2, 197 7" stroke="#E6C57C" stroke-width="4" fill="none" stroke-linecap="round"/></svg></span> ninguna propiedad</h1>
     <p class="hero-sub">Te enseño el sistema con el que renuncié a mi trabajo y hoy genero ingresos estables cada mes rentando propiedades que no son mías — invirtiendo menos de 10 horas por semana, porque gran parte del negocio se automatiza.</p>
+    <div class="hero-chips">
+      <span class="hero-chip c-sky">🏠 sin comprar nada</span>
+      <span class="hero-chip c-gold">✈️ desde donde sea</span>
+      <span class="hero-chip c-rose">💸 casi pasivo</span>
+    </div>
     <div class="stats-row">
       <div class="stat-pill"><div class="num">~10h</div><div class="lbl">de gestión a la semana</div></div>
       <div class="stat-pill"><div class="num">$0–$5k</div><div class="lbl">de inversión inicial</div></div>
@@ -1710,6 +1724,22 @@
         </a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- GALERÍA LIFESTYLE -->
+<section class="lifestyle" id="vida">
+  <div class="hand">✈️ la vida real</div>
+  <span class="section-label">Lo que hace posible</span>
+  <h2 class="section-title">La libertad de trabajar desde donde sea</h2>
+  <p class="section-sub">Viajo por el mundo, trabajo a mi ritmo y vivo a mi manera. Esto es lo que este negocio me ha dado — y lo que quiero enseñarte a construir.</p>
+  <div class="lifestyle-grid">
+    <figure><img src="assets/life-torii.jpg" alt="Sofía en Japón" loading="lazy"><figcaption>Kioto, Japón</figcaption></figure>
+    <figure><img src="assets/life-temple.jpg" alt="Sofía viajando en Chile" loading="lazy"><figcaption>Santiago, Chile</figcaption></figure>
+    <figure><img src="assets/life-sushi.jpg" alt="Sofía disfrutando un viaje" loading="lazy"><figcaption>Cenando rico ✨</figcaption></figure>
+    <figure><img src="assets/life-street.jpg" alt="Sofía paseando en Japón" loading="lazy"><figcaption>Días de viaje</figcaption></figure>
+    <figure><img src="assets/life-nasa.jpg" alt="Sofía de viaje en la NASA" loading="lazy"><figcaption>Houston, USA</figcaption></figure>
+    <figure><img src="assets/life-vino.jpg" alt="Sofía en un viñedo" loading="lazy"><figcaption>Tiempo para mí 🍷</figcaption></figure>
   </div>
 </section>
 

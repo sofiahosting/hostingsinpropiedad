@@ -1132,11 +1132,11 @@
   .resultados .section-sub { color: rgba(255,255,255,0.65); }
   .resultados-big { font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(34px,5vw,52px); color: #E6C57C; line-height: 1; margin: 0.5rem 0; }
   .resultados-big small { display: block; font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: 13px; color: rgba(255,255,255,0.55); letter-spacing: 1px; text-transform: uppercase; margin-top: 8px; }
-  .resultados-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 960px; margin: 2.5rem auto 0; }
-  .proof-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 10px; transition: transform .25s ease; }
+  .resultados-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 960px; margin: 2.5rem auto 0; align-items: start; }
+  .proof-card { background: #fff; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 10px; transition: transform .25s ease; }
   .proof-card:hover { transform: translateY(-4px); }
-  .proof-card img { width: 100%; border-radius: 10px; display: block; aspect-ratio: 3/4; object-fit: cover; object-position: top; }
-  .proof-card figcaption { font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 10px; font-weight: 500; padding-bottom: 4px; }
+  .proof-card img { width: 100%; height: auto; border-radius: 10px; display: block; }
+  .proof-card figcaption { font-size: 12px; color: var(--mid); margin-top: 10px; font-weight: 500; padding-bottom: 4px; text-align: center; }
   .resultados-note { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 1.5rem; font-style: italic; }
   @media (max-width: 768px) { .resultados-grid { grid-template-columns: 1fr 1fr; } }
 

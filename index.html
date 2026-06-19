@@ -1544,306 +1544,97 @@
 </section>
 
   <!-- CALCULADORA -->
-  <section style="background:var(--beige);padding:5rem 6%;">
-    <div style="max-width:680px;margin:0 auto;">
+  <style>
+    .calc-card{display:grid;grid-template-columns:1fr 1fr;}
+    .calc-field{margin-bottom:1.35rem;}
+    .calc-field label{display:block;font-size:13px;font-weight:500;color:var(--dark);margin-bottom:8px;}
+    .calc-inp{display:flex;align-items:center;gap:8px;border:1.5px solid var(--beige-dark);border-radius:12px;padding:12px 14px;transition:border-color .2s;}
+    .calc-inp:focus-within{border-color:var(--sky-deep);}
+    .calc-inp .cur{color:var(--mid);font-weight:600;font-size:16px;}
+    .calc-inp input{border:none;outline:none;font-size:18px;font-family:'DM Sans',sans-serif;color:var(--dark);width:100%;background:transparent;}
+    .calc-slider-head{display:flex;justify-content:space-between;font-size:13px;font-weight:500;color:var(--dark);margin-bottom:10px;}
+    .calc-slider-head b{color:var(--sky-deep);}
+    .calc-range{width:100%;accent-color:var(--sky-deep);height:6px;cursor:pointer;}
+    .ck-row{display:flex;justify-content:space-between;font-size:13.5px;color:rgba(255,255,255,0.65);padding:8px 0;}
+    .ck-row span:last-child{color:#fff;font-weight:500;}
+    .calc-cta{display:block;text-align:center;background:#E6C57C;color:#27567C;font-weight:600;font-size:15px;padding:15px;border-radius:50px;text-decoration:none;margin-top:1.5rem;transition:transform .2s;}
+    .calc-cta:hover{transform:translateY(-2px);}
+    @media(max-width:760px){.calc-card{grid-template-columns:1fr;}}
+  </style>
+  <section style="background:var(--beige);padding:5rem 6%;" id="calculadora">
+    <div style="max-width:860px;margin:0 auto;">
       <div style="text-align:center;margin-bottom:2.5rem;">
         <span class="section-label gold">Gratis · sin registro</span>
-        <h2 class="section-title">Calculadora de rentabilidad de Airbnb</h2>
-        <p class="section-sub">Úsala gratis: ingresa los datos de la propiedad que tienes en mente y descubre en segundos si el negocio es rentable.</p>
+        <h2 class="section-title">¿Cuánto te dejaría a ti? Calcúlalo ahora</h2>
+        <p class="section-sub">Mueve los datos de tu ciudad. Es la misma calculadora que usan los alumnos antes de elegir su primera propiedad.</p>
       </div>
 
-      <div style="background:var(--white);border-radius:20px;box-shadow:0 16px 48px rgba(44,40,32,0.1);overflow:hidden;">
+      <div class="calc-card" style="background:var(--white);border-radius:22px;box-shadow:0 16px 48px rgba(44,40,32,0.1);overflow:hidden;">
 
-        <!-- Progress bar -->
-        <div style="height:4px;background:var(--beige-dark);">
-          <div id="calc-progress" style="height:4px;background:var(--sky);width:33%;transition:width 0.4s ease;"></div>
+        <!-- Inputs -->
+        <div style="padding:2.25rem;">
+          <div class="calc-field">
+            <label>Renta mensual que pagas al dueño</label>
+            <div class="calc-inp"><span class="cur">$</span><input id="ck-renta" type="number" value="12000" min="0" oninput="calcLive()"></div>
+          </div>
+          <div class="calc-field">
+            <label>Tarifa por noche en Airbnb</label>
+            <div class="calc-inp"><span class="cur">$</span><input id="ck-tarifa" type="number" value="1200" min="0" oninput="calcLive()"></div>
+          </div>
+          <div class="calc-field">
+            <div class="calc-slider-head"><span>Ocupación estimada</span><b id="ck-ocup-val">65%</b></div>
+            <input id="ck-ocup" class="calc-range" type="range" min="0" max="100" value="65" oninput="calcLive()">
+          </div>
+          <div class="calc-field" style="margin-bottom:0;">
+            <div class="calc-slider-head"><span>Gastos de operación</span><b id="ck-gastos-val">20%</b></div>
+            <input id="ck-gastos" class="calc-range" type="range" min="0" max="50" value="20" oninput="calcLive()">
+          </div>
         </div>
 
-        <!-- STEP 1 -->
-        <div id="calc-step1" style="padding:2rem 2.5rem;">
-          <span class="section-label" style="margin-bottom:0.75rem;">Paso 1 de 3</span>
-          <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--dark);margin-bottom:0.4rem;">¿Dónde está la propiedad?</h3>
-          <p style="font-size:14px;color:var(--mid);font-weight:300;margin-bottom:1.5rem;line-height:1.6;">Escribe tu ciudad para que el cálculo sea relevante para tu mercado.</p>
-          <div style="margin-bottom:1.25rem;">
-            <label style="display:block;font-size:13px;font-weight:500;color:var(--dark);margin-bottom:6px;">Ciudad y país</label>
-            <input id="c-ciudad" type="text" placeholder="Ej: Monterrey, México"
-              style="width:100%;padding:13px 16px;border:1.5px solid var(--beige-dark);border-radius:10px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--dark);background:var(--white);outline:none;"
-              onfocus="this.style.borderColor='#7BA7C4'" onblur="this.style.borderColor='var(--beige-dark)'">
+        <!-- Resultado -->
+        <div style="background:var(--dark);padding:2.25rem;color:#fff;">
+          <div style="font-size:13px;color:rgba(255,255,255,0.6);">Tu utilidad estimada al mes</div>
+          <div id="ck-utilidad" style="font-family:'Playfair Display',serif;font-size:clamp(40px,6vw,52px);font-weight:700;color:#E6C57C;line-height:1;margin:0.35rem 0 0.3rem;">$6,018</div>
+          <div id="ck-extra" style="font-size:13px;color:rgba(255,255,255,0.55);">≈ $72,216 al año · margen 26%</div>
+          <div style="margin-top:1.5rem;border-top:1px solid rgba(255,255,255,0.12);padding-top:0.5rem;">
+            <div class="ck-row"><span>Ingreso bruto Airbnb</span><span id="ck-bruto">$23,400</span></div>
+            <div class="ck-row"><span>− Renta al dueño</span><span id="ck-rentaout">−$12,000</span></div>
+            <div class="ck-row"><span>− Comisión + operación</span><span id="ck-comop">−$5,382</span></div>
           </div>
-          <div style="margin-bottom:1.5rem;">
-            <label style="display:block;font-size:13px;font-weight:500;color:var(--dark);margin-bottom:6px;">Tipo de propiedad</label>
-            <select id="c-tipo"
-              style="width:100%;padding:13px 16px;border:1.5px solid var(--beige-dark);border-radius:10px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--dark);background:var(--white);outline:none;-webkit-appearance:none;"
-              onfocus="this.style.borderColor='#7BA7C4'" onblur="this.style.borderColor='var(--beige-dark)'">
-              <option value="">Selecciona una opción</option>
-              <option value="estudio">Estudio / monoambiente</option>
-              <option value="1rec">Departamento 1 recámara</option>
-              <option value="2rec">Departamento 2 recámaras</option>
-              <option value="casa">Casa completa</option>
-            </select>
-          </div>
-          <button onclick="calcStep(2)" style="width:100%;padding:15px;border-radius:50px;border:none;background:#7BA7C4;color:white;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;">Continuar →</button>
+          <a href="https://pay.hotmart.com/N101179190K" target="_blank" rel="noopener" class="calc-cta">Quiero aprender a hacer esto →</a>
+          <p style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:1rem;line-height:1.5;">Estimación con fines ilustrativos. Los resultados reales dependen de la ciudad, la propiedad y la temporada. No es una promesa de ingresos.</p>
         </div>
-
-        <!-- STEP 2 -->
-        <div id="calc-step2" style="padding:2rem 2.5rem;display:none;">
-          <span class="section-label" style="margin-bottom:0.75rem;">Paso 2 de 3</span>
-          <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--dark);margin-bottom:0.4rem;">Costos de la propiedad</h3>
-          <p style="font-size:14px;color:var(--mid);font-weight:300;margin-bottom:1.5rem;line-height:1.6;">Ingresa los costos mensuales que tendrías.</p>
-          <div style="margin-bottom:1.25rem;">
-            <label style="display:block;font-size:13px;font-weight:500;color:var(--dark);margin-bottom:6px;">Renta mensual que pagarías al dueño</label>
-            <div style="position:relative;">
-              <span style="position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--mid);font-size:15px;">$</span>
-              <input id="c-renta" type="number" placeholder="0" min="0"
-                style="width:100%;padding:13px 16px 13px 28px;border:1.5px solid var(--beige-dark);border-radius:10px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--dark);background:var(--white);outline:none;"
-                onfocus="this.style.borderColor='#7BA7C4'" onblur="this.style.borderColor='var(--beige-dark)'">
-            </div>
-          </div>
-          <div style="margin-bottom:1.25rem;">
-            <label style="display:block;font-size:13px;font-weight:500;color:var(--dark);margin-bottom:6px;">Gastos fijos (servicios, internet, limpieza)</label>
-            <div style="position:relative;">
-              <span style="position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--mid);font-size:15px;">$</span>
-              <input id="c-gastos" type="number" placeholder="0" min="0"
-                style="width:100%;padding:13px 16px 13px 28px;border:1.5px solid var(--beige-dark);border-radius:10px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--dark);background:var(--white);outline:none;"
-                onfocus="this.style.borderColor='#7BA7C4'" onblur="this.style.borderColor='var(--beige-dark)'">
-            </div>
-            <div style="font-size:12px;color:var(--mid);margin-top:4px;font-weight:300;">Promedia entre $1,500–$4,000 MXN para un departamento estándar</div>
-          </div>
-          <div style="margin-bottom:1.5rem;">
-            <label style="display:block;font-size:13px;font-weight:500;color:var(--dark);margin-bottom:6px;">Inversión inicial estimada (muebles y equipamiento)</label>
-            <div style="position:relative;">
-              <span style="position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--mid);font-size:15px;">$</span>
-              <input id="c-inversion" type="number" placeholder="0" min="0"
-                style="width:100%;padding:13px 16px 13px 28px;border:1.5px solid var(--beige-dark);border-radius:10px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--dark);background:var(--white);outline:none;"
-                onfocus="this.style.borderColor='#7BA7C4'" onblur="this.style.borderColor='var(--beige-dark)'">
-            </div>
-          </div>
-          <button onclick="calcStep(3)" style="width:100%;padding:15px;border-radius:50px;border:none;background:#7BA7C4;color:white;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;margin-bottom:8px;">Continuar →</button>
-          <button onclick="calcStep(1)" style="width:100%;padding:10px;border-radius:50px;border:none;background:none;color:var(--mid);font-size:13px;font-family:'DM Sans',sans-serif;cursor:pointer;">← Regresar</button>
-        </div>
-
-        <!-- STEP 3 -->
-        <div id="calc-step3" style="padding:2rem 2.5rem;display:none;">
-          <span class="section-label" style="margin-bottom:0.75rem;">Paso 3 de 3</span>
-          <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--dark);margin-bottom:0.4rem;">Potencial de ingresos</h3>
-          <p style="font-size:14px;color:var(--mid);font-weight:300;margin-bottom:1.5rem;line-height:1.6;">Estima cuánto podrías cobrar y qué tan ocupada estaría la propiedad.</p>
-          <div style="margin-bottom:1.25rem;">
-            <label style="display:block;font-size:13px;font-weight:500;color:var(--dark);margin-bottom:6px;">Precio por noche que cobrarías</label>
-            <div style="position:relative;">
-              <span style="position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--mid);font-size:15px;">$</span>
-              <input id="c-precio" type="number" placeholder="0" min="0"
-                style="width:100%;padding:13px 16px 13px 28px;border:1.5px solid var(--beige-dark);border-radius:10px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--dark);background:var(--white);outline:none;"
-                onfocus="this.style.borderColor='#7BA7C4'" onblur="this.style.borderColor='var(--beige-dark)'">
-            </div>
-            <div style="font-size:12px;color:var(--mid);margin-top:4px;font-weight:300;">Revisa propiedades similares en Airbnb en tu zona</div>
-          </div>
-          <div style="margin-bottom:1.5rem;">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-              <label style="font-size:13px;font-weight:500;color:var(--dark);">Ocupación mensual estimada</label>
-              <span id="c-ocup-val" style="background:var(--sky-pale);color:var(--sky);font-size:13px;font-weight:500;padding:3px 10px;border-radius:99px;border:1px solid var(--sky-light);">65%</span>
-            </div>
-            <input type="range" id="c-ocupacion" min="30" max="95" value="65" step="5"
-              oninput="document.getElementById('c-ocup-val').textContent=this.value+'%'"
-              style="width:100%;height:6px;border-radius:3px;background:var(--beige-dark);outline:none;-webkit-appearance:none;cursor:pointer;">
-            <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--mid);margin-top:4px;">
-              <span>Baja (30%)</span><span>Normal (65%)</span><span>Alta (95%)</span>
-            </div>
-          </div>
-          <button onclick="calcMostrarResultado()" style="width:100%;padding:15px;border-radius:50px;border:none;background:var(--sky-deep);color:white;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;margin-bottom:8px;">Ver mi resultado gratis →</button>
-          <button onclick="calcStep(2)" style="width:100%;padding:10px;border-radius:50px;border:none;background:none;color:var(--mid);font-size:13px;font-family:'DM Sans',sans-serif;cursor:pointer;">← Regresar</button>
-        </div>
-
-        <!-- EMAIL GATE -->
-        <div id="calc-email" style="padding:2rem 2.5rem;display:none;text-align:center;">
-          <div style="font-size:36px;margin-bottom:1rem;">🔓</div>
-          <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--dark);margin-bottom:0.5rem;">¡Tu resultado está listo!</h3>
-          <p style="font-size:14px;color:var(--mid);font-weight:300;margin-bottom:1.5rem;line-height:1.6;">Ingresa tu email para ver si Airbnb es rentable en tu ciudad.<br>Sin spam, solo tu resultado.</p>
-          <div style="margin-bottom:1rem;text-align:left;">
-            <input id="c-email" type="email" placeholder="tu@email.com"
-              style="width:100%;padding:13px 16px;border:1.5px solid var(--beige-dark);border-radius:10px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--dark);background:var(--white);outline:none;"
-              onfocus="this.style.borderColor='#7BA7C4'" onblur="this.style.borderColor='var(--beige-dark)'">
-          </div>
-          <!-- Hidden Mailchimp form for submission -->
-          <form id="mc-form" action="https://github.us8.list-manage.com/subscribe/post?u=b6e40ec0a713bd6b97f9d4422&amp;id=273eed67f7&amp;f_id=006fdae1f0" method="post" target="mc-iframe" style="display:none;">
-            <input type="email" name="EMAIL" id="mc-email-hidden">
-            <input type="text" name="FNAME" id="mc-fname-hidden">
-            <input type="text" name="CITY" id="mc-city-hidden">
-            <div style="position:absolute;left:-5000px;" aria-hidden="true">
-              <input type="text" name="b_b6e40ec0a713bd6b97f9d4422_273eed67f7" tabindex="-1" value="">
-            </div>
-          </form>
-          <iframe name="mc-iframe" style="display:none;"></iframe>
-          <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:1rem;background:var(--beige);border-radius:10px;padding:12px 14px;">
-            <input type="checkbox" id="c-consent" style="margin-top:3px;width:16px;height:16px;flex-shrink:0;accent-color:#7BA7C4;cursor:pointer;">
-            <label for="c-consent" style="font-size:13px;color:var(--mid);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.6;cursor:pointer;">
-              Acepto recibir contenido de Sofía Retif sobre Airbnb y negocios digitales. Puedo cancelar cuando quiera.
-            </label>
-          </div>
-          <button onclick="calcMostrarResultado()" style="width:100%;padding:15px;border-radius:50px;border:none;background:var(--sky-deep);color:white;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;">Ver mi resultado →</button>
-          <p style="font-size:11px;color:var(--mid);margin-top:0.75rem;opacity:0.7;">Sin spam · Solo tu resultado</p>
-        </div>
-
-        <!-- RESULTADO -->
-        <div id="calc-resultado" style="display:none;"></div>
 
       </div>
     </div>
   </section>
 
   <script>
-  function calcStep(n) {
-    if (n === 2) {
-      if (!document.getElementById('c-ciudad').value.trim()) { alert('Por favor ingresa tu ciudad.'); return; }
-      if (!document.getElementById('c-tipo').value) { alert('Por favor selecciona el tipo de propiedad.'); return; }
-    }
-    if (n === 3) {
-      const r = parseFloat(document.getElementById('c-renta').value);
-      if (!r || r <= 0) { alert('Por favor ingresa la renta mensual.'); return; }
-    }
-    ['calc-step1','calc-step2','calc-step3','calc-email','calc-resultado'].forEach(id => {
-      document.getElementById(id).style.display = 'none';
-    });
-    document.getElementById('calc-step' + n).style.display = 'block';
-    const fills = {1:'33%', 2:'66%', 3:'100%'};
-    if (fills[n]) document.getElementById('calc-progress').style.width = fills[n];
+  function _fmtMXN(n){ return new Intl.NumberFormat('es-MX',{maximumFractionDigits:0}).format(Math.round(n)); }
+  function calcLive(){
+    var renta=parseFloat(document.getElementById('ck-renta').value)||0;
+    var tarifa=parseFloat(document.getElementById('ck-tarifa').value)||0;
+    var ocup=parseInt(document.getElementById('ck-ocup').value)||0;
+    var gastos=parseInt(document.getElementById('ck-gastos').value)||0;
+    document.getElementById('ck-ocup-val').textContent=ocup+'%';
+    document.getElementById('ck-gastos-val').textContent=gastos+'%';
+    var noches=30*(ocup/100);
+    var bruto=noches*tarifa;
+    var comAirbnb=bruto*0.03;
+    var gastosOp=bruto*(gastos/100);
+    var comOp=comAirbnb+gastosOp;
+    var utilidad=bruto-renta-comOp;
+    var anual=utilidad*12;
+    var margen=bruto>0?Math.round(utilidad/bruto*100):0;
+    var u=document.getElementById('ck-utilidad');
+    u.textContent='$'+_fmtMXN(utilidad);
+    u.style.color = utilidad>=0 ? '#E6C57C' : '#F0997B';
+    document.getElementById('ck-extra').textContent='≈ $'+_fmtMXN(anual)+' al año · margen '+margen+'%';
+    document.getElementById('ck-bruto').textContent='$'+_fmtMXN(bruto);
+    document.getElementById('ck-rentaout').textContent='−$'+_fmtMXN(renta);
+    document.getElementById('ck-comop').textContent='−$'+_fmtMXN(comOp);
   }
-
-  function calcMostrarEmail() {
-    const precio = parseFloat(document.getElementById('c-precio').value);
-    if (!precio || precio <= 0) { alert('Por favor ingresa el precio por noche.'); return; }
-    ['calc-step1','calc-step2','calc-step3','calc-email','calc-resultado'].forEach(id => {
-      document.getElementById(id).style.display = 'none';
-    });
-    document.getElementById('calc-email').style.display = 'block';
-    document.getElementById('calc-progress').style.width = '100%';
-  }
-
-  function calcMostrarResultado() {
-    const precioVal = parseFloat(document.getElementById('c-precio').value);
-    if (!precioVal || precioVal <= 0) { alert('Por favor ingresa el precio por noche.'); return; }
-
-    const ciudad = document.getElementById('c-ciudad').value.trim();
-    // Calculadora de uso libre: captura de email opcional
-    const emailEl = document.getElementById('c-email');
-    const email = emailEl ? emailEl.value.trim() : '';
-    if (email && email.includes('@')) {
-      document.getElementById('mc-email-hidden').value = email;
-      document.getElementById('mc-city-hidden').value = ciudad;
-      document.getElementById('mc-form').submit();
-    }
-
-    // Calculate
-    const tipo        = document.getElementById('c-tipo').options[document.getElementById('c-tipo').selectedIndex].text;
-    const renta       = parseFloat(document.getElementById('c-renta').value) || 0;
-    const gastos      = parseFloat(document.getElementById('c-gastos').value) || 0;
-    const inversion   = parseFloat(document.getElementById('c-inversion').value) || 0;
-    const precio      = parseFloat(document.getElementById('c-precio').value) || 0;
-    const ocupacion   = parseInt(document.getElementById('c-ocupacion').value) / 100;
-
-    const noches_mes    = Math.round(30 * ocupacion);
-    const ingreso_bruto = noches_mes * precio;
-    const costo_plat    = ingreso_bruto * 0.03;
-    const costo_total   = renta + gastos + costo_plat;
-    const ganancia      = ingreso_bruto - costo_total;
-    const roi           = costo_total > 0 ? (ganancia / costo_total) * 100 : 0;
-    const meses_rec     = inversion > 0 && ganancia > 0 ? Math.ceil(inversion / ganancia) : null;
-    const es_rentable   = ganancia > 0 && roi >= 15;
-    const puede_mejorar = ganancia > 0 && roi < 15;
-
-    const fmt = n => new Intl.NumberFormat('es-MX', {maximumFractionDigits:0}).format(n);
-
-    let html = '<div style="padding:2rem 2.5rem;">';
-
-    if (es_rentable) {
-      html += `<div style="text-align:center;margin-bottom:1.5rem;">
-        <div style="font-size:44px;margin-bottom:0.75rem;">🎉</div>
-        <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#1D9E75;margin-bottom:0.5rem;">¡Sí es rentable en ${ciudad}!</div>
-        <p style="font-size:14px;color:var(--mid);font-weight:300;line-height:1.6;">Los números tienen sentido. Podrías generar una ganancia real mes a mes con este ${tipo.toLowerCase()}.</p>
-      </div>`;
-    } else if (puede_mejorar) {
-      html += `<div style="text-align:center;margin-bottom:1.5rem;">
-        <div style="font-size:44px;margin-bottom:0.75rem;">📊</div>
-        <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#A8893E;margin-bottom:0.5rem;">Puede funcionar con ajustes</div>
-        <p style="font-size:14px;color:var(--mid);font-weight:300;line-height:1.6;">Hay ganancia, pero el margen es bajo. Con pequeños ajustes este negocio puede ser muy rentable en ${ciudad}.</p>
-      </div>`;
-    } else {
-      html += `<div style="text-align:center;margin-bottom:1.5rem;">
-        <div style="font-size:44px;margin-bottom:0.75rem;">🔍</div>
-        <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#D85A30;margin-bottom:0.5rem;">Los números no cuadran aún</div>
-        <p style="font-size:14px;color:var(--mid);font-weight:300;line-height:1.6;">Con estos datos la propiedad no sería rentable. Pero hay formas de mejorar el escenario.</p>
-      </div>`;
-    }
-
-    // Metrics
-    html += `<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--beige-dark);border-radius:12px;overflow:hidden;margin-bottom:1.5rem;">
-      <div style="background:var(--white);padding:1rem;text-align:center;">
-        <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:${ganancia>0?'#1D9E75':'#D85A30'};">$${fmt(ganancia)}</div>
-        <div style="font-size:11px;color:var(--mid);text-transform:uppercase;letter-spacing:1px;margin-top:2px;">Ganancia / mes</div>
-      </div>
-      <div style="background:var(--white);padding:1rem;text-align:center;">
-        <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--dark);">$${fmt(ingreso_bruto)}</div>
-        <div style="font-size:11px;color:var(--mid);text-transform:uppercase;letter-spacing:1px;margin-top:2px;">Ingreso bruto</div>
-      </div>
-      <div style="background:var(--white);padding:1rem;text-align:center;">
-        <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--dark);">${noches_mes} noches</div>
-        <div style="font-size:11px;color:var(--mid);text-transform:uppercase;letter-spacing:1px;margin-top:2px;">Ocupación</div>
-      </div>
-    </div>`;
-
-    // Detail rows
-    html += `<div style="margin-bottom:1.5rem;">
-      <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--beige-dark);font-size:14px;"><span style="color:var(--mid);font-weight:300;">Ingreso bruto mensual</span><span style="font-weight:500;color:#1D9E75;">+ $${fmt(ingreso_bruto)}</span></div>
-      <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--beige-dark);font-size:14px;"><span style="color:var(--mid);font-weight:300;">Renta mensual</span><span style="font-weight:500;color:#D85A30;">− $${fmt(renta)}</span></div>
-      <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--beige-dark);font-size:14px;"><span style="color:var(--mid);font-weight:300;">Gastos fijos</span><span style="font-weight:500;color:#D85A30;">− $${fmt(gastos)}</span></div>
-      <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--beige-dark);font-size:14px;"><span style="color:var(--mid);font-weight:300;">Comisión plataforma (~3%)</span><span style="font-weight:500;color:#D85A30;">− $${fmt(Math.round(costo_plat))}</span></div>
-      <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--beige-dark);font-size:14px;font-weight:500;"><span style="color:var(--dark);">Ganancia neta mensual</span><span style="color:${ganancia>0?'#1D9E75':'#D85A30'};">$${fmt(ganancia)}</span></div>
-      ${meses_rec ? `<div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--beige-dark);font-size:14px;"><span style="color:var(--mid);font-weight:300;">Recuperas inversión en</span><span style="font-weight:500;color:var(--dark);">${meses_rec} meses</span></div>` : ''}
-      <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:14px;"><span style="color:var(--mid);font-weight:300;">ROI mensual</span><span style="font-weight:500;color:${roi>=15?'#1D9E75':'var(--dark)'}">${Math.round(roi)}%</span></div>
-    </div>`;
-
-    // CTA
-    if (es_rentable || puede_mejorar) {
-      html += `<div style="background:linear-gradient(135deg,#2C2820,#4A4235);border-radius:16px;padding:1.75rem;text-align:center;margin-bottom:1rem;">
-        <span style="display:inline-block;background:rgba(200,125,135,0.15);color:#C87D87;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:99px;border:1px solid rgba(200,169,110,0.35);margin-bottom:0.75rem;">Disponible ahora · 20% OFF lanzamiento</span>
-        <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:white;margin-bottom:0.5rem;line-height:1.3;">Aprende exactamente cómo hacerlo en ${ciudad}</h3>
-        <p style="font-size:13px;color:rgba(255,255,255,0.6);font-weight:300;line-height:1.6;margin-bottom:1.25rem;">En <strong style="color:white;">Hosting Sin Propiedad</strong> te enseño paso a paso cómo conseguir una propiedad, amueblarla, publicarla y automatizarla.</p>
-        <a href="https://pay.hotmart.com/N101179190K" target="_blank" style="display:inline-block;background:var(--sky-deep);color:white;font-size:15px;font-weight:500;padding:14px 32px;border-radius:50px;text-decoration:none;">Acceder al curso →</a>
-      </div>`;
-    } else {
-      html += `<div style="background:var(--beige);border-radius:12px;padding:1.5rem;border:1px solid var(--beige-dark);margin-bottom:1rem;">
-        <p style="font-size:13px;font-weight:500;color:var(--dark);margin-bottom:0.75rem;">¿Cómo mejorar el escenario?</p>
-        <div style="font-size:13px;color:var(--mid);font-weight:300;line-height:1.7;">
-          <p>· Busca una propiedad con renta más baja en otra colonia</p>
-          <p>· Sube el precio por noche — revisa la competencia en Airbnb</p>
-          <p>· Apunta a mayor ocupación con buenas fotos y reseñas</p>
-        </div>
-      </div>
-      <div style="background:linear-gradient(135deg,#2C2820,#4A4235);border-radius:16px;padding:1.75rem;text-align:center;margin-bottom:1rem;">
-        <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:white;margin-bottom:0.5rem;">Aprende a encontrar la propiedad correcta</h3>
-        <p style="font-size:13px;color:rgba(255,255,255,0.6);font-weight:300;line-height:1.6;margin-bottom:1.25rem;">En <strong style="color:white;">Hosting Sin Propiedad</strong> te enseño cómo validar mercados y maximizar ingresos en cualquier ciudad.</p>
-        <a href="https://pay.hotmart.com/N101179190K" target="_blank" style="display:inline-block;background:var(--sky-deep);color:white;font-size:15px;font-weight:500;padding:14px 32px;border-radius:50px;text-decoration:none;">Acceder al curso →</a>
-      </div>`;
-    }
-
-    html += `<div style="text-align:center;">
-      <button onclick="calcRecalcular()" style="background:none;border:1.5px solid var(--beige-dark);color:var(--mid);font-size:13px;font-family:'DM Sans',sans-serif;padding:10px 24px;border-radius:50px;cursor:pointer;">↩ Calcular con otros datos</button>
-    </div>`;
-
-    html += '</div>';
-
-    document.getElementById('calc-resultado').innerHTML = html;
-    ['calc-step1','calc-step2','calc-step3','calc-email'].forEach(id => {
-      document.getElementById(id).style.display = 'none';
-    });
-    document.getElementById('calc-resultado').style.display = 'block';
-  }
-
-  function calcRecalcular() {
-    document.getElementById('calc-resultado').innerHTML = '';
-    document.getElementById('calc-resultado').style.display = 'none';
-    calcStep(1);
-    document.getElementById('calc-progress').style.width = '33%';
-  }
+  document.addEventListener('DOMContentLoaded', calcLive);
   </script>
 
   <!-- BONOS -->
@@ -1930,15 +1721,15 @@
 <section class="testimonios">
   <span class="section-label">Testimonios</span>
   <h2 class="section-title">Lo que dicen los alumnos</h2>
-  <p class="section-sub">Personas reales que aplicaron el sistema — y huéspedes reales de mi Airbnb.</p>
+  <p class="section-sub">Mensajes reales de alumnas que ya aplicaron el sistema.</p>
   <div class="testi-grid" style="margin-bottom:16px;">
     <figure class="testi-real">
       <img src="assets/review-alumna-1.jpg" alt="Mensaje de una alumna agradeciendo el curso" loading="lazy">
       <figcaption class="tr-cap"><span class="star">★</span> Mensaje real de una alumna</figcaption>
     </figure>
     <figure class="testi-real">
-      <img src="assets/review-huesped-1.jpg" alt="Reseña de 5 estrellas de un huésped en Airbnb" loading="lazy">
-      <figcaption class="tr-cap"><span class="star">★★★★★</span> Reseña real de un huésped en Airbnb</figcaption>
+      <img src="assets/review-alumna-2.jpg" alt="Mensaje de una alumna sobre su primer departamento" loading="lazy">
+      <figcaption class="tr-cap"><span class="star">★</span> Otra alumna y su primer depto</figcaption>
     </figure>
   </div>
   <div class="testi-grid">
@@ -2048,7 +1839,7 @@
     </div>
     <div class="consulta-card">
       <div class="consulta-price-label">Asesoría 1:1</div>
-      <div class="consulta-price">$200 <span>USD</span></div>
+      <div class="consulta-price">$500 <span>USD</span></div>
       <div class="consulta-duration">60–120 minutos · Por videollamada</div>
       <a href="https://calendly.com/sofiahosting" target="_blank" class="consulta-btn">
         Agendar asesoría →
@@ -2080,7 +1871,7 @@
       <div class="proy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
       <h3>Asesoría 1:1</h3>
       <p>Sesión personalizada conmigo: revisamos tu ciudad, tus números y armamos un plan de acción concreto para tu negocio.</p>
-      <div class="proy-price">$200 USD · 60–120 min</div>
+      <div class="proy-price">$500 USD · 60–120 min</div>
       <a href="https://calendly.com/sofiahosting" target="_blank" rel="noopener" class="proy-btn">Agendar asesoría →</a>
     </div>
 

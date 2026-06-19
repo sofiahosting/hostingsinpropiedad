@@ -1125,6 +1125,31 @@
     .hero-notif.n3 { bottom: 6%; left: 0; }
   }
 
+  /* ===== RESULTADOS REALES ===== */
+  .resultados { background: var(--dark); padding: 5rem 6%; text-align: center; }
+  .resultados .section-label.gold { background: rgba(200,169,110,0.15); color: #E6C57C; border-color: rgba(230,197,124,0.4); }
+  .resultados .section-title { color: #fff; }
+  .resultados .section-sub { color: rgba(255,255,255,0.65); }
+  .resultados-big { font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(34px,5vw,52px); color: #E6C57C; line-height: 1; margin: 0.5rem 0; }
+  .resultados-big small { display: block; font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: 13px; color: rgba(255,255,255,0.55); letter-spacing: 1px; text-transform: uppercase; margin-top: 8px; }
+  .resultados-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 960px; margin: 2.5rem auto 0; }
+  .proof-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 10px; transition: transform .25s ease; }
+  .proof-card:hover { transform: translateY(-4px); }
+  .proof-card img { width: 100%; border-radius: 10px; display: block; aspect-ratio: 3/4; object-fit: cover; object-position: top; }
+  .proof-card figcaption { font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 10px; font-weight: 500; padding-bottom: 4px; }
+  .resultados-note { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 1.5rem; font-style: italic; }
+  @media (max-width: 768px) { .resultados-grid { grid-template-columns: 1fr 1fr; } }
+
+  /* ===== TESTIMONIO REAL (captura) ===== */
+  .testi-real { background: #fff; border: 1px solid var(--beige-dark); border-radius: 16px; padding: 12px; overflow: hidden; }
+  .testi-real img { width: 100%; border-radius: 10px; display: block; }
+  .testi-real .tr-cap { font-size: 12px; color: var(--mid); margin-top: 10px; font-weight: 500; display: flex; align-items: center; gap: 6px; }
+  .testi-real .tr-cap .star { color: var(--gold); }
+
+  /* ===== LIFESTYLE (sobre mí) ===== */
+  .sofia-life { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 1.5rem; }
+  .sofia-life img { width: 100%; height: 150px; object-fit: cover; border-radius: 12px; display: block; }
+
 </style>
 
 <!-- Datos estructurados (SEO / resultados enriquecidos) -->
@@ -1168,6 +1193,7 @@
   <a href="#top" class="brand">Sofía <span>Retif</span></a>
   <nav class="header-nav">
     <a href="#como-funciona" class="navlink">Cómo funciona</a>
+    <a href="#resultados" class="navlink">Resultados</a>
     <a href="#modulos" class="navlink">Contenido</a>
     <a href="#proyectos" class="navlink">Proyectos</a>
     <a href="https://pay.hotmart.com/N101179190K" target="_blank" rel="noopener" class="header-cta">Acceder al curso →</a>
@@ -1449,9 +1475,36 @@
     <div class="step">
       <div class="step-num">04</div>
       <h3>Ganas la diferencia</h3>
-      <p>Lo que cobrás en Airbnb menos lo que pagás de renta = tu ganancia. Y escalas.</p>
+      <p>Lo que cobras en Airbnb menos lo que pagas de renta = tu ganancia. Y escalas.</p>
     </div>
   </div>
+</section>
+
+<!-- RESULTADOS REALES -->
+<section class="resultados" id="resultados">
+  <span class="section-label gold">Resultados reales</span>
+  <h2 class="section-title">Esto no es teoría — son mis números reales</h2>
+  <div class="resultados-big">+$330,000 MXN<small>generados con una sola propiedad</small></div>
+  <p class="section-sub">Pagos, reservas e ingresos reales de mi propio Airbnb. Es exactamente el sistema que aprendes en el curso.</p>
+  <div class="resultados-grid">
+    <figure class="proof-card">
+      <img src="assets/proof-pago-1.jpg" alt="Pago real de Airbnb" loading="lazy">
+      <figcaption>Pago de $15,611 a mi cuenta</figcaption>
+    </figure>
+    <figure class="proof-card">
+      <img src="assets/proof-pago-2.jpg" alt="Pago real de Airbnb" loading="lazy">
+      <figcaption>Otro pago de $19,321</figcaption>
+    </figure>
+    <figure class="proof-card">
+      <img src="assets/proof-ingresos.jpg" alt="Desglose de ingresos de Airbnb" loading="lazy">
+      <figcaption>Ingresos de una propiedad</figcaption>
+    </figure>
+    <figure class="proof-card">
+      <img src="assets/proof-calendario.jpg" alt="Calendario de Airbnb lleno de reservas" loading="lazy">
+      <figcaption>Mi calendario, lleno</figcaption>
+    </figure>
+  </div>
+  <p class="resultados-note">* Capturas reales de mi cuenta de anfitriona en Airbnb.</p>
 </section>
 
 <!-- MODULOS -->
@@ -1851,10 +1904,14 @@
     </div>
     <div class="sofia-content">
       <span class="section-label">Quién soy</span>
-      <h2 class="section-title" style="text-align:left;">Hola, soy Sofia</h2>
+      <h2 class="section-title" style="text-align:left;">Un poco sobre mí</h2>
       <p>Empecé desde cero — sin experiencia, sin propiedades, sin saber bien si iba a funcionar. Hoy manejo varias propiedades en Airbnb, trabajo menos de 10 horas por semana y vivo viajando por el mundo.</p>
       <p>Renuncié a mi trabajo gracias a este modelo. Y desde entonces he generado cientos de miles de pesos sin ser dueña de ninguna propiedad.</p>
       <p>Este curso es la guía que me hubiera encantado tener cuando empecé. Todo lo que aprendí — los errores, los sistemas, las herramientas — documentado paso a paso para que también puedas hacerlo.</p>
+      <div class="sofia-life">
+        <img src="assets/lifestyle-japon.jpg" alt="Sofía viajando en Japón" loading="lazy">
+        <img src="assets/lifestyle-vino.jpg" alt="Sofía disfrutando un viñedo" loading="lazy">
+      </div>
       <div class="redes">
         <a href="https://www.tiktok.com/@sofiahosting" target="_blank" class="red">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
@@ -1873,7 +1930,17 @@
 <section class="testimonios">
   <span class="section-label">Testimonios</span>
   <h2 class="section-title">Lo que dicen los alumnos</h2>
-  <p class="section-sub">Personas reales que aplicaron el sistema.</p>
+  <p class="section-sub">Personas reales que aplicaron el sistema — y huéspedes reales de mi Airbnb.</p>
+  <div class="testi-grid" style="margin-bottom:16px;">
+    <figure class="testi-real">
+      <img src="assets/review-alumna-1.jpg" alt="Mensaje de una alumna agradeciendo el curso" loading="lazy">
+      <figcaption class="tr-cap"><span class="star">★</span> Mensaje real de una alumna</figcaption>
+    </figure>
+    <figure class="testi-real">
+      <img src="assets/review-huesped-1.jpg" alt="Reseña de 5 estrellas de un huésped en Airbnb" loading="lazy">
+      <figcaption class="tr-cap"><span class="star">★★★★★</span> Reseña real de un huésped en Airbnb</figcaption>
+    </figure>
+  </div>
   <div class="testi-grid">
     <div class="testi-card">
       <div class="testi-stars" style="color:var(--gold);">★★★★★</div>

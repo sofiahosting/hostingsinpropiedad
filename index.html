@@ -1132,13 +1132,14 @@
   .resultados .section-sub { color: rgba(255,255,255,0.65); }
   .resultados-big { font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(34px,5vw,52px); color: #E6C57C; line-height: 1; margin: 0.5rem 0; }
   .resultados-big small { display: block; font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: 13px; color: rgba(255,255,255,0.55); letter-spacing: 1px; text-transform: uppercase; margin-top: 8px; }
-  .resultados-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 960px; margin: 2.5rem auto 0; align-items: start; }
+  .resultados-featured { max-width: 760px; margin: 2.5rem auto 16px; }
+  .resultados-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 600px; margin: 0 auto; align-items: start; }
   .proof-card { background: #fff; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 10px; transition: transform .25s ease; }
   .proof-card:hover { transform: translateY(-4px); }
   .proof-card img { width: 100%; height: auto; border-radius: 10px; display: block; }
   .proof-card figcaption { font-size: 12px; color: var(--mid); margin-top: 10px; font-weight: 500; padding-bottom: 4px; text-align: center; }
+  @media (max-width: 600px) { .resultados-grid { grid-template-columns: 1fr; } }
   .resultados-note { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 1.5rem; font-style: italic; }
-  @media (max-width: 768px) { .resultados-grid { grid-template-columns: 1fr 1fr; } }
 
   /* ===== TESTIMONIO REAL (captura) ===== */
   .testi-real { background: #fff; border: 1px solid var(--beige-dark); border-radius: 16px; padding: 12px; overflow: hidden; }
@@ -1485,23 +1486,19 @@
   <span class="section-label gold">Resultados reales</span>
   <h2 class="section-title">Esto no es teoría — son mis números reales</h2>
   <div class="resultados-big">+$330,000 MXN<small>generados con una sola propiedad</small></div>
-  <p class="section-sub">Pagos, reservas e ingresos reales de mi propio Airbnb. Es exactamente el sistema que aprendes en el curso.</p>
+  <p class="section-sub">Ingresos y reservas reales de mi propio Airbnb. Es exactamente el sistema que aprendes en el curso.</p>
+  <figure class="proof-card resultados-featured">
+    <img src="assets/proof-dashboard.jpg" alt="Panel de rendimiento de Airbnb con ingresos por mes" loading="lazy">
+    <figcaption>Mi panel de ingresos en Airbnb</figcaption>
+  </figure>
   <div class="resultados-grid">
     <figure class="proof-card">
-      <img src="assets/proof-pago-1.jpg" alt="Pago real de Airbnb" loading="lazy">
-      <figcaption>Pago de $15,611 a mi cuenta</figcaption>
-    </figure>
-    <figure class="proof-card">
-      <img src="assets/proof-pago-2.jpg" alt="Pago real de Airbnb" loading="lazy">
-      <figcaption>Otro pago de $19,321</figcaption>
-    </figure>
-    <figure class="proof-card">
-      <img src="assets/proof-ingresos.jpg" alt="Desglose de ingresos de Airbnb" loading="lazy">
-      <figcaption>Ingresos de una propiedad</figcaption>
+      <img src="assets/proof-ingresos.jpg" alt="Desglose de ingresos de una propiedad en Airbnb" loading="lazy">
+      <figcaption>Ingresos de una sola propiedad</figcaption>
     </figure>
     <figure class="proof-card">
       <img src="assets/proof-calendario.jpg" alt="Calendario de Airbnb lleno de reservas" loading="lazy">
-      <figcaption>Mi calendario, lleno</figcaption>
+      <figcaption>Mi calendario, lleno de reservas</figcaption>
     </figure>
   </div>
   <p class="resultados-note">* Capturas reales de mi cuenta de anfitriona en Airbnb.</p>

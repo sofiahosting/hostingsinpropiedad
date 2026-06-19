@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'DM Sans',sans-serif;color:#2C2820;font-weight:300;line-height:1.6;font-size:13.5px;}
+  .page{width:210mm;min-height:297mm;padding:24mm 22mm;position:relative;page-break-after:always;}
+  .page:last-child{page-break-after:auto;}
+  h1,h2,h3{font-family:'Playfair Display',serif;color:#27567C;}
+  .eyebrow{display:inline-block;background:#EAF3F9;color:#2F6188;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:99px;margin-bottom:14px;}
+  strong{font-weight:600;color:#27567C;}
+
+  /* PORTADA */
+  .cover{background:linear-gradient(155deg,#27567C 0%,#33648C 48%,#4E7C9C 100%);color:#fff;display:flex;flex-direction:column;justify-content:center;}
+  .cover .eyebrow{background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.35);}
+  .cover h1{color:#fff;font-size:42px;line-height:1.12;margin:6px 0 16px;}
+  .cover h1 em{font-style:italic;color:#E6C57C;}
+  .cover p{font-size:16px;color:rgba(255,255,255,0.9);max-width:135mm;}
+  .cover .by{margin-top:38px;font-size:14px;color:rgba(255,255,255,0.85);}
+  .cover .by strong{color:#fff;}
+  .cover .circle{position:absolute;border-radius:50%;}
+  .c1{top:-40mm;right:-30mm;width:120mm;height:120mm;background:rgba(255,255,255,0.06);}
+  .c2{bottom:-50mm;left:-30mm;width:120mm;height:120mm;background:rgba(200,169,110,0.12);}
+
+  h2{font-size:25px;margin-bottom:6px;line-height:1.2;}
+  .lead{color:#6B6355;font-size:14px;margin-bottom:18px;}
+  p{margin-bottom:12px;}
+  .section{margin-bottom:22px;}
+  .step{display:flex;gap:14px;margin-bottom:16px;}
+  .step .n{flex-shrink:0;width:30px;height:30px;border-radius:50%;background:#2F6188;color:#fff;font-family:'Playfair Display',serif;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px;}
+  .step h3{font-size:15px;margin-bottom:3px;color:#2C2820;}
+  .step p{font-size:13px;color:#6B6355;margin:0;}
+  .box{background:#F5EFE4;border-radius:10px;padding:16px 18px;margin:16px 0;font-size:13px;}
+  .box.blue{background:#EAF3F9;}
+  .box .t{font-weight:600;color:#27567C;margin-bottom:6px;font-size:13px;}
+  ul{list-style:none;margin:8px 0;}
+  li{padding-left:24px;position:relative;margin-bottom:9px;font-size:13.5px;}
+  li::before{content:'✓';position:absolute;left:0;color:#2F6188;font-weight:700;}
+  .li-x li::before{content:'✗';color:#C87D87;}
+  .foot{position:absolute;bottom:14mm;left:22mm;right:22mm;display:flex;justify-content:space-between;font-size:10px;color:#B4B2A9;border-top:1px solid #E8DDC8;padding-top:8px;}
+
+  /* CTA final */
+  .cta{background:linear-gradient(155deg,#27567C,#33648C);color:#fff;border-radius:14px;padding:30px;text-align:center;margin-top:10px;}
+  .cta h2{color:#fff;font-size:24px;margin-bottom:10px;}
+  .cta h2 em{font-style:italic;color:#E6C57C;}
+  .cta p{color:rgba(255,255,255,0.88);font-size:13.5px;max-width:130mm;margin:0 auto 18px;}
+  .cta .btn{display:inline-block;background:#E6C57C;color:#27567C;font-weight:600;font-size:14px;padding:13px 30px;border-radius:50px;text-decoration:none;}
+  .cta .url{margin-top:14px;font-size:12px;color:rgba(255,255,255,0.7);}
+</style>
+</head>
+<body>
+
+  <!-- PORTADA -->
+  <div class="page cover">
+    <div class="circle c1"></div><div class="circle c2"></div>
+    <span class="eyebrow">Guía gratuita · Arbitraje de Airbnb</span>
+    <h1>Cómo empezar en Airbnb <em>sin tener</em> ninguna propiedad</h1>
+    <p>La guía rápida para generar tus primeros ingresos con rentas cortas en Latinoamérica — paso a paso, sin comprar nada.</p>
+    <div class="by">por <strong>Sofía Retif</strong> · sofiaretif.com</div>
+  </div>
+
+  <!-- PÁGINA 1 -->
+  <div class="page">
+    <span class="eyebrow">Lo esencial</span>
+    <h2>¿Qué es el arbitraje de Airbnb?</h2>
+    <p class="lead">El modelo con el que generas ingresos sin ser dueño de la propiedad.</p>
+    <p>El arbitraje de Airbnb (o <strong>rent-to-rent</strong>) consiste en <strong>rentar una propiedad a largo plazo</strong> y, con permiso del dueño, <strong>subarrendarla por noches</strong> en plataformas como Airbnb o Booking. Tu ganancia es la diferencia entre lo que pagas de renta + gastos y lo que generas con las rentas cortas.</p>
+    <p>No compras nada, no pides hipotecas y no necesitas un gran capital. Tu inversión principal es el <strong>depósito, el amueblado y la puesta a punto</strong>.</p>
+
+    <div class="box blue">
+      <div class="t">Un ejemplo sencillo</div>
+      Rentas un departamento por <strong>$10,000/mes</strong>. Lo amueblas y lo publicas en Airbnb a <strong>$1,200 la noche</strong>. Con una ocupación del 60% (18 noches) generas <strong>$21,600</strong>. Después de renta, gastos y comisiones, tu ganancia puede rondar los <strong>$6,000–$8,000 al mes</strong> — por una sola propiedad.
+    </div>
+
+    <h2 style="margin-top:24px;">¿Por qué funciona tan bien en Latinoamérica?</h2>
+    <div class="section">
+      <ul>
+        <li>El turismo y los viajes de trabajo crecen año con año en la región.</li>
+        <li>La diferencia entre renta mensual y precio por noche es muy favorable.</li>
+        <li>Puedes cobrar en plataformas internacionales (muchas veces en dólares).</li>
+        <li>La mayoría de la gente aún no conoce este modelo: hay mucho espacio.</li>
+      </ul>
+    </div>
+    <div class="foot"><span>Cómo empezar en Airbnb sin tener ninguna propiedad</span><span>Sofía Retif · 1</span></div>
+  </div>
+
+  <!-- PÁGINA 2 -->
+  <div class="page">
+    <span class="eyebrow">El camino</span>
+    <h2>Los 5 pasos para empezar</h2>
+    <p class="lead">Del cero a tu primer espacio publicado y generando.</p>
+
+    <div class="step"><div class="n">1</div><div><h3>Valida tu ciudad y zona</h3><p>Investiga la demanda y los precios por noche en tu ciudad. Busca zonas turísticas, de negocios o cerca de hospitales/universidades. (Usa mi calculadora gratis en sofiaretif.com.)</p></div></div>
+    <div class="step"><div class="n">2</div><div><h3>Encuentra la propiedad correcta</h3><p>Busca rentas donde los números cierren: que el precio por noche x ocupación supere con margen la renta + gastos. La ubicación lo es casi todo.</p></div></div>
+    <div class="step"><div class="n">3</div><div><h3>Negocia con el dueño</h3><p>Necesitas su permiso por escrito para subarrendar en renta corta. Preséntalo como un inquilino serio que cuidará y mantendrá impecable la propiedad.</p></div></div>
+    <div class="step"><div class="n">4</div><div><h3>Amuebla y publica</h3><p>Amueblado funcional y bonito (sin gastar de más), fotos profesionales y un anuncio optimizado con título, descripción y precios competitivos.</p></div></div>
+    <div class="step"><div class="n">5</div><div><h3>Automatiza y escala</h3><p>Precios dinámicos, mensajes automáticos, limpieza y check-in autogestionados. Una vez aceitado, dedicas pocas horas a la semana y puedes sumar más propiedades.</p></div></div>
+
+    <div class="box">
+      <div class="t">Regla de oro</div>
+      Antes de firmar nada, <strong>haz los números</strong>. Si el margen no es claro con una ocupación realista (50–60%), no es la propiedad correcta. Hay miles más.
+    </div>
+    <div class="foot"><span>Cómo empezar en Airbnb sin tener ninguna propiedad</span><span>Sofía Retif · 2</span></div>
+  </div>
+
+  <!-- PÁGINA 3 -->
+  <div class="page">
+    <span class="eyebrow">Aprende de mis errores</span>
+    <h2>5 errores que debes evitar</h2>
+    <div class="section li-x">
+      <ul>
+        <li><strong>Elegir mal la ubicación.</strong> Una zona sin demanda real arruina hasta los mejores números.</li>
+        <li><strong>No tener permiso por escrito</strong> del dueño para subarrendar. Siempre formaliza.</li>
+        <li><strong>Sobre-invertir en muebles.</strong> El huésped paga por limpieza, ubicación y experiencia, no por lujo.</li>
+        <li><strong>Fotos amateur.</strong> Las fotos venden la reserva: es donde más se nota la diferencia.</li>
+        <li><strong>No automatizar.</strong> Sin sistemas, el negocio te consume el tiempo en lugar de liberarlo.</li>
+      </ul>
+    </div>
+
+    <h2 style="margin-top:22px;">Checklist para tu primer espacio</h2>
+    <div class="box blue">
+      <ul style="margin:0;">
+        <li>Ciudad y zona validadas con datos</li>
+        <li>Números que cierran con 50–60% de ocupación</li>
+        <li>Contrato con permiso de subarriendo por escrito</li>
+        <li>Amueblado funcional + kit de amenidades</li>
+        <li>Sesión de fotos profesional</li>
+        <li>Anuncio optimizado (título, descripción, precios)</li>
+        <li>Sistema de limpieza y check-in resuelto</li>
+        <li>Precios dinámicos y mensajes automáticos activados</li>
+      </ul>
+    </div>
+    <div class="foot"><span>Cómo empezar en Airbnb sin tener ninguna propiedad</span><span>Sofía Retif · 3</span></div>
+  </div>
+
+  <!-- PÁGINA 4 — CTA -->
+  <div class="page">
+    <span class="eyebrow">Tu siguiente paso</span>
+    <h2>¿Lista para hacerlo de verdad?</h2>
+    <p>Esta guía es el mapa general. El <strong>paso a paso completo</strong> — con los guiones para negociar con dueños, los contratos, la calculadora, las plantillas y el sistema de automatización que uso — está dentro de mi curso <strong>Hosting Sin Propiedad</strong>.</p>
+
+    <div class="cta">
+      <h2>Hosting Sin Propiedad</h2>
+      <p>10 módulos prácticos para llevarte del cero a tu primer espacio publicado y generando ingresos — con todas mis plantillas y herramientas reales.</p>
+      <a class="btn" href="https://pay.hotmart.com/N101179190K">Acceder al curso →</a>
+      <div class="url">Usa el código <strong style="color:#E6C57C;">LANZAMIENTO</strong> para 20% de descuento · sofiaretif.com</div>
+    </div>
+
+    <div class="box" style="margin-top:24px;">
+      <div class="t">¿Prefieres ayuda personalizada?</div>
+      Agenda una <strong>asesoría 1:1</strong> conmigo y revisamos tu ciudad, tus números y armamos un plan concreto para tu caso. Todo en <strong>sofiaretif.com</strong>.
+    </div>
+
+    <p style="margin-top:30px;text-align:center;color:#6B6355;font-size:13px;">Gracias por leer. Nos vemos dentro 💙<br><strong>— Sofía</strong></p>
+    <div class="foot"><span>Cómo empezar en Airbnb sin tener ninguna propiedad</span><span>Sofía Retif · 4</span></div>
+  </div>
+
+</body>
+</html>

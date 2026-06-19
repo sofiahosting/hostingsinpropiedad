@@ -1195,6 +1195,7 @@
   <nav class="header-nav">
     <a href="#como-funciona" class="navlink">Cómo funciona</a>
     <a href="#resultados" class="navlink">Resultados</a>
+    <a href="#calculadora" class="navlink">Calculadora</a>
     <a href="#modulos" class="navlink">Contenido</a>
     <a href="#proyectos" class="navlink">Proyectos</a>
     <a href="https://pay.hotmart.com/N101179190K" target="_blank" rel="noopener" class="header-cta">Acceder al curso →</a>
@@ -1563,7 +1564,7 @@
       <div style="text-align:center;margin-bottom:2.5rem;">
         <span class="section-label gold">Gratis · sin registro</span>
         <h2 class="section-title">¿Cuánto te dejaría a ti? Calcúlalo ahora</h2>
-        <p class="section-sub">Mueve los datos de tu ciudad. Es la misma calculadora que usan los alumnos antes de elegir su primera propiedad.</p>
+        <p class="section-sub">Mueve los datos de tu propiedad (en dólares). Es la misma calculadora que usan los alumnos antes de elegir su primera propiedad.</p>
       </div>
 
       <div class="calc-card" style="background:var(--white);border-radius:22px;box-shadow:0 16px 48px rgba(44,40,32,0.1);overflow:hidden;">
@@ -1571,26 +1572,26 @@
         <!-- Inputs -->
         <div style="padding:2.25rem;">
           <div class="calc-field">
-            <label>Renta mensual que pagas al dueño</label>
-            <div class="calc-inp"><span class="cur">$</span><input id="ck-renta" type="number" value="12000" min="0" oninput="calcLive()"></div>
+            <label>Renta mensual que pagas al dueño (USD)</label>
+            <div class="calc-inp"><span class="cur">$</span><input id="ck-renta" type="number" value="700" min="0" oninput="calcLive()"></div>
           </div>
           <div class="calc-field">
-            <label>Tarifa por noche en Airbnb</label>
-            <div class="calc-inp"><span class="cur">$</span><input id="ck-tarifa" type="number" value="1200" min="0" oninput="calcLive()"></div>
+            <label>Tarifa por noche en Airbnb (USD)</label>
+            <div class="calc-inp"><span class="cur">$</span><input id="ck-tarifa" type="number" value="70" min="0" oninput="calcLive()"></div>
           </div>
           <div class="calc-field">
-            <div class="calc-slider-head"><span>Ocupación estimada</span><b id="ck-ocup-val">65%</b></div>
-            <input id="ck-ocup" class="calc-range" type="range" min="0" max="100" value="65" oninput="calcLive()">
+            <label>Gastos de operación al mes (USD)</label>
+            <div class="calc-inp"><span class="cur">$</span><input id="ck-gastos" type="number" value="150" min="0" oninput="calcLive()"></div>
           </div>
           <div class="calc-field" style="margin-bottom:0;">
-            <div class="calc-slider-head"><span>Gastos de operación</span><b id="ck-gastos-val">20%</b></div>
-            <input id="ck-gastos" class="calc-range" type="range" min="0" max="50" value="20" oninput="calcLive()">
+            <div class="calc-slider-head"><span>Ocupación estimada</span><b id="ck-ocup-val">65%</b></div>
+            <input id="ck-ocup" class="calc-range" type="range" min="0" max="100" value="65" oninput="calcLive()">
           </div>
         </div>
 
         <!-- Resultado -->
         <div style="background:var(--dark);padding:2.25rem;color:#fff;">
-          <div style="font-size:13px;color:rgba(255,255,255,0.6);">Tu utilidad estimada al mes</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.6);">Tu utilidad estimada al mes (USD)</div>
           <div id="ck-utilidad" style="font-family:'Playfair Display',serif;font-size:clamp(40px,6vw,52px);font-weight:700;color:#E6C57C;line-height:1;margin:0.35rem 0 0.3rem;">$6,018</div>
           <div id="ck-extra" style="font-size:13px;color:rgba(255,255,255,0.55);">≈ $72,216 al año · margen 26%</div>
           <div style="margin-top:1.5rem;border-top:1px solid rgba(255,255,255,0.12);padding-top:0.5rem;">
@@ -1607,29 +1608,27 @@
   </section>
 
   <script>
-  function _fmtMXN(n){ return new Intl.NumberFormat('es-MX',{maximumFractionDigits:0}).format(Math.round(n)); }
+  function _fmtUSD(n){ return new Intl.NumberFormat('en-US',{maximumFractionDigits:0}).format(Math.round(n)); }
   function calcLive(){
     var renta=parseFloat(document.getElementById('ck-renta').value)||0;
     var tarifa=parseFloat(document.getElementById('ck-tarifa').value)||0;
+    var gastos=parseFloat(document.getElementById('ck-gastos').value)||0;
     var ocup=parseInt(document.getElementById('ck-ocup').value)||0;
-    var gastos=parseInt(document.getElementById('ck-gastos').value)||0;
     document.getElementById('ck-ocup-val').textContent=ocup+'%';
-    document.getElementById('ck-gastos-val').textContent=gastos+'%';
     var noches=30*(ocup/100);
     var bruto=noches*tarifa;
     var comAirbnb=bruto*0.03;
-    var gastosOp=bruto*(gastos/100);
-    var comOp=comAirbnb+gastosOp;
+    var comOp=comAirbnb+gastos;
     var utilidad=bruto-renta-comOp;
     var anual=utilidad*12;
     var margen=bruto>0?Math.round(utilidad/bruto*100):0;
     var u=document.getElementById('ck-utilidad');
-    u.textContent='$'+_fmtMXN(utilidad);
+    u.textContent='$'+_fmtUSD(utilidad);
     u.style.color = utilidad>=0 ? '#E6C57C' : '#F0997B';
-    document.getElementById('ck-extra').textContent='≈ $'+_fmtMXN(anual)+' al año · margen '+margen+'%';
-    document.getElementById('ck-bruto').textContent='$'+_fmtMXN(bruto);
-    document.getElementById('ck-rentaout').textContent='−$'+_fmtMXN(renta);
-    document.getElementById('ck-comop').textContent='−$'+_fmtMXN(comOp);
+    document.getElementById('ck-extra').textContent='≈ $'+_fmtUSD(anual)+' al año · margen '+margen+'%';
+    document.getElementById('ck-bruto').textContent='$'+_fmtUSD(bruto);
+    document.getElementById('ck-rentaout').textContent='−$'+_fmtUSD(renta);
+    document.getElementById('ck-comop').textContent='−$'+_fmtUSD(comOp);
   }
   document.addEventListener('DOMContentLoaded', calcLive);
   </script>

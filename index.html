@@ -1809,7 +1809,7 @@
 <section class="cta-final" id="comprar">
   <span class="section-label">🎉 ¡Ya está disponible!</span>
   <h2 class="section-title">Tu lugar te está esperando</h2>
-  <p class="section-sub">Usa el código <strong>LANZAMIENTO</strong> al pagar y obtén 20% de descuento. Oferta de lanzamiento por tiempo limitado.</p>
+  <p class="section-sub">Usa el código <strong>LANZAMIENTO</strong> al pagar y obtén 20% de descuento. Válido hasta el 30 de junio.</p>
   <!-- Countdown -->
   <div style="display:inline-flex;flex-direction:column;align-items:center;gap:10px;margin:1.75rem auto 1.5rem;position:relative;z-index:1;">
     <p style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.6);">El precio de lanzamiento termina en</p>
@@ -2013,11 +2013,9 @@ function handleWaitlist(e) {
   onScroll();
 })();
 
-// Countdown perenne (ventana rodante de 72h por visitante)
+// Countdown a la fecha de lanzamiento (30 de junio)
 (function(){
-  var KEY='hsp_deadline', now=Date.now();
-  var dl=parseInt(localStorage.getItem(KEY)||'0',10);
-  if(!dl || dl<now){ dl=now+72*3600*1000; localStorage.setItem(KEY,String(dl)); }
+  var dl=new Date('2026-06-30T23:59:59').getTime();
   var d=document.getElementById('cd-d'),h=document.getElementById('cd-h'),m=document.getElementById('cd-m'),s=document.getElementById('cd-s');
   if(!d) return;
   function pad(n){ return String(n).padStart(2,'0'); }
@@ -2028,7 +2026,6 @@ function handleWaitlist(e) {
     var mins=Math.floor(diff/60000); diff-=mins*60000;
     var secs=Math.floor(diff/1000);
     d.textContent=pad(days); h.textContent=pad(hrs); m.textContent=pad(mins); s.textContent=pad(secs);
-    if(dl-Date.now()<=0){ dl=Date.now()+72*3600*1000; localStorage.setItem(KEY,String(dl)); }
   }
   tick(); setInterval(tick,1000);
 })();

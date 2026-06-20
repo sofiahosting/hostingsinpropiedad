@@ -1042,13 +1042,19 @@
   @media (max-width: 768px) { .mobile-cta-bar { display: flex; } body { padding-bottom: 74px; } }
 
   /* ===== CREDIBILITY BAR ===== */
-  .cred-bar { background: var(--dark); padding: 15px 6%; }
-  .cred-inner { max-width: 920px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 34px; flex-wrap: wrap; }
-  .cred-item { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.82); font-size: 14px; font-weight: 300; }
-  .cred-item strong { color: #fff; font-weight: 600; }
-  .cred-item .stars { color: var(--gold); letter-spacing: 1px; }
-  .cred-sep { color: rgba(255,255,255,0.22); }
-  @media (max-width: 600px) { .cred-inner { gap: 16px; font-size: 13px; } .cred-sep { display: none; } }
+  .cred-bar { background: var(--beige); padding: 2rem 6%; }
+  .cred-inner { max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .cred-card { display: flex; align-items: center; gap: 12px; background: var(--white); border: 1px solid var(--beige-dark); border-radius: 14px; padding: 14px 16px; box-shadow: 0 6px 20px rgba(44,40,32,0.05); }
+  .cred-ic { width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .cred-ic svg { width: 22px; height: 22px; }
+  .cred-tx .n { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 17px; color: var(--dark); line-height: 1; }
+  .cred-tx .n .stars { color: var(--gold); font-size: 15px; letter-spacing: 1px; }
+  .cred-tx .l { font-size: 12px; color: var(--mid); margin-top: 4px; }
+  .ic-sky { background: var(--sky-pale); color: var(--sky-deep); }
+  .ic-gold { background: #FBF3E2; color: var(--gold-dark); }
+  .ic-rose { background: var(--rose-pale); color: var(--rose); }
+  .ic-green { background: #E6F4EC; color: #1D9E75; }
+  @media (max-width: 768px) { .cred-inner { grid-template-columns: 1fr 1fr; } }
 
   /* ===== COUNTDOWN ===== */
   .countdown { display: inline-flex; align-items: center; gap: 7px; }
@@ -1112,9 +1118,9 @@
   .hn-green { background: #E6F4EC; color: #1D9E75; }
   .hn-gold { background: #FBF3E2; color: var(--gold-dark); }
   .hn-blue { background: var(--sky-pale); color: var(--sky-deep); }
-  .hero-notif.n1 { top: 16%; left: -5%; animation-delay: 0s; }
-  .hero-notif.n2 { top: 45%; right: -7%; animation-delay: 1.3s; }
-  .hero-notif.n3 { bottom: 6%; left: -6%; animation-delay: 2.4s; }
+  .hero-notif.n1 { top: 0; left: -11%; animation-delay: 0s; }
+  .hero-notif.n2 { top: 52%; right: -12%; animation-delay: 1.3s; }
+  .hero-notif.n3 { bottom: -2%; left: -9%; animation-delay: 2.4s; }
   @keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
   @media (max-width: 768px) {
     .hero-notif { padding: 8px 11px; max-width: 180px; }
@@ -1416,13 +1422,22 @@
 <!-- CREDIBILITY BAR -->
 <div class="cred-bar">
   <div class="cred-inner">
-    <div class="cred-item"><strong>+120</strong> alumnos en Latinoamérica</div>
-    <span class="cred-sep">·</span>
-    <div class="cred-item"><span class="stars">★★★★★</span> valoración de alumnos</div>
-    <span class="cred-sep">·</span>
-    <div class="cred-item"><strong>Superanfitriona</strong> de Airbnb</div>
-    <span class="cred-sep">·</span>
-    <div class="cred-item">Garantía de <strong>reembolso</strong></div>
+    <div class="cred-card">
+      <div class="cred-ic ic-sky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <div class="cred-tx"><div class="n">+120</div><div class="l">alumnos en LATAM</div></div>
+    </div>
+    <div class="cred-card">
+      <div class="cred-ic ic-gold"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
+      <div class="cred-tx"><div class="n"><span class="stars">★★★★★</span></div><div class="l">valoración de alumnos</div></div>
+    </div>
+    <div class="cred-card">
+      <div class="cred-ic ic-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5L17 22l-5-3-5 3 1.5-8.5"/></svg></div>
+      <div class="cred-tx"><div class="n">Superanfitriona</div><div class="l">de Airbnb</div></div>
+    </div>
+    <div class="cred-card">
+      <div class="cred-ic ic-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <div class="cred-tx"><div class="n">Garantía</div><div class="l">de reembolso</div></div>
+    </div>
   </div>
 </div>
 

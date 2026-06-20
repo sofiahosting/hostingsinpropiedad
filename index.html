@@ -1138,6 +1138,8 @@
   .resultados-big { font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(34px,5vw,52px); color: #E6C57C; line-height: 1; margin: 0.5rem 0; }
   .resultados-big small { display: block; font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: 13px; color: rgba(255,255,255,0.55); letter-spacing: 1px; text-transform: uppercase; margin-top: 8px; }
   .resultados-featured { max-width: 760px; margin: 2.5rem auto 16px; }
+  .resultados-wide { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 880px; margin: 0 auto 16px; align-items: start; }
+  @media (max-width: 700px) { .resultados-wide { grid-template-columns: 1fr; } }
   .resultados-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 600px; margin: 0 auto; align-items: start; }
   .proof-card { background: #fff; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 10px; transition: transform .25s ease; }
   .proof-card:hover { transform: translateY(-4px); }
@@ -1518,12 +1520,22 @@
 <section class="resultados" id="resultados">
   <span class="section-label gold">Resultados reales</span>
   <h2 class="section-title">Esto no es teoría — son mis números reales</h2>
-  <div class="resultados-big">+$430,000 MXN<small>generados con rentas cortas en Airbnb</small></div>
+  <div class="resultados-big">+$880,000 MXN<small>de ingresos en un solo año (2023)</small></div>
   <p class="section-sub">Ingresos y reservas reales de mi propio Airbnb. Es exactamente el sistema que aprendes en el curso.</p>
   <figure class="proof-card resultados-featured">
-    <img src="assets/proof-dashboard.jpg" alt="Panel de rendimiento de Airbnb con ingresos por mes" loading="lazy">
-    <figcaption>Mi panel de ingresos en Airbnb</figcaption>
+    <img src="assets/proof-2023.jpg" alt="Ingresos registrados en 2023: $889,614 MXN" loading="lazy">
+    <figcaption>Mis ingresos registrados en 2023</figcaption>
   </figure>
+  <div class="resultados-wide">
+    <figure class="proof-card">
+      <img src="assets/proof-dashboard.jpg" alt="Panel de rendimiento de Airbnb por mes" loading="lazy">
+      <figcaption>Mi panel de ingresos por mes</figcaption>
+    </figure>
+    <figure class="proof-card">
+      <img src="assets/proof-listings.jpg" alt="Varias propiedades operando en Airbnb" loading="lazy">
+      <figcaption>Varias propiedades operando a la vez</figcaption>
+    </figure>
+  </div>
   <div class="resultados-grid">
     <figure class="proof-card">
       <img src="assets/proof-ingresos.jpg" alt="Desglose de ingresos de una propiedad en Airbnb" loading="lazy">

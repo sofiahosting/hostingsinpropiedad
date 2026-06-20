@@ -1171,6 +1171,34 @@
   .lifestyle-grid figcaption { position: absolute; left: 12px; bottom: 12px; background: rgba(255,255,255,0.92); color: var(--sky-deep); font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 99px; }
   @media (max-width: 760px) { .lifestyle-grid { column-count: 2; } }
 
+  /* ===== BANNER DE LANZAMIENTO ===== */
+  .launch-bar {
+    display: block; text-align: center; text-decoration: none;
+    background: linear-gradient(90deg, var(--sky-deep), var(--sky-deeper));
+    color: #fff; font-size: 13.5px; font-weight: 400; padding: 11px 16px;
+    position: relative; z-index: 1001; line-height: 1.5;
+  }
+  .launch-bar strong { color: #E6C57C; font-weight: 600; }
+  .launch-bar .lb-cta { color: #E6C57C; font-weight: 600; text-decoration: underline; white-space: nowrap; }
+  @media (max-width: 600px) { .launch-bar { font-size: 12px; padding: 9px 12px; } }
+
+  /* ===== SORTEO / LANZAMIENTO ===== */
+  .sorteo { background: linear-gradient(160deg, var(--sky-pale) 0%, var(--beige) 100%); padding: 5rem 6%; text-align: center; }
+  .sorteo-inner { max-width: 640px; margin: 0 auto; background: var(--white); border-radius: 22px; box-shadow: 0 18px 50px rgba(44,40,32,0.1); border: 1px solid var(--beige-dark); padding: 2.75rem 2.5rem; position: relative; overflow: hidden; }
+  .sorteo-inner::before { content: ''; position: absolute; top: -60px; right: -50px; width: 200px; height: 200px; border-radius: 50%; background: rgba(230,197,124,0.15); }
+  .sorteo-prize { display: inline-flex; align-items: center; gap: 8px; background: var(--rose-pale); color: var(--rose); font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 6px 16px; border-radius: 99px; margin-bottom: 1rem; position: relative; }
+  .sorteo h2 { font-family: 'Playfair Display', serif; font-size: clamp(24px,3.4vw,32px); font-weight: 600; color: var(--dark); line-height: 1.25; margin-bottom: 0.75rem; letter-spacing: -0.4px; }
+  .sorteo .sub { font-size: 15px; color: var(--mid); line-height: 1.7; font-weight: 300; margin-bottom: 2rem; }
+  .sorteo-steps { text-align: left; display: flex; flex-direction: column; gap: 14px; margin-bottom: 2rem; }
+  .sorteo-step { display: flex; gap: 14px; align-items: flex-start; }
+  .ss-num { flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--sky-deep); color: #fff; font-family: 'Playfair Display', serif; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 15px; }
+  .sorteo-step div { font-size: 14.5px; color: var(--dark); line-height: 1.6; font-weight: 300; padding-top: 3px; }
+  .sorteo-step b { font-weight: 600; color: var(--dark); }
+  .sorteo-step a { color: var(--sky-deep); font-weight: 600; }
+  .sorteo-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--sky-deep); color: #fff; font-size: 16px; font-weight: 500; padding: 16px 34px; border-radius: 50px; text-decoration: none; transition: background .2s; }
+  .sorteo-btn:hover { background: var(--sky-deeper); }
+  .sorteo-note { font-size: 12px; color: var(--mid); margin-top: 1rem; line-height: 1.5; }
+
 </style>
 
 <!-- Datos estructurados (SEO / resultados enriquecidos) -->
@@ -1209,6 +1237,9 @@
 </head>
 <body>
 
+<!-- BANNER DE LANZAMIENTO -->
+<a class="launch-bar" href="#sorteo">🚀 <strong>Estamos en lanzamiento</strong> · 22–26 de junio · 20% OFF con código <strong>LANZAMIENTO</strong> + sorteo de una asesoría 1:1 · <span class="lb-cta">Ver cómo participar →</span></a>
+
 <!-- STICKY HEADER -->
 <header class="site-header" id="siteHeader">
   <a href="#top" class="brand">Sofía <span>Retif</span></a>
@@ -1217,6 +1248,7 @@
     <a href="#resultados" class="navlink">Resultados</a>
     <a href="#calculadora" class="navlink">Calculadora</a>
     <a href="#modulos" class="navlink">Contenido</a>
+    <a href="#sorteo" class="navlink">🎁 Sorteo</a>
     <a href="#proyectos" class="navlink">Proyectos</a>
     <a href="https://pay.hotmart.com/N101179190K" target="_blank" rel="noopener" class="header-cta">Acceder al curso →</a>
   </nav>
@@ -1232,7 +1264,7 @@
 <section class="hero" id="top">
   <div class="hero-text">
     <div class="hero-hello">Hola, soy Sofía 👋</div>
-    <span class="hero-eyebrow">Curso práctico · Disponible ahora</span>
+    <span class="hero-eyebrow">🚀 Lanzamiento · 22–26 de junio</span>
     <h1>Gana dinero con rentas cortas <span class="uline"><em>sin tener</em><svg viewBox="0 0 200 13" preserveAspectRatio="none"><path d="M3 9 C 55 2, 145 2, 197 7" stroke="#E6C57C" stroke-width="4" fill="none" stroke-linecap="round"/></svg></span> ninguna propiedad</h1>
     <p class="hero-sub">Te enseño el sistema con el que renuncié a mi trabajo y hoy genero ingresos estables cada mes rentando propiedades que no son mías — invirtiendo menos de 10 horas por semana, porque gran parte del negocio se automatiza.</p>
     <div class="hero-chips">
@@ -1828,9 +1860,9 @@
 
 <!-- CTA FINAL -->
 <section class="cta-final" id="comprar">
-  <span class="section-label">🎉 ¡Ya está disponible!</span>
+  <span class="section-label">🚀 ¡Estamos en lanzamiento!</span>
   <h2 class="section-title">Tu lugar te está esperando</h2>
-  <p class="section-sub">Usa el código <strong>LANZAMIENTO</strong> al pagar y obtén 20% de descuento. Válido hasta el 30 de junio.</p>
+  <p class="section-sub">Usa el código <strong>LANZAMIENTO</strong> al pagar y obtén 20% de descuento. Válido del 22 al 26 de junio — y participas por una asesoría 1:1.</p>
   <!-- Countdown -->
   <div style="display:inline-flex;flex-direction:column;align-items:center;gap:10px;margin:1.75rem auto 1.5rem;position:relative;z-index:1;">
     <p style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.6);">El precio de lanzamiento termina en</p>
@@ -1882,6 +1914,22 @@
   <div class="garantia">
     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C8A96E" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
     <div class="garantia-text"><strong>Tu inversión está protegida.</strong><br>Hotmart ofrece garantía de reembolso. Si el curso no es lo que esperabas, lo puedes solicitar sin preguntas.</div>
+  </div>
+</section>
+
+<!-- SORTEO / LANZAMIENTO -->
+<section class="sorteo" id="sorteo">
+  <div class="sorteo-inner">
+    <span class="sorteo-prize">🎁 Solo durante el lanzamiento</span>
+    <h2>Accede al curso y participa por una <em style="font-style:italic;color:var(--sky-deep);">asesoría 1:1 conmigo</em></h2>
+    <p class="sub">Del 22 al 26 de junio, además del 20% de descuento, entras al sorteo de una <strong>asesoría 1:1</strong> (valor $500 USD). Habrá <strong>1 ganador</strong>.</p>
+    <div class="sorteo-steps">
+      <div class="sorteo-step"><span class="ss-num">1</span><div><b>Accede al curso</b> entre el 22 y 26 de junio (usa el código <b>LANZAMIENTO</b> para 20% OFF).</div></div>
+      <div class="sorteo-step"><span class="ss-num">2</span><div>Tómalo y escríbeme a <a href="mailto:hola@sofiaretif.com?subject=Mi%20opini%C3%B3n%20del%20curso%20%E2%80%94%20Sorteo">hola@sofiaretif.com</a> con tu <b>opinión honesta</b>: qué te pareció y qué aprendiste.</div></div>
+      <div class="sorteo-step"><span class="ss-num">3</span><div>¡Listo, ya participas! Anuncio al <b>ganador el 30 de junio</b> por Instagram.</div></div>
+    </div>
+    <a href="https://pay.hotmart.com/N101179190K" target="_blank" rel="noopener" class="sorteo-btn">Acceder al curso y participar →</a>
+    <p class="sorteo-note">1 ganador de una asesoría 1:1 (2 horas o más). Requisito: haber accedido al curso durante el lanzamiento (22–26 de junio) y enviar tu opinión por correo.</p>
   </div>
 </section>
 
@@ -2036,7 +2084,7 @@ function handleWaitlist(e) {
 
 // Countdown a la fecha de lanzamiento (30 de junio)
 (function(){
-  var dl=new Date('2026-06-30T23:59:59').getTime();
+  var dl=new Date('2026-06-26T23:59:59').getTime();
   var d=document.getElementById('cd-d'),h=document.getElementById('cd-h'),m=document.getElementById('cd-m'),s=document.getElementById('cd-s');
   if(!d) return;
   function pad(n){ return String(n).padStart(2,'0'); }

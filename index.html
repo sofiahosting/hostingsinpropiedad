@@ -1151,6 +1151,9 @@
   .testi-real img { width: 100%; border-radius: 10px; display: block; }
   .testi-real .tr-cap { font-size: 12px; color: var(--mid); margin-top: 10px; font-weight: 500; display: flex; align-items: center; gap: 6px; }
   .testi-real .tr-cap .star { color: var(--gold); }
+  .testi-real-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 760px; margin: 0 auto 16px; align-items: start; }
+  .testi-real-col { display: flex; flex-direction: column; gap: 16px; }
+  @media (max-width: 600px) { .testi-real-row { grid-template-columns: 1fr; } }
 
   /* ===== LIFESTYLE (sobre mí) ===== */
   .sofia-life { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 1.5rem; }
@@ -1763,15 +1766,21 @@
   <span class="section-label">Testimonios</span>
   <h2 class="section-title">Lo que dicen los alumnos</h2>
   <p class="section-sub">Mensajes reales de alumnas que ya aplicaron el sistema.</p>
-  <div class="testi-grid" style="margin-bottom:16px;">
+  <div class="testi-real-row">
     <figure class="testi-real">
       <img src="assets/review-alumna-1.jpg" alt="Mensaje de una alumna agradeciendo el curso" loading="lazy">
       <figcaption class="tr-cap"><span class="star">★</span> Mensaje real de una alumna</figcaption>
     </figure>
-    <figure class="testi-real">
-      <img src="assets/review-alumna-2.jpg" alt="Mensaje de una alumna sobre su primer departamento" loading="lazy">
-      <figcaption class="tr-cap"><span class="star">★</span> Otra alumna y su primer depto</figcaption>
-    </figure>
+    <div class="testi-real-col">
+      <figure class="testi-real">
+        <img src="assets/review-alumna-3.jpg" alt="Mensaje de una pareja de alumnos sobre su calendario lleno" loading="lazy">
+        <figcaption class="tr-cap"><span class="star">★</span> Una pareja de alumnos y su calendario lleno</figcaption>
+      </figure>
+      <figure class="testi-real">
+        <img src="assets/review-alumna-2.jpg" alt="Mensaje de una alumna sobre su primer departamento" loading="lazy">
+        <figcaption class="tr-cap"><span class="star">★</span> Otra alumna y su primer depto</figcaption>
+      </figure>
+    </div>
   </div>
   <div class="testi-grid">
     <div class="testi-card">

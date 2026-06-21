@@ -1133,25 +1133,30 @@
   .resultados .section-sub { color: rgba(255,255,255,0.65); }
   .resultados-big { font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(34px,5vw,52px); color: #E6C57C; line-height: 1; margin: 0.5rem 0; }
   .resultados-big small { display: block; font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: 13px; color: rgba(255,255,255,0.55); letter-spacing: 1px; text-transform: uppercase; margin-top: 8px; }
-  .resultados-featured { max-width: 760px; margin: 2.5rem auto 16px; }
-  .resultados-wide { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 880px; margin: 0 auto 16px; align-items: start; }
-  @media (max-width: 700px) { .resultados-wide { grid-template-columns: 1fr; } }
-  .resultados-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 600px; margin: 0 auto; align-items: start; }
-  .proof-card { background: #fff; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 10px; transition: transform .25s ease; }
+  .resultados-featured { max-width: 720px; margin: 2.5rem auto 18px; }
+  .resultados-masonry { column-count: 2; column-gap: 18px; max-width: 880px; margin: 0 auto; }
+  @media (max-width: 640px) { .resultados-masonry { column-count: 1; } }
+  .proof-card { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 14px 40px rgba(0,0,0,0.28); transition: transform .25s ease; }
+  .resultados-masonry .proof-card { break-inside: avoid; margin: 0 0 18px; }
   .proof-card:hover { transform: translateY(-4px); }
-  .proof-card img { width: 100%; height: auto; border-radius: 10px; display: block; }
-  .proof-card figcaption { font-size: 12px; color: var(--mid); margin-top: 10px; font-weight: 500; padding-bottom: 4px; text-align: center; }
-  @media (max-width: 600px) { .resultados-grid { grid-template-columns: 1fr; } }
+  .proof-chrome { display: flex; align-items: center; gap: 6px; padding: 10px 13px; background: #F7F5F1; border-bottom: 1px solid #ECE7DD; }
+  .proof-chrome i { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+  .proof-chrome i:nth-child(1) { background: #E2B96A; }
+  .proof-chrome i:nth-child(2) { background: #D89AA0; }
+  .proof-chrome i:nth-child(3) { background: #9CC0D8; }
+  .proof-card img { width: 100%; height: auto; display: block; }
+  .proof-card figcaption { font-size: 12.5px; color: var(--mid); padding: 11px 14px 13px; font-weight: 500; text-align: center; background: #fff; }
   .resultados-note { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 1.5rem; font-style: italic; }
 
   /* ===== TESTIMONIO REAL (captura) ===== */
-  .testi-real { background: #fff; border: 1px solid var(--beige-dark); border-radius: 16px; padding: 12px; overflow: hidden; }
-  .testi-real img { width: 100%; border-radius: 10px; display: block; }
-  .testi-real .tr-cap { font-size: 12px; color: var(--mid); margin-top: 10px; font-weight: 500; display: flex; align-items: center; gap: 6px; }
+  .testi-real { background: #fff; border: 1px solid var(--beige-dark); border-radius: 14px; overflow: hidden; box-shadow: 0 12px 34px rgba(44,40,32,0.12); transition: transform .25s ease; }
+  .testi-real:hover { transform: translateY(-4px); }
+  .testi-real img { width: 100%; height: auto; display: block; }
+  .testi-real .tr-cap { font-size: 12px; color: var(--mid); padding: 11px 14px 13px; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; }
   .testi-real .tr-cap .star { color: var(--gold); }
-  .testi-real-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 760px; margin: 0 auto 16px; align-items: start; }
-  .testi-real-col { display: flex; flex-direction: column; gap: 16px; }
-  @media (max-width: 600px) { .testi-real-row { grid-template-columns: 1fr; } }
+  .testi-real-masonry { column-count: 2; column-gap: 16px; max-width: 760px; margin: 2.5rem auto 0; }
+  .testi-real-masonry .testi-real { break-inside: avoid; margin: 0 0 16px; }
+  @media (max-width: 600px) { .testi-real-masonry { column-count: 1; } }
 
   /* ===== LIFESTYLE (sobre mí) ===== */
   .sofia-life { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 1.5rem; }
@@ -1551,25 +1556,28 @@
   <div class="resultados-big">+$430,000 MXN<small>de ingresos en un solo mes</small></div>
   <p class="section-sub">Ingresos y reservas reales de mi propio Airbnb. Es exactamente el sistema que aprendes en el curso.</p>
   <figure class="proof-card resultados-featured">
+    <div class="proof-chrome"><i></i><i></i><i></i></div>
     <img src="assets/proof-dashboard.jpg" alt="Panel de rendimiento de Airbnb (junio 2026)" loading="lazy">
     <figcaption>Mis ingresos de un solo mes (junio 2026)</figcaption>
   </figure>
-  <div class="resultados-wide">
+  <div class="resultados-masonry">
     <figure class="proof-card">
-      <img src="assets/proof-2023.jpg" alt="Ingresos registrados en 2023: $889,614 MXN" loading="lazy">
-      <figcaption>Mis ingresos en 2023</figcaption>
-    </figure>
-    <figure class="proof-card">
-      <img src="assets/proof-listings.jpg" alt="Varias propiedades operando en Airbnb" loading="lazy">
-      <figcaption>Varias propiedades operando a la vez</figcaption>
-    </figure>
-  </div>
-  <div class="resultados-grid">
-    <figure class="proof-card">
+      <div class="proof-chrome"><i></i><i></i><i></i></div>
       <img src="assets/proof-ingresos.jpg" alt="Desglose de ingresos de una propiedad en Airbnb" loading="lazy">
       <figcaption>Ingresos de una sola propiedad</figcaption>
     </figure>
     <figure class="proof-card">
+      <div class="proof-chrome"><i></i><i></i><i></i></div>
+      <img src="assets/proof-listings.jpg" alt="Varias propiedades operando en Airbnb" loading="lazy">
+      <figcaption>Varias propiedades operando a la vez</figcaption>
+    </figure>
+    <figure class="proof-card">
+      <div class="proof-chrome"><i></i><i></i><i></i></div>
+      <img src="assets/proof-2023.jpg" alt="Ingresos registrados en 2023: $889,614 MXN" loading="lazy">
+      <figcaption>Mis ingresos en 2023</figcaption>
+    </figure>
+    <figure class="proof-card">
+      <div class="proof-chrome"><i></i><i></i><i></i></div>
       <img src="assets/proof-calendario.jpg" alt="Calendario de Airbnb lleno de reservas" loading="lazy">
       <figcaption>Mi calendario, lleno de reservas</figcaption>
     </figure>
@@ -1790,21 +1798,22 @@
   <span class="section-label">Testimonios</span>
   <h2 class="section-title">Lo que dicen los alumnos</h2>
   <p class="section-sub">Mensajes reales de alumnas que ya aplicaron el sistema.</p>
-  <div class="testi-real-row">
+  <div class="testi-real-masonry">
     <figure class="testi-real">
+      <div class="proof-chrome"><i></i><i></i><i></i></div>
       <img src="assets/review-alumna-1.jpg" alt="Mensaje de una alumna agradeciendo el curso" loading="lazy">
       <figcaption class="tr-cap"><span class="star">★</span> Mensaje real de una alumna</figcaption>
     </figure>
-    <div class="testi-real-col">
-      <figure class="testi-real">
-        <img src="assets/review-alumna-3.jpg" alt="Mensaje de una pareja de alumnos sobre su calendario lleno" loading="lazy">
-        <figcaption class="tr-cap"><span class="star">★</span> Una pareja de alumnos y su calendario lleno</figcaption>
-      </figure>
-      <figure class="testi-real">
-        <img src="assets/review-alumna-2.jpg" alt="Mensaje de una alumna sobre su primer departamento" loading="lazy">
-        <figcaption class="tr-cap"><span class="star">★</span> Otra alumna y su primer depto</figcaption>
-      </figure>
-    </div>
+    <figure class="testi-real">
+      <div class="proof-chrome"><i></i><i></i><i></i></div>
+      <img src="assets/review-alumna-3.jpg" alt="Mensaje de una pareja de alumnos sobre su calendario lleno" loading="lazy">
+      <figcaption class="tr-cap"><span class="star">★</span> Una pareja de alumnos y su calendario lleno</figcaption>
+    </figure>
+    <figure class="testi-real">
+      <div class="proof-chrome"><i></i><i></i><i></i></div>
+      <img src="assets/review-alumna-2.jpg" alt="Mensaje de una alumna sobre su primer departamento" loading="lazy">
+      <figcaption class="tr-cap"><span class="star">★</span> Otra alumna y su primer depto</figcaption>
+    </figure>
   </div>
   <div class="testi-grid">
     <div class="testi-card">

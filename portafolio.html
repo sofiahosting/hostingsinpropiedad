@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio · Brand Partner & UGC · Sofía Retif</title>
+<meta name="description" content="Media kit de Sofía Retif — creadora de contenido UGC enfocada en emprendimiento, inversiones, Airbnb hosting y bienes raíces. Colaboraciones, audiencia, servicios y paquetes para marcas.">
+<meta name="author" content="Sofía Retif">
+<link rel="canonical" href="https://sofiaretif.com/portafolio">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sofiaretif.com/portafolio">
+<meta property="og:title" content="Portafolio · Brand Partner & UGC — Sofía Retif">
+<meta property="og:description" content="Contenido UGC auténtico que genera confianza y conversión. Colaboraciones, audiencia y paquetes para marcas.">
+<meta property="og:image" content="https://sofiaretif.com/og-image.jpg">
+<meta property="og:locale" content="es_LA">
+<meta property="og:site_name" content="Sofía Retif">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiM3QkE3QzQiLz4KICA8cGF0aCBkPSJNMzIgMTQgQzMyIDE0IDE4IDMwIDE4IDM4IEMxOCA0NSAyNC4zIDUwIDMyIDUwIEMzOS43IDUwIDQ2IDQ1IDQ2IDM4IEM0NiAzMCAzMiAxNCAzMiAxNFoiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjk1Ii8+CiAgPGNpcmNsZSBjeD0iMzIiIGN5PSIzNiIgcj0iNiIgZmlsbD0iIzdCQTdDNCIvPgo8L3N2Zz4=">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;1,500;1,600;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* ===== PALETA DE MARCA — Sofía Retif (azul protagonista) ===== */
+    --sky: #7BA7C4;
+    --sky-deep: #2F6188;
+    --sky-deeper: #234B6B;
+    --sky-light: #B8D4E8;
+    --sky-pale: #EAF3F9;
+    --beige: #F5EFE4;
+    --beige-dark: #E8DDC8;
+    --gold: #C8A96E;
+    --gold-dark: #A8893E;
+    --rose: #C87D87;
+    --rose-pale: #F7EDEF;
+    --dark: #2C2820;
+    --mid: #6B6355;
+    --white: #FDFAF5;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--dark);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+  img { display: block; max-width: 100%; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 6%; }
+  section { position: relative; }
+
+  /* Reveal on scroll */
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s ease, transform .8s ease; }
+  .reveal.show { opacity: 1; transform: none; }
+
+  /* ===== NAV ===== */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 6%;
+    transition: background .35s ease, padding .35s ease, box-shadow .35s ease;
+  }
+  nav.scrolled {
+    background: rgba(253,250,245,0.9);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 1px 0 rgba(44,40,32,0.06);
+    padding: 12px 6%;
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px; font-weight: 700; letter-spacing: .5px;
+    color: #fff; text-decoration: none; transition: color .35s ease;
+  }
+  nav.scrolled .nav-logo { color: var(--sky-deeper); }
+  .nav-logo span { font-style: italic; font-weight: 500; }
+  .nav-cta {
+    font-size: 13px; font-weight: 600; letter-spacing: .3px;
+    text-decoration: none; color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.5);
+    padding: 9px 20px; border-radius: 99px;
+    transition: all .3s ease;
+  }
+  .nav-cta:hover { background: #fff; color: var(--sky-deeper); }
+  nav.scrolled .nav-cta { color: var(--sky-deep); border-color: var(--sky-deep); }
+  nav.scrolled .nav-cta:hover { background: var(--sky-deep); color: #fff; }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    background:
+      radial-gradient(120% 120% at 80% 0%, rgba(123,167,196,0.30) 0%, transparent 55%),
+      linear-gradient(155deg, #27567C 0%, #2F6188 48%, #3E7194 100%);
+    display: grid; grid-template-columns: 1.05fr 0.95fr;
+    align-items: center; position: relative; overflow: hidden;
+    padding: 0 6%;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: -18%; right: 6%;
+    width: 460px; height: 460px; border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+  }
+  .hero::after {
+    content: ''; position: absolute; bottom: -14%; left: -6%;
+    width: 320px; height: 320px; border-radius: 50%;
+    background: rgba(200,125,135,0.14);
+  }
+  .hero-text { padding: 7rem 2.5rem 5rem 0; position: relative; z-index: 3; animation: fadeUp .9s ease both; }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 9px;
+    background: rgba(255,255,255,0.12); backdrop-filter: blur(6px);
+    color: #fff; font-size: 11.5px; font-weight: 600; letter-spacing: 2.5px;
+    text-transform: uppercase; padding: 7px 17px; border-radius: 99px;
+    margin-bottom: 1.7rem; border: 1px solid rgba(255,255,255,0.32);
+  }
+  .hero-eyebrow b { color: var(--gold); font-weight: 700; }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(44px, 6.5vw, 82px); font-weight: 800;
+    color: #fff; line-height: 0.98; letter-spacing: -1px; margin-bottom: 1.3rem;
+  }
+  .hero h1 em { font-style: italic; font-weight: 500; color: var(--sky-light); }
+  .hero-tags {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2rem; max-width: 460px;
+  }
+  .hero-tags span {
+    font-size: 12.5px; font-weight: 500; color: #fff;
+    background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.22);
+    padding: 6px 13px; border-radius: 99px;
+  }
+  .hero p.lead {
+    color: rgba(255,255,255,0.86); font-size: 16px; max-width: 430px;
+    margin-bottom: 2.3rem; font-weight: 300;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 9px;
+    background: #fff; color: var(--sky-deeper);
+    font-size: 15px; font-weight: 600; text-decoration: none;
+    padding: 15px 30px; border-radius: 99px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.22); transition: all .3s ease;
+  }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 18px 40px rgba(0,0,0,0.28); }
+  .btn-ghost {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: #fff; font-size: 14.5px; font-weight: 500; text-decoration: none;
+    border-bottom: 1.5px solid rgba(255,255,255,0.4); padding-bottom: 3px; transition: border-color .3s;
+  }
+  .btn-ghost:hover { border-color: #fff; }
+
+  .hero-photo { position: relative; z-index: 2; align-self: end; height: 100%; display: flex; align-items: flex-end; justify-content: center; }
+  .hero-photo img { max-height: 92vh; width: auto; filter: drop-shadow(0 30px 60px rgba(0,0,0,0.35)); animation: fadeIn 1.2s ease both; }
+
+  @keyframes fadeUp { from { opacity:0; transform: translateY(28px);} to {opacity:1; transform:none;} }
+  @keyframes fadeIn { from { opacity:0;} to {opacity:1;} }
+
+  /* ===== SECTION HEADINGS ===== */
+  .eyebrow {
+    display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--sky-deep); margin-bottom: 14px;
+  }
+  .eyebrow.gold { color: var(--gold-dark); }
+  h2.title {
+    font-family: 'Playfair Display', serif; font-weight: 800;
+    font-size: clamp(30px, 4.4vw, 50px); line-height: 1.05; letter-spacing: -.5px;
+    color: var(--sky-deeper); margin-bottom: 18px;
+  }
+  h2.title em { font-style: italic; font-weight: 500; color: var(--sky); }
+
+  /* ===== ABOUT ===== */
+  .about { padding: 7rem 0; background: var(--white); }
+  .about-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 4.5rem; align-items: center; }
+  .about-photo { position: relative; }
+  .about-photo .frame {
+    background: linear-gradient(160deg, var(--sky-pale), var(--beige));
+    border-radius: 28px; padding-top: 22px; overflow: hidden; position: relative;
+    box-shadow: 0 24px 60px rgba(47,97,136,0.16);
+  }
+  .about-photo .frame img { margin: 0 auto; max-height: 460px; }
+  .about-photo .badge {
+    position: absolute; bottom: 22px; left: -18px; z-index: 3;
+    background: #fff; border-radius: 16px; padding: 14px 20px;
+    box-shadow: 0 14px 34px rgba(44,40,32,0.14); text-align: center;
+  }
+  .about-photo .badge b { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--sky-deep); display:block; }
+  .about-photo .badge span { font-size: 11px; color: var(--mid); letter-spacing: .5px; }
+  .about-text p { color: var(--mid); font-size: 16.5px; margin-bottom: 1.2rem; }
+  .about-text p strong { color: var(--dark); font-weight: 600; }
+  .about-sign {
+    font-family: 'Playfair Display', serif; font-style: italic; font-size: 26px;
+    color: var(--sky-deep); margin-top: .6rem;
+  }
+
+  /* ===== UGC / BENEFITS ===== */
+  .ugc { padding: 7rem 0; background: linear-gradient(180deg, var(--beige) 0%, var(--white) 100%); }
+  .ugc-intro { max-width: 720px; margin-bottom: 3.5rem; }
+  .ugc-intro p { color: var(--mid); font-size: 17px; }
+  .ugc-intro p.hl {
+    color: var(--sky-deeper); font-size: 18.5px; font-weight: 500; margin-top: 1rem;
+    border-left: 3px solid var(--sky); padding-left: 18px;
+  }
+  .benefits { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .benefit {
+    background: #fff; border: 1px solid var(--beige-dark); border-radius: 18px;
+    padding: 26px 20px; transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+  }
+  .benefit:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(47,97,136,0.12); border-color: var(--sky-light); }
+  .benefit .ico {
+    width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
+    background: var(--sky-pale); color: var(--sky-deep); margin-bottom: 14px;
+  }
+  .benefit .ico svg { width: 22px; height: 22px; }
+  .benefit h4 { font-size: 15.5px; font-weight: 600; color: var(--dark); margin-bottom: 5px; }
+  .benefit p { font-size: 13px; color: var(--mid); }
+
+  /* ===== STATS ===== */
+  .stats { padding: 5.5rem 0; background: var(--sky-deeper); position: relative; overflow: hidden; }
+  .stats::before { content:''; position:absolute; top:-30%; right:-5%; width:380px; height:380px; border-radius:50%; background: rgba(255,255,255,0.04); }
+  .stats .wrap { position: relative; z-index: 2; }
+  .stats-head { text-align: center; margin-bottom: 3rem; }
+  .stats-head .eyebrow { color: var(--sky-light); }
+  .stats-head h2 { color: #fff; }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
+  .stat { text-align: center; color: #fff; }
+  .stat b {
+    font-family: 'Playfair Display', serif; font-size: clamp(36px, 5vw, 56px);
+    font-weight: 700; display: block; line-height: 1; color: #fff;
+  }
+  .stat span { font-size: 13.5px; color: var(--sky-light); letter-spacing: .5px; }
+  .stat-note { text-align:center; color: rgba(255,255,255,0.5); font-size: 12px; margin-top: 2.4rem; }
+
+  /* ===== AUDIENCE ===== */
+  .audience { padding: 7rem 0; background: var(--white); }
+  .aud-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4.5rem; align-items: center; }
+  .aud-list { display: flex; flex-direction: column; gap: 18px; margin-top: 1.5rem; }
+  .aud-item { display: flex; gap: 16px; align-items: flex-start; }
+  .aud-item .dot {
+    flex: 0 0 auto; width: 40px; height: 40px; border-radius: 11px;
+    background: var(--sky-pale); color: var(--sky-deep); display: grid; place-items: center;
+  }
+  .aud-item .dot svg { width: 20px; height: 20px; }
+  .aud-item p { color: var(--mid); font-size: 15.5px; }
+  .aud-item p b { color: var(--dark); font-weight: 600; }
+  .aud-photo .frame {
+    border-radius: 26px; overflow: hidden; position: relative;
+    box-shadow: 0 24px 60px rgba(47,97,136,0.18); background: var(--sky-pale);
+  }
+  .aud-photo .frame img { width: 100%; }
+  .aud-photo .loc {
+    position: absolute; bottom: 16px; left: 16px; right: 16px;
+    background: rgba(35,75,107,0.82); backdrop-filter: blur(6px);
+    color: #fff; border-radius: 14px; padding: 12px 16px; font-size: 13.5px;
+    display: flex; align-items: center; gap: 9px;
+  }
+  .aud-photo .loc svg { width: 18px; height: 18px; flex: 0 0 auto; }
+
+  /* ===== COLLABS ===== */
+  .collabs { padding: 7rem 0; background: linear-gradient(180deg, var(--white), var(--beige) 100%); }
+  .collabs-head { text-align: center; max-width: 640px; margin: 0 auto 3.2rem; }
+  .collabs-head p { color: var(--mid); font-size: 16.5px; }
+  .phone-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; }
+  .phone {
+    position: relative; border-radius: 22px; overflow: hidden; aspect-ratio: 406/720;
+    background: #1a2530; box-shadow: 0 16px 38px rgba(35,75,107,0.18);
+    border: 5px solid #fff; transition: transform .4s ease, box-shadow .4s ease;
+  }
+  .phone img { width: 100%; height: 100%; object-fit: cover; }
+  .phone:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 26px 54px rgba(35,75,107,0.28); }
+  .phone .tag {
+    position: absolute; top: 10px; left: 10px;
+    background: rgba(35,75,107,0.85); color: #fff; font-size: 10px; font-weight: 600;
+    letter-spacing: .5px; text-transform: uppercase; padding: 4px 10px; border-radius: 99px;
+  }
+  .phone .tag.rose { background: rgba(200,125,135,0.92); }
+
+  /* ===== SERVICES ===== */
+  .services { padding: 7rem 0; background: var(--white); }
+  .serv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 2.5rem; }
+  .serv {
+    display: flex; align-items: center; gap: 15px;
+    background: var(--sky-pale); border-radius: 16px; padding: 20px 22px;
+    transition: background .3s, transform .3s;
+  }
+  .serv:hover { background: var(--sky-light); transform: translateX(4px); }
+  .serv .chk {
+    flex: 0 0 auto; width: 30px; height: 30px; border-radius: 50%;
+    background: var(--sky-deep); color: #fff; display: grid; place-items: center;
+  }
+  .serv .chk svg { width: 16px; height: 16px; }
+  .serv span { font-size: 15px; font-weight: 500; color: var(--dark); }
+
+  /* ===== PRICING ===== */
+  .pricing { padding: 7rem 0; background: var(--beige); }
+  .price-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 2.8rem; }
+  .price-card {
+    background: #fff; border-radius: 24px; padding: 36px 34px;
+    border: 1px solid var(--beige-dark); box-shadow: 0 18px 44px rgba(47,97,136,0.08);
+    position: relative;
+  }
+  .price-card.feat { border: 2px solid var(--sky); }
+  .price-card h3 {
+    font-family: 'Playfair Display', serif; font-size: 26px; color: var(--sky-deeper);
+    margin-bottom: 4px; display: flex; align-items: center; gap: 10px;
+  }
+  .price-card h3 svg { width: 24px; height: 24px; color: var(--sky); }
+  .price-card .sub { font-size: 13.5px; color: var(--mid); margin-bottom: 24px; }
+  .price-row {
+    display: flex; align-items: baseline; justify-content: space-between;
+    padding: 14px 0; border-bottom: 1px dashed var(--beige-dark);
+  }
+  .price-row:last-child { border-bottom: 0; }
+  .price-row .qty { font-size: 15px; font-weight: 500; color: var(--dark); }
+  .price-row .amt { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--sky-deep); }
+  .price-extras {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 2.4rem;
+  }
+  .extra {
+    background: var(--sky-deeper); color: #fff; border-radius: 18px; padding: 22px 24px;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .extra .lbl { font-size: 14px; color: var(--sky-light); font-weight: 500; }
+  .extra .val { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; }
+  .price-note { margin-top: 2rem; font-size: 13.5px; color: var(--mid); text-align: center; line-height: 1.7; }
+  .price-note b { color: var(--sky-deep); }
+
+  /* ===== CONTACT / CTA ===== */
+  .contact {
+    padding: 7rem 0; position: relative; overflow: hidden;
+    background:
+      radial-gradient(120% 120% at 15% 0%, rgba(123,167,196,0.28) 0%, transparent 55%),
+      linear-gradient(150deg, #234B6B 0%, #2F6188 60%, #3E7194 100%);
+  }
+  .contact::after { content:''; position:absolute; bottom:-20%; right:-6%; width:360px; height:360px; border-radius:50%; background: rgba(200,125,135,0.14); }
+  .contact-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 4rem; align-items: center; position: relative; z-index: 2; }
+  .contact h2 { font-family:'Playfair Display', serif; font-weight: 800; font-size: clamp(38px, 5.5vw, 64px); color: #fff; line-height: 1; letter-spacing: -1px; margin-bottom: 1.2rem; }
+  .contact h2 em { font-style: italic; font-weight: 500; color: var(--sky-light); }
+  .contact p.intro { color: rgba(255,255,255,0.85); font-size: 17px; max-width: 440px; margin-bottom: 2.4rem; font-weight: 300; }
+  .contact-links { display: flex; flex-direction: column; gap: 12px; max-width: 400px; }
+  .clink {
+    display: flex; align-items: center; gap: 15px; text-decoration: none;
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 14px; padding: 15px 20px; transition: all .3s ease;
+  }
+  .clink:hover { background: rgba(255,255,255,0.16); transform: translateX(5px); }
+  .clink .ci { width: 40px; height: 40px; border-radius: 10px; background: rgba(255,255,255,0.14); display: grid; place-items: center; flex: 0 0 auto; }
+  .clink .ci svg { width: 20px; height: 20px; color: #fff; }
+  .clink .ct { display: flex; flex-direction: column; }
+  .clink .ct small { font-size: 11.5px; color: var(--sky-light); letter-spacing: .5px; }
+  .clink .ct b { font-size: 16px; color: #fff; font-weight: 600; }
+  .contact-photo { display: flex; align-items: flex-end; justify-content: center; }
+  .contact-photo img { max-height: 480px; filter: drop-shadow(0 28px 55px rgba(0,0,0,0.35)); animation: fadeIn 1s ease both; }
+
+  footer { background: #1d3f5a; color: rgba(255,255,255,0.7); text-align: center; padding: 30px 6%; font-size: 13px; }
+  footer a { color: var(--sky-light); text-decoration: none; }
+  footer a:hover { color: #fff; }
+
+  /* ===== LIFESTYLE GALLERY ===== */
+  .lifestyle { padding: 7rem 0; background: var(--white); }
+  .lifestyle-head { text-align: center; max-width: 640px; margin: 0 auto 3.2rem; }
+  .lifestyle-head p { color: var(--mid); font-size: 16.5px; }
+  .life-grid {
+    display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-rows: 220px; gap: 14px;
+  }
+  .life-grid figure {
+    margin: 0; border-radius: 18px; overflow: hidden; position: relative;
+    box-shadow: 0 14px 34px rgba(47,97,136,0.12);
+  }
+  .life-grid img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; transition: transform .6s ease; }
+  .life-grid figure:hover img { transform: scale(1.06); }
+  .life-grid .tall { grid-row: span 2; }
+  .life-grid .wide { grid-column: span 2; }
+  .life-grid figcaption {
+    position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 16px 12px;
+    background: linear-gradient(transparent, rgba(35,75,107,0.78));
+    color: #fff; font-size: 12.5px; font-weight: 500; letter-spacing: .3px;
+    opacity: 0; transform: translateY(8px); transition: all .35s ease;
+  }
+  .life-grid figure:hover figcaption { opacity: 1; transform: none; }
+
+  /* ===== TESTIMONIOS ===== */
+  .testi { padding: 7rem 0; background: linear-gradient(180deg, var(--beige) 0%, var(--white) 100%); }
+  .testi-head { text-align: center; max-width: 640px; margin: 0 auto 3.4rem; }
+  .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .tcard {
+    background: #fff; border: 1px solid var(--beige-dark); border-radius: 20px;
+    padding: 30px 28px; display: flex; flex-direction: column; gap: 16px;
+    box-shadow: 0 14px 38px rgba(47,97,136,0.07); position: relative;
+  }
+  .tcard .quote { font-family: 'Playfair Display', serif; font-size: 40px; color: var(--sky-light); line-height: .6; height: 18px; }
+  .tcard p { color: var(--mid); font-size: 15px; font-style: italic; flex: 1; }
+  .tcard .stars { color: var(--gold); font-size: 15px; letter-spacing: 2px; }
+  .tcard .who { display: flex; align-items: center; gap: 12px; }
+  .tcard .who .av {
+    width: 44px; height: 44px; border-radius: 50%; flex: 0 0 auto;
+    background: linear-gradient(135deg, var(--sky), var(--sky-deep)); color: #fff;
+    display: grid; place-items: center; font-weight: 600; font-size: 16px;
+    font-family: 'Playfair Display', serif; overflow: hidden;
+  }
+  .tcard .who .av img { width: 100%; height: 100%; object-fit: cover; }
+  .tcard .who b { font-size: 14.5px; color: var(--dark); display: block; }
+  .tcard .who small { font-size: 12.5px; color: var(--sky-deep); }
+  .testi-note { text-align: center; color: var(--mid); font-size: 13px; margin-top: 2.4rem; opacity: .8; }
+
+  /* ===== CONTACT FORM ===== */
+  .cform { display: flex; flex-direction: column; gap: 13px; max-width: 440px; margin-bottom: 1.8rem; }
+  .cform .row { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+  .cform input, .cform textarea, .cform select {
+    width: 100%; font-family: inherit; font-size: 14.5px; color: #fff;
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 12px; padding: 13px 16px; transition: border-color .25s, background .25s;
+  }
+  .cform input::placeholder, .cform textarea::placeholder { color: rgba(255,255,255,0.55); }
+  .cform select { color: rgba(255,255,255,0.85); }
+  .cform select option { color: var(--dark); }
+  .cform input:focus, .cform textarea:focus, .cform select:focus {
+    outline: none; border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.13);
+  }
+  .cform textarea { resize: vertical; min-height: 92px; }
+  .cform button {
+    background: #fff; color: var(--sky-deeper); font-family: inherit; font-size: 15px; font-weight: 600;
+    border: none; border-radius: 12px; padding: 15px; cursor: pointer;
+    transition: transform .25s, box-shadow .25s; box-shadow: 0 10px 26px rgba(0,0,0,0.18);
+  }
+  .cform button:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(0,0,0,0.24); }
+  .form-ok { color: #fff; font-size: 14px; background: rgba(123,167,196,0.25); border:1px solid rgba(255,255,255,0.3); border-radius: 12px; padding: 14px 16px; display:none; }
+
+  /* ===== WHATSAPP FLOAT ===== */
+  .wa-float {
+    position: fixed; bottom: 24px; right: 24px; z-index: 90;
+    display: flex; align-items: center; gap: 0; overflow: hidden;
+    background: #25D366; color: #fff; text-decoration: none;
+    border-radius: 99px; padding: 0; height: 58px; width: 58px;
+    box-shadow: 0 10px 30px rgba(37,211,102,0.45); transition: width .4s ease, padding .4s ease;
+    white-space: nowrap;
+  }
+  .wa-float svg { width: 30px; height: 30px; flex: 0 0 58px; padding: 14px; }
+  .wa-float span { font-size: 14.5px; font-weight: 600; opacity: 0; transition: opacity .3s ease; padding-right: 4px; }
+  .wa-float:hover { width: 210px; padding-right: 20px; }
+  .wa-float:hover span { opacity: 1; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 980px) {
+    .benefits { grid-template-columns: repeat(2, 1fr); }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 32px 20px; }
+    .phone-grid { grid-template-columns: repeat(3, 1fr); }
+    .price-grid { grid-template-columns: 1fr; }
+    .testi-grid { grid-template-columns: 1fr; }
+    .life-grid { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 180px; }
+  }
+  @media (max-width: 820px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 4rem; text-align: center; }
+    .hero-text { padding: 7rem 0 2rem; }
+    .hero-tags { justify-content: center; margin-left: auto; margin-right: auto; }
+    .hero p.lead { margin-left: auto; margin-right: auto; }
+    .hero-actions { justify-content: center; }
+    .hero-photo { height: auto; }
+    .hero-photo img { max-height: 60vh; }
+    .hero::before, .hero::after { opacity: .5; }
+    .about-grid, .aud-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .about-photo { max-width: 380px; margin: 0 auto; }
+    .contact-photo { order: -1; }
+    .contact-photo img { max-height: 360px; }
+    .price-extras { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .benefits { grid-template-columns: 1fr; }
+    .phone-grid { grid-template-columns: repeat(2, 1fr); }
+    .nav-cta { display: none; }
+    .serv-grid { grid-template-columns: 1fr; }
+    .life-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 160px; }
+    .life-grid .wide { grid-column: span 2; }
+    .cform .row { grid-template-columns: 1fr; }
+    .wa-float { bottom: 16px; right: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#top" class="nav-logo">Sofía <span>Retif</span></a>
+  <a href="#contacto" class="nav-cta">Colaboremos →</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-text">
+    <span class="hero-eyebrow"><b>★</b> Brand Partner &amp; UGC · Portafolio</span>
+    <h1>Soy Sofía<br><em>Retif</em></h1>
+    <div class="hero-tags">
+      <span>Emprendimiento</span><span>Finanzas</span><span>Negocios</span>
+      <span>Inversiones</span><span>Airbnb Hosting</span><span>Bienes Raíces</span>
+    </div>
+    <p class="lead">Creo contenido auténtico que genera confianza, atención y conversión para marcas que quieren conectar de verdad con su audiencia.</p>
+    <div class="hero-actions">
+      <a href="#contacto" class="btn-primary">Trabajemos juntos →</a>
+      <a href="#colaboraciones" class="btn-ghost">Ver colaboraciones</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <img src="/assets/portfolio/port-hero.png" alt="Sofía Retif" loading="eager">
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <div class="frame">
+        <img src="/assets/portfolio/port-headshot.png" alt="Sofía Retif, retrato profesional">
+      </div>
+      <div class="badge">
+        <b>GDL</b><span>Guadalajara · MX</span>
+      </div>
+    </div>
+    <div class="about-text reveal">
+      <span class="eyebrow">Soy Sofía Retif</span>
+      <h2 class="title">Mercadóloga, creadora &amp; <em>host</em></h2>
+      <p>Soy <strong>mercadóloga con maestría en finanzas</strong> y creadora de contenido enfocada en emprendimiento, inversiones, negocios, Airbnb hosting y bienes raíces.</p>
+      <p>A través de mi experiencia construyendo ingresos con rentas vacacionales y proyectos digitales, comparto contenido <strong>práctico y aspiracional</strong> para personas que buscan generar nuevas fuentes de ingreso, invertir de manera inteligente y diseñar una vida con mayor libertad financiera.</p>
+      <p>Mi comunidad está formada por personas interesadas en inversión inmobiliaria, rentas a corto plazo, negocios digitales y crecimiento financiero.</p>
+      <p class="about-sign">— Sofía</p>
+    </div>
+  </div>
+</section>
+
+<!-- UGC + BENEFITS -->
+<section class="ugc">
+  <div class="wrap">
+    <div class="ugc-intro reveal">
+      <span class="eyebrow">Contenido UGC para marcas</span>
+      <h2 class="title">Contenido que se siente <em>real</em></h2>
+      <p>Además de publicar en mis propias redes, creo contenido UGC <em>(User Generated Content)</em> para marcas que desean utilizar piezas auténticas, naturales y persuasivas en sus campañas de marketing digital.</p>
+      <p class="hl">Ideal para anuncios, páginas web y redes sociales: genera mayor confianza, atención y conversión frente al contenido publicitario tradicional.</p>
+    </div>
+    <div class="benefits">
+      <div class="benefit reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h4>Credibilidad</h4><p>Mensajes que se perciben honestos y cercanos.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h4>Confianza</h4><p>La audiencia confía en recomendaciones reales.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6 5.7 21l2.3-7.2-6-4.4h7.6z"/></svg></div>
+        <h4>Autoridad</h4><p>Posiciona a la marca como referente del sector.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <h4>Humaniza la marca</h4><p>Le pone rostro y voz a tu producto.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v5h-5"/></svg></div>
+        <h4>Optimiza el ROI</h4><p>Más conversión por cada peso invertido.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.3 2.9-6 6.5-6s6.5 2.7 6.5 6"/><path d="M17 6.5a3 3 0 010 5.5M19 20c0-2.4-1.2-4.5-3-5.7"/></svg></div>
+        <h4>Se identifican</h4><p>La audiencia se ve reflejada en el contenido.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 01-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1121 11.5z"/></svg></div>
+        <h4>Conexión personal</h4><p>Crea vínculo emocional con la marca.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h4>Aspiracional</h4><p>Inspira el estilo de vida que tu marca promete.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stats-head reveal">
+      <span class="eyebrow">Mis números</span>
+      <h2 class="title" style="color:#fff;">El alcance de mi comunidad</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat reveal"><b data-count="48000" data-suffix="K+">0</b><span>Seguidores · IG + TikTok</span></div>
+      <div class="stat reveal"><b data-count="200000" data-suffix="K+">0</b><span>Vistas al mes</span></div>
+      <div class="stat reveal"><b data-count="80" data-suffix="%">0</b><span>Alcance a nuevas audiencias</span></div>
+      <div class="stat reveal"><b data-count="20" data-suffix="+">0</b><span>Marcas colaboradoras</span></div>
+    </div>
+    <p class="stat-note">Métricas de Instagram @sofiahosting_ &amp; TikTok @sofiahosting</p>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="audience">
+  <div class="wrap aud-grid">
+    <div class="aud-text reveal">
+      <span class="eyebrow">Mi audiencia</span>
+      <h2 class="title">A quién le <em>hablo</em></h2>
+      <div class="aud-list">
+        <div class="aud-item">
+          <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.3 2.9-6 6.5-6s6.5 2.7 6.5 6"/><path d="M17 6.5a3 3 0 010 5.5"/></svg></div>
+          <p><b>Mujeres y hombres de 22 a 40 años</b> interesados en inversión inmobiliaria, Airbnb y generación de ingresos pasivos.</p>
+        </div>
+        <div class="aud-item">
+          <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v5h-5"/></svg></div>
+          <p><b>Emprendedores e inversionistas principiantes</b> y profesionales que buscan escalar sus ingresos.</p>
+        </div>
+        <div class="aud-item">
+          <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div>
+          <p>Público con interés en <b>bienes raíces, finanzas personales</b> y construcción de patrimonio.</p>
+        </div>
+      </div>
+    </div>
+    <div class="aud-photo reveal">
+      <div class="frame">
+        <img src="/assets/portfolio/port-audience.png" alt="Sofía Retif creando contenido">
+        <div class="loc">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11a7 7 0 10-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span>Principalmente <b>México</b> — con fuerte presencia en <b>Guadalajara, Jalisco</b>.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLLABS -->
+<section class="collabs" id="colaboraciones">
+  <div class="wrap">
+    <div class="collabs-head reveal">
+      <span class="eyebrow">Portafolio de trabajo</span>
+      <h2 class="title">Colaboraciones &amp; <em>contenido</em></h2>
+      <p>Una muestra de piezas creadas para productos, marcas y estancias cortas — desde reels promocionales hasta recorridos de propiedades.</p>
+    </div>
+    <div class="phone-grid">
+      <div class="phone reveal"><span class="tag">Producto</span><img src="/assets/portfolio/collab-1.png" alt="Colaboración con producto" loading="lazy"></div>
+      <div class="phone reveal"><span class="tag">Producto</span><img src="/assets/portfolio/collab-2.png" alt="Colaboración Airbnb" loading="lazy"></div>
+      <div class="phone reveal"><span class="tag rose">Estancia</span><img src="/assets/portfolio/collab-3.png" alt="Estancia corta GDL" loading="lazy"></div>
+      <div class="phone reveal"><span class="tag rose">Estancia</span><img src="/assets/portfolio/collab-4.png" alt="Recorrido de propiedad" loading="lazy"></div>
+      <div class="phone reveal"><span class="tag rose">Estancia</span><img src="/assets/portfolio/collab-5.png" alt="Alojamiento en Guadalajara" loading="lazy"></div>
+      <div class="phone reveal"><span class="tag rose">Estancia</span><img src="/assets/portfolio/collab-6.png" alt="Tu siguiente alojamiento en GDL" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- LIFESTYLE GALLERY -->
+<section class="lifestyle">
+  <div class="wrap">
+    <div class="lifestyle-head reveal">
+      <span class="eyebrow">Mi estética</span>
+      <h2 class="title">Lifestyle &amp; <em>aspiracional</em></h2>
+      <p>El tipo de imagen y estilo de vida que comparto con mi comunidad — auténtico, viajero y aspiracional. Así se vería tu marca en mi contenido.</p>
+    </div>
+    <div class="life-grid">
+      <figure class="reveal tall"><img src="/assets/portfolio/life-torii.jpg" alt="Sofía en Japón" loading="lazy"><figcaption>Viajes · Japón</figcaption></figure>
+      <figure class="reveal wide"><img src="/assets/portfolio/life-vino.jpg" alt="Sofía en viñedo" loading="lazy"><figcaption>Experiencias · Viñedo</figcaption></figure>
+      <figure class="reveal"><img src="/assets/portfolio/life-redbag.jpg" alt="Sofía estilo urbano" loading="lazy"><figcaption>Moda &amp; estilo</figcaption></figure>
+      <figure class="reveal"><img src="/assets/portfolio/life-kimono.jpg" alt="Sofía con kimono" loading="lazy"><figcaption>Cultura</figcaption></figure>
+      <figure class="reveal"><img src="/assets/portfolio/life-calle.jpg" alt="Sofía estilo de calle" loading="lazy"><figcaption>Street style</figcaption></figure>
+      <figure class="reveal wide"><img src="/assets/portfolio/life-playa.jpg" alt="Sofía en la playa" loading="lazy"><figcaption>Lifestyle · Playa</figcaption></figure>
+      <figure class="reveal"><img src="/assets/portfolio/life-lago.jpg" alt="Sofía junto al lago" loading="lazy"><figcaption>Naturaleza</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="testi" id="testimonios">
+  <div class="wrap">
+    <div class="testi-head reveal">
+      <span class="eyebrow gold">Lo que dicen</span>
+      <h2 class="title">Marcas que <em>confían</em></h2>
+      <p>El feedback de las marcas y personas con las que he colaborado.</p>
+    </div>
+    <div class="testi-grid">
+      <!-- ✎ TESTIMONIO 1 — reemplaza con el real de la marca -->
+      <div class="tcard reveal">
+        <div class="quote">&ldquo;</div>
+        <div class="stars">★★★★★</div>
+        <p>[ Aquí va el testimonio real de la marca: qué resultados obtuvieron, cómo fue trabajar contigo, qué destacarían de tu contenido. ]</p>
+        <div class="who">
+          <div class="av">M</div>
+          <div><b>Nombre de la marca</b><small>Cargo / @usuario</small></div>
+        </div>
+      </div>
+      <!-- ✎ TESTIMONIO 2 -->
+      <div class="tcard reveal">
+        <div class="quote">&ldquo;</div>
+        <div class="stars">★★★★★</div>
+        <p>[ Segundo testimonio de marca. Si tienes su logo o foto, lo coloco en el círculo de la izquierda en lugar de la inicial. ]</p>
+        <div class="who">
+          <div class="av">B</div>
+          <div><b>Nombre de la marca</b><small>Cargo / @usuario</small></div>
+        </div>
+      </div>
+      <!-- ✎ TESTIMONIO 3 -->
+      <div class="tcard reveal">
+        <div class="quote">&ldquo;</div>
+        <div class="stars">★★★★★</div>
+        <p>[ Tercer testimonio. Pueden ser 2, 3 o más — agrego o quito tarjetas según los que tengas. ]</p>
+        <div class="who">
+          <div class="av">S</div>
+          <div><b>Nombre de la marca</b><small>Cargo / @usuario</small></div>
+        </div>
+      </div>
+    </div>
+    <p class="testi-note">✎ Sección lista para tus testimonios reales de marcas — pásamelos (texto + nombre + logo/foto opcional) y los coloco.</p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="wrap">
+    <div class="reveal" style="max-width:640px;">
+      <span class="eyebrow">Qué ofrezco</span>
+      <h2 class="title">Servicios para <em>marcas</em></h2>
+    </div>
+    <div class="serv-grid">
+      <div class="serv reveal"><div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></svg></div><span>Reels promocionales</span></div>
+      <div class="serv reveal"><div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></svg></div><span>Historias con llamada a la acción</span></div>
+      <div class="serv reveal"><div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></svg></div><span>Cobertura de eventos y lanzamientos</span></div>
+      <div class="serv reveal"><div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></svg></div><span>Campañas de posicionamiento de marca</span></div>
+      <div class="serv reveal"><div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></svg></div><span>Creación de contenido para pauta</span></div>
+      <div class="serv reveal"><div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></svg></div><span>Guiones y conceptualización creativa</span></div>
+      <div class="serv reveal"><div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></svg></div><span>Uso de imagen comercial</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="wrap">
+    <div class="reveal" style="max-width:640px;">
+      <span class="eyebrow gold">Inversión</span>
+      <h2 class="title">Paquetes de <em>precios</em></h2>
+    </div>
+    <div class="price-grid">
+      <div class="price-card feat reveal">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>Reels / TikTok</h3>
+        <p class="sub">Video vertical con guion, producción y edición</p>
+        <div class="price-row"><span class="qty">1 video</span><span class="amt">$4,500</span></div>
+        <div class="price-row"><span class="qty">3 videos</span><span class="amt">$10,000</span></div>
+        <div class="price-row"><span class="qty">8 videos</span><span class="amt">$20,000</span></div>
+      </div>
+      <div class="price-card reveal">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="3"/><circle cx="12" cy="18" r="1"/></svg>Stories</h3>
+        <p class="sub">Historias con llamada a la acción</p>
+        <div class="price-row"><span class="qty">1 story</span><span class="amt">$1,500</span></div>
+        <div class="price-row"><span class="qty">3 stories</span><span class="amt">$3,000</span></div>
+        <div class="price-row"><span class="qty">8 stories</span><span class="amt">$6,000</span></div>
+      </div>
+    </div>
+    <div class="price-extras reveal">
+      <div class="extra"><span class="lbl">Exclusividad</span><span class="val">$3,000 <small style="font-size:14px;font-weight:400;color:var(--sky-light);">/ mes</small></span></div>
+      <div class="extra"><span class="lbl">Uso de imagen + derecho a pauta</span><span class="val">$4,000 <small style="font-size:14px;font-weight:400;color:var(--sky-light);">MXN / mes</small></span></div>
+    </div>
+    <p class="price-note">
+      <b>Los precios incluyen</b> creación, producción, edición y estrategia de contenido.<br>
+      Los derechos comerciales, uso de imagen y pauta se cotizan por separado.<br>
+      <b>Contáctame para un presupuesto personalizado.</b>
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contacto">
+  <div class="wrap contact-grid">
+    <div class="contact-info reveal">
+      <h2>¡Colaboremos!</h2>
+      <p class="intro">¿Tienes una marca, producto o propiedad que quieras dar a conocer? Cuéntame tu idea y diseñemos juntos una campaña que conecte.</p>
+
+      <!-- ✎ FORMULARIO — reemplaza TU_FORM_ID con el ID de tu formulario en formspree.io (gratis) -->
+      <form class="cform" id="contactForm" action="https://formspree.io/f/TU_FORM_ID" method="POST">
+        <div class="row">
+          <input type="text" name="nombre" placeholder="Tu nombre" required>
+          <input type="text" name="marca" placeholder="Marca / empresa">
+        </div>
+        <div class="row">
+          <input type="email" name="email" placeholder="Tu email" required>
+          <select name="tipo">
+            <option value="" disabled selected>Tipo de colaboración</option>
+            <option>Reels / TikTok</option>
+            <option>Stories</option>
+            <option>Cobertura de evento</option>
+            <option>Campaña / paquete</option>
+            <option>Estancia corta</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <textarea name="mensaje" placeholder="Cuéntame sobre tu marca y lo que buscas..." required></textarea>
+        <input type="hidden" name="_subject" value="Nueva colaboración desde el portafolio">
+        <button type="submit">Enviar mensaje →</button>
+      </form>
+      <div class="form-ok" id="formOk">¡Gracias! Tu mensaje se envió. Te responderé muy pronto. 💌</div>
+
+      <div class="contact-links">
+        <a class="clink" href="https://www.instagram.com/sofiahosting_" target="_blank" rel="noopener">
+          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></div>
+          <div class="ct"><small>INSTAGRAM</small><b>@sofiahosting_</b></div>
+        </a>
+        <a class="clink" href="https://wa.me/523314061039" target="_blank" rel="noopener">
+          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.4c.8.3 1.7.5 2.6.6A2 2 0 0122 16.9z"/></svg></div>
+          <div class="ct"><small>WHATSAPP</small><b>+52 331 406 1039</b></div>
+        </a>
+        <a class="clink" href="mailto:hola@sofiaretif.com?subject=Colaboración%20de%20marca">
+          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 6l9 6 9-6"/></svg></div>
+          <div class="ct"><small>EMAIL</small><b>hola@sofiaretif.com</b></div>
+        </a>
+      </div>
+    </div>
+    <div class="contact-photo reveal">
+      <img src="/assets/portfolio/port-matcha.png" alt="Sofía Retif">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Sofía Retif · Brand Partner &amp; UGC · <a href="https://www.instagram.com/sofiahosting_" target="_blank" rel="noopener">@sofiahosting_</a></p>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/523314061039?text=Hola%20Sof%C3%ADa%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20colaborar%20con%20mi%20marca%20%E2%9C%A8" target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.4-.4-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3s1 2.7 1.2 2.9c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 15.1 3.6 13.6 3.6 12 3.6 7.4 7.4 3.6 12 3.6S20.4 7.4 20.4 12 16.6 20.2 12 20.2z"/></svg>
+  <span>Escríbeme</span>
+</a>
+
+<script>
+  // Nav background on scroll
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 60);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Animated stat counters
+  const fmt = (n) => {
+    if (n >= 1000) return (n/1000).toFixed(n % 1000 === 0 ? 0 : 1).replace('.0','') ;
+    return n;
+  };
+  const animateCount = (el) => {
+    const target = +el.dataset.count;
+    const suffix = el.dataset.suffix || '';
+    const big = target >= 1000;
+    const dur = 1600; const start = performance.now();
+    const step = (now) => {
+      const p = Math.min((now - start) / dur, 1);
+      const ease = 1 - Math.pow(1 - p, 3);
+      const val = Math.round(target * ease);
+      el.textContent = (big ? fmt(val) : val) + (p === 1 ? suffix : (big ? '' : ''));
+      if (p < 1) requestAnimationFrame(step); else el.textContent = (big ? fmt(target) : target) + suffix;
+    };
+    requestAnimationFrame(step);
+  };
+  const statIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target); statIO.unobserve(e.target); } });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.stat b[data-count]').forEach(el => statIO.observe(el));
+
+  // Contact form -> Formspree (AJAX, sin recargar). Funciona al poner tu TU_FORM_ID real.
+  const form = document.getElementById('contactForm');
+  const ok = document.getElementById('formOk');
+  if (form) form.addEventListener('submit', async (ev) => {
+    if (form.action.includes('TU_FORM_ID')) return; // aún sin configurar: deja el envío normal
+    ev.preventDefault();
+    try {
+      const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+      if (res.ok) { form.style.display = 'none'; ok.style.display = 'block'; }
+      else { form.submit(); }
+    } catch (e) { form.submit(); }
+  });
+</script>
+</body>
+</html>

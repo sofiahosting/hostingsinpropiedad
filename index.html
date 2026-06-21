@@ -1296,149 +1296,108 @@
     </div>
   </div>
   <div class="hero-img">
-    <svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:860px;border-radius:20px;overflow:hidden;box-shadow:0 32px 80px rgba(20,18,30,0.35)">
+    <svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:900px;display:block;margin:0 auto;overflow:visible">
   <defs>
-    <clipPath id="fc"><rect x="0" y="0" width="900" height="560" rx="20"/></clipPath>
-    <clipPath id="banner-clip"><rect x="32" y="90" width="556" height="200"/></clipPath>
-    <clipPath id="photo-clip"><rect x="300" y="70" width="288" height="220"/></clipPath>
-    <linearGradient id="banner-grad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#1a1830" stop-opacity="1"/>
-      <stop offset="45%" stop-color="#1a1830" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#1a1830" stop-opacity="0.1"/>
+    <clipPath id="screenclip"><rect x="84" y="34" width="732" height="432" rx="9"/></clipPath>
+    <clipPath id="vidclip"><rect x="84" y="80" width="732" height="264"/></clipPath>
+    <clipPath id="avatarclip"><circle cx="792" cy="57" r="12"/></clipPath>
+    <linearGradient id="vgrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="40%" stop-color="#0a1020" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a1020" stop-opacity="0.92"/>
     </linearGradient>
-    <linearGradient id="sky-grad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8BB8D4"/>
-      <stop offset="100%" stop-color="#B8D4E8"/>
+    <linearGradient id="lgrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0a1020" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0a1020" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="screenglow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2a3656"/>
+      <stop offset="100%" stop-color="#141b2e"/>
     </linearGradient>
   </defs>
 
-  <g clip-path="url(#fc)">
+  <!-- ground shadow -->
+  <ellipse cx="450" cy="545" rx="350" ry="24" fill="#0a1020" opacity="0.20"/>
 
-  <!-- ===== LEFT PANEL — clean dark UI ===== -->
-  <rect x="0" y="0" width="620" height="560" fill="#F5F2EC"/>
+  <!-- laptop screen bezel -->
+  <rect x="70" y="18" width="760" height="464" rx="22" fill="#1c1c25"/>
+  <rect x="70.75" y="18.75" width="758.5" height="462.5" rx="21.5" fill="none" stroke="#33333f" stroke-width="1.5"/>
+  <circle cx="450" cy="30" r="2.5" fill="#3a3a48"/>
 
-  <!-- Top nav bar -->
-  <rect x="0" y="0" width="620" height="52" fill="#111118"/>
-  <rect x="18" y="20" width="16" height="2" rx="1" fill="white" opacity="0.6"/>
-  <rect x="18" y="27" width="12" height="2" rx="1" fill="white" opacity="0.6"/>
-  <rect x="18" y="34" width="16" height="2" rx="1" fill="white" opacity="0.6"/>
-  <rect x="44" y="20" width="100" height="12" rx="3" fill="white" opacity="0.1"/>
-  <rect x="48" y="24" width="72" height="5" rx="2" fill="white" opacity="0.35"/>
-  <circle cx="568" cy="26" r="13" fill="#7BA7C4" opacity="0.9"/>
-  <circle cx="540" cy="26" r="9" fill="white" opacity="0.08"/>
+  <!-- ===== SCREEN CONTENT ===== -->
+  <g clip-path="url(#screenclip)">
+    <rect x="84" y="34" width="732" height="432" fill="#0e1626"/>
 
-  <!-- Course banner area — Sofia full bleed -->
-  <rect x="32" y="64" width="556" height="210" rx="10" fill="#2F6188"/>
+    <!-- top bar -->
+    <rect x="84" y="34" width="732" height="46" fill="#15213d"/>
+    <circle cx="110" cy="57" r="9" fill="#7BA7C4"/>
+    <path d="M106 58 l4 -4 l4 4 v4 h-8 z" fill="#15213d"/>
+    <text x="128" y="62" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#ffffff">Hosting Sin Propiedad</text>
+    <rect x="600" y="47" width="150" height="20" rx="10" fill="#1e2a48"/>
+    <circle cx="615" cy="57" r="4" fill="none" stroke="#5e7398" stroke-width="1.5"/>
+    <line x1="618" y1="60" x2="622" y2="64" stroke="#5e7398" stroke-width="1.5"/>
+    <image href="assets/sofia-about.jpg" x="778" y="43" width="28" height="28" preserveAspectRatio="xMidYMid slice" clip-path="url(#avatarclip)"/>
+    <circle cx="792" cy="57" r="12" fill="none" stroke="#7BA7C4" stroke-width="1.5"/>
 
-  <!-- Sofia fills entire banner (retrato limpio) -->
-  <image href="assets/sofia-about.jpg" x="300" y="64" width="288" height="210" clip-path="url(#banner-clip)" preserveAspectRatio="xMidYMin slice"/>
+    <!-- video (Sofia teaching) -->
+    <image href="assets/sofia-about.jpg" x="84" y="80" width="732" height="264" preserveAspectRatio="xMidYMid slice" clip-path="url(#vidclip)"/>
+    <rect x="84" y="80" width="732" height="264" fill="url(#vgrad)" clip-path="url(#vidclip)"/>
+    <rect x="84" y="80" width="430" height="264" fill="url(#lgrad)" clip-path="url(#vidclip)"/>
 
-  <!-- Left gradient overlay for text legibility -->
-  <rect x="32" y="64" width="310" height="210" rx="10" fill="url(#banner-grad)"/>
+    <!-- live/scope badge -->
+    <rect x="740" y="92" width="64" height="22" rx="11" fill="#000000" opacity="0.42"/>
+    <text x="772" y="107" font-family="Arial,sans-serif" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">10 módulos</text>
 
-  <!-- Course title text in banner -->
-  <text x="52" y="112" font-family="Georgia,serif" font-size="22" font-weight="700" fill="white" opacity="0.95">Hosting Sin Propiedad</text>
-  <text x="52" y="136" font-family="Arial,sans-serif" font-size="11" fill="white" opacity="0.7">Aprende a generar ingresos</text>
-  <text x="52" y="151" font-family="Arial,sans-serif" font-size="11" fill="white" opacity="0.7">sin ser dueño de una propiedad</text>
+    <!-- play button -->
+    <circle cx="450" cy="196" r="39" fill="#ffffff" opacity="0.22"/>
+    <circle cx="450" cy="196" r="29" fill="#ffffff"/>
+    <polygon points="441,180 441,212 469,196" fill="#2F6188"/>
 
-  <!-- Badge -->
-  <rect x="52" y="165" width="100" height="20" rx="10" fill="#C87D87" opacity="0.95"/>
-  <text x="68" y="179" font-family="Arial,sans-serif" font-size="10" fill="white" font-weight="600">By Sofía Retif</text>
+    <!-- lesson title overlay -->
+    <text x="108" y="312" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="#E6C57C">MÓDULO 1 · CLASE EN VIDEO</text>
+    <text x="108" y="335" font-family="Georgia,serif" font-size="23" font-weight="700" fill="#ffffff">Introducción a Airbnb</text>
 
-  <!-- Stars -->
-  <text x="52" y="205" font-family="Arial,sans-serif" font-size="13" fill="#C8A96E">★★★★★</text>
-  <text x="122" y="204" font-family="Arial,sans-serif" font-size="10" fill="white" opacity="0.5">4.8 · 120 alumnos</text>
+    <!-- progress bar -->
+    <rect x="84" y="340" width="732" height="4" fill="#ffffff" opacity="0.22"/>
+    <rect x="84" y="340" width="250" height="4" fill="#E6C57C"/>
 
-  <!-- Play button overlay — centered on right half -->
-  <circle cx="470" cy="164" r="28" fill="black" opacity="0.3"/>
-  <circle cx="470" cy="164" r="24" fill="white" opacity="0.9"/>
-  <polygon points="464,153 464,175 486,164" fill="#1D4E5F"/>
+    <!-- ===== lesson list ===== -->
+    <rect x="84" y="344" width="732" height="122" fill="#0e1626"/>
 
-  <!-- Duration bottom right -->
-  <rect x="530" y="248" width="46" height="16" rx="3" fill="black" opacity="0.5"/>
-  <text x="553" y="259" font-family="Arial,sans-serif" font-size="9" fill="white" text-anchor="middle">12:34</text>
+    <!-- row 1 active -->
+    <rect x="84" y="344" width="732" height="42" fill="#18233f"/>
+    <rect x="84" y="344" width="3" height="42" fill="#E6C57C"/>
+    <circle cx="114" cy="365" r="12" fill="#7BA7C4"/>
+    <polygon points="110,360 110,370 119,365" fill="#ffffff"/>
+    <text x="136" y="362" font-family="Arial,sans-serif" font-size="12.5" font-weight="700" fill="#ffffff">1 · Introducción a Airbnb</text>
+    <text x="136" y="376" font-family="Arial,sans-serif" font-size="10" fill="#8aa0bf">Clase en curso</text>
+    <rect x="726" y="356" width="64" height="18" rx="9" fill="#C87D87"/>
+    <text x="758" y="369" font-family="Arial,sans-serif" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="middle">Viendo</text>
 
-  <!-- Progress section -->
-  <rect x="32" y="284" width="556" height="28" rx="0" fill="white"/>
-  <rect x="46" y="293" width="200" height="7" rx="3" fill="#e8e3d8"/>
-  <rect x="46" y="293" width="80" height="7" rx="3" fill="#7BA7C4"/>
-  <text x="254" y="299" font-family="Arial,sans-serif" font-size="9" fill="#7BA7C4" font-weight="600">40%</text>
-  <rect x="430" y="291" width="70" height="11" rx="4" fill="#EAF3F9"/>
-  <text x="438" y="300" font-family="Arial,sans-serif" font-size="9" fill="#7BA7C4">En progreso</text>
+    <!-- row 2 -->
+    <line x1="84" y1="386" x2="816" y2="386" stroke="#16223c" stroke-width="1"/>
+    <circle cx="114" cy="406" r="12" fill="none" stroke="#33415c" stroke-width="2"/>
+    <polygon points="110,401 110,411 119,406" fill="#4a5d7d"/>
+    <text x="136" y="403" font-family="Arial,sans-serif" font-size="12.5" font-weight="600" fill="#ffffff" opacity="0.82">2 · Valida la zona y la demanda REAL</text>
+    <text x="136" y="417" font-family="Arial,sans-serif" font-size="10" fill="#6b80a0">8 videos</text>
+    <text x="800" y="411" font-family="Arial,sans-serif" font-size="10" fill="#6b80a0" text-anchor="end">12 min</text>
 
-  <!-- Module list -->
-  <rect x="32" y="320" width="556" height="44" rx="6" fill="#EAF3F9" stroke="#7BA7C4" stroke-width="1"/>
-  <circle cx="56" cy="342" r="11" fill="#7BA7C4"/>
-  <text x="51" y="347" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white">1</text>
-  <text x="76" y="338" font-family="Arial,sans-serif" font-size="12" font-weight="600" fill="#1a1830">Fundamentos del arbitraje</text>
-  <text x="76" y="352" font-family="Arial,sans-serif" font-size="10" fill="#6B6355">Clase activa · 3 videos</text>
-  <rect x="492" y="336" width="52" height="14" rx="7" fill="#C87D87"/>
-  <text x="500" y="347" font-family="Arial,sans-serif" font-size="9" fill="white" font-weight="600">Activo</text>
-
-  <rect x="32" y="370" width="556" height="40" rx="6" fill="white" stroke="#e8e3d8" stroke-width="1"/>
-  <circle cx="56" cy="390" r="11" fill="#e8e3d8"/>
-  <text x="51" y="395" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#999">2</text>
-  <text x="76" y="386" font-family="Arial,sans-serif" font-size="12" fill="#1a1830" opacity="0.7">Cómo encontrar la propiedad ideal</text>
-  <text x="76" y="399" font-family="Arial,sans-serif" font-size="10" fill="#6B6355" opacity="0.6">4 videos · 32 min</text>
-
-  <rect x="32" y="416" width="556" height="40" rx="6" fill="white" stroke="#e8e3d8" stroke-width="1"/>
-  <circle cx="56" cy="436" r="11" fill="#e8e3d8"/>
-  <text x="51" y="441" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#999">3</text>
-  <text x="76" y="432" font-family="Arial,sans-serif" font-size="12" fill="#1a1830" opacity="0.7">Cómo convencer al dueño</text>
-  <text x="76" y="445" font-family="Arial,sans-serif" font-size="10" fill="#6B6355" opacity="0.6">2 videos · 18 min</text>
-
-  <rect x="32" y="462" width="556" height="40" rx="6" fill="white" stroke="#e8e3d8" stroke-width="1"/>
-  <circle cx="56" cy="482" r="11" fill="#e8e3d8"/>
-  <text x="51" y="487" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#999">4</text>
-  <text x="76" y="478" font-family="Arial,sans-serif" font-size="12" fill="#1a1830" opacity="0.7">Amueblar sin gastar de más</text>
-  <text x="76" y="491" font-family="Arial,sans-serif" font-size="10" fill="#6B6355" opacity="0.6">3 videos · 25 min</text>
-
-  <!-- ===== RIGHT PANEL ===== -->
-  <rect x="620" y="0" width="280" height="560" fill="#111118"/>
-  <rect x="620" y="0" width="280" height="52" fill="#0d0d18"/>
-
-  <rect x="632" y="62" width="244" height="30" rx="6" fill="#1e1e30" stroke="#252540" stroke-width="1"/>
-  <rect x="646" y="74" width="95" height="5" rx="2" fill="white" opacity="0.16"/>
-
-  <rect x="632" y="104" width="125" height="7" rx="2" fill="white" opacity="0.45"/>
-
-  <rect x="632" y="120" width="244" height="52" rx="8" fill="#18182e"/>
-  <circle cx="652" cy="146" r="11" fill="#7BA7C4"/>
-  <text x="647" y="151" font-family="Arial" font-size="11" font-weight="700" fill="white">1</text>
-  <rect x="671" y="138" width="138" height="7" rx="2" fill="white" opacity="0.75"/>
-  <rect x="671" y="150" width="80" height="5" rx="2" fill="#C8A96E" opacity="0.6"/>
-
-  <rect x="632" y="178" width="244" height="52" rx="8" fill="#182030" stroke="#7BA7C4" stroke-width="1"/>
-  <circle cx="652" cy="204" r="11" fill="#7BA7C4" opacity="0.5"/>
-  <text x="647" y="209" font-family="Arial" font-size="11" font-weight="700" fill="white" opacity="0.6">2</text>
-  <rect x="671" y="196" width="150" height="7" rx="2" fill="white" opacity="0.6"/>
-  <rect x="671" y="208" width="50" height="4" rx="2" fill="#223040"/>
-  <rect x="671" y="208" width="25" height="4" rx="2" fill="#7BA7C4"/>
-
-  <rect x="632" y="236" width="244" height="52" rx="8" fill="#18182e"/>
-  <circle cx="652" cy="262" r="11" fill="#252545"/>
-  <text x="647" y="267" font-family="Arial" font-size="11" font-weight="700" fill="white" opacity="0.4">3</text>
-  <rect x="671" y="254" width="125" height="7" rx="2" fill="white" opacity="0.45"/>
-  <rect x="671" y="266" width="70" height="5" rx="2" fill="white" opacity="0.2"/>
-
-  <rect x="632" y="294" width="244" height="52" rx="8" fill="#18182e"/>
-  <circle cx="652" cy="320" r="11" fill="#252545"/>
-  <text x="647" y="325" font-family="Arial" font-size="11" font-weight="700" fill="white" opacity="0.4">4</text>
-  <rect x="671" y="312" width="142" height="7" rx="2" fill="white" opacity="0.45"/>
-  <rect x="671" y="324" width="82" height="5" rx="2" fill="white" opacity="0.2"/>
-
-  <rect x="632" y="352" width="244" height="52" rx="8" fill="#18182e"/>
-  <circle cx="652" cy="378" r="11" fill="#252545"/>
-  <text x="647" y="383" font-family="Arial" font-size="11" font-weight="700" fill="white" opacity="0.4">5</text>
-  <rect x="671" y="370" width="132" height="7" rx="2" fill="white" opacity="0.45"/>
-  <rect x="671" y="382" width="72" height="5" rx="2" fill="white" opacity="0.2"/>
-
-  <rect x="632" y="418" width="244" height="42" rx="10" fill="#C87D87"/>
-  <rect x="672" y="433" width="162" height="12" rx="3" fill="white" opacity="0.92"/>
-
-  <line x1="620" y1="52" x2="620" y2="560" stroke="#1e1e35" stroke-width="1"/>
-
+    <!-- row 3 -->
+    <line x1="84" y1="426" x2="816" y2="426" stroke="#16223c" stroke-width="1"/>
+    <circle cx="114" cy="446" r="12" fill="none" stroke="#33415c" stroke-width="2"/>
+    <polygon points="110,441 110,451 119,446" fill="#4a5d7d"/>
+    <text x="136" y="443" font-family="Arial,sans-serif" font-size="12.5" font-weight="600" fill="#ffffff" opacity="0.66">3 · Encontrar propiedades y negociar</text>
+    <text x="136" y="457" font-family="Arial,sans-serif" font-size="10" fill="#6b80a0">6 videos</text>
+    <text x="800" y="451" font-family="Arial,sans-serif" font-size="10" fill="#6b80a0" text-anchor="end">18 min</text>
   </g>
+
+  <!-- screen inner edge -->
+  <rect x="84" y="34" width="732" height="432" rx="9" fill="none" stroke="#000000" stroke-width="1" opacity="0.35"/>
+
+  <!-- laptop base -->
+  <rect x="40" y="482" width="820" height="20" rx="6" fill="#cbcfd6"/>
+  <rect x="40" y="482" width="820" height="4" rx="2" fill="#e1e4e9"/>
+  <rect x="410" y="482" width="80" height="9" rx="4" fill="#b1b6bf"/>
+  <rect x="40" y="498" width="820" height="4" rx="2" fill="#a7adb6"/>
 </svg>
 
     <!-- Notificaciones flotantes -->

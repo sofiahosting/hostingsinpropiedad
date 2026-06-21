@@ -1301,24 +1301,26 @@
     <clipPath id="screenclip"><rect x="84" y="34" width="732" height="432" rx="9"/></clipPath>
     <clipPath id="vidclip"><rect x="84" y="80" width="732" height="264"/></clipPath>
     <clipPath id="avatarclip"><circle cx="792" cy="57" r="12"/></clipPath>
-    <filter id="bokeh" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+    <filter id="setblur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5"/></filter>
+    <filter id="bokeh" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="9"/></filter>
     <linearGradient id="studio" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#16263f"/><stop offset="100%" stop-color="#0b1322"/>
+      <stop offset="0%" stop-color="#193449"/><stop offset="55%" stop-color="#0f2236"/><stop offset="100%" stop-color="#0a1626"/>
     </linearGradient>
-    <radialGradient id="spot" cx="50%" cy="42%" r="55%">
-      <stop offset="0%" stop-color="#356088" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#356088" stop-opacity="0"/>
+    <radialGradient id="warm" cx="14%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#caa05a" stop-opacity="0.35"/><stop offset="100%" stop-color="#caa05a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="spot" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#3f6e96" stop-opacity="0.9"/><stop offset="100%" stop-color="#3f6e96" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="botfade" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="35%" stop-color="#070c18" stop-opacity="0"/><stop offset="100%" stop-color="#070c18" stop-opacity="0.92"/>
+      <stop offset="30%" stop-color="#060b16" stop-opacity="0"/><stop offset="100%" stop-color="#060b16" stop-opacity="0.94"/>
     </linearGradient>
     <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#22324f" stop-opacity="0"/><stop offset="100%" stop-color="#22324f" stop-opacity="0.5"/>
+      <stop offset="0%" stop-color="#24364f" stop-opacity="0"/><stop offset="100%" stop-color="#2a3f5c" stop-opacity="0.55"/>
     </linearGradient>
   </defs>
 
   <ellipse cx="450" cy="545" rx="350" ry="24" fill="#0a1020" opacity="0.20"/>
-
   <rect x="70" y="18" width="760" height="464" rx="22" fill="#1c1c25"/>
   <rect x="70.75" y="18.75" width="758.5" height="462.5" rx="21.5" fill="none" stroke="#33333f" stroke-width="1.5"/>
   <circle cx="450" cy="30" r="2.5" fill="#3a3a48"/>
@@ -1338,24 +1340,57 @@
     <image href="assets/sofia-about.jpg" x="778" y="43" width="28" height="28" preserveAspectRatio="xMidYMin slice" clip-path="url(#avatarclip)"/>
     <circle cx="792" cy="57" r="12" fill="none" stroke="#7BA7C4" stroke-width="1.5"/>
 
-    <!-- ===== video stage (studio set) ===== -->
+    <!-- ===== video stage (studio SET) ===== -->
     <g clip-path="url(#vidclip)">
       <rect x="84" y="80" width="732" height="264" fill="url(#studio)"/>
-      <!-- spotlight behind Sofia -->
-      <ellipse cx="650" cy="180" rx="230" ry="200" fill="url(#spot)"/>
-      <!-- soft bokeh -->
-      <g filter="url(#bokeh)">
-        <circle cx="180" cy="135" r="20" fill="#E6C57C" opacity="0.20"/>
-        <circle cx="250" cy="195" r="13" fill="#E6C57C" opacity="0.14"/>
-        <circle cx="150" cy="240" r="16" fill="#9CC0D8" opacity="0.16"/>
-        <circle cx="500" cy="120" r="14" fill="#E6C57C" opacity="0.12"/>
-        <circle cx="770" cy="300" r="22" fill="#9CC0D8" opacity="0.12"/>
+      <rect x="84" y="80" width="732" height="264" fill="url(#warm)"/>
+
+      <!-- BACKDROP SET (blurred / out of focus) -->
+      <g filter="url(#setblur)">
+        <!-- presentation screen with rising income chart -->
+        <rect x="150" y="104" width="262" height="150" rx="10" fill="#0d1f33"/>
+        <rect x="150" y="104" width="262" height="150" rx="10" fill="none" stroke="#E6C57C" stroke-width="2" opacity="0.45"/>
+        <rect x="168" y="118" width="110" height="9" rx="4" fill="#9CC0D8" opacity="0.6"/>
+        <rect x="168" y="132" width="60" height="6" rx="3" fill="#ffffff" opacity="0.25"/>
+        <rect x="176" y="206" width="20" height="26" rx="2" fill="#7BA7C4" opacity="0.8"/>
+        <rect x="206" y="190" width="20" height="42" rx="2" fill="#7BA7C4" opacity="0.85"/>
+        <rect x="236" y="172" width="20" height="60" rx="2" fill="#9CC0D8" opacity="0.9"/>
+        <rect x="266" y="156" width="20" height="76" rx="2" fill="#E6C57C" opacity="0.9"/>
+        <rect x="296" y="140" width="20" height="92" rx="2" fill="#E6C57C"/>
+        <polyline points="186,200 216,186 246,168 276,150 306,134" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.55"/>
+
+        <!-- studio plant (left) -->
+        <path d="M104 344 C 96 300, 120 286, 110 250 C 132 276, 134 308, 126 344 Z" fill="#2c5446"/>
+        <path d="M126 344 C 120 304, 150 282, 150 252 C 168 286, 158 318, 146 344 Z" fill="#356251"/>
+        <path d="M118 300 C 96 296, 86 280, 84 268 C 104 268, 122 280, 132 296 Z" fill="#2c5446"/>
+        <rect x="108" y="320" width="44" height="30" rx="5" fill="#3a4a63"/>
+
+        <!-- shelf with books (upper area, behind play) -->
+        <rect x="430" y="150" width="120" height="6" rx="2" fill="#33445e"/>
+        <rect x="442" y="120" width="9" height="30" fill="#7BA7C4" opacity="0.7"/>
+        <rect x="453" y="116" width="9" height="34" fill="#C87D87" opacity="0.7"/>
+        <rect x="464" y="124" width="9" height="26" fill="#E6C57C" opacity="0.7"/>
+        <rect x="478" y="118" width="9" height="32" fill="#9CC0D8" opacity="0.7"/>
+        <circle cx="520" cy="138" r="13" fill="#2c5446"/>
       </g>
+
+      <!-- spotlight + warm bokeh -->
+      <ellipse cx="648" cy="180" rx="230" ry="200" fill="url(#spot)"/>
+      <g filter="url(#bokeh)">
+        <circle cx="470" cy="110" r="13" fill="#E6C57C" opacity="0.18"/>
+        <circle cx="560" cy="250" r="16" fill="#E6C57C" opacity="0.12"/>
+        <circle cx="770" cy="300" r="20" fill="#9CC0D8" opacity="0.12"/>
+        <circle cx="150" cy="120" r="14" fill="#caa05a" opacity="0.16"/>
+      </g>
+
       <!-- floor -->
-      <rect x="84" y="290" width="732" height="54" fill="url(#floor)"/>
-      <!-- Sofia cutout (giving the class) -->
+      <rect x="84" y="292" width="732" height="52" fill="url(#floor)"/>
+      <ellipse cx="660" cy="338" rx="150" ry="16" fill="#060b16" opacity="0.35"/>
+
+      <!-- Sofia cutout (sharp, in front) -->
       <image href="assets/sofia-cutout.png" x="500" y="22" width="330" height="412" preserveAspectRatio="xMidYMin meet"/>
-      <!-- legibility gradient for title -->
+
+      <!-- legibility gradient for title (left/bottom) -->
       <rect x="84" y="80" width="430" height="264" fill="url(#botfade)"/>
     </g>
 
@@ -1364,16 +1399,16 @@
     <text x="772" y="107" font-family="Arial,sans-serif" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">10 módulos</text>
 
     <!-- big play -->
-    <circle cx="320" cy="172" r="37" fill="#ffffff" opacity="0.20"/>
-    <circle cx="320" cy="172" r="28" fill="#ffffff"/>
-    <polygon points="311,156 311,188 339,172" fill="#2F6188"/>
+    <circle cx="300" cy="168" r="37" fill="#ffffff" opacity="0.20"/>
+    <circle cx="300" cy="168" r="28" fill="#ffffff"/>
+    <polygon points="291,152 291,184 319,168" fill="#2F6188"/>
 
     <!-- lesson title -->
     <text x="108" y="294" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="#E6C57C">MÓDULO 1 · CLASE EN VIDEO</text>
     <text x="108" y="316" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#ffffff">Introducción a Airbnb</text>
 
     <!-- playback controls -->
-    <rect x="84" y="322" width="732" height="22" fill="#0a1322" opacity="0.55"/>
+    <rect x="84" y="322" width="732" height="22" fill="#0a1322" opacity="0.6"/>
     <rect x="97" y="329" width="3" height="9" rx="1" fill="#ffffff"/>
     <rect x="103" y="329" width="3" height="9" rx="1" fill="#ffffff"/>
     <rect x="118" y="332" width="544" height="3" rx="1.5" fill="#ffffff" opacity="0.32"/>
@@ -1408,7 +1443,6 @@
   </g>
 
   <rect x="84" y="34" width="732" height="432" rx="9" fill="none" stroke="#000000" stroke-width="1" opacity="0.35"/>
-
   <rect x="40" y="482" width="820" height="20" rx="6" fill="#cbcfd6"/>
   <rect x="40" y="482" width="820" height="4" rx="2" fill="#e1e4e9"/>
   <rect x="410" y="482" width="80" height="9" rx="4" fill="#b1b6bf"/>

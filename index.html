@@ -1301,17 +1301,17 @@
     <clipPath id="screenclip"><rect x="84" y="34" width="732" height="432" rx="9"/></clipPath>
     <clipPath id="vidclip"><rect x="84" y="80" width="732" height="264"/></clipPath>
     <clipPath id="avatarclip"><circle cx="792" cy="57" r="12"/></clipPath>
-    <linearGradient id="vgrad" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="vidbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a2848"/>
+      <stop offset="100%" stop-color="#0d1426"/>
+    </linearGradient>
+    <linearGradient id="leftfade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#13203c" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#13203c" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="botfade" x1="0" y1="0" x2="0" y2="1">
       <stop offset="40%" stop-color="#0a1020" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#0a1020" stop-opacity="0.92"/>
-    </linearGradient>
-    <linearGradient id="lgrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#0a1020" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#0a1020" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="screenglow" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#2a3656"/>
-      <stop offset="100%" stop-color="#141b2e"/>
+      <stop offset="100%" stop-color="#0a1020" stop-opacity="0.85"/>
     </linearGradient>
   </defs>
 
@@ -1335,26 +1335,32 @@
     <rect x="600" y="47" width="150" height="20" rx="10" fill="#1e2a48"/>
     <circle cx="615" cy="57" r="4" fill="none" stroke="#5e7398" stroke-width="1.5"/>
     <line x1="618" y1="60" x2="622" y2="64" stroke="#5e7398" stroke-width="1.5"/>
-    <image href="assets/sofia-about.jpg" x="778" y="43" width="28" height="28" preserveAspectRatio="xMidYMid slice" clip-path="url(#avatarclip)"/>
+    <image href="assets/sofia-about.jpg" x="778" y="43" width="28" height="28" preserveAspectRatio="xMidYMin slice" clip-path="url(#avatarclip)"/>
     <circle cx="792" cy="57" r="12" fill="none" stroke="#7BA7C4" stroke-width="1.5"/>
 
-    <!-- video (Sofia teaching) -->
-    <image href="assets/sofia-about.jpg" x="84" y="80" width="732" height="264" preserveAspectRatio="xMidYMid slice" clip-path="url(#vidclip)"/>
-    <rect x="84" y="80" width="732" height="264" fill="url(#vgrad)" clip-path="url(#vidclip)"/>
-    <rect x="84" y="80" width="430" height="264" fill="url(#lgrad)" clip-path="url(#vidclip)"/>
+    <!-- video stage -->
+    <g clip-path="url(#vidclip)">
+      <rect x="84" y="80" width="732" height="264" fill="url(#vidbg)"/>
+      <!-- Sofia, full portrait, right side (no head crop) -->
+      <image href="assets/sofia-about.jpg" x="586" y="80" width="211" height="264" preserveAspectRatio="xMidYMid slice"/>
+      <!-- soft seam fade on her left edge -->
+      <rect x="586" y="80" width="90" height="264" fill="url(#leftfade)"/>
+      <!-- bottom gradient for title legibility -->
+      <rect x="84" y="80" width="732" height="264" fill="url(#botfade)"/>
+    </g>
 
-    <!-- live/scope badge -->
-    <rect x="740" y="92" width="64" height="22" rx="11" fill="#000000" opacity="0.42"/>
+    <!-- scope badge -->
+    <rect x="740" y="92" width="64" height="22" rx="11" fill="#000000" opacity="0.40"/>
     <text x="772" y="107" font-family="Arial,sans-serif" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">10 módulos</text>
 
-    <!-- play button -->
-    <circle cx="450" cy="196" r="39" fill="#ffffff" opacity="0.22"/>
-    <circle cx="450" cy="196" r="29" fill="#ffffff"/>
-    <polygon points="441,180 441,212 469,196" fill="#2F6188"/>
+    <!-- play button (open area, not covering face) -->
+    <circle cx="408" cy="180" r="37" fill="#ffffff" opacity="0.20"/>
+    <circle cx="408" cy="180" r="28" fill="#ffffff"/>
+    <polygon points="399,164 399,196 427,180" fill="#2F6188"/>
 
-    <!-- lesson title overlay -->
-    <text x="108" y="312" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="#E6C57C">MÓDULO 1 · CLASE EN VIDEO</text>
-    <text x="108" y="335" font-family="Georgia,serif" font-size="23" font-weight="700" fill="#ffffff">Introducción a Airbnb</text>
+    <!-- lesson title overlay (left) -->
+    <text x="108" y="300" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="#E6C57C">MÓDULO 1 · CLASE EN VIDEO</text>
+    <text x="108" y="324" font-family="Georgia,serif" font-size="23" font-weight="700" fill="#ffffff">Introducción a Airbnb</text>
 
     <!-- progress bar -->
     <rect x="84" y="340" width="732" height="4" fill="#ffffff" opacity="0.22"/>

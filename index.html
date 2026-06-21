@@ -1301,12 +1301,19 @@
     <clipPath id="screenclip"><rect x="84" y="34" width="732" height="432" rx="9"/></clipPath>
     <clipPath id="vidclip"><rect x="84" y="80" width="732" height="264"/></clipPath>
     <clipPath id="avatarclip"><circle cx="792" cy="57" r="12"/></clipPath>
-    <filter id="vblur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="22"/></filter>
-    <linearGradient id="vidbg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1a2848"/><stop offset="100%" stop-color="#0d1426"/>
+    <filter id="bokeh" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+    <linearGradient id="studio" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#16263f"/><stop offset="100%" stop-color="#0b1322"/>
     </linearGradient>
+    <radialGradient id="spot" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#356088" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#356088" stop-opacity="0"/>
+    </radialGradient>
     <linearGradient id="botfade" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="35%" stop-color="#070c18" stop-opacity="0"/><stop offset="100%" stop-color="#070c18" stop-opacity="0.9"/>
+      <stop offset="35%" stop-color="#070c18" stop-opacity="0"/><stop offset="100%" stop-color="#070c18" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22324f" stop-opacity="0"/><stop offset="100%" stop-color="#22324f" stop-opacity="0.5"/>
     </linearGradient>
   </defs>
 
@@ -1331,15 +1338,25 @@
     <image href="assets/sofia-about.jpg" x="778" y="43" width="28" height="28" preserveAspectRatio="xMidYMin slice" clip-path="url(#avatarclip)"/>
     <circle cx="792" cy="57" r="12" fill="none" stroke="#7BA7C4" stroke-width="1.5"/>
 
-    <!-- ===== video stage ===== -->
+    <!-- ===== video stage (studio set) ===== -->
     <g clip-path="url(#vidclip)">
-      <rect x="84" y="80" width="732" height="264" fill="url(#vidbg)"/>
-      <!-- blurred backdrop (same photo) -->
-      <image href="assets/sofia-about.jpg" x="30" y="40" width="840" height="345" preserveAspectRatio="xMidYMid slice" filter="url(#vblur)" opacity="0.85"/>
-      <rect x="84" y="80" width="732" height="264" fill="#0b1326" opacity="0.5"/>
-      <!-- sharp Sofia, full (right) -->
-      <image href="assets/sofia-about.jpg" x="586" y="80" width="211" height="264" preserveAspectRatio="xMidYMid slice"/>
-      <rect x="84" y="80" width="732" height="264" fill="url(#botfade)"/>
+      <rect x="84" y="80" width="732" height="264" fill="url(#studio)"/>
+      <!-- spotlight behind Sofia -->
+      <ellipse cx="650" cy="180" rx="230" ry="200" fill="url(#spot)"/>
+      <!-- soft bokeh -->
+      <g filter="url(#bokeh)">
+        <circle cx="180" cy="135" r="20" fill="#E6C57C" opacity="0.20"/>
+        <circle cx="250" cy="195" r="13" fill="#E6C57C" opacity="0.14"/>
+        <circle cx="150" cy="240" r="16" fill="#9CC0D8" opacity="0.16"/>
+        <circle cx="500" cy="120" r="14" fill="#E6C57C" opacity="0.12"/>
+        <circle cx="770" cy="300" r="22" fill="#9CC0D8" opacity="0.12"/>
+      </g>
+      <!-- floor -->
+      <rect x="84" y="290" width="732" height="54" fill="url(#floor)"/>
+      <!-- Sofia cutout (giving the class) -->
+      <image href="assets/sofia-cutout.png" x="500" y="22" width="330" height="412" preserveAspectRatio="xMidYMin meet"/>
+      <!-- legibility gradient for title -->
+      <rect x="84" y="80" width="430" height="264" fill="url(#botfade)"/>
     </g>
 
     <!-- scope badge -->
@@ -1347,15 +1364,15 @@
     <text x="772" y="107" font-family="Arial,sans-serif" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">10 módulos</text>
 
     <!-- big play -->
-    <circle cx="406" cy="176" r="37" fill="#ffffff" opacity="0.20"/>
-    <circle cx="406" cy="176" r="28" fill="#ffffff"/>
-    <polygon points="397,160 397,192 425,176" fill="#2F6188"/>
+    <circle cx="320" cy="172" r="37" fill="#ffffff" opacity="0.20"/>
+    <circle cx="320" cy="172" r="28" fill="#ffffff"/>
+    <polygon points="311,156 311,188 339,172" fill="#2F6188"/>
 
     <!-- lesson title -->
     <text x="108" y="294" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="#E6C57C">MÓDULO 1 · CLASE EN VIDEO</text>
     <text x="108" y="316" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#ffffff">Introducción a Airbnb</text>
 
-    <!-- ===== playback controls bar ===== -->
+    <!-- playback controls -->
     <rect x="84" y="322" width="732" height="22" fill="#0a1322" opacity="0.55"/>
     <rect x="97" y="329" width="3" height="9" rx="1" fill="#ffffff"/>
     <rect x="103" y="329" width="3" height="9" rx="1" fill="#ffffff"/>
@@ -1366,10 +1383,8 @@
     <text x="760" y="337" font-family="Arial,sans-serif" font-size="9.5" font-weight="700" fill="#dfe6f0">1.5x</text>
     <path d="M790 328 h7 v2 h-5 v5 h-2 z M810 328 h-7 v2 h5 v5 h2 z M790 340 h7 v-2 h-5 v-5 h-2 z M810 340 h-7 v-2 h5 v-5 h2 z" fill="#dfe6f0"/>
 
-    <!-- ===== lesson list ===== -->
+    <!-- lesson list -->
     <rect x="84" y="344" width="732" height="122" fill="#0e1626"/>
-
-    <!-- row 1 active -->
     <rect x="84" y="344" width="732" height="42" fill="#18233f"/>
     <rect x="84" y="344" width="3" height="42" fill="#E6C57C"/>
     <circle cx="114" cy="365" r="12" fill="#7BA7C4"/>
@@ -1378,16 +1393,12 @@
     <text x="136" y="376" font-family="Arial,sans-serif" font-size="10" fill="#8aa0bf">Reproduciendo &#183; 6 videos</text>
     <rect x="724" y="356" width="66" height="18" rx="9" fill="#C87D87"/>
     <text x="757" y="369" font-family="Arial,sans-serif" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="middle">Viendo</text>
-
-    <!-- row 2 -->
     <line x1="84" y1="386" x2="816" y2="386" stroke="#16223c" stroke-width="1"/>
     <circle cx="114" cy="406" r="12" fill="none" stroke="#33415c" stroke-width="2"/>
     <polygon points="110,401 110,411 119,406" fill="#4a5d7d"/>
     <text x="136" y="403" font-family="Arial,sans-serif" font-size="12.5" font-weight="600" fill="#ffffff" opacity="0.82">2 &#183; Valida la zona y la demanda REAL</text>
     <text x="136" y="417" font-family="Arial,sans-serif" font-size="10" fill="#6b80a0">8 videos</text>
     <text x="800" y="411" font-family="Arial,sans-serif" font-size="10" fill="#6b80a0" text-anchor="end">12 min</text>
-
-    <!-- row 3 -->
     <line x1="84" y1="426" x2="816" y2="426" stroke="#16223c" stroke-width="1"/>
     <circle cx="114" cy="446" r="12" fill="none" stroke="#33415c" stroke-width="2"/>
     <polygon points="110,441 110,451 119,446" fill="#4a5d7d"/>
@@ -1398,7 +1409,6 @@
 
   <rect x="84" y="34" width="732" height="432" rx="9" fill="none" stroke="#000000" stroke-width="1" opacity="0.35"/>
 
-  <!-- laptop base -->
   <rect x="40" y="482" width="820" height="20" rx="6" fill="#cbcfd6"/>
   <rect x="40" y="482" width="820" height="4" rx="2" fill="#e1e4e9"/>
   <rect x="410" y="482" width="80" height="9" rx="4" fill="#b1b6bf"/>

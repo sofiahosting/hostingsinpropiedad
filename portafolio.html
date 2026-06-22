@@ -360,6 +360,7 @@
   }
   .contact::after { content:''; position:absolute; bottom:-20%; right:-6%; width:360px; height:360px; border-radius:50%; background: rgba(200,125,135,0.14); }
   .contact-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: stretch; position: relative; z-index: 2; }
+  .contact-info { display: flex; flex-direction: column; justify-content: center; }
   .contact h2 { font-family:'Playfair Display', serif; font-weight: 800; font-size: clamp(38px, 5.5vw, 64px); color: #fff; line-height: 1; letter-spacing: -1px; margin-bottom: 1.2rem; }
   .contact h2 em { font-style: italic; font-weight: 500; color: var(--sky-light); }
   .contact p.intro { color: rgba(255,255,255,0.85); font-size: 17px; max-width: 440px; margin-bottom: 2.4rem; font-weight: 300; }
@@ -818,30 +819,6 @@
     <div class="contact-info reveal">
       <h2>¡Colaboremos!</h2>
       <p class="intro">¿Tienes una marca, producto o propiedad que quieras dar a conocer? Cuéntame tu idea y diseñemos juntos una campaña que conecte.</p>
-
-      <!-- ✎ FORMULARIO — reemplaza TU_FORM_ID con el ID de tu formulario en formspree.io (gratis) -->
-      <form class="cform" id="contactForm" action="https://formspree.io/f/TU_FORM_ID" method="POST">
-        <div class="row">
-          <input type="text" name="nombre" placeholder="Tu nombre" required>
-          <input type="text" name="marca" placeholder="Marca / empresa">
-        </div>
-        <div class="row">
-          <input type="email" name="email" placeholder="Tu email" required>
-          <select name="tipo">
-            <option value="" disabled selected>Tipo de colaboración</option>
-            <option>Reels / TikTok</option>
-            <option>Stories</option>
-            <option>Cobertura de evento</option>
-            <option>Campaña / paquete</option>
-            <option>Estancia corta</option>
-            <option>Otro</option>
-          </select>
-        </div>
-        <textarea name="mensaje" placeholder="Cuéntame sobre tu marca y lo que buscas..." required></textarea>
-        <input type="hidden" name="_subject" value="Nueva colaboración desde el portafolio">
-        <button type="submit">Enviar mensaje →</button>
-      </form>
-      <div class="form-ok" id="formOk">¡Gracias! Tu mensaje se envió. Te responderé muy pronto. 💌</div>
 
       <div class="contact-links">
         <a class="clink" href="https://www.instagram.com/sofiahosting_" target="_blank" rel="noopener">

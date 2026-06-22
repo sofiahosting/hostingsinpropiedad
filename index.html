@@ -4,6 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hosting Sin Propiedad · Sofía Retif</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1270112635290396');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
 <meta name="description" content="Aprende arbitraje de Airbnb y genera ingresos con rentas cortas sin tener ninguna propiedad. Curso práctico paso a paso para Latinoamérica + asesoría 1:1.">
 <meta name="author" content="Sofía Retif">
 <link rel="canonical" href="https://sofiaretif.com/">
@@ -2150,6 +2167,19 @@ function handleWaitlist(e) {
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold:0.08 });
   els.forEach(function(el,i){ if(i===0) return; el.classList.add('reveal'); io.observe(el); });
+})();
+</script>
+
+<!-- Meta Pixel: eventos del embudo -->
+<script>
+(function(){
+  if (typeof fbq !== 'function') return;
+  // Clic a Hotmart = inicio de compra
+  document.querySelectorAll('a[href*="pay.hotmart.com"]').forEach(function(a){
+    a.addEventListener('click', function(){
+      fbq('track', 'InitiateCheckout', { content_name: 'Hosting Sin Propiedad', currency: 'USD', value: 97 });
+    });
+  });
 })();
 </script>
 

@@ -409,6 +409,7 @@
   .testi { padding: 7rem 0; background: linear-gradient(180deg, var(--beige) 0%, var(--white) 100%); }
   .testi-head { text-align: center; max-width: 640px; margin: 0 auto 3.4rem; }
   .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .testi-grid.two { grid-template-columns: repeat(2, minmax(0, 380px)); justify-content: center; }
   .tcard {
     background: #fff; border: 1px solid var(--beige-dark); border-radius: 20px;
     padding: 30px 28px; display: flex; flex-direction: column; gap: 16px;
@@ -731,7 +732,7 @@
       <h2 class="title">Marcas que <em>confían</em></h2>
       <p>El feedback de las marcas y personas con las que he colaborado.</p>
     </div>
-    <div class="testi-grid">
+    <div class="testi-grid two">
       <!-- TESTIMONIO 1 — reseña real (clip-1, video de marca) -->
       <div class="tcard reveal">
         <div class="quote">&ldquo;</div>
@@ -750,13 +751,6 @@
         <div class="who">
           <div class="av">X</div>
           <div><b>Ximena</b><small>Las Rosas Square</small></div>
-        </div>
-      </div>
-      <!-- ✎ TESTIMONIO 3 — espacio para el siguiente -->
-      <div class="tcard reveal" style="align-items:center; justify-content:center; text-align:center; border-style:dashed; background:transparent;">
-        <div style="color:var(--mid); font-size:14px;">
-          <div style="font-size:30px; margin-bottom:8px;">＋</div>
-          Próxima reseña<br><small style="opacity:.7">se irán sumando más colaboraciones</small>
         </div>
       </div>
     </div>

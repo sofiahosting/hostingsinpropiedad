@@ -1301,22 +1301,23 @@
     <clipPath id="screenclip"><rect x="84" y="34" width="732" height="432" rx="9"/></clipPath>
     <clipPath id="vidclip"><rect x="84" y="80" width="732" height="264"/></clipPath>
     <clipPath id="avatarclip"><circle cx="792" cy="57" r="12"/></clipPath>
-    <filter id="setblur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5"/></filter>
+    <clipPath id="ppclip"><rect x="150" y="150" width="252" height="128" rx="9"/></clipPath>
+    <filter id="setblur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.4"/></filter>
     <filter id="bokeh" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="9"/></filter>
     <linearGradient id="studio" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#193449"/><stop offset="55%" stop-color="#0f2236"/><stop offset="100%" stop-color="#0a1626"/>
+      <stop offset="0%" stop-color="#1b3850"/><stop offset="55%" stop-color="#102339"/><stop offset="100%" stop-color="#0a1626"/>
     </linearGradient>
-    <radialGradient id="warm" cx="14%" cy="30%" r="60%">
-      <stop offset="0%" stop-color="#caa05a" stop-opacity="0.35"/><stop offset="100%" stop-color="#caa05a" stop-opacity="0"/>
+    <radialGradient id="warm" cx="12%" cy="26%" r="62%">
+      <stop offset="0%" stop-color="#d2a85f" stop-opacity="0.40"/><stop offset="100%" stop-color="#d2a85f" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="spot" cx="50%" cy="40%" r="55%">
-      <stop offset="0%" stop-color="#3f6e96" stop-opacity="0.9"/><stop offset="100%" stop-color="#3f6e96" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#447299" stop-opacity="0.9"/><stop offset="100%" stop-color="#447299" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="botfade" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="30%" stop-color="#060b16" stop-opacity="0"/><stop offset="100%" stop-color="#060b16" stop-opacity="0.94"/>
+    <linearGradient id="titlefade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#060b16" stop-opacity="0"/><stop offset="100%" stop-color="#060b16" stop-opacity="0.92"/>
     </linearGradient>
     <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#24364f" stop-opacity="0"/><stop offset="100%" stop-color="#2a3f5c" stop-opacity="0.55"/>
+      <stop offset="0%" stop-color="#283a55" stop-opacity="0"/><stop offset="100%" stop-color="#2e4564" stop-opacity="0.5"/>
     </linearGradient>
   </defs>
 
@@ -1345,53 +1346,71 @@
       <rect x="84" y="80" width="732" height="264" fill="url(#studio)"/>
       <rect x="84" y="80" width="732" height="264" fill="url(#warm)"/>
 
-      <!-- BACKDROP SET (blurred / out of focus) -->
+      <!-- BACKDROP SET (lightly out of focus) -->
       <g filter="url(#setblur)">
-        <!-- presentation screen with rising income chart -->
-        <rect x="150" y="104" width="262" height="150" rx="10" fill="#0d1f33"/>
-        <rect x="150" y="104" width="262" height="150" rx="10" fill="none" stroke="#E6C57C" stroke-width="2" opacity="0.45"/>
-        <rect x="168" y="118" width="110" height="9" rx="4" fill="#9CC0D8" opacity="0.6"/>
-        <rect x="168" y="132" width="60" height="6" rx="3" fill="#ffffff" opacity="0.25"/>
-        <rect x="176" y="206" width="20" height="26" rx="2" fill="#7BA7C4" opacity="0.8"/>
-        <rect x="206" y="190" width="20" height="42" rx="2" fill="#7BA7C4" opacity="0.85"/>
-        <rect x="236" y="172" width="20" height="60" rx="2" fill="#9CC0D8" opacity="0.9"/>
-        <rect x="266" y="156" width="20" height="76" rx="2" fill="#E6C57C" opacity="0.9"/>
-        <rect x="296" y="140" width="20" height="92" rx="2" fill="#E6C57C"/>
-        <polyline points="186,200 216,186 246,168 276,150 306,134" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.55"/>
+        <!-- shelf + books + pot (upper left) -->
+        <rect x="120" y="120" width="165" height="7" rx="2" fill="#46587a"/>
+        <rect x="132" y="92" width="11" height="28" fill="#7BA7C4"/>
+        <rect x="145" y="86" width="11" height="34" fill="#C87D87"/>
+        <rect x="158" y="96" width="11" height="24" fill="#E6C57C"/>
+        <rect x="173" y="90" width="11" height="30" fill="#9CC0D8"/>
+        <rect x="186" y="98" width="11" height="22" fill="#cf9f5c"/>
+        <rect x="245" y="104" width="26" height="16" rx="4" fill="#3b5a4d"/>
+        <path d="M258 104 C 250 90, 262 84, 258 74 C 270 84, 268 98, 262 104 Z" fill="#3f6a55"/>
 
-        <!-- studio plant (left) -->
-        <path d="M104 344 C 96 300, 120 286, 110 250 C 132 276, 134 308, 126 344 Z" fill="#2c5446"/>
-        <path d="M126 344 C 120 304, 150 282, 150 252 C 168 286, 158 318, 146 344 Z" fill="#356251"/>
-        <path d="M118 300 C 96 296, 86 280, 84 268 C 104 268, 122 280, 132 296 Z" fill="#2c5446"/>
-        <rect x="108" y="320" width="44" height="30" rx="5" fill="#3a4a63"/>
+        <!-- presentation screen: Airbnb income -->
+        <rect x="146" y="146" width="260" height="136" rx="11" fill="#0c1d31"/>
+        <rect x="146" y="146" width="260" height="136" rx="11" fill="none" stroke="#E6C57C" stroke-width="2" opacity="0.5"/>
+        <g clip-path="url(#ppclip)">
+          <rect x="150" y="150" width="252" height="26" fill="#13263d"/>
+          <circle cx="166" cy="163" r="6" fill="#FF5A5F"/>
+          <text x="178" y="168" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">Airbnb</text>
+          <text x="312" y="167" font-family="Arial,sans-serif" font-size="9" fill="#9fb2cf">Tus ingresos</text>
+          <!-- rising bars -->
+          <rect x="172" y="232" width="20" height="30" rx="2" fill="#7BA7C4"/>
+          <rect x="202" y="218" width="20" height="44" rx="2" fill="#7BA7C4"/>
+          <rect x="232" y="200" width="20" height="62" rx="2" fill="#9CC0D8"/>
+          <rect x="262" y="184" width="20" height="78" rx="2" fill="#E6C57C"/>
+          <rect x="292" y="190" width="20" height="72" rx="2" fill="#E6C57C"/>
+          <polyline points="182,226 212,212 242,194 272,178 302,184" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.6"/>
+          <!-- location pin -->
+          <path d="M348 196 c0,-9 -7,-16 -16,-16 c-9,0 -16,7 -16,16 c0,12 16,26 16,26 c0,0 16,-14 16,-26 z" fill="#FF5A5F"/>
+          <circle cx="332" cy="196" r="6" fill="#0c1d31"/>
+        </g>
 
-        <!-- shelf with books (upper area, behind play) -->
-        <rect x="430" y="150" width="120" height="6" rx="2" fill="#33445e"/>
-        <rect x="442" y="120" width="9" height="30" fill="#7BA7C4" opacity="0.7"/>
-        <rect x="453" y="116" width="9" height="34" fill="#C87D87" opacity="0.7"/>
-        <rect x="464" y="124" width="9" height="26" fill="#E6C57C" opacity="0.7"/>
-        <rect x="478" y="118" width="9" height="32" fill="#9CC0D8" opacity="0.7"/>
-        <circle cx="520" cy="138" r="13" fill="#2c5446"/>
+        <!-- Airbnb-style listing card (floating) -->
+        <rect x="330" y="244" width="118" height="74" rx="9" fill="#ffffff"/>
+        <rect x="338" y="252" width="102" height="36" rx="5" fill="#cdd9e4"/>
+        <path d="M338 288 v-14 l18 -14 18 14 v14 z" fill="#aebfce"/>
+        <circle cx="368" cy="264" r="5" fill="#e8c98a"/>
+        <text x="338" y="302" font-family="Arial,sans-serif" font-size="9" font-weight="700" fill="#2C2820">Depto centrico</text>
+        <text x="338" y="313" font-family="Arial,sans-serif" font-size="8.5" fill="#6B6355">$1,240 / mes</text>
+        <text x="404" y="302" font-family="Arial,sans-serif" font-size="9" font-weight="700" fill="#2C2820">&#9733; 4.9</text>
+
+        <!-- monstera plant, far left, taller & visible -->
+        <rect x="92" y="300" width="50" height="40" rx="6" fill="#3a4a63"/>
+        <path d="M118 304 C 104 250, 138 224, 130 188 C 156 220, 152 264, 140 304 Z" fill="#356251"/>
+        <path d="M120 304 C 132 256, 168 238, 176 206 C 184 244, 166 282, 150 308 Z" fill="#3f6e58"/>
+        <path d="M112 300 C 90 286, 80 262, 82 244 C 106 250, 124 268, 130 292 Z" fill="#2e5547"/>
       </g>
 
       <!-- spotlight + warm bokeh -->
       <ellipse cx="648" cy="180" rx="230" ry="200" fill="url(#spot)"/>
       <g filter="url(#bokeh)">
-        <circle cx="470" cy="110" r="13" fill="#E6C57C" opacity="0.18"/>
+        <circle cx="500" cy="108" r="13" fill="#E6C57C" opacity="0.18"/>
         <circle cx="560" cy="250" r="16" fill="#E6C57C" opacity="0.12"/>
-        <circle cx="770" cy="300" r="20" fill="#9CC0D8" opacity="0.12"/>
-        <circle cx="150" cy="120" r="14" fill="#caa05a" opacity="0.16"/>
+        <circle cx="780" cy="300" r="20" fill="#9CC0D8" opacity="0.12"/>
       </g>
 
-      <!-- floor -->
-      <rect x="84" y="292" width="732" height="52" fill="url(#floor)"/>
-      <ellipse cx="660" cy="338" rx="150" ry="16" fill="#060b16" opacity="0.35"/>
+      <!-- floor + shadow -->
+      <rect x="84" y="296" width="732" height="48" fill="url(#floor)"/>
+      <ellipse cx="660" cy="338" rx="150" ry="15" fill="#060b16" opacity="0.35"/>
 
-      <!-- Sofia cutout (sharp, in front) -->
+      <!-- Sofia cutout (sharp) -->
       <image href="assets/sofia-cutout.png" x="500" y="22" width="330" height="412" preserveAspectRatio="xMidYMin meet"/>
 
-      <!-- legibility gradient for title (left/bottom) -->
-      <rect x="84" y="80" width="430" height="264" fill="url(#botfade)"/>
+      <!-- title legibility (small, only behind title) -->
+      <rect x="84" y="276" width="380" height="68" fill="url(#titlefade)"/>
     </g>
 
     <!-- scope badge -->
@@ -1399,16 +1418,16 @@
     <text x="772" y="107" font-family="Arial,sans-serif" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">10 módulos</text>
 
     <!-- big play -->
-    <circle cx="300" cy="168" r="37" fill="#ffffff" opacity="0.20"/>
-    <circle cx="300" cy="168" r="28" fill="#ffffff"/>
-    <polygon points="291,152 291,184 319,168" fill="#2F6188"/>
+    <circle cx="276" cy="168" r="35" fill="#ffffff" opacity="0.18"/>
+    <circle cx="276" cy="168" r="27" fill="#ffffff"/>
+    <polygon points="268,153 268,183 294,168" fill="#2F6188"/>
 
     <!-- lesson title -->
-    <text x="108" y="294" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="#E6C57C">MÓDULO 1 · CLASE EN VIDEO</text>
-    <text x="108" y="316" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#ffffff">Introducción a Airbnb</text>
+    <text x="108" y="298" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="#E6C57C">MÓDULO 1 · CLASE EN VIDEO</text>
+    <text x="108" y="320" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#ffffff">Introducción a Airbnb</text>
 
     <!-- playback controls -->
-    <rect x="84" y="322" width="732" height="22" fill="#0a1322" opacity="0.6"/>
+    <rect x="84" y="322" width="732" height="22" fill="#0a1322" opacity="0.62"/>
     <rect x="97" y="329" width="3" height="9" rx="1" fill="#ffffff"/>
     <rect x="103" y="329" width="3" height="9" rx="1" fill="#ffffff"/>
     <rect x="118" y="332" width="544" height="3" rx="1.5" fill="#ffffff" opacity="0.32"/>

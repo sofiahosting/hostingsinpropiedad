@@ -903,22 +903,33 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(255,255,255,0.95);
-    color: #2C2820;
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.92);
     font-size: 14px;
     font-weight: 500;
     font-family: 'DM Sans', sans-serif;
     padding: 14px 28px;
     border-radius: 50px;
-    border: 1.5px solid rgba(255,255,255,0.95);
+    border: 1.5px solid rgba(255,255,255,0.45);
     text-decoration: none;
     transition: all 0.2s ease;
     margin-left: 12px;
   }
   .cta-secondary:hover {
-    background: white;
+    background: rgba(255,255,255,0.16);
+    border-color: rgba(255,255,255,0.7);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+  /* En el hero, el boton del curso debe ganar: dorado sobre azul */
+  .hero-buttons .cta-hero {
+    background: #E6C57C;
+    color: #27567C;
+    font-weight: 700;
+    box-shadow: 0 10px 32px rgba(230,197,124,0.45);
+  }
+  .hero-buttons .cta-hero:hover {
+    background: #EFD389;
+    box-shadow: 0 14px 40px rgba(230,197,124,0.55);
   }
   .hero-buttons {
     display: flex;

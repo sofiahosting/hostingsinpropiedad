@@ -48,7 +48,15 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   .header-nav .navlink.active{color:var(--sky-deep);font-weight:600;}
   .header-cta{background:var(--sky-deep);color:#fff;font-size:14px;font-weight:500;padding:11px 22px;border-radius:50px;text-decoration:none;transition:background .2s;white-space:nowrap;}
   .header-cta:hover{background:var(--sky-deeper);}
-  @media(max-width:768px){.header-nav .navlink{display:none}.site-header{padding:11px 5%}.site-header .brand{font-size:18px}}
+  @media(max-width:768px){
+    .site-header{flex-wrap:wrap;padding:10px 5%}
+    .site-header .brand{font-size:18px}
+    .header-nav{order:3;width:100%;flex-wrap:wrap;justify-content:center;gap:6px 16px;margin-top:9px}
+    .header-nav .navlink{font-size:13px}
+    .header-cta{display:none}
+    .page-hero h1{font-size:31px}
+    body{overflow-x:hidden}
+  }
 
   .page-hero{text-align:center;padding:4.5rem 6% 1rem;background:linear-gradient(180deg,var(--sky-pale),var(--white));}
   .page-hero .hand{font-family:'Caveat',cursive;color:var(--sky-deep);font-size:32px;display:block;margin-bottom:.2rem;}
@@ -75,7 +83,7 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
 </head>
 <body>
 
-<header class="site-header">
+<header class="site-header" id="siteHeader">
   <a href="index.html" class="brand">Sofía <span>Retif</span></a>
   <nav class="header-nav">
     <a href="index.html" class="navlink">Inicio</a>

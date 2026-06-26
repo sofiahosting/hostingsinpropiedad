@@ -56,7 +56,8 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   .page-hero p{font-size:17px;color:var(--mid);max-width:540px;margin:0 auto;line-height:1.7;font-weight:300;}
 
   .contact{padding:2.5rem 6% 5rem;}
-  .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,290px));justify-content:center;gap:22px;max-width:1000px;margin:0 auto;}
+  .contact-grid{display:grid;grid-template-columns:repeat(2,minmax(220px,290px));justify-content:center;gap:22px;max-width:620px;margin:0 auto;}
+  @media(max-width:520px){.contact-grid{grid-template-columns:1fr;max-width:300px;}}
   .contact-card{background:#fff;border:1px solid var(--beige-dark);border-radius:20px;padding:2.2rem 1.6rem;text-align:center;box-shadow:0 10px 30px rgba(44,40,32,.07);transition:transform .25s ease,box-shadow .25s ease;}
   .contact-card:hover{transform:translateY(-6px);box-shadow:0 20px 46px rgba(44,40,32,.13);}
   .cc-icon{width:66px;height:66px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.1rem;}

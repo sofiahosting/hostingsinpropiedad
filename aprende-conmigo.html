@@ -58,8 +58,12 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   .page-hero p{font-size:17px;color:var(--mid);max-width:560px;margin:0 auto;line-height:1.7;font-weight:300;}
 
   /* Shop grid */
-  .shop{padding:3rem 6% 5rem;}
-  .shop-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:1140px;margin:0 auto;}
+  .shop{padding:1.5rem 6% 5rem;}
+  .cat-group{max-width:1140px;margin:0 auto;}
+  .cat-head{display:flex;align-items:center;gap:14px;margin:2.8rem 0 1.4rem;}
+  .cat-head h2{font-family:'Playfair Display',serif;font-size:27px;font-weight:700;color:var(--dark);white-space:nowrap;}
+  .cat-head .line{flex:1;height:1px;background:var(--beige-dark);}
+  .shop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(264px,300px));justify-content:start;gap:24px;}
   .shop-card{position:relative;background:#fff;border:1px solid var(--beige-dark);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 30px rgba(44,40,32,.07);transition:transform .25s ease,box-shadow .25s ease;}
   .shop-card:hover{transform:translateY(-6px);box-shadow:0 20px 46px rgba(44,40,32,.13);}
   .shop-card.feat{border-color:var(--sky-light);box-shadow:0 14px 40px rgba(47,97,136,.18);}
@@ -99,76 +103,98 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
 </section>
 
 <section class="shop">
-  <div class="shop-grid">
 
-    <div class="shop-card feat">
-      <span class="shop-tag">★ Más popular</span>
-      <img class="cover" src="assets/cover-curso.jpg" alt="Curso Hosting Sin Propiedad" loading="lazy">
-      <div class="shop-body">
-        <div class="shop-cat">Curso online</div>
-        <div class="shop-name">Hosting Sin Propiedad</div>
-        <div class="shop-desc">El sistema completo: 10 módulos en video, plantillas y herramientas para ganar con Airbnb sin ser dueño.</div>
-        <div class="shop-price">$97 USD <small>Acceso de por vida</small></div>
-        <a href="https://pay.hotmart.com/N101179190K" target="_blank" rel="noopener" class="shop-btn">Acceder al curso →</a>
+  <div class="cat-group">
+    <div class="cat-head"><h2>🎓 Cursos</h2><span class="line"></span></div>
+    <div class="shop-grid">
+      <div class="shop-card feat">
+        <span class="shop-tag">★ Más popular</span>
+        <img class="cover" src="assets/cover-curso.jpg" alt="Curso Hosting Sin Propiedad" loading="lazy">
+        <div class="shop-body">
+          <div class="shop-cat">Curso online</div>
+          <div class="shop-name">Hosting Sin Propiedad</div>
+          <div class="shop-desc">El sistema completo: 10 módulos en video, plantillas y herramientas para ganar con Airbnb sin ser dueño.</div>
+          <div class="shop-price">$97 USD <small>Acceso de por vida</small></div>
+          <a href="https://pay.hotmart.com/N101179190K" target="_blank" rel="noopener" class="shop-btn">Acceder al curso →</a>
+        </div>
+      </div>
+      <div class="shop-card">
+        <img class="cover" src="assets/cover-freedom.jpg" alt="Airbnb Freedom Method" loading="lazy">
+        <div class="shop-body">
+          <div class="shop-cat">Clase en vivo</div>
+          <div class="shop-name">Airbnb Freedom Method</div>
+          <div class="shop-desc">El método intensivo que grabé en vivo, paso a paso. La versión más directa del sistema.</div>
+          <div class="shop-price">$39 USD</div>
+          <a href="https://pay.hotmart.com/O104862281K" target="_blank" rel="noopener" class="shop-btn">Acceder al m&#233;todo &#8594;</a>
+        </div>
       </div>
     </div>
-
-    <div class="shop-card">
-      <img class="cover" src="assets/cover-freedom.jpg" alt="Airbnb Freedom Method" loading="lazy">
-      <div class="shop-body">
-        <div class="shop-cat">Clase en vivo</div>
-        <div class="shop-name">Airbnb Freedom Method</div>
-        <div class="shop-desc">El método intensivo que grabé en vivo, paso a paso. La versión más directa del sistema.</div>
-        <div class="shop-price">$39 USD</div>
-        <a href="https://pay.hotmart.com/O104862281K" target="_blank" rel="noopener" class="shop-btn">Acceder al m&#233;todo &#8594;</a>
-      </div>
-    </div>
-
-    <div class="shop-card">
-      <img class="cover" src="assets/cover-ebook.jpg" alt="Ebook Airbnb de Cero" loading="lazy">
-      <div class="shop-body">
-        <div class="shop-cat">Ebook</div>
-        <div class="shop-name">Airbnb de Cero</div>
-        <div class="shop-desc">La guía para dar tu primer paso en el arbitraje, explicada simple y al grano.</div>
-        <div class="shop-price">$9.99 USD</div>
-        <a href="https://pay.hotmart.com/E101057996F" target="_blank" rel="noopener" class="shop-btn">Comprar ebook →</a>
-      </div>
-    </div>
-
-    <div class="shop-card">
-      <img class="cover" src="assets/cover-plantillas.jpg" alt="Plantillas Airbnb Host Kit" loading="lazy">
-      <div class="shop-body">
-        <div class="shop-cat">Plantillas Canva</div>
-        <div class="shop-name">Airbnb Host Kit</div>
-        <div class="shop-desc">Bienvenida, reglas de la casa y guías editables para impresionar a tus huéspedes.</div>
-        <div class="shop-price">$19 USD</div>
-        <a href="https://socialmediarules.com.mx/producto/airbnb-host-kit-colaboracion-con-sofi/" target="_blank" rel="noopener" class="shop-btn">Ver plantillas →</a>
-      </div>
-    </div>
-
-    <div class="shop-card">
-      <img class="cover" src="assets/cover-asesoria.jpg" alt="Asesoría 1:1 con Sofía Retif" loading="lazy">
-      <div class="shop-body">
-        <div class="shop-cat">Asesoría 1:1</div>
-        <div class="shop-name">Mentoría conmigo</div>
-        <div class="shop-desc">Revisamos tu ciudad, tus números y armamos un plan de acción concreto para tu negocio.</div>
-        <div class="shop-price">$500 USD <small>2 horas o más</small></div>
-        <a href="https://calendly.com/sofiahosting" target="_blank" rel="noopener" class="shop-btn">Agendar asesoría →</a>
-      </div>
-    </div>
-
-    <div class="shop-card">
-      <img class="cover" src="assets/cover-auditbnb.jpg" alt="Auditbnb, herramienta gratis" loading="lazy">
-      <div class="shop-body">
-        <div class="shop-cat">Herramienta gratis</div>
-        <div class="shop-name">Auditbnb</div>
-        <div class="shop-desc">Descubre en segundos si un Airbnb es rentable en tu ciudad antes de invertir.</div>
-        <div class="shop-price">Gratis</div>
-        <a href="https://auditbnb.com" target="_blank" rel="noopener" class="shop-btn">Auditar mi Airbnb →</a>
-      </div>
-    </div>
-
   </div>
+
+  <div class="cat-group">
+    <div class="cat-head"><h2>💬 Asesorías</h2><span class="line"></span></div>
+    <div class="shop-grid">
+      <div class="shop-card">
+        <img class="cover" src="assets/cover-asesoria.jpg" alt="Asesoría 1:1 con Sofía Retif" loading="lazy">
+        <div class="shop-body">
+          <div class="shop-cat">Asesoría 1:1</div>
+          <div class="shop-name">Mentoría conmigo</div>
+          <div class="shop-desc">Revisamos tu ciudad, tus números y armamos un plan de acción concreto para tu negocio.</div>
+          <div class="shop-price">$500 USD <small>2 horas o más</small></div>
+          <a href="https://calendly.com/sofiahosting" target="_blank" rel="noopener" class="shop-btn">Agendar asesoría →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cat-group">
+    <div class="cat-head"><h2>📘 Ebooks</h2><span class="line"></span></div>
+    <div class="shop-grid">
+      <div class="shop-card">
+        <img class="cover" src="assets/cover-ebook.jpg" alt="Ebook Airbnb de Cero" loading="lazy">
+        <div class="shop-body">
+          <div class="shop-cat">Ebook</div>
+          <div class="shop-name">Airbnb de Cero</div>
+          <div class="shop-desc">La guía para dar tu primer paso en el arbitraje, explicada simple y al grano.</div>
+          <div class="shop-price">$9.99 USD</div>
+          <a href="https://pay.hotmart.com/E101057996F" target="_blank" rel="noopener" class="shop-btn">Comprar ebook →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cat-group">
+    <div class="cat-head"><h2>🧩 Plantillas</h2><span class="line"></span></div>
+    <div class="shop-grid">
+      <div class="shop-card">
+        <img class="cover" src="assets/cover-plantillas.jpg" alt="Plantillas Airbnb Host Kit" loading="lazy">
+        <div class="shop-body">
+          <div class="shop-cat">Plantillas Canva</div>
+          <div class="shop-name">Airbnb Host Kit</div>
+          <div class="shop-desc">Bienvenida, reglas de la casa y guías editables para impresionar a tus huéspedes.</div>
+          <div class="shop-price">$19 USD</div>
+          <a href="https://socialmediarules.com.mx/producto/airbnb-host-kit-colaboracion-con-sofi/" target="_blank" rel="noopener" class="shop-btn">Ver plantillas →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cat-group">
+    <div class="cat-head"><h2>📊 Herramientas</h2><span class="line"></span></div>
+    <div class="shop-grid">
+      <div class="shop-card">
+        <img class="cover" src="assets/cover-auditbnb.jpg" alt="Auditbnb, herramienta gratis" loading="lazy">
+        <div class="shop-body">
+          <div class="shop-cat">Herramienta gratis</div>
+          <div class="shop-name">Auditbnb</div>
+          <div class="shop-desc">Descubre en segundos si un Airbnb es rentable en tu ciudad antes de invertir.</div>
+          <div class="shop-price">Gratis</div>
+          <a href="https://auditbnb.com" target="_blank" rel="noopener" class="shop-btn">Auditar mi Airbnb →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </section>
 
 <footer>

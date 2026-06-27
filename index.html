@@ -1273,8 +1273,14 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
 </head>
 <body>
 
+<!-- Cierre automatico del lanzamiento: tras el 30 de junio el JS agrega .launch-ended al body -->
+<style>
+  body:not(.launch-ended) .post-launch{display:none!important;}
+  body.launch-ended .launch-only{display:none!important;}
+</style>
+
 <!-- BANNER DE LANZAMIENTO -->
-<a class="launch-bar" href="#sorteo">🚀 <strong>Estamos en lanzamiento</strong> · 22–30 de junio · 20% OFF con código <strong>LANZAMIENTO</strong> + sorteo de una asesoría 1:1 · <span class="lb-cta">Ver cómo participar →</span></a>
+<a class="launch-bar launch-only" href="#sorteo">🚀 <strong>Estamos en lanzamiento</strong> · 22–30 de junio · 20% OFF con código <strong>LANZAMIENTO</strong> + sorteo de una asesoría 1:1 · <span class="lb-cta">Ver cómo participar →</span></a>
 
 <!-- STICKY HEADER -->
 <header class="site-header" id="siteHeader">
@@ -1284,7 +1290,7 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
     <a href="#resultados" class="navlink">Resultados</a>
     <a href="#modulos" class="navlink">Contenido</a>
     <a href="#calculadora" class="navlink">Calculadora</a>
-    <a href="#sorteo" class="navlink">🎁 Sorteo</a>
+    <a href="#sorteo" class="navlink launch-only">🎁 Sorteo</a>
     <a href="aprende-conmigo.html" class="navlink">Aprende conmigo</a>
     <a href="faq.html" class="navlink">FAQ</a>
     <a href="contacto.html" class="navlink">Contacto</a>
@@ -1294,7 +1300,7 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
 
 <!-- MOBILE STICKY CTA -->
 <div class="mobile-cta-bar">
-  <div class="price">$97 <small>Precio de lanzamiento</small></div>
+  <div class="price">$97 <small class="launch-only">Precio de lanzamiento</small><small class="post-launch">Acceso de por vida</small></div>
   <a href="https://pay.hotmart.com/N101179190K" target="_blank" rel="noopener">Acceder al curso →</a>
 </div>
 
@@ -1302,7 +1308,8 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
 <section class="hero" id="top">
   <div class="hero-text">
     <div class="hero-hello">Hola, soy Sofía 👋</div>
-    <span class="hero-eyebrow">🚀 Lanzamiento · 22–30 de junio</span>
+    <span class="hero-eyebrow launch-only">🚀 Lanzamiento · 22–30 de junio</span>
+    <span class="hero-eyebrow post-launch">🚀 Curso disponible ahora</span>
     <h1>Gana dinero con rentas cortas <span class="uline"><em>sin tener</em><svg viewBox="0 0 200 13" preserveAspectRatio="none"><path d="M3 9 C 55 2, 145 2, 197 7" stroke="#E6C57C" stroke-width="4" fill="none" stroke-linecap="round"/></svg></span> ninguna propiedad</h1>
     <p class="hero-sub">Te enseño el sistema con el que renuncié a mi trabajo y hoy genero ingresos estables cada mes rentando propiedades que no son mías — invirtiendo menos de 10 horas por semana, porque gran parte del negocio se automatiza.</p>
     <div class="hero-chips">
@@ -1929,11 +1936,13 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
 
 <!-- CTA FINAL -->
 <section class="cta-final" id="comprar">
-  <span class="section-label">🚀 ¡Estamos en lanzamiento!</span>
+  <span class="section-label launch-only">🚀 ¡Estamos en lanzamiento!</span>
+  <span class="section-label post-launch">🚀 Empieza hoy</span>
   <h2 class="section-title">Tu lugar te está esperando</h2>
-  <p class="section-sub">Usa el código <strong>LANZAMIENTO</strong> al pagar y obtén 20% de descuento. Válido del 22 al 30 de junio — y participas por una asesoría 1:1.</p>
+  <p class="section-sub launch-only">Usa el código <strong>LANZAMIENTO</strong> al pagar y obtén 20% de descuento. Válido del 22 al 30 de junio — y participas por una asesoría 1:1.</p>
+  <p class="section-sub post-launch">Acceso de por vida al curso completo, con garantía de 7 días vía Hotmart.</p>
   <!-- Countdown -->
-  <div style="display:inline-flex;flex-direction:column;align-items:center;gap:10px;margin:1.75rem auto 1.5rem;position:relative;z-index:1;">
+  <div class="launch-only" style="display:inline-flex;flex-direction:column;align-items:center;gap:10px;margin:1.75rem auto 1.5rem;position:relative;z-index:1;">
     <p style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.6);">El precio de lanzamiento termina en</p>
     <div class="countdown" id="countdown">
       <div class="cd-box"><div class="cd-num" id="cd-d">00</div><div class="cd-lbl">días</div></div>
@@ -1955,14 +1964,15 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
 
   <!-- Price display -->
   <div style="margin-bottom:1.5rem;position:relative;z-index:1;">
-    <p style="font-size:12px;color:rgba(255,255,255,0.45);margin-bottom:0.35rem;text-transform:uppercase;letter-spacing:2px;font-family:'DM Sans',sans-serif;">Hoy, precio de lanzamiento</p>
+    <p class="launch-only" style="font-size:12px;color:rgba(255,255,255,0.45);margin-bottom:0.35rem;text-transform:uppercase;letter-spacing:2px;font-family:'DM Sans',sans-serif;">Hoy, precio de lanzamiento</p>
+    <p class="post-launch" style="font-size:12px;color:rgba(255,255,255,0.45);margin-bottom:0.35rem;text-transform:uppercase;letter-spacing:2px;font-family:'DM Sans',sans-serif;">Precio del curso</p>
     <div style="display:flex;align-items:baseline;justify-content:center;gap:8px;">
       <span style="font-family:'Playfair Display',serif;font-size:52px;font-weight:700;color:white;line-height:1;">$97</span>
       <span style="font-size:18px;color:rgba(255,255,255,0.7);font-family:'DM Sans',sans-serif;">USD</span>
     </div>
     <p style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:0.35rem;font-family:'DM Sans',sans-serif;">o desde <strong style="color:white;">$297 MXN / mes</strong> · Hasta 12 meses sin intereses</p>
     <p style="font-size:12px;color:rgba(255,255,255,0.35);margin-top:0.25rem;font-family:'DM Sans',sans-serif;">Acceso de por vida · Pago seguro vía Hotmart</p>
-    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(200,125,135,0.15);border:1px dashed #C87D87;border-radius:10px;padding:10px 20px;margin-top:1.25rem;">
+    <div class="launch-only" style="display:inline-flex;align-items:center;gap:8px;background:rgba(200,125,135,0.15);border:1px dashed #C87D87;border-radius:10px;padding:10px 20px;margin-top:1.25rem;">
       <span style="font-size:13px;color:rgba(255,255,255,0.7);font-family:'DM Sans',sans-serif;">Usa el código</span>
       <span style="font-family:'Courier New',monospace;font-size:15px;font-weight:700;color:#C87D87;letter-spacing:2px;">LANZAMIENTO</span>
       <span style="font-size:13px;color:rgba(255,255,255,0.7);font-family:'DM Sans',sans-serif;">· 20% OFF</span>
@@ -1988,7 +1998,7 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
 </section>
 
 <!-- SORTEO / LANZAMIENTO -->
-<section class="sorteo" id="sorteo">
+<section class="sorteo launch-only" id="sorteo">
   <div class="sorteo-inner">
     <span class="sorteo-prize">🎁 Solo durante el lanzamiento</span>
     <h2>Accede al curso y participa por una <em style="font-style:italic;color:var(--sky-deep);">asesoría 1:1 conmigo</em></h2>
@@ -2172,7 +2182,8 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
     <div class="modal-success" id="modalSuccess">
       <div style="font-size:48px;margin-bottom:1rem;">🎉</div>
       <h3 class="modal-title">¡Tu guía está lista!</h3>
-      <p class="modal-sub">Descárgala aquí abajo. Y como regalo, usa el código <strong>LANZAMIENTO</strong> para <strong>20% de descuento</strong> en el curso cuando quieras dar el paso.</p>
+      <p class="modal-sub launch-only">Descárgala aquí abajo. Y como regalo, usa el código <strong>LANZAMIENTO</strong> para <strong>20% de descuento</strong> en el curso cuando quieras dar el paso.</p>
+      <p class="modal-sub post-launch">Descárgala aquí abajo y empieza a aplicar lo que aprendas. Cuando quieras dar el siguiente paso, el curso completo te espera.</p>
       <a class="modal-btn" href="assets/guia-hosting-sin-propiedad.pdf" target="_blank" rel="noopener" download style="display:block;text-decoration:none;margin-bottom:8px;">Descargar la guía →</a>
       <button class="modal-btn" onclick="closeModal()" style="background:none;color:var(--mid);border:1.5px solid var(--beige-dark);">Cerrar</button>
     </div>
@@ -2209,21 +2220,25 @@ function handleWaitlist(e) {
   onScroll();
 })();
 
-// Countdown a la fecha de lanzamiento (30 de junio)
+// Countdown + cierre automatico del lanzamiento (30 de junio 23:59:59)
 (function(){
   var dl=new Date('2026-06-30T23:59:59').getTime();
+  function endLaunch(){ document.body.classList.add('launch-ended'); }
+  // Si ya paso la fecha, cierra el lanzamiento y no arranca el reloj
+  if(Date.now()>=dl){ endLaunch(); return; }
   var d=document.getElementById('cd-d'),h=document.getElementById('cd-h'),m=document.getElementById('cd-m'),s=document.getElementById('cd-s');
   if(!d) return;
   function pad(n){ return String(n).padStart(2,'0'); }
   function tick(){
-    var diff=Math.max(0, dl-Date.now());
+    var diff=dl-Date.now();
+    if(diff<=0){ endLaunch(); clearInterval(iv); diff=0; }
     var days=Math.floor(diff/86400000); diff-=days*86400000;
     var hrs=Math.floor(diff/3600000); diff-=hrs*3600000;
     var mins=Math.floor(diff/60000); diff-=mins*60000;
     var secs=Math.floor(diff/1000);
     d.textContent=pad(days); h.textContent=pad(hrs); m.textContent=pad(mins); s.textContent=pad(secs);
   }
-  tick(); setInterval(tick,1000);
+  tick(); var iv=setInterval(tick,1000);
 })();
 
 // Animaciones de aparición al hacer scroll

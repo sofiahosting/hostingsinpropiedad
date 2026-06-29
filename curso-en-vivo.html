@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curso en vivo · Airbnb sin propiedad · Sofía Retif</title>
+<meta name="description" content="Programa en vivo de 4 semanas con Sofía Retif para montar tu primer Airbnb sin comprar propiedad: 8 clases grupales en vivo (2 por semana), acompañamiento y una asesoría 1:1 al final. Cupo limitado.">
+<link rel="canonical" href="https://sofiaretif.com/curso-en-vivo.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiM3QkE3QzQiLz4KICA8cGF0aCBkPSJNMzIgMTQgQzMyIDE0IDE4IDMwIDE4IDM4IEMxOCA0NSAyNC4zIDUwIDMyIDUwIEMzOS43IDUwIDQ2IDQ1IDQ2IDM4IEM0NiAzMCAzMiAxNCAzMiAxNFoiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjk1Ii8+CiAgPGNpcmNsZSBjeD0iMzIiIGN5PSIzNiIgcj0iNiIgZmlsbD0iIzdCQTdDNCIvPgo8L3N2Zz4=">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1270112635290396');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sky:#7BA7C4; --sky-deep:#2F6188; --sky-deeper:#234B6B; --sky-light:#B8D4E8; --sky-pale:#EAF3F9;
+    --beige:#F5EFE4; --beige-dark:#E8DDC8; --gold:#C8A96E; --gold-dark:#A8893E;
+    --rose:#C87D87; --dark:#2C2820; --mid:#6B6355; --white:#FDFAF5;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--dark);}
+  a{color:inherit;}
+
+  /* Header */
+  .site-header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+    padding:14px 6%;background:rgba(253,250,245,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--beige-dark);}
+  .site-header .brand{font-family:'Playfair Display',serif;font-weight:700;font-size:20px;color:var(--dark);text-decoration:none;}
+  .site-header .brand span{color:var(--sky-deep);}
+  .header-nav{display:flex;align-items:center;gap:26px;}
+  .header-nav .navlink{font-size:14px;color:var(--mid);text-decoration:none;transition:color .2s;}
+  .header-nav .navlink:hover{color:var(--sky-deep);}
+  .header-nav .navlink.active{color:var(--sky-deep);font-weight:600;}
+  .header-cta{background:var(--sky-deep);color:#fff;font-size:14px;font-weight:500;padding:11px 22px;border-radius:50px;text-decoration:none;transition:background .2s;white-space:nowrap;}
+  .header-cta:hover{background:var(--sky-deeper);}
+  @media(max-width:768px){
+    .site-header{flex-wrap:wrap;padding:10px 5%}
+    .site-header .brand{font-size:18px}
+    .header-nav{order:3;width:100%;flex-wrap:wrap;justify-content:center;gap:6px 16px;margin-top:9px}
+    .header-nav .navlink{font-size:13px}
+    .header-cta{display:none}
+    body{overflow-x:hidden}
+  }
+
+  /* Hero */
+  .cv-hero{text-align:center;padding:4.5rem 6% 3.5rem;background:linear-gradient(180deg,var(--sky-pale),var(--white));}
+  .cv-hero .hand{font-family:'Caveat',cursive;color:var(--sky-deep);font-size:30px;display:block;margin-bottom:.3rem;}
+  .cv-badge{display:inline-block;background:var(--sky-deep);color:#fff;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:7px 16px;border-radius:50px;margin-bottom:1.1rem;}
+  .cv-hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,6vw,52px);font-weight:700;color:var(--dark);line-height:1.12;margin-bottom:1.1rem;max-width:800px;margin-left:auto;margin-right:auto;}
+  .cv-hero .lead{font-size:18px;color:var(--mid);max-width:620px;margin:0 auto 1.5rem;line-height:1.7;font-weight:300;}
+  .cv-chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:1.7rem;}
+  .cv-chip{background:#fff;border:1px solid var(--beige-dark);border-radius:50px;padding:8px 16px;font-size:13.5px;color:var(--dark);font-weight:500;}
+  .cv-cta{display:inline-block;background:var(--sky-deep);color:#fff;font-weight:600;font-size:16px;padding:16px 38px;border-radius:50px;text-decoration:none;transition:background .2s;box-shadow:0 12px 30px rgba(47,97,136,.22);}
+  .cv-cta:hover{background:var(--sky-deeper);}
+  .cv-cta-note{font-size:12.5px;color:var(--mid);margin-top:.8rem;}
+  .cv-price-line{font-size:15px;color:var(--mid);margin-bottom:1.5rem;}
+  .cv-price-line strong{color:var(--sky-deep);font-size:19px;}
+  .cv-price-line .was{text-decoration:line-through;color:var(--mid);font-size:15px;margin-right:6px;opacity:.7;}
+
+  /* Secciones */
+  .cv-sec{max-width:960px;margin:0 auto;padding:3.5rem 6%;}
+  .cv-sec h2{font-family:'Playfair Display',serif;font-size:clamp(24px,3.6vw,34px);font-weight:700;color:var(--dark);line-height:1.2;text-align:center;margin-bottom:.6rem;}
+  .cv-sec .sub{text-align:center;color:var(--mid);font-weight:300;font-size:16px;line-height:1.7;max-width:600px;margin:0 auto 2.2rem;}
+
+  /* Grabado vs en vivo */
+  .cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .cmp-card{border-radius:18px;padding:1.8rem;}
+  .cmp-card.alone{background:#fff;border:1px solid var(--beige-dark);}
+  .cmp-card.live{background:var(--sky-deeper);color:#fff;box-shadow:0 16px 40px rgba(35,75,107,.25);}
+  .cmp-card h3{font-size:17px;font-weight:700;margin-bottom:1rem;}
+  .cmp-card.alone h3{color:var(--mid);}
+  .cmp-card li{list-style:none;font-size:14.5px;line-height:1.5;padding:8px 0 8px 26px;position:relative;font-weight:300;}
+  .cmp-card.alone li{color:var(--mid);}
+  .cmp-card.alone li::before{content:"–";position:absolute;left:4px;color:var(--mid);font-weight:700;}
+  .cmp-card.live li{color:#e8f1f8;}
+  .cmp-card.live li::before{content:"✓";position:absolute;left:0;color:var(--sky-light);font-weight:700;}
+  @media(max-width:680px){ .cmp-grid{grid-template-columns:1fr;} }
+
+  /* Lo que vas a lograr */
+  .out-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .out-item{display:flex;gap:14px;align-items:flex-start;background:var(--beige);border-radius:14px;padding:1.2rem 1.3rem;}
+  .out-item .ic{flex-shrink:0;width:38px;height:38px;border-radius:10px;background:var(--sky-pale);display:flex;align-items:center;justify-content:center;font-size:18px;}
+  .out-item b{display:block;font-size:15px;color:var(--dark);margin-bottom:3px;}
+  .out-item p{font-size:13.5px;color:var(--mid);line-height:1.55;font-weight:300;}
+  @media(max-width:680px){ .out-grid{grid-template-columns:1fr;} }
+
+  /* Temario semanas */
+  .weeks{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .week{background:#fff;border:1px solid var(--beige-dark);border-radius:18px;padding:1.6rem;box-shadow:0 10px 30px rgba(44,40,32,.05);}
+  .week .wk{display:inline-block;background:var(--sky-pale);color:var(--sky-deep);font-size:11.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:50px;margin-bottom:.9rem;}
+  .week h3{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;margin-bottom:.7rem;color:var(--dark);}
+  .week li{list-style:none;font-size:14px;color:var(--mid);line-height:1.5;padding:6px 0 6px 22px;position:relative;font-weight:300;}
+  .week li::before{content:"›";position:absolute;left:4px;color:var(--sky-deep);font-weight:700;}
+  .week .res{margin-top:.9rem;font-size:13px;color:var(--sky-deep);font-weight:500;border-top:1px dashed var(--beige-dark);padding-top:.8rem;}
+  @media(max-width:680px){ .weeks{grid-template-columns:1fr;} }
+
+  /* Qué incluye */
+  .inc-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .inc-item{display:flex;gap:14px;align-items:flex-start;background:var(--beige);border-radius:14px;padding:1.2rem 1.3rem;}
+  .inc-item .ic{flex-shrink:0;width:38px;height:38px;border-radius:10px;background:var(--sky-pale);display:flex;align-items:center;justify-content:center;font-size:18px;}
+  .inc-item b{display:block;font-size:15px;color:var(--dark);margin-bottom:3px;}
+  .inc-item p{font-size:13.5px;color:var(--mid);line-height:1.55;font-weight:300;}
+  @media(max-width:680px){ .inc-grid{grid-template-columns:1fr;} }
+
+  /* Logística */
+  .logi{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:18px;}
+  .logi-row{display:flex;gap:16px;align-items:flex-start;}
+  .logi-row .ic{flex-shrink:0;width:40px;height:40px;border-radius:12px;background:var(--sky-pale);display:flex;align-items:center;justify-content:center;font-size:18px;}
+  .logi-row b{display:block;font-size:15px;margin-bottom:2px;}
+  .logi-row p{font-size:14px;color:var(--mid);line-height:1.6;font-weight:300;}
+
+  /* Quién soy */
+  .host{display:flex;gap:26px;align-items:center;max-width:720px;margin:0 auto;background:#fff;border:1px solid var(--beige-dark);border-radius:20px;padding:1.8rem;box-shadow:0 10px 30px rgba(44,40,32,.06);}
+  .host .ph{flex-shrink:0;width:110px;height:110px;border-radius:50%;background:var(--sky-pale);display:flex;align-items:center;justify-content:center;font-size:40px;overflow:hidden;}
+  .host .ph img{width:100%;height:100%;object-fit:cover;}
+  .host b{font-family:'Playfair Display',serif;font-size:20px;color:var(--dark);}
+  .host p{font-size:14.5px;color:var(--mid);line-height:1.65;font-weight:300;margin-top:.4rem;}
+  @media(max-width:600px){ .host{flex-direction:column;text-align:center;} }
+
+  /* Prueba social */
+  .trust{background:var(--sky-pale);text-align:center;padding:3rem 6%;}
+  .trust .stat{font-family:'Playfair Display',serif;font-size:40px;font-weight:700;color:var(--sky-deep);}
+  .trust p{color:var(--mid);font-weight:300;max-width:560px;margin:.6rem auto 0;line-height:1.7;}
+
+  /* Inscripción / precio */
+  .pricebox{max-width:560px;margin:0 auto;background:var(--sky-deeper);color:#fff;border-radius:24px;padding:3rem 2.5rem;text-align:center;box-shadow:0 20px 50px rgba(35,75,107,.3);}
+  .pricebox .label{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.55);}
+  .pricebox .cupos{display:inline-block;background:rgba(230,197,124,.18);border:1px solid rgba(230,197,124,.5);color:#F0DCA8;font-size:12.5px;font-weight:600;padding:6px 14px;border-radius:50px;margin:.3rem 0 1rem;}
+  .pricebox .was{display:block;text-decoration:line-through;color:rgba(255,255,255,.5);font-size:18px;}
+  .pricebox .amount{font-family:'Playfair Display',serif;font-size:54px;font-weight:700;line-height:1;margin:.2rem 0;}
+  .pricebox .amount small{font-size:18px;font-weight:400;color:rgba(255,255,255,.7);}
+  .pricebox .dur{font-size:14px;color:rgba(255,255,255,.7);margin-bottom:1.6rem;}
+  .pricebox .cv-cta{box-shadow:none;background:#fff;color:var(--sky-deeper);}
+  .pricebox .cv-cta:hover{background:var(--sky-pale);}
+  .pricebox .cv-cta-note{color:rgba(255,255,255,.6);}
+  .pricebox .guarantee{font-size:13px;color:rgba(255,255,255,.75);margin-top:1.2rem;line-height:1.6;}
+
+  /* Dos tiers */
+  .tiers{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;margin:0 auto;align-items:stretch;}
+  .tier{background:#fff;border:1px solid var(--beige-dark);border-radius:22px;padding:2rem 1.8rem;text-align:center;display:flex;flex-direction:column;}
+  .tier.vip{background:var(--sky-deeper);color:#fff;border-color:var(--sky-deeper);box-shadow:0 20px 50px rgba(35,75,107,.3);position:relative;}
+  .tier .pop{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:#3a2e12;font-size:11.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 14px;border-radius:50px;white-space:nowrap;}
+  .tier .tname{font-size:13px;text-transform:uppercase;letter-spacing:2px;color:var(--mid);margin-bottom:.4rem;}
+  .tier.vip .tname{color:rgba(255,255,255,.6);}
+  .tier .tprice{font-family:'Playfair Display',serif;font-size:46px;font-weight:700;line-height:1;}
+  .tier .tprice small{font-size:16px;font-weight:400;color:var(--mid);}
+  .tier.vip .tprice small{color:rgba(255,255,255,.7);}
+  .tier .tnote{font-size:13px;color:var(--mid);margin:.3rem 0 1.2rem;}
+  .tier.vip .tnote{color:rgba(255,255,255,.7);}
+  .tier ul{list-style:none;text-align:left;margin:0 0 1.5rem;flex:1;}
+  .tier li{font-size:14px;line-height:1.5;padding:7px 0 7px 26px;position:relative;color:var(--mid);font-weight:300;}
+  .tier.vip li{color:#e8f1f8;}
+  .tier li::before{content:"✓";position:absolute;left:2px;color:var(--sky-deep);font-weight:700;}
+  .tier.vip li::before{color:var(--sky-light);}
+  .tier .cv-cta{display:block;box-shadow:none;}
+  .tier.alone .cv-cta{background:var(--sky-deep);}
+  .tier.vip .cv-cta{background:#fff;color:var(--sky-deeper);}
+  .tier.vip .cv-cta:hover{background:var(--sky-pale);}
+  @media(max-width:680px){ .tiers{grid-template-columns:1fr;} }
+
+  /* FAQ */
+  .faq-list{max-width:680px;margin:0 auto;}
+  .faq-item{border-bottom:1px solid rgba(107,99,85,0.18);}
+  .faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.2rem 0;font-weight:600;font-size:16px;color:var(--sky-deep);}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary .pm{flex-shrink:0;width:20px;height:20px;position:relative;}
+  .faq-item summary .pm::before,.faq-item summary .pm::after{content:"";position:absolute;background:var(--sky-deep);border-radius:2px;}
+  .faq-item summary .pm::before{top:9px;left:2px;width:16px;height:2px;}
+  .faq-item summary .pm::after{top:2px;left:9px;width:2px;height:16px;transition:opacity .25s;}
+  .faq-item[open] summary .pm::after{opacity:0;}
+  .faq-a{padding:0 0 1.3rem;font-size:14.5px;line-height:1.7;color:var(--mid);font-weight:300;}
+
+  /* Footer */
+  footer{background:var(--sky-deeper);color:#cfe0ec;text-align:center;padding:2.4rem 6%;font-size:13px;}
+  footer a{color:#E6C57C;text-decoration:none;font-weight:600;}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="brand">Sofía <span>Retif</span></a>
+  <nav class="header-nav">
+    <a href="index.html" class="navlink">Inicio</a>
+    <a href="aprende-conmigo.html" class="navlink">Aprende conmigo</a>
+    <a href="asesoria.html" class="navlink">Asesoría</a>
+    <a href="faq.html" class="navlink">FAQ</a>
+    <a href="contacto.html" class="navlink">Contacto</a>
+    <a href="#inscripcion" class="header-cta">Apartar mi lugar →</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="cv-hero">
+  <span class="hand">4 semanas en vivo, conmigo 👋</span>
+  <div class="cv-badge">Programa en vivo · cohorte limitada</div>
+  <h1>Monta tu primer Airbnb sin propiedad en 4 semanas, acompañada paso a paso</h1>
+  <p class="lead">Un programa en vivo donde no solo aprendes el método: lo ejecutas conmigo guiándote en cada clase, en grupo reducido. Y si quieres, cierras con una asesoría 1:1 para tu caso. Sales con tu negocio en marcha, no con más videos por ver.</p>
+  <div class="cv-chips">
+    <span class="cv-chip">📅 4 semanas · 2 clases/semana</span>
+    <span class="cv-chip">💻 por Zoom</span>
+    <span class="cv-chip">👥 grupo reducido</span>
+    <span class="cv-chip">💬 opción 1:1 (VIP)</span>
+  </div>
+  <!-- EDITA AQUÍ el precio -->
+  <p class="cv-price-line">Desde <strong>$497 USD</strong> · opción VIP con asesoría 1:1 · cupo limitado</p>
+  <a href="#inscripcion" class="cv-cta">Quiero mi lugar →</a>
+  <p class="cv-cta-note">Cupo limitado · arranca el [EDITA: fecha de inicio]</p>
+</section>
+
+<!-- GRABADO VS EN VIVO -->
+<section class="cv-sec">
+  <h2>¿Por qué en vivo y no solo un curso grabado?</h2>
+  <p class="sub">Mi <a href="https://pay.hotmart.com/N101179190K" target="_blank" rel="noopener">curso grabado</a> es perfecto para ir a tu ritmo. Pero si lo que te frena es la falta de acompañamiento, esto es para ti.</p>
+  <div class="cmp-grid">
+    <div class="cmp-card alone">
+      <h3>Aprender por tu cuenta</h3>
+      <ul>
+        <li>Avanzas sola y es fácil quedarte atorada.</li>
+        <li>Tus dudas se acumulan sin alguien que las responda.</li>
+        <li>Nadie revisa si tus números o tu ciudad tienen sentido.</li>
+        <li>La motivación se cae a las pocas semanas.</li>
+      </ul>
+    </div>
+    <div class="cmp-card live">
+      <h3>El programa en vivo</h3>
+      <ul>
+        <li>Avanzas conmigo guiándote clase a clase.</li>
+        <li>Resuelves tus dudas en vivo, en el momento.</li>
+        <li>Reviso tu ciudad, tus números y tu anuncio.</li>
+        <li>El grupo y las fechas te mantienen en acción.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- LO QUE VAS A LOGRAR -->
+<section class="cv-sec" style="background:var(--white);">
+  <h2>Al terminar las 4 semanas vas a tener…</h2>
+  <p class="sub">Esto no es teoría: cada semana avanzas una pieza real de tu negocio.</p>
+  <div class="out-grid">
+    <div class="out-item"><div class="ic">📍</div><div><b>Tu ciudad y tu meta definidas</b><p>Sabrás dónde arrancar, con demanda validada y números que cierran.</p></div></div>
+    <div class="out-item"><div class="ic">🤝</div><div><b>Tu guion para conseguir la propiedad</b><p>Cómo abordar y negociar con dueños o arrendadores, con contrato incluido.</p></div></div>
+    <div class="out-item"><div class="ic">📸</div><div><b>Tu anuncio listo para publicar</b><p>Montado, con fotos, descripción y precios optimizados para llenarse.</p></div></div>
+    <div class="out-item"><div class="ic">⚙️</div><div><b>Tu sistema de operación</b><p>Limpieza, comunicación y automatización para operar sin vivir pegada al teléfono.</p></div></div>
+  </div>
+</section>
+
+<!-- TEMARIO -->
+<section class="cv-sec">
+  <h2>El temario, semana por semana</h2>
+  <p class="sub">Dos clases en vivo por semana + tareas + acompañamiento en el grupo, y al cerrar tu asesoría 1:1. (Borrador editable.)</p>
+  <!-- EDITA AQUÍ el temario de las 4 semanas (8 clases) -->
+  <div class="weeks">
+    <div class="week">
+      <span class="wk">Semana 1 · Clase 1</span>
+      <h3>El modelo, sin propiedad</h3>
+      <ul>
+        <li>Cómo se gana con el arbitraje de Airbnb sin ser dueña.</li>
+        <li>Mitos, riesgos reales y cómo evitarlos.</li>
+        <li>Tu visión y tu meta para estas 4 semanas.</li>
+      </ul>
+    </div>
+    <div class="week">
+      <span class="wk">Semana 1 · Clase 2</span>
+      <h3>Tu mercado y tus números</h3>
+      <ul>
+        <li>Elegir ciudad y zona con demanda real.</li>
+        <li>Validar la demanda antes de invertir un peso.</li>
+        <li>Inversión inicial, costos y ganancia.</li>
+      </ul>
+      <p class="res">Sales con: tu mercado y tu meta definidos.</p>
+    </div>
+    <div class="week">
+      <span class="wk">Semana 2 · Clase 3</span>
+      <h3>Encontrar la propiedad</h3>
+      <ul>
+        <li>Dónde buscar y cómo filtrar propiedades.</li>
+        <li>Qué hace que una propiedad sea rentable.</li>
+        <li>Tu guion para acercarte a dueños y arrendadores.</li>
+      </ul>
+    </div>
+    <div class="week">
+      <span class="wk">Semana 2 · Clase 4</span>
+      <h3>Negociar y cerrar</h3>
+      <ul>
+        <li>Cómo negociar el subarriendo a tu favor.</li>
+        <li>El contrato de subarriendo, paso a paso.</li>
+        <li>Permisos y reglas para evitar problemas.</li>
+      </ul>
+      <p class="res">Sales con: tu guion y tu plan para conseguir propiedad.</p>
+    </div>
+    <div class="week">
+      <span class="wk">Semana 3 · Clase 5</span>
+      <h3>Montar el espacio</h3>
+      <ul>
+        <li>Amueblado esencial sin gastar de más.</li>
+        <li>El presupuesto de montaje, partida por partida.</li>
+        <li>Los detalles que suben tus reseñas.</li>
+      </ul>
+    </div>
+    <div class="week">
+      <span class="wk">Semana 3 · Clase 6</span>
+      <h3>Crear tu anuncio</h3>
+      <ul>
+        <li>Fotos que llenan de reservas (aunque uses el celular).</li>
+        <li>Título y descripción que venden.</li>
+        <li>Montar tu anuncio en Airbnb desde cero.</li>
+      </ul>
+      <p class="res">Sales con: tu anuncio listo para publicar.</p>
+    </div>
+    <div class="week">
+      <span class="wk">Semana 4 · Clase 7</span>
+      <h3>Publicar y llenar</h3>
+      <ul>
+        <li>Optimizar el anuncio para aparecer más arriba.</li>
+        <li>Precios dinámicos para no dejar dinero en la mesa.</li>
+        <li>Tu plan para las primeras reservas.</li>
+      </ul>
+    </div>
+    <div class="week">
+      <span class="wk">Semana 4 · Clase 8</span>
+      <h3>Operar y escalar</h3>
+      <ul>
+        <li>Limpieza, comunicación y automatización.</li>
+        <li>Tus primeras reseñas de 5 estrellas.</li>
+        <li>Cómo sumar tu segunda y tercera unidad.</li>
+      </ul>
+      <p class="res">Sales con: tu sistema de operación.</p>
+    </div>
+  </div>
+  <p class="sub" style="margin-top:1.8rem;margin-bottom:0;">¿Eliges el plan VIP? Al cerrar las 4 semanas sumas tu <strong>asesoría 1:1 conmigo</strong>, una sesión privada para resolver lo que falte en tu caso.</p>
+</section>
+
+<!-- QUÉ INCLUYE -->
+<section class="cv-sec" style="background:var(--white);">
+  <h2>Todo lo que incluye</h2>
+  <div class="inc-grid">
+    <div class="inc-item"><div class="ic">🎥</div><div><b>8 clases en vivo</b><p>Dos por semana durante 4 semanas, en grupo reducido, con espacio para tus preguntas.</p></div></div>
+    <div class="inc-item"><div class="ic">📼</div><div><b>Grabaciones de todo</b><p>Por si no puedes entrar en vivo o quieres repasar cuando quieras.</p></div></div>
+    <div class="inc-item"><div class="ic">💬</div><div><b>Grupo privado de acompañamiento</b><p>Para resolver dudas entre clases y avanzar con la comunidad.</p></div></div>
+    <div class="inc-item"><div class="ic">👩‍💻</div><div><b>Acompañamiento VIP</b><p>En el plan VIP: asesoría 1:1 al cierre, revisión personalizada de tu anuncio y tu plan de acción por escrito.</p></div></div>
+    <div class="inc-item"><div class="ic">🎁</div><div><b>Kit de Arranque (de regalo)</b><p>Contrato de subarriendo, calculadora de números, checklist de montaje y carritos de compra, listos para usar.</p></div></div>
+  </div>
+</section>
+
+<!-- LOGÍSTICA -->
+<section class="cv-sec">
+  <h2>Cómo funciona</h2>
+  <!-- EDITA AQUÍ días, horario y fechas -->
+  <div class="logi">
+    <div class="logi-row"><div class="ic">📅</div><div><b>Dos clases en vivo por semana</b><p>8 sesiones en 4 semanas, [EDITA: ej. martes y jueves] de [EDITA: 7:00–8:30 pm, CDMX]. Si no puedes en vivo, te queda la grabación.</p></div></div>
+    <div class="logi-row"><div class="ic">💻</div><div><b>Por Zoom</b><p>Te llega el enlace y el calendario al inscribirte. Solo necesitas internet.</p></div></div>
+    <div class="logi-row"><div class="ic">👩‍💻</div><div><b>Tu asesoría 1:1 al cierre (plan VIP)</b><p>Si entras como VIP, al terminar las clases agendamos tu sesión privada para revisar tu caso y tus próximos pasos.</p></div></div>
+    <div class="logi-row"><div class="ic">🗓️</div><div><b>Próxima generación</b><p>Arranca el [EDITA: fecha de inicio]. Cupo limitado a [EDITA: 12] personas para poder acompañarte de cerca.</p></div></div>
+    <div class="logi-row"><div class="ic">💳</div><div><b>Pago seguro</b><p>Reservas tu lugar desde esta página. Puedes pagar en una sola exhibición o en parcialidades.</p></div></div>
+  </div>
+</section>
+
+<!-- QUIÉN SOY -->
+<section class="cv-sec" style="background:var(--white);">
+  <h2>Quién te va a acompañar</h2>
+  <div class="host">
+    <div class="ph">👋</div>
+    <div>
+      <b>Sofía Retif</b>
+      <p>Vivo del arbitraje de Airbnb sin ser dueña de las propiedades y trabajo menos de 10 horas a la semana en ello. He acompañado a +120 personas en Latinoamérica a arrancar su negocio de rentas cortas. En este programa te llevo de la mano por el mismo sistema que yo uso, en vivo y aplicado a tu caso.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRUEBA SOCIAL -->
+<section class="trust">
+  <div class="stat">+120 alumnos</div>
+  <p>ya empezaron en el arbitraje de Airbnb en Latinoamérica conmigo. Esta generación en vivo es para quienes quieren hacerlo acompañadas y terminar con su negocio en marcha.</p>
+  <!-- EDITA AQUÍ: aquí van 2–3 testimonios reales de tus alumnos cuando los tengas -->
+</section>
+
+<!-- INSCRIPCIÓN -->
+<section class="cv-sec" id="inscripcion">
+  <h2>Elige cómo quieres entrar</h2>
+  <p class="sub">Dos opciones para esta generación · cupo limitado.</p>
+  <!-- EDITA AQUÍ los precios y pega tus 2 Payment Links de Stripe -->
+  <div class="tiers">
+    <div class="tier alone">
+      <div class="tname">En vivo</div>
+      <div class="tprice">$497 <small>USD</small></div>
+      <div class="tnote">~$8,900 MXN · o en parcialidades</div>
+      <ul>
+        <li>Las 8 clases en vivo (4 semanas)</li>
+        <li>Grabaciones de todo</li>
+        <li>Grupo privado de acompañamiento</li>
+        <li>🎁 Kit de Arranque de regalo (plantillas)</li>
+      </ul>
+      <a href="https://buy.stripe.com/PEGA_LINK_EN_VIVO" target="_blank" rel="noopener" class="cv-cta" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Quiero esta opción →</a>
+    </div>
+    <div class="tier vip">
+      <div class="pop">★ Más elegido</div>
+      <div class="tname">VIP · con 1:1</div>
+      <div class="tprice">$697 <small>USD</small></div>
+      <div class="tnote">~$12,500 MXN · o en parcialidades</div>
+      <ul>
+        <li>Todo lo del plan En vivo</li>
+        <li>Una asesoría 1:1 conmigo al cierre</li>
+        <li>Revisión personalizada de tu anuncio</li>
+        <li>Tu plan de acción por escrito</li>
+        <li>Solo [EDITA: 6] lugares VIP</li>
+      </ul>
+      <a href="https://buy.stripe.com/PEGA_LINK_VIP" target="_blank" rel="noopener" class="cv-cta" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Quiero ser VIP →</a>
+    </div>
+  </div>
+  <p class="guarantee" style="text-align:center;color:var(--mid);max-width:520px;margin:1.8rem auto 0;font-size:13.5px;line-height:1.6;">🛡️ Garantía: entra a la primera semana y, si sientes que no es para ti, te devuelvo tu inversión completa. · Pago seguro vía Stripe.</p>
+</section>
+
+<!-- FAQ -->
+<section class="cv-sec" style="padding-top:1rem;">
+  <h2>Preguntas frecuentes</h2>
+  <div class="faq-list" style="margin-top:1.5rem;">
+    <details class="faq-item">
+      <summary>¿En qué se diferencia del curso grabado?<span class="pm"></span></summary>
+      <div class="faq-a">El curso grabado lo tomas a tu ritmo, sola. Este programa es en vivo: te acompaño semana a semana, resuelves dudas en el momento, reviso tu caso y además tienes una asesoría 1:1. Es para quien quiere ejecutar acompañada y no quedarse a medias.</div>
+    </details>
+    <details class="faq-item">
+      <summary>¿Necesito experiencia o algo listo?<span class="pm"></span></summary>
+      <div class="faq-a">No. El programa está pensado para arrancar desde cero. No necesitas propiedad, ni experiencia, ni inversión previa montada — empezamos por los fundamentos en la semana 1.</div>
+    </details>
+    <details class="faq-item">
+      <summary>¿Qué pasa si no puedo entrar a una clase en vivo?<span class="pm"></span></summary>
+      <div class="faq-a">Todas las clases quedan grabadas y las recibes para verlas cuando quieras. Aun así, te recomiendo asistir en vivo para aprovechar las preguntas y el acompañamiento.</div>
+    </details>
+    <details class="faq-item">
+      <summary>¿Cuánto tengo que invertir además del programa?<span class="pm"></span></summary>
+      <div class="faq-a">El modelo es justo para empezar sin comprar propiedad. En la semana 1 vemos los números reales de arranque (depósito, amueblado básico) para que sepas exactamente qué esperar según tu ciudad.</div>
+    </details>
+    <details class="faq-item">
+      <summary>¿Hay garantía?<span class="pm"></span></summary>
+      <div class="faq-a">Sí. Entras a la primera semana y, si sientes que no es para ti, me escribes y te devuelvo tu inversión completa. El riesgo es mío.</div>
+    </details>
+    <details class="faq-item">
+      <summary>¿Puedo pagar en parcialidades?<span class="pm"></span></summary>
+      <div class="faq-a">Sí, puedes pagar en una sola exhibición o en parcialidades. Al momento de apartar tu lugar eliges la opción que te acomode.</div>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Sofía Retif · Hosting Sin Propiedad · <a href="https://www.instagram.com/sofiahosting_" target="_blank" rel="noopener">@sofiahosting_</a> · <a href="https://www.tiktok.com/@sofiahosting" target="_blank" rel="noopener">@sofiahosting</a></p>
+</footer>
+
+</body>
+</html>

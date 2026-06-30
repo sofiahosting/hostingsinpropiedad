@@ -1273,14 +1273,10 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
 </head>
 <body>
 
-<!-- Cierre automatico del lanzamiento: tras el 30 de junio el JS agrega .launch-ended al body -->
+<!-- Lanzamiento finalizado: ocultamos cualquier elemento de lanzamiento y mostramos el contenido normal -->
 <style>
-  body:not(.launch-ended) .post-launch{display:none!important;}
-  body.launch-ended .launch-only{display:none!important;}
+  .launch-only{display:none!important;}
 </style>
-
-<!-- BANNER DE LANZAMIENTO -->
-<a class="launch-bar launch-only" href="#sorteo">🚀 <strong>Estamos en lanzamiento</strong> · 22–30 de junio · 20% OFF con código <strong>LANZAMIENTO</strong> + sorteo de una asesoría 1:1 · <span class="lb-cta">Ver cómo participar →</span></a>
 
 <!-- STICKY HEADER -->
 <header class="site-header" id="siteHeader">
@@ -1290,7 +1286,6 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
     <a href="#resultados" class="navlink">Resultados</a>
     <a href="#modulos" class="navlink">Contenido</a>
     <a href="#calculadora" class="navlink">Calculadora</a>
-    <a href="#sorteo" class="navlink launch-only">🎁 Sorteo</a>
     <a href="aprende-conmigo.html" class="navlink">Aprende conmigo</a>
     <a href="asesoria.html" class="navlink">Asesoría</a>
     <a href="faq.html" class="navlink">FAQ</a>
@@ -2001,16 +1996,6 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   <h2 class="section-title">Tu lugar te está esperando</h2>
   <p class="section-sub launch-only">Usa el código <strong>LANZAMIENTO</strong> al pagar y obtén 20% de descuento. Válido del 22 al 30 de junio — y participas por una asesoría 1:1.</p>
   <p class="section-sub post-launch">Acceso de por vida al curso completo, con garantía de 7 días vía Hotmart.</p>
-  <!-- Countdown -->
-  <div class="launch-only" style="display:inline-flex;flex-direction:column;align-items:center;gap:10px;margin:1.75rem auto 1.5rem;position:relative;z-index:1;">
-    <p style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.6);">El precio de lanzamiento termina en</p>
-    <div class="countdown" id="countdown">
-      <div class="cd-box"><div class="cd-num" id="cd-d">00</div><div class="cd-lbl">días</div></div>
-      <div class="cd-box"><div class="cd-num" id="cd-h">00</div><div class="cd-lbl">hrs</div></div>
-      <div class="cd-box"><div class="cd-num" id="cd-m">00</div><div class="cd-lbl">min</div></div>
-      <div class="cd-box"><div class="cd-num" id="cd-s">00</div><div class="cd-lbl">seg</div></div>
-    </div>
-  </div>
 
   <!-- Value stack (anclaje de precio) -->
   <div class="valuestack">
@@ -2032,11 +2017,6 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
     </div>
     <p style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:0.35rem;font-family:'DM Sans',sans-serif;">o desde <strong style="color:white;">$297 MXN / mes</strong> · Hasta 12 meses sin intereses</p>
     <p style="font-size:12px;color:rgba(255,255,255,0.35);margin-top:0.25rem;font-family:'DM Sans',sans-serif;">Acceso de por vida · Pago seguro vía Hotmart</p>
-    <div class="launch-only" style="display:inline-flex;align-items:center;gap:8px;background:rgba(200,125,135,0.15);border:1px dashed #C87D87;border-radius:10px;padding:10px 20px;margin-top:1.25rem;">
-      <span style="font-size:13px;color:rgba(255,255,255,0.7);font-family:'DM Sans',sans-serif;">Usa el código</span>
-      <span style="font-family:'Courier New',monospace;font-size:15px;font-weight:700;color:#C87D87;letter-spacing:2px;">LANZAMIENTO</span>
-      <span style="font-size:13px;color:rgba(255,255,255,0.7);font-family:'DM Sans',sans-serif;">· 20% OFF</span>
-    </div>
   </div>
   <a href="https://pay.hotmart.com/N101179190K" target="_blank" class="cta-btn-final">
     Acceder al curso →
@@ -2057,21 +2037,6 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   <p style="text-align:center;margin-top:1.4rem;position:relative;z-index:1;font-size:14px;color:rgba(255,255,255,0.6);font-family:'DM Sans',sans-serif;">¿Te queda alguna duda? <a href="faq.html" style="color:#E6C57C;font-weight:600;text-decoration:none;">Lee las preguntas frecuentes →</a></p>
 </section>
 
-<!-- SORTEO / LANZAMIENTO -->
-<section class="sorteo launch-only" id="sorteo">
-  <div class="sorteo-inner">
-    <span class="sorteo-prize">🎁 Solo durante el lanzamiento</span>
-    <h2>Accede al curso y participa por una <em style="font-style:italic;color:var(--sky-deep);">asesoría 1:1 conmigo</em></h2>
-    <p class="sub">Del 22 al 30 de junio, además del 20% de descuento, entras al sorteo de una <strong>asesoría 1:1</strong> (valor $247 USD). Habrá <strong>1 ganador</strong>.</p>
-    <div class="sorteo-steps">
-      <div class="sorteo-step"><span class="ss-num">1</span><div><b>Accede al curso</b> entre el 22 y 30 de junio (usa el código <b>LANZAMIENTO</b> para 20% OFF).</div></div>
-      <div class="sorteo-step"><span class="ss-num">2</span><div>Tómalo y escríbeme a <a href="mailto:hola@sofiaretif.com?subject=Mi%20opini%C3%B3n%20del%20curso%20%E2%80%94%20Sorteo">hola@sofiaretif.com</a> con tu <b>opinión honesta</b>: qué te pareció y qué aprendiste.</div></div>
-      <div class="sorteo-step"><span class="ss-num">3</span><div>¡Listo, ya participas! Anuncio al <b>ganador el 1 de julio</b> por Instagram.</div></div>
-    </div>
-    <a href="https://pay.hotmart.com/N101179190K" target="_blank" rel="noopener" class="sorteo-btn">Acceder al curso y participar →</a>
-    <p class="sorteo-note">1 ganador de una asesoría 1:1. Requisito: haber accedido al curso durante el lanzamiento (22–30 de junio) y enviar tu opinión por correo.</p>
-  </div>
-</section>
 
 <!-- ASESORÍA 1:1 -->
 <section class="consulta">
@@ -2145,8 +2110,7 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
     <div class="modal-success" id="modalSuccess">
       <div style="font-size:48px;margin-bottom:1rem;">🎉</div>
       <h3 class="modal-title">¡Tu guía está lista!</h3>
-      <p class="modal-sub launch-only">Descárgala aquí abajo. Y como regalo, usa el código <strong>LANZAMIENTO</strong> para <strong>20% de descuento</strong> en el curso cuando quieras dar el paso.</p>
-      <p class="modal-sub post-launch">Descárgala aquí abajo. Y como regalo, usa el código <strong>BIENVENIDA10</strong> para <strong>10% de descuento</strong> en el curso cuando quieras dar el paso.</p>
+      <p class="modal-sub">Descárgala aquí abajo. Y cuando quieras dar el paso, el curso completo te está esperando.</p>
       <a class="modal-btn" href="assets/guia-hosting-sin-propiedad.pdf" target="_blank" rel="noopener" download style="display:block;text-decoration:none;margin-bottom:8px;">Descargar la guía →</a>
       <button class="modal-btn" onclick="closeModal()" style="background:none;color:var(--mid);border:1.5px solid var(--beige-dark);">Cerrar</button>
     </div>

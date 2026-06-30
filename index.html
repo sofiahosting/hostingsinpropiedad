@@ -704,9 +704,19 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
 
   /* RESPONSIVE */
   @media (max-width: 768px) {
-    .hero { grid-template-columns: 1fr; padding-top: 4rem; }
-    .hero-text { padding: 4rem 0 1rem; }
-    .hero-img img { max-width: 280px; }
+    body { overflow-x: hidden; }
+    .hero { display: block; min-height: auto; padding: 3.5rem 6% 2.5rem; }
+    .hero-text { padding: 0.5rem 0 1rem; max-width: 100%; }
+    .hero-sub { max-width: 100%; }
+    .hero-img svg { width: 100%; max-width: 300px; height: auto; }
+    .hero h1 { font-size: clamp(24px, 6.6vw, 38px); letter-spacing: -0.3px; }
+    .hero-sub { font-size: 15.5px; line-height: 1.6; }
+    .stats-row { gap: 0.6rem; justify-content: space-between; }
+    .stat-pill { flex: 1; min-width: 0; }
+    .stat-pill .num { font-size: 21px; }
+    .stat-pill .lbl { font-size: 9.5px; letter-spacing: .4px; }
+    .hero-img { padding-top: 1.5rem; }
+    .hero-img img, .hero-img svg { max-width: 320px; width: 100%; }
     .steps { grid-template-columns: 1fr 1fr; }
     .for-who-grid { grid-template-columns: 1fr; }
     .sofia-inner { grid-template-columns: 1fr; }
@@ -1570,7 +1580,7 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D85A30" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
         No es para ti si...
       </div>
-      <div class="for-item"><div class="dot no"></div><span>Buscas hacerte rico de la nooye a la mañana sin esfuerzo</span></div>
+      <div class="for-item"><div class="dot no"></div><span>Buscas hacerte rico de la noche a la mañana sin esfuerzo</span></div>
       <div class="for-item"><div class="dot no"></div><span>No estás dispuesto a aplicar lo que aprendes</span></div>
       <div class="for-item"><div class="dot no"></div><span>Ya tienes un negocio de Airbnb consolidado con varias propiedades</span></div>
     </div>
@@ -1872,7 +1882,7 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   <div class="leadmagnet-box">
     <div class="leadmagnet-text">
       <h3>¿Aún no estás list@ para comprar?</h3>
-      <p>Descarga gratis mi guía para empezar en el arbitraje de Airbnb y recibe un cupón de descuento para el curso.</p>
+      <p>Descarga gratis mi guía para empezar en el arbitraje de Airbnb y da tu primer paso hoy.</p>
     </div>
     <button class="leadmagnet-btn" onclick="openWaitlist()">Descargar guía gratis →</button>
   </div>
@@ -2082,7 +2092,7 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
     <div class="modal-form" id="modalForm">
       <span class="modal-badge">🎁 Recurso gratis</span>
       <h3 class="modal-title">¿Aún no estás list@ para comprar?</h3>
-      <p class="modal-sub">Déjame tu correo y obtén <strong>acceso inmediato</strong> a mi <strong>guía gratuita</strong> para empezar en el arbitraje de Airbnb, más un <strong>cupón de descuento</strong> para el curso.</p>
+      <p class="modal-sub">Déjame tu correo y obtén <strong>acceso inmediato</strong> a mi <strong>guía gratuita</strong> para empezar en el arbitraje de Airbnb.</p>
 
       <form id="mc-waitlist-form" action="https://github.us8.list-manage.com/subscribe/post?u=b6e40ec0a713bd6b97f9d4422&amp;id=273eed67f7&amp;f_id=006fdae1f0" method="post" target="mc-waitlist-iframe">
         <input class="modal-input" type="text" name="FNAME" placeholder="Tu nombre" required>

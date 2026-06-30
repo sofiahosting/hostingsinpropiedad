@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¡Solicitud recibida! · Estudio de Factibilidad · Sofía Retif</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiM3QkE3QzQiLz4KICA8cGF0aCBkPSJNMzIgMTQgQzMyIDE0IDE4IDMwIDE4IDM4IEMxOCA0NSAyNC4zIDUwIDMyIDUwIEMzOS43IDUwIDQ2IDQ1IDQ2IDM4IEM0NiAzMCAzMiAxNCAzMiAxNFoiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjk1Ii8+CiAgPGNpcmNsZSBjeD0iMzIiIGN5PSIzNiIgcj0iNiIgZmlsbD0iIzdCQTdDNCIvPgo8L3N2Zz4=">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sky:#7BA7C4; --sky-deep:#2F6188; --sky-deeper:#234B6B; --sky-light:#B8D4E8; --sky-pale:#EAF3F9;
+    --beige:#F5EFE4; --beige-dark:#E8DDC8; --gold:#C8A96E; --gold-dark:#A8893E;
+    --rose:#C87D87; --dark:#2C2820; --mid:#6B6355; --white:#FDFAF5;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--dark);}
+  a{color:inherit;}
+
+  .site-header{display:flex;align-items:center;justify-content:center;padding:16px 6%;border-bottom:1px solid var(--beige-dark);}
+  .site-header .brand{font-family:'Playfair Display',serif;font-weight:700;font-size:20px;color:var(--dark);text-decoration:none;}
+  .site-header .brand span{color:var(--sky-deep);}
+
+  .gr-hero{text-align:center;padding:4rem 6% 2.5rem;background:linear-gradient(180deg,var(--sky-pale),var(--white));}
+  .gr-hero .hand{font-family:'Caveat',cursive;color:var(--sky-deep);font-size:30px;display:block;margin-bottom:.3rem;}
+  .gr-badge{display:inline-block;background:#25D366;color:#fff;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:7px 16px;border-radius:50px;margin-bottom:1.1rem;}
+  .gr-hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,6vw,46px);font-weight:700;color:var(--dark);line-height:1.14;margin-bottom:1rem;max-width:660px;margin-left:auto;margin-right:auto;}
+  .gr-hero .lead{font-size:18px;color:var(--mid);max-width:560px;margin:0 auto;line-height:1.7;font-weight:300;}
+
+  .gr-sec{max-width:600px;margin:0 auto;padding:2.5rem 6% 3.5rem;}
+
+  /* Caja del grupo */
+  .joinbox{background:var(--sky-deeper);color:#fff;border-radius:24px;padding:2.6rem 2.2rem;text-align:center;box-shadow:0 20px 50px rgba(35,75,107,.3);}
+  .joinbox .label{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.55);}
+  .joinbox h2{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;margin:.5rem 0 .5rem;}
+  .joinbox p{font-size:15px;color:rgba(255,255,255,.82);line-height:1.6;margin-bottom:1.6rem;}
+  .joinbox .small{display:block;margin-top:1rem;font-size:12.5px;color:rgba(255,255,255,.55);}
+
+  /* Pasos */
+  .next{margin-top:2.8rem;}
+  .next h3{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;text-align:center;margin-bottom:1.5rem;}
+  .steps{display:flex;flex-direction:column;gap:16px;}
+  .step{display:flex;gap:16px;align-items:flex-start;}
+  .step .n{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:var(--sky-deep);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px;}
+  .step b{display:block;font-size:15px;margin-bottom:2px;}
+  .step p{font-size:14px;color:var(--mid);line-height:1.55;font-weight:300;}
+
+  .vip-note{margin-top:2rem;background:var(--beige);border-radius:14px;padding:1.2rem 1.4rem;font-size:14px;color:var(--mid);line-height:1.6;text-align:center;}
+  .vip-note b{color:var(--dark);}
+
+  footer{background:var(--sky-deeper);color:#cfe0ec;text-align:center;padding:2.2rem 6%;font-size:13px;margin-top:1rem;}
+  footer a{color:#E6C57C;text-decoration:none;font-weight:600;}
+</style>
+
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="brand">Sofía <span>Retif</span></a>
+</header>
+
+<section class="gr-hero">
+  <span class="hand">¡Tu solicitud llegó! 🎉</span>
+  <span class="gr-badge">Solicitud recibida</span>
+  <h1>Gracias, ya tengo los datos de tu proyecto</h1>
+  <p class="lead">Voy a revisar tu caso con calma — zona, competencia y potencial — para enviarte una propuesta hecha a la medida de tu proyecto, con el precio exacto y tu link de pago.</p>
+</section>
+
+<section class="gr-sec">
+  <div class="joinbox">
+    <div class="label">Próximo paso</div>
+    <h2>Te escribo personalmente</h2>
+    <p>En las próximas horas reviso tu proyecto y te contacto por correo con tu propuesta y el link para arrancar.</p>
+    <span class="small">Reviso cada solicitud personalmente · no es automático</span>
+  </div>
+
+  <div class="next">
+    <h3>Qué sigue ahora</h3>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div><b>Reviso tu proyecto</b><p>Analizo lo que me contaste: tipo de propiedad, zona, unidades y tu objetivo, para definir el alcance correcto.</p></div></div>
+      <div class="step"><div class="n">2</div><div><b>Te envío tu propuesta</b><p>Recibes el precio exacto para tu caso, lo que incluye y el link de pago seguro — sin sorpresas.</p></div></div>
+      <div class="step"><div class="n">3</div><div><b>Arrancamos el estudio</b><p>En cuanto confirmas el pago, empiezo la investigación. Te entrego tu PDF y lo revisamos juntos en tu sesión 1:1.</p></div></div>
+    </div>
+  </div>
+
+  <div class="vip-note">
+    <b>¿No ves mi mensaje pronto?</b> Revisa tu carpeta de spam o promociones, y agrega <b>hola@sofiaretif.com</b> a tus contactos para no perderte mi respuesta.
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Sofía Retif · Hosting Sin Propiedad · <a href="https://www.instagram.com/sofiahosting_" target="_blank" rel="noopener">@sofiahosting_</a> · <a href="https://www.tiktok.com/@sofiahosting" target="_blank" rel="noopener">@sofiahosting</a></p>
+</footer>
+
+</body>
+</html>

@@ -107,6 +107,20 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   /* Footer */
   footer{background:var(--sky-deeper);color:#cfe0ec;text-align:center;padding:2.4rem 6%;font-size:13px;}
   footer a{color:#E6C57C;text-decoration:none;font-weight:600;}
+
+  /* En celular: 2 tarjetas mas chiquitas, lado a lado (en vez de una grande por fila) */
+  @media(max-width:600px){
+    .shop-grid{grid-template-columns:repeat(2,1fr);gap:12px;}
+    .shop-body{padding:0.85rem 0.8rem 1rem;}
+    .shop-cat{font-size:10px;letter-spacing:1px;margin-bottom:.35rem;}
+    .shop-name{font-size:15.5px;line-height:1.15;margin-bottom:.4rem;}
+    .shop-desc{font-size:12px;line-height:1.45;margin-bottom:.7rem;}
+    .shop-price{font-size:15px;margin-bottom:.7rem;}
+    .shop-price small{font-size:11px;}
+    .shop-btn{font-size:12px;padding:11px 8px;}
+    .shop-tag{font-size:9px;padding:4px 9px;top:10px;left:10px;}
+    .shop-note{font-size:10px;}
+  }
 </style>
 </head>
 <body>

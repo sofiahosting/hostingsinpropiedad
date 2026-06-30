@@ -10,3 +10,25 @@
 
 # Logs
 *.log
+
+# Materiales internos / no publicar en el sitio
+Bootcamp-*.pdf
+Guiones-Reels-Bootcamp.pdf
+Plan-de-Contenido-*.pdf
+Plan-de-Contenido-*.md
+avatar-hotmart.*
+banner-hotmart.*
+email-preview.png
+# Plantillas de correo (no son paginas del sitio)
+email-lanzamiento.html
+email-2-objeciones.html
+email-3-resultados.html
+email-4-sorteo.html
+email-5-urgencia.html
+email-6-ultimo-dia.html
+bienvenida-1-guia.html
+bienvenida-2-historia.html
+bienvenida-3-mito.html
+bienvenida-4-resultados.html
+bienvenida-5-invitacion.html
+masterclass-email-confirmacion.html

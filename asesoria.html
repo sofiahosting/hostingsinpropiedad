@@ -146,13 +146,27 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   footer{background:var(--sky-deeper);color:#cfe0ec;text-align:center;padding:2.4rem 6%;font-size:13px;}
   footer a{color:#E6C57C;text-decoration:none;font-weight:600;}
 </style>
-<!-- Google Analytics 4 (medicion SEO) — Sofia: reemplaza G-XXXXXXXXXX por tu Measurement ID real -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DDQF9DZFLV"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
+  gtag('config', 'G-DDQF9DZFLV');
+</script>
+<!-- hsp_click_tracking: eventos de clic a CTAs -->
+<script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a');if(!a)return;
+  var h=(a.getAttribute('href')||'').toLowerCase(),ev=null;
+  if(h.indexOf('hotmart.com')>-1)ev='click_curso';
+  else if(h.indexOf('buy.stripe.com')>-1)ev='click_checkout';
+  else if(h.indexOf('masterclass')>-1)ev='click_masterclass';
+  else if(h.indexOf('curso-en-vivo')>-1)ev='click_bootcamp';
+  else if(h.indexOf('asesoria')>-1||h.indexOf('calendly')>-1)ev='click_asesoria';
+  else if(h.indexOf('wa.me')>-1||h.indexOf('whatsapp')>-1)ev='click_whatsapp';
+  if(ev&&typeof gtag==='function')gtag('event',ev,{link_url:a.href});
+},true);
 </script>
 </head>
 <body>

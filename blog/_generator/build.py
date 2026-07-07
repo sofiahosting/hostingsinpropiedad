@@ -22,7 +22,7 @@ from datetime import date
 
 # ------------------------------------------------------------------ config
 SITE = "https://sofiaretif.com"
-GA4_ID = "G-XXXXXXXXXX"          # <-- Sofía: reemplaza por tu Measurement ID de GA4
+GA4_ID = "G-DDQF9DZFLV"          # Measurement ID de GA4 de sofiaretif.com
 OG_IMAGE = SITE + "/og-image.jpg"
 BUILD_DATE = date.today().isoformat()
 

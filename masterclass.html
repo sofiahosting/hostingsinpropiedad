@@ -193,13 +193,27 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   footer{background:var(--sky-deeper);color:#cfe0ec;text-align:center;padding:2.4rem 6%;font-size:13px;}
   footer a{color:#E6C57C;text-decoration:none;font-weight:600;}
 </style>
-<!-- Google Analytics 4 (medicion SEO) — Sofia: reemplaza G-XXXXXXXXXX por tu Measurement ID real -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DDQF9DZFLV"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
+  gtag('config', 'G-DDQF9DZFLV');
+</script>
+<!-- hsp_click_tracking: eventos de clic a CTAs -->
+<script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a');if(!a)return;
+  var h=(a.getAttribute('href')||'').toLowerCase(),ev=null;
+  if(h.indexOf('hotmart.com')>-1)ev='click_curso';
+  else if(h.indexOf('buy.stripe.com')>-1)ev='click_checkout';
+  else if(h.indexOf('masterclass')>-1)ev='click_masterclass';
+  else if(h.indexOf('curso-en-vivo')>-1)ev='click_bootcamp';
+  else if(h.indexOf('asesoria')>-1||h.indexOf('calendly')>-1)ev='click_asesoria';
+  else if(h.indexOf('wa.me')>-1||h.indexOf('whatsapp')>-1)ev='click_whatsapp';
+  if(ev&&typeof gtag==='function')gtag('event',ev,{link_url:a.href});
+},true);
 </script>
 </head>
 <body>
@@ -224,8 +238,8 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   <p class="lead">En esta clase en vivo te muestro el panorama completo de las rentas cortas sin ser dueño: cómo funciona el modelo, qué hace falta para empezar y cuál es tu primer paso. Y por quedarte hasta el final, te llevas gratis mi Calculadora de Rentabilidad para saber en minutos si una unidad deja o no.</p>
   <!-- EDITA AQUÍ la fecha y hora de tu próxima clase -->
   <div class="mc-when">
-    <span class="w"><span class="em">📅</span> Jueves 17 de julio</span>
-    <span class="w"><span class="em">🕖</span> 7:00 pm (CDMX)</span>
+    <span class="w"><span class="em">📅</span> Lunes 27 de julio</span>
+    <span class="w"><span class="em">🕕</span> 6:00 pm (CDMX)</span>
     <span class="w"><span class="em">💻</span> En vivo por Google Meet</span>
   </div>
   <br>
@@ -349,25 +363,19 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
     <div class="label">Aparta tu lugar</div>
     <h3>Masterclass gratuita</h3>
     <!-- EDITA AQUÍ la fecha -->
-    <div class="dur">Jueves 17 de julio · 7:00 pm (CDMX) · por Google Meet</div>
-    <!--
-      CONECTADO A MAILCHIMP. Reemplaza estos 4 marcadores con los datos de TU cuenta:
-        DATACENTER  → ej. us21  (lo que va antes de ".list-manage.com" en tu cuenta)
-        PEGA_USERID → el u= de tu formulario embebido de Mailchimp
-        PEGA_LISTID → el id= de tu audiencia
-        PEGA_TAGID  → el ID numérico de tu etiqueta "masterclass"
-      Aparecen también en el honeypot anti-spam (name="b_USERID_LISTID") y en el campo tags.
-    -->
+    <div class="dur">Lunes 27 de julio · 6:00 pm (CDMX) · por Google Meet</div>
+    <!-- CONECTADO A MAILCHIMP (cuenta us8, audiencia 273eed67f7). Para etiquetar como
+         "masterclass": pega el ID numérico de la etiqueta en el campo tags de abajo. -->
     <form id="mcForm"
-          action="https://DATACENTER.list-manage.com/subscribe/post?u=PEGA_USERID&amp;id=PEGA_LISTID"
+          action="https://sofiaretif.us8.list-manage.com/subscribe/post?u=b6e40ec0a713bd6b97f9d4422&amp;id=273eed67f7"
           method="post" target="mc_iframe">
       <input type="text" name="FNAME" placeholder="Tu nombre" required>
       <input type="email" name="EMAIL" placeholder="Tu mejor correo" required>
-      <!-- Etiqueta automática para esta cohorte -->
-      <input type="hidden" name="tags" value="PEGA_TAGID">
+      <!-- Etiqueta "masterclass": pega aquí el ID numérico de la etiqueta (vacío = sin etiqueta) -->
+      <input type="hidden" name="tags" value="">
       <!-- Anti-spam de Mailchimp: debe quedar vacío, no lo borres -->
       <div style="position:absolute;left:-5000px" aria-hidden="true">
-        <input type="text" name="b_PEGA_USERID_PEGA_LISTID" tabindex="-1" value="">
+        <input type="text" name="b_b6e40ec0a713bd6b97f9d4422_273eed67f7" tabindex="-1" value="">
       </div>
       <button type="submit">Reservar mi lugar gratis →</button>
     </form>

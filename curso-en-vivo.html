@@ -220,6 +220,16 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   .proc-card b{display:block;font-size:15px;color:var(--dark);margin-bottom:.3rem;}
   .proc-card p{font-size:13px;color:var(--mid);line-height:1.5;font-weight:300;}
   @media(max-width:640px){.proc-grid{grid-template-columns:repeat(2,1fr);gap:12px;}}
+  .bio-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;max-width:900px;margin:0 auto;}
+  .bio-text p{font-size:15.5px;color:var(--dark);line-height:1.75;font-weight:300;margin-bottom:1rem;text-align:left;}
+  .bio-text p strong{font-weight:600;color:var(--sky-deep);}
+  .bio-photo{position:relative;}
+  .bio-photo img{width:100%;border-radius:20px;display:block;box-shadow:0 16px 40px rgba(44,40,32,.15);}
+  .bio-badge{position:absolute;color:#fff;font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:50px;box-shadow:0 6px 18px rgba(0,0,0,.2);white-space:nowrap;}
+  .bio-badge.b1{top:12%;left:-8px;background:var(--sky-deep);}
+  .bio-badge.b2{top:46%;right:-8px;background:var(--gold-dark);}
+  .bio-badge.b3{bottom:12%;left:-4px;background:var(--rose);}
+  @media(max-width:700px){.bio-grid{grid-template-columns:1fr;gap:26px;}.bio-photo{max-width:300px;margin:0 auto;}.bio-badge{font-size:11.5px;padding:6px 12px;}}
   .mobile-cta-bar{display:none;}
   @media(max-width:768px){
     body{padding-bottom:74px;}
@@ -438,12 +448,20 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
 
 <!-- QUIÉN SOY -->
 <section class="cv-sec" style="background:var(--white);">
-  <h2>Quién te va a acompañar</h2>
-  <div class="host">
-    <div class="ph"><img src="assets/sofia-about.jpg" alt="Sofía Retif"></div>
-    <div>
-      <b>Sofía Retif</b>
-      <p>Llevo [EDITA: X] años viviendo del arbitraje de Airbnb <strong>sin ser dueña</strong> de las propiedades, opero <strong>[EDITA: X] unidades</strong> y trabajo <strong>menos de 10 horas a la semana</strong> en ello. He acompañado a <strong>+120 personas</strong> en Latinoamérica a arrancar su negocio de rentas cortas. En este bootcamp te llevo de la mano por el mismo sistema que yo uso, en vivo y aplicado a tu caso.</p>
+  <h2>¿Por qué confiar en mí?</h2>
+  <!-- EDITA: ajusta la historia a tus datos reales (años, unidades, tu punto de partida) -->
+  <div class="bio-grid">
+    <div class="bio-text">
+      <p>Soy <strong>Sofía Retif</strong> y vivo del arbitraje de Airbnb: rento propiedades que no son mías, las pongo en Airbnb, y lo hago trabajando <strong>menos de 10 horas a la semana</strong>.</p>
+      <p>Pero no empezó así. [EDITA: tu punto de partida, ej. "Estaba cansada de cambiar mi tiempo por un sueldo, sin libertad."] Arranqué con un solo departamento, con miedo y sin saber si iba a funcionar. Funcionó — y de ahí no paré.</p>
+      <p>Hoy opero <strong>[EDITA: X] unidades</strong>, viajo por el mundo mientras el negocio corre casi solo, y —lo que más me llena— he acompañado a <strong>+120 personas</strong> en Latinoamérica a montar su primer Airbnb desde cero.</p>
+      <p>En este bootcamp te llevo de la mano por el <strong>mismo sistema que yo uso</strong>, en vivo y aplicado a tu caso. No es teoría: es lo que hago todos los días.</p>
+    </div>
+    <div class="bio-photo">
+      <img src="assets/sofia-about.jpg" alt="Sofía Retif">
+      <span class="bio-badge b1">Anfitriona sin propiedad</span>
+      <span class="bio-badge b2">+120 alumnos</span>
+      <span class="bio-badge b3">&lt;10 h/semana</span>
     </div>
   </div>
 </section>

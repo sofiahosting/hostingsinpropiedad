@@ -370,7 +370,9 @@ document.addEventListener('click',function(e){
           method="post" target="mc_iframe">
       <input type="text" name="FNAME" placeholder="Tu nombre" required>
       <input type="email" name="EMAIL" placeholder="Tu mejor correo" required>
-      <!-- Etiqueta "masterclass": pega aquí el ID numérico de la etiqueta (vacío = sin etiqueta) -->
+      <!-- Marca la fuente (campo Fuente/MMERGE3) para distinguir estos registros del popup del 10% -->
+      <input type="hidden" name="MMERGE3" value="Masterclass">
+      <!-- El tag "masterclass" lo pone la automatización (Customer Journey), no el formulario -->
       <input type="hidden" name="tags" value="">
       <!-- Anti-spam de Mailchimp: debe quedar vacío, no lo borres -->
       <div style="position:absolute;left:-5000px" aria-hidden="true">

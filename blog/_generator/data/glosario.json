@@ -1,0 +1,170 @@
+{
+  "_nota": "Glosario. Cada termino: definicion corta (para el schema y el destacado) + body de parrafos. cta opcional (default masterclass).",
+  "terminos": [
+    {
+      "slug":"rent-to-rent",
+      "termino":"Rent-to-rent",
+      "description":"Qué es el rent-to-rent: el modelo de rentar una propiedad para volver a rentarla por noche en Airbnb, sin ser el dueño.",
+      "definicion":"Rent-to-rent (literalmente, rentar para rentar) es el modelo en el que rentas un inmueble con contrato a largo plazo y lo subarriendas legalmente por estancias cortas, con permiso del propietario. Es el mismo concepto que el arbitraje de Airbnb.",
+      "body":[
+        "El rent-to-rent te permite entrar al negocio del hospedaje sin comprar propiedad ni pedir una hipoteca. Tu ganancia es la diferencia entre la renta fija que pagas al dueño y los ingresos por noche que genera el inmueble.",
+        "Para hacerlo bien necesitas tres cosas: permiso escrito del propietario, un reglamento de edificio que lo permita y cumplir la regulación local de hospedaje. Hecho así, es un negocio legal y de bajo capital inicial."
+      ],
+      "cta":"masterclass"
+    },
+    {
+      "slug":"arbitraje-de-rentas",
+      "termino":"Arbitraje de rentas",
+      "description":"Qué es el arbitraje de rentas: ganar la diferencia entre la renta que pagas y los ingresos por noche de un Airbnb.",
+      "definicion":"El arbitraje de rentas (rental arbitrage) es la estrategia de rentar un inmueble a precio de largo plazo y generar ingresos rentándolo por noche, quedándote con la diferencia. Es sinónimo de arbitraje de Airbnb y de rent-to-rent.",
+      "body":[
+        "La palabra arbitraje viene de aprovechar la diferencia de precio entre dos mercados: el de renta mensual (más barato por noche) y el de hospedaje corto (más caro por noche). Tú operas en medio y capturas ese margen.",
+        "El modelo funciona cuando eliges bien la zona, corres los números antes de firmar y operas de frente con el propietario y la ciudad."
+      ],
+      "cta":"masterclass"
+    },
+    {
+      "slug":"cohost",
+      "termino":"Cohost (co-anfitrión)",
+      "description":"Qué es un cohost en Airbnb: la persona que administra el alojamiento de otro dueño a cambio de un porcentaje.",
+      "definicion":"Un cohost o co-anfitrión es quien opera y administra un Airbnb en nombre del propietario, a cambio de un porcentaje de los ingresos (normalmente 15-25%). No invierte capital: aporta su tiempo y su sistema de gestión.",
+      "body":[
+        "Ser cohost es una de las formas más accesibles de entrar al negocio del hospedaje sin dinero inicial, porque no rentas ni amueblas nada: administras lo de otros.",
+        "Muchos empiezan como cohost para aprender la operación real y, cuando la dominan, dan el salto al arbitraje para ganar márgenes más altos con inmuebles propios de operación."
+      ],
+      "cta":"asesoria"
+    },
+    {
+      "slug":"adr-tarifa-promedio-diaria",
+      "termino":"ADR (tarifa promedio diaria)",
+      "description":"Qué es el ADR en Airbnb: el promedio que cobras por noche ocupada. Métrica clave para calcular ingresos.",
+      "definicion":"El ADR (Average Daily Rate o tarifa promedio diaria) es el ingreso promedio que obtienes por cada noche ocupada, sin contar las noches vacías. Se calcula dividiendo tus ingresos por hospedaje entre el número de noches ocupadas.",
+      "body":[
+        "El ADR te dice cuánto cobras en promedio por noche. Es una de las dos palancas de tus ingresos; la otra es la ocupación. Subir el ADR sin perder ocupación es el arte de los precios dinámicos.",
+        "Ojo: un ADR alto con ocupación baja puede rendir menos que un ADR moderado con calendario lleno. Por eso se mira junto con el RevPAR."
+      ],
+      "cta":"curso"
+    },
+    {
+      "slug":"tasa-de-ocupacion",
+      "termino":"Tasa de ocupación",
+      "description":"Qué es la tasa de ocupación en Airbnb: el porcentaje de noches reservadas de tu calendario.",
+      "definicion":"La tasa de ocupación es el porcentaje de noches que tu Airbnb estuvo reservado respecto al total disponible en un periodo. Si en un mes de 30 noches vendiste 21, tu ocupación fue del 70%.",
+      "body":[
+        "La ocupación, junto con el ADR, determina tus ingresos. Estimarla bien antes de firmar es lo que separa un inmueble rentable de uno que te hace perder dinero.",
+        "Para estimarla, observa qué tan llenos están los calendarios de anuncios parecidos al tuyo en la misma zona. Esa referencia del mundo real vale más que cualquier promesa optimista."
+      ],
+      "cta":"masterclass"
+    },
+    {
+      "slug":"revpar",
+      "termino":"RevPAR",
+      "description":"Qué es el RevPAR: el ingreso por noche disponible, la métrica que combina tarifa y ocupación.",
+      "definicion":"El RevPAR (Revenue Per Available Room, ingreso por habitación disponible) mide cuánto genera tu Airbnb por cada noche disponible, ocupada o no. Se calcula multiplicando el ADR por la tasa de ocupación.",
+      "body":[
+        "El RevPAR es la métrica más honesta de rendimiento, porque castiga las noches vacías. Un anuncio con tarifa alta pero muchas noches sin vender puede tener peor RevPAR que uno más barato y siempre lleno.",
+        "Optimizar tu negocio es, en el fondo, subir tu RevPAR: llenar el calendario a la mejor tarifa posible en cada fecha."
+      ],
+      "cta":"curso"
+    },
+    {
+      "slug":"superhost",
+      "termino":"Superhost",
+      "description":"Qué es ser Superhost en Airbnb: el distintivo a los anfitriones con mejor desempeño y sus beneficios.",
+      "definicion":"Superhost es el reconocimiento que Airbnb otorga a los anfitriones con desempeño destacado: alta calificación, buena tasa de respuesta, pocas cancelaciones y experiencia comprobada. Se revisa periódicamente.",
+      "body":[
+        "El distintivo de Superhost aparece en tu anuncio y genera más confianza, lo que suele traducirse en más reservas y mejor posición en el buscador.",
+        "Se consigue con lo básico bien hecho: limpieza impecable, comunicación rápida, cumplir lo que prometes y cuidar cada reseña. No es magia, es consistencia."
+      ],
+      "cta":"masterclass"
+    },
+    {
+      "slug":"subarrendamiento",
+      "termino":"Subarrendamiento",
+      "description":"Qué es el subarrendamiento y cómo se aplica legalmente al arbitraje de Airbnb.",
+      "definicion":"El subarrendamiento es cuando un inquilino renta, total o parcialmente, el inmueble que a su vez tiene rentado, con autorización del propietario. Es la base legal del arbitraje de Airbnb.",
+      "body":[
+        "En el arbitraje, tú eres el inquilino que subarrienda por estancias cortas. Para que sea válido, el contrato con el propietario debe autorizar expresamente el subarriendo corto.",
+        "Subarrendar sin permiso puede ser causal de terminación del contrato. Por eso la regla de oro es: todo por escrito, de frente con el dueño."
+      ],
+      "cta":"bootcamp"
+    },
+    {
+      "slug":"renta-corta",
+      "termino":"Renta corta (short-term rental)",
+      "description":"Qué es la renta corta o alojamiento de corta estancia y en qué se diferencia de la renta tradicional.",
+      "definicion":"La renta corta o short-term rental es el alojamiento por estancias breves (noches o semanas) a través de plataformas como Airbnb o Booking, a diferencia de la renta tradicional de largo plazo por meses o años.",
+      "body":[
+        "La renta corta genera más ingresos por noche que la renta tradicional, a cambio de más operación (limpieza, check-ins, atención al huésped) y de estar sujeta a la demanda turística.",
+        "El arbitraje aprovecha justo esa diferencia: pagas renta de largo plazo y cobras a precio de renta corta."
+      ],
+      "cta":"masterclass"
+    },
+    {
+      "slug":"nomada-digital",
+      "termino":"Nómada digital",
+      "description":"Qué es un nómada digital y por qué es un huésped clave para tu Airbnb.",
+      "definicion":"Un nómada digital es una persona que trabaja de forma remota mientras viaja o vive temporalmente en distintas ciudades. Suele reservar estancias medianas (semanas o meses) y valora el internet rápido y un espacio de trabajo.",
+      "body":[
+        "Los nómadas digitales son un huésped ideal: reservan estancias largas (menos rotación y limpieza), cuidan el espacio y buscan comodidad para trabajar.",
+        "Para atraerlos, tu Airbnb necesita wifi potente, un rincón de trabajo cómodo y una ubicación con cafés y servicios cerca. Ciudades como Medellín o la CDMX son imanes de este público."
+      ],
+      "cta":"masterclass"
+    },
+    {
+      "slug":"check-in-autonomo",
+      "termino":"Check-in autónomo",
+      "description":"Qué es el check-in autónomo en Airbnb y cómo te libera tiempo en la operación.",
+      "definicion":"El check-in autónomo (self check-in) permite al huésped entrar sin que tú estés presente, usando una caja de llaves, una clave o una cerradura inteligente. Es una de las claves para automatizar tu Airbnb.",
+      "body":[
+        "El check-in autónomo te libera de coordinar horarios y estar disponible a cualquier hora. El huésped llega cuando quiere y tú no pierdes tu día.",
+        "Se apoya en instrucciones claras y mensajes automáticos. Bien hecho, mejora la experiencia del huésped y te devuelve tu tiempo."
+      ],
+      "cta":"curso"
+    },
+    {
+      "slug":"temporada-alta",
+      "termino":"Temporada alta",
+      "description":"Qué es la temporada alta en Airbnb y cómo aprovecharla con tus precios.",
+      "definicion":"La temporada alta es el periodo del año con mayor demanda de hospedaje en un destino (vacaciones, clima ideal, eventos), cuando puedes cobrar tarifas más altas y llenar tu calendario con facilidad.",
+      "body":[
+        "Conocer la temporada alta y baja de tu ciudad es esencial para fijar precios. En temporada alta subes tarifas; en baja, ajustas para no quedarte vacío.",
+        "En mis páginas por ciudad incluyo la temporada alta de cada destino, para que sepas cuándo esperar tus mejores meses."
+      ],
+      "cta":"curso"
+    },
+    {
+      "slug":"tarifa-de-limpieza",
+      "termino":"Tarifa de limpieza",
+      "description":"Qué es la tarifa de limpieza en Airbnb y cómo cobrarla sin espantar reservas.",
+      "definicion":"La tarifa de limpieza es un cargo único que se suma a la reserva para cubrir la limpieza del espacio entre huéspedes. Se muestra aparte de la tarifa por noche.",
+      "body":[
+        "La tarifa de limpieza te ayuda a cubrir el costo real de preparar el espacio, sobre todo en estancias cortas. Pero si es demasiado alta, encarece las noches sueltas y ahuyenta reservas breves.",
+        "El truco es equilibrarla con tu tarifa por noche para que el precio total se vea justo, especialmente en reservas de pocas noches."
+      ],
+      "cta":"curso"
+    },
+    {
+      "slug":"estancia-minima",
+      "termino":"Estancia mínima",
+      "description":"Qué es la estancia mínima en Airbnb y cómo usarla a tu favor.",
+      "definicion":"La estancia mínima es el número mínimo de noches que un huésped debe reservar. Puedes configurarla distinta según la temporada, el día de la semana o eventos.",
+      "body":[
+        "Una estancia mínima alta reduce la rotación (menos limpiezas, menos check-ins) y atrae estancias más largas, pero puede dejar huecos difíciles de llenar entre reservas.",
+        "La estrategia inteligente es variarla: mínimos más altos en temporada alta y fines de semana, más flexibles para rellenar huecos del calendario."
+      ],
+      "cta":"curso"
+    },
+    {
+      "slug":"deposito-de-garantia",
+      "termino":"Depósito de garantía",
+      "description":"Qué es el depósito de garantía en el arbitraje de Airbnb y para qué sirve con el propietario.",
+      "definicion":"El depósito de garantía es el monto que entregas al propietario al firmar el contrato, como respaldo ante posibles daños o incumplimientos. Se devuelve al terminar el contrato si todo está en orden.",
+      "body":[
+        "En el arbitraje, ofrecer un depósito serio le da confianza al propietario y refuerza tu imagen de operador responsable, no de riesgo.",
+        "Fórmalo por escrito en el contrato: monto, condiciones de devolución y plazos. Así ambas partes quedan protegidas."
+      ],
+      "cta":"bootcamp"
+    }
+  ]
+}

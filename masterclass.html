@@ -85,6 +85,20 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   .mc-cta{display:inline-block;background:var(--sky-deep);color:#fff;font-weight:600;font-size:16px;padding:16px 38px;border-radius:50px;text-decoration:none;transition:background .2s;box-shadow:0 12px 30px rgba(47,97,136,.22);}
   .mc-cta:hover{background:var(--sky-deeper);}
   .mc-cta-note{font-size:12.5px;color:var(--mid);margin-top:.8rem;}
+  .mc-gift{display:inline-flex;align-items:center;gap:11px;background:#fff;border:1px dashed var(--gold);border-radius:14px;padding:.75rem 1.15rem;margin-top:1.2rem;font-size:14px;color:var(--dark);line-height:1.45;max-width:520px;text-align:left;box-shadow:0 8px 24px rgba(200,169,110,.12);}
+  .mc-gift .g{font-size:22px;flex-shrink:0;}
+  .mc-gift b{color:var(--gold-dark);}
+
+  /* Foto del hero */
+  .mc-hero-photo{width:132px;height:132px;border-radius:50%;object-fit:cover;display:block;margin:0 auto 1.3rem;border:4px solid #fff;box-shadow:0 14px 34px rgba(44,40,32,.14);}
+
+  /* Banda de lifestyle */
+  .mc-life{text-align:center;padding:3.2rem 6% 2.6rem;background:var(--sky-pale);}
+  .mc-life h2{font-family:'Playfair Display',serif;font-size:clamp(22px,3.4vw,30px);font-weight:700;color:var(--dark);margin-bottom:.5rem;}
+  .mc-life p{color:var(--mid);font-weight:300;font-size:15.5px;max-width:520px;margin:0 auto;line-height:1.7;}
+  .life-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:900px;margin:1.6rem auto 0;}
+  .life-strip img{width:100%;height:160px;object-fit:cover;border-radius:14px;box-shadow:0 8px 20px rgba(44,40,32,.08);}
+  @media(max-width:680px){ .life-strip{grid-template-columns:1fr 1fr;} .life-strip img{height:140px;} }
 
   /* Secciones */
   .mc-sec{max-width:920px;margin:0 auto;padding:3.5rem 6%;}
@@ -117,6 +131,38 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   .teaser .stat{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:var(--sky-deep);max-width:640px;margin:0 auto;line-height:1.25;}
   .teaser p{color:var(--mid);font-weight:300;max-width:580px;margin:1rem auto 0;line-height:1.7;}
 
+  /* Historia / gancho */
+  .mc-story{background:var(--white);padding:3.5rem 6%;}
+  .mc-story-inner{max-width:720px;margin:0 auto;}
+  .mc-story .eyebrow{text-align:center;font-family:'Caveat',cursive;color:var(--sky-deep);font-size:26px;display:block;margin-bottom:.4rem;}
+  .mc-story h2{font-family:'Playfair Display',serif;font-size:clamp(24px,3.6vw,32px);font-weight:700;color:var(--dark);line-height:1.25;margin-bottom:1.4rem;text-align:center;}
+  .mc-story p{font-size:16px;color:var(--mid);line-height:1.8;font-weight:300;margin-bottom:1.1rem;}
+  .mc-story p strong{color:var(--dark);font-weight:600;}
+  .mc-story .sig{font-family:'Caveat',cursive;color:var(--sky-deep);font-size:26px;margin-top:1.2rem;text-align:right;}
+
+  /* Qué incluye */
+  .includes{max-width:640px;margin:0 auto;display:grid;gap:14px;}
+  .inc-item{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--beige-dark);border-radius:14px;padding:1rem 1.2rem;box-shadow:0 6px 18px rgba(44,40,32,.05);}
+  .inc-item .ic{flex-shrink:0;width:42px;height:42px;border-radius:11px;background:var(--sky-pale);display:flex;align-items:center;justify-content:center;font-size:20px;}
+  .inc-item b{display:block;font-size:15px;color:var(--dark);}
+  .inc-item span{font-size:13.5px;color:var(--mid);font-weight:300;}
+
+  /* Testimonios */
+  .tst-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;max-width:960px;margin:0 auto;}
+  .tst{background:#fff;border:1px solid var(--beige-dark);border-radius:16px;padding:1.5rem;box-shadow:0 8px 24px rgba(44,40,32,.05);display:flex;flex-direction:column;}
+  .tst .stars{color:var(--gold);font-size:15px;margin-bottom:.7rem;letter-spacing:2px;}
+  .tst p{font-size:14.5px;color:var(--dark);line-height:1.65;font-weight:300;font-style:italic;flex-grow:1;}
+  .tst .who{display:flex;align-items:center;gap:10px;margin-top:1rem;}
+  .tst .who .av{flex-shrink:0;width:38px;height:38px;border-radius:50%;background:var(--sky-pale);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;color:var(--sky-deep);}
+  .tst .who b{font-size:14px;color:var(--dark);}
+  .tst .who span{font-size:12.5px;color:var(--mid);display:block;font-weight:300;}
+  @media(max-width:780px){ .tst-grid{grid-template-columns:1fr;} }
+
+  /* CTA inline (banda) */
+  .mc-cta-band{text-align:center;padding:2.4rem 6% 2.8rem;}
+  .mc-cta-band .urg{display:inline-block;background:var(--rose);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.5px;padding:6px 14px;border-radius:50px;margin-bottom:1.1rem;}
+  .mc-cta-band .line{font-size:16px;color:var(--mid);font-weight:300;margin-bottom:1.1rem;}
+
   /* Bloque de registro */
   .signup{max-width:520px;margin:0 auto;background:var(--sky-deeper);color:#fff;border-radius:24px;padding:2.8rem 2.4rem;text-align:center;box-shadow:0 20px 50px rgba(35,75,107,.3);}
   .signup .label{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.55);}
@@ -147,6 +193,14 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   footer{background:var(--sky-deeper);color:#cfe0ec;text-align:center;padding:2.4rem 6%;font-size:13px;}
   footer a{color:#E6C57C;text-decoration:none;font-weight:600;}
 </style>
+<!-- Google Analytics 4 (medicion SEO) — Sofia: reemplaza G-XXXXXXXXXX por tu Measurement ID real -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
 </head>
 <body>
 
@@ -154,7 +208,7 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   <a href="index.html" class="brand">Sofía <span>Retif</span></a>
   <nav class="header-nav">
     <a href="index.html" class="navlink">Inicio</a>
-    <a href="aprende-conmigo.html" class="navlink">Trabaja conmigo</a>
+    <a href="aprende-conmigo.html" class="navlink">Aprende conmigo</a>
     <a href="faq.html" class="navlink">FAQ</a>
     <a href="contacto.html" class="navlink">Contacto</a>
     <a href="#registro" class="header-cta">Reservar mi lugar →</a>
@@ -163,10 +217,11 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
 
 <!-- HERO -->
 <section class="mc-hero">
+  <img class="mc-hero-photo" src="assets/sofia-hero.jpg" alt="Sofía Retif">
   <span class="hand">Clase gratis en vivo 👋</span>
   <div class="mc-badge">Masterclass gratuita · cupo limitado</div>
   <h1>Cómo arrancar tu primer Airbnb sin comprar ninguna propiedad</h1>
-  <p class="lead">En esta clase en vivo te enseño el modelo completo de rentas cortas sin ser dueño: cómo elegir ciudad, correr los números y dar tus primeros pasos. Al final te cuento cómo entrar a Bootcamp: Tu Primer Airbnb, mi programa en vivo intensivo de 2 semanas.</p>
+  <p class="lead">En esta clase en vivo te muestro el panorama completo de las rentas cortas sin ser dueño: cómo funciona el modelo, qué hace falta para empezar y cuál es tu primer paso. Y por quedarte hasta el final, te llevas gratis mi Calculadora de Rentabilidad para saber en minutos si una unidad deja o no.</p>
   <!-- EDITA AQUÍ la fecha y hora de tu próxima clase -->
   <div class="mc-when">
     <span class="w"><span class="em">📅</span> Jueves 17 de julio</span>
@@ -176,18 +231,40 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   <br>
   <a href="#registro" class="mc-cta">Reservar mi lugar gratis →</a>
   <p class="mc-cta-note">100% gratis · al registrarte entras al grupo de WhatsApp con toda la info</p>
+  <br>
+  <div class="mc-gift"><span class="g">🎁</span><span>Regalo por quedarte hasta el final: <b>la Calculadora de Rentabilidad de Airbnb</b> para saber si una unidad deja o no.</span></div>
+</section>
+
+<!-- HISTORIA / GANCHO -->
+<section class="mc-story">
+  <div class="mc-story-inner">
+    <span class="eyebrow">Antes de que te registres…</span>
+    <h2>¿Por qué hay gente ganando con Airbnb sin ser dueña de nada… y tú sigues sin arrancar?</h2>
+    <!-- EDITA ESTA HISTORIA con tus palabras reales; entre más tuya, mejor convierte -->
+    <p>No es que a ellos les tocara más suerte, ni que tuvieran dinero para comprar departamentos. La diferencia es una sola: <strong>siguieron un método claro</strong> en vez de intentar armar el rompecabezas solos.</p>
+    <p>Yo también pasé por ahí. Veía el tema por todos lados, me abrumaba no saber por dónde empezar, y pensaba que sin una propiedad propia esto simplemente no era para mí. Hasta que entendí el modelo de rentas cortas <strong>sin ser dueña</strong> — y todo cambió.</p>
+    <p>Hoy vivo de esto y he acompañado a <strong>+120 personas en Latinoamérica</strong> a arrancar su primer Airbnb desde cero. En esta clase gratuita te muestro cómo funciona ese modelo y por dónde empezar, sin relleno, para que dejes de darle vueltas y des tu primer paso esta misma semana.</p>
+    <p class="sig">— Sofía</p>
+  </div>
 </section>
 
 <!-- QUÉ VAS A APRENDER -->
 <section class="mc-sec">
-  <h2>Qué vas a aprender</h2>
-  <p class="sub">En una hora vas a entender el modelo completo, sin relleno y con ejemplos reales.</p>
+  <h2>Qué te vas a llevar de la clase</h2>
+  <p class="sub">En una hora vas a salir con el panorama claro y sin abrumarte, con ejemplos reales.</p>
   <div class="learn-grid">
     <div class="learn-item"><div class="ic">🏠</div><div><b>Qué es el arbitraje de Airbnb</b><p>Cómo se gana dinero rentando propiedades que no son tuyas, explicado simple.</p></div></div>
-    <div class="learn-item"><div class="ic">📍</div><div><b>Cómo elegir tu ciudad</b><p>La forma de validar si hay demanda real antes de invertir un solo peso.</p></div></div>
-    <div class="learn-item"><div class="ic">🔢</div><div><b>Los números que importan</b><p>Cuánto necesitas para empezar y cómo saber si una unidad te va a dejar.</p></div></div>
-    <div class="learn-item"><div class="ic">🚀</div><div><b>Tus primeros 3 pasos</b><p>Qué hacer esta misma semana para arrancar, aunque partas totalmente de cero.</p></div></div>
+    <div class="learn-item"><div class="ic">📍</div><div><b>Por qué funciona (y qué hace buena una zona)</b><p>El panorama para que entiendas de qué depende, sin tecnicismos ni fórmulas.</p></div></div>
+    <div class="learn-item"><div class="ic">💡</div><div><b>Qué necesitas para empezar</b><p>Una idea realista de la inversión y de lo que sí y lo que no hace falta.</p></div></div>
+    <div class="learn-item"><div class="ic">🚀</div><div><b>Cuál es tu primer paso</b><p>Por dónde arrancar esta misma semana, aunque partas totalmente de cero.</p></div></div>
   </div>
+</section>
+
+<!-- CTA BAND 1 -->
+<section class="mc-cta-band">
+  <span class="urg">⚡ Cupo limitado · los lugares se llenan rápido</span>
+  <p class="line">Es en vivo y con cupo limitado para poder responder tus dudas.</p>
+  <a href="#registro" class="mc-cta">Reservar mi lugar gratis →</a>
 </section>
 
 <!-- PARA QUIÉN -->
@@ -196,27 +273,74 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   <ul class="fit-list">
     <li>Quieres un ingreso extra con Airbnb pero <strong>no tienes (ni quieres comprar) una propiedad</strong>.</li>
     <li>Has visto el tema por internet y te abruma no saber por dónde empezar.</li>
-    <li>Quieres validar si el modelo funciona en tu ciudad antes de invertir.</li>
+    <li>Quieres validar si el modelo funciona en tu zona antes de invertir.</li>
     <li>Prefieres aprender de alguien que ya lo hace, en vez de armar el rompecabezas por tu cuenta.</li>
   </ul>
+</section>
+
+<!-- QUÉ INCLUYE -->
+<section class="mc-sec" style="background:var(--white);">
+  <h2>Qué incluye tu registro (gratis)</h2>
+  <p class="sub">No es solo una clase suelta — esto es lo que te llevas por registrarte y asistir en vivo.</p>
+  <div class="includes">
+    <div class="inc-item"><div class="ic">📺</div><div><b>Clase en vivo de ~90 min</b><span>Conmigo por Google Meet, con espacio para tus preguntas en tiempo real.</span></div></div>
+    <div class="inc-item"><div class="ic">💬</div><div><b>Grupo de WhatsApp</b><span>Donde te paso el enlace de acceso, los recordatorios y toda la info.</span></div></div>
+    <div class="inc-item"><div class="ic">🎁</div><div><b>Calculadora de Rentabilidad (regalo)</b><span>Te la regalo al final de la clase, solo si te quedas en vivo hasta el cierre.</span></div></div>
+  </div>
 </section>
 
 <!-- QUIÉN SOY -->
 <section class="mc-sec">
   <h2>Quién te va a enseñar</h2>
   <div class="host">
-    <div class="ph">👋</div>
+    <div class="ph"><img src="assets/sofia-about.jpg" alt="Sofía Retif"></div>
     <div>
       <b>Sofía Retif</b>
-      <p>Llevo años viviendo del arbitraje de Airbnb sin ser dueña de las propiedades, y he acompañado a +120 personas en Latinoamérica a arrancar su primer negocio de rentas cortas. En esta clase te comparto exactamente el método que enseño en mi bootcamp en vivo.</p>
+      <p>Llevo años viviendo del arbitraje de Airbnb sin ser dueña de las propiedades, y he acompañado a +120 personas en Latinoamérica a arrancar su primer negocio de rentas cortas. En esta clase te muestro cómo funciona el modelo y te doy una probada del método que enseño a fondo en mi bootcamp en vivo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="mc-sec" style="background:var(--white);">
+  <h2>Lo que dicen quienes ya arrancaron</h2>
+  <p class="sub">Personas normales que empezaron desde cero, sin propiedad.</p>
+  <!-- EDITA con testimonios reales de tus alumnos (nombre, ciudad y frase) -->
+  <div class="tst-grid">
+    <div class="tst">
+      <div class="stars">★★★★★</div>
+      <p>"Llegué sin saber nada y sin propiedad. Con el método de Sofía tomé mi primer departamento en arbitraje y ya lo tengo rentando. Ojalá lo hubiera hecho antes."</p>
+      <div class="who"><div class="av">M</div><div><b>Mariana G.</b><span>Guadalajara</span></div></div>
+    </div>
+    <div class="tst">
+      <div class="stars">★★★★★</div>
+      <p>"La clase me quitó el miedo a los números. Entendí en una hora lo que llevaba meses intentando armar sola por internet."</p>
+      <div class="who"><div class="av">D</div><div><b>Daniela R.</b><span>CDMX</span></div></div>
+    </div>
+    <div class="tst">
+      <div class="stars">★★★★★</div>
+      <p>"Pensé que necesitaba comprar un depa para empezar. Sofía me mostró que no, y hoy tengo mi primera unidad generando ingresos."</p>
+      <div class="who"><div class="av">A</div><div><b>Andrés P.</b><span>Monterrey</span></div></div>
     </div>
   </div>
 </section>
 
 <!-- TEASER DEL CURSO -->
 <section class="teaser">
-  <div class="stat">Al final de la clase abro los lugares de la próxima generación de Bootcamp: Tu Primer Airbnb</div>
-  <p>2 semanas intensivas conmigo en vivo (lunes, miércoles y viernes), con clases grupales, acompañamiento y una asesoría 1:1 para tu caso. Cupo limitado. En la masterclass te doy todos los detalles y una invitación especial para quienes asistan.</p>
+  <div class="stat">Quédate hasta el final y llévate gratis mi Calculadora de Rentabilidad de Airbnb</div>
+  <p>Es la misma hoja que uso para saber en un par de minutos si una unidad deja o no: metes la renta, la tarifa por noche y la ocupación, y te dice tu ganancia estimada al mes. Te la regalo al cerrar la clase — solo para quienes siguen en vivo hasta el final.</p>
+</section>
+
+<!-- BANDA LIFESTYLE -->
+<section class="mc-life">
+  <h2>La vida que da este negocio</h2>
+  <p>Manejo mis Airbnb desde donde esté. Esto es lo que quiero enseñarte a construir.</p>
+  <div class="life-strip">
+    <img src="assets/life-torii.jpg" alt="Sofía viajando">
+    <img src="assets/life-temple.jpg" alt="Sofía viajando">
+    <img src="assets/life-sushi.jpg" alt="Sofía viajando">
+    <img src="assets/life-vino.jpg" alt="Sofía viajando">
+  </div>
 </section>
 
 <!-- REGISTRO -->
@@ -272,10 +396,6 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
     <details class="faq-item">
       <summary>¿Va a quedar grabada?<span class="pm"></span></summary>
       <div class="faq-a">Es en vivo para que puedas preguntarme directamente. Si te registras y no puedes entrar, te aviso por correo si comparto la repetición por tiempo limitado.</div>
-    </details>
-    <details class="faq-item">
-      <summary>¿Me vas a vender algo?<span class="pm"></span></summary>
-      <div class="faq-a">La clase es contenido real y útil por sí sola. Al final te cuento sobre mi bootcamp en vivo por si quieres seguir conmigo las siguientes 2 semanas — pero entrar o no es totalmente tu decisión.</div>
     </details>
   </div>
 </section>

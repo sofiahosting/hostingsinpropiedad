@@ -1,0 +1,261 @@
+{
+  "_nota": "Guias editoriales (pillar + cluster). body = lista de secciones. Tipos de seccion: {h2, p:[...]}, {h2, lista:[...]}, {callout:'...'}, {h3, p:[...]}. cta = uno de: masterclass | curso | bootcamp | asesoria.",
+  "guias": [
+    {
+      "slug":"como-empezar-airbnb-sin-propiedad",
+      "titulo":"Cómo empezar un Airbnb sin propiedad en 2026 (guía paso a paso)",
+      "og_title":"Cómo empezar un Airbnb sin ser dueño de nada",
+      "description":"La guía completa para montar tu primer Airbnb sin comprar propiedad: el modelo de arbitraje explicado paso a paso, cuánto necesitas y cómo empezar hoy.",
+      "keyword":"airbnb sin propiedad",
+      "cluster":"Empezar",
+      "lede":"No necesitas comprar un departamento para generar ingresos con Airbnb. Te explico el modelo que uso, paso a paso, para que puedas empezar aunque arranques de cero.",
+      "cta":"masterclass",
+      "body":[
+        {"h2":"¿Se puede hacer Airbnb sin ser dueño de la propiedad?","p":["Sí, y es más común de lo que crees. El modelo se llama arbitraje de rentas (o rent-to-rent): rentas un departamento con un contrato normal, lo amueblas y lo vuelves a rentar por noche en Airbnb. La diferencia entre lo que pagas de renta mensual y lo que generas por noche es tu ganancia.","La clave es que operas el inmueble con permiso del propietario. No estás comprando nada ni endeudándote con una hipoteca: estás construyendo un negocio de operación."]},
+        {"h2":"Los 6 pasos para montar tu primer Airbnb sin propiedad","lista":["Elige una ciudad y una zona con demanda real de hospedaje corto (turismo, negocios o nómadas digitales).","Corre los números ANTES de firmar nada: renta mensual, tarifa por noche estimada y ocupación esperada.","Consigue un departamento y firma un contrato que permita explícitamente la renta corta (esto es lo que más gente salta y luego lamenta).","Amueblalo de forma funcional y fotogénica, sin gastar de más.","Publica un anuncio optimizado con buenas fotos, título y precio dinámico.","Automatiza la operación (limpieza, check-in, mensajes) para que no te consuma la vida."]},
+        {"callout":"El error más caro es enamorarte de un departamento y firmar sin haber corrido los números ni pedido permiso para renta corta. Primero valida, después firmas."},
+        {"h2":"¿Cuánto dinero necesito para empezar?","p":["Depende de la ciudad, pero el arranque típico incluye: el depósito y primer mes de renta, el mobiliario básico y un pequeño colchón para los primeros gastos. En muchas ciudades de Latinoamérica se puede arrancar con una inversión moderada, mucho menor a la de comprar una propiedad.","Lo importante no es cuánto tienes, sino que los números del inmueble cierren: que la ganancia mensual proyectada justifique la inversión inicial en pocos meses."]},
+        {"h2":"¿Es legal?","p":["El arbitraje es legal cuando lo haces bien: con un contrato que autorice la renta corta, cumpliendo el reglamento del edificio y registrando el hospedaje donde la ciudad lo exija. Lo que te mete en problemas no es el modelo, sino hacerlo a escondidas del propietario o del condominio.","Cada ciudad tiene sus reglas. Antes de firmar, revisa la normativa local y el reglamento de la propiedad."]},
+        {"h2":"Por dónde empezar hoy","p":["Si te suena y quieres verlo aplicado a tu ciudad, te invito a mi masterclass gratuita: te muestro el modelo completo y cómo saber si es rentable donde vives, sin que tengas que comprar nada."]}
+      ]
+    },
+    {
+      "slug":"que-es-el-arbitraje-de-airbnb",
+      "titulo":"¿Qué es el arbitraje de Airbnb? (rent-to-rent explicado)",
+      "og_title":"¿Qué es el arbitraje de Airbnb?",
+      "description":"El arbitraje de Airbnb o rent-to-rent te permite generar ingresos con rentas cortas sin comprar propiedad. Te explico cómo funciona, cuánto se gana y sus riesgos.",
+      "keyword":"arbitraje de airbnb",
+      "cluster":"Conceptos",
+      "lede":"El arbitraje de Airbnb es la forma de entrar al negocio de las rentas cortas sin comprar un solo inmueble. Aquí te explico exactamente cómo funciona.",
+      "cta":"masterclass",
+      "body":[
+        {"h2":"Definición sencilla","p":["El arbitraje de Airbnb (en inglés, rental arbitrage o rent-to-rent) consiste en rentar una propiedad a largo plazo y subarrendarla legalmente por noche en plataformas como Airbnb o Booking, con autorización del propietario.","Tú no eres el dueño: eres el operador. Ganas la diferencia entre la renta mensual fija que pagas y los ingresos que genera el inmueble por noche."]},
+        {"h2":"Un ejemplo con números","p":["Imagina un departamento cuya renta mensual es de 500 dólares. Amueblado y bien operado, lo rentas a 60 dólares la noche. Si logras 20 noches ocupadas al mes, generas 1,200 dólares. Después de restar renta, limpieza, servicios y comisiones, te queda una ganancia mensual atractiva.","Los números cambian según la ciudad y la ocupación, por eso el paso más importante siempre es correrlos antes de firmar."]},
+        {"h2":"¿Por qué funciona?","lista":["El propietario recibe una renta estable y garantizada, muchas veces mejor que buscar inquilinos tradicionales.","Tú accedes a un activo que genera ingresos sin comprarlo ni endeudarte.","La plataforma (Airbnb) te da la demanda y el sistema de pagos."]},
+        {"h2":"Riesgos que debes conocer","p":["No todo es color de rosa. Si la ocupación baja, sigues pagando la renta fija. Por eso eliges bien la zona y no firmas inmuebles que no cierren en números. También necesitas el permiso del propietario y cumplir la regulación local: hacerlo a escondidas es el camino rápido a perder el contrato.","Bien hecho, es un negocio de bajo capital y alto control. Mal hecho, es una fuente de dolores de cabeza."]},
+        {"h2":"¿Quieres verlo aplicado a tu ciudad?","p":["En mi masterclass gratuita te enseño a evaluar si el arbitraje es rentable donde vives y cómo dar el primer paso sin arriesgar de más."]}
+      ]
+    },
+    {
+      "slug":"como-conseguir-departamentos-para-airbnb",
+      "titulo":"Cómo convencer a un propietario de rentarte para Airbnb",
+      "og_title":"Cómo conseguir departamentos para Airbnb",
+      "description":"La parte que más asusta del arbitraje: conseguir el departamento. Te comparto cómo presentar la propuesta a un propietario para que te diga que sí.",
+      "keyword":"conseguir departamento para airbnb",
+      "cluster":"Empezar",
+      "lede":"Conseguir el inmueble es el paso que más frena a la gente. La verdad es que muchos propietarios prefieren tu propuesta a un inquilino tradicional, si sabes presentarla.",
+      "cta":"masterclass",
+      "body":[
+        {"h2":"Cambia el enfoque: no pides un favor, ofreces un trato","p":["El propietario quiere tres cosas: que le paguen puntual, que no le maltraten el inmueble y no tener que lidiar con problemas. Tu propuesta cumple las tres: renta garantizada cada mes, mantenimiento constante (un Airbnb bien operado se limpia y revisa decenas de veces al mes) y cero gestión para él.","Cuando lo presentas así, dejas de sonar a riesgo y empiezas a sonar a solución."]},
+        {"h2":"Qué decir (y qué no)","lista":["Sé transparente: dile desde el inicio que operarás renta corta con autorización. Nunca lo ocultes.","Ofrece renta puntual y un depósito, como cualquier inquilino serio.","Muestra que te harás cargo del mobiliario, la limpieza y los servicios.","Propón dejarlo por escrito en el contrato para tranquilidad de ambos."]},
+        {"callout":"Un propietario que dice que sí con todo por escrito vale diez que dicen que sí de palabra. El contrato te protege a ti tanto como a él."},
+        {"h2":"Dónde buscar inmuebles","p":["Portales de renta, inmobiliarias, grupos locales y el clásico boca a boca funcionan. Busca departamentos amueblables en zonas con demanda de hospedaje, con reglamento de condominio que no prohíba la renta corta.","Filtra rápido: si el número no cierra o el edificio la prohíbe, sigue al siguiente. Tu tiempo vale."]},
+        {"h2":"El siguiente paso","p":["En el bootcamp te doy los guiones exactos que uso para hablar con propietarios y el contrato que uso. Si quieres el panorama completo gratis primero, empieza por la masterclass."]}
+      ]
+    },
+    {
+      "slug":"contrato-con-el-propietario-para-airbnb",
+      "titulo":"El contrato con el propietario para hacer Airbnb (qué debe incluir)",
+      "og_title":"Contrato con el propietario para Airbnb",
+      "description":"El contrato es lo que hace legal y seguro tu arbitraje de Airbnb. Te explico las cláusulas clave que debe incluir para proteger tu negocio.",
+      "keyword":"contrato airbnb propietario",
+      "cluster":"Legal",
+      "lede":"El contrato es la diferencia entre un negocio sólido y un problema esperando a pasar. Estas son las cláusulas que no pueden faltar.",
+      "cta":"bootcamp",
+      "body":[
+        {"h2":"Por qué el contrato lo es todo","p":["En el arbitraje, tu derecho a operar el inmueble nace del contrato. Si no dice claramente que puedes subarrendar por estancias cortas, estás construyendo tu negocio sobre arena.","Un buen contrato protege a las dos partes y evita el escenario más temido: que el propietario cambie de opinión cuando ya invertiste en muebles."]},
+        {"h2":"Cláusulas que debe incluir","lista":["Autorización expresa para subarrendar en estancias cortas (Airbnb, Booking, etc.).","Duración del contrato suficiente para recuperar tu inversión (idealmente 1-2 años o más).","Monto de renta, fecha de pago y depósito.","Responsabilidad de mantenimiento y servicios claramente repartida.","Condiciones de terminación y aviso previo.","Permiso para amueblar y hacer adecuaciones menores."]},
+        {"callout":"Si el propietario se niega a poner por escrito el permiso de renta corta, no es tu inmueble. Punto. Mejor perder un departamento que perder tu inversión."},
+        {"h2":"Revisa también el reglamento del condominio","p":["Aunque el propietario diga que sí, el reglamento del edificio manda. Muchos condominios permiten la renta corta, pero otros la restringen o la prohíben. Confírmalo antes de firmar, no después."]},
+        {"h2":"Plantilla y acompañamiento","p":["En el bootcamp incluyo el contrato que uso como plantilla, listo para adaptar. Es una de las herramientas que más tranquilidad da a mis alumnos."]}
+      ]
+    },
+    {
+      "slug":"cuanto-dinero-necesito-para-empezar-airbnb",
+      "titulo":"¿Cuánto dinero necesito para empezar un Airbnb sin propiedad?",
+      "og_title":"¿Cuánto necesito para empezar un Airbnb?",
+      "description":"Desglose realista de la inversión inicial para montar tu primer Airbnb por arbitraje: renta, depósito, muebles y colchón. Con rangos por ciudad.",
+      "keyword":"cuanto necesito para empezar airbnb",
+      "cluster":"Dinero",
+      "lede":"La buena noticia: empezar cuesta mucho menos que comprar una propiedad. Aquí el desglose honesto de lo que sí necesitas.",
+      "cta":"masterclass",
+      "body":[
+        {"h2":"Los cuatro rubros de tu inversión inicial","lista":["Depósito y primer mes de renta del inmueble.","Mobiliario y equipamiento (cama, sala, cocina equipada, blancos, detalles).","Servicios y altas (internet, luz, gas, limpieza inicial).","Colchón para los primeros 1-2 meses mientras despega la ocupación."]},
+        {"h2":"Rangos realistas","p":["En muchas ciudades de Latinoamérica puedes arrancar un departamento pequeño con una inversión moderada. En destinos premium o en Estados Unidos, la cifra sube por rentas y mobiliario más caros.","Lo que no cambia es la lógica: tu inversión inicial debe recuperarse con la ganancia de los primeros meses. Si un inmueble tarda demasiado en pagarse solo, no es el correcto."]},
+        {"callout":"No necesitas amueblar como revista de lujo desde el día uno. Necesitas que se vea limpio, funcional y fotogénico. El lujo llega con las ganancias."},
+        {"h2":"Cómo bajar el costo de arranque","lista":["Amuebla con proveedores mayoristas y marketplaces de segunda mano en buen estado.","Prioriza lo que sale en las fotos y lo que el huésped toca a diario.","Negocia el depósito o los primeros meses con el propietario.","Empieza con un inmueble, domina la operación y reinvierte para crecer."]},
+        {"h2":"Calcula tu caso","p":["En la masterclass te muestro cómo estimar la inversión y la ganancia para tu ciudad, para que sepas cuánto necesitas antes de mover un peso."]}
+      ]
+    },
+    {
+      "slug":"como-amueblar-airbnb-barato",
+      "titulo":"Cómo amueblar un Airbnb bonito y barato (sin verse corriente)",
+      "og_title":"Cómo amueblar un Airbnb barato",
+      "description":"Guía práctica para amueblar tu Airbnb de forma económica pero fotogénica: dónde comprar, qué priorizar y los detalles que suben tus reseñas.",
+      "keyword":"amueblar airbnb barato",
+      "cluster":"Operación",
+      "lede":"Amueblar no es gastar mucho, es gastar bien. Te comparto cómo lograr un espacio que se vea de revista sin vaciar tu presupuesto.",
+      "cta":"curso",
+      "body":[
+        {"h2":"La regla de oro: invierte donde el huésped mira y toca","p":["El huésped decide reservar por las fotos y califica por la experiencia. Por eso el presupuesto va, en este orden, a: la cama (colchón y blancos), la iluminación, los espacios que salen en las fotos y los detalles que se sienten premium (toallas, vajilla, aroma).","El resto puede ser funcional y económico sin que nadie lo note."]},
+        {"h2":"Dónde comprar sin gastar de más","lista":["Marketplaces de segunda mano para muebles grandes en buen estado.","Proveedores mayoristas para blancos, toallas y menaje de cocina.","Tiendas de decoración económica para los detalles que dan personalidad.","Compra por lotes: sale más barato y equipas parejo."]},
+        {"callout":"Unos blancos blancos impecables y buena luz hacen ver caro cualquier espacio. Manchas o focos fríos hacen ver barato hasta lo más costoso."},
+        {"h2":"El kit básico que no puede faltar","p":["Cama cómoda con blancos de repuesto, cocina equipada para preparar algo sencillo, wifi potente, buena regadera, y un rincón de trabajo (los nómadas digitales lo aman). Suma un par de detalles locales y ya destacas del promedio.","La consistencia importa más que el lujo: todo limpio, todo funcional, todo pensado para el huésped."]},
+        {"h2":"Aprende el sistema completo","p":["En mi curso te llevo del inmueble vacío al anuncio publicado, incluyendo la lista de compras y los proveedores. Empieza por ahí si quieres el paso a paso."]}
+      ]
+    },
+    {
+      "slug":"precios-dinamicos-airbnb",
+      "titulo":"Precios dinámicos en Airbnb: cómo cobrar más sin perder reservas",
+      "og_title":"Precios dinámicos en Airbnb",
+      "description":"Los precios dinámicos ajustan tu tarifa según demanda, temporada y eventos para maximizar ingresos. Te explico cómo usarlos sin quedarte vacío.",
+      "keyword":"precios dinamicos airbnb",
+      "cluster":"Operación",
+      "lede":"Cobrar siempre lo mismo deja dinero sobre la mesa. Los precios dinámicos hacen que tu tarifa suba cuando hay demanda y baje cuando hace falta llenar el calendario.",
+      "cta":"curso",
+      "body":[
+        {"h2":"¿Qué son los precios dinámicos?","p":["Es la estrategia de ajustar tu tarifa por noche según la demanda: subes en fines de semana, temporada alta, eventos y puentes; bajas en fechas flojas para no quedarte vacío. El objetivo no es cobrar lo máximo por noche, sino maximizar el ingreso total del mes.","Una noche vacía no se recupera nunca. A veces conviene bajar un poco para llenar el calendario."]},
+        {"h2":"Factores que deben mover tu precio","lista":["Temporada alta y baja de tu ciudad.","Fines de semana y puentes.","Eventos, congresos y conciertos cercanos.","Anticipación de la reserva (last minute vs. reserva anticipada).","Tu ocupación actual: si el mes va lleno, sube; si va flojo, ajusta."]},
+        {"callout":"Revisa qué cobran anuncios parecidos al tuyo en las mismas fechas. Tu competencia te dice el precio que el mercado está dispuesto a pagar."},
+        {"h2":"Herramientas que te ayudan","p":["Airbnb tiene precios inteligentes, pero suelen quedarse cortos. Existen herramientas especializadas que ajustan tu tarifa a diario según datos de demanda. Para empezar, incluso una regla manual bien pensada por temporadas ya te pone por encima del promedio."]},
+        {"h2":"Domina la estrategia completa","p":["En mi curso te enseño a fijar precios que maximizan tu ingreso mensual, no solo la tarifa por noche. Es de las palancas que más rápido mejora tus números."]}
+      ]
+    },
+    {
+      "slug":"como-conseguir-primeras-resenas-airbnb",
+      "titulo":"Cómo conseguir tus primeras reseñas en Airbnb (y arrancar con fuerza)",
+      "og_title":"Cómo conseguir tus primeras reseñas en Airbnb",
+      "description":"Sin reseñas nadie reserva, pero para tener reseñas necesitas reservas. Te explico cómo romper ese círculo y arrancar tu anuncio con buenas calificaciones.",
+      "keyword":"primeras resenas airbnb",
+      "cluster":"Operación",
+      "lede":"El arranque es el momento más delicado: sin reseñas cuesta más que reserven. Estas son las tácticas para conseguir tus primeras calificaciones de 5 estrellas.",
+      "cta":"masterclass",
+      "body":[
+        {"h2":"El círculo del principiante (y cómo romperlo)","p":["Al principio nadie te ha calificado, así que los huéspedes dudan. Para romperlo, ofreces un precio de lanzamiento atractivo las primeras semanas a cambio de ganar ocupación y reseñas. No es regalar: es invertir en tu reputación.","Cada reseña de 5 estrellas al inicio vale oro: sube tu posición en el buscador y baja las dudas del siguiente huésped."]},
+        {"h2":"Cómo asegurar una reseña excelente","lista":["Sé impecable con la limpieza: es la causa número uno de malas calificaciones.","Comunica rápido y con calidez antes, durante y después de la estancia.","Da un detalle de bienvenida que sorprenda (cuesta poco, se recuerda mucho).","Facilita el check-in al máximo (instrucciones claras, acceso sencillo).","Pide la reseña con amabilidad al final, agradeciendo la visita."]},
+        {"callout":"Los primeros 5-10 huéspedes definen el rumbo de tu anuncio. Trátalos como si de ellos dependiera todo tu negocio, porque en buena medida así es."},
+        {"h2":"Qué evitar","p":["No infles expectativas en el anuncio que luego no cumples: la decepción se paga con estrellas. Promete lo que sí vas a entregar y luego supera esa promesa con los detalles."]},
+        {"h2":"El arranque bien hecho","p":["En la masterclass te muestro cómo lanzar tu anuncio para conseguir reseñas rápido y posicionarte por encima de la competencia local."]}
+      ]
+    },
+    {
+      "slug":"errores-comunes-al-empezar-airbnb",
+      "titulo":"7 errores comunes al empezar un Airbnb (y cómo evitarlos)",
+      "og_title":"Errores comunes al empezar un Airbnb",
+      "description":"Los errores que hacen que un Airbnb no sea rentable: firmar sin correr números, ignorar la regulación, mala limpieza y más. Aprende de ellos antes de cometerlos.",
+      "keyword":"errores al empezar airbnb",
+      "cluster":"Empezar",
+      "lede":"Casi todos los que fracasan cometen los mismos errores. Si los conoces de antemano, te ahorras dinero, tiempo y dolores de cabeza.",
+      "cta":"masterclass",
+      "body":[
+        {"h2":"Los 7 errores que más veo","lista":["Firmar el contrato sin haber corrido los números del inmueble.","Operar renta corta sin permiso del propietario o contra el reglamento del edificio.","Elegir la zona por gusto propio y no por demanda de hospedaje.","Amueblar caro donde no se nota y barato donde sí se nota.","Descuidar la limpieza: el asesino número uno de las reseñas.","Poner un precio fijo todo el año en vez de precios dinámicos.","Intentar hacerlo todo a mano en vez de automatizar la operación."]},
+        {"callout":"El 90% de los problemas se evitan con dos hábitos: correr los números antes de firmar y poner todo por escrito con el propietario."},
+        {"h2":"Por qué caemos en ellos","p":["Casi siempre por prisa y por entusiasmo. Encontramos un departamento bonito y queremos cerrarlo ya. Pero el negocio no se gana en la emoción, se gana en la validación previa. Un día extra revisando números te ahorra meses de arrepentimiento."]},
+        {"h2":"Aprende del camino ya recorrido","p":["En la masterclass te comparto los errores que yo misma cometí para que tú no tengas que pagarlos. Es la forma más barata de aprender."]}
+      ]
+    },
+    {
+      "slug":"es-legal-el-arbitraje-de-airbnb",
+      "titulo":"¿Es legal el arbitraje de Airbnb? Lo que debes saber",
+      "og_title":"¿Es legal el arbitraje de Airbnb?",
+      "description":"El arbitraje de Airbnb es legal cuando se hace bien: con permiso del propietario, cumpliendo el reglamento y la regulación local. Te explico cómo hacerlo en regla.",
+      "keyword":"es legal el arbitraje de airbnb",
+      "cluster":"Legal",
+      "lede":"La pregunta que todos se hacen. La respuesta corta: sí, es legal, siempre que lo hagas de frente y en regla. Aquí lo que eso significa.",
+      "cta":"bootcamp",
+      "body":[
+        {"h2":"Legal cuando cumples tres cosas","lista":["Tienes permiso por escrito del propietario para subarrendar en estancias cortas.","Respetas el reglamento del condominio o edificio.","Cumples la regulación de hospedaje de tu ciudad (registro, impuestos, permisos)."]},
+        {"h2":"Qué te mete en problemas","p":["Lo ilegal no es el modelo, son los atajos: operar sin que el dueño lo sepa, ir contra un reglamento que prohíbe la renta corta, o no registrar el hospedaje donde la ley lo exige. Eso sí te puede costar el contrato o una multa.","Hacerlo en regla no solo te protege: también te da tranquilidad para escalar."]},
+        {"callout":"Ninguna ganancia vale operar a escondidas. Un negocio construido de frente dura; uno construido con atajos se cae al primer problema."},
+        {"h2":"La regulación cambia por ciudad","p":["Cada país, estado y municipio tiene sus reglas, y algunas cambian con el tiempo. Antes de firmar, revisa la normativa local vigente y el reglamento de la propiedad. En mis páginas por ciudad incluyo una nota sobre la regulación de cada destino."]},
+        {"h2":"Acompañamiento para hacerlo bien","p":["En el bootcamp te ayudo a montar tu operación en regla desde el día uno, con el contrato y la checklist legal incluidos. Esto no sustituye asesoría jurídica local, pero te da la base para hacerlo correctamente."]}
+      ]
+    },
+    {
+      "slug":"como-calcular-la-rentabilidad-de-un-airbnb",
+      "titulo":"Cómo calcular la rentabilidad de un Airbnb (fórmula y ejemplo)",
+      "og_title":"Cómo calcular la rentabilidad de un Airbnb",
+      "description":"Aprende a calcular si un Airbnb será rentable antes de firmar: ingresos por ocupación, gastos, ganancia neta y retorno de tu inversión. Con ejemplo paso a paso.",
+      "keyword":"calcular rentabilidad airbnb",
+      "cluster":"Dinero",
+      "lede":"Antes de firmar cualquier inmueble, tienes que saber si dará dinero. Aquí está la fórmula exacta que uso para evaluar cada departamento.",
+      "cta":"masterclass",
+      "body":[
+        {"h2":"La fórmula, en simple","p":["Rentabilidad mensual = (tarifa por noche × noches ocupadas) − (renta + servicios + limpieza + comisiones + otros gastos). Si el resultado es una ganancia sana y consistente, el inmueble sirve. Si apenas empata, no vale el riesgo.","La clave está en estimar bien dos cosas: la tarifa por noche realista y la ocupación esperada de tu zona."]},
+        {"h2":"Ejemplo paso a paso","lista":["Tarifa por noche estimada: 60 USD.","Ocupación esperada: 20 noches al mes → ingreso: 1,200 USD.","Renta mensual: 500 USD.","Servicios (luz, agua, internet, gas): 120 USD.","Limpieza y suministros: 150 USD.","Comisiones de plataforma: alrededor del 3-15% según el caso.","Ganancia neta aproximada: varios cientos de dólares al mes."]},
+        {"callout":"Estima siempre en escenario conservador. Si los números cierran con ocupación baja, cuando la ocupación suba será una excelente noticia, no una necesidad para sobrevivir."},
+        {"h2":"El dato más difícil: la ocupación","p":["Para estimar ocupación, mira anuncios parecidos al tuyo en la misma zona y observa qué tan llenos están sus calendarios. Esa es tu mejor referencia del mundo real. En mis páginas por ciudad incluyo rangos orientativos de tarifa y ocupación por destino."]},
+        {"h2":"Calcula tu caso gratis","p":["En la masterclass regalo una calculadora de rentabilidad y te enseño a usarla para tu ciudad. Así decides con números, no con corazonadas."]}
+      ]
+    },
+    {
+      "slug":"cohost-vs-arbitraje-airbnb",
+      "titulo":"Cohost vs. arbitraje de Airbnb: ¿cuál te conviene?",
+      "og_title":"Cohost vs. arbitraje de Airbnb",
+      "description":"Dos formas de ganar con Airbnb sin ser dueño: cohosting (administrar para otros) y arbitraje (rentar y subarrendar). Comparo inversión, riesgo y ganancia de cada una.",
+      "keyword":"cohost vs arbitraje airbnb",
+      "cluster":"Conceptos",
+      "lede":"Hay dos caminos para ganar con Airbnb sin comprar propiedad. Te ayudo a elegir el que va contigo según tu capital, tiempo y tolerancia al riesgo.",
+      "cta":"asesoria",
+      "body":[
+        {"h2":"Cohosting: administras para otros","p":["Como cohost, operas el Airbnb de un dueño a cambio de un porcentaje de los ingresos (normalmente 15-25%). No inviertes en muebles ni pagas renta: pones tu tiempo y tu sistema. Es ideal para empezar con poco o nada de capital.","La contra: tu ganancia por propiedad es menor y dependes de que el dueño mantenga el acuerdo."]},
+        {"h2":"Arbitraje: rentas y subarriendas","p":["En el arbitraje pones capital inicial (renta, depósito, muebles) y te quedas con toda la ganancia por noche menos tus costos. Ganas más por inmueble, pero asumes el riesgo de la renta fija cada mes.","Es ideal si quieres máximo control y mayores márgenes, y puedes cubrir la inversión inicial."]},
+        {"callout":"Muchos empiezan como cohost para aprender la operación sin arriesgar capital, y luego pasan al arbitraje cuando dominan el negocio. No son excluyentes."},
+        {"h2":"Tabla rápida de decisión","lista":["Poco capital, quiero aprender: empieza por cohosting.","Tengo capital y quiero márgenes altos: arbitraje.","Quiero ingreso sin operar yo: contrata a un cohost para tu arbitraje.","No sé por dónde: agenda una asesoría y lo definimos según tu caso."]},
+        {"h2":"Definamos tu camino","p":["Si quieres que revisemos juntos cuál te conviene según tu situación, mi asesoría 1:1 es justo para eso."]}
+      ]
+    },
+    {
+      "slug":"fotos-que-venden-airbnb",
+      "titulo":"Fotos que venden: cómo fotografiar tu Airbnb para llenar el calendario",
+      "og_title":"Fotos que venden tu Airbnb",
+      "description":"Las fotos deciden si reservan tu Airbnb o el de al lado. Te comparto cómo lograr fotos que aumentan clics y reservas, aunque uses el celular.",
+      "keyword":"fotos airbnb que venden",
+      "cluster":"Operación",
+      "lede":"El huésped decide en segundos, mirando fotos. Un anuncio con fotos mediocres se queda vacío aunque el espacio sea hermoso. Aquí cómo lograr que las tuyas vendan.",
+      "cta":"curso",
+      "body":[
+        {"h2":"La primera foto lo es casi todo","p":["La foto de portada define si hacen clic o siguen de largo. Debe ser la más luminosa y atractiva de todo el anuncio: normalmente la sala o la recámara bien iluminada, ordenada y cálida.","Si la portada no enamora, el resto de las fotos casi nadie las ve."]},
+        {"h2":"Reglas para fotos que venden","lista":["Fotografía con luz natural, de día, con cortinas abiertas.","Ordena y despeja: menos objetos, más sensación de espacio.","Toma horizontal y a la altura del pecho para dar amplitud.","Muestra todos los espacios, incluyendo cocina y baño impecables.","Suma fotos de detalles que dan calidez (café listo, toallas dobladas, la vista)."]},
+        {"callout":"No necesitas cámara profesional. Un celular moderno, buena luz natural y un espacio ordenado superan a una cámara cara en un cuarto oscuro y desordenado."},
+        {"h2":"El orden de las fotos importa","p":["Cuenta una historia: empieza por lo más atractivo, lleva al huésped por el espacio como si lo recorriera, y cierra con los detalles y la ubicación. Un buen orden mantiene el interés hasta el botón de reservar."]},
+        {"h2":"Aprende a crear anuncios que llenan","p":["En mi curso te enseño a montar el anuncio completo: fotos, título, descripción y precio, para que destaques en tu zona desde el primer día."]}
+      ]
+    },
+    {
+      "slug":"checklist-para-abrir-tu-primer-airbnb",
+      "titulo":"Checklist para abrir tu primer Airbnb (de cero a publicado)",
+      "og_title":"Checklist para abrir tu primer Airbnb",
+      "description":"La lista completa de pasos para abrir tu primer Airbnb sin olvidar nada: validación, contrato, muebles, servicios, anuncio y automatización.",
+      "keyword":"checklist primer airbnb",
+      "cluster":"Empezar",
+      "lede":"Abrir tu primer Airbnb tiene muchas partes móviles. Esta checklist te asegura no olvidar ningún paso crítico, en orden.",
+      "cta":"bootcamp",
+      "body":[
+        {"h2":"Antes de firmar (validación)","lista":["Elegiste una zona con demanda real de hospedaje.","Corriste los números: renta, tarifa por noche y ocupación estimada cierran.","Confirmaste que el reglamento del edificio permite renta corta.","Negociaste un contrato que autoriza el subarriendo corto por escrito."]},
+        {"h2":"Montaje del inmueble","lista":["Amueblaste priorizando lo que sale en fotos y lo que el huésped toca.","Diste de alta internet potente, luz, agua y gas.","Equipaste cocina, blancos, toallas y kit de bienvenida.","Hiciste una limpieza profunda inicial."]},
+        {"h2":"Publicación del anuncio","lista":["Tomaste fotos luminosas y ordenadas, con una portada que enamora.","Escribiste título y descripción claros y atractivos.","Configuraste precios por temporada (dinámicos).","Definiste reglas de la casa, check-in y políticas."]},
+        {"h2":"Operación y automatización","lista":["Agendaste un servicio de limpieza confiable entre estancias.","Preparaste mensajes automáticos de bienvenida e instrucciones.","Configuraste el check-in autónomo (caja de llaves o cerradura inteligente).","Definiste cómo pedirás y gestionarás las reseñas."]},
+        {"callout":"Guarda esta checklist y ve palomeando. Cuando puedas marcar todo, estás listo para recibir a tu primer huésped con confianza."},
+        {"h2":"Hazlo acompañada, no a ciegas","p":["En el bootcamp recorremos esta checklist juntos, paso a paso y en vivo, para que abras tu primer Airbnb sin atorarte en el camino."]}
+      ]
+    },
+    {
+      "slug":"como-automatizar-tu-airbnb",
+      "titulo":"Cómo automatizar tu Airbnb para que no te consuma la vida",
+      "og_title":"Cómo automatizar tu Airbnb",
+      "description":"Un Airbnb bien automatizado genera ingresos casi en piloto: limpieza, check-in, mensajes y precios. Te explico qué automatizar para recuperar tu tiempo.",
+      "keyword":"automatizar airbnb",
+      "cluster":"Operación",
+      "lede":"El objetivo no es comprarte un empleo, es construir un ingreso. Automatizar bien es lo que convierte tu Airbnb en un negocio que trabaja para ti.",
+      "cta":"curso",
+      "body":[
+        {"h2":"Qué se puede automatizar (casi todo)","lista":["Check-in con caja de llaves o cerradura inteligente, sin que tengas que ir.","Mensajes automáticos: confirmación, instrucciones, recordatorios y despedida.","Limpieza coordinada con un equipo de confianza tras cada salida.","Precios con reglas o herramientas que ajustan tarifa a diario.","Reposición de suministros con listas y proveedores fijos."]},
+        {"h2":"El sistema de mensajes es tu mejor empleado","p":["Un buen set de mensajes automáticos responde el 80% de las dudas antes de que las hagan, mejora la experiencia y sube tus reseñas, sin que tengas que estar pegado al teléfono. Se configura una vez y trabaja para siempre."]},
+        {"callout":"Automatizar no es despersonalizar. Es responder rápido y bien siempre, con detalles cálidos donde de verdad importan."},
+        {"h2":"El equipo que necesitas","p":["Con una persona de limpieza confiable y, más adelante, un cohost o co-anfitrión, puedes operar varios inmuebles sin vivir esclavo de la operación. Así es como se pasa de un Airbnb a un pequeño negocio."]},
+        {"h2":"Monta tu sistema completo","p":["En mi curso te doy las plantillas de mensajes y el sistema de operación que uso para que tu Airbnb funcione casi solo desde el inicio."]}
+      ]
+    }
+  ]
+}

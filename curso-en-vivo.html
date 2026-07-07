@@ -230,6 +230,12 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   .bio-badge.b2{top:46%;right:-8px;background:var(--gold-dark);}
   .bio-badge.b3{bottom:12%;left:-4px;background:var(--rose);}
   @media(max-width:700px){.bio-grid{grid-template-columns:1fr;gap:26px;}.bio-photo{max-width:300px;margin:0 auto;}.bio-badge{font-size:11.5px;padding:6px 12px;}}
+  .hero-photo{width:100%;max-width:240px;margin:1.6rem auto 0;display:block;}
+  .life-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:920px;margin:0 auto;}
+  .life-grid figure{margin:0;position:relative;border-radius:16px;overflow:hidden;box-shadow:0 12px 30px rgba(44,40,32,.12);}
+  .life-grid img{width:100%;height:240px;object-fit:cover;display:block;}
+  .life-grid figcaption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(35,75,107,.8));color:#fff;font-size:12.5px;font-weight:600;padding:22px 12px 10px;}
+  @media(max-width:640px){.life-grid{grid-template-columns:1fr 1fr;gap:10px;}.life-grid img{height:175px;}}
   .mobile-cta-bar{display:none;}
   @media(max-width:768px){
     body{padding-bottom:74px;}
@@ -271,6 +277,7 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   <p class="cv-price-line">Desde <strong>$497 USD</strong> · con opción de asesoría 1:1 · cupo limitado</p>
   <a href="#inscripcion" class="cv-cta">Quiero mi lugar →</a>
   <p class="cv-cta-note">Cupo limitado · arranca el lunes 3 de agosto</p>
+  <img src="assets/sofia-navy.png" alt="Sofía Retif" class="hero-photo">
 </section>
 
 <!-- ¿TE SUENA ESTO? (dolor) -->
@@ -467,6 +474,18 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
       <span class="bio-badge b2">+120 alumnos</span>
       <span class="bio-badge b3">&lt;10 h/semana</span>
     </div>
+  </div>
+</section>
+
+<!-- LIFESTYLE / LIBERTAD -->
+<section class="cv-sec" style="background:var(--white);">
+  <h2>La libertad que te da este negocio</h2>
+  <p class="sub">Trabajo menos de 10 horas a la semana y vivo viajando. Esto es lo que quiero enseñarte a construir.</p>
+  <div class="life-grid">
+    <figure><img src="assets/life-torii.jpg" alt="Sofía en Japón" loading="lazy"><figcaption>Kioto, Japón</figcaption></figure>
+    <figure><img src="assets/life-nasa.jpg" alt="Sofía en Houston" loading="lazy"><figcaption>Houston, USA</figcaption></figure>
+    <figure><img src="assets/life-vino.jpg" alt="Sofía en un viñedo" loading="lazy"><figcaption>Tiempo para mí 🍷</figcaption></figure>
+    <figure><img src="assets/life-temple.jpg" alt="Sofía viajando" loading="lazy"><figcaption>Santiago, Chile</figcaption></figure>
   </div>
 </section>
 

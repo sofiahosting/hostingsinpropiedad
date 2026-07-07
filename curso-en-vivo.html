@@ -213,6 +213,13 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   .pills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:720px;margin:0 auto;}
   .pill{background:#fff;border:2px solid var(--sky-light);border-radius:14px;padding:15px 12px;text-align:center;font-size:14px;font-weight:600;color:var(--sky-deep);line-height:1.3;}
   @media(max-width:600px){.pills-grid{grid-template-columns:repeat(2,1fr);gap:10px;}.pill{font-size:13px;padding:13px 10px;}}
+  .proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:900px;margin:0 auto;}
+  .proc-card{background:#fff;border:1px solid var(--beige-dark);border-radius:16px;padding:1.4rem 1.1rem;text-align:center;box-shadow:0 10px 30px rgba(44,40,32,.05);}
+  .proc-num{width:34px;height:34px;border-radius:50%;background:var(--sky-deep);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto .7rem;font-size:15px;}
+  .proc-card .pic{font-size:26px;margin-bottom:.4rem;}
+  .proc-card b{display:block;font-size:15px;color:var(--dark);margin-bottom:.3rem;}
+  .proc-card p{font-size:13px;color:var(--mid);line-height:1.5;font-weight:300;}
+  @media(max-width:640px){.proc-grid{grid-template-columns:repeat(2,1fr);gap:12px;}}
   .mobile-cta-bar{display:none;}
   @media(max-width:768px){
     body{padding-bottom:74px;}
@@ -272,6 +279,7 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
 
 <!-- HIGHLIGHTS / BOTONES -->
 <section class="cv-sec" style="padding-top:1rem;padding-bottom:1rem;">
+  <h2 style="margin-bottom:1.4rem;">Esto es lo que te llevas</h2>
   <div class="pills-grid">
     <div class="pill">🎥 6 clases en vivo</div>
     <div class="pill">🎁 Kit de Arranque</div>
@@ -403,9 +411,21 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   <div class="cta-mid"><a href="#inscripcion" class="cv-cta">Quiero todo esto →</a></div>
 </section>
 
-<!-- LOGÍSTICA -->
+<!-- CÓMO FUNCIONA / PROCESO EN 4 PASOS -->
 <section class="cv-sec">
-  <h2>Cómo funciona</h2>
+  <h2>¿Cómo funciona? En 4 pasos</h2>
+  <p class="sub">Del "quiero" a tu Airbnb en marcha, así de simple.</p>
+  <div class="proc-grid">
+    <div class="proc-card"><div class="proc-num">1</div><div class="pic">📝</div><b>Aparta tu lugar</b><p>Reservas con tu pago seguro. Cupos limitados.</p></div>
+    <div class="proc-card"><div class="proc-num">2</div><div class="pic">📲</div><b>Recibe tu acceso</b><p>Te llega todo por WhatsApp y correo: enlace, calendario y materiales.</p></div>
+    <div class="proc-card"><div class="proc-num">3</div><div class="pic">💻</div><b>Conéctate en vivo</b><p>6 clases de 2 h por Google Meet, donde montas tu Airbnb paso a paso.</p></div>
+    <div class="proc-card"><div class="proc-num">4</div><div class="pic">🚀</div><b>Lánzalo con acompañamiento</b><p>Implementas con el grupo todo el mes y tu asesoría 1:1.</p></div>
+  </div>
+</section>
+
+<!-- LOGÍSTICA / DETALLES -->
+<section class="cv-sec">
+  <h2>Fechas y detalles</h2>
   <!-- EDITA AQUÍ días, horario y fechas -->
   <div class="logi">
     <div class="logi-row"><div class="ic">📅</div><div><b>Tres clases en vivo por semana</b><p>6 sesiones de <strong>2 horas (12 horas en total)</strong>: <strong>lunes, miércoles y viernes</strong> de [EDITA: hora, ej. 7:00–9:00 pm CDMX]. Si no puedes en vivo, te queda la grabación.</p></div></div>

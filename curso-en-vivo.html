@@ -201,6 +201,16 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   .tier.vip .cv-cta{background:#fff;color:var(--sky-deeper);}
   .tier.vip .cv-cta:hover{background:var(--sky-pale);}
   @media(max-width:680px){ .tiers{grid-template-columns:1fr;} }
+  .cur-toggle{display:flex;justify-content:center;gap:6px;max-width:520px;margin:0 auto 1.8rem;background:var(--beige);border:1px solid var(--beige-dark);border-radius:50px;padding:5px;}
+  .cur-btn{flex:1;border:none;background:transparent;font-family:inherit;font-size:13.5px;font-weight:600;color:var(--mid);padding:11px 12px;border-radius:50px;cursor:pointer;transition:background .2s,color .2s;white-space:nowrap;}
+  .cur-btn.active{background:var(--sky-deep);color:#fff;box-shadow:0 6px 16px rgba(47,97,136,.22);}
+  @media(max-width:480px){ .cur-btn{font-size:12px;padding:10px 6px;} }
+  .pay-alt{display:block;margin-top:11px;font-size:13px;text-decoration:none;font-weight:600;color:var(--sky-deep);}
+  .tier.vip .pay-alt{color:#E6C57C;}
+  .wa-float{position:fixed;bottom:20px;right:20px;z-index:60;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;padding:12px 20px 12px 15px;border-radius:50px;text-decoration:none;font-weight:600;font-size:14.5px;box-shadow:0 10px 26px rgba(37,211,102,.42);transition:transform .2s;}
+  .wa-float:hover{transform:translateY(-2px);}
+  .wa-float svg{width:26px;height:26px;fill:#fff;flex-shrink:0;}
+  @media(max-width:600px){ .wa-float{padding:15px;} .wa-float .wa-label{display:none;} }
 
   /* FAQ */
   .faq-list{max-width:680px;margin:0 auto;}
@@ -266,7 +276,7 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   <a href="index.html" class="brand">Sofía <span>Retif</span></a>
   <nav class="header-nav">
     <a href="index.html" class="navlink">Inicio</a>
-    <a href="aprende-conmigo.html" class="navlink">Trabaja conmigo</a>
+    <a href="aprende-conmigo.html" class="navlink">Aprende conmigo</a>
     <a href="faq.html" class="navlink">FAQ</a>
     <a href="contacto.html" class="navlink">Contacto</a>
     <a href="#inscripcion" class="header-cta">Apartar mi lugar →</a>
@@ -464,10 +474,10 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   <h2>Fechas y detalles</h2>
   <!-- EDITA AQUÍ días, horario y fechas -->
   <div class="logi">
-    <div class="logi-row"><div class="ic">📅</div><div><b>Tres clases en vivo por semana</b><p>6 sesiones de <strong>2 horas (12 horas en total)</strong>: <strong>lunes, miércoles y viernes</strong> de [EDITA: hora, ej. 7:00–9:00 pm CDMX]. Si no puedes en vivo, te queda la grabación.</p></div></div>
+    <div class="logi-row"><div class="ic">📅</div><div><b>Tres clases en vivo por semana</b><p>6 sesiones de <strong>2 horas (12 horas en total)</strong>: <strong>lunes, miércoles y viernes</strong> de 10:00 a 12:00 pm (CDMX). Si no puedes en vivo, te queda la grabación.</p></div></div>
     <div class="logi-row"><div class="ic">💻</div><div><b>Por Google Meet</b><p>Te llega el enlace y el calendario al inscribirte. Solo necesitas internet.</p></div></div>
     <div class="logi-row"><div class="ic">👩‍💻</div><div><b>Tu asesoría 1:1 al cierre (plan Completo + 1:1)</b><p>Si eliges el plan con 1:1, al terminar las clases agendamos tu sesión privada para revisar tu caso y tus próximos pasos.</p></div></div>
-    <div class="logi-row"><div class="ic">🗓️</div><div><b>Próxima generación</b><p>Arranca el <strong>lunes 3 de agosto</strong> y termina el viernes 14. Cupo limitado a [EDITA: 12] personas para poder acompañarte de cerca.</p></div></div>
+    <div class="logi-row"><div class="ic">🗓️</div><div><b>Próxima generación</b><p>Arranca el <strong>lunes 3 de agosto</strong> y termina el viernes 14. Dos semanas intensivas conmigo, con acompañamiento cercano.</p></div></div>
     <div class="logi-row"><div class="ic">💳</div><div><b>Pago seguro</b><p>Reservas tu lugar desde esta página. Puedes pagar en una sola exhibición o en parcialidades.</p></div></div>
   </div>
 </section>
@@ -479,8 +489,8 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   <div class="bio-grid">
     <div class="bio-text">
       <p>Soy <strong>Sofía Retif</strong> y vivo del arbitraje de Airbnb: rento propiedades que no son mías, las pongo en Airbnb, y lo hago trabajando <strong>menos de 10 horas a la semana</strong>.</p>
-      <p>Pero no empezó así. [EDITA: tu punto de partida, ej. "Estaba cansada de cambiar mi tiempo por un sueldo, sin libertad."] Arranqué con un solo departamento, con miedo y sin saber si iba a funcionar. Funcionó — y de ahí no paré.</p>
-      <p>Hoy opero <strong>[EDITA: X] unidades</strong>, viajo por el mundo mientras el negocio corre casi solo, y —lo que más me llena— he acompañado a <strong>+120 personas</strong> en Latinoamérica a montar su primer Airbnb desde cero.</p>
+      <p>Pero no empezó así. Trabajaba en una oficina, sin libertad para viajar ni para pasar tiempo con mi familia, y con ese techo que tienen casi todos los trabajos: por más ganas que le echaras, hasta ahí llegabas. Salí de la escuela sabiendo que quería emprender, pero no sabía en qué. Y siempre tuve un sueño: tener mi propio hotel — y resultó que podía cumplirlo sin comprar ninguno. Arranqué con un solo departamento, con miedo y sin saber si iba a funcionar. Funcionó — y de ahí no paré.</p>
+      <p>Hoy opero <strong>30+ propiedades</strong>, viajo por el mundo mientras el negocio corre casi solo, y —lo que más me llena— he acompañado a <strong>+120 personas</strong> en Latinoamérica a montar su primer Airbnb desde cero.</p>
       <p>En este bootcamp te llevo de la mano por el <strong>mismo sistema que yo uso</strong>, en vivo y aplicado a tu caso. No es teoría: es lo que hago todos los días.</p>
     </div>
     <div class="bio-photo">
@@ -521,25 +531,34 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
 <section class="cv-sec" id="inscripcion">
   <h2>Elige cómo quieres entrar</h2>
   <p class="sub">Dos opciones para esta generación · cupo limitado.</p>
-  <!-- EDITA AQUÍ los precios y pega tus 2 Payment Links de Stripe -->
+  <!-- Toggle de moneda: MXN (Stripe, 12 MSI) · USD (Stripe, contado o 3 pagos) -->
+  <div class="cur-toggle">
+    <button type="button" class="cur-btn" data-cur="usd">🌎 Pago internacional (USD)</button>
+    <button type="button" class="cur-btn" data-cur="mxn">🇲🇽 Pago en pesos (MXN)</button>
+  </div>
+  <!-- EDITA: precios en data-mxn / data-usd · pega links de Stripe:
+       data-mxn-href = link EN PESOS con meses sin intereses activados
+       data-usd-href = link en USD de contado (1 pago)
+       .pay-alt data-href = link en USD de 3 pagos (suscripción de 3 cobros)
+       Reemplaza los PEGA_LINK_... -->
   <div class="tiers">
     <div class="tier alone">
       <div class="tname">Completo</div>
-      <div class="tprice">$497 <small>USD</small></div>
-      <div class="tnote">≈ $8,900 MXN · o en <strong>12 meses de ~$742 MXN</strong> (tarjetas de México)</div>
+      <div class="tprice" data-mxn="$7,997 <small>MXN</small>" data-usd="$497 <small>USD</small>"></div>
+      <div class="tnote" data-mxn="Pago en pesos · hasta 12 meses sin intereses con tarjeta de México" data-usd="Pago internacional · con tarjeta desde cualquier país"></div>
       <ul>
         <li>Las 6 clases en vivo (2 semanas)</li>
         <li>Grabaciones de todo</li>
         <li>Grupo privado · acompañamiento todo el mes</li>
         <li>🎁 Kit de Arranque de regalo (plantillas)</li>
       </ul>
-      <a href="https://buy.stripe.com/5kQ4gAgD93Sih2m85m6c001" target="_blank" rel="noopener" class="cv-cta" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Quiero esta opción →</a>
+      <a href="https://buy.stripe.com/5kQ4gAgD93Sih2m85m6c001" data-mxn-href="https://buy.stripe.com/00w6oI5YvgF4h2mclC6c006" data-usd-href="https://buy.stripe.com/5kQ4gAgD93Sih2m85m6c001" target="_blank" rel="noopener" class="cv-cta" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Quiero esta opción →</a>
     </div>
     <div class="tier vip">
       <div class="pop">★ Más elegido</div>
       <div class="tname">Completo + 1:1</div>
-      <div class="tprice">$597 <small>USD</small></div>
-      <div class="tnote">≈ $10,700 MXN · o en <strong>12 meses de ~$895 MXN</strong> (tarjetas de México)</div>
+      <div class="tprice" data-mxn="$9,997 <small>MXN</small>" data-usd="$597 <small>USD</small>"></div>
+      <div class="tnote" data-mxn="Pago en pesos · hasta 12 meses sin intereses con tarjeta de México" data-usd="Pago internacional · con tarjeta desde cualquier país"></div>
       <ul>
         <li>Todo lo del plan Completo</li>
         <li>Una asesoría 1:1 conmigo al cierre</li>
@@ -547,11 +566,37 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
         <li>Tu plan de acción por escrito</li>
         <li>Solo 6 lugares con 1:1</li>
       </ul>
-      <a href="https://buy.stripe.com/3cI6oIdqXgF4h2m4Ta6c002" target="_blank" rel="noopener" class="cv-cta" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Quiero el Completo + 1:1 →</a>
+      <a href="https://buy.stripe.com/9B6aEYbiP2OebI25Xe6c003" data-mxn-href="https://buy.stripe.com/7sY6oI3QndsS3bwclC6c007" data-usd-href="https://buy.stripe.com/9B6aEYbiP2OebI25Xe6c003" target="_blank" rel="noopener" class="cv-cta" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Quiero el Completo + 1:1 →</a>
     </div>
   </div>
-  <p class="guarantee" style="text-align:center;color:var(--mid);max-width:520px;margin:1.8rem auto 0;font-size:13.5px;line-height:1.6;">🛡️ Garantía: entra a la primera clase y, si sientes que no es para ti, me escribes ese mismo día y te devuelvo tu inversión completa. · Pago seguro vía Stripe.</p>
+  <p class="guarantee" style="text-align:center;color:var(--mid);max-width:520px;margin:1.6rem auto 0;font-size:13.5px;line-height:1.6;">🛡️ Garantía: entra a la primera clase y, si sientes que no es para ti, me escribes ese mismo día y te devuelvo tu inversión completa. · Pago seguro vía Stripe.</p>
+  <p style="text-align:center;margin:1rem auto 0;font-size:14px;"><a href="https://wa.me/523314061039?text=Hola%20Sof%C3%ADa%20%F0%9F%91%8B%20Tengo%20una%20duda%20sobre%20el%20Bootcamp%3A%20Tu%20Primer%20Airbnb%20antes%20de%20inscribirme." target="_blank" rel="noopener" style="color:#1f7a43;font-weight:600;text-decoration:none;" onclick="if(window.fbq){fbq('track','Contact');}">💬 ¿Tienes dudas antes de inscribirte? Escríbeme por WhatsApp →</a></p>
 </section>
+
+<script>
+  // Toggle de moneda del bloque de inscripción
+  (function(){
+    var sec=document.getElementById('inscripcion');
+    if(!sec) return;
+    function setCur(cur){
+      sec.querySelectorAll('.cur-btn').forEach(function(b){ b.classList.toggle('active', b.dataset.cur===cur); });
+      sec.querySelectorAll('[data-'+cur+']').forEach(function(el){
+        if(el.classList.contains('tprice')||el.classList.contains('tnote')) el.innerHTML=el.dataset[cur];
+      });
+      sec.querySelectorAll('.cv-cta').forEach(function(a){
+        var h=a.dataset[cur+'Href']; if(h) a.setAttribute('href',h);
+      });
+      sec.querySelectorAll('.pay-alt').forEach(function(a){
+        if(cur==='usd'){ a.style.display='block'; if(a.dataset.href) a.setAttribute('href',a.dataset.href); }
+        else { a.style.display='none'; }
+      });
+    }
+    sec.querySelectorAll('.cur-btn').forEach(function(b){
+      b.addEventListener('click', function(){ setCur(b.dataset.cur); });
+    });
+    setCur('usd'); // arranca en internacional (USD)
+  })();
+</script>
 
 <!-- FAQ -->
 <section class="cv-sec" style="padding-top:1rem;">
@@ -587,6 +632,12 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
 <footer>
   <p>© 2026 Sofía Retif · Hosting Sin Propiedad · <a href="https://www.instagram.com/sofiahosting_" target="_blank" rel="noopener">@sofiahosting_</a> · <a href="https://www.tiktok.com/@sofiahosting" target="_blank" rel="noopener">@sofiahosting</a></p>
 </footer>
+
+<!-- Botón flotante de WhatsApp (rescata dudas de último momento) -->
+<a class="wa-float" href="https://wa.me/523314061039?text=Hola%20Sof%C3%ADa%20%F0%9F%91%8B%20Tengo%20una%20duda%20sobre%20el%20Bootcamp%3A%20Tu%20Primer%20Airbnb%20antes%20de%20inscribirme." target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp" onclick="if(window.fbq){fbq('track','Contact');}">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 .5C7.4.5.5 7.4.5 16c0 2.8.7 5.5 2.1 7.9L.5 31.5l7.8-2C10.6 30.8 13.3 31.5 16 31.5c8.6 0 15.5-6.9 15.5-15.5S24.6.5 16 .5zm0 28c-2.5 0-4.9-.7-7-1.9l-.5-.3-4.6 1.2 1.2-4.5-.3-.5C3.4 20.9 2.7 18.5 2.7 16 2.7 8.6 8.6 2.7 16 2.7S29.3 8.6 29.3 16 23.4 28.5 16 28.5zm7.6-9.9c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.6-.2-.9.2s-1 1.3-1.2 1.5c-.2.2-.4.3-.8.1s-1.7-.6-3.2-2c-1.2-1-2-2.4-2.2-2.8s0-.6.2-.8c.2-.2.4-.4.5-.6.2-.2.2-.4.4-.6.1-.3.1-.5 0-.7-.1-.2-.9-2.2-1.3-3-.3-.7-.6-.6-.9-.6h-.7c-.2 0-.6.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.2 2.6 4 6.3 5.5.9.4 1.6.6 2.1.8.9.3 1.7.2 2.3.1.7-.1 2.4-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg>
+  <span class="wa-label">¿Dudas? Escríbeme</span>
+</a>
 
 </body>
 </html>

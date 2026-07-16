@@ -1071,7 +1071,7 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
 
   /* ===== STICKY HEADER ===== */
   .site-header {
-    position: sticky; top: 0; z-index: 1000;
+    position: sticky; top: 44px; z-index: 1000;
     display: flex; align-items: center; justify-content: space-between;
     padding: 13px 6%;
     background: rgba(253,250,245,0.92); backdrop-filter: blur(12px);
@@ -1087,7 +1087,7 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   .header-cta { background: var(--sky-deep); color: #fff; font-size: 14px; font-weight: 500; padding: 11px 22px; border-radius: 50px; text-decoration: none; transition: background .2s; white-space: nowrap; }
   .header-cta:hover { background: var(--sky-deeper); }
   @media (max-width: 768px) {
-    .site-header { flex-wrap: wrap; padding: 10px 5%; }
+    .site-header { flex-wrap: wrap; padding: 10px 5%; top: 42px; }
     .site-header .brand { font-size: 18px; }
     .header-nav { order: 3; width: 100%; flex-wrap: wrap; justify-content: center; gap: 6px 16px; margin-top: 9px; }
     .header-nav a[href^="#"] { display: none; }
@@ -1369,7 +1369,20 @@ document.addEventListener('click',function(e){
 <!-- Lanzamiento finalizado: ocultamos cualquier elemento de lanzamiento y mostramos el contenido normal -->
 <style>
   .launch-only{display:none!important;}
+  /* Banner masterclass (temporal · quitar tras el 27 jul 2026) */
+  .mc-banner{ position:sticky; top:0; z-index:1001; display:flex; align-items:center; justify-content:center; gap:14px; height:44px; padding:0 16px; background:#2F6188; color:#FDFAF5; text-decoration:none; font-family:'DM Sans',-apple-system,sans-serif; font-size:14px; white-space:nowrap; }
+  .mc-banner-txt{ overflow:hidden; text-overflow:ellipsis; }
+  .mc-banner strong{ color:#E6C57C; }
+  .mc-banner-btn{ background:#E6C57C; color:#234B6B; font-weight:700; padding:5px 14px; border-radius:50px; font-size:13px; flex:none; transition:background .2s ease; }
+  .mc-banner:hover .mc-banner-btn{ background:#efd08f; }
+  @media(max-width:600px){ .mc-banner{ font-size:12.5px; gap:8px; height:42px; padding:0 10px; } .mc-banner-btn{ padding:5px 11px; font-size:12px; } }
 </style>
+
+<!-- BANNER MASTERCLASS (temporal · quitar tras el 27 jul) -->
+<a href="masterclass.html" class="mc-banner">
+  <span class="mc-banner-txt">🎥 <strong>Masterclass GRATIS</strong> · lun 27 jul, 6 pm</span>
+  <span class="mc-banner-btn">Reserva tu lugar →</span>
+</a>
 
 <!-- STICKY HEADER -->
 <header class="site-header" id="siteHeader">
@@ -1379,8 +1392,8 @@ document.addEventListener('click',function(e){
     <a href="#modulos" class="navlink">Contenido</a>
     <a href="#calculadora" class="navlink">Calculadora</a>
     <a href="aprende-conmigo.html" class="navlink">Aprende conmigo</a>
-    <a href="faq.html" class="navlink">FAQ</a>
     <a href="portafolio.html" class="navlink">Colaboremos</a>
+    <a href="https://auditbnb.com" target="_blank" rel="noopener" class="navlink">Audita tu propiedad</a>
     <a href="contacto.html" class="navlink">Contacto</a>
     <a href="https://pay.hotmart.com/N101179190K" target="_blank" rel="noopener" class="header-cta">Acceder al curso →</a>
   </nav>
@@ -1971,6 +1984,9 @@ document.addEventListener('click',function(e){
     <div class="obj"><div class="obj-q">No sé nada de tecnología ni de negocios</div><div class="obj-a">El curso está diseñado para alguien que empieza desde cero. Cada paso está explicado como si fuera la primera vez que lo ves.</div></div>
     <div class="obj"><div class="obj-q">Ya probé otras cosas y no me funcionaron</div><div class="obj-a">Este no es un curso de teoría. Es el sistema exacto que yo uso hoy. Tienes acceso a los mismos guiones, plantillas y herramientas que a mí me funcionaron.</div></div>
   </div>
+  <div style="margin-top:2.2rem;">
+    <a href="faq.html" style="display:inline-block;font-weight:600;color:var(--sky-deep);text-decoration:none;border-bottom:2px solid var(--sky-light);padding-bottom:2px;">Ver todas las preguntas frecuentes →</a>
+  </div>
 </section>
 
 <!-- LEAD MAGNET -->
@@ -1988,7 +2004,7 @@ document.addEventListener('click',function(e){
 <section class="sobre-sofia">
   <div class="sofia-inner">
     <div class="sofia-photo" style="border-radius:20px;overflow:hidden;background:#7BA7C4;">
-      <img src="assets/sofia-about.jpg" alt="Sofía Retif, creadora del curso Hosting Sin Propiedad" width="608" height="760" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+      <img src="assets/fotos/sofia-home.jpg" alt="Sofía Retif, creadora del curso Hosting Sin Propiedad" width="608" height="760" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
     </div>
     <div class="sofia-content">
       <span class="section-label">Quién soy</span>

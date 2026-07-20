@@ -43,6 +43,17 @@ fbq('init','1270112635290396');fbq('track','PageView');
   .wa-cta{display:inline-flex;align-items:center;gap:9px;background:#25D366;color:#fff;font-weight:700;font-size:16px;padding:15px 32px;border-radius:50px;text-decoration:none;margin-top:1.4rem;box-shadow:0 12px 30px rgba(37,211,102,.28);}
   .wa-cta:hover{background:#1eb955;}
 
+  /* ---- video + chat ---- */
+  .stage-wrap{max-width:1240px;margin:1.6rem auto 0;padding:0 4%;}
+  .stage{display:flex;flex-direction:column;gap:14px;}
+  .chat{width:100%;height:420px;border-radius:16px;overflow:hidden;background:#0f0f0f;box-shadow:0 16px 40px rgba(0,0,0,.3);}
+  .chat iframe{width:100%;height:100%;border:0;}
+  @media(min-width:920px){
+    .stage{flex-direction:row;height:520px;align-items:stretch;}
+    .player{padding-bottom:0 !important;height:100%;flex:1;}
+    .chat{width:360px;height:100%;flex-shrink:0;}
+  }
+
   /* ---- secciones de contenido ---- */
   .section{max-width:860px;margin:0 auto;padding:2.2rem 6%;}
   .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold-soft);margin-bottom:.6rem;text-align:center;}
@@ -87,22 +98,31 @@ fbq('init','1270112635290396');fbq('track','PageView');
     <a class="wa-mini" href="https://chat.whatsapp.com/JmUckUDVzYfEEJFqnUzomb?mode=gi_t" target="_blank" rel="noopener">Grupo de WhatsApp →</a>
   </header>
 
-  <main class="wrap">
+  <section class="wrap">
     <span class="live-badge"><span class="dot"></span> En vivo</span>
     <span class="hand">¡Qué gusto tenerte aquí! 👋</span>
     <h1>Masterclass — Tu primer Airbnb</h1>
     <p class="sub">Lunes 27 de julio · 6:00 pm (CDMX) · Cómo elegir tu zona y convencer a un dueño de rentarte</p>
+  </section>
 
-    <div class="player">
-      <iframe src="https://www.youtube.com/embed/eWA19oZ_9T8"
-              title="Masterclass en vivo — Sofía Retif"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  <div class="stage-wrap">
+    <div class="stage">
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/eWA19oZ_9T8"
+                title="Masterclass en vivo — Sofía Retif"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+      <div class="chat">
+        <iframe src="https://www.youtube.com/live_chat?v=eWA19oZ_9T8&amp;embed_domain=sofiaretif.com" title="Chat en vivo de la masterclass"></iframe>
+      </div>
     </div>
+  </div>
 
-    <p class="helper">¿No ves la clase todavía? Empezamos a las <strong>6:00 pm</strong>. Si ya es la hora y no carga, <a href="javascript:location.reload()">recarga la página</a>.<br>Para preguntas y avisos, quédate atenta al grupo de WhatsApp. 💛</p>
+  <section class="wrap" style="padding-top:1.4rem;">
+    <p class="helper">¿No ves la clase todavía? Empezamos a las <strong>6:00 pm</strong>. Si ya es la hora y no carga, <a href="javascript:location.reload()">recarga la página</a>.<br>El chat está junto al video (necesitas tu sesión de YouTube para escribir). Para todo lo demás, el grupo de WhatsApp. 💛</p>
     <a class="wa-cta" href="https://chat.whatsapp.com/JmUckUDVzYfEEJFqnUzomb?mode=gi_t" target="_blank" rel="noopener">Entrar al grupo de WhatsApp →</a>
-  </main>
+  </section>
 
   <!-- QUÉ VAS A APRENDER -->
   <section class="section">

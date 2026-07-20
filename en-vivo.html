@@ -8,20 +8,26 @@
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjM0E2RTk2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMjI0OTZBIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTUiIGZpbGw9InVybCgjZykiLz48cG9seWdvbiBwb2ludHM9IjMyLDEzIDU0LDMzIDEwLDMzIiBmaWxsPSIjRkRGQUY1Ii8+PHJlY3QgeD0iMTciIHk9IjMxIiB3aWR0aD0iMzAiIGhlaWdodD0iMjIiIHJ4PSIzIiBmaWxsPSIjRkRGQUY1Ii8+PHBhdGggZD0iTTMyIDQxLjVjLTEuOC0zLTctMi03IDEuNiAwIDMgMy42IDUgNyA2LjkgMy40LTEuOSA3LTMuOSA3LTYuOSAwLTMuNi01LjItNC42LTctMS42eiIgZmlsbD0iI0M4N0Q4NyIvPjwvc3ZnPgo=">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1270112635290396');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></noscript>
 <style>
   :root{
     --sky:#7BA7C4; --sky-deep:#2F6188; --sky-deeper:#234B6B; --sky-light:#B8D4E8; --sky-pale:#EAF3F9;
-    --beige:#F5EFE4; --beige-dark:#E8DDC8; --gold:#C8A96E; --gold-dark:#A8893E;
+    --beige:#F5EFE4; --beige-dark:#E8DDC8; --gold:#C8A96E; --gold-dark:#A8893E; --gold-soft:#E6C57C;
     --rose:#C87D87; --dark:#2C2820; --mid:#6B6355; --white:#FDFAF5;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   body{font-family:'DM Sans',sans-serif;background:var(--sky-deeper);color:var(--white);min-height:100vh;}
-  .site-header{display:flex;align-items:center;justify-content:space-between;padding:14px 6%;background:rgba(35,75,107,.6);border-bottom:1px solid rgba(255,255,255,.08);}
+  .site-header{display:flex;align-items:center;justify-content:space-between;padding:14px 6%;background:rgba(35,75,107,.6);border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;z-index:10;backdrop-filter:blur(8px);}
   .site-header .brand{font-family:'Playfair Display',serif;font-weight:700;font-size:20px;color:var(--white);text-decoration:none;}
   .site-header .brand span{color:var(--sky-light);}
   .wa-mini{background:#25D366;color:#fff;font-size:13px;font-weight:600;padding:9px 18px;border-radius:50px;text-decoration:none;white-space:nowrap;}
 
-  .wrap{max-width:1000px;margin:0 auto;padding:2.4rem 6% 4rem;text-align:center;}
+  .wrap{max-width:1000px;margin:0 auto;padding:2.4rem 6% 1rem;text-align:center;}
   .live-badge{display:inline-flex;align-items:center;gap:8px;background:#E23B3B;color:#fff;font-size:12.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:7px 16px;border-radius:50px;margin-bottom:1rem;}
   .live-badge .dot{width:9px;height:9px;border-radius:50%;background:#fff;animation:pulse 1.4s infinite;}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
@@ -34,11 +40,44 @@
 
   .helper{margin-top:1.3rem;font-size:14px;color:var(--sky-light);line-height:1.6;}
   .helper a{color:var(--white);font-weight:600;}
-
-  .wa-cta{display:inline-flex;align-items:center;gap:9px;background:#25D366;color:#fff;font-weight:700;font-size:16px;padding:15px 32px;border-radius:50px;text-decoration:none;margin-top:1.6rem;box-shadow:0 12px 30px rgba(37,211,102,.28);}
+  .wa-cta{display:inline-flex;align-items:center;gap:9px;background:#25D366;color:#fff;font-weight:700;font-size:16px;padding:15px 32px;border-radius:50px;text-decoration:none;margin-top:1.4rem;box-shadow:0 12px 30px rgba(37,211,102,.28);}
   .wa-cta:hover{background:#1eb955;}
 
-  footer{text-align:center;padding:1.8rem 6%;font-size:12.5px;color:rgba(255,255,255,.45);}
+  /* ---- secciones de contenido ---- */
+  .section{max-width:860px;margin:0 auto;padding:2.2rem 6%;}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold-soft);margin-bottom:.6rem;text-align:center;}
+  .sec-title{font-family:'Playfair Display',serif;font-size:clamp(22px,4vw,30px);font-weight:700;text-align:center;margin-bottom:1.4rem;}
+
+  .learn{list-style:none;display:grid;gap:12px;max-width:640px;margin:0 auto;}
+  .learn li{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:15px 18px;font-size:15.5px;line-height:1.5;text-align:left;}
+  .learn .ck{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:var(--gold-soft);color:var(--sky-deeper);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px;}
+
+  .gift{max-width:640px;margin:1.6rem auto 0;background:rgba(230,197,124,.12);border:1px dashed var(--gold-soft);border-radius:16px;padding:20px 24px;text-align:left;}
+  .gift b{color:var(--gold-soft);}
+  .gift p{font-size:15px;line-height:1.6;color:#F0E8D6;}
+
+  .tst-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;}
+  .tst{background:var(--white);color:var(--dark);border-radius:16px;padding:20px;text-align:left;box-shadow:0 10px 30px rgba(0,0,0,.18);}
+  .tst .stars{color:var(--gold);font-size:15px;letter-spacing:2px;margin-bottom:.5rem;}
+  .tst p{font-size:14.5px;line-height:1.55;font-style:italic;color:#3a352b;}
+  .tst .who{display:flex;align-items:center;gap:10px;margin-top:14px;}
+  .tst .av{width:34px;height:34px;border-radius:50%;background:var(--sky-pale);color:var(--sky-deep);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px;}
+  .tst .who b{font-size:14px;display:block;}
+  .tst .who span{font-size:12.5px;color:var(--mid);}
+
+  /* ---- bootcamp (dorado) ---- */
+  .bootcamp{max-width:760px;margin:1rem auto 0;background:linear-gradient(165deg,#2b5074,#20415f);border:1.5px solid var(--gold-soft);border-radius:22px;padding:2.2rem 2rem;box-shadow:0 20px 50px rgba(0,0,0,.3);}
+  .bootcamp .eyebrow{color:var(--gold-soft);}
+  .bootcamp h3{font-family:'Playfair Display',serif;font-size:clamp(24px,4.5vw,32px);text-align:center;margin-bottom:.5rem;}
+  .bootcamp .bc-sub{text-align:center;color:var(--sky-light);font-size:15px;line-height:1.6;max-width:560px;margin:0 auto 1.4rem;}
+  .bc-list{list-style:none;display:grid;gap:10px;max-width:560px;margin:0 auto 1.5rem;}
+  .bc-list li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;line-height:1.5;text-align:left;}
+  .bc-list .ic{flex-shrink:0;}
+  .bc-price{text-align:center;font-size:14.5px;color:var(--gold-soft);font-weight:600;margin-bottom:1.2rem;}
+  .bc-cta{display:block;max-width:340px;margin:0 auto;text-align:center;background:var(--gold-soft);color:var(--sky-deeper);font-weight:800;font-size:16.5px;padding:16px 28px;border-radius:50px;text-decoration:none;box-shadow:0 12px 30px rgba(230,197,124,.25);transition:transform .15s;}
+  .bc-cta:hover{transform:translateY(-2px);}
+
+  footer{text-align:center;padding:2.4rem 6% 2rem;font-size:12.5px;color:rgba(255,255,255,.45);}
   footer a{color:var(--sky-light);text-decoration:none;}
 </style>
 </head>
@@ -62,9 +101,63 @@
     </div>
 
     <p class="helper">¿No ves la clase todavía? Empezamos a las <strong>6:00 pm</strong>. Si ya es la hora y no carga, <a href="javascript:location.reload()">recarga la página</a>.<br>Para preguntas y avisos, quédate atenta al grupo de WhatsApp. 💛</p>
-
     <a class="wa-cta" href="https://chat.whatsapp.com/JmUckUDVzYfEEJFqnUzomb?mode=gi_t" target="_blank" rel="noopener">Entrar al grupo de WhatsApp →</a>
   </main>
+
+  <!-- QUÉ VAS A APRENDER -->
+  <section class="section">
+    <p class="eyebrow">En esta clase</p>
+    <h2 class="sec-title">Lo que te vas a llevar hoy</h2>
+    <ul class="learn">
+      <li><span class="ck">✓</span> <span>Cómo saber si una zona tiene <strong>demanda real</strong> de Airbnb — antes de invertir un solo peso.</span></li>
+      <li><span class="ck">✓</span> <span>Cómo proponerle a un dueño que te <strong>rente su propiedad</strong>, con las palabras y señales que sí funcionan.</span></li>
+      <li><span class="ck">✓</span> <span>El modelo completo para generar ingresos con rentas cortas <strong>sin ser dueño de nada</strong>.</span></li>
+    </ul>
+    <div class="gift">
+      <p>🎁 <b>Quédate hasta el final:</b> al cierre te regalo mi <b>Kit para arrancar</b> — el checklist <em>"¿Tu zona da para Airbnb?"</em> + el guion para convencer a un dueño. Solo para quienes se quedan en vivo hasta el final.</p>
+    </div>
+  </section>
+
+  <!-- PRUEBA SOCIAL -->
+  <section class="section">
+    <p class="eyebrow">Historias reales</p>
+    <h2 class="sec-title">Lo que dicen quienes ya arrancaron</h2>
+    <div class="tst-grid">
+      <div class="tst">
+        <div class="stars">★★★★★</div>
+        <p>"Conseguí mi primera propiedad en un mes, algo que veía lejísimos. Después de renta y gastos todavía quedó una utilidad de ~12 mil pesos. Me dio esa sensación de 'ok, sí se puede'."</p>
+        <div class="who"><div class="av">C</div><div><b>Cristina</b><span>Su primer Airbnb en 1 mes</span></div></div>
+      </div>
+      <div class="tst">
+        <div class="stars">★★★★★</div>
+        <p>"¡Primera reserva confirmada! Y de 7 días de estadía. Arrancando con todo."</p>
+        <div class="who"><div class="av">A</div><div><b>Andrés</b><span>Alumno del Bootcamp</span></div></div>
+      </div>
+      <div class="tst">
+        <div class="stars">★★★★★</div>
+        <p>"Por fin terminé de acomodar mi primer depa para Airbnb, y ya vamos por el segundo — como es de tres recámaras, lo alquilamos por habitaciones."</p>
+        <div class="who"><div class="av">L</div><div><b>Lyda</b><span>Paraguay</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOTCAMP -->
+  <section class="section">
+    <div class="bootcamp">
+      <p class="eyebrow">¿Lista para el siguiente paso?</p>
+      <h3>Bootcamp: Tu Primer Airbnb</h3>
+      <p class="bc-sub">Si hoy te late llevar esto a la práctica conmigo, el Bootcamp es el programa <strong>en vivo de 2 semanas</strong> donde montamos tu primer Airbnb paso a paso — juntos.</p>
+      <ul class="bc-list">
+        <li><span class="ic">🎥</span> <span><strong>6 clases en vivo (12 h)</strong> · lun, mié y vie · grupo reducido con espacio para tus preguntas.</span></li>
+        <li><span class="ic">📼</span> <span><strong>Grabaciones de todo</strong>, para repasar cuando quieras.</span></li>
+        <li><span class="ic">💬</span> <span><strong>Acompañamiento un mes completo</strong> en el grupo privado.</span></li>
+        <li><span class="ic">👩‍💻</span> <span><strong>Opción de asesoría 1:1</strong> al cierre (plan Completo + 1:1).</span></li>
+        <li><span class="ic">🎁</span> <span><strong>Kit de Arranque:</strong> contrato de subarriendo, calculadora, checklists y carritos listos para usar.</span></li>
+      </ul>
+      <p class="bc-price">Próxima generación: 3–14 de agosto · desde <strong>$497 USD</strong> · cupo limitado</p>
+      <a class="bc-cta" href="/curso-en-vivo" onclick="if(window.fbq){fbq('track','Lead');}">Conocer el Bootcamp →</a>
+    </div>
+  </section>
 
   <footer>
     © 2026 Sofía Retif · Hosting Sin Propiedad · <a href="https://www.instagram.com/sofiahosting_" target="_blank" rel="noopener">@sofiahosting_</a>

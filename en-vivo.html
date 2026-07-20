@@ -87,6 +87,14 @@ fbq('init','1270112635290396');fbq('track','PageView');
   .bc-price{text-align:center;font-size:14.5px;color:var(--gold-soft);font-weight:600;margin-bottom:1.2rem;}
   .bc-cta{display:block;max-width:340px;margin:0 auto;text-align:center;background:var(--gold-soft);color:var(--sky-deeper);font-weight:800;font-size:16.5px;padding:16px 28px;border-radius:50px;text-decoration:none;box-shadow:0 12px 30px rgba(230,197,124,.25);transition:transform .15s;}
   .bc-cta:hover{transform:translateY(-2px);}
+  /* lista de espera (modo evergreen) */
+  .waitlist{margin-top:1.6rem;border-top:1px solid rgba(255,255,255,.15);padding-top:1.4rem;}
+  .wl-title{font-size:14.5px;color:var(--sky-light);margin-bottom:.9rem;line-height:1.5;}
+  .wl-form{display:flex;gap:8px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center;}
+  .wl-input{flex:1;min-width:200px;border:none;border-radius:12px;padding:13px 15px;font-size:15px;font-family:inherit;color:var(--dark);}
+  .wl-btn{background:#fff;color:var(--sky-deeper);font-weight:700;font-size:15px;padding:13px 24px;border:none;border-radius:12px;cursor:pointer;white-space:nowrap;}
+  .wl-btn:hover{background:var(--sky-light);}
+  .wl-done{font-size:15px;color:var(--gold-soft);font-weight:600;margin-top:.4rem;}
 
   footer{text-align:center;padding:2.4rem 6% 2rem;font-size:12.5px;color:rgba(255,255,255,.45);}
   footer a{color:var(--sky-light);text-decoration:none;}
@@ -161,7 +169,7 @@ fbq('init','1270112635290396');fbq('track','PageView');
     </div>
   </section>
 
-  <!-- BOOTCAMP -->
+  <!-- ===== BOOTCAMP · MODO LANZAMIENTO (activo) — para evergreen: comenta esta <section> y descomenta el bloque MODO EVERGREEN de abajo ===== -->
   <section class="section">
     <div class="bootcamp">
       <p class="eyebrow">¿Lista para el siguiente paso?</p>
@@ -178,6 +186,39 @@ fbq('init','1270112635290396');fbq('track','PageView');
       <a class="bc-cta" href="/curso-en-vivo" onclick="if(window.fbq){fbq('track','Lead');}">Conocer el Bootcamp →</a>
     </div>
   </section>
+
+  <!-- =====================================================================
+       MODO EVERGREEN  (curso $97 + lista de espera del Bootcamp)
+       Activar cuando cierre la generacion del Bootcamp:
+         1) Comenta la <section> "BOOTCAMP MODO LANZAMIENTO" de arriba.
+         2) Borra la linea de apertura de comentario (de aqui) y la de cierre (abajo).
+       =====================================================================
+  <section class="section">
+    <div class="bootcamp">
+      <p class="eyebrow">El siguiente paso</p>
+      <h3>Empieza hoy, a tu ritmo</h3>
+      <p class="bc-sub">El <strong>Bootcamp en vivo</strong> abre solo por generaciones. ¿No quieres esperar? Todo el método está también en mi <strong>Curso a tu ritmo</strong> — empieza hoy mismo, con acceso de por vida.</p>
+      <ul class="bc-list">
+        <li><span class="ic">🎬</span> <span><strong>10 módulos</strong> paso a paso, a tu ritmo y de por vida.</span></li>
+        <li><span class="ic">🧰</span> <span>Plantillas y herramientas listas para Latinoamérica.</span></li>
+        <li><span class="ic">💬</span> <span>Comunidad y actualizaciones incluidas.</span></li>
+      </ul>
+      <p class="bc-price">Acceso de por vida · <strong>$97</strong></p>
+      <a class="bc-cta" href="https://pay.hotmart.com/N101179190K" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Empezar el curso ($97) →</a>
+      <div class="waitlist">
+        <p class="wl-title">¿Prefieres la experiencia <strong>en vivo</strong>? Te aviso cuando abra la próxima generación del Bootcamp 👇</p>
+        <form action="https://sofiaretif.us8.list-manage.com/subscribe/post?u=b6e40ec0a713bd6b97f9d4422&amp;id=273eed67f7" method="post" target="wl_iframe" class="wl-form" onsubmit="this.style.display='none';this.parentNode.querySelector('.wl-done').style.display='block';">
+          <input type="hidden" name="MMERGE3" value="Lista espera Bootcamp">
+          <input type="email" name="EMAIL" placeholder="Tu mejor correo" required class="wl-input">
+          <div style="position:absolute;left:-5000px" aria-hidden="true"><input type="text" name="b_b6e40ec0a713bd6b97f9d4422_273eed67f7" tabindex="-1" value=""></div>
+          <button type="submit" class="wl-btn">Avísame →</button>
+        </form>
+        <p class="wl-done" style="display:none">¡Listo! Te aviso en cuanto abra la próxima generación. 💛</p>
+      </div>
+    </div>
+  </section>
+  <iframe name="wl_iframe" title="lista de espera" style="display:none"></iframe>
+  ===================================================================== -->
 
   <footer>
     © 2026 Sofía Retif · Hosting Sin Propiedad · <a href="https://www.instagram.com/sofiahosting_" target="_blank" rel="noopener">@sofiahosting_</a>

@@ -327,6 +327,39 @@ document.addEventListener('click',function(e){
   <div class="cv-hero-photo"><img src="assets/sofia-8284-cutout.png" alt="Sofía Retif"></div>
 </section>
 
+<!-- FECHAS (dropdown) -->
+<style>
+  details.fechas > summary{list-style:none;}
+  details.fechas > summary::-webkit-details-marker{display:none;}
+  details.fechas .chev{display:inline-block;transition:transform .2s;}
+  details.fechas[open] .chev{transform:rotate(180deg);}
+  .fechas-tbl{width:100%;border-collapse:collapse;font-size:14.5px;}
+  .fechas-tbl th{padding:8px 0;font-weight:700;color:var(--mid);font-size:11.5px;text-transform:uppercase;letter-spacing:.5px;text-align:left;}
+  .fechas-tbl td{padding:10px 0;border-top:1px solid var(--beige);}
+</style>
+<section style="padding:1.6rem 6% 0;">
+  <details class="fechas" style="max-width:520px;margin:0 auto;background:#fff;border:1px solid var(--beige-dark);border-radius:16px;box-shadow:0 10px 30px rgba(44,40,32,.06);overflow:hidden;">
+    <summary style="cursor:pointer;padding:16px 20px;font-weight:700;font-size:15.5px;color:var(--sky-deeper);display:flex;align-items:center;justify-content:space-between;gap:10px;">
+      <span>📅 Fechas de las 6 clases</span>
+      <span style="font-size:13px;font-weight:500;color:var(--mid);">3 – 13 de agosto <span class="chev">▾</span></span>
+    </summary>
+    <div style="padding:0 20px 18px;">
+      <table class="fechas-tbl">
+        <thead><tr><th>Clase</th><th>Día</th><th style="text-align:right;">Fecha</th></tr></thead>
+        <tbody>
+          <tr><td style="font-weight:700;color:var(--sky-deep);">Clase 1</td><td>Lunes</td><td style="text-align:right;">3 de agosto</td></tr>
+          <tr><td style="font-weight:700;color:var(--sky-deep);">Clase 2</td><td>Miércoles</td><td style="text-align:right;">5 de agosto</td></tr>
+          <tr><td style="font-weight:700;color:var(--sky-deep);">Clase 3</td><td>Jueves</td><td style="text-align:right;">6 de agosto</td></tr>
+          <tr><td style="font-weight:700;color:var(--sky-deep);">Clase 4</td><td>Lunes</td><td style="text-align:right;">10 de agosto</td></tr>
+          <tr><td style="font-weight:700;color:var(--sky-deep);">Clase 5</td><td>Miércoles</td><td style="text-align:right;">12 de agosto</td></tr>
+          <tr><td style="font-weight:700;color:var(--sky-deep);">Clase 6</td><td>Jueves</td><td style="text-align:right;">13 de agosto</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:13px;color:var(--mid);margin-top:12px;line-height:1.5;">🕙 Todas de <b>10:00 a 12:00 pm</b> (hora de México · CDMX). Si no puedes en vivo, te queda la grabación.</p>
+    </div>
+  </details>
+</section>
+
 <!-- ¿TE SUENA ESTO? (dolor) -->
 <section class="cv-sec">
   <h2>¿Te suena esto?</h2>

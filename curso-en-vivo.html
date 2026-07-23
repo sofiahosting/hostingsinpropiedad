@@ -175,6 +175,17 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   .tst .who span{font-size:12.5px;color:var(--mid);display:block;font-weight:300;}
   @media(max-width:780px){ .tst-grid{grid-template-columns:1fr;} }
 
+  /* Muro de capturas reales (WhatsApp + Airbnb) */
+  .proof-sec{background:linear-gradient(135deg,var(--sky-deep),var(--sky-deeper));padding:3.6rem 6%;text-align:center;}
+  .proof-sec .eyebrow{font-family:'Caveat',cursive;color:var(--sky-light);font-size:24px;}
+  .proof-sec h2{font-family:'Playfair Display',serif;color:#fff;font-size:clamp(22px,3.2vw,30px);margin:.2rem 0 .6rem;}
+  .proof-sec .sub{color:rgba(255,255,255,.8);font-weight:300;font-size:15px;max-width:560px;margin:0 auto;line-height:1.7;}
+  .proof-wall{columns:3 240px;column-gap:16px;max-width:960px;margin:2.2rem auto 0;text-align:left;}
+  .proof-card{break-inside:avoid;margin-bottom:16px;background:#fff;border-radius:14px;padding:8px 8px 10px;box-shadow:0 14px 34px rgba(0,0,0,.25);}
+  .proof-card img{width:100%;display:block;border-radius:8px;}
+  .proof-card .cap{font-size:12px;color:var(--mid);text-align:center;margin-top:7px;line-height:1.4;}
+  @media(max-width:700px){ .proof-wall{columns:1;max-width:360px;} }
+
   /* Inscripción / precio */
   .pricebox{max-width:560px;margin:0 auto;background:var(--sky-deeper);color:#fff;border-radius:24px;padding:3rem 2.5rem;text-align:center;box-shadow:0 20px 50px rgba(35,75,107,.3);}
   .pricebox .label{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.55);}
@@ -592,6 +603,22 @@ document.addEventListener('click',function(e){
     </div>
   </div>
   <div class="cta-mid"><a href="#inscripcion" class="cv-cta">Quiero ser de esta generación →</a></div>
+</section>
+
+<!-- MURO DE CAPTURAS: reseñas de WhatsApp + resultados reales de Airbnb, sin editar -->
+<section class="proof-sec">
+  <span class="eyebrow">Sin filtros</span>
+  <h2>Así se ve en la vida real</h2>
+  <p class="sub">Capturas reales, tal cual llegan — mensajes de alumnos y resultados directo de la app de Airbnb.</p>
+  <div class="proof-wall">
+    <div class="proof-card"><img src="assets/review-alumna-1.jpg" alt="Mensaje de una alumna agradeciendo el curso" loading="lazy"><div class="cap">Cristina, utilidad desde el primer mes</div></div>
+    <div class="proof-card"><img src="assets/prueba-calendario-lleno.jpg" alt="Calendario de Airbnb con 6 meses casi llenos" loading="lazy"><div class="cap">6 meses casi llenos, calendario real</div></div>
+    <div class="proof-card"><img src="assets/review-alumna-2.jpg" alt="Mensaje de una alumna sobre su primer departamento" loading="lazy"><div class="cap">Lyda, arrancando su segundo Airbnb</div></div>
+    <div class="proof-card"><img src="assets/prueba-pago-airbnb.jpg" alt="Notificación de pago enviado por Airbnb" loading="lazy"><div class="cap">Pago confirmado, directo de Airbnb</div></div>
+    <div class="proof-card"><img src="assets/prueba-desglose-ingresos.jpg" alt="Desglose de ingresos de una propiedad en Airbnb" loading="lazy"><div class="cap">Desglose real de ingresos de una propiedad</div></div>
+    <div class="proof-card"><img src="assets/review-alumna-3.jpg" alt="Mensaje y calendario de una pareja alumna" loading="lazy"><div class="cap">Una pareja alumna, su calendario de abril</div></div>
+  </div>
+  <div class="cta-mid"><a href="#inscripcion" class="cv-cta" style="background:#fff;color:var(--sky-deeper);">Quiero resultados así →</a></div>
 </section>
 
 <!-- BANDA AZUL: recorte + CTA antes de inscripción -->

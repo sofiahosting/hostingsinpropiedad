@@ -88,9 +88,18 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   .cv-price-line strong{color:var(--sky-deep);font-size:19px;}
   .cv-price-line .was{text-decoration:line-through;color:var(--mid);font-size:15px;margin-right:6px;opacity:.7;}
 
+  /* Countdown protagonista del hero */
+  .hero-countdown{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;margin:0 0 1.5rem;}
+  .hero-countdown .hc-label{font-size:12.5px;font-weight:700;color:var(--rose);text-transform:uppercase;letter-spacing:.6px;}
+  .hc-boxes{display:flex;gap:8px;}
+  .hc-box{background:var(--sky-deeper);color:#fff;border-radius:12px;padding:8px 13px;min-width:54px;text-align:center;box-shadow:0 10px 24px rgba(35,75,107,.28);}
+  .hc-box span{display:block;font-family:'Playfair Display',serif;font-size:23px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums;}
+  .hc-box small{display:block;font-size:9.5px;text-transform:uppercase;letter-spacing:.5px;color:rgba(255,255,255,.75);margin-top:3px;}
+
   /* Hero de 2 columnas con foto */
   .cv-hero{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:end;text-align:left;padding:3.5rem 6% 0;}
   .cv-hero .cv-chips{justify-content:flex-start;}
+  .cv-hero .hero-countdown{justify-content:flex-start;}
   .cv-hero .cv-hero-text h1{margin-left:0;margin-right:0;max-width:none;}
   .cv-hero .cv-hero-text .lead{margin-left:0;margin-right:0;}
   .cv-hero-photo img{width:100%;max-width:460px;display:block;margin:0 auto;filter:drop-shadow(0 18px 40px rgba(44,40,32,.18));}
@@ -304,6 +313,8 @@ document.addEventListener('click',function(e){
     .mobile-cta-bar .mp{color:#fff;font-size:13px;font-weight:700;line-height:1.15;}
     .mobile-cta-bar .mp small{display:block;font-size:11px;color:rgba(255,255,255,.65);font-weight:400;margin-top:1px;}
     .mobile-cta-bar a{background:#fff;color:var(--sky-deeper);font-weight:700;font-size:14px;padding:12px 20px;border-radius:50px;text-decoration:none;white-space:nowrap;}
+    /* La barra fija de abajo (z-index 200) tapaba el botón flotante de WhatsApp (bottom:20px) — lo subimos arriba de la barra */
+    .wa-float{bottom:90px;}
   }
 </style>
 <!-- EDITA AQUÍ la fecha de cierre/inicio -->
@@ -334,6 +345,15 @@ document.addEventListener('click',function(e){
     <span class="cv-chip">💻 por Google Meet</span>
     <span class="cv-chip">👥 grupo reducido</span>
     <span class="cv-chip">💬 opción con 1:1</span>
+  </div>
+  <div class="hero-countdown" aria-live="polite">
+    <span class="hc-label">🔥 Arranca en</span>
+    <div class="hc-boxes">
+      <div class="hc-box"><span id="hc-d">–</span><small>días</small></div>
+      <div class="hc-box"><span id="hc-h">–</span><small>hrs</small></div>
+      <div class="hc-box"><span id="hc-m">–</span><small>min</small></div>
+      <div class="hc-box"><span id="hc-s">–</span><small>seg</small></div>
+    </div>
   </div>
   <!-- EDITA AQUÍ el precio -->
   <p class="cv-price-line">Desde <strong>$697 USD</strong> · o <strong>$999 MXN/mes</strong> a 12 meses sin intereses · cupo limitado</p>
@@ -743,17 +763,23 @@ document.addEventListener('click',function(e){
 <script>
   // Countdown real al inicio de clases: lunes 3 de agosto, 10:00 am (CDMX)
   (function(){
-    var el=document.getElementById('cd-timer');
-    if(!el) return;
+    var bannerEl=document.getElementById('cd-timer');
+    var hd=document.getElementById('hc-d'), hh=document.getElementById('hc-h'), hm=document.getElementById('hc-m'), hs=document.getElementById('hc-s');
+    if(!bannerEl && !hd) return;
     var target=new Date('2026-08-03T10:00:00-06:00').getTime();
     function tick(){
       var diff=target-Date.now();
-      if(diff<=0){ el.textContent=''; return; }
+      if(diff<=0){
+        if(bannerEl) bannerEl.textContent='';
+        if(hd){ hd.textContent=hh.textContent=hm.textContent=hs.textContent='0'; }
+        return;
+      }
       var d=Math.floor(diff/86400000);
       var h=Math.floor((diff%86400000)/3600000);
       var m=Math.floor((diff%3600000)/60000);
       var s=Math.floor((diff%60000)/1000);
-      el.textContent='· empieza en '+d+'d '+h+'h '+m+'m '+s+'s';
+      if(bannerEl) bannerEl.textContent='· empieza en '+d+'d '+h+'h '+m+'m '+s+'s';
+      if(hd){ hd.textContent=d; hh.textContent=h; hm.textContent=m; hs.textContent=s; }
     }
     tick();
     setInterval(tick,1000);

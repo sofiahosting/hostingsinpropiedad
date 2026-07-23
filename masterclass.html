@@ -73,13 +73,17 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
     body{overflow-x:hidden}
   }
 
+  /* Banner de urgencia + countdown */
+  .top-urgent{background:var(--rose);color:#fff;text-align:center;padding:9px 16px;font-size:13px;font-weight:600;line-height:1.35;}
+  .top-urgent .cd-timer{display:inline-block;margin-left:6px;font-weight:800;background:rgba(255,255,255,.2);padding:2px 9px;border-radius:6px;font-variant-numeric:tabular-nums;}
+
   /* Hero */
-  .mc-hero{text-align:center;padding:4.5rem 6% 3.5rem;background:linear-gradient(180deg,var(--sky-pale),var(--white));}
+  .mc-hero{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;text-align:left;padding:3.5rem 6% 3rem;background:linear-gradient(180deg,var(--sky-pale),var(--white));}
   .mc-hero .hand{font-family:'Caveat',cursive;color:var(--sky-deep);font-size:30px;display:block;margin-bottom:.3rem;}
   .mc-badge{display:inline-block;background:var(--sky-deep);color:#fff;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:7px 16px;border-radius:50px;margin-bottom:1.1rem;}
-  .mc-hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,6vw,52px);font-weight:700;color:var(--dark);line-height:1.12;margin-bottom:1.1rem;max-width:780px;margin-left:auto;margin-right:auto;}
-  .mc-hero .lead{font-size:18px;color:var(--mid);max-width:600px;margin:0 auto 1.6rem;line-height:1.7;font-weight:300;}
-  .mc-when{display:inline-flex;flex-wrap:wrap;gap:10px 22px;justify-content:center;background:#fff;border:1px solid var(--beige-dark);border-radius:16px;padding:1rem 1.6rem;margin-bottom:1.8rem;box-shadow:0 10px 30px rgba(44,40,32,.06);}
+  .mc-hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,4.6vw,46px);font-weight:700;color:var(--dark);line-height:1.14;margin-bottom:1.1rem;}
+  .mc-hero .lead{font-size:17px;color:var(--mid);margin:0 0 1.5rem;line-height:1.7;font-weight:300;}
+  .mc-when{display:inline-flex;flex-wrap:wrap;gap:10px 22px;justify-content:flex-start;background:#fff;border:1px solid var(--beige-dark);border-radius:16px;padding:1rem 1.6rem;margin-bottom:1.5rem;box-shadow:0 10px 30px rgba(44,40,32,.06);}
   .mc-when .w{display:flex;align-items:center;gap:8px;font-size:14.5px;color:var(--dark);font-weight:500;}
   .mc-when .w .em{font-size:18px;}
   .mc-cta{display:inline-block;background:var(--sky-deep);color:#fff;font-weight:600;font-size:16px;padding:16px 38px;border-radius:50px;text-decoration:none;transition:background .2s;box-shadow:0 12px 30px rgba(47,97,136,.22);}
@@ -88,9 +92,33 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   .mc-gift{display:inline-flex;align-items:center;gap:11px;background:#fff;border:1px dashed var(--gold);border-radius:14px;padding:.75rem 1.15rem;margin-top:1.2rem;font-size:14px;color:var(--dark);line-height:1.45;max-width:520px;text-align:left;box-shadow:0 8px 24px rgba(200,169,110,.12);}
   .mc-gift .g{font-size:22px;flex-shrink:0;}
   .mc-gift b{color:var(--gold-dark);}
+  @media(max-width:860px){
+    .mc-hero{grid-template-columns:1fr;text-align:center;gap:22px;}
+    .mc-when{justify-content:center;}
+    .mc-hero-photo-wrap{order:-1;}
+  }
+
+  /* Countdown protagonista del hero */
+  .hero-countdown{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:0 0 1.5rem;}
+  .hero-countdown .hc-label{font-size:12.5px;font-weight:700;color:var(--rose);text-transform:uppercase;letter-spacing:.6px;}
+  .hc-boxes{display:flex;gap:8px;}
+  .hc-box{background:var(--sky-deeper);color:#fff;border-radius:12px;padding:8px 13px;min-width:54px;text-align:center;box-shadow:0 10px 24px rgba(35,75,107,.28);}
+  .hc-box span{display:block;font-family:'Playfair Display',serif;font-size:23px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums;}
+  .hc-box small{display:block;font-size:9.5px;text-transform:uppercase;letter-spacing:.5px;color:rgba(255,255,255,.75);margin-top:3px;}
+  @media(max-width:860px){ .hero-countdown{justify-content:center;} }
 
   /* Foto del hero */
-  .mc-hero-photo{width:132px;height:132px;border-radius:50%;object-fit:cover;display:block;margin:0 auto 1.3rem;border:4px solid #fff;box-shadow:0 14px 34px rgba(44,40,32,.14);}
+  .mc-hero-photo-wrap{width:100%;max-width:420px;margin:0 auto;}
+  .mc-hero-photo{width:100%;height:auto;aspect-ratio:1/1;border-radius:26px;object-fit:cover;display:block;box-shadow:0 20px 50px rgba(44,40,32,.18);}
+  @media(max-width:860px){ .mc-hero-photo-wrap{max-width:280px;} }
+
+  /* Los 2 miedos */
+  .fear-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:1.6rem 0;}
+  .fear-card{background:var(--beige);border-radius:16px;padding:1.4rem 1.5rem;text-align:left;}
+  .fear-card .fic{font-size:26px;margin-bottom:.5rem;display:block;}
+  .fear-card b{display:block;font-family:'Playfair Display',serif;font-size:17px;color:var(--dark);margin-bottom:.4rem;line-height:1.3;}
+  .fear-card p{font-size:14px;color:var(--mid);line-height:1.6;font-weight:300;margin:0;}
+  @media(max-width:640px){ .fear-grid{grid-template-columns:1fr;} }
 
   /* Banda de lifestyle */
   .mc-life{text-align:center;padding:3.2rem 6% 2.6rem;background:var(--sky-pale);}
@@ -218,6 +246,9 @@ document.addEventListener('click',function(e){
 </head>
 <body>
 
+<!-- EDITA AQUÍ la fecha de la clase -->
+<div class="top-urgent">🔥 Cupo limitado · clase en vivo el lunes 27 de julio <span id="cd-timer" class="cd-timer" aria-live="polite"></span></div>
+
 <header class="site-header">
   <a href="index.html" class="brand">Sofía <span>Retif</span></a>
   <nav class="header-nav">
@@ -231,32 +262,53 @@ document.addEventListener('click',function(e){
 
 <!-- HERO -->
 <section class="mc-hero">
-  <img class="mc-hero-photo" src="assets/sofia-masterclass-hero.jpg" alt="Sofía Retif">
-  <span class="hand">Clase gratis en vivo 👋</span>
-  <div class="mc-badge">Masterclass gratuita · cupo limitado</div>
-  <h1>Cómo elegir la zona correcta y convencer a un dueño de rentarte (sin comprar propiedad)</h1>
-  <p class="lead">En esta clase en vivo te enseño los <strong>dos pasos que frenan a todos</strong> para empezar: cómo saber si tu zona tiene <strong>demanda real de Airbnb</strong> y cómo <strong>convencer a un dueño de rentarte</strong> su propiedad — para que arranques con seguridad, sin comprar y sin miedo a elegir mal. Y por quedarte hasta el final, te regalo mi checklist de zona + mi guion para hablar con dueños.</p>
-  <!-- EDITA AQUÍ la fecha y hora de tu próxima clase -->
-  <div class="mc-when">
-    <span class="w"><span class="em">📅</span> Lunes 27 de julio</span>
-    <span class="w"><span class="em">🕕</span> 6:00 pm (CDMX)</span>
-    <span class="w"><span class="em">💻</span> En vivo por YouTube</span>
+  <div class="mc-hero-text">
+    <span class="hand">Clase gratis en vivo 👋</span>
+    <div class="mc-badge">Masterclass gratuita · cupo limitado</div>
+    <h1>Cómo elegir la zona correcta y convencer a un dueño de rentarte (sin comprar propiedad)</h1>
+    <p class="lead">Te enseño los <strong>2 pasos que frenan a todos</strong> para empezar: validar tu zona y convencer a un dueño — sin comprar propiedad.</p>
+    <div class="hero-countdown" aria-live="polite">
+      <span class="hc-label">🔥 Empieza en</span>
+      <div class="hc-boxes">
+        <div class="hc-box"><span id="hc-d">–</span><small>días</small></div>
+        <div class="hc-box"><span id="hc-h">–</span><small>hrs</small></div>
+        <div class="hc-box"><span id="hc-m">–</span><small>min</small></div>
+        <div class="hc-box"><span id="hc-s">–</span><small>seg</small></div>
+      </div>
+    </div>
+    <!-- EDITA AQUÍ la fecha y hora de tu próxima clase -->
+    <div class="mc-when">
+      <span class="w"><span class="em">📅</span> Lunes 27 de julio</span>
+      <span class="w"><span class="em">🕕</span> 6:00 pm (CDMX)</span>
+      <span class="w"><span class="em">💻</span> En vivo por YouTube</span>
+    </div>
+    <br>
+    <a href="#registro" class="mc-cta">Reservar mi lugar gratis →</a>
+    <p class="mc-cta-note">100% gratis · al registrarte entras al grupo de WhatsApp con toda la info</p>
+    <br>
+    <div class="mc-gift"><span class="g">🎁</span><span>Regalo por quedarte hasta el final: mi <b>kit para arrancar</b> — el <b>Checklist para validar tu zona</b> + guion para <b>convencer a un dueño</b> de rentarte.</span></div>
   </div>
-  <br>
-  <a href="#registro" class="mc-cta">Reservar mi lugar gratis →</a>
-  <p class="mc-cta-note">100% gratis · al registrarte entras al grupo de WhatsApp con toda la info</p>
-  <br>
-  <div class="mc-gift"><span class="g">🎁</span><span>Regalo por quedarte hasta el final: mi <b>kit para arrancar</b> — el <b>Checklist para validar tu zona</b> + guion para <b>convencer a un dueño</b> de rentarte.</span></div>
+  <div class="mc-hero-photo-wrap"><img class="mc-hero-photo" src="assets/sofia-masterclass-hero.jpg" alt="Sofía Retif"></div>
 </section>
 
 <!-- HISTORIA / GANCHO -->
 <section class="mc-story">
   <div class="mc-story-inner">
     <span class="eyebrow">Antes de que te registres…</span>
-    <h2>Los 2 miedos que frenan a todos: elegir mal la zona y no saber cómo convencer a un dueño</h2>
-    <p>Son las dos dudas que aparecen siempre: <strong>"¿y si elijo mal el lugar y pierdo mi dinero?"</strong> y <strong>"¿cómo convenzo a un dueño de rentarme su propiedad para volverla Airbnb?"</strong>. Tienen toda la lógica — son justo los dos primeros pasos del modelo, y donde casi todos se traban.</p>
-    <p>La buena noticia: <strong>ninguno de los dos es cuestión de suerte.</strong> Sí se puede saber si una zona tiene demanda real de Airbnb <strong>antes de invertir un solo peso</strong>, y sí hay una forma de proponerle a un dueño que funciona — con señales y palabras concretas que cualquiera puede aplicar. Eso es justo lo que la mayoría no sabe hacer — por eso se traban, o arrancan a ciegas y les va mal.</p>
-    <p>Llevo años viviendo del arbitraje de Airbnb sin ser dueña, y he acompañado a <strong>+120 personas en Latinoamérica</strong> a arrancar. En esta clase gratuita te enseño exactamente cómo validar tu zona y cómo cerrar con un dueño, para que des tu primer paso con seguridad y no por corazonada.</p>
+    <h2>Los 2 miedos que frenan a todos</h2>
+    <div class="fear-grid">
+      <div class="fear-card">
+        <span class="fic">📍</span>
+        <b>"¿Y si elijo mal la zona?"</b>
+        <p>Sí se puede saber si una zona tiene demanda real de Airbnb <strong>antes de invertir un solo peso.</strong></p>
+      </div>
+      <div class="fear-card">
+        <span class="fic">🤝</span>
+        <b>"¿Cómo convenzo a un dueño?"</b>
+        <p>Hay una forma que funciona — con <strong>señales y palabras concretas</strong> que cualquiera puede aplicar.</p>
+      </div>
+    </div>
+    <p>Ninguno de los dos es cuestión de suerte. Llevo años viviendo del arbitraje de Airbnb sin ser dueña, y he acompañado a <strong>+120 personas en Latinoamérica</strong> a arrancar. En esta clase gratuita te enseño exactamente cómo, para que des tu primer paso con seguridad y no por corazonada.</p>
     <p class="sig">— Sofía</p>
   </div>
 </section>
@@ -445,6 +497,32 @@ document.addEventListener('click',function(e){
     if(window.fbq){ fbq('track','Lead'); }
     document.getElementById('signup').classList.add('done');
   });
+</script>
+
+<script>
+  // Countdown real a la clase: lunes 27 de julio, 6:00 pm (CDMX)
+  (function(){
+    var bannerEl=document.getElementById('cd-timer');
+    var hd=document.getElementById('hc-d'), hh=document.getElementById('hc-h'), hm=document.getElementById('hc-m'), hs=document.getElementById('hc-s');
+    if(!bannerEl && !hd) return;
+    var target=new Date('2026-07-27T18:00:00-06:00').getTime();
+    function tick(){
+      var diff=target-Date.now();
+      if(diff<=0){
+        if(bannerEl) bannerEl.textContent='';
+        if(hd){ hd.textContent=hh.textContent=hm.textContent=hs.textContent='0'; }
+        return;
+      }
+      var d=Math.floor(diff/86400000);
+      var h=Math.floor((diff%86400000)/3600000);
+      var m=Math.floor((diff%3600000)/60000);
+      var s=Math.floor((diff%60000)/1000);
+      if(bannerEl) bannerEl.textContent='· empieza en '+d+'d '+h+'h '+m+'m '+s+'s';
+      if(hd){ hd.textContent=d; hh.textContent=h; hm.textContent=m; hs.textContent=s; }
+    }
+    tick();
+    setInterval(tick,1000);
+  })();
 </script>
 
 </body>

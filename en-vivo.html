@@ -104,14 +104,14 @@ fbq('init','1270112635290396');fbq('track','PageView');
 <body>
   <header class="site-header">
     <a href="/masterclass" class="brand">Sofía <span>Retif</span></a>
-    <a class="wa-mini" href="https://chat.whatsapp.com/JmUckUDVzYfEEJFqnUzomb?mode=gi_t" target="_blank" rel="noopener">Grupo de WhatsApp →</a>
+    <a class="wa-mini" href="/curso-en-vivo" onclick="if(window.fbq){fbq('track','Lead');}">Conocer el Bootcamp →</a>
   </header>
 
   <section class="wrap">
-    <span class="live-badge"><span class="dot"></span> En vivo</span>
+    <span class="live-badge" style="background:var(--gold-dark);"><span class="dot"></span> Clase grabada</span>
     <span class="hand">¡Qué gusto tenerte aquí! 👋</span>
     <h1>Masterclass — Tu primer Airbnb</h1>
-    <p class="sub">Lunes 27 de julio · 6:00 pm (CDMX) · Cómo elegir tu zona y convencer a un dueño de rentarte</p>
+    <p class="sub">Disponible cuando quieras · Cómo elegir tu zona y convencer a un dueño de rentarte</p>
   </section>
 
   <div class="stage-wrap">
@@ -126,7 +126,7 @@ fbq('init','1270112635290396');fbq('track','PageView');
   </div>
 
   <section class="wrap" style="padding-top:1.4rem;">
-    <a class="wa-cta" href="https://chat.whatsapp.com/JmUckUDVzYfEEJFqnUzomb?mode=gi_t" target="_blank" rel="noopener">Entrar al grupo de WhatsApp →</a>
+    <a class="wa-cta" style="background:var(--gold-soft);color:var(--sky-deeper);" href="/curso-en-vivo" onclick="if(window.fbq){fbq('track','Lead');}">Conocer el Bootcamp →</a>
   </section>
 
   <!-- QUÉ VAS A APRENDER -->
@@ -173,7 +173,50 @@ fbq('init','1270112635290396');fbq('track','PageView');
     </div>
   </section>
 
-  <!-- ===== BOOTCAMP · MODO LANZAMIENTO (activo) — para evergreen: comenta esta <section> y descomenta el bloque MODO EVERGREEN de abajo ===== -->
+  <!-- ===== BOOTCAMP · MODO EVERGREEN (activo) — para el próximo lanzamiento en vivo: comenta esta <section> y descomenta el bloque MODO LANZAMIENTO guardado abajo, con la fecha nueva ===== -->
+  <section class="section">
+    <div class="bootcamp">
+      <p class="eyebrow">¿Lista para el siguiente paso?</p>
+      <h3>Bootcamp grabado + llamada conmigo</h3>
+      <p class="bc-sub">Todo el método del Bootcamp, grabado, para que lo veas cuando quieras — y con una llamada en vivo conmigo para resolver TUS dudas. No te quedas sola con las preguntas.</p>
+      <ul class="bc-list">
+        <li><span class="ic">🎬</span> <span><strong>Las 6 clases completas</strong>, con las preguntas reales de otros alumnos.</span></li>
+        <li><span class="ic">🎤</span> <span><strong>Una llamada en vivo conmigo</strong> para lo que sea específico de tu caso.</span></li>
+        <li><span class="ic">🧰</span> <span><strong>Kit de Arranque:</strong> contrato de subarriendo, calculadora y checklists listos para usar.</span></li>
+        <li><span class="ic">♾️</span> <span>Acceso de por vida, para repasar cada lección las veces que quieras.</span></li>
+      </ul>
+      <p class="bc-price">Acceso inmediato · <strong>$247 USD</strong> (o hasta 12 mensualidades) · con garantía</p>
+      <a class="bc-cta" href="https://go.hotmart.com/F106994888U" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Quiero mi acceso ($247) →</a>
+      <div class="waitlist">
+        <p class="wl-title">¿Aún tienes dudas o prefieres la experiencia <strong>en vivo</strong>? Déjame tu correo, te mando más info y te aviso cuando abra la próxima generación 👇</p>
+        <form action="https://sofiaretif.us8.list-manage.com/subscribe/post?u=b6e40ec0a713bd6b97f9d4422&amp;id=273eed67f7" method="post" target="wl_iframe" class="wl-form" onsubmit="this.style.display='none';this.parentNode.querySelector('.wl-done').style.display='block';">
+          <input type="hidden" name="MMERGE3" value="Lista espera Bootcamp">
+          <input type="hidden" name="tags" value="Interes Bootcamp Grabado">
+          <input type="email" name="EMAIL" placeholder="Tu mejor correo" required class="wl-input">
+          <div style="position:absolute;left:-5000px" aria-hidden="true"><input type="text" name="b_b6e40ec0a713bd6b97f9d4422_273eed67f7" tabindex="-1" value=""></div>
+          <button type="submit" class="wl-btn">Avísame →</button>
+        </form>
+        <p class="wl-done" style="display:none">¡Listo! Te mando la info en un momento. 💛</p>
+      </div>
+    </div>
+  </section>
+  <iframe name="wl_iframe" title="lista de espera" style="display:none"></iframe>
+
+  <!-- REGALO -->
+  <section class="section">
+    <div class="gift">
+      <p>🎁 <b>Tu regalo de la clase:</b> mi <em>Checklist para validar tu zona y negociar con el dueño</em>, lista para usar.</p>
+      <a class="bc-cta" style="margin-top:12px;" href="/regalo" onclick="if(window.fbq){fbq('track','Lead');}">Descargar mi checklist gratis →</a>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       MODO LANZAMIENTO  (bootcamp en vivo, cupo limitado por generación)
+       Activar en el próximo lanzamiento en vivo:
+         1) Actualiza la fecha de "Próxima generación" abajo.
+         2) Comenta la <section> "BOOTCAMP MODO EVERGREEN" de arriba.
+         3) Borra la linea de apertura de comentario (de aqui) y la de cierre (abajo).
+       =====================================================================
   <section class="section">
     <div class="bootcamp">
       <p class="eyebrow">¿Lista para el siguiente paso?</p>
@@ -186,50 +229,10 @@ fbq('init','1270112635290396');fbq('track','PageView');
         <li><span class="ic">👩‍💻</span> <span><strong>Opción de asesoría 1:1</strong> al cierre (plan Completo + 1:1).</span></li>
         <li><span class="ic">🎁</span> <span><strong>Kit de Arranque:</strong> contrato de subarriendo, calculadora, checklists y carritos listos para usar.</span></li>
       </ul>
-      <p class="bc-price">Próxima generación: 3–14 de agosto · desde <strong>$697 USD</strong> · cupo limitado</p>
+      <p class="bc-price">Próxima generación: [ACTUALIZAR FECHA] · desde <strong>$697 USD</strong> · cupo limitado</p>
       <a class="bc-cta" href="/curso-en-vivo" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','Lead');}">Conocer el Bootcamp →</a>
     </div>
   </section>
-
-  <!-- REGALO -->
-  <section class="section">
-    <div class="gift">
-      <p>🎁 <b>Tu regalo de la clase:</b> mi <em>Checklist para validar tu zona y negociar con el dueño</em>, lista para usar.</p>
-      <a class="bc-cta" style="margin-top:12px;" href="/regalo" onclick="if(window.fbq){fbq('track','Lead');}">Descargar mi checklist gratis →</a>
-    </div>
-  </section>
-
-  <!-- =====================================================================
-       MODO EVERGREEN  (curso $97 + lista de espera del Bootcamp)
-       Activar cuando cierre la generacion del Bootcamp:
-         1) Comenta la <section> "BOOTCAMP MODO LANZAMIENTO" de arriba.
-         2) Borra la linea de apertura de comentario (de aqui) y la de cierre (abajo).
-       =====================================================================
-  <section class="section">
-    <div class="bootcamp">
-      <p class="eyebrow">El siguiente paso</p>
-      <h3>Empieza hoy, a tu ritmo</h3>
-      <p class="bc-sub">El <strong>Bootcamp en vivo</strong> abre solo por generaciones. ¿No quieres esperar? Todo el método está también en mi <strong>Curso a tu ritmo</strong> — empieza hoy mismo, con acceso de por vida.</p>
-      <ul class="bc-list">
-        <li><span class="ic">🎬</span> <span><strong>10 módulos</strong> paso a paso, a tu ritmo y de por vida.</span></li>
-        <li><span class="ic">🧰</span> <span>Plantillas y herramientas listas para Latinoamérica.</span></li>
-        <li><span class="ic">💬</span> <span>Comunidad y actualizaciones incluidas.</span></li>
-      </ul>
-      <p class="bc-price">Acceso de por vida · <strong>$97</strong></p>
-      <a class="bc-cta" href="https://pay.hotmart.com/N101179190K" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Empezar el curso ($97) →</a>
-      <div class="waitlist">
-        <p class="wl-title">¿Prefieres la experiencia <strong>en vivo</strong>? Te aviso cuando abra la próxima generación del Bootcamp 👇</p>
-        <form action="https://sofiaretif.us8.list-manage.com/subscribe/post?u=b6e40ec0a713bd6b97f9d4422&amp;id=273eed67f7" method="post" target="wl_iframe" class="wl-form" onsubmit="this.style.display='none';this.parentNode.querySelector('.wl-done').style.display='block';">
-          <input type="hidden" name="MMERGE3" value="Lista espera Bootcamp">
-          <input type="email" name="EMAIL" placeholder="Tu mejor correo" required class="wl-input">
-          <div style="position:absolute;left:-5000px" aria-hidden="true"><input type="text" name="b_b6e40ec0a713bd6b97f9d4422_273eed67f7" tabindex="-1" value=""></div>
-          <button type="submit" class="wl-btn">Avísame →</button>
-        </form>
-        <p class="wl-done" style="display:none">¡Listo! Te aviso en cuanto abra la próxima generación. 💛</p>
-      </div>
-    </div>
-  </section>
-  <iframe name="wl_iframe" title="lista de espera" style="display:none"></iframe>
   ===================================================================== -->
 
   <footer>

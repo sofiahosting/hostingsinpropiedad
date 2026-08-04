@@ -165,6 +165,39 @@
         "Fórmalo por escrito en el contrato: monto, condiciones de devolución y plazos. Así ambas partes quedan protegidas."
       ],
       "cta":"bootcamp"
+    },
+    {
+      "slug":"ingreso-pasivo",
+      "termino":"Ingreso pasivo",
+      "description":"Qué es un ingreso pasivo, qué tan pasivo es en realidad y cómo se relaciona con modelos como el arbitraje de Airbnb.",
+      "definicion":"Un ingreso pasivo es el dinero que sigue generando con poco o nulo esfuerzo continuo, después de una inversión inicial de tiempo, trabajo o capital. En la práctica, la mayoría de los ingresos pasivos son \"semi-pasivos\": requieren montar y mantener un sistema.",
+      "body":[
+        "Ejemplos comunes de ingreso pasivo incluyen rentas, dividendos de inversiones, regalías y negocios operativos que ya no dependen de tu presencia diaria, como un Airbnb bien automatizado.",
+        "La clave para que un ingreso se vuelva realmente pasivo es sistematizar la operación: entre menos decisiones tengas que tomar tú cada semana, más pasivo es el ingreso."
+      ],
+      "cta":"masterclass"
+    },
+    {
+      "slug":"ingreso-extra",
+      "termino":"Ingreso extra",
+      "description":"Qué es un ingreso extra y qué buscar si quieres uno sin dejar tu trabajo actual.",
+      "definicion":"Un ingreso extra es una fuente de dinero adicional a tu sueldo o ingreso principal, generalmente construida en paralelo a un empleo de tiempo completo. A diferencia de un ingreso pasivo puro, suele requerir algo de tiempo activo, sobre todo al inicio.",
+      "body":[
+        "Un buen ingreso extra no debe poner en riesgo tu estabilidad financiera ni exigir que renuncies a tu trabajo desde el primer día. Se construye en paralelo, con horas fuera de tu horario laboral.",
+        "El arbitraje de Airbnb es un ingreso extra común entre personas con empleo: la operación diaria se puede automatizar (check-in, limpieza, mensajes) para que no choque con tu horario de trabajo."
+      ],
+      "cta":"masterclass"
+    },
+    {
+      "slug":"segundo-ingreso",
+      "termino":"Segundo ingreso",
+      "description":"Qué es un segundo ingreso y por qué cada vez más personas buscan uno fuera de su empleo principal.",
+      "definicion":"Un segundo ingreso es cualquier fuente de dinero adicional a tu ingreso principal (normalmente un sueldo), sea activa o pasiva. Sirve como colchón financiero, para ahorrar más rápido o como paso hacia la independencia económica.",
+      "body":[
+        "Un segundo ingreso puede empezar pequeño y crecer con el tiempo. La diferencia entre uno que aporta de verdad y uno que solo consume tu tiempo libre está en si se puede sistematizar o no.",
+        "Negocios como el arbitraje de Airbnb funcionan bien como segundo ingreso porque generan dinero desde el primer mes de operación y se pueden automatizar conforme aprendes el sistema."
+      ],
+      "cta":"masterclass"
     }
   ]
 }

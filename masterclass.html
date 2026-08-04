@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="refresh" content="0; url=/en-vivo.html">
 <title>Masterclass gratis · Sofía Retif</title>
 <meta name="description" content="Clase gratis en vivo con Sofía Retif: cómo elegir la zona correcta y convencer a un dueño de rentarte para tu Airbnb, sin comprar propiedad. Regístrate y aparta tu lugar.">
-<link rel="canonical" href="https://sofiaretif.com/masterclass.html">
+<link rel="canonical" href="https://sofiaretif.com/en-vivo.html">
 <!-- Open Graph / redes -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sofiaretif.com/masterclass.html">
@@ -246,8 +247,10 @@ document.addEventListener('click',function(e){
 </head>
 <body>
 
-<!-- EDITA AQUÍ la fecha de la clase -->
-<div class="top-urgent">🔥 Cupo limitado · clase en vivo el lunes 27 de julio <span id="cd-timer" class="cd-timer" aria-live="polite"></span></div>
+<!-- La masterclass en vivo del 27 jul ya pasó; esta página redirige a la réplica en /en-vivo.html -->
+<p style="max-width:600px;margin:40px auto;text-align:center;font-family:sans-serif;color:#2C2820;">
+  Redirigiendo a la clase grabada… <a href="/en-vivo.html">Haz clic aquí si no avanza automáticamente</a>.
+</p>
 
 <header class="site-header">
   <a href="index.html" class="brand">Sofía <span>Retif</span></a>
@@ -267,15 +270,6 @@ document.addEventListener('click',function(e){
     <div class="mc-badge">Masterclass gratuita · cupo limitado</div>
     <h1>Cómo elegir la zona correcta y convencer a un dueño de rentarte (sin comprar propiedad)</h1>
     <p class="lead">Te enseño los <strong>2 pasos que frenan a todos</strong> para empezar: validar tu zona y convencer a un dueño — sin comprar propiedad.</p>
-    <div class="hero-countdown" aria-live="polite">
-      <span class="hc-label">🔥 Empieza en</span>
-      <div class="hc-boxes">
-        <div class="hc-box"><span id="hc-d">–</span><small>días</small></div>
-        <div class="hc-box"><span id="hc-h">–</span><small>hrs</small></div>
-        <div class="hc-box"><span id="hc-m">–</span><small>min</small></div>
-        <div class="hc-box"><span id="hc-s">–</span><small>seg</small></div>
-      </div>
-    </div>
     <!-- EDITA AQUÍ la fecha y hora de tu próxima clase -->
     <div class="mc-when">
       <span class="w"><span class="em">📅</span> Lunes 27 de julio</span>
@@ -497,32 +491,6 @@ document.addEventListener('click',function(e){
     if(window.fbq){ fbq('track','Lead'); }
     document.getElementById('signup').classList.add('done');
   });
-</script>
-
-<script>
-  // Countdown real a la clase: lunes 27 de julio, 6:00 pm (CDMX)
-  (function(){
-    var bannerEl=document.getElementById('cd-timer');
-    var hd=document.getElementById('hc-d'), hh=document.getElementById('hc-h'), hm=document.getElementById('hc-m'), hs=document.getElementById('hc-s');
-    if(!bannerEl && !hd) return;
-    var target=new Date('2026-07-27T18:00:00-06:00').getTime();
-    function tick(){
-      var diff=target-Date.now();
-      if(diff<=0){
-        if(bannerEl) bannerEl.textContent='';
-        if(hd){ hd.textContent=hh.textContent=hm.textContent=hs.textContent='0'; }
-        return;
-      }
-      var d=Math.floor(diff/86400000);
-      var h=Math.floor((diff%86400000)/3600000);
-      var m=Math.floor((diff%3600000)/60000);
-      var s=Math.floor((diff%60000)/1000);
-      if(bannerEl) bannerEl.textContent='· empieza en '+d+'d '+h+'h '+m+'m '+s+'s';
-      if(hd){ hd.textContent=d; hh.textContent=h; hm.textContent=m; hs.textContent=s; }
-    }
-    tick();
-    setInterval(tick,1000);
-  })();
 </script>
 
 </body>

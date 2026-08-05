@@ -138,8 +138,8 @@
   /* Value stack */
   .vstack{max-width:520px;margin:0 auto;background:var(--sky-deeper);color:#fff;border-radius:20px;padding:1.8rem 2rem;box-shadow:0 18px 44px rgba(35,75,107,.22);}
   .vstack h3{font-family:'Playfair Display',serif;font-size:19px;text-align:center;margin-bottom:1.1rem;}
-  .vstack .vs-row{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px dashed rgba(255,255,255,.18);font-size:13.5px;}
-  .vstack .vs-row span:last-child{color:var(--gold-soft);font-weight:600;white-space:nowrap;}
+  .vstack .vs-row{padding:9px 0;border-bottom:1px dashed rgba(255,255,255,.18);font-size:13.5px;color:#fff;}
+  .vstack .vs-row span:before{content:"✓ ";color:var(--gold-soft);font-weight:700;}
   .vstack .vs-total{display:flex;justify-content:space-between;padding-top:12px;font-weight:700;font-size:15px;}
   .vstack .vs-price{text-align:center;margin-top:1.3rem;padding-top:1.3rem;border-top:1px solid rgba(255,255,255,.2);}
   .vstack .vs-price .now{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;}
@@ -224,11 +224,9 @@
 <section class="gb-sec" style="padding-top:0;padding-bottom:1.6rem;">
   <div class="vstack">
     <h3>Todo lo que tienes hoy</h3>
-    <div class="vs-row"><span>6 clases completas grabadas</span><span>$297</span></div>
-    <div class="vs-row"><span>Llamada en vivo conmigo (1:1)</span><span>$97</span></div>
-    <div class="vs-row"><span>Kit de Arranque (contrato, calculadora, checklist, carritos)</span><span>$67</span></div>
-    <div class="vs-row"><span>1 mes de acceso a AirDNA</span><span>$49</span></div>
-    <div class="vs-total"><span>Valor total</span><span>$500+</span></div>
+    <div class="vs-row"><span>6 clases completas grabadas</span></div>
+    <div class="vs-row"><span>Kit de Arranque (contrato, calculadora, checklist, carritos)</span></div>
+    <div class="vs-row"><span>1 mes de acceso a AirDNA</span></div>
     <div class="vs-price">
       <div class="now">$247 <small>USD</small></div>
       <p>Pago único · acceso de por vida a las grabaciones</p>

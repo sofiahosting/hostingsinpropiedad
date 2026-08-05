@@ -127,6 +127,53 @@
   .pw-card button{width:100%;background:var(--sky-deep);color:#fff;font-weight:600;font-size:15px;padding:12px;border:none;border-radius:10px;cursor:pointer;transition:background .2s;}
   .pw-card button:hover{background:var(--sky-deeper);}
   .pw-error{color:var(--rose);font-size:13px;margin-top:.7rem;display:none;}
+
+  /* Nav ancla */
+  .subnav{position:sticky;top:57px;z-index:40;background:#fff;border-bottom:1px solid var(--beige-dark);overflow-x:auto;white-space:nowrap;padding:11px 6%;}
+  .subnav a{display:inline-block;margin-right:20px;font-size:13px;font-weight:600;color:var(--mid);text-decoration:none;}
+  .subnav a:hover{color:var(--sky-deep);}
+  .subnav::-webkit-scrollbar{display:none;}
+  section[id]{scroll-margin-top:112px;}
+
+  /* Value stack */
+  .vstack{max-width:520px;margin:0 auto;background:var(--sky-deeper);color:#fff;border-radius:20px;padding:1.8rem 2rem;box-shadow:0 18px 44px rgba(35,75,107,.22);}
+  .vstack h3{font-family:'Playfair Display',serif;font-size:19px;text-align:center;margin-bottom:1.1rem;}
+  .vstack .vs-row{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px dashed rgba(255,255,255,.18);font-size:13.5px;}
+  .vstack .vs-row span:last-child{color:var(--gold-soft);font-weight:600;white-space:nowrap;}
+  .vstack .vs-total{display:flex;justify-content:space-between;padding-top:12px;font-weight:700;font-size:15px;}
+  .vstack .vs-price{text-align:center;margin-top:1.3rem;padding-top:1.3rem;border-top:1px solid rgba(255,255,255,.2);}
+  .vstack .vs-price .now{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;}
+  .vstack .vs-price .now small{font-size:15px;font-weight:400;color:rgba(255,255,255,.7);}
+  .vstack .vs-price p{font-size:12px;color:rgba(255,255,255,.6);margin-top:.4rem;}
+
+  /* Testimonios */
+  .tbq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+  @media(max-width:680px){ .tbq-grid{grid-template-columns:1fr;} }
+  .tbq-card{background:#fff;border:1px solid var(--beige-dark);border-radius:16px;padding:16px;box-shadow:0 10px 30px rgba(44,40,32,.06);}
+  .tbq-head{display:flex;align-items:center;gap:9px;margin-bottom:11px;}
+  .tbq-av{width:30px;height:30px;border-radius:50%;background:var(--sky-deep);color:#fff;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .tbq-name{font-size:12.5px;font-weight:600;color:var(--dark);line-height:1.1;}
+  .tbq-sub{font-size:11px;color:var(--gold-dark);font-weight:600;}
+  .tbq-bubble{background:var(--sky-pale);border-radius:14px;border-top-left-radius:4px;padding:12px 13px;font-size:13px;color:var(--dark);line-height:1.55;}
+
+  /* Sobre mí */
+  .about-wrap{display:flex;gap:2rem;align-items:center;max-width:820px;margin:0 auto;}
+  .about-wrap img{width:150px;height:150px;border-radius:50%;object-fit:cover;flex-shrink:0;box-shadow:0 12px 30px rgba(44,40,32,.12);}
+  .about-wrap p{font-size:14.5px;color:var(--mid);line-height:1.7;margin-bottom:.7rem;}
+  @media(max-width:600px){ .about-wrap{flex-direction:column;text-align:center;} }
+
+  /* FAQ */
+  .faq-list{max-width:760px;margin:0 auto;}
+  .faq-item{border-bottom:1px solid rgba(107,99,85,.18);}
+  .faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.1rem 0;font-weight:600;font-size:15.5px;color:var(--sky-deep);}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary:hover{color:var(--sky-deeper);}
+  .faq-a{padding:0 0 1.2rem;font-size:14px;line-height:1.65;color:var(--mid);max-width:680px;}
+  .faq-a a{color:var(--sky-deep);}
+
+  /* Botón calendario */
+  .ics-btn{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--sky-deep);text-decoration:none;border:1px solid var(--beige-dark);padding:9px 16px;border-radius:50px;background:#fff;}
+  .ics-btn:hover{background:var(--sky-pale);}
 </style>
 </head>
 <body class="locked">
@@ -152,6 +199,15 @@
   <a href="https://wa.me/522206390514?text=Hola%20Sof%C3%ADa%20%F0%9F%91%8B%20Tengo%20una%20duda%20sobre%20el%20Bootcamp." target="_blank" rel="noopener" class="wa-mini">WhatsApp →</a>
 </header>
 
+<nav class="subnav">
+  <a href="#fechas">Fechas</a>
+  <a href="#grabaciones">Grabaciones</a>
+  <a href="#temario">Temario</a>
+  <a href="#recursos">Recursos</a>
+  <a href="#sobre-mi">Sobre mí</a>
+  <a href="#faq">Preguntas frecuentes</a>
+</nav>
+
 <section class="gb-hero">
   <span class="hand">¡Bienvenid@! 🎉</span>
   <h1>Bootcamp: Tu Primer Airbnb</h1>
@@ -161,6 +217,22 @@
     <span class="gb-chip">🎥 6 clases en vivo</span>
     <span class="gb-chip">💻 por Google Meet</span>
     <span class="gb-chip">🎯 acompañamiento 1 mes</span>
+  </div>
+</section>
+
+<!-- VALUE STACK -->
+<section class="gb-sec" style="padding-top:0;padding-bottom:1.6rem;">
+  <div class="vstack">
+    <h3>Todo lo que tienes hoy</h3>
+    <div class="vs-row"><span>6 clases completas grabadas</span><span>$297</span></div>
+    <div class="vs-row"><span>Llamada en vivo conmigo (1:1)</span><span>$97</span></div>
+    <div class="vs-row"><span>Kit de Arranque (contrato, calculadora, checklist, carritos)</span><span>$67</span></div>
+    <div class="vs-row"><span>1 mes de acceso a AirDNA</span><span>$49</span></div>
+    <div class="vs-total"><span>Valor total</span><span>$500+</span></div>
+    <div class="vs-price">
+      <div class="now">$247 <small>USD</small></div>
+      <p>Pago único · acceso de por vida a las grabaciones</p>
+    </div>
   </div>
 </section>
 
@@ -175,7 +247,7 @@
 </section>
 
 <!-- FECHAS -->
-<section class="gb-sec">
+<section class="gb-sec" id="fechas">
   <span class="eyebrow">Agenda</span>
   <h2>Fechas de las 6 clases</h2>
   <p class="sub">Tres clases en vivo por semana (lunes, miércoles y viernes) durante 2 semanas. Todas de 10:00 a 11:30 am, hora de México (CDMX).</p>
@@ -193,10 +265,11 @@
   </table>
   </div>
   <p class="fechas-note">💻 Las clases son por <b>Google Meet</b>. El enlace lo encuentras aquí mismo antes de cada sesión. 📼 ¿No puedes en vivo? No hay problema — te queda la grabación de cada clase.</p>
+  <a class="ics-btn" href="assets/bootcamp-fechas.ics" download>🗓️ Agregar las 6 fechas a tu calendario</a>
 </section>
 
 <!-- GRABACIONES -->
-<section class="gb-sec">
+<section class="gb-sec" id="grabaciones">
   <span class="eyebrow">Por si te la perdiste</span>
   <h2>Grabaciones de las clases</h2>
   <p class="sub">Aquí va apareciendo la grabación de cada sesión, unas horas después de que termine la clase en vivo.</p>
@@ -235,7 +308,7 @@
 </section>
 
 <!-- TEMARIO -->
-<section class="gb-sec" style="background:var(--beige);max-width:none;padding-left:0;padding-right:0;">
+<section class="gb-sec" id="temario" style="background:var(--beige);max-width:none;padding-left:0;padding-right:0;">
   <div style="max-width:820px;margin:0 auto;padding:0 6%;">
   <span class="eyebrow">Programa</span>
   <h2>El temario, clase por clase</h2>
@@ -320,8 +393,46 @@
   </div>
 </section>
 
+<!-- TESTIMONIOS -->
+<section class="gb-sec">
+  <span class="eyebrow">Resultados reales</span>
+  <h2>Lo que dicen quienes ya aplicaron el método</h2>
+  <p class="sub">Mensajes reales de alumnas y alumnos que ya usan este mismo sistema.</p>
+  <div class="tbq-grid">
+    <div class="tbq-card">
+      <div class="tbq-head"><div class="tbq-av">V</div><div><div class="tbq-name">Valeria M. ★</div><div class="tbq-sub">Guadalajara, México</div></div></div>
+      <div class="tbq-bubble">"Empecé sin saber absolutamente nada y en tres semanas ya tenía mi primera propiedad publicada. El módulo de negociación con el dueño fue clave."</div>
+    </div>
+    <div class="tbq-card">
+      <div class="tbq-head"><div class="tbq-av">A</div><div><div class="tbq-name">Andrés C. ★</div><div class="tbq-sub">Bogotá, Colombia</div></div></div>
+      <div class="tbq-bubble">"Lo que más me gustó fue que todo es aplicable, no hay relleno. La calculadora de rentabilidad me ahorró de tomar una mala decisión con la primera propiedad."</div>
+    </div>
+    <div class="tbq-card">
+      <div class="tbq-head"><div class="tbq-av">L</div><div><div class="tbq-name">Lucía R. ★</div><div class="tbq-sub">Buenos Aires, Argentina</div></div></div>
+      <div class="tbq-bubble">"Pensé que necesitaba mucho dinero para arrancar y me demostró que no. Ya llevo dos meses con mi primer espacio y el retorno superó lo que esperaba."</div>
+    </div>
+    <div class="tbq-card">
+      <div class="tbq-head"><div class="tbq-av">G</div><div><div class="tbq-name">Guillermo ★</div><div class="tbq-sub">Recuperó su inversión en 1 mes</div></div></div>
+      <div class="tbq-bubble">"Invertí 6,000 USD con todo — renta y muebles — y mi primera reserva de un mes fue de 2,000 USD. ¡En un mes recuperé gran parte de mi inversión!"</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE MÍ -->
+<section class="gb-sec" id="sobre-mi">
+  <span class="eyebrow">Quién soy</span>
+  <h2>Un poco sobre mí</h2>
+  <div class="about-wrap">
+    <img src="assets/fotos/sofia-home.jpg" alt="Sofía Retif" loading="lazy">
+    <div>
+      <p>Empecé desde cero — sin experiencia, sin propiedades, sin saber bien si iba a funcionar. Hoy manejo varias propiedades en Airbnb sin ser dueña de ninguna, trabajo menos de 10 horas por semana y vivo viajando por el mundo.</p>
+      <p>Renuncié a mi trabajo gracias a este modelo. Este bootcamp es la guía que me hubiera encantado tener cuando empecé — todo lo que aprendí, documentado paso a paso para que también puedas hacerlo.</p>
+    </div>
+  </div>
+</section>
+
 <!-- RECURSOS / KIT DE ARRANQUE -->
-<section class="gb-sec" style="background:var(--beige);max-width:none;padding-left:0;padding-right:0;">
+<section class="gb-sec" id="recursos" style="background:var(--beige);max-width:none;padding-left:0;padding-right:0;">
   <div style="max-width:820px;margin:0 auto;padding:0 6%;">
   <span class="eyebrow">Materiales</span>
   <h2>Tu Kit de Arranque</h2>
@@ -375,6 +486,40 @@
   </div>
   <div class="guarantee-box" style="margin-top:1.8rem;">
     🛡️ <b>Garantía:</b> entra a la primera clase y, si sientes que no es para ti, me escribes ese mismo día y te devuelvo tu inversión completa.
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="gb-sec" id="faq" style="background:var(--beige);max-width:none;padding-left:0;padding-right:0;">
+  <div style="max-width:820px;margin:0 auto;padding:0 6%;">
+  <span class="eyebrow">Antes de empezar</span>
+  <h2>Preguntas frecuentes</h2>
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary>¿Cómo accedo después de pagar?</summary>
+      <div class="faq-a">En cuanto se confirma tu pago te compartimos el link de esta guía con todo listo: fechas, grabaciones, temario y materiales.</div>
+    </details>
+    <details class="faq-item">
+      <summary>¿Las clases son en vivo o grabadas?</summary>
+      <div class="faq-a">La cohorte en vivo tiene sus 6 fechas fijas por Google Meet — pero si compraste el acceso a las grabaciones, puedes ver las 6 clases completas cuando quieras, a tu ritmo, y el acceso es de por vida.</div>
+    </details>
+    <details class="faq-item">
+      <summary>¿Necesito comprar una propiedad para empezar?</summary>
+      <div class="faq-a">No. El modelo que enseño consiste en rentar propiedades y volverlas a publicar como renta corta — no en comprarlas. Es de las formas con menor inversión inicial para empezar.</div>
+    </details>
+    <details class="faq-item">
+      <summary>¿Funciona en mi país o ciudad?</summary>
+      <div class="faq-a">El modelo funciona en cualquier lugar con demanda de rentas cortas. En la Sesión 2 te enseño exactamente cómo validar si tu zona tiene demanda real antes de dar un solo paso.</div>
+    </details>
+    <details class="faq-item">
+      <summary>¿Tengo garantía si no me convence?</summary>
+      <div class="faq-a">Sí. Entra a la primera clase y, si sientes que no es para ti, me escribes ese mismo día y te devuelvo tu inversión completa.</div>
+    </details>
+    <details class="faq-item">
+      <summary>¿Tienes otra duda que no está aquí?</summary>
+      <div class="faq-a">Escríbeme directo por <a href="https://wa.me/522206390514?text=Hola%20Sof%C3%ADa%20%F0%9F%91%8B%20Tengo%20una%20duda%20sobre%20el%20Bootcamp." target="_blank" rel="noopener">WhatsApp</a> y te respondo personalmente.</div>
+    </details>
+  </div>
   </div>
 </section>
 

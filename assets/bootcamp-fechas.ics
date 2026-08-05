@@ -1,0 +1,53 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sofia Retif//Bootcamp Tu Primer Airbnb//ES
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:bootcamp-sesion1-20260803@sofiaretif.com
+DTSTAMP:20260802T000000Z
+DTSTART:20260803T160000Z
+DTEND:20260803T173000Z
+SUMMARY:Bootcamp: Sesión 1 - Fundamentos del modelo
+DESCRIPTION:Clase en vivo por Google Meet. El enlace lo encuentras en tu guía del bootcamp.
+END:VEVENT
+BEGIN:VEVENT
+UID:bootcamp-sesion2-20260805@sofiaretif.com
+DTSTAMP:20260802T000000Z
+DTSTART:20260805T160000Z
+DTEND:20260805T173000Z
+SUMMARY:Bootcamp: Sesión 2 - Validación de zona y mercado
+DESCRIPTION:Clase en vivo por Google Meet. El enlace lo encuentras en tu guía del bootcamp.
+END:VEVENT
+BEGIN:VEVENT
+UID:bootcamp-sesion3-20260807@sofiaretif.com
+DTSTAMP:20260802T000000Z
+DTSTART:20260807T160000Z
+DTEND:20260807T173000Z
+SUMMARY:Bootcamp: Sesión 3 - Negociación con propietarios
+DESCRIPTION:Clase en vivo por Google Meet. El enlace lo encuentras en tu guía del bootcamp.
+END:VEVENT
+BEGIN:VEVENT
+UID:bootcamp-sesion4-20260810@sofiaretif.com
+DTSTAMP:20260802T000000Z
+DTSTART:20260810T160000Z
+DTEND:20260810T173000Z
+SUMMARY:Bootcamp: Sesión 4 - Rentabilidad real
+DESCRIPTION:Clase en vivo por Google Meet. El enlace lo encuentras en tu guía del bootcamp.
+END:VEVENT
+BEGIN:VEVENT
+UID:bootcamp-sesion5-20260812@sofiaretif.com
+DTSTAMP:20260802T000000Z
+DTSTART:20260812T160000Z
+DTEND:20260812T173000Z
+SUMMARY:Bootcamp: Sesión 5 - Montaje rentable + Publicación optimizada
+DESCRIPTION:Clase en vivo por Google Meet. El enlace lo encuentras en tu guía del bootcamp.
+END:VEVENT
+BEGIN:VEVENT
+UID:bootcamp-sesion6-20260814@sofiaretif.com
+DTSTAMP:20260802T000000Z
+DTSTART:20260814T160000Z
+DTEND:20260814T173000Z
+SUMMARY:Bootcamp: Sesión 6 - Operación + Pricing y escalamiento
+DESCRIPTION:Clase en vivo por Google Meet. El enlace lo encuentras en tu guía del bootcamp.
+END:VEVENT
+END:VCALENDAR

@@ -190,6 +190,11 @@
 </div>
 <script>
   (function(){
+    var params = new URLSearchParams(location.search);
+    var k = params.get('k');
+    if(k && k.trim().toUpperCase() === 'BOOTCAMP2026'){
+      localStorage.setItem('bc_gate_ok', '1');
+    }
     if(localStorage.getItem('bc_gate_ok') === '1'){ document.body.classList.remove('locked'); }
   })();
 </script>

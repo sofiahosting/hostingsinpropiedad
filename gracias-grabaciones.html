@@ -26,9 +26,13 @@
   .btn{display:inline-block;font-weight:700;font-size:16px;padding:15px 30px;border-radius:50px;text-decoration:none;width:100%;text-align:center;box-sizing:border-box;}
   .btn-main{background:var(--gold-soft);color:var(--sky-deeper);}
 
-  .pw-box{margin:0 0 1.4rem;background:#fff;border:3px solid var(--gold-soft);border-radius:16px;padding:20px 16px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.25);}
-  .pw-box .label{display:block;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--sky-deeper);margin-bottom:.5rem;}
-  .pw-box .pw{font-family:'DM Sans',sans-serif;font-size:34px;font-weight:800;letter-spacing:3px;color:var(--sky-deeper);}
+  .pw-box{margin:0 0 1.4rem;background:#fff;border:2px solid var(--gold-soft);border-radius:14px;padding:14px 16px;text-align:center;box-shadow:0 8px 22px rgba(0,0,0,.2);}
+  .pw-box .label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--sky-deeper);margin-bottom:.4rem;}
+  .pw-row{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .pw-box .pw{font-family:'DM Sans',sans-serif;font-size:21px;font-weight:800;letter-spacing:2px;color:var(--sky-deeper);}
+  .copy-btn{flex-shrink:0;background:var(--sky-pale);color:var(--sky-deeper);border:1px solid var(--beige-dark);border-radius:8px;font-size:12.5px;font-weight:700;padding:7px 12px;cursor:pointer;font-family:'DM Sans',sans-serif;}
+  .copy-btn:hover{background:var(--sky-light);}
+  .copy-btn.copied{background:#25D366;color:#fff;border-color:#25D366;}
 
   .link-fallback{margin-top:1.1rem;font-size:13px;color:rgba(255,255,255,.75);text-align:center;}
   .link-fallback a{color:var(--sky-light);font-weight:600;word-break:break-all;}
@@ -48,9 +52,20 @@
 
     <div class="card">
       <p>Necesitas esta contraseña para entrar a la guía de tus grabaciones:</p>
-      <div class="pw-box"><span class="label">🔑 Tu contraseña</span><span class="pw">BOOTCAMP2026</span></div>
-      <a class="btn btn-main" href="https://sofiaretif.com/guia-bootcamp.html">Ir a mis grabaciones →</a>
-      <p class="link-fallback">¿El botón no funciona? Copia y pega este link en tu navegador:<br><a href="https://sofiaretif.com/guia-bootcamp.html">https://sofiaretif.com/guia-bootcamp.html</a></p>
+      <div class="pw-box">
+        <span class="label">🔑 Tu contraseña</span>
+        <div class="pw-row">
+          <span class="pw" id="pw-text">BOOTCAMP2026</span>
+          <button type="button" class="copy-btn" id="copy-btn" onclick="
+            navigator.clipboard.writeText('BOOTCAMP2026');
+            this.textContent='¡Copiada! ✓';
+            this.classList.add('copied');
+            setTimeout(()=>{this.textContent='Copiar';this.classList.remove('copied');},2000);
+          ">Copiar</button>
+        </div>
+      </div>
+      <a class="btn btn-main" href="https://sofiaretif.com/guia-bootcamp">Ir a mis grabaciones →</a>
+      <p class="link-fallback">¿El botón no funciona? Copia y pega este link en tu navegador:<br><a href="https://sofiaretif.com/guia-bootcamp">https://sofiaretif.com/guia-bootcamp</a></p>
     </div>
     <p class="shot-note">📸 <b>Toma captura de pantalla de esta página</b> para no perder tu contraseña, y guarda el link de la guía — lo vas a usar seguido.</p>
   </div>

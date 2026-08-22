@@ -102,6 +102,12 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   .bonus-note{max-width:720px;margin:1.8rem auto 0;background:#FBF3DC;border:1px dashed var(--gold);border-radius:14px;padding:1.2rem 1.4rem;font-size:13.5px;color:#5c4a24;line-height:1.7;}
   .bonus-note b{color:var(--gold-dark);}
 
+  /* Galería */
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .gallery-grid img{width:100%;display:block;border-radius:14px;box-shadow:0 10px 28px rgba(44,40,32,.12);}
+  .gallery-grid img.big{grid-column:span 3;}
+  @media(max-width:680px){ .gallery-grid{grid-template-columns:repeat(2,1fr);} .gallery-grid img.big{grid-column:span 2;} }
+
   /* Para quién */
   .fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
   .fit-card{background:#fff;border:1px solid var(--beige-dark);border-radius:18px;padding:1.8rem;box-shadow:0 10px 30px rgba(44,40,32,.06);}
@@ -223,6 +229,19 @@ document.addEventListener('click',function(e){
   </div>
   <div class="bonus-note">
     🎁 <b>Bonos incluidos:</b> cartel de bienvenida enmarcado, carta de bienvenida para tu huésped, plantillas editables para redes sociales y checklists de organización — todo dentro del mismo Host Kit.
+  </div>
+</section>
+
+<!-- CATÁLOGO / GALERÍA -->
+<section class="ph-sec">
+  <h2>Así se ve tu Host Kit</h2>
+  <p class="sub">Un vistazo real a las plantillas que vas a recibir, listas para personalizar en Canva.</p>
+  <div class="gallery-grid">
+    <img class="big" src="assets/hostkit-01.webp" alt="Airbnb Host Kit — vista general de las plantillas" loading="lazy">
+    <img src="assets/hostkit-02.webp" alt="Plantillas de bienvenida, WiFi y reglas de la casa" loading="lazy">
+    <img src="assets/hostkit-03.webp" alt="Plantillas para redes sociales del Airbnb Host Kit" loading="lazy">
+    <img src="assets/hostkit-04.webp" alt="Plantillas de recomendaciones de la zona y reglas de la casa" loading="lazy">
+    <img src="assets/hostkit-07.webp" alt="Plantillas de check-in, check-out y listado del inmueble" loading="lazy">
   </div>
 </section>
 

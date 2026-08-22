@@ -103,9 +103,17 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
 
   /* Galería */
   .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
-  .gallery-grid img{width:100%;display:block;border-radius:14px;box-shadow:0 10px 28px rgba(44,40,32,.12);}
+  .gallery-grid img{width:100%;display:block;border-radius:14px;box-shadow:0 10px 28px rgba(44,40,32,.12);cursor:zoom-in;transition:transform .15s;}
+  .gallery-grid img:hover{transform:translateY(-2px);}
   .gallery-grid img.big{grid-column:span 3;}
   @media(max-width:680px){ .gallery-grid{grid-template-columns:repeat(2,1fr);} .gallery-grid img.big{grid-column:span 2;} }
+
+  /* Lightbox */
+  .lightbox{display:none;position:fixed;inset:0;z-index:999;background:rgba(28,24,18,.92);align-items:center;justify-content:center;padding:5vh 4vw;}
+  .lightbox.open{display:flex;}
+  .lightbox img{max-width:100%;max-height:90vh;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.4);}
+  .lightbox-close{position:absolute;top:18px;right:22px;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:22px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+  .lightbox-close:hover{background:rgba(255,255,255,.22);}
 
   /* Para quién */
   .fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
@@ -210,13 +218,18 @@ document.addEventListener('click',function(e){
   <h2>Así se ve tu Host Kit</h2>
   <p class="sub">Un vistazo real a las plantillas que vas a recibir, listas para personalizar en Canva.</p>
   <div class="gallery-grid">
-    <img class="big" src="assets/hostkit-01.webp" alt="Airbnb Host Kit — vista general de las plantillas" loading="lazy">
-    <img src="assets/hostkit-02.webp" alt="Plantillas de bienvenida, WiFi y reglas de la casa" loading="lazy">
-    <img src="assets/hostkit-03.webp" alt="Plantillas para redes sociales del Airbnb Host Kit" loading="lazy">
-    <img src="assets/hostkit-04.webp" alt="Plantillas de recomendaciones de la zona y reglas de la casa" loading="lazy">
-    <img src="assets/hostkit-07.webp" alt="Plantillas de check-in, check-out y listado del inmueble" loading="lazy">
+    <img class="big" src="assets/hostkit-01.webp" alt="Airbnb Host Kit — vista general de las plantillas" loading="lazy" onclick="openLightbox(this)">
+    <img src="assets/hostkit-02.webp" alt="Plantillas de bienvenida, WiFi y reglas de la casa" loading="lazy" onclick="openLightbox(this)">
+    <img src="assets/hostkit-03.webp" alt="Plantillas para redes sociales del Airbnb Host Kit" loading="lazy" onclick="openLightbox(this)">
+    <img src="assets/hostkit-04.webp" alt="Plantillas de recomendaciones de la zona y reglas de la casa" loading="lazy" onclick="openLightbox(this)">
+    <img src="assets/hostkit-07.webp" alt="Plantillas de check-in, check-out y listado del inmueble" loading="lazy" onclick="openLightbox(this)">
   </div>
 </section>
+
+<div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
+  <button type="button" class="lightbox-close" onclick="closeLightbox()" aria-label="Cerrar">✕</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
 
 <!-- EL PROBLEMA -->
 <section class="ph-sec">
@@ -328,6 +341,22 @@ document.addEventListener('click',function(e){
 <footer>
   <p>© 2026 Sofía Retif · Hosting Sin Propiedad · <a href="https://www.instagram.com/sofiahosting_" target="_blank" rel="noopener">@sofiahosting_</a> · <a href="https://www.tiktok.com/@sofiahosting" target="_blank" rel="noopener">@sofiahosting</a></p>
 </footer>
+
+<script>
+  function openLightbox(img){
+    var lb = document.getElementById('lightbox');
+    var lbImg = document.getElementById('lightbox-img');
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lb.classList.add('open');
+  }
+  function closeLightbox(){
+    document.getElementById('lightbox').classList.remove('open');
+  }
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeLightbox();
+  });
+</script>
 
 </body>
 </html>

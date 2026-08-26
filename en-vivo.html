@@ -79,6 +79,15 @@ fbq('init','1270112635290396');fbq('track','PageView');
   .bc-list .ic{flex-shrink:0;}
   .bc-price{text-align:center;font-size:14.5px;color:var(--gold-soft);font-weight:600;margin-bottom:1.2rem;}
   .bc-cta{display:block;max-width:340px;margin:0 auto;text-align:center;background:var(--gold-soft);color:var(--sky-deeper);font-weight:800;font-size:16.5px;padding:16px 28px;border-radius:50px;text-decoration:none;box-shadow:0 12px 30px rgba(230,197,124,.25);transition:transform .15s;}
+  .curr-toggle{display:flex;justify-content:center;background:rgba(255,255,255,.08);border-radius:50px;padding:4px;margin:0 auto 1.3rem;max-width:200px;}
+  .curr-toggle button{border:none;background:transparent;color:var(--sky-light);font-family:inherit;font-weight:700;font-size:13.5px;padding:9px 20px;border-radius:50px;cursor:pointer;transition:background .2s,color .2s;}
+  .curr-toggle button.active{background:var(--gold-soft);color:var(--sky-deeper);}
+  .price-panel{display:none;text-align:center;}
+  .price-panel.active{display:block;}
+  .price-panel .amount{font-family:'Playfair Display',serif;font-size:44px;font-weight:700;color:#fff;}
+  .price-panel .amount small{font-size:16px;font-weight:400;color:var(--sky-light);}
+  .price-panel .note{font-size:13px;color:var(--sky-light);margin:.4rem 0 1.3rem;}
+  .secure-note{display:block;text-align:center;font-size:12.5px;color:var(--sky-light);margin-top:1rem;}
   .bc-cta:hover{transform:translateY(-2px);}
   /* lista de espera (modo evergreen) */
   .waitlist{margin-top:1.6rem;border-top:1px solid rgba(255,255,255,.15);padding-top:1.4rem;}
@@ -185,8 +194,21 @@ fbq('init','1270112635290396');fbq('track','PageView');
         <li><span class="ic">🧰</span> <span><strong>Kit de Arranque:</strong> contrato de subarriendo, calculadora y checklists listos para usar.</span></li>
         <li><span class="ic">♾️</span> <span>Acceso de por vida, para repasar cada lección las veces que quieras.</span></li>
       </ul>
-      <p class="bc-price">Acceso inmediato · <strong>$247 USD</strong> (o hasta 12 mensualidades) · con garantía</p>
-      <a class="bc-cta" href="https://go.hotmart.com/F106994888U" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Quiero mi acceso ($247) →</a>
+      <div class="curr-toggle">
+        <button type="button" id="btn-mxn" class="active" onclick="showCurrency('mxn')">MXN</button>
+        <button type="button" id="btn-usd" onclick="showCurrency('usd')">USD</button>
+      </div>
+      <div class="price-panel active" id="panel-mxn">
+        <div class="amount">$4,275 <small>MXN</small></div>
+        <p class="note">Pago único o a meses sin intereses · acceso de por vida</p>
+        <a class="bc-cta" href="https://buy.stripe.com/00w8wQcmT74uaDY85m6c00f" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Quiero mi acceso →</a>
+      </div>
+      <div class="price-panel" id="panel-usd">
+        <div class="amount">$247 <small>USD</small></div>
+        <p class="note">Pago único · acceso de por vida</p>
+        <a class="bc-cta" href="https://buy.stripe.com/bJecN6ev174u3bwadu6c00c" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Quiero mi acceso →</a>
+      </div>
+      <p class="secure-note">🔒 Pago seguro vía Stripe · en cuanto pagas, te comparto tu guía privada con todo listo</p>
       <div class="waitlist">
         <p class="wl-title">¿Aún tienes dudas o prefieres la experiencia <strong>en vivo</strong>? Déjame tu correo, te mando más info y te aviso cuando abra la próxima generación 👇</p>
         <form action="https://sofiaretif.us8.list-manage.com/subscribe/post?u=b6e40ec0a713bd6b97f9d4422&amp;id=273eed67f7" method="post" target="wl_iframe" class="wl-form" onsubmit="this.style.display='none';this.parentNode.querySelector('.wl-done').style.display='block';">
@@ -244,5 +266,14 @@ fbq('init','1270112635290396');fbq('track','PageView');
     <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 .5C7.4.5.5 7.4.5 16c0 2.8.7 5.5 2.1 7.9L.5 31.5l7.8-2C10.6 30.8 13.3 31.5 16 31.5c8.6 0 15.5-6.9 15.5-15.5S24.6.5 16 .5zm0 28c-2.5 0-4.9-.7-7-1.9l-.5-.3-4.6 1.2 1.2-4.5-.3-.5C3.4 20.9 2.7 18.5 2.7 16 2.7 8.6 8.6 2.7 16 2.7S29.3 8.6 29.3 16 23.4 28.5 16 28.5zm7.6-9.9c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.6-.2-.9.2s-1 1.3-1.2 1.5c-.2.2-.4.3-.8.1s-1.7-.6-3.2-2c-1.2-1-2-2.4-2.2-2.8s0-.6.2-.8c.2-.2.4-.4.5-.6.2-.2.2-.4.4-.6.1-.3.1-.5 0-.7-.1-.2-.9-2.2-1.3-3-.3-.7-.6-.6-.9-.6h-.7c-.2 0-.6.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.2 2.6 4 6.3 5.5.9.4 1.6.6 2.1.8.9.3 1.7.2 2.3.1.7-.1 2.4-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg>
     <span class="wa-label">¿Dudas? Escríbeme</span>
   </a>
+
+<script>
+  function showCurrency(curr){
+    document.getElementById('btn-usd').classList.toggle('active', curr === 'usd');
+    document.getElementById('btn-mxn').classList.toggle('active', curr === 'mxn');
+    document.getElementById('panel-usd').classList.toggle('active', curr === 'usd');
+    document.getElementById('panel-mxn').classList.toggle('active', curr === 'mxn');
+  }
+</script>
 </body>
 </html>

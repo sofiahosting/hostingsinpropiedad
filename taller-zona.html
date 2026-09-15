@@ -162,6 +162,7 @@ src="https://www.facebook.com/tr?id=1270112635290396&ev=PageView&noscript=1"/></
   .signup .label{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.55);}
   .signup h3{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;margin:.5rem 0 .3rem;}
   .signup .amt{font-family:'Playfair Display',serif;font-size:44px;font-weight:700;margin:.4rem 0;}
+  .signup .price-note{font-size:12.5px;color:rgba(255,255,255,.65);margin-bottom:1rem;}
   .signup .dur{font-size:14px;color:rgba(255,255,255,.75);margin-bottom:1.6rem;}
   .signup .buy-cta{display:inline-block;width:100%;background:#fff;color:var(--sky-deeper);border:none;font-family:inherit;font-weight:700;font-size:16px;padding:16px;border-radius:50px;cursor:pointer;transition:background .2s;text-decoration:none;}
   .signup .buy-cta:hover{background:var(--sky-pale);}
@@ -339,18 +340,20 @@ document.addEventListener('click',function(e){
     <div class="dur">Lunes 21 de septiembre · 6:00 pm (CDMX) · 2 horas por Google Meet</div>
 
     <div class="curr-toggle">
-      <button type="button" id="btn-mxn" class="active" onclick="showCurrency('mxn')">MXN</button>
-      <button type="button" id="btn-usd" onclick="showCurrency('usd')">USD</button>
+      <button type="button" id="btn-usd" class="active" onclick="showCurrency('usd')">USD</button>
+      <button type="button" id="btn-mxn" onclick="showCurrency('mxn')">MXN</button>
     </div>
 
-    <div class="price-panel active" id="panel-mxn">
-      <div class="amt">$649 MXN</div>
-      <a class="buy-cta" href="https://buy.stripe.com/14AdRaev10G66nI1GY6c00g" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Apartar mi lugar →</a>
-    </div>
-
-    <div class="price-panel" id="panel-usd">
+    <div class="price-panel active" id="panel-usd">
       <div class="amt">$37 USD</div>
-      <a class="buy-cta" href="https://buy.stripe.com/8x214odqX0G65jE71i6c00h" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Apartar mi lugar →</a>
+      <div class="price-note">Precio final · pago único, no es anticipo</div>
+      <a class="buy-cta" href="https://buy.stripe.com/8x214odqX0G65jE71i6c00h" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Pagar $37 USD →</a>
+    </div>
+
+    <div class="price-panel" id="panel-mxn">
+      <div class="amt">$649 MXN</div>
+      <div class="price-note">Precio final · pago único, no es anticipo</div>
+      <a class="buy-cta" href="https://buy.stripe.com/14AdRaev10G66nI1GY6c00g" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Pagar $649 MXN →</a>
     </div>
 
     <p class="note">Pago seguro con tarjeta · cupo limitado</p>

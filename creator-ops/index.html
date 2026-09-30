@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sofía Retif · Creator Operations Manager</title>
+<meta name="description" content="Sofía Retif — UGC creator, brand-side buyer and systems builder. Portfolio made for the Creator Operations Manager role: creator workflow, KPI scorecard, database, case study and 30/60/90 plan.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* ===== PALETA DE MARCA — Sofía Retif (azul protagonista) ===== */
+    --sky: #7BA7C4;
+    --sky-deep: #2F6188;
+    --sky-deeper: #234B6B;
+    --sky-light: #B8D4E8;
+    --sky-pale: #EAF3F9;
+    --beige: #F5EFE4;
+    --beige-dark: #E8DDC8;
+    --gold: #C8A96E;
+    --gold-dark: #A8893E;
+    --rose: #C87D87;
+    --dark: #2C2820;
+    --mid: #6B6355;
+    --white: #FDFAF5;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--dark); line-height: 1.6; overflow-x: hidden; }
+  img, video { display: block; max-width: 100%; }
+  a { color: var(--sky-deep); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 96px 0; }
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.show { opacity: 1; transform: none; }
+
+  .eyebrow { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--sky-deep); margin-bottom: 14px; }
+  h2 { font-family: 'Playfair Display', serif; font-weight: 800; font-size: clamp(30px, 4.4vw, 48px); line-height: 1.06; letter-spacing: -.5px; color: var(--sky-deeper); margin-bottom: 18px; }
+  h2 em, h1 em { font-style: italic; font-weight: 500; }
+  h2 em { color: var(--sky); }
+  .sub { font-size: 17px; color: var(--mid); max-width: 660px; }
+  .cap { font-size: 12.5px; color: var(--mid); margin-top: 12px; }
+
+  /* NAV */
+  nav { position: fixed; inset: 0 0 auto 0; z-index: 50; display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; transition: background .3s, box-shadow .3s; }
+  nav.scrolled { background: rgba(253,250,245,.92); backdrop-filter: blur(10px); box-shadow: 0 1px 0 rgba(44,40,32,.07); }
+  .logo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 20px; color: #fff; text-decoration: none; }
+  .logo span { font-style: italic; font-weight: 500; }
+  nav.scrolled .logo { color: var(--sky-deeper); }
+  .nav-links { display: flex; gap: 22px; align-items: center; }
+  .nav-links a.t { font-size: 13px; font-weight: 500; color: rgba(255,255,255,.85); text-decoration: none; }
+  nav.scrolled .nav-links a.t { color: var(--mid); }
+  .nav-cta { font-size: 13px; font-weight: 600; color: #fff; text-decoration: none; border: 1.5px solid rgba(255,255,255,.5); padding: 8px 18px; border-radius: 99px; }
+  nav.scrolled .nav-cta { color: var(--sky-deep); border-color: var(--sky-deep); }
+
+  /* HERO */
+  .hero { padding: 0; min-height: 100vh; background: radial-gradient(110% 110% at 85% 0%, rgba(123,167,196,.32) 0%, transparent 55%), linear-gradient(155deg, #234B6B 0%, #2F6188 55%, #3E7194 100%); color: #fff; position: relative; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: 1.15fr .85fr; gap: 24px; align-items: end; min-height: 100vh; }
+  .hero-text { padding: 130px 0 90px; }
+  .pill { display: inline-flex; gap: 8px; align-items: center; font-size: 11.5px; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase; padding: 7px 16px; border-radius: 99px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.3); margin-bottom: 26px; }
+  .pill b { color: var(--gold); }
+  .hero h1 { font-family: 'Playfair Display', serif; font-weight: 800; font-size: clamp(40px, 6vw, 72px); line-height: 1.02; letter-spacing: -1px; margin-bottom: 24px; }
+  .hero h1 em { color: var(--sky-light); }
+  .hero .lead { font-size: 17.5px; font-weight: 300; color: rgba(255,255,255,.88); max-width: 560px; margin-bottom: 30px; }
+  .hero .lead b { font-weight: 600; color: #fff; }
+  .actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: var(--sky-deeper); font-weight: 600; font-size: 15px; text-decoration: none; padding: 14px 28px; border-radius: 99px; box-shadow: 0 12px 30px rgba(0,0,0,.2); transition: transform .25s; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn.dark { background: var(--sky-deep); color: #fff; }
+  .ghost { color: #fff; text-decoration: none; font-weight: 500; border-bottom: 1.5px solid rgba(255,255,255,.4); padding-bottom: 2px; }
+  .hero-photo { align-self: end; display: flex; justify-content: center; }
+  .hero-photo img { max-height: 88vh; width: auto; filter: drop-shadow(0 30px 60px rgba(0,0,0,.35)); }
+  .stats { display: grid; grid-template-columns: repeat(4, auto); gap: 28px; margin-top: 44px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.18); max-width: 580px; }
+  .stats b { display: block; font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 700; line-height: 1; }
+  .stats span { font-size: 12px; color: rgba(255,255,255,.72); line-height: 1.3; display: block; margin-top: 6px; }
+
+  /* THREE SEATS */
+  .seats-sec { background: var(--beige); }
+  .seats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 44px; }
+  .seat { background: var(--white); border: 1px solid var(--beige-dark); border-radius: 18px; padding: 28px 24px; }
+  .seat .k { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dark); }
+  .seat h3 { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--sky-deeper); margin: 6px 0 12px; line-height: 1.15; }
+  .seat ul { list-style: none; }
+  .seat li { font-size: 14.5px; color: var(--mid); padding: 7px 0 7px 20px; position: relative; border-top: 1px solid var(--beige); }
+  .seat li::before { content: '→'; position: absolute; left: 0; color: var(--sky-deep); font-weight: 700; }
+  .seat li b { color: var(--dark); }
+  .seat .so { margin-top: 14px; font-size: 14px; font-weight: 600; color: var(--sky-deep); }
+
+  /* REQUIREMENTS */
+  .reqs { margin-top: 40px; border-top: 1px solid var(--beige-dark); }
+  .req { display: grid; grid-template-columns: 300px 1fr; gap: 28px; padding: 20px 0; border-bottom: 1px solid var(--beige-dark); }
+  .req h3 { font-size: 16px; font-weight: 700; color: var(--sky-deeper); display: flex; gap: 10px; align-items: baseline; }
+  .req h3 i { font-style: normal; color: var(--gold-dark); font-size: 13px; }
+  .req p { font-size: 15px; color: var(--mid); }
+  .req p b { color: var(--dark); font-weight: 600; }
+  .req.nice h3 i { color: var(--rose); }
+
+  /* WORKFLOW */
+  .wf-sec { background: var(--sky-pale); }
+  .wf { margin-top: 44px; display: grid; gap: 14px; }
+  .stage { background: #fff; border-radius: 18px; border: 1px solid var(--sky-light); display: grid; grid-template-columns: 210px 1fr 1fr 220px; overflow: hidden; }
+  .stage > div { padding: 22px 22px; }
+  .stage .head { background: var(--sky-deeper); color: #fff; }
+  .stage .head .n { font-family: 'Playfair Display', serif; font-style: italic; color: var(--gold); font-size: 15px; }
+  .stage .head h3 { font-family: 'Playfair Display', serif; font-size: 22px; line-height: 1.1; margin-top: 4px; }
+  .stage .head p { font-size: 12.5px; color: rgba(255,255,255,.7); margin-top: 8px; }
+  .stage h4 { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 8px; }
+  .stage ul { padding-left: 17px; }
+  .stage li { font-size: 14px; color: var(--dark); margin-bottom: 5px; }
+  .stage .kpi { background: var(--beige); }
+  .stage .kpi li { list-style: none; margin-left: -17px; font-size: 13.5px; }
+  .stage .kpi li b { color: var(--sky-deeper); }
+
+  /* SCORECARD + DB */
+  .two { display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px; margin-top: 44px; align-items: start; }
+  .panel { background: #fff; border: 1px solid var(--beige-dark); border-radius: 18px; padding: 26px; box-shadow: 0 14px 34px rgba(35,75,107,.08); }
+  .panel h3 { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--sky-deeper); margin-bottom: 4px; }
+  .panel .pd { font-size: 13.5px; color: var(--mid); margin-bottom: 16px; }
+  .tbl-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  th { text-align: left; font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--mid); padding: 8px 10px; border-bottom: 2px solid var(--beige-dark); white-space: nowrap; }
+  td { padding: 9px 10px; border-bottom: 1px solid var(--beige); vertical-align: top; }
+  td b { color: var(--sky-deeper); }
+  td.w { font-weight: 700; color: var(--gold-dark); white-space: nowrap; }
+  .tier { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 18px; }
+  .tier div { border-radius: 12px; padding: 12px 14px; font-size: 13px; }
+  .tier b { display: block; font-size: 14px; }
+  .t-a { background: var(--sky-pale); } .t-a b { color: var(--sky-deeper); }
+  .t-b { background: var(--beige); } .t-b b { color: var(--gold-dark); }
+  .t-c { background: #F6E8EA; } .t-c b { color: #9B5360; }
+  .fields { display: flex; flex-wrap: wrap; gap: 7px; }
+  .fields span { font-size: 12.5px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--sky-deeper); background: var(--sky-pale); border: 1px solid var(--sky-light); padding: 4px 9px; border-radius: 8px; }
+  .fgroup { margin-bottom: 16px; }
+  .fgroup h4 { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 8px; }
+  .views { margin-top: 6px; font-size: 13.5px; color: var(--mid); }
+  .views li { margin: 0 0 6px 17px; }
+
+  /* CASE */
+  .case { border-top: 1px solid var(--beige-dark); }
+  .case.alt { background: var(--sky-pale); }
+  .case-head { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .case-num { font-family: 'Playfair Display', serif; font-size: 15px; font-style: italic; color: var(--sky); margin-bottom: 6px; }
+  .case h2 { font-size: clamp(28px, 3.8vw, 42px); }
+  .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 16px 0 0; }
+  .tags span { font-size: 12px; font-weight: 600; color: var(--sky-deep); background: #fff; border: 1px solid var(--sky-light); padding: 4px 11px; border-radius: 99px; }
+  .block { margin-bottom: 20px; }
+  .block h4 { font-size: 11.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 6px; }
+  .block p, .block li { font-size: 15.5px; color: var(--dark); }
+  .block ul { padding-left: 18px; }
+  .block li { margin-bottom: 6px; }
+  .code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; background: #fff; border: 1px solid var(--sky-light); border-radius: 8px; padding: 2px 7px; color: var(--sky-deeper); white-space: nowrap; }
+  .callout { background: #fff; border-left: 4px solid var(--sky-deep); border-radius: 0 14px 14px 0; padding: 18px 22px; margin-top: 26px; font-size: 15px; }
+  .callout b { color: var(--sky-deeper); }
+  .brief { background: #fff; border: 1px solid var(--sky-light); border-radius: 16px; padding: 20px 22px; font-size: 14px; }
+  .brief .bh { display: flex; justify-content: space-between; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mid); margin-bottom: 12px; }
+  .brief dl { display: grid; grid-template-columns: 110px 1fr; gap: 8px 14px; }
+  .brief dt { font-weight: 700; color: var(--sky-deeper); font-size: 13px; }
+  .brief dd { color: var(--dark); }
+
+  .videos { display: grid; grid-auto-flow: column; grid-auto-columns: 200px; gap: 14px; margin-top: 30px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 10px; }
+  .videos video { width: 100%; aspect-ratio: 9/16; object-fit: cover; border-radius: 14px; background: var(--sky-deeper); cursor: pointer; box-shadow: 0 10px 28px rgba(35,75,107,.16); }
+  .reel { position: relative; scroll-snap-align: start; }
+  .vtag { position: absolute; top: 10px; left: 10px; z-index: 2; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: rgba(253,250,245,.92); color: var(--sky-deeper); padding: 4px 10px; border-radius: 99px; }
+  .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 26px; }
+  .quote { background: #fff; border-radius: 14px; padding: 18px; font-size: 14.5px; border: 1px solid var(--beige-dark); }
+  .quote b { display: block; font-size: 12.5px; color: var(--mid); margin-top: 8px; font-weight: 600; }
+
+  /* PLAN */
+  .plan-sec { background: linear-gradient(160deg, #234B6B, #2F6188); color: #fff; }
+  .plan-sec h2 { color: #fff; } .plan-sec h2 em { color: var(--sky-light); }
+  .plan-sec .sub { color: rgba(255,255,255,.8); } .plan-sec .eyebrow { color: var(--gold); }
+  .plan { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 44px; }
+  .phase { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16); border-radius: 18px; padding: 26px; }
+  .phase .when { font-family: 'Playfair Display', serif; font-style: italic; color: var(--gold); font-size: 16px; }
+  .phase h3 { font-size: 19px; margin: 4px 0 12px; }
+  .phase ul { padding-left: 17px; }
+  .phase li { font-size: 14.5px; color: rgba(255,255,255,.85); margin-bottom: 7px; }
+  .phase .out { margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,.16); font-size: 13.5px; color: #fff; }
+  .phase .out b { color: var(--gold); }
+  .rules { margin-top: 30px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .rule { background: #fff; color: var(--dark); border-radius: 18px; padding: 22px; }
+  .rule h3 { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--sky-deeper); margin-bottom: 6px; }
+  .rule p { font-size: 14.5px; color: var(--mid); }
+
+  /* BACKGROUND */
+  .exp { display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; margin-top: 44px; }
+  .edu { background: var(--sky-pale); border-radius: 18px; padding: 28px; align-self: start; }
+  .edu h3 { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 14px; }
+  .edu .item { padding: 12px 0; border-top: 1px solid var(--sky-light); }
+  .edu .item b { display: block; font-family: 'Playfair Display', serif; font-size: 20px; color: var(--sky-deeper); }
+  .edu .item span { font-size: 14px; color: var(--mid); }
+  .job { padding: 0 0 22px 22px; border-left: 2px solid var(--sky-light); position: relative; }
+  .job::before { content: ''; position: absolute; left: -7px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--sky-deep); }
+  .job h3 { font-size: 18px; color: var(--sky-deeper); margin: 0 0 6px; }
+  .job p { font-size: 15px; color: var(--mid); }
+
+  /* CONTACT */
+  .contact { background: var(--beige); text-align: center; }
+  .contact .sub { margin: 0 auto 30px; }
+  .facts { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0 auto 34px; max-width: 800px; }
+  .facts span { background: var(--white); border: 1px solid var(--beige-dark); border-radius: 99px; padding: 8px 16px; font-size: 14px; }
+  .contact .actions { justify-content: center; }
+  .contact .ghost { color: var(--sky-deep); border-color: var(--sky-light); }
+  footer { text-align: center; font-size: 13px; color: var(--mid); padding: 28px 24px 40px; background: var(--beige); }
+
+  @media (max-width: 1000px) {
+    .stage { grid-template-columns: 1fr 1fr; }
+    .stage .head { grid-column: 1 / -1; }
+    .stage .kpi { grid-column: 1 / -1; }
+  }
+  @media (max-width: 960px) {
+    .seats, .plan, .rules { grid-template-columns: 1fr; }
+    .case-head, .two, .exp { grid-template-columns: 1fr; gap: 28px; }
+    .req { grid-template-columns: 1fr; gap: 6px; }
+    .nav-links a.t { display: none; }
+  }
+  @media (max-width: 760px) {
+    section { padding: 72px 0; }
+    .wrap { padding: 0 16px; }
+    .hero .wrap { grid-template-columns: 1fr; min-height: 0; }
+    .hero-text { padding: 110px 0 10px; }
+    .hero-photo img { max-height: 420px; }
+    .stats { grid-template-columns: 1fr 1fr; gap: 20px; }
+    .stage { grid-template-columns: 1fr; }
+    .tier, .quotes { grid-template-columns: 1fr; }
+    .videos { grid-auto-columns: 62%; }
+    .brief dl { grid-template-columns: 1fr; gap: 2px; }
+    .brief dd { margin-bottom: 8px; }
+    .logo span { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="logo" href="#top">Sofía Retif <span>· Creator Ops</span></a>
+  <div class="nav-links">
+    <a class="t" href="#workflow">Workflow</a>
+    <a class="t" href="#case">Case study</a>
+    <a class="t" href="#plan">30/60/90</a>
+    <a class="nav-cta" href="mailto:hola@sofiaretif.com?subject=Creator%20Operations%20Manager%20%E2%80%94%20Sof%C3%ADa%20Retif">Email me</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-text">
+      <div class="pill">Application · <b>Creator Operations Manager</b></div>
+      <h1>I've been the creator. I've been the brand. <em>I want to run the machine in between.</em></h1>
+      <p class="lead">I've sent UGC to <b>20+ brands</b>, I've bought and run paid creative on the brand side, and I build the systems that keep my own businesses shipping. This page is my answer to your hiring process: <b>a creator ops workflow, a KPI scorecard, a short case study and my first 90 days</b> — before you ask.</p>
+      <div class="actions">
+        <a class="btn" href="#workflow">See the workflow ↓</a>
+        <a class="ghost" href="#case">Jump to the case study</a>
+      </div>
+      <div class="stats">
+        <div><b>20+</b><span>brands I've<br>delivered UGC to</span></div>
+        <div><b>50K+</b><span>followers<br>IG + TikTok</span></div>
+        <div><b>500K+</b><span>monthly<br>views</span></div>
+        <div><b>100%</b><span>ET-hours<br>availability</span></div>
+      </div>
+    </div>
+    <div class="hero-photo"><img src="/assets/portfolio/port-headshot.png" alt="Sofía Retif"></div>
+  </div>
+</section>
+
+<!-- THREE SEATS -->
+<section class="seats-sec">
+  <div class="wrap">
+    <span class="eyebrow">Why me for creator ops</span>
+    <h2>Most ops managers have sat in one chair. <em>I've sat in all three.</em></h2>
+    <p class="sub">Creator operations breaks where these three meet: the creator doesn't get what the brief means, the brand doesn't get what it paid for, and nobody owns the system in the middle. I know each side from the inside.</p>
+    <div class="seats">
+      <div class="seat reveal">
+        <span class="k">Seat 01 · Creator</span>
+        <h3>I know why creators ghost, stall or miss the brief.</h3>
+        <ul>
+          <li>UGC for <b>20+ brands</b>, incl. Canva, Bonzo and Las Rosas Square</li>
+          <li>Jobs through <b>creator marketplaces</b> (e.g. a Dola AI brief via EezyCollab)</li>
+          <li>I write my own quotes: <b>usage rights, spark/partnership codes, revision rounds, turnaround, 50/50 deposit</b></li>
+        </ul>
+        <p class="so">→ Better creator experience = better retention.</p>
+      </div>
+      <div class="seat reveal">
+        <span class="k">Seat 02 · Brand &amp; media</span>
+        <h3>I know what the brand actually needs from the file.</h3>
+        <ul>
+          <li>Run <b>Meta Ads</b> for my own launches and for client brands (Bonzo, Paccioli proposal)</li>
+          <li>Creative named for testing: <span class="code">Bonzo mensajes Video [N]</span> so every asset has a result attached</li>
+          <li>Caught a pixel firing on <b>clicks, not signups</b> (478 "leads" vs 225 real) before scaling spend</li>
+        </ul>
+        <p class="so">→ I match creators to performance, not vibes.</p>
+      </div>
+      <div class="seat reveal">
+        <span class="k">Seat 03 · Operator</span>
+        <h3>I build systems so the next 100 pieces are easier than the first.</h3>
+        <ul>
+          <li>Run <b>4 businesses</b> in parallel (education, e-commerce, SaaS marketing, UGC)</li>
+          <li>Built a <b>template engine</b> that renders on-brand content from a copy file, plus programmatic SEO pipelines (78 + 25 pages)</li>
+          <li>Wrote <b>run-of-show SOPs</b> so a helper could run live-event ops for 225 attendees without me</li>
+        </ul>
+        <p class="so">→ SOPs, standards and dashboards are my default.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REQUIREMENTS -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Your requirements, my receipts</span>
+    <h2>Point by point, <em>with proof.</em></h2>
+    <div class="reqs">
+      <div class="req reveal"><h3><i>01</i> Creator ops / UGC / agency experience</h3><p>Years on the <b>creator side of UGC</b>: pitching, quoting, briefs, revisions, usage licensing and delivery for 20+ brands — and on the <b>brand side</b>, scripting and buying creative for paid social. I know the full lifecycle of a UGC asset because I've owned every step of it.</p></div>
+      <div class="req reveal"><h3><i>02</i> Building systems &amp; owning a function</h3><p>I own the whole marketing function of my own education business and the go-to-market of a SaaS (AuditBnB). I don't do "one-off": <b>naming conventions, templates, checklists and data files</b> are how I work — see the workflow below.</p></div>
+      <div class="req reveal"><h3><i>03</i> Creator selection &amp; content quality</h3><p>I've been judged on quality 20+ times, so I know what separates a usable asset from a reshoot: <b>hook in the first 2 seconds, native framing, clean audio, captions, the brief's one message</b>. That's the QA checklist I'd enforce.</p></div>
+      <div class="req reveal"><h3><i>04</i> Data-driven, KPI decisions</h3><p>I read ad data like a buyer: when Meta reported 478 leads against 225 real people, I traced it to the event map instead of celebrating. <b>I'd rather have one honest metric than five pretty ones.</b></p></div>
+      <div class="req reveal"><h3><i>05</i> Leading / coordinating a team</h3><p>I coordinate helpers, editors and client teams: e.g. a live-event SOP a helper ran end to end, and a production split where <b>I own concept + script + shoot and the client's editor owns final cut</b> — clear handoffs, one owner per step.</p></div>
+      <div class="req reveal"><h3><i>06</i> English, organization, follow-through</h3><p>Bilingual (English / Spanish), <b>Master's in Digital Business</b>. Written-first communicator: every process I run has a doc behind it. Bonus: I can also manage Spanish-speaking creators for US Hispanic campaigns.</p></div>
+      <div class="req reveal"><h3><i>07</i> Independent decisions</h3><p>I've run businesses where nobody tells me what's next. I decide, document why, and report — I don't wait for permission to fix a bottleneck.</p></div>
+      <div class="req reveal"><h3><i>08</i> US Eastern Time</h3><p>Based in Guadalajara, Mexico — <b>1 to 2 hours behind ET</b> depending on the season. Full 9–5 ET availability, no exceptions.</p></div>
+      <div class="req nice reveal"><h3><i>★</i> Nice to have: UGC, marketplaces, creative strategy, media buying</h3><p><b>All four.</b> UGC creator, creator-marketplace briefs, hook-first creative strategy, and hands-on Meta Ads buying. Wellness overlap too: my own brand <b>Daily Me</b> is a self-care / journaling product.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKFLOW -->
+<section class="wf-sec" id="workflow">
+  <div class="wrap">
+    <span class="eyebrow">Deliverable 1 · Creator ops workflow</span>
+    <h2>The pipeline I'd build, <em>stage by stage.</em></h2>
+    <p class="sub">Seven stages, each with an owner, a standard and a number. The goal: any client brief can go from "approved" to "delivered, on time, on brief" without the Co-Founder touching it.</p>
+    <div class="wf">
+      <div class="stage reveal">
+        <div class="head"><div class="n">01</div><h3>Source</h3><p>Owner: Creator sourcers</p></div>
+        <div><h4>Process</h4><ul><li>Roster gaps reviewed weekly vs. the next 30 days of briefs (niche × demo × content type)</li><li>Channels: TikTok/IG search, TikTok Shop affiliates, marketplaces, referrals from top creators</li><li>Outreach templates by niche; every lead logged in the database the same day</li></ul></div>
+        <div><h4>Standard</h4><ul><li>No brief should ever start with "do we have someone for this?"</li><li>Always 2–3 backup creators per active niche</li></ul></div>
+        <div class="kpi"><h4>KPIs</h4><ul><li><b>Reply rate</b> on outreach</li><li><b>Time-to-fill</b> a roster gap</li><li><b>Bench depth</b> per niche</li></ul></div>
+      </div>
+      <div class="stage reveal">
+        <div class="head"><div class="n">02</div><h3>Vet</h3><p>Owner: Outreach coordinator → me</p></div>
+        <div><h4>Process</h4><ul><li>Portfolio scored on a 1–5 rubric: hook, on-camera energy, lighting/audio, editing, brief-following</li><li>Paid test piece for anyone going into Tier A</li><li>Rate, usage terms and turnaround confirmed before first brief</li></ul></div>
+        <div><h4>Standard</h4><ul><li>Rubric ≥ 3.5 to join roster</li><li>No creator goes live with a client without one internal test</li></ul></div>
+        <div class="kpi"><h4>KPIs</h4><ul><li><b>Pass rate</b> by source</li><li><b>First-brief success</b> (approved with ≤1 revision)</li></ul></div>
+      </div>
+      <div class="stage reveal">
+        <div class="head"><div class="n">03</div><h3>Onboard</h3><p>Owner: Outreach coordinator</p></div>
+        <div><h4>Process</h4><ul><li>Welcome pack: how we brief, file naming, delivery specs, payment timeline, usage rights explained in plain English</li><li>"What great looks like" library: 5 winning ads per niche</li><li>Contract + payment details in one step</li></ul></div>
+        <div><h4>Standard</h4><ul><li>Onboarded in ≤ 48h from yes</li><li>Creator knows exactly when they'll be paid</li></ul></div>
+        <div class="kpi"><h4>KPIs</h4><ul><li><b>Time-to-first-brief</b></li><li><b>Onboarding drop-off</b></li></ul></div>
+      </div>
+      <div class="stage reveal">
+        <div class="head"><div class="n">04</div><h3>Brief &amp; match</h3><p>Owner: Me + creative strategist</p></div>
+        <div><h4>Process</h4><ul><li>One-page brief standard: goal, audience, the ONE message, 3 hooks to test, must-say / never-say, specs, deadline</li><li>Match on past performance in the same niche first, then demo fit, then rate</li><li>Brief confirmed by creator in writing (questions answered before shooting, not after)</li></ul></div>
+        <div><h4>Standard</h4><ul><li>No brief leaves without hooks + do/don't list</li><li>Every asset gets a test-ready name</li></ul></div>
+        <div class="kpi"><h4>KPIs</h4><ul><li><b>Brief clarity</b> (questions per brief)</li><li><b>Match hit rate</b> vs. performance</li></ul></div>
+      </div>
+      <div class="stage reveal">
+        <div class="head"><div class="n">05</div><h3>Produce &amp; QA</h3><p>Owner: Me (QA) + creators</p></div>
+        <div><h4>Process</h4><ul><li>Check-in at 50% of the timeline; red flag at 75% triggers a backup creator</li><li>QA checklist before anything reaches the client: hook ≤2s, audio, captions, framing, claims compliance, specs</li><li>Max 2 revision rounds, with specific notes, never "make it pop"</li></ul></div>
+        <div><h4>Standard</h4><ul><li>Client never sees a file that failed internal QA</li><li>Revisions: timestamped, actionable</li></ul></div>
+        <div class="kpi"><h4>KPIs</h4><ul><li><b>On-time rate</b> (target 95%+)</li><li><b>First-pass approval</b></li><li><b>Avg. revision rounds</b></li></ul></div>
+      </div>
+      <div class="stage reveal">
+        <div class="head"><div class="n">06</div><h3>Deliver &amp; measure</h3><p>Owner: Me + media buyer</p></div>
+        <div><h4>Process</h4><ul><li>Delivery folder standard: raws, hooks as separate cuts, captions file, usage terms</li><li>Asset naming ties each file to creator + hook + angle, so ad data maps back to the creator</li><li>Pull hook rate, hold rate, CTR, CPA per creator every 2 weeks</li></ul></div>
+        <div><h4>Standard</h4><ul><li>Every creator has a performance record, not just a quality opinion</li></ul></div>
+        <div class="kpi"><h4>KPIs</h4><ul><li><b>Hook rate / hold rate</b> per creator</li><li><b>Win rate</b> (assets that beat control)</li></ul></div>
+      </div>
+      <div class="stage reveal">
+        <div class="head"><div class="n">07</div><h3>Retain &amp; tier</h3><p>Owner: Me</p></div>
+        <div><h4>Process</h4><ul><li>Monthly tiering (A / B / C) from the scorecard</li><li>Tier A: first pick on briefs, faster payment, feedback shared from the ad data</li><li>Payment on time, always — the #1 retention lever from the creator side</li></ul></div>
+        <div><h4>Standard</h4><ul><li>Top creators hear their results, not just "thanks"</li><li>C-tier gets one coaching round, then off-roster</li></ul></div>
+        <div class="kpi"><h4>KPIs</h4><ul><li><b>Repeat-creator %</b></li><li><b>Tier A churn</b></li><li><b>Avg. days to pay</b></li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCORECARD + DATABASE -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Deliverable 2 · Standards you can measure</span>
+    <h2>A creator scorecard <em>and a database that answers questions.</em></h2>
+    <p class="sub">Two tools I'd set up in the first month. The scorecard turns "I think she's good" into a number; the database lets anyone on the team find the right creator in under a minute.</p>
+    <div class="two">
+      <div class="panel reveal">
+        <h3>Creator scorecard</h3>
+        <p class="pd">Reviewed monthly · weighted to what the client pays for</p>
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>Dimension</th><th>Weight</th><th>Measured by</th></tr></thead>
+          <tbody>
+            <tr><td><b>Performance</b></td><td class="w">35%</td><td>Hook rate, hold rate, CTR, win rate vs. control</td></tr>
+            <tr><td><b>Quality</b></td><td class="w">25%</td><td>QA rubric score, first-pass approval</td></tr>
+            <tr><td><b>Reliability</b></td><td class="w">25%</td><td>On-time %, response time, revision rounds</td></tr>
+            <tr><td><b>Brief fit</b></td><td class="w">15%</td><td>Strategist rating: did they deliver the ONE message?</td></tr>
+          </tbody>
+        </table></div>
+        <div class="tier">
+          <div class="t-a"><b>Tier A · 4.2+</b>First pick, priority pay, results shared</div>
+          <div class="t-b"><b>Tier B · 3.5–4.1</b>Regular briefs, targeted feedback</div>
+          <div class="t-c"><b>Tier C · &lt;3.5</b>One coaching round, then review</div>
+        </div>
+      </div>
+      <div class="panel reveal">
+        <h3>Creator database</h3>
+        <p class="pd">One record per creator · Airtable, Notion or Sheets — whatever the team already uses</p>
+        <div class="fgroup"><h4>Profile</h4><div class="fields"><span>niche</span><span>age_range</span><span>gender</span><span>location</span><span>language</span><span>on_camera_style</span><span>formats</span></div></div>
+        <div class="fgroup"><h4>Commercial</h4><div class="fields"><span>base_rate</span><span>usage_rate</span><span>whitelisting</span><span>turnaround_days</span><span>availability</span><span>payment_terms</span></div></div>
+        <div class="fgroup"><h4>Performance</h4><div class="fields"><span>qa_score</span><span>on_time_pct</span><span>avg_revisions</span><span>hook_rate</span><span>win_rate</span><span>tier</span></div></div>
+        <div class="fgroup"><h4>Saved views</h4>
+          <ul class="views">
+            <li>"Haircare · women 35–50 · available this week · Tier A"</li>
+            <li>"Late deliveries this month"</li>
+            <li>"Winners by niche" (for the strategists)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY -->
+<section class="case alt" id="case">
+  <div class="wrap">
+    <div class="case-head">
+      <div>
+        <div class="case-num">Deliverable 3 · Short case study</div>
+        <h2>Turning one creator into a performance-creative pipeline</h2>
+        <p class="sub">Bonzo, a tax firm for Airbnb hosts, paid me as a creator for Meta Ads (Click-to-Messenger). The ads ran from their account; I owned concept, scripting and production.</p>
+        <div class="tags"><span>UGC</span><span>Creative testing</span><span>Naming systems</span><span>Meta Ads</span><span>Brief templates</span></div>
+      </div>
+      <div>
+        <div class="block"><h4>The bottleneck</h4><p>Paid social needs <b>volume to test</b>. But every video depended on me filming on camera — my calendar was the brand's creative ceiling, and ad fatigue was coming faster than new videos.</p></div>
+        <div class="block"><h4>The system</h4>
+          <ul>
+            <li><b>A second format</b>: "no-camera" scripts (B-roll + on-screen text + voiceover), so production didn't depend on on-camera time</li>
+            <li><b>A fixed script template</b>: Hook (0–3s) / Visual / VO or on-screen text / CTA — the same structure every time, so a new angle takes minutes to brief</li>
+            <li><b>A naming convention</b>: campaigns as <span class="code">META | Hosts [dest] | [month]</span>, ads as <span class="code">Bonzo mensajes Video [N] Sofia</span> — every result maps back to one creative</li>
+            <li>Separate angles per video (surprise tax bill, before/after, etc.) so we test <b>messages</b>, not just edits</li>
+          </ul>
+        </div>
+        <div class="block"><h4>Why it matters for your agency</h4><p>This is creator ops in miniature: <b>remove the dependency, standardize the brief, name for data</b>. At agency scale, the same three moves apply to 100 creators instead of one.</p></div>
+      </div>
+    </div>
+    <div class="callout reveal"><b>Second example, same thinking:</b> for a live event with 225 attendees I wrote a run-of-show SOP (before / during / after, with every link and escalation rule) so a helper could run chat support, link drops and FAQ capture without me. One owner per step, a written trigger for every action, and a debrief list at the end. That's how I'd hand work to creator sourcers and coordinators.</div>
+  </div>
+</section>
+
+<!-- CREATOR SIDE WORK -->
+<section class="case">
+  <div class="wrap">
+    <div class="case-head">
+      <div>
+        <div class="case-num">From the creator side</div>
+        <h2>The quality bar I'd hold creators to</h2>
+        <p class="sub">Content I've scripted, shot and edited as a creator. I know what a good file looks like because I've had to deliver one on deadline.</p>
+        <div class="tags"><span>Brand UGC</span><span>Product</span><span>Hospitality</span><span>Talking-head</span></div>
+      </div>
+      <div class="brief reveal">
+        <div class="bh"><span>My one-page brief standard</span><span>sample</span></div>
+        <dl>
+          <dt>Goal</dt><dd>Messages started (Click-to-Messenger)</dd>
+          <dt>Audience</dt><dd>Airbnb hosts, 28–50, first tax season</dd>
+          <dt>ONE message</dt><dd>"You're probably overpaying taxes on your Airbnb — legally, you don't have to."</dd>
+          <dt>Hooks to test</dt><dd>① The bill I didn't see coming ② Before / after ③ What I wish I knew</dd>
+          <dt>Must say</dt><dd>Legal, specialist, free estimate</dd>
+          <dt>Never say</dt><dd>Guaranteed savings, specific peso amounts</dd>
+          <dt>Specs</dt><dd>9:16 · 20–35s · captions · 3 hook cuts · raw + final</dd>
+          <dt>Due</dt><dd>5 business days · 1 check-in at day 3</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="videos reveal">
+      <div class="reel"><span class="vtag">Brand</span><video src="/assets/portfolio/clip-1.mp4" poster="/assets/portfolio/clip-1.jpg" muted loop playsinline preload="none"></video></div>
+      <div class="reel"><span class="vtag">Product</span><video src="/assets/portfolio/clip-2.mp4" poster="/assets/portfolio/clip-2.jpg" muted loop playsinline preload="none"></video></div>
+      <div class="reel"><span class="vtag">Stay</span><video src="/assets/portfolio/clip-3.mp4" poster="/assets/portfolio/clip-3.jpg" muted loop playsinline preload="none"></video></div>
+      <div class="reel"><span class="vtag">Stay</span><video src="/assets/portfolio/clip-4.mp4" poster="/assets/portfolio/clip-4.jpg" muted loop playsinline preload="none"></video></div>
+      <div class="reel"><span class="vtag">Stay</span><video src="/assets/portfolio/clip-5.mp4" poster="/assets/portfolio/clip-5.jpg" muted loop playsinline preload="none"></video></div>
+      <div class="reel"><span class="vtag">Content</span><video src="/assets/portfolio/clip-6.mp4" poster="/assets/portfolio/clip-6.jpg" muted loop playsinline preload="none"></video></div>
+      <div class="reel"><span class="vtag">Content</span><video src="/assets/portfolio/clip-7.mp4" poster="/assets/portfolio/clip-7.jpg" muted loop playsinline preload="none"></video></div>
+    </div>
+    <p class="cap">Tap a video to play with sound. Swipe for more →</p>
+    <div class="quotes">
+      <div class="quote">"The client loved the video! They even want you to make a second one."<b>Luciana M. · Canva</b></div>
+      <div class="quote">"It's really great — genuinely impressed."<b>Jorge · Bonzo</b></div>
+      <div class="quote">"Great video, I really liked it."<b>Ximena · Las Rosas Square</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- 30/60/90 -->
+<section class="plan-sec" id="plan">
+  <div class="wrap">
+    <span class="eyebrow">Deliverable 4 · First 90 days</span>
+    <h2>Listen, standardize, <em>then scale.</em></h2>
+    <p class="sub">I won't rebuild what already works. The first month is about finding the real bottleneck with data, not assumptions.</p>
+    <div class="plan">
+      <div class="phase reveal">
+        <div class="when">Days 1–30</div><h3>Audit &amp; baseline</h3>
+        <ul>
+          <li>Map the current pipeline brief → delivery; time every step</li>
+          <li>Clean the creator database; fill rates, availability, tier</li>
+          <li>Baseline KPIs: on-time %, revisions, first-pass approval</li>
+          <li>1:1s with sourcers, coordinators and strategists</li>
+          <li>Interview 10 top creators: why they stay, what annoys them</li>
+        </ul>
+        <div class="out"><b>Output:</b> bottleneck report + KPI dashboard for the Co-Founder</div>
+      </div>
+      <div class="phase reveal">
+        <div class="when">Days 31–60</div><h3>Standards &amp; SOPs</h3>
+        <ul>
+          <li>Ship brief template, QA checklist and delivery spec</li>
+          <li>Launch the scorecard and first A/B/C tiering</li>
+          <li>SOPs for sourcing, vetting and onboarding, owned by the team</li>
+          <li>Backup-creator rule for at-risk deadlines</li>
+          <li>Close roster gaps in the top 3 niches by demand</li>
+        </ul>
+        <div class="out"><b>Output:</b> fewer revisions, fewer late files, measurable</div>
+      </div>
+      <div class="phase reveal">
+        <div class="when">Days 61–90</div><h3>Scale &amp; loop</h3>
+        <ul>
+          <li>Feed ad performance back into matching (winners by niche)</li>
+          <li>Tier A program: priority briefs, faster payment</li>
+          <li>Sourcing targets per sourcer, tied to upcoming briefs</li>
+          <li>Explore TikTok Shop affiliates as a sourcing channel</li>
+          <li>Monthly ops report: what moved, what's next</li>
+        </ul>
+        <div class="out"><b>Output:</b> a pipeline that runs without the Co-Founder in it</div>
+      </div>
+    </div>
+    <div class="rules">
+      <div class="rule reveal"><h3>Direct, not harsh</h3><p>Revision notes are specific and timestamped. Creators should always know exactly what to fix — and what they nailed.</p></div>
+      <div class="rule reveal"><h3>Write it down</h3><p>If a process lives only in someone's head, it's a risk. Everything I own has a doc.</p></div>
+      <div class="rule reveal"><h3>Numbers, then opinions</h3><p>Taste matters, but tiering, matching and cuts are argued with data first.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BACKGROUND -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Background</span>
+    <h2>Trained in marketing. <em>Sharpened by running my own P&amp;L.</em></h2>
+    <div class="exp">
+      <div class="edu reveal">
+        <h3>Education</h3>
+        <div class="item"><b>Master's in Digital Business</b></div>
+        <div class="item"><b>B.A. in Marketing</b></div>
+        <h3 style="margin-top:22px">Tools</h3>
+        <p style="font-size:14px;color:var(--mid)">Meta Ads Manager · Mailchimp · Airtable / Notion / Google Sheets · Canva · WordPress · Stripe · Claude (AI workflows &amp; automation) · CapCut</p>
+      </div>
+      <div class="jobs">
+        <div class="job reveal"><h3>UGC Creator · 20+ brands</h3><p>Concept, script, shoot and edit short-form for brands including Canva, Bonzo and Las Rosas Square; briefs via direct clients and creator marketplaces. Own quoting, usage licensing and delivery.</p></div>
+        <div class="job reveal"><h3>Founder &amp; Marketing Lead · Sofía Hosting</h3><p>Education business on short-term rentals. I run positioning, pricing, content, email, paid social and launches; coordinate helpers for live events.</p></div>
+        <div class="job reveal"><h3>Marketing &amp; Sales Lead · AuditBnB</h3><p>Own go-to-market for a listing-audit SaaS, including a creator/affiliate channel with tracked coupons and UTMs per creator.</p></div>
+        <div class="job reveal"><h3>Founder · Daily Me</h3><p>My own journaling / self-care product: e-commerce store, content and a programmatic SEO blog.</p></div>
+        <div class="job reveal"><h3>Short-term rental operator</h3><p>Built and ran my own Airbnb units — ops with guests, cleaners and reviews every single day.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="wrap">
+    <span class="eyebrow">Next step</span>
+    <h2>Let's talk creator ops. <em>My Loom is ready.</em></h2>
+    <p class="sub">Happy to walk your team through this workflow live, or take a real brief from your pipeline and show you how I'd staff, run and QA it.</p>
+    <div class="facts">
+      <span>📍 Guadalajara, Mexico</span>
+      <span>🕘 Full US Eastern Time availability</span>
+      <span>💬 English &amp; Spanish</span>
+      <span>🎓 B.A. Marketing · Master's in Digital Business</span>
+    </div>
+    <div class="actions">
+      <a class="btn dark" href="mailto:hola@sofiaretif.com?subject=Creator%20Operations%20Manager%20%E2%80%94%20Sof%C3%ADa%20Retif">hola@sofiaretif.com</a>
+      <a class="ghost" href="https://instagram.com/sofiahosting_" target="_blank" rel="noopener">Instagram @sofiahosting_</a>
+      <a class="ghost" href="https://www.tiktok.com/@sofiahosting" target="_blank" rel="noopener">TikTok @sofiahosting</a>
+    </div>
+  </div>
+</section>
+<footer>Made by Sofía Retif for the Creator Operations Manager role · 2026</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 60);
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  document.querySelectorAll('.videos video').forEach(v => {
+    v.addEventListener('click', () => {
+      document.querySelectorAll('.videos video').forEach(o => { if (o !== v) { o.pause(); o.muted = true; } });
+      if (v.paused || v.muted) { v.muted = false; v.play(); } else { v.pause(); }
+    });
+  });
+</script>
+</body>
+</html>

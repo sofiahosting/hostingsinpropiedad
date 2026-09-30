@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sofía Retif × Dingus &amp; Zazzy</title>
+<meta name="description" content="Sofía Retif — marketer, creator and operator. Portfolio made for the Dingus & Zazzy Brand Operator role: funnels, content, email, SEO and AI workflows built hands-on.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* ===== PALETA DE MARCA — Sofía Retif (azul protagonista) ===== */
+    --sky: #7BA7C4;
+    --sky-deep: #2F6188;
+    --sky-deeper: #234B6B;
+    --sky-light: #B8D4E8;
+    --sky-pale: #EAF3F9;
+    --beige: #F5EFE4;
+    --beige-dark: #E8DDC8;
+    --gold: #C8A96E;
+    --gold-dark: #A8893E;
+    --rose: #C87D87;
+    --dark: #2C2820;
+    --mid: #6B6355;
+    --white: #FDFAF5;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--dark); line-height: 1.6; overflow-x: hidden; }
+  img, video { display: block; max-width: 100%; }
+  a { color: var(--sky-deep); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 96px 0; }
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.show { opacity: 1; transform: none; }
+
+  .eyebrow { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--sky-deep); margin-bottom: 14px; }
+  h2 { font-family: 'Playfair Display', serif; font-weight: 800; font-size: clamp(30px, 4.4vw, 48px); line-height: 1.06; letter-spacing: -.5px; color: var(--sky-deeper); margin-bottom: 18px; }
+  h2 em, h1 em { font-style: italic; font-weight: 500; }
+  h2 em { color: var(--sky); }
+  .sub { font-size: 17px; color: var(--mid); max-width: 640px; }
+
+  /* NAV */
+  nav { position: fixed; inset: 0 0 auto 0; z-index: 50; display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; transition: background .3s, box-shadow .3s; }
+  nav.scrolled { background: rgba(253,250,245,.92); backdrop-filter: blur(10px); box-shadow: 0 1px 0 rgba(44,40,32,.07); }
+  .logo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 20px; color: #fff; text-decoration: none; }
+  .logo span { font-style: italic; font-weight: 500; }
+  nav.scrolled .logo { color: var(--sky-deeper); }
+  .nav-cta { font-size: 13px; font-weight: 600; color: #fff; text-decoration: none; border: 1.5px solid rgba(255,255,255,.5); padding: 8px 18px; border-radius: 99px; }
+  nav.scrolled .nav-cta { color: var(--sky-deep); border-color: var(--sky-deep); }
+
+  /* HERO */
+  .hero { padding: 0; min-height: 100vh; background: radial-gradient(110% 110% at 85% 0%, rgba(123,167,196,.32) 0%, transparent 55%), linear-gradient(155deg, #234B6B 0%, #2F6188 55%, #3E7194 100%); color: #fff; position: relative; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: 1.15fr .85fr; gap: 24px; align-items: end; min-height: 100vh; }
+  .hero-text { padding: 130px 0 90px; }
+  .pill { display: inline-flex; gap: 8px; align-items: center; font-size: 11.5px; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase; padding: 7px 16px; border-radius: 99px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.3); margin-bottom: 26px; }
+  .pill b { color: var(--gold); }
+  .hero h1 { font-family: 'Playfair Display', serif; font-weight: 800; font-size: clamp(40px, 6.2vw, 76px); line-height: 1; letter-spacing: -1px; margin-bottom: 24px; }
+  .hero h1 em { color: var(--sky-light); }
+  .hero .lead { font-size: 17.5px; font-weight: 300; color: rgba(255,255,255,.88); max-width: 540px; margin-bottom: 30px; }
+  .hero .lead b { font-weight: 600; color: #fff; }
+  .actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: var(--sky-deeper); font-weight: 600; font-size: 15px; text-decoration: none; padding: 14px 28px; border-radius: 99px; box-shadow: 0 12px 30px rgba(0,0,0,.2); transition: transform .25s; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn.dark { background: var(--sky-deep); color: #fff; }
+  .ghost { color: #fff; text-decoration: none; font-weight: 500; border-bottom: 1.5px solid rgba(255,255,255,.4); padding-bottom: 2px; }
+  .hero-photo { align-self: end; display: flex; justify-content: center; }
+  .hero-photo img { max-height: 88vh; width: auto; filter: drop-shadow(0 30px 60px rgba(0,0,0,.35)); }
+  .stats { display: grid; grid-template-columns: repeat(4, auto); gap: 28px; margin-top: 44px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.18); max-width: 560px; }
+  .stats b { display: block; font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 700; line-height: 1; }
+  .stats span { font-size: 12px; color: rgba(255,255,255,.72); line-height: 1.3; display: block; margin-top: 6px; }
+
+  /* CHAIN */
+  .chain-sec { background: var(--beige); }
+  .chain { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 44px; counter-reset: step; }
+  .link { background: var(--white); border: 1px solid var(--beige-dark); border-radius: 18px; padding: 22px 18px; position: relative; }
+  .link:not(:last-child)::after { content: '→'; position: absolute; right: -14px; top: 50%; transform: translate(50%, -50%); color: var(--sky-deep); font-weight: 700; font-size: 18px; z-index: 2; }
+  .link .k { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dark); }
+  .link h3 { font-family: 'Playfair Display', serif; font-size: 21px; color: var(--sky-deeper); margin: 6px 0 10px; }
+  .link p { font-size: 14px; color: var(--mid); }
+  .link p b { color: var(--dark); }
+  .chain-note { margin-top: 26px; font-size: 15px; color: var(--mid); }
+
+  /* SKILLS */
+  .skills { margin-top: 40px; border-top: 1px solid var(--beige-dark); }
+  .skill { display: grid; grid-template-columns: 260px 1fr; gap: 28px; padding: 22px 0; border-bottom: 1px solid var(--beige-dark); }
+  .skill h3 { font-size: 16.5px; font-weight: 700; color: var(--sky-deeper); display: flex; gap: 10px; align-items: baseline; }
+  .skill h3 i { font-style: normal; color: var(--gold-dark); font-size: 13px; }
+  .skill p { font-size: 15px; color: var(--mid); }
+  .skill p b { color: var(--dark); font-weight: 600; }
+
+  /* CASES */
+  .case { padding: 96px 0; border-top: 1px solid var(--beige-dark); }
+  .case:nth-of-type(even) { background: var(--sky-pale); }
+  .case-head { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .case-num { font-family: 'Playfair Display', serif; font-size: 15px; font-style: italic; color: var(--sky); margin-bottom: 6px; }
+  .case h2 { font-size: clamp(28px, 3.8vw, 42px); }
+  .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 16px 0 0; }
+  .tags span { font-size: 12px; font-weight: 600; color: var(--sky-deep); background: #fff; border: 1px solid var(--sky-light); padding: 4px 11px; border-radius: 99px; }
+  .block { margin-bottom: 20px; }
+  .block h4 { font-size: 11.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 6px; }
+  .block p, .block li { font-size: 15.5px; color: var(--dark); }
+  .block ul { padding-left: 18px; }
+  .block li { margin-bottom: 6px; }
+  .callout { background: #fff; border-left: 4px solid var(--sky-deep); border-radius: 0 14px 14px 0; padding: 18px 22px; margin-top: 26px; font-size: 15px; }
+  .callout b { color: var(--sky-deeper); }
+
+  .gallery { display: grid; gap: 14px; margin-top: 44px; }
+  .g5 { grid-template-columns: repeat(5, 1fr); }
+  .g4 { grid-template-columns: repeat(4, 1fr); }
+  .g2 { grid-template-columns: 1.3fr 1fr; align-items: center; }
+  .gallery img { border-radius: 12px; box-shadow: 0 10px 28px rgba(35,75,107,.14); width: 100%; }
+  .cap { font-size: 12.5px; color: var(--mid); margin-top: 10px; }
+  .row-label { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--sky-deep); margin: 36px 0 -30px; }
+  .row-label.gold { color: var(--gold-dark); }
+  .email-frame { max-height: 520px; overflow: hidden; border-radius: 14px; box-shadow: 0 14px 34px rgba(35,75,107,.16); position: relative; }
+  .email-frame::after { content: ''; position: absolute; inset: auto 0 0 0; height: 90px; background: linear-gradient(transparent, var(--sky-pale)); }
+  .email-frame img { box-shadow: none; border-radius: 0; }
+
+  .videos { display: grid; grid-auto-flow: column; grid-auto-columns: 220px; gap: 14px; margin-top: 44px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 10px; }
+  .videos video { width: 100%; aspect-ratio: 9/16; object-fit: cover; border-radius: 14px; background: var(--sky-deeper); cursor: pointer; box-shadow: 0 10px 28px rgba(35,75,107,.16); }
+  .reel { position: relative; scroll-snap-align: start; }
+  .vtag { position: absolute; top: 10px; left: 10px; z-index: 2; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: rgba(253,250,245,.92); color: var(--sky-deeper); padding: 4px 10px; border-radius: 99px; }
+  .exp-sec { background: var(--white); }
+  .exp { display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; margin-top: 44px; }
+  .edu { background: var(--sky-pale); border-radius: 18px; padding: 28px; align-self: start; }
+  .edu h3 { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 14px; }
+  .edu .item { padding: 12px 0; border-top: 1px solid var(--sky-light); }
+  .edu .item b { display: block; font-family: 'Playfair Display', serif; font-size: 20px; color: var(--sky-deeper); }
+  .edu .item span { font-size: 14px; color: var(--mid); }
+  .job { padding: 0 0 22px 22px; border-left: 2px solid var(--sky-light); position: relative; }
+  .job::before { content: ''; position: absolute; left: -7px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--sky-deep); }
+  .job .when { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-dark); }
+  .job h3 { font-size: 18px; color: var(--sky-deeper); margin: 2px 0 6px; }
+  .job p { font-size: 15px; color: var(--mid); }
+  .nums { background: var(--sky-deeper); color: #fff; }
+  .nums h2 { color: #fff; } .nums h2 em { color: var(--sky-light); } .nums .sub { color: rgba(255,255,255,.8); } .nums .eyebrow { color: var(--gold); }
+  .nums .cap, .nums .cap a { color: rgba(255,255,255,.7); }
+  .num-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 40px 0 18px; }
+  .num { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16); border-radius: 18px; padding: 26px 22px; }
+  .num b { display: block; font-family: 'Playfair Display', serif; font-size: 46px; line-height: 1; }
+  .num span { display: block; margin-top: 10px; font-size: 14px; color: rgba(255,255,255,.75); }
+  .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
+  .quote { background: #fff; border-radius: 14px; padding: 18px; font-size: 14.5px; border: 1px solid var(--beige-dark); }
+  .quote b { display: block; font-size: 12.5px; color: var(--mid); margin-top: 8px; font-weight: 600; }
+
+  /* CLAUDE */
+  .ai { background: linear-gradient(160deg, #234B6B, #2F6188); color: #fff; }
+  .ai h2 { color: #fff; }
+  .ai h2 em { color: var(--sky-light); }
+  .ai .sub { color: rgba(255,255,255,.8); }
+  .ai .eyebrow { color: var(--gold); }
+  .flows { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 44px; }
+  .flow { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16); border-radius: 18px; padding: 24px; }
+  .flow .n { font-family: 'Playfair Display', serif; font-style: italic; color: var(--gold); font-size: 15px; }
+  .flow h3 { font-size: 18px; margin: 6px 0 8px; }
+  .flow p { font-size: 14.5px; color: rgba(255,255,255,.8); }
+  .rules { margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .rule { background: #fff; color: var(--dark); border-radius: 18px; padding: 24px; }
+  .rule h3 { font-family: 'Playfair Display', serif; font-size: 21px; color: var(--sky-deeper); margin-bottom: 8px; }
+  .rule p { font-size: 15px; color: var(--mid); }
+
+  /* PLAYBOOK */
+  .plays { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 44px; }
+  .play { border-top: 3px solid var(--sky-deep); padding-top: 16px; }
+  .play .when { font-size: 11.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dark); }
+  .play h3 { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--sky-deeper); margin: 6px 0 8px; }
+  .play p { font-size: 14.5px; color: var(--mid); }
+
+  /* CONTACT */
+  .contact { background: var(--beige); text-align: center; }
+  .contact .sub { margin: 0 auto 30px; }
+  .facts { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0 auto 34px; max-width: 760px; }
+  .facts span { background: var(--white); border: 1px solid var(--beige-dark); border-radius: 99px; padding: 8px 16px; font-size: 14px; }
+  .contact .actions { justify-content: center; }
+  .contact .ghost { color: var(--sky-deep); border-color: var(--sky-light); }
+  footer { text-align: center; font-size: 13px; color: var(--mid); padding: 28px 24px 40px; background: var(--beige); }
+
+  @media (max-width: 960px) {
+    .chain { grid-template-columns: 1fr; }
+    .link:not(:last-child)::after { content: '↓'; right: 50%; top: auto; bottom: -14px; transform: translate(50%, 50%); }
+    .case-head, .g2, .rules, .exp { grid-template-columns: 1fr; gap: 28px; }
+    .flows, .plays { grid-template-columns: 1fr 1fr; }
+    .skill { grid-template-columns: 1fr; gap: 6px; }
+  }
+  @media (max-width: 760px) {
+    section, .case { padding: 72px 0; }
+    .hero .wrap { grid-template-columns: 1fr; min-height: 0; }
+    .hero-text { padding: 110px 0 10px; }
+    .hero-photo img { max-height: 420px; }
+    .stats { grid-template-columns: 1fr 1fr; gap: 20px; }
+    .g5 { grid-template-columns: repeat(3, 1fr); }
+    .g4, .num-grid { grid-template-columns: 1fr 1fr; }
+    .videos { grid-auto-columns: 62%; }
+    .num b { font-size: 36px; }
+    .quotes, .flows, .plays { grid-template-columns: 1fr; }
+    .row-label { margin-bottom: -30px; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="logo" href="#top">Sofía <span>× Dingus &amp; Zazzy</span></a>
+  <a class="nav-cta" href="mailto:hola@sofiaretif.com?subject=Brand%20Operator%20%E2%80%94%20Dingus%20%26%20Zazzy">Email me</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-text">
+      <div class="pill">Made for Dingus &amp; Zazzy · <b>Brand Operator</b></div>
+      <h1>I don't just manage the work. <em>I build it.</em></h1>
+      <p class="lead">In marketing since 2018: <b>two Marketing Director roles</b>, a <b>MSc in Digital Business</b> from Paris, 50K+ people in my own audience, and the person behind every link of my own funnels — from the blog post that ranks to the email that closes. I built this page for Dingus &amp; Zazzy only: the proof, not the promise.</p>
+      <div class="actions">
+        <a class="btn" href="#work">See the work ↓</a>
+        <a class="ghost" href="#claude">How I work with Claude</a>
+      </div>
+      <div class="stats">
+        <div><b>50K+</b><span>followers<br>IG + TikTok</span></div>
+        <div><b>$25K+</b><span>USD in course<br>revenue</span></div>
+        <div><b>120+</b><span>paying<br>students</span></div>
+        <div><b>20+</b><span>client brands<br>served</span></div>
+      </div>
+    </div>
+    <div class="hero-photo"><img src="/assets/portfolio/port-headshot.png" alt="Sofía Retif"></div>
+  </div>
+</section>
+
+<!-- THE CHAIN -->
+<section class="chain-sec">
+  <div class="wrap">
+    <span class="eyebrow">Your chain, D&amp;Z — my daily job</span>
+    <h2>"Never heard of you" → <em>"take my money."</em></h2>
+    <p class="sub">You said every tactic has to connect to the chain. I run that chain for my own education business — alone, end to end. Here's what I personally built at each link.</p>
+    <div class="chain">
+      <div class="link reveal"><span class="k">Blog → SEO</span><h3>Get found</h3><p><b>78 programmatic pages</b> (22 cities × 2 search intents, 15 pillar guides, 15 glossary terms), all business-intent, all ending in a funnel CTA.</p></div>
+      <div class="link reveal"><span class="k">Social</span><h3>Get trusted</h3><p><b>50K+ followers, 500K+ views/mo.</b> Short-form video + a carousel system built on real audience research.</p></div>
+      <div class="link reveal"><span class="k">Lead</span><h3>Get the email</h3><p>Free masterclass landing + lead magnet, Meta Ads traffic, WhatsApp group. <b>225 people</b> in the live-class group.</p></div>
+      <div class="link reveal"><span class="k">Nurture</span><h3>Earn the yes</h3><p><b>3 reminders + 5 sales emails</b> in Mailchimp, segmented by source, buyers excluded daily.</p></div>
+      <div class="link reveal"><span class="k">Offer</span><h3>Revenue</h3><p>Live bootcamp: <b>$10K USD in one launch</b>. Evergreen $97 course: <b>~$15K USD</b> and counting. Plus 1:1 consulting.</p></div>
+    </div>
+    <p class="chain-note">Same pattern, three more brands: <b>Daily Me</b> (my own journaling product), <b>AuditBnB</b> (a SaaS I lead marketing for) and client work for brands like <b>Canva</b> and <b>Bonzo</b> — plus two Marketing Director roles before that.</p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Your skill requirements</span>
+    <h2>You asked for 3–4. <em>Here are 7, with receipts.</em></h2>
+    <div class="skills">
+      <div class="skill reveal"><h3><i>01</i> Short-form video</h3><p>I script, shoot and <b>edit</b> short-form video end to end — for my own brands and for clients like Canva, Bonzo and Las Rosas Square. Hook-first scripts, including a "no-camera" format for a client who needed volume without on-screen talent.</p></div>
+      <div class="skill reveal"><h3><i>02</i> Social strategy</h3><p>Content pillars come from data, not vibes: I <b>polled my audience, found their two biggest fears</b>, and built a 15-carousel campaign that answered each one and pointed to the masterclass. Organic and sales content are planned as separate lanes.</p></div>
+      <div class="skill reveal"><h3><i>03</i> Newsletter &amp; email</h3><p>Launch emails, reminder sequences and <b>a 5-email sales sequence</b> (open → objections → results → VIP → close), fully designed in-brand, scheduled and segmented in Mailchimp.</p></div>
+      <div class="skill reveal"><h3><i>04</i> Brand strategy &amp; positioning</h3><p>Built the <b>Sofía Hosting</b> system: fixed palette with jobs (blue = free, gold = paid, rose = urgency only), type pairing, voice. When data showed <b>50%+ of my audience is male</b>, I moved all copy to gender-neutral.</p></div>
+      <div class="skill reveal"><h3><i>05</i> Copywriting</h3><p>Sales pages, ad scripts, emails, captions, WhatsApp broadcasts. I write the <b>outcome, not the feature</b> — e.g. for AuditBnB ads we never say "AI"; we say what the host gets.</p></div>
+      <div class="skill reveal"><h3><i>06</i> Design</h3><p>Canva for fast iteration, plus <b>code-based design</b>: HTML/CSS landing pages and Python templates that render on-brand carousels from a copy file. This page is mine too.</p></div>
+      <div class="skill reveal"><h3><i>07</i> Analytics</h3><p>Knowing what a number <em>means</em>. For Bonzo I set up full UTM tracking across 8 cities from day one. On my own launch, Meta said <b>478 "Leads" in 7 days</b>; my group had 225 real people. I traced it to the pixel firing on a button click, not a form submit — the ads were optimizing toward a fake signal. Fixed the event map.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="exp-sec">
+  <div class="wrap">
+    <span class="eyebrow">Background</span>
+    <h2>Agency, in-house, founder. <em>I've sat in every chair.</em></h2>
+    <p class="sub">I've run marketing for an agency and its clients, been a one-person marketing department for a US firm, managed paid media for clients, and built my own brands with my own money on the line. That's why I think in funnels and revenue, not deliverables.</p>
+    <div class="exp">
+      <div class="edu reveal">
+        <h3>Education</h3>
+        <div class="item"><b>MSc in Digital Business</b><span>EMLV · École de Management Léonard de Vinci · Paris, France</span></div>
+        <div class="item"><b>B.A. in Marketing</b><span>UAG · Universidad Autónoma de Guadalajara · Mexico</span></div>
+        <div class="item"><b>In marketing since 2018</b><span>Agency, in-house and my own brands, in the US and LatAm</span></div>
+      </div>
+      <div class="jobs">
+        <div class="job reveal"><div class="when">Present</div><h3>Founder &amp; Marketing Lead · Sofía Hosting</h3><p>Education business teaching short-term rental arbitrage. I run everything: positioning, pricing, content, SEO, email, paid social and launches. <b>$25K+ USD in course revenue</b> — ~$15K from the evergreen $97 course, $10K from one live-bootcamp launch — and 120+ students across Latin America.</p></div>
+        <div class="job reveal"><div class="when">2026 · Present</div><h3>Marketing &amp; Sales Lead · AuditBnB</h3><p>Own the go-to-market for an automated listing-audit SaaS: channel plan, funnel, ad copy, email nurture and conversion tracking.</p></div>
+        <div class="job reveal"><div class="when">Present</div><h3>Freelance Paid Media Manager &amp; UGC Creator · Canva, Bonzo and others</h3><p>Launched <b>Bonzo's first Meta Ads campaigns from scratch</b>: WhatsApp lead gen + website traffic, CBO structure, geo-targeting across 8 cities in Mexico, full UTM tracking. Wrote the scripts and built <b>two bilingual (EN/ES) landing pages</b> for Bonzo's US campaign.</p></div>
+        <div class="job reveal"><div class="when">Present</div><h3>Founder · Daily Me</h3><p>My own journaling product brand. E-commerce store, lead capture and a programmatic SEO blog I build and maintain.</p></div>
+        <div class="job reveal"><div class="when">Jun 2021 – May 2023</div><h3>Marketing Director · Gersten Financial Planning</h3><p>San Diego, CA. <b>I was the entire marketing department</b>: brand, content, social, paid ads, website and email. Built the marketing workflows and reporting from scratch and presented results directly to leadership.</p></div>
+        <div class="job reveal"><div class="when">Feb 2021 – Sep 2021</div><h3>Marketing Director · Looma Ideas (creative agency)</h3><p>Mexico. Led brand positioning, content strategy and social media for the agency and its client campaigns, and coordinated creative deliverables across multiple client accounts.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<section class="nums">
+  <div class="wrap">
+    <span class="eyebrow">Proof I can grow an audience</span>
+    <h2>The audience I built <em>from zero.</em></h2>
+    <p class="sub">Grown organically on my own content — the same playbook I'd bring to Dingus &amp; Zazzy clients.</p>
+    <div class="num-grid">
+      <div class="num reveal"><b>50K+</b><span>Followers · IG + TikTok</span></div>
+      <div class="num reveal"><b>500K+</b><span>Monthly views · IG + TikTok</span></div>
+      <div class="num reveal"><b>1.8K+</b><span>New followers / month</span></div>
+      <div class="num reveal"><b>20+</b><span>Client brands served</span></div>
+    </div>
+    <p class="cap">Instagram <a href="https://instagram.com/sofiahosting_" target="_blank" rel="noopener">@sofiahosting_</a> · TikTok <a href="https://www.tiktok.com/@sofiahosting" target="_blank" rel="noopener">@sofiahosting</a></p>
+  </div>
+</section>
+
+<div id="work"></div>
+
+<!-- CASE 01 -->
+<section class="case">
+  <div class="wrap">
+    <div class="case-head">
+      <div>
+        <div class="case-num">Case 01</div>
+        <h2>Masterclass → Bootcamp launch</h2>
+        <p class="sub">A full launch I strategized, wrote, designed and ran myself. Every channel said the same thing on the same day. <b>$10K USD</b> in one window.</p>
+        <div class="tags"><span>Strategy</span><span>Pricing</span><span>Social</span><span>Email</span><span>Meta Ads</span><span>Landing pages</span></div>
+      </div>
+      <div>
+        <div class="block"><h4>The problem</h4><p>My previous launch: <b>$1,000 USD × 6 students</b>. Great ticket, tiny volume, and every seat came with hours of 1:1 calls I couldn't scale.</p></div>
+        <div class="block"><h4>My point of view</h4><p>Lower the entry price, <b>unbundle the 1:1 as an upsell</b>, and set the gap between tiers at <b>$200 — less than my standalone $250 consult</b>. The VIP tier becomes the obvious choice instead of the expensive one.</p></div>
+        <div class="block"><h4>The result</h4><p><b>$10,000 USD from a single launch</b> — up from $6,000 the time before — with the 1:1 calls contained to the VIP tier instead of every seat.</p></div>
+        <div class="block"><h4>What I built</h4>
+          <ul>
+            <li>Audience poll → 15 carousels attacking the two biggest objections</li>
+            <li>Masterclass landing, lead magnet, WhatsApp group, sales page with two tiers</li>
+            <li>Meta Ads traffic campaign + 3 reminder emails</li>
+            <li>5 sales emails <b>mirrored by 5 carousels</b>: same argument, same day, email + feed</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="row-label">Warm-up content · blue = free</p>
+    <div class="gallery g4 reveal">
+      <img src="/assets/dingus-and-zazzy/mc-01-zona-perfecta.jpg" alt="Carousel: where do I put my Airbnb" loading="lazy">
+      <img src="/assets/dingus-and-zazzy/mc-02-negociar-dueno.jpg" alt="Carousel: get the owner to say yes" loading="lazy">
+      <img src="/assets/dingus-and-zazzy/mc-04-cuanto-se-gana.jpg" alt="Carousel: how much does an Airbnb make" loading="lazy">
+      <img src="/assets/dingus-and-zazzy/mc-08-cohost-vs-arbitraje.jpg" alt="Carousel: co-host vs arbitrage" loading="lazy">
+    </div>
+    <p class="row-label gold">Sales sequence · gold = paid · mirrors the 5 emails</p>
+    <div class="gallery g5 reveal">
+      <img src="/assets/dingus-and-zazzy/bc-01-apertura.jpg" alt="Bootcamp carousel 1: doors open" loading="lazy">
+      <img src="/assets/dingus-and-zazzy/bc-02-objeciones.jpg" alt="Bootcamp carousel 2: objections" loading="lazy">
+      <img src="/assets/dingus-and-zazzy/bc-03-resultados.jpg" alt="Bootcamp carousel 3: results" loading="lazy">
+      <img src="/assets/dingus-and-zazzy/bc-04-vip.jpg" alt="Bootcamp carousel 4: VIP" loading="lazy">
+      <img src="/assets/dingus-and-zazzy/bc-05-cierre.jpg" alt="Bootcamp carousel 5: last call" loading="lazy">
+    </div>
+    <p class="cap">Content is in Spanish — my audience is LatAm. Happy to walk through any piece in English.</p>
+    <div class="callout reveal"><b>The analytics catch:</b> mid-launch, Meta reported 478 "Leads" in a week against 225 real people. The pixel's Lead event was firing on a button click. Left alone, the algorithm would keep buying clickers, not registrants — so I flagged it and remapped the event before scaling spend.</div>
+  </div>
+</section>
+
+<!-- CASE 02 -->
+<section class="case">
+  <div class="wrap">
+    <div class="case-head">
+      <div>
+        <div class="case-num">Case 02</div>
+        <h2>Programmatic SEO for two brands</h2>
+        <p class="sub">"A blog without a traffic plan is a diary." Agreed — so I built blogs that are traffic plans.</p>
+        <div class="tags"><span>SEO</span><span>Content systems</span><span>WordPress</span><span>Python</span><span>Claude</span></div>
+      </div>
+      <div>
+        <div class="block"><h4>sofiaretif.com</h4><p><b>78 pages in wave one</b>: "how much does an Airbnb make in [city]" and "Airbnb in [city] without owning" for 22 cities, plus pillar guides and a glossary, organized pillar → cluster. Only <b>business intent</b> — never traveler keywords that would never buy a course.</p></div>
+        <div class="block"><h4>Daily Me (dailyme.com.mx)</h4><p><b>25 posts live</b> in 5 new categories on WordPress, pushed with a script that creates posts, categories and SEO meta in one run — every post ends at the product page and links to 3 siblings.</p></div>
+        <div class="block"><h4>The rule</h4><p>Ship in <b>waves, not dumps</b> — publish, check indexing in Search Console, then scale toward 500. Substantive templates: every page answers the query with a real list, not filler.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE 03 -->
+<section class="case">
+  <div class="wrap">
+    <div class="case-head">
+      <div>
+        <div class="case-num">Case 03</div>
+        <h2>AuditBnB: a go-to-market plan I own</h2>
+        <p class="sub">An automated Airbnb listing audit (a SaaS). The product was built; nobody was selling it. I took the marketing.</p>
+        <div class="tags"><span>GTM strategy</span><span>Positioning</span><span>Ad copy</span><span>Email</span><span>Funnel design</span></div>
+      </div>
+      <div>
+        <div class="block"><h4>One funnel, seven channels</h4><p>Every channel leads to the <b>free scan</b> → the score creates urgency → email nurture closes on a paid report ($9 / $25 / <b>$99 Pro, where the margin lives</b>). Goal: $10K USD in 90 days.</p></div>
+        <div class="block"><h4>Prioritized by cost and speed</h4><p>Weeks 1–2: retargeting email + value-first Facebook groups. Weeks 2–4: Instagram (the 9 score categories become 9 content pillars) + a landing demo video that doubles as a Reel. Month 2: SEO + affiliates with tracked coupons. Month 3+: LinkedIn for multi-listing property managers.</p></div>
+        <div class="block"><h4>Positioning</h4><p>The only listing audit of its kind in Spanish for Mexico, <b>28–40× cheaper</b> than US alternatives, results in 30 seconds. In ads we sell the fix, not the tech.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE 04 -->
+<section class="case">
+  <div class="wrap">
+    <div class="case-head">
+      <div>
+        <div class="case-num">Case 04</div>
+        <h2>Short-form video &amp; email craft</h2>
+        <p class="sub">Video I edit myself — for clients and for my own brands — and emails designed like landing pages.</p>
+        <div class="tags"><span>Video editing</span><span>Scripting</span><span>Client work</span><span>Email design</span></div>
+      </div>
+      <div class="email-frame reveal"><img src="/assets/dingus-and-zazzy/email-launch.jpg" alt="Launch email for Hosting Sin Propiedad" loading="lazy"></div>
+    </div>
+    <p class="row-label">Videos I scripted, shot &amp; edited · swipe →</p>
+    <div class="videos reveal">
+      <div class="reel"><span class="vtag">Brand</span><video src="/assets/portfolio/clip-1.mp4" poster="/assets/portfolio/clip-1.jpg" muted loop playsinline preload="none"></video></div>
+      <div class="reel"><span class="vtag">Product</span><video src="/assets/portfolio/clip-2.mp4" poster="/assets/portfolio/clip-2.jpg" muted loop playsinline preload="none"></video></div>
+      <div class="reel"><span class="vtag">Stay</span><video src="/assets/portfolio/clip-3.mp4" poster="/assets/portfolio/clip-3.jpg" muted loop playsinline preload="none"></video></div>
+      <div class="reel"><span class="vtag">Stay</span><video src="/assets/portfolio/clip-4.mp4" poster="/assets/portfolio/clip-4.jpg" muted loop playsinline preload="none"></video></div>
+      <div class="reel"><span class="vtag">Stay</span><video src="/assets/portfolio/clip-5.mp4" poster="/assets/portfolio/clip-5.jpg" muted loop playsinline preload="none"></video></div>
+      <div class="reel"><span class="vtag">Content</span><video src="/assets/portfolio/clip-6.mp4" poster="/assets/portfolio/clip-6.jpg" muted loop playsinline preload="none"></video></div>
+      <div class="reel"><span class="vtag">Content</span><video src="/assets/portfolio/clip-7.mp4" poster="/assets/portfolio/clip-7.jpg" muted loop playsinline preload="none"></video></div>
+    </div>
+    <p class="cap">Tap a video to play with sound.</p>
+    <p class="row-label" style="margin:34px 0 0">Client feedback</p>
+    <div class="quotes">
+      <div class="quote">"The client loved the video! They even want you to make a second one."<b>Luciana M. · Canva</b></div>
+      <div class="quote">"It's really great — genuinely impressed."<b>Jorge · Bonzo</b></div>
+      <div class="quote">"Great video, I really liked it."<b>Ximena · Las Rosas Square</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLAUDE -->
+<section class="ai" id="claude">
+  <div class="wrap">
+    <span class="eyebrow">Claude, daily</span>
+    <h2>Claude is my collaborator, <em>not my ghostwriter.</em></h2>
+    <p class="sub">You said you want to see how I think with AI, not how fast I type a prompt. I use Claude every working day — mostly to build systems that make the next hundred pieces faster and more on-brand.</p>
+    <div class="flows">
+      <div class="flow reveal"><div class="n">01</div><h3>A carousel engine</h3><p>I write the copy in a text file; a Python template I built with Claude renders 8 on-brand slides + caption. The brand rules live in code, so they can't drift.</p></div>
+      <div class="flow reveal"><div class="n">02</div><h3>Persistent brand memory</h3><p>Palette, voice, gender-neutral copy, "never say AI in AuditBnB ads" — saved as rules Claude loads every session. Drafts start on-brand instead of getting fixed after.</p></div>
+      <div class="flow reveal"><div class="n">03</div><h3>SEO at scale</h3><p>Data files + generators for both blogs. I decide the keywords, intent and structure; Claude helps produce, interlink and QA each wave.</p></div>
+      <div class="flow reveal"><div class="n">04</div><h3>Ads ops</h3><p>Campaign structures set up through Claude's Meta Ads connection — always created paused, with a naming convention, so I review before a peso is spent.</p></div>
+      <div class="flow reveal"><div class="n">05</div><h3>Launch QA</h3><p>Before and during launches Claude audits pages, links and tracking. That's how the fake-Lead pixel issue got caught.</p></div>
+      <div class="flow reveal"><div class="n">06</div><h3>This page</h3><p>Built for Dingus &amp; Zazzy with Claude Code in one session: I set the angle, the proof points and the cuts; Claude handled the scaffolding.</p></div>
+    </div>
+    <div class="rules">
+      <div class="rule reveal"><h3>Taste stays with me</h3><p>I've thrown out whole design directions Claude proposed ("this looks like school homework") and rewritten copy that was technically right but didn't sound like a person. Speed is useless if the output is generic.</p></div>
+      <div class="rule reveal"><h3>No confident guessing</h3><p>One of my standing rules: if Claude doesn't actually know a trend or a fact, it says so. I'd rather research for ten minutes than publish something invented.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAYBOOK -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">How I'd run D&amp;Z accounts</span>
+    <h2>A point of view, <em>not a task list.</em></h2>
+    <p class="sub">What a Dingus &amp; Zazzy client could expect from me in the first month, and every week after — inside your unlimited get-shit-done subscription.</p>
+    <div class="plays">
+      <div class="play reveal"><div class="when">Week 1</div><h3>Audit the chain</h3><p>Map the client's path from first touch to purchase, pull the real numbers, and find the weakest link. That's where we start.</p></div>
+      <div class="play reveal"><div class="when">Week 2</div><h3>Write the POV</h3><p>A one-page plan: what we'll do, what we won't, and which number each tactic is supposed to move.</p></div>
+      <div class="play reveal"><div class="when">Every week</div><h3>Decisions, not status</h3><p>Check-ins end with calls made. ClickUp is updated the same day — no one should have to chase me.</p></div>
+      <div class="play reveal"><div class="when">Every month</div><h3>What moved revenue</h3><p>A short report in plain English: what worked, what we're killing, what we're testing next.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="wrap">
+    <span class="eyebrow">Let's talk</span>
+    <h2>Hey, Dingus. <em>Let's build something.</em></h2>
+    <p class="sub">I'd love to walk the D&amp;Z team through any of this live — or take a test brief for one of your clients and show you instead.</p>
+    <div class="facts">
+      <span>📍 Guadalajara, Mexico</span>
+      <span>🕘 1 hour ahead of MST · full 9–5 overlap</span>
+      <span>💬 English &amp; Spanish</span>
+      <span>🎓 B.A. Marketing (UAG) · MSc Digital Business (EMLV, Paris)</span>
+    </div>
+    <div class="actions">
+      <a class="btn dark" href="mailto:hola@sofiaretif.com?subject=Brand%20Operator%20%E2%80%94%20Dingus%20%26%20Zazzy">hola@sofiaretif.com</a>
+      <a class="ghost" href="https://www.linkedin.com/in/sofiaretif" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="ghost" href="https://instagram.com/sofiahosting_" target="_blank" rel="noopener">Instagram @sofiahosting_</a>
+      <a class="ghost" href="https://www.tiktok.com/@sofiahosting" target="_blank" rel="noopener">TikTok @sofiahosting</a>
+    </div>
+  </div>
+</section>
+<footer>Made by Sofía Retif, exclusively for Dingus &amp; Zazzy · 2026</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 60);
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  document.querySelectorAll('.videos video').forEach(v => {
+    v.addEventListener('click', () => {
+      document.querySelectorAll('.videos video').forEach(o => { if (o !== v) { o.pause(); o.muted = true; } });
+      if (v.paused || v.muted) { v.muted = false; v.play(); } else { v.pause(); }
+    });
+  });
+</script>
+</body>
+</html>

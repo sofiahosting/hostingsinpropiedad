@@ -7,6 +7,8 @@
 <meta name="description" content="Media kit de Sofía Retif — creadora de contenido UGC enfocada en emprendimiento, inversiones, Airbnb hosting y bienes raíces. Colaboraciones, audiencia, servicios y paquetes para marcas.">
 <meta name="author" content="Sofía Retif">
 <link rel="canonical" href="https://sofiaretif.com/portafolio">
+<link rel="alternate" hreflang="es" href="https://sofiaretif.com/portafolio">
+<link rel="alternate" hreflang="en" href="https://sofiaretif.com/portfolio">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -18,7 +20,7 @@
 <meta property="og:site_name" content="Sofía Retif">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiM3QkE3QzQiLz4KICA8cGF0aCBkPSJNMzIgMTQgQzMyIDE0IDE4IDMwIDE4IDM4IEMxOCA0NSAyNC4zIDUwIDMyIDUwIEMzOS43IDUwIDQ2IDQ1IDQ2IDM4IEM0NiAzMCAzMiAxNCAzMiAxNFoiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjk1Ii8+CiAgPGNpcmNsZSBjeD0iMzIiIGN5PSIzNiIgcj0iNiIgZmlsbD0iIzdCQTdDNCIvPgo8L3N2Zz4=">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjM0E2RTk2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMjI0OTZBIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTUiIGZpbGw9InVybCgjZykiLz48cG9seWdvbiBwb2ludHM9IjMyLDEzIDU0LDMzIDEwLDMzIiBmaWxsPSIjRkRGQUY1Ii8+PHJlY3QgeD0iMTciIHk9IjMxIiB3aWR0aD0iMzAiIGhlaWdodD0iMjIiIHJ4PSIzIiBmaWxsPSIjRkRGQUY1Ii8+PHBhdGggZD0iTTMyIDQxLjVjLTEuOC0zLTctMi03IDEuNiAwIDMgMy42IDUgNyA2LjkgMy40LTEuOSA3LTMuOSA3LTYuOSAwLTMuNi01LjItNC42LTctMS42eiIgZmlsbD0iI0M4N0Q4NyIvPjwvc3ZnPgo=">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;1,500;1,600;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -87,6 +89,10 @@
   .nav-cta:hover { background: #fff; color: var(--sky-deeper); }
   nav.scrolled .nav-cta { color: var(--sky-deep); border-color: var(--sky-deep); }
   nav.scrolled .nav-cta:hover { background: var(--sky-deep); color: #fff; }
+  .nav-right { display: flex; align-items: center; gap: 16px; }
+  .nav-lang { font-size: 12.5px; font-weight: 600; letter-spacing: 1px; color: rgba(255,255,255,0.85); text-decoration: none; transition: color .35s ease; }
+  .nav-lang:hover { color: #fff; }
+  nav.scrolled .nav-lang { color: var(--sky-deep); }
 
   /* ===== HERO ===== */
   .hero {
@@ -531,7 +537,10 @@ document.addEventListener('click',function(e){
 <!-- NAV -->
 <nav id="nav">
   <a href="#top" class="nav-logo">Sofía <span>Retif</span></a>
-  <a href="#contacto" class="nav-cta">Colaboremos →</a>
+  <div class="nav-right">
+    <a href="/portfolio" class="nav-lang" hreflang="en" lang="en">EN</a>
+    <a href="#contacto" class="nav-cta">Colaboremos →</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -630,9 +639,9 @@ document.addEventListener('click',function(e){
       <h2 class="title" style="color:#fff;">El alcance de mi comunidad</h2>
     </div>
     <div class="stats-grid">
-      <div class="stat reveal"><b data-count="48000" data-suffix="K+">0</b><span>Seguidores · IG + TikTok</span></div>
-      <div class="stat reveal"><b data-count="200000" data-suffix="K+">0</b><span>Vistas al mes</span></div>
-      <div class="stat reveal"><b data-count="80" data-suffix="%">0</b><span>Alcance a nuevas audiencias</span></div>
+      <div class="stat reveal"><b data-count="50000" data-suffix="K+">0</b><span>Seguidores · IG + TikTok</span></div>
+      <div class="stat reveal"><b data-count="500000" data-suffix="K+">0</b><span>Vistas al mes · IG + TikTok</span></div>
+      <div class="stat reveal"><b data-count="1800" data-suffix="K+">0</b><span>Nuevos seguidores / mes</span></div>
       <div class="stat reveal"><b data-count="20" data-suffix="+">0</b><span>Marcas colaboradoras</span></div>
     </div>
     <p class="stat-note">Métricas de Instagram @sofiahosting_ &amp; TikTok @sofiahosting</p>
@@ -834,8 +843,8 @@ document.addEventListener('click',function(e){
       </div>
     </div>
     <div class="price-extras reveal">
-      <div class="extra"><span class="lbl">Exclusividad</span><span class="val">$3,000 <small style="font-size:14px;font-weight:400;color:var(--sky-light);">/ mes</small></span></div>
-      <div class="extra"><span class="lbl">Uso de imagen + derecho a pauta</span><span class="val">$4,000 <small style="font-size:14px;font-weight:400;color:var(--sky-light);">MXN / mes</small></span></div>
+      <div class="extra"><span class="lbl">Exclusividad</span><span class="val">$2,000 <small style="font-size:14px;font-weight:400;color:var(--sky-light);">/ mes</small></span></div>
+      <div class="extra"><span class="lbl">Uso de imagen + derecho a pauta</span><span class="val">$3,000 <small style="font-size:14px;font-weight:400;color:var(--sky-light);">MXN / mes</small></span></div>
     </div>
     <p class="price-note">
       <b>Los precios incluyen</b> creación, producción, edición y estrategia de contenido.<br>
@@ -857,7 +866,11 @@ document.addEventListener('click',function(e){
           <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></div>
           <div class="ct"><small>INSTAGRAM</small><b>@sofiahosting_</b></div>
         </a>
-        <a class="clink" href="https://wa.me/523314061039" target="_blank" rel="noopener">
+        <a class="clink" href="https://www.tiktok.com/@sofiahosting" target="_blank" rel="noopener">
+          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4v9.5a3.5 3.5 0 11-3-3.46V6.5A5.5 5.5 0 0017.5 12"/></svg></div>
+          <div class="ct"><small>TIKTOK</small><b>@sofiahosting</b></div>
+        </a>
+        <a class="clink" href="https://wa.me/522206390514" target="_blank" rel="noopener">
           <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.4c.8.3 1.7.5 2.6.6A2 2 0 0122 16.9z"/></svg></div>
           <div class="ct"><small>WHATSAPP</small><b>+52 331 406 1039</b></div>
         </a>
@@ -874,11 +887,11 @@ document.addEventListener('click',function(e){
 </section>
 
 <footer>
-  <p>© 2026 Sofía Retif · Brand Partner &amp; UGC · <a href="https://www.instagram.com/sofiahosting_" target="_blank" rel="noopener">@sofiahosting_</a></p>
+  <p>© 2026 Sofía Retif · Brand Partner &amp; UGC · <a href="https://www.instagram.com/sofiahosting_" target="_blank" rel="noopener">@sofiahosting_</a> · <a href="/portfolio" hreflang="en" lang="en">English version</a></p>
 </footer>
 
 <!-- WHATSAPP FLOAT -->
-<a class="wa-float" href="https://wa.me/523314061039?text=Hola%20Sof%C3%ADa%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20colaborar%20con%20mi%20marca%20%E2%9C%A8" target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp">
+<a class="wa-float" href="https://wa.me/522206390514?text=Hola%20Sof%C3%ADa%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20colaborar%20con%20mi%20marca%20%E2%9C%A8" target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.4-.4-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3s1 2.7 1.2 2.9c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 15.1 3.6 13.6 3.6 12 3.6 7.4 7.4 3.6 12 3.6S20.4 7.4 20.4 12 16.6 20.2 12 20.2z"/></svg>
   <span>Escríbeme</span>
 </a>

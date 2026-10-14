@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sofia Retif · Marketing Portfolio</title>
+<meta name="description" content="Marketing operations, e-commerce and creator marketing. Case studies by Sofia Retif González.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#4E7CA1; --blue2:#5C8CB2; --navy:#1f3b52; --gold:#E6C57C; --rose:#C87D87; --sky:#B8D4E8;
+  --ink:#1d1d1f; --mut:#5f6670; --soft:#EEF4F9; --line:#d6e3ee; --bg:#ffffff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;font-size:17px}
+a{color:var(--blue);text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;color:var(--navy);line-height:1.1}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--rose)}
+
+/* nav */
+nav{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+nav .logo{font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);font-size:19px}
+nav ul{display:flex;gap:22px;list-style:none;font-size:15px}
+nav ul a{color:var(--mut)} nav ul a:hover{color:var(--blue)}
+@media(max-width:700px){nav ul{display:none}}
+
+/* hero */
+.hero{padding:80px 0 60px;background:linear-gradient(180deg,var(--soft),#fff)}
+.hero h1{font-size:clamp(38px,6vw,64px);margin:14px 0 18px;max-width:820px}
+.hero p.sub{font-size:19px;color:var(--mut);max-width:700px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:700;font-size:15px}
+.btn.primary{background:var(--blue);color:#fff} .btn.primary:hover{background:var(--navy)}
+.btn.ghost{border:1.5px solid var(--blue);color:var(--blue)}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:48px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 16px}
+.stat b{display:block;font-family:'Playfair Display',serif;font-size:30px;color:var(--blue);line-height:1}
+.stat span{display:block;font-size:14px;color:var(--mut);margin-top:8px;line-height:1.35}
+@media(max-width:860px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* sections */
+section{padding:72px 0}
+.sec-head{margin-bottom:34px}
+.sec-head h2{font-size:clamp(30px,4vw,42px);margin-top:10px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tag{background:var(--soft);color:var(--blue);font-size:13px;font-weight:700;border-radius:999px;padding:6px 12px}
+
+/* cases */
+.case{border:1px solid var(--line);border-radius:20px;padding:36px;margin-bottom:28px;background:#fff}
+.case .top{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-start}
+.case h3{font-size:clamp(24px,3vw,32px);margin:8px 0 10px;max-width:640px}
+.case .lead{color:var(--mut);max-width:680px}
+.case .num{font-family:'Playfair Display',serif;font-size:56px;color:var(--sky);line-height:1}
+.grid2{display:grid;grid-template-columns:1.15fr 1fr;gap:36px;margin-top:26px}
+@media(max-width:820px){.grid2{grid-template-columns:1fr}.case{padding:24px}}
+.blk h4{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+ul.dots{list-style:none}
+ul.dots li{position:relative;padding-left:18px;margin-top:8px}
+ul.dots li:before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.res{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.res .stat{background:var(--soft);border:none}
+.res .stat b{font-size:26px}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:22px}
+.flow span{border:1.5px solid var(--blue);color:var(--blue);border-radius:10px;padding:8px 12px;font-size:14px;font-weight:700}
+.flow i{color:var(--gold);font-style:normal;font-weight:700}
+.why{margin-top:24px;background:var(--blue);color:#fff;border-left:6px solid var(--gold);border-radius:12px;padding:16px 20px;font-size:16px}
+
+/* how */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:820px){.steps{grid-template-columns:1fr}}
+.step{background:var(--soft);border-radius:16px;padding:22px}
+.step b{display:block;font-size:17px;color:var(--navy);margin-bottom:6px}
+.step span{color:var(--mut);font-size:15px}
+
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+@media(max-width:820px){.cols{grid-template-columns:1fr}}
+.timeline li{list-style:none;border-left:2px solid var(--line);padding:0 0 18px 18px;position:relative}
+.timeline li:before{content:"";position:absolute;left:-6px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--blue)}
+.timeline b{display:block}
+.timeline span{color:var(--mut);font-size:15px}
+
+/* contact */
+.contact{background:var(--navy);color:#fff;text-align:center;padding:80px 0}
+.contact h2{color:#fff;font-size:clamp(30px,4vw,44px)}
+.contact p{color:var(--sky);margin:14px auto 28px;max-width:560px}
+.contact .btn.primary{background:var(--gold);color:var(--navy)}
+.contact .btn.ghost{border-color:var(--sky);color:#fff}
+.contact .btns{justify-content:center}
+footer{text-align:center;color:var(--mut);font-size:14px;padding:24px 0}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#top">Sofia Retif</a>
+  <ul>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#how">How I work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div class="eyebrow">Marketing Portfolio</div>
+  <h1>I build marketing that runs on systems, creators and data.</h1>
+  <p class="sub">I'm Sofia Retif González, a marketing operations and project manager based in Mexico. For 8 years I've planned and executed marketing end to end — for my own e-commerce brand, my online education business and US and Latin American clients — with AI in my daily workflow.</p>
+  <div class="btns">
+    <a class="btn primary" href="#work">See case studies</a>
+    <a class="btn ghost" href="#contact">Get in touch</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>8 yrs</b><span>in marketing, since 2018</span></div>
+    <div class="stat"><b>$55K+</b><span>USD/year at Daily Me, a DTC brand I built from zero</span></div>
+    <div class="stat"><b>50+</b><span>creators &amp; affiliates managed</span></div>
+    <div class="stat"><b>500+</b><span>B2B leads at under $1 USD each</span></div>
+    <div class="stat"><b>50K+</b><span>followers on TikTok &amp; Instagram</span></div>
+  </div>
+  <div class="tags">
+    <span class="tag">Marketing Operations</span><span class="tag">Project Management</span><span class="tag">E-commerce &amp; DTC</span><span class="tag">TikTok Shop</span><span class="tag">Creator &amp; Affiliate Programs</span><span class="tag">Meta Ads</span><span class="tag">Launches &amp; Funnels</span><span class="tag">AI Workflows</span>
+  </div>
+</div></header>
+
+<section id="work"><div class="wrap">
+  <div class="sec-head">
+    <div class="eyebrow">Selected work</div>
+    <h2>Case studies</h2>
+  </div>
+
+  <!-- Case 1 -->
+  <article class="case">
+    <div class="top">
+      <div>
+        <div class="eyebrow">Case 01 · E-commerce &amp; TikTok Shop</div>
+        <h3>Daily Me: a DTC brand built from zero</h3>
+        <p class="lead">A journaling brand selling printed and digital journals in Mexico through its own e-commerce site and TikTok Shop. I'm the founder and the entire marketing team, from positioning to creators, campaigns and operations.</p>
+      </div>
+      <div class="num">01</div>
+    </div>
+    <div class="grid2">
+      <div class="blk">
+        <h4>What I did</h4>
+        <ul class="dots">
+          <li>Built the brand, e-commerce site and TikTok Shop from scratch.</li>
+          <li>Run TikTok Shop daily in Seller Center and Affiliate Center: creator outreach, free samples, commission plans, GMV Max campaigns and shop promotions.</li>
+          <li>Recruited and manage 50+ creators and affiliates, coordinated through Discord and WhatsApp communities.</li>
+          <li>Run paid social, email and organic content with weekly GMV and KPI tracking, and documented processes so the business runs on systems.</li>
+        </ul>
+      </div>
+      <div class="blk">
+        <h4>Results</h4>
+        <div class="res">
+          <div class="stat"><b>MXN 1M+</b><span>~$55K USD annual revenue</span></div>
+          <div class="stat"><b>~100</b><span>orders per month</span></div>
+          <div class="stat"><b>~$10K</b><span>USD/year in TikTok Shop GMV</span></div>
+          <div class="stat"><b>50+</b><span>creators &amp; affiliates</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="why"><b>What it shows:</b> I know how to grow a DTC brand through creators and social commerce, and how to run it day to day.</div>
+  </article>
+
+  <!-- Case 2 -->
+  <article class="case">
+    <div class="top">
+      <div>
+        <div class="eyebrow">Case 02 · Launch &amp; funnel</div>
+        <h3>An online course and high-ticket bootcamp launch</h3>
+        <p class="lead">I turned my personal brand into an online course and a live high-ticket bootcamp, owning every touchpoint: content, landing page, email and WhatsApp sequences, paid ads, a live masterclass and the sales calls.</p>
+      </div>
+      <div class="num">02</div>
+    </div>
+    <div class="flow">
+      <span>Short-form content</span><i>→</i><span>Meta Ads + organic</span><i>→</i><span>Landing page</span><i>→</i><span>Email + WhatsApp</span><i>→</i><span>Live masterclass</span><i>→</i><span>Sales calls</span>
+    </div>
+    <div class="grid2">
+      <div class="blk">
+        <h4>What I did</h4>
+        <ul class="dots">
+          <li>Grew an audience of 50K+ followers with short-form educational content.</li>
+          <li>Built the landing page and nurture sequences, and ran paid and organic campaigns.</li>
+          <li>Hosted the masterclass and ran the 1:1 sales calls that closed bootcamp enrollments.</li>
+          <li>Tracked every funnel stage, from sign-up to enrollment.</li>
+        </ul>
+      </div>
+      <div class="blk">
+        <h4>Results</h4>
+        <div class="res">
+          <div class="stat"><b>300+</b><span>masterclass sign-ups in one launch</span></div>
+          <div class="stat"><b>20</b><span>high-ticket enrollments</span></div>
+          <div class="stat"><b>$20K</b><span>USD revenue from one launch</span></div>
+          <div class="stat"><b>150+</b><span>students across Latin America</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="why"><b>What it shows:</b> I can plan and execute a full launch end to end and connect every step to revenue.</div>
+  </article>
+
+  <!-- Case 3 -->
+  <article class="case">
+    <div class="top">
+      <div>
+        <div class="eyebrow">Case 03 · B2B lead generation</div>
+        <h3>From zero leads to a fully booked sales calendar</h3>
+        <p class="lead">A B2B service for short-term rental hosts, expanding to the US, had no inbound lead flow. I designed and ran the acquisition program end to end.</p>
+      </div>
+      <div class="num">03</div>
+    </div>
+    <div class="grid2">
+      <div class="blk">
+        <h4>What I did</h4>
+        <ul class="dots">
+          <li>Launched their first Meta Ads campaigns, with audience strategy and budget pacing.</li>
+          <li>Built bilingual (English/Spanish) landing pages for the US expansion.</li>
+          <li>Set up UTM and Pixel tracking and weekly reporting tied to booked calls, not just clicks.</li>
+          <li>Connected Claude (AI) to Meta Ads to analyze results and iterate faster.</li>
+        </ul>
+      </div>
+      <div class="blk">
+        <h4>Results</h4>
+        <div class="res">
+          <div class="stat"><b>0 → full</b><span>from no leads to a fully booked calendar</span></div>
+          <div class="stat"><b>500+</b><span>leads generated in 2026</span></div>
+          <div class="stat"><b>&lt;$1</b><span>USD cost per lead</span></div>
+          <div class="stat"><b>$2K</b><span>USD/month max budget</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="why"><b>What it shows:</b> I test, measure and scale what works, and I judge campaigns by business outcomes.</div>
+  </article>
+
+  <!-- Case 4 -->
+  <article class="case">
+    <div class="top">
+      <div>
+        <div class="eyebrow">Case 04 · Operations &amp; market data</div>
+        <h3>Operating 30+ short-term rental listings</h3>
+        <p class="lead">I ran a short-term rental business in Guadalajara without owning the properties. Every decision on pricing, listings and guest experience came from data and guest feedback, and I turned that know-how into a product.</p>
+      </div>
+      <div class="num">04</div>
+    </div>
+    <div class="grid2">
+      <div class="blk">
+        <h4>What I did</h4>
+        <ul class="dots">
+          <li>Operated 30+ Airbnb listings: owner relationships, setup, pricing and availability, and the cleaning and maintenance teams.</li>
+          <li>Ran ongoing market and competitor research on pricing, demand and listing performance.</li>
+          <li>Built AuditBnB, a 9-category listing audit (photos, title, reviews, pricing, calendar and more) that produces a 10-page report with prioritized recommendations.</li>
+        </ul>
+      </div>
+      <div class="blk">
+        <h4>Results</h4>
+        <div class="res">
+          <div class="stat"><b>30+</b><span>listings operated</span></div>
+          <div class="stat"><b>9</b><span>categories in my audit system</span></div>
+          <div class="stat"><b>10 pp</b><span>report per listing</span></div>
+          <div class="stat"><b>150+</b><span>hosts I've since trained</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="why"><b>What it shows:</b> I'm an operator first: I build processes, read the numbers and turn them into decisions.</div>
+  </article>
+</div></section>
+
+<section id="how" style="background:var(--soft)"><div class="wrap">
+  <div class="sec-head">
+    <div class="eyebrow">How I work</div>
+    <h2>Strategy, hands-on execution and AI</h2>
+  </div>
+  <div class="steps">
+    <div class="step"><b>1. Scope &amp; plan</b><span>Turn a messy goal into a clear plan with owners, timelines and briefs.</span></div>
+    <div class="step"><b>2. Build &amp; launch</b><span>Create the campaigns, funnels and content myself, with QA before anything ships.</span></div>
+    <div class="step"><b>3. Measure &amp; document</b><span>Report results with a clear point of view and turn what works into repeatable processes.</span></div>
+  </div>
+  <div class="cols" style="margin-top:40px">
+    <div class="blk">
+      <h4>AI in my daily workflow</h4>
+      <ul class="dots">
+        <li>Claude connected to Meta Ads to plan, build and analyze campaigns.</li>
+        <li>An AI workflow that turns a manual analysis into an automated 10-page report.</li>
+        <li>AI-assisted briefs, copy, QA and reporting.</li>
+        <li>Anthropic Academy: AI Fluency and Claude 101 (2026).</li>
+      </ul>
+    </div>
+    <div class="blk">
+      <h4>Tools</h4>
+      <div class="tags">
+        <span class="tag">Meta Ads</span><span class="tag">TikTok Shop</span><span class="tag">GA4</span><span class="tag">UTM &amp; Pixel</span><span class="tag">Mailchimp</span><span class="tag">MailerLite</span><span class="tag">ClickUp</span><span class="tag">Notion</span><span class="tag">Canva</span><span class="tag">CapCut</span><span class="tag">Claude</span>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap">
+  <div class="sec-head">
+    <div class="eyebrow">About</div>
+    <h2>Background</h2>
+  </div>
+  <div class="cols">
+    <ul class="timeline">
+      <li><b>Founder · Daily Me</b><span>DTC e-commerce brand · 2023 – present</span></li>
+      <li><b>Founder &amp; educator · Online course &amp; bootcamp</b><span>150+ students across Latin America · 2025 – present</span></li>
+      <li><b>Marketing Operations Consultant</b><span>Up to 5 clients at a time · 2025 – present</span></li>
+      <li><b>Marketing Director · Gersten Financial Planning</b><span>San Diego, USA · 2021 – 2023</span></li>
+      <li><b>Marketing Assistant · BDP agency</b><span>Mexico · 2018 – 2021</span></li>
+    </ul>
+    <div>
+      <ul class="dots">
+        <li>MSc Digital Business, EMLV Paris (2024)</li>
+        <li>BA in Marketing, UAG (2020)</li>
+        <li>Fully bilingual: English &amp; Spanish</li>
+        <li>Based in Mexico, working on US hours</li>
+        <li>UGC creator for brands including Canva</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <h2>Let's work together</h2>
+  <p>Open to full-time remote roles in marketing operations, project management, e-commerce and creator marketing.</p>
+  <div class="btns">
+    <a class="btn primary" href="mailto:sofiaretif@gmail.com">sofiaretif@gmail.com</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/sofiaretif" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn ghost" href="https://www.tiktok.com/@sofiahosting_" target="_blank" rel="noopener">TikTok @sofiahosting_</a>
+  </div>
+</div></section>
+
+<footer>© 2026 Sofia Retif González · sofiaretif.com</footer>
+</body>
+</html>

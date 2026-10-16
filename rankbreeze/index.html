@@ -95,6 +95,32 @@
   .num:nth-child(3) b, .num:nth-child(4) b { color: var(--gold-dark); }
   .num span { display: block; margin-top: 8px; font-size: 13px; color: var(--mid); line-height: 1.3; }
 
+  /* FUNNEL CASE */
+  .funnel { background: var(--sky-pale); }
+  .formula { margin-top: 18px; display: inline-block; font-size: 15px; font-weight: 600; color: var(--sky-deeper); background: #fff; border: 1px solid var(--sky-light); border-radius: 14px; padding: 12px 18px; }
+  .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 36px; }
+  .step { position: relative; background: #fff; border-radius: 18px; padding: 20px 16px 18px; box-shadow: 0 10px 28px rgba(35,75,107,.08); display: flex; flex-direction: column; }
+  .step:not(:last-child)::after { content: '→'; position: absolute; right: -7px; top: 34px; transform: translateX(50%); color: var(--sky-deep); font-weight: 700; font-size: 18px; z-index: 2; }
+  .step .n { width: 30px; height: 30px; border-radius: 50%; background: var(--sky-deep); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 13px; }
+  .step h3 { font-size: 16px; color: var(--sky-deeper); margin: 10px 0 4px; }
+  .step p { font-size: 13.5px; color: var(--mid); margin-bottom: 14px; }
+  .step .m { margin-top: auto; border-top: 1px dashed var(--beige-dark); padding-top: 12px; }
+  .step .m b { display: block; font-family: 'Playfair Display', serif; font-size: 26px; line-height: 1; color: var(--sky-deeper); }
+  .step .m span { font-size: 12.5px; color: var(--mid); }
+  .step.win { background: var(--sky-deeper); }
+  .step.win h3, .step.win .m b { color: #fff; } .step.win p, .step.win .m span { color: rgba(255,255,255,.78); }
+  .step.win .n { background: var(--gold); color: var(--sky-deeper); }
+  .step.win .m { border-top-color: rgba(255,255,255,.25); }
+  .proofs { display: grid; grid-template-columns: 1.35fr .65fr; gap: 28px; align-items: center; margin-top: 44px; }
+  .proofs figcaption { font-size: 13px; color: var(--mid); margin-top: 8px; text-align: center; }
+  .browser { border-radius: 14px; overflow: hidden; background: #fff; box-shadow: 0 18px 44px rgba(35,75,107,.18); }
+  .browser .bar { display: flex; align-items: center; gap: 6px; padding: 9px 12px; background: #E9EEF3; }
+  .browser .bar i { width: 9px; height: 9px; border-radius: 50%; background: #C9D2DC; }
+  .browser .bar span { margin-left: 8px; flex: 1; font-size: 11.5px; color: var(--mid); background: #fff; border-radius: 99px; padding: 3px 10px; }
+  .browser img { max-height: 380px; width: 100%; object-fit: cover; object-position: top; }
+  .rebuild { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px; margin-top: 30px; }
+  .rebuild p { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(20px, 2.4vw, 26px); color: var(--sky-deeper); max-width: 640px; }
+
   /* FIT TABLE */
   .fit { display: grid; gap: 10px; margin-top: 36px; }
   .row { display: grid; grid-template-columns: 1fr 1.5fr; gap: 0; border-radius: 16px; overflow: hidden; border: 1px solid var(--beige-dark); background: #fff; }
@@ -141,13 +167,13 @@
   .quote b { color: var(--gold); font-weight: 600; margin-left: 6px; }
 
   /* CASES */
-  .cases { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 36px; }
+  .cases { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 36px; }
   .case { border-radius: 22px; padding: 30px; background: var(--sky-pale); display: flex; flex-direction: column; }
   .case.b { background: var(--beige); }
   .case .k { font-size: 11.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dark); }
   .case h3 { font-family: 'Playfair Display', serif; font-size: clamp(24px, 2.6vw, 30px); color: var(--sky-deeper); line-height: 1.15; margin: 6px 0 10px; }
   .case > p { font-size: 15.5px; color: var(--mid); }
-  .res { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 20px 0; }
+  .res { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 20px 0; max-width: 640px; }
   .res div { background: #fff; border-radius: 12px; padding: 14px 12px; }
   .res b { display: block; font-family: 'Playfair Display', serif; font-size: 26px; line-height: 1; color: var(--sky-deeper); }
   .res span { font-size: 12.5px; color: var(--mid); line-height: 1.3; display: block; margin-top: 4px; }
@@ -232,7 +258,10 @@
 
   @media (max-width: 960px) {
     .num-grid { grid-template-columns: repeat(3, 1fr); }
-    .host-grid, .dash, .cases, .es { grid-template-columns: 1fr; gap: 28px; }
+    .host-grid, .dash, .cases, .es, .proofs { grid-template-columns: 1fr; gap: 28px; }
+    .steps { grid-template-columns: 1fr 1fr; }
+    .step::after { display: none; }
+    .step.win { grid-column: 1 / -1; }
     .engine { grid-template-columns: 1fr 1fr; }
     .ideas, .plays, .exp { grid-template-columns: 1fr 1fr; }
     .nav-links a.t { display: none; }
@@ -249,6 +278,7 @@
     .float.f1 { left: 0; } .float.f2 { right: 0; }
     .num-grid { grid-template-columns: 1fr 1fr; }
     .row { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; }
     .res { grid-template-columns: 1fr 1fr; }
     .videos { grid-auto-columns: 64%; padding: 0 16px 12px; }
     .marquee img { height: 190px; }
@@ -267,6 +297,7 @@
 <nav id="nav">
   <a class="logo" href="#top">Sofía <span>× RankBreeze</span></a>
   <div class="nav-links">
+    <a class="t" href="#funnel">Funnel</a>
     <a class="t" href="#host">Host</a>
     <a class="t" href="#camera">On camera</a>
     <a class="t" href="#growth">Growth</a>
@@ -284,7 +315,7 @@
       <p class="lead">I run <b>33 Airbnb listings</b> in Guadalajara, teach hosts to <b>50K+ followers</b> on camera every week, and have been a <b>Marketing Director</b> since 2021. I judge my content by sign-ups and sales, not likes.</p>
       <div class="chips"><span>🏠 Airbnb operator</span><span>🎥 On camera</span><span>✉️ Email</span><span>📣 Paid acquisition</span><span>🚀 Launches</span><span>📊 Funnels</span><span>🇺🇸🇲🇽 EN + ES</span></div>
       <div class="actions">
-        <a class="btn" href="#host">See the host side ↓</a>
+        <a class="btn" href="#funnel">See the funnel ↓</a>
         <a class="ghost" href="#plan">My first 90 days</a>
       </div>
     </div>
@@ -294,6 +325,38 @@
       <div class="float f2"><b>4.8★</b>1,400+ reviews</div>
       <div class="float f3"><b>&lt;$1</b>cost per lead</div>
     </div>
+  </div>
+</section>
+
+<!-- FUNNEL CASE -->
+<section class="funnel" id="funnel">
+  <div class="wrap">
+    <span class="eyebrow">Case 01 · A funnel I designed &amp; operated</span>
+    <h2>A system, not a class. <em>$20K USD in sales.</em></h2>
+    <p class="sub">I built every piece — landing page, ads, emails, WhatsApp community, live class and offer — then ran it end to end.</p>
+    <div class="formula">Landing → email/WhatsApp nurture → live class → high-ticket offer → $20K USD in sales</div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">1</div><h3>Sign-up</h3><p>Landing page fed by reels, carousels and Meta Ads. Free checklist as the hook.</p><div class="m"><b>300+</b><span>sign-ups</span></div></div>
+      <div class="step reveal"><div class="n">2</div><h3>Reminders</h3><p>3 reminder emails, timed to the class, plus a WhatsApp community.</p><div class="m"><b>225</b><span>joined the WhatsApp group</span></div></div>
+      <div class="step reveal"><div class="n">3</div><h3>Live class</h3><p>90 minutes on YouTube Live: teach first, then present the offer.</p><div class="m"><b>90 min</b><span>live, then evergreen replay</span></div></div>
+      <div class="step reveal"><div class="n">4</div><h3>Offer</h3><p>2 tiers. 5 sales emails, each mirrored by a carousel the same day.</p><div class="m"><b>5 + 5</b><span>emails + carousels in 7 days</span></div></div>
+      <div class="step win reveal"><div class="n">5</div><h3>Close</h3><p>High-ticket bootcamp enrollments through Stripe.</p><div class="m"><b>$20K</b><span>USD · 20 enrollments</span></div></div>
+    </div>
+    <div class="proofs">
+      <figure class="reveal">
+        <img src="/assets/rankbreeze/live-class-laptop.png" alt="Laptop showing Sofía teaching the live class on camera next to a slide that reads: Airbnb isn't a pretty apartment, it's a spreadsheet that makes money" loading="lazy">
+        <figcaption>The live class: "Airbnb isn't a pretty apartment. It's a spreadsheet that makes money."</figcaption>
+      </figure>
+      <figure class="reveal">
+        <div class="browser"><div class="bar"><i></i><i></i><i></i><span>sofiaretif.com/en-vivo</span></div><img src="/assets/rankbreeze/live-funnel-landing.jpg" alt="The class landing page with an email sign-up form" loading="lazy"></div>
+        <figcaption>The landing, still live as an evergreen replay.</figcaption>
+      </figure>
+    </div>
+    <div class="rebuild reveal">
+      <p>"I'd rebuild this exact funnel for RankBreeze in English and Spanish."</p>
+      <a class="btn dark" href="https://sofiaretif.com/en-vivo" target="_blank" rel="noopener">See the live funnel (Spanish) ↗</a>
+    </div>
+    <div class="catch reveal"><b class="n">478 ≠ real</b><p><b>Activity vs. outcome:</b> the pixel fired on a button click, so Meta counted 478 "leads" in one week — far more than real sign-ups. I moved the event to the completed form before adding budget.</p></div>
   </div>
 </section>
 
@@ -330,7 +393,7 @@
 <!-- UBICAME / HOST -->
 <section class="host" id="host">
   <div class="wrap">
-    <span class="eyebrow">Case 01 · Ubícame · my STR business</span>
+    <span class="eyebrow">Case 02 · Ubícame · my STR business</span>
     <h2>I live inside the data <em>your product shows.</em></h2>
     <p class="sub">Ubícame is the short-term rental company I run in Guadalajara: furnished apartments across five neighborhoods, sold on Airbnb and through our own direct-booking site.</p>
     <div class="host-grid">
@@ -401,23 +464,8 @@
 <section id="growth">
   <div class="wrap">
     <span class="eyebrow">Growth · judged by revenue</span>
-    <h2>Two funnels aimed at hosts. <em>Both measured to the dollar.</em></h2>
+    <h2>Paid acquisition aimed at hosts. <em>Measured to the dollar.</em></h2>
     <div class="cases">
-      <article class="case reveal">
-        <span class="k">Case 02 · Webinar → offer launch</span>
-        <h3>From a free masterclass to a $20K USD launch</h3>
-        <div class="flowline"><span>Reels</span><i>→</i><span>Meta Ads</span><i>→</i><span>Landing</span><i>→</i><span>Live webinar</span><i>→</i><span>5 emails</span><i>→</i><span>Sale</span></div>
-        <div class="res">
-          <div><b>300+</b><span>webinar sign-ups</span></div>
-          <div><b>20</b><span>high-ticket enrollments</span></div>
-          <div><b>$20K</b><span>USD revenue</span></div>
-        </div>
-        <ul>
-          <li>Built the landing page, the reminder and sales email sequences, and the ads.</li>
-          <li>Split the offer into tiers so the premium seat was the obvious upgrade.</li>
-          <li>One message per day, mirrored across email, carousels and WhatsApp.</li>
-        </ul>
-      </article>
       <article class="case b reveal">
         <span class="k">Case 03 · B2B paid acquisition · hosts</span>
         <h3>Zero leads → a fully booked sales calendar</h3>
@@ -434,7 +482,6 @@
         </ul>
       </article>
     </div>
-    <div class="catch reveal"><b class="n">478 ≠ real</b><p><b>Activity vs. outcome:</b> Meta counted 478 "leads" for my webinar. Actual sign-ups were far lower — the pixel fired on a button click, not a completed form. I fixed the event before adding budget.</p></div>
   </div>
 </section>
 

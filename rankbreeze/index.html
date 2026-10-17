@@ -151,13 +151,6 @@
   .face .pr b { color: #fff; }
   .flip.on .flip-in { transform: rotateY(180deg); }
   @media (hover: hover) { .flip:hover .flip-in { transform: rotateY(180deg); } }
-  .tabs { position: relative; display: inline-flex; gap: 4px; background: #fff; border-radius: 99px; padding: 5px; margin-top: 28px; box-shadow: 0 8px 24px rgba(35,75,107,.08); }
-  .tab { all: unset; position: relative; z-index: 1; cursor: pointer; font-weight: 600; font-size: 14.5px; color: var(--sky-deep); padding: 10px 20px; border-radius: 99px; transition: color .3s; }
-  .tab.on { color: #fff; }
-  .tab:focus-visible { outline: 2px solid var(--sky); }
-  .tab-bar { position: absolute; top: 5px; bottom: 5px; left: 5px; border-radius: 99px; background: var(--sky-deep); transition: transform .4s cubic-bezier(.2,.8,.2,1), width .4s; }
-  .plays .play:not(.on) { display: none; }
-  .plays .play.on { animation: up .5s ease both; }
   .proofs figure:first-child img { animation: bob 6s ease-in-out infinite; }
   .step { transition: opacity .7s ease, transform .3s, box-shadow .3s; }
   .step:hover { transform: translateY(-6px); box-shadow: 0 18px 36px rgba(35,75,107,.16); }
@@ -265,17 +258,38 @@
   .es-card p { color: rgba(255,255,255,.82); font-size: 15px; margin: 6px 0 18px; }
   .es-card p:last-child { margin-bottom: 0; }
 
-  /* PLAYBOOK */
-  .plays { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 22px; max-width: 760px; }
-  .play { background: #fff; border-radius: 20px; padding: 26px; border-top: 4px solid var(--sky-deep); }
-  .play:nth-child(2) { border-top-color: var(--sky); }
-  .play:nth-child(3) { border-top-color: var(--gold); }
-  .play .when { font-size: 11.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dark); }
-  .play h3 { font-family: 'Playfair Display', serif; font-size: 23px; color: var(--sky-deeper); margin: 4px 0 12px; }
-  .play ul { list-style: none; }
-  .play li { position: relative; padding-left: 18px; font-size: 14.5px; color: var(--mid); margin-top: 8px; }
-  .play li::before { content: '→'; position: absolute; left: 0; color: var(--sky-deep); font-weight: 700; }
-  .play .metric { margin-top: 16px; font-size: 13px; font-weight: 600; color: var(--sky-deeper); background: var(--sky-pale); border-radius: 10px; padding: 9px 12px; }
+  /* ROADMAP */
+  .road { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; }
+  .road::before { content: ''; position: absolute; left: 22px; right: 22px; top: 22px; height: 2px; background: linear-gradient(90deg, var(--sky-deep), var(--sky), var(--gold)); }
+  .stage { position: relative; }
+  .stage .dot { width: 46px; height: 46px; border-radius: 50%; background: var(--sky-deep); color: #fff; display: grid; place-items: center; font-weight: 700; box-shadow: 0 0 0 6px var(--sky-pale); position: relative; z-index: 1; }
+  .stage:nth-child(2) .dot { background: var(--sky); }
+  .stage:nth-child(3) .dot { background: var(--gold); color: var(--sky-deeper); }
+  .stage .card { margin-top: 18px; background: #fff; border-radius: 20px; padding: 24px; box-shadow: 0 12px 30px rgba(35,75,107,.08); height: calc(100% - 64px); display: flex; flex-direction: column; transition: transform .3s, box-shadow .3s; }
+  .stage .card:hover { transform: translateY(-5px); box-shadow: 0 18px 38px rgba(35,75,107,.14); }
+  .stage .when { font-size: 11.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dark); }
+  .stage h3 { font-family: 'Playfair Display', serif; font-size: 23px; color: var(--sky-deeper); margin: 4px 0 12px; }
+  .stage .q { font-family: 'Playfair Display', serif; font-style: italic; font-size: 17px; line-height: 1.35; color: var(--sky-deep); border-left: 3px solid var(--sky-light); padding-left: 12px; margin-bottom: 14px; }
+  .stage ul { list-style: none; margin-bottom: 16px; }
+  .stage li { position: relative; padding-left: 18px; font-size: 14.5px; color: var(--mid); margin-top: 7px; }
+  .stage li::before { content: '→'; position: absolute; left: 0; color: var(--sky-deep); font-weight: 700; }
+  .stage .out { margin-top: auto; display: flex; gap: 8px; align-items: center; font-size: 13.5px; font-weight: 600; color: var(--sky-deeper); background: var(--sky-pale); border-radius: 12px; padding: 10px 12px; }
+  .stage .out i { font-style: normal; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-dark); }
+  .board { margin-top: 44px; background: #fff; border-radius: 22px; padding: 26px; box-shadow: 0 12px 30px rgba(35,75,107,.08); }
+  .board-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .board-head h3 { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--sky-deeper); }
+  .board-head span { font-size: 13.5px; color: var(--mid); font-style: italic; }
+  .tiles { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-top: 18px; }
+  .tile { background: var(--sky-pale); border-radius: 14px; padding: 14px 12px 10px; }
+  .tile .ic { font-size: 20px; }
+  .tile b { display: block; font-size: 13.5px; color: var(--sky-deeper); line-height: 1.25; margin-top: 6px; min-height: 34px; }
+  .spark { width: 100%; height: 34px; margin-top: 6px; }
+  .spark path { fill: none; stroke: var(--sky-deep); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 160; stroke-dashoffset: 160; transition: stroke-dashoffset 1.6s ease .3s; }
+  .tile:nth-child(even) .spark path { stroke: var(--gold-dark); }
+  .board.show .spark path { stroke-dashoffset: 0; }
+  .principles { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .principles span { background: var(--sky-deeper); color: #fff; font-size: 14px; font-weight: 600; border-radius: 99px; padding: 9px 16px; }
+  .principles span b { color: var(--gold); margin-right: 6px; }
 
   /* EXPERIENCE */
   .exp { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 36px; }
@@ -311,6 +325,7 @@
     .engine { grid-template-columns: 1fr 1fr; }
     .ideas, .exp { grid-template-columns: 1fr 1fr; }
     .flips { grid-template-columns: 1fr 1fr; }
+    .tiles { grid-template-columns: repeat(3, 1fr); }
     .nav-links a.t { display: none; }
   }
   @media (max-width: 640px) {
@@ -332,13 +347,18 @@
     .videos { grid-auto-columns: 64%; padding: 0 16px 12px; }
     .marquee img { height: 190px; }
     .ideas, .exp, .flips { grid-template-columns: 1fr; }
+    .road { grid-template-columns: 1fr; gap: 6px; }
+    .road::before { left: 22px; right: auto; top: 22px; bottom: 22px; width: 2px; height: auto; background: linear-gradient(180deg, var(--sky-deep), var(--sky), var(--gold)); }
+    .stage { display: grid; grid-template-columns: 46px 1fr; gap: 14px; }
+    .stage .card { margin-top: 0; height: auto; margin-bottom: 14px; }
+    .tiles { grid-template-columns: 1fr 1fr; }
     .flip-in { min-height: 170px; }
-    .tabs { display: flex; } .tab { flex: 1; text-align: center; padding: 10px 6px; font-size: 13.5px; }
     .script { grid-template-columns: 1fr; padding: 22px; gap: 14px; }
     .beats li { grid-template-columns: 64px 1fr; }
     .catch { flex-direction: column; align-items: flex-start; gap: 6px; }
   }
   @media (prefers-reduced-motion: reduce) {
+    .spark path { transition: none; stroke-dashoffset: 0; }
     .marquee, .float, .tick-track, .proofs figure:first-child img, .step::after { animation: none !important; }
     .flip-in, .reveal { transition: none; }
   }
@@ -665,15 +685,16 @@
     <span class="eyebrow">Your "success in the first months"</span>
     <h2>How I'd approach <em>the first 90 days.</em></h2>
     <p class="sub">A starting point to align with you, not a fixed plan.</p>
-    <div class="tabs" role="tablist"><button class="tab on" type="button" data-t="0">Days 1–30</button><button class="tab" type="button" data-t="1">Days 31–60</button><button class="tab" type="button" data-t="2">Days 61–90</button><span class="tab-bar"></span></div>
-    <div class="plays">
-      <div class="play on reveal"><div class="when">Days 1–30</div><h3>Listen &amp; learn</h3>
-        <ul><li>Listen to the team and to hosts: what they need, where they get stuck.</li><li>Understand the funnel and find the biggest leak.</li></ul></div>
-      <div class="play reveal"><div class="when">Days 31–60</div><h3>Test, one thing at a time</h3>
-        <ul><li>Test messages and pages, one variable at a time.</li><li>Keep what works, drop what doesn't.</li></ul></div>
-      <div class="play reveal"><div class="when">Days 61–90</div><h3>Scale what works</h3>
-        <ul><li>Double down on what moved the numbers.</li><li>Report it in plain English: what worked, what's next.</li></ul></div>
+    <div class="road">
+      <div class="stage reveal"><div class="dot">1</div><div class="card"><div class="when">Days 1–30</div><h3>Listen &amp; learn</h3><p class="q">“Where do hosts get stuck between first visit and trial?”</p><ul><li>Listen to the team and to hosts.</li><li>Walk the funnel with the data.</li></ul><div class="out"><i>Output</i>A one-page funnel map</div></div></div>
+      <div class="stage reveal"><div class="dot">2</div><div class="card"><div class="when">Days 31–60</div><h3>Test, one thing at a time</h3><p class="q">“Which message makes a host say: that’s my problem?”</p><ul><li>Hooks, pages and emails, one variable at a time.</li><li>Keep what works, drop what doesn’t.</li></ul><div class="out"><i>Output</i>A simple, shared test log</div></div></div>
+      <div class="stage reveal"><div class="dot">3</div><div class="card"><div class="when">Days 61–90</div><h3>Scale what works</h3><p class="q">“What actually moved the numbers, and how do we get more of it?”</p><ul><li>Double down on what’s proven.</li><li>Recap results in plain English.</li></ul><div class="out"><i>Output</i>A plain-English results recap</div></div></div>
     </div>
+    <div class="board reveal">
+      <div class="board-head"><h3>Your success list → the numbers I'd watch</h3><span>Targets we'd set together.</span></div>
+      <div class="tiles"><div class="tile"><span class="ic">📣</span><b>Hosts reached per week</b><svg class="spark" viewBox="0 0 120 34" aria-hidden="true"><path d="M2 28 L22 25 L42 26 L62 18 L82 15 L102 9 L118 5"/></svg></div><div class="tile"><span class="ic">🧪</span><b>Trial sign-ups</b><svg class="spark" viewBox="0 0 120 34" aria-hidden="true"><path d="M2 30 L22 27 L42 22 L62 23 L82 14 L102 11 L118 6"/></svg></div><div class="tile"><span class="ic">🖥️</span><b>Website conversion</b><svg class="spark" viewBox="0 0 120 34" aria-hidden="true"><path d="M2 26 L22 27 L42 21 L62 19 L82 17 L102 10 L118 7"/></svg></div><div class="tile"><span class="ic">✉️</span><b>Email list growth</b><svg class="spark" viewBox="0 0 120 34" aria-hidden="true"><path d="M2 29 L22 24 L42 25 L62 17 L82 16 L102 12 L118 4"/></svg></div><div class="tile"><span class="ic">🚀</span><b>Launch results</b><svg class="spark" viewBox="0 0 120 34" aria-hidden="true"><path d="M2 27 L22 28 L42 20 L62 21 L82 13 L102 12 L118 6"/></svg></div><div class="tile"><span class="ic">🎬</span><b>Content → sign-ups</b><svg class="spark" viewBox="0 0 120 34" aria-hidden="true"><path d="M2 30 L22 26 L42 24 L62 20 L82 15 L102 8 L118 5"/></svg></div></div>
+    </div>
+    <div class="principles reveal"><span><b>01</b>Data before opinions</span><span><b>02</b>One variable at a time</span><span><b>03</b>Outcomes, not activity</span></div>
   </div>
 </section>
 
@@ -761,16 +782,6 @@
   // Flip cards: hover on desktop, tap anywhere
   document.querySelectorAll('.flip').forEach(f => f.addEventListener('click', () => f.classList.toggle('on')));
 
-  // 30/60/90 tabs
-  const tabs = [...document.querySelectorAll('.tab')], plays = [...document.querySelectorAll('.plays .play')], tbar = document.querySelector('.tab-bar');
-  const pick = i => {
-    tabs.forEach((t, k) => { t.classList.toggle('on', k === i); t.setAttribute('aria-selected', k === i); });
-    plays.forEach((p, k) => { p.classList.toggle('on', k === i); if (k === i) p.classList.add('show'); });
-    tbar.style.width = tabs[i].offsetWidth + 'px'; tbar.style.transform = `translateX(${tabs[i].offsetLeft - 5}px)`;
-  };
-  tabs.forEach((t, i) => t.addEventListener('click', () => pick(i)));
-  window.addEventListener('resize', () => pick(tabs.findIndex(t => t.classList.contains('on'))));
-  pick(0);
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (!e.isIntersecting) return;
     e.target.classList.add('show');

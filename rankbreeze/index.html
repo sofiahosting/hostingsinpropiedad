@@ -130,6 +130,42 @@
   .goal { align-self: flex-start; font-size: 11.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--sky-deeper); background: var(--gold); border-radius: 99px; padding: 4px 10px; }
   .goal.alt { background: var(--sky-light); }
 
+  /* DYNAMIC BITS */
+  #progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: linear-gradient(90deg, var(--gold), var(--sky-light)); z-index: 60; }
+  .ticker { background: var(--gold); color: var(--sky-deeper); overflow: hidden; padding: 13px 0; }
+  .tick-track { display: flex; gap: 22px; width: max-content; animation: scroll 38s linear infinite; font-weight: 700; font-size: 15px; white-space: nowrap; }
+  .tick-track i { font-style: normal; opacity: .55; }
+  .flips { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 30px; }
+  .flip { background: none; border: 0; padding: 0; margin: 0; font: inherit; color: inherit; text-align: left; width: 100%; display: block; cursor: pointer; perspective: 1200px; border-radius: 20px; }
+  .flip:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
+  .flip-in { display: grid; transition: transform .7s cubic-bezier(.2,.8,.2,1); transform-style: preserve-3d; min-height: 196px; }
+  .face { grid-area: 1 / 1; display: flex; flex-direction: column; border-radius: 20px; padding: 22px; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+  .front { background: var(--sky-pale); border: 1px solid var(--sky-light); }
+  .back { background: var(--sky-deeper); color: rgba(255,255,255,.85); transform: rotateY(180deg); justify-content: center; }
+  .face .ic { font-size: 30px; }
+  .face .who { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dark); margin-top: 10px; }
+  .back .who { color: var(--gold); margin: 0 0 8px; }
+  .face .ask { font-family: 'Playfair Display', serif; font-size: 22px; line-height: 1.2; color: var(--sky-deeper); margin-top: 4px; }
+  .face .hint { margin-top: auto; padding-top: 12px; font-size: 13px; font-weight: 600; color: var(--sky-deep); }
+  .face .pr { font-size: 16px; line-height: 1.5; }
+  .face .pr b { color: #fff; }
+  .flip.on .flip-in { transform: rotateY(180deg); }
+  @media (hover: hover) { .flip:hover .flip-in { transform: rotateY(180deg); } }
+  .tabs { position: relative; display: inline-flex; gap: 4px; background: #fff; border-radius: 99px; padding: 5px; margin-top: 28px; box-shadow: 0 8px 24px rgba(35,75,107,.08); }
+  .tab { all: unset; position: relative; z-index: 1; cursor: pointer; font-weight: 600; font-size: 14.5px; color: var(--sky-deep); padding: 10px 20px; border-radius: 99px; transition: color .3s; }
+  .tab.on { color: #fff; }
+  .tab:focus-visible { outline: 2px solid var(--sky); }
+  .tab-bar { position: absolute; top: 5px; bottom: 5px; left: 5px; border-radius: 99px; background: var(--sky-deep); transition: transform .4s cubic-bezier(.2,.8,.2,1), width .4s; }
+  .plays .play:not(.on) { display: none; }
+  .plays .play.on { animation: up .5s ease both; }
+  .proofs figure:first-child img { animation: bob 6s ease-in-out infinite; }
+  .step { transition: opacity .7s ease, transform .3s, box-shadow .3s; }
+  .step:hover { transform: translateY(-6px); box-shadow: 0 18px 36px rgba(35,75,107,.16); }
+  .step:not(:last-child)::after { animation: nudge 1.6s ease-in-out infinite; }
+  @keyframes nudge { 0%,100% { transform: translateX(50%); } 50% { transform: translateX(90%); } }
+  .kpi, .eng, .job, .idea, .en-card { transition: opacity .7s ease, transform .3s; }
+  .kpi:hover, .eng:hover, .job:hover { transform: translateY(-4px); }
+
   /* FIT TABLE */
   .fit { display: grid; gap: 10px; margin-top: 36px; }
   .row { display: grid; grid-template-columns: 1fr 1.5fr; gap: 0; border-radius: 16px; overflow: hidden; border: 1px solid var(--beige-dark); background: #fff; }
@@ -230,7 +266,7 @@
   .es-card p:last-child { margin-bottom: 0; }
 
   /* PLAYBOOK */
-  .plays { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+  .plays { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 22px; max-width: 760px; }
   .play { background: #fff; border-radius: 20px; padding: 26px; border-top: 4px solid var(--sky-deep); }
   .play:nth-child(2) { border-top-color: var(--sky); }
   .play:nth-child(3) { border-top-color: var(--gold); }
@@ -273,7 +309,8 @@
     .step::after { display: none; }
     .step.win { grid-column: 1 / -1; }
     .engine { grid-template-columns: 1fr 1fr; }
-    .ideas, .plays, .exp { grid-template-columns: 1fr 1fr; }
+    .ideas, .exp { grid-template-columns: 1fr 1fr; }
+    .flips { grid-template-columns: 1fr 1fr; }
     .nav-links a.t { display: none; }
   }
   @media (max-width: 640px) {
@@ -294,18 +331,22 @@
     .res { grid-template-columns: 1fr 1fr; }
     .videos { grid-auto-columns: 64%; padding: 0 16px 12px; }
     .marquee img { height: 190px; }
-    .ideas, .plays, .exp { grid-template-columns: 1fr; }
+    .ideas, .exp, .flips { grid-template-columns: 1fr; }
+    .flip-in { min-height: 170px; }
+    .tabs { display: flex; } .tab { flex: 1; text-align: center; padding: 10px 6px; font-size: 13.5px; }
     .script { grid-template-columns: 1fr; padding: 22px; gap: 14px; }
     .beats li { grid-template-columns: 64px 1fr; }
     .catch { flex-direction: column; align-items: flex-start; gap: 6px; }
   }
   @media (prefers-reduced-motion: reduce) {
-    .marquee, .float { animation: none; }
+    .marquee, .float, .tick-track, .proofs figure:first-child img, .step::after { animation: none !important; }
+    .flip-in, .reveal { transition: none; }
   }
 </style>
 </head>
 <body>
 
+<div id="progress" aria-hidden="true"></div>
 <nav id="nav">
   <a class="logo" href="#top">Sofía <span>× RankBreeze</span></a>
   <div class="nav-links">
@@ -341,12 +382,15 @@
   </div>
 </section>
 
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true"><div class="tick-track"><span>🏠 33 listings</span><i>✦</i><span>⭐ 4.8 · 1,400+ reviews</span><i>✦</i><span>🚀 $20K launch</span><i>✦</i><span>🎯 500+ leads under $1</span><i>✦</i><span>📱 50K+ followers</span><i>✦</i><span>🎥 On camera, EN + ES</span><i>✦</i><span>✉️ Email that sells</span><i>✦</i><span>📊 Outcomes, not likes</span><i>✦</i><span>🏠 33 listings</span><i>✦</i><span>⭐ 4.8 · 1,400+ reviews</span><i>✦</i><span>🚀 $20K launch</span><i>✦</i><span>🎯 500+ leads under $1</span><i>✦</i><span>📱 50K+ followers</span><i>✦</i><span>🎥 On camera, EN + ES</span><i>✦</i><span>✉️ Email that sells</span><i>✦</i><span>📊 Outcomes, not likes</span><i>✦</i></div></div>
+
 <!-- FUNNEL CASE -->
 <section class="funnel" id="funnel">
   <div class="wrap">
     <span class="eyebrow">Case 01 · A funnel I designed &amp; operated</span>
     <h2>A system, not a class. <em>$20K USD in sales.</em></h2>
-    <p class="sub">I built every piece — landing page, ads, emails, WhatsApp community, live class and offer — then ran it end to end.</p>
+    <p class="sub">Every piece built and run by me. Five steps, one number at the end.</p>
     <div class="formula">Landing → email/WhatsApp nurture → live class → high-ticket offer → $20K USD in sales</div>
     <div class="steps">
       <div class="step reveal"><div class="n">1</div><h3>Sign-up</h3><p>Landing page fed by reels, carousels and Meta Ads. Free checklist as the hook.</p><div class="m"><b>300+</b><span>sign-ups</span></div></div>
@@ -361,8 +405,8 @@
         <figcaption>Teaching the live class on camera (slide translated; the class was in Spanish).</figcaption>
       </figure>
       <figure class="reveal">
-        <div class="browser"><div class="bar"><i></i><i></i><i></i><span>sofiaretif.com/en-vivo</span></div><img src="/assets/rankbreeze/live-funnel-landing.jpg" alt="The class landing page with an email sign-up form" loading="lazy"></div>
-        <figcaption>The landing, still live as an evergreen replay.</figcaption>
+        <div class="browser"><div class="bar"><i></i><i></i><i></i><span>sofiaretif.com/en-vivo</span></div><img src="/assets/rankbreeze/live-funnel-landing.jpg" alt="The class landing page with an email sign-up form, translated to English" loading="lazy"></div>
+        <figcaption>The landing, translated for this page (the live one is in Spanish).</figcaption>
       </figure>
     </div>
     <div class="rebuild reveal">
@@ -403,14 +447,8 @@
   <div class="wrap">
     <span class="eyebrow">English content for STR hosts</span>
     <h2>Same audience, <em>already in English.</em></h2>
-    <p class="sub">On camera for Bonzo, a tax &amp; compliance service for US and Canadian owners of Airbnbs in Mexico. Scripted to turn a dry topic into a reason to book a call. Tap any video for sound.</p>
+    <p class="sub">For Bonzo, tax &amp; compliance for US and Canadian Airbnb owners in Mexico. Dry topic → booked call. Tap for sound.</p>
     <div class="en-grid">
-      <div class="en-card reveal">
-        <div class="reel"><span class="vtag">Tax strategy</span><video src="/assets/rankbreeze/en-4.mp4" poster="/assets/rankbreeze/en-4.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div>
-        <h3>"Is your Mexican Airbnb 20% less profitable?"</h3>
-        <p>A tax-strategy hook: the hidden cost of not being compliant, framed as lost profit.</p>
-        <span class="goal">Lead · free tax assessment</span>
-      </div>
       <div class="en-card reveal">
         <div class="reel"><span class="vtag">Compliance</span><video src="/assets/rankbreeze/en-2.mp4" poster="/assets/rankbreeze/en-2.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div>
         <h3>Report your rental income, avoid the fines</h3>
@@ -428,6 +466,12 @@
         <h3>"We handle compliance for you."</h3>
         <p>Finding a good accountant, made light: the brand as the easy answer.</p>
         <span class="goal alt">Brand trust</span>
+      </div>
+      <div class="en-card reveal">
+        <div class="reel"><span class="vtag">Tax strategy</span><video src="/assets/rankbreeze/en-4.mp4" poster="/assets/rankbreeze/en-4.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div>
+        <h3>"Is your Mexican Airbnb 20% less profitable?"</h3>
+        <p>A tax-strategy hook: the hidden cost of not being compliant, framed as lost profit.</p>
+        <span class="goal">Lead · free tax assessment</span>
       </div>
     </div>
   </div>
@@ -452,13 +496,33 @@
   <div class="wrap">
     <span class="eyebrow">Your list → my proof</span>
     <h2>You described the hire. <em>Here's the evidence.</em></h2>
-    <div class="fit">
-      <div class="row reveal"><div class="ask"><i>You</i>Explains complex topics simply</div><div class="proof">I teach pricing, rankings and occupancy to <b>people who have never hosted</b> — 150+ of them paid for it.</div></div>
-      <div class="row reveal"><div class="ask"><i>You</i>Content that drives sign-ups, not engagement</div><div class="proof">Short-form → webinar → email → offer: <b>300+ webinar sign-ups and $20K USD</b> from one launch.</div></div>
-      <div class="row reveal"><div class="ask"><i>You</i>Comfortable on camera</div><div class="proof">On camera weekly for my own brand, and paid UGC for brands like <b>Canva</b>.</div></div>
-      <div class="row reveal"><div class="ask"><i>You</i>Tests hooks, offers, pages</div><div class="proof">Re-priced my bootcamp into tiers and <b>grew launch revenue with a lower entry price</b>.</div></div>
-      <div class="row reveal"><div class="ask"><i>You</i>Activity ≠ outcomes</div><div class="proof">Caught Meta reporting 478 "leads" when real sign-ups were far lower, and <b>fixed the event before scaling spend</b>.</div></div>
-      <div class="row reveal"><div class="ask"><i>Nice to have</i>STR / Airbnb experience</div><div class="proof">Not just "experience": <b>it's my business</b>. 33 listings, cleaning teams, owners, pricing, reviews.</div></div>
+    <p class="sub">Hover or tap a card.</p>
+    <div class="flips">
+      <button class="flip reveal" type="button" aria-label="Explains complex topics simply: show proof"><span class="flip-in">
+        <span class="face front"><span class="ic">🧠</span><span class="who">You asked</span><span class="ask">Explains complex topics simply</span><span class="hint">See proof ↻</span></span>
+        <span class="face back"><span class="who">Proof</span><span class="pr">I teach pricing, rankings and occupancy to <b>people who have never hosted</b> — 150+ of them paid for it.</span></span>
+      </span></button>
+      <button class="flip reveal" type="button" aria-label="Content that drives sign-ups: show proof"><span class="flip-in">
+        <span class="face front"><span class="ic">🎯</span><span class="who">You asked</span><span class="ask">Content that drives sign-ups</span><span class="hint">See proof ↻</span></span>
+        <span class="face back"><span class="who">Proof</span><span class="pr">Short-form → webinar → email → offer: <b>300+ sign-ups and $20K USD</b> from one launch.</span></span>
+      </span></button>
+      <button class="flip reveal" type="button" aria-label="Comfortable on camera: show proof"><span class="flip-in">
+        <span class="face front"><span class="ic">🎥</span><span class="who">You asked</span><span class="ask">Comfortable on camera</span><span class="hint">See proof ↻</span></span>
+        <span class="face back"><span class="who">Proof</span><span class="pr">On camera weekly for my own brand, in <b>English for Bonzo</b>, and paid UGC for <b>Canva</b>.</span></span>
+      </span></button>
+      <button class="flip reveal" type="button" aria-label="Tests hooks, offers, pages: show proof"><span class="flip-in">
+        <span class="face front"><span class="ic">🧪</span><span class="who">You asked</span><span class="ask">Tests hooks, offers, pages</span><span class="hint">See proof ↻</span></span>
+        <span class="face back"><span class="who">Proof</span><span class="pr">Re-priced my bootcamp into tiers and <b>grew launch revenue with a lower entry price</b>.</span></span>
+      </span></button>
+      <button class="flip reveal" type="button" aria-label="Activity ≠ outcomes: show proof"><span class="flip-in">
+        <span class="face front"><span class="ic">📊</span><span class="who">You asked</span><span class="ask">Activity ≠ outcomes</span><span class="hint">See proof ↻</span></span>
+        <span class="face back"><span class="who">Proof</span><span class="pr">Caught Meta counting 478 fake "leads" and <b>fixed the event before scaling spend</b>.</span></span>
+      </span></button>
+      <button class="flip reveal" type="button" aria-label="STR / Airbnb experience: show proof"><span class="flip-in">
+        <span class="face front"><span class="ic">🏠</span><span class="who">Nice to have</span><span class="ask">STR / Airbnb experience</span><span class="hint">See proof ↻</span></span>
+        <span class="face back"><span class="who">Proof</span><span class="pr">Not just experience: <b>it’s my business</b>. 33 listings, owners, teams, pricing, reviews.</span></span>
+      </span></button>
+    </div>
     </div>
   </div>
 </section>
@@ -468,7 +532,7 @@
   <div class="wrap">
     <span class="eyebrow">Case 03 · Ubícame · my STR business</span>
     <h2>I live inside the data <em>your product shows.</em></h2>
-    <p class="sub">Ubícame is the short-term rental company I run in Guadalajara: furnished apartments across five neighborhoods, sold on Airbnb and through our own direct-booking site.</p>
+    <p class="sub">Ubícame: my short-term rental company in Guadalajara. Airbnb + our own direct-booking site.</p>
     <div class="host-grid">
       <div class="photos reveal">
         <img src="/assets/rankbreeze/ubicame-living.jpg" alt="Living room of a Ubícame apartment" loading="lazy">
@@ -600,8 +664,9 @@
   <div class="wrap">
     <span class="eyebrow">Built on your "success in the first months"</span>
     <h2>My first 90 days, <em>measured your way.</em></h2>
+    <div class="tabs" role="tablist"><button class="tab on" type="button" data-t="0">Days 1–30</button><button class="tab" type="button" data-t="1">Days 31–60</button><button class="tab" type="button" data-t="2">Days 61–90</button><span class="tab-bar"></span></div>
     <div class="plays">
-      <div class="play reveal"><div class="when">Days 1–30</div><h3>Learn &amp; fix the leaks</h3>
+      <div class="play on reveal"><div class="when">Days 1–30</div><h3>Learn &amp; fix the leaks</h3>
         <ul><li>Run RankBreeze on my own 33 listings: become the case study.</li><li>Audit the funnel: site → trial → paid. Find the biggest drop.</li><li>Fix tracking first, so every test after it is real.</li><li>Ship the first 8 short videos and 1 lead magnet.</li></ul>
         <div class="metric">Goal: funnel baseline + weekly content cadence live</div></div>
       <div class="play reveal"><div class="when">Days 31–60</div><h3>Build the engine</h3>
@@ -630,6 +695,7 @@
     <div class="edu">
       <div class="reveal"><b>MSc in Digital Business</b><span>EMLV · École de Management Léonard de Vinci, Paris</span></div>
       <div class="reveal"><b>B.A. in Marketing</b><span>UAG · Universidad Autónoma de Guadalajara</span></div>
+      <div class="reveal"><b>Leadership course</b><span>Boston University</span></div>
     </div>
     <div class="tools">
       <span>Meta Ads</span><span>GA4</span><span>UTM &amp; Pixel</span><span>Mailchimp</span><span>MailerLite</span><span>Stripe</span><span>HTML/CSS landing pages</span><span>Canva</span><span>CapCut</span><span>Notion</span><span>ClickUp</span><span>Claude (daily)</span>
@@ -665,15 +731,52 @@
   const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 60);
   window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
-  // Reveal + count-up
+  // Scroll progress
+  const bar = document.getElementById('progress');
+  const onProg = () => { const h = document.documentElement; bar.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%'; };
+  window.addEventListener('scroll', onProg, { passive: true }); onProg();
+
+  // Every big number counts up: "$20K", "1,400+", "4.8★", "<$1"…
+  document.querySelectorAll('.step .m b, .res b, .kpi b, .eng b, .es-card b, .float b').forEach(el => {
+    const m = el.textContent.match(/^([^\d]*)(\d[\d,]*(?:\.\d+)?)([^\d]*)$/);
+    if (!m) return;
+    const dec = (m[2].split('.')[1] || '').length;
+    el.dataset.count = m[2].replace(/,/g, '');
+    el.dataset.fmt = m[1] + '{}' + m[3];
+    el.dataset.dec = dec; el.dataset.comma = m[2].includes(',') ? 1 : 0;
+  });
+
+  // Reveal (staggered) + count-up
   const countUp = el => {
-    const end = +el.dataset.count, fmt = el.dataset.fmt, t0 = performance.now();
-    const tick = t => { const p = Math.min((t - t0) / 1200, 1); el.textContent = fmt.replace('{}', Math.round(end * (1 - Math.pow(1 - p, 3)))); if (p < 1) requestAnimationFrame(tick); };
+    const end = +el.dataset.count, fmt = el.dataset.fmt, dec = +(el.dataset.dec || 0), t0 = performance.now();
+    const show = v => { let s = v.toFixed(dec); if (+el.dataset.comma) s = (+s).toLocaleString('en-US'); return fmt.replace('{}', s); };
+    const tick = t => { const p = Math.min((t - t0) / 1200, 1); el.textContent = show(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick); };
     requestAnimationFrame(tick);
   };
+  document.querySelectorAll('.reveal').forEach(el => {
+    const sibs = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
+    el.style.transitionDelay = Math.min(sibs.indexOf(el), 5) * 90 + 'ms';
+  });
+  const heroNums = document.querySelectorAll('.float b[data-count]');
+  heroNums.forEach(countUp);
+
+  // Flip cards: hover on desktop, tap anywhere
+  document.querySelectorAll('.flip').forEach(f => f.addEventListener('click', () => f.classList.toggle('on')));
+
+  // 30/60/90 tabs
+  const tabs = [...document.querySelectorAll('.tab')], plays = [...document.querySelectorAll('.plays .play')], tbar = document.querySelector('.tab-bar');
+  const pick = i => {
+    tabs.forEach((t, k) => { t.classList.toggle('on', k === i); t.setAttribute('aria-selected', k === i); });
+    plays.forEach((p, k) => { p.classList.toggle('on', k === i); if (k === i) p.classList.add('show'); });
+    tbar.style.width = tabs[i].offsetWidth + 'px'; tbar.style.transform = `translateX(${tabs[i].offsetLeft - 5}px)`;
+  };
+  tabs.forEach((t, i) => t.addEventListener('click', () => pick(i)));
+  window.addEventListener('resize', () => pick(tabs.findIndex(t => t.classList.contains('on'))));
+  pick(0);
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (!e.isIntersecting) return;
     e.target.classList.add('show');
+    setTimeout(() => { e.target.style.transitionDelay = ''; }, 1400);
     e.target.querySelectorAll('[data-count]').forEach(countUp);
     io.unobserve(e.target);
   }), { threshold: .15 });

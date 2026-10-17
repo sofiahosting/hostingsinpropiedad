@@ -121,6 +121,15 @@
   .rebuild { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px; margin-top: 30px; }
   .rebuild p { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(20px, 2.4vw, 26px); color: var(--sky-deeper); max-width: 640px; }
 
+  /* ENGLISH CONTENT */
+  .en-sec { background: linear-gradient(160deg, #234B6B, #2F6188); }
+  .en-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 34px; }
+  .en-card { display: flex; flex-direction: column; gap: 12px; }
+  .en-card h3 { font-family: 'Playfair Display', serif; font-size: 18px; line-height: 1.25; color: #fff; }
+  .en-card p { font-size: 13.5px; color: rgba(255,255,255,.78); }
+  .goal { align-self: flex-start; font-size: 11.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--sky-deeper); background: var(--gold); border-radius: 99px; padding: 4px 10px; }
+  .goal.alt { background: var(--sky-light); }
+
   /* FIT TABLE */
   .fit { display: grid; gap: 10px; margin-top: 36px; }
   .row { display: grid; grid-template-columns: 1fr 1.5fr; gap: 0; border-radius: 16px; overflow: hidden; border: 1px solid var(--beige-dark); background: #fff; }
@@ -260,6 +269,7 @@
     .num-grid { grid-template-columns: repeat(3, 1fr); }
     .host-grid, .dash, .cases, .es, .proofs { grid-template-columns: 1fr; gap: 28px; }
     .steps { grid-template-columns: 1fr 1fr; }
+    .en-grid { grid-template-columns: 1fr 1fr; }
     .step::after { display: none; }
     .step.win { grid-column: 1 / -1; }
     .engine { grid-template-columns: 1fr 1fr; }
@@ -279,6 +289,8 @@
     .num-grid { grid-template-columns: 1fr 1fr; }
     .row { grid-template-columns: 1fr; }
     .steps { grid-template-columns: 1fr; }
+    .en-grid { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 72%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin-right: -16px; padding-right: 16px; }
+    .en-card { scroll-snap-align: start; }
     .res { grid-template-columns: 1fr 1fr; }
     .videos { grid-auto-columns: 64%; padding: 0 16px 12px; }
     .marquee img { height: 190px; }
@@ -298,6 +310,7 @@
   <a class="logo" href="#top">Sofía <span>× RankBreeze</span></a>
   <div class="nav-links">
     <a class="t" href="#funnel">Funnel</a>
+    <a class="t" href="#english">English</a>
     <a class="t" href="#host">Host</a>
     <a class="t" href="#camera">On camera</a>
     <a class="t" href="#growth">Growth</a>
@@ -360,6 +373,66 @@
   </div>
 </section>
 
+<!-- GROWTH CASES -->
+<section id="growth" style="padding-bottom:64px">
+  <div class="wrap">
+    <span class="eyebrow">Growth · judged by revenue</span>
+    <h2>Paid acquisition aimed at hosts. <em>Measured to the dollar.</em></h2>
+    <div class="cases">
+      <article class="case b reveal">
+        <span class="k">Case 02 · B2B paid acquisition · hosts</span>
+        <h3>Zero leads → a fully booked sales calendar</h3>
+        <div class="flowline"><span>Meta Ads</span><i>→</i><span>Bilingual landing</span><i>→</i><span>Booked call</span></div>
+        <div class="res">
+          <div><b>500+</b><span>leads in 2026</span></div>
+          <div><b>&lt;$1</b><span>USD cost per lead</span></div>
+          <div><b>$2K</b><span>USD/mo max budget</span></div>
+        </div>
+        <ul>
+          <li>Bonzo (tax &amp; accounting for Airbnb hosts): launched their first Meta campaigns across 8 cities.</li>
+          <li>Built EN/ES landing pages for their US expansion.</li>
+          <li>UTMs + pixel + weekly reporting tied to booked calls, not clicks.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ENGLISH CONTENT -->
+<section class="en-sec dark-sec" id="english">
+  <div class="wrap">
+    <span class="eyebrow">English content for STR hosts</span>
+    <h2>Same audience, <em>already in English.</em></h2>
+    <p class="sub">On camera for Bonzo, a tax &amp; compliance service for US and Canadian owners of Airbnbs in Mexico. Scripted to turn a dry topic into a reason to book a call. Tap any video for sound.</p>
+    <div class="en-grid">
+      <div class="en-card reveal">
+        <div class="reel"><span class="vtag">Tax strategy</span><video src="/assets/rankbreeze/en-4.mp4" poster="/assets/rankbreeze/en-4.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div>
+        <h3>"Is your Mexican Airbnb 20% less profitable?"</h3>
+        <p>A tax-strategy hook: the hidden cost of not being compliant, framed as lost profit.</p>
+        <span class="goal">Lead · free tax assessment</span>
+      </div>
+      <div class="en-card reveal">
+        <div class="reel"><span class="vtag">Compliance</span><video src="/assets/rankbreeze/en-2.mp4" poster="/assets/rankbreeze/en-2.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div>
+        <h3>Report your rental income, avoid the fines</h3>
+        <p>A plain-English compliance explainer for foreign owners.</p>
+        <span class="goal">Lead · free consultation</span>
+      </div>
+      <div class="en-card reveal">
+        <div class="reel"><span class="vtag">US owners</span><video src="/assets/rankbreeze/en-1.mp4" poster="/assets/rankbreeze/en-1.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div>
+        <h3>US owners with rental income in Mexico</h3>
+        <p>Aimed at US citizens earning rental income from a property in Mexico.</p>
+        <span class="goal">Lead · free consultation</span>
+      </div>
+      <div class="en-card reveal">
+        <div class="reel"><span class="vtag">Brand</span><video src="/assets/rankbreeze/en-3.mp4" poster="/assets/rankbreeze/en-3.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div>
+        <h3>"We handle compliance for you."</h3>
+        <p>Finding a good accountant, made light: the brand as the easy answer.</p>
+        <span class="goal alt">Brand trust</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- NUMBERS -->
 <section class="nums">
   <div class="wrap">
@@ -393,7 +466,7 @@
 <!-- UBICAME / HOST -->
 <section class="host" id="host">
   <div class="wrap">
-    <span class="eyebrow">Case 02 · Ubícame · my STR business</span>
+    <span class="eyebrow">Case 03 · Ubícame · my STR business</span>
     <h2>I live inside the data <em>your product shows.</em></h2>
     <p class="sub">Ubícame is the short-term rental company I run in Guadalajara: furnished apartments across five neighborhoods, sold on Airbnb and through our own direct-booking site.</p>
     <div class="host-grid">
@@ -437,7 +510,7 @@
 <section class="vid-sec dark-sec" id="camera">
   <div class="wrap vid-head">
     <div>
-      <span class="eyebrow">On camera</span>
+      <span class="eyebrow">On camera · Spanish</span>
       <h2>Scripted, shot &amp; <em>edited by me.</em></h2>
     </div>
     <p class="sub" style="max-width:360px">For my own brand and for paying clients. Tap any video for sound →</p>
@@ -460,33 +533,8 @@
   </div>
 </section>
 
-<!-- GROWTH CASES -->
-<section id="growth">
-  <div class="wrap">
-    <span class="eyebrow">Growth · judged by revenue</span>
-    <h2>Paid acquisition aimed at hosts. <em>Measured to the dollar.</em></h2>
-    <div class="cases">
-      <article class="case b reveal">
-        <span class="k">Case 03 · B2B paid acquisition · hosts</span>
-        <h3>Zero leads → a fully booked sales calendar</h3>
-        <div class="flowline"><span>Meta Ads</span><i>→</i><span>Bilingual landing</span><i>→</i><span>Booked call</span></div>
-        <div class="res">
-          <div><b>500+</b><span>leads in 2026</span></div>
-          <div><b>&lt;$1</b><span>USD cost per lead</span></div>
-          <div><b>$2K</b><span>USD/mo max budget</span></div>
-        </div>
-        <ul>
-          <li>Bonzo (tax &amp; accounting for Airbnb hosts): launched their first Meta campaigns across 8 cities.</li>
-          <li>Built EN/ES landing pages for their US expansion.</li>
-          <li>UTMs + pixel + weekly reporting tied to booked calls, not clicks.</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
-
 <!-- CONTENT ENGINE -->
-<section class="wall" style="padding-top:0">
+<section class="wall">
   <div class="wrap">
     <span class="eyebrow">Content engine</span>
     <h2>One launch. <em>Every channel.</em></h2>

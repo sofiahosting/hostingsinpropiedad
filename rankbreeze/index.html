@@ -226,15 +226,18 @@
   .bx.trial { grid-area: trial; background: var(--sky-pale); border-color: var(--sky-light); }
   .bx.test { grid-area: test; } .bx.comp { grid-area: comp; }
   .bx.bax { grid-area: ba; } .bx.creators { grid-area: creators; background: var(--beige); }
-  .bx.es { grid-area: es; background: linear-gradient(150deg, #F6EFDF, #fff); }
+  .bx.esx { grid-area: es; background: linear-gradient(150deg, #F6EFDF, #fff); }
   /* listing score mock */
   .sc { display: grid; grid-template-columns: 1.15fr .85fr; gap: 18px; margin-top: 16px; align-items: start; }
-  .minis3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .minis3 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 16px; }
+  .sc-card { margin-top: 18px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); border-radius: 16px; padding: 14px 16px; }
+  .sc-rb { font-size: 13px; color: rgba(255,255,255,.8); margin-top: 10px; padding-top: 10px; border-top: 1px dashed rgba(255,255,255,.2); }
+  .sc-rb b { color: var(--gold); }
   .mini span { display: block; font-size: 12px; line-height: 1.3; color: rgba(255,255,255,.85); margin-top: 6px; }
   .mini .reel { border-radius: 12px; box-shadow: 0 10px 24px rgba(0,0,0,.3); }
   .mini .snd { width: 26px; height: 26px; font-size: 12px; bottom: 6px; right: 6px; }
-  .sc-top { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; }
-  .sc-top p { font-size: 13px; color: rgba(255,255,255,.8); }
+  .sc-top { display: flex; gap: 14px; align-items: center; }
+  .sc-top p { font-size: 13.5px; color: rgba(255,255,255,.8); }
   .sc-top p b { color: #fff; }
   .ring { position: relative; flex: none; width: 72px; height: 72px; border-radius: 50%; display: grid; place-items: center; background: conic-gradient(var(--gold) calc(var(--p, 0) * 1%), rgba(255,255,255,.25) 0); box-shadow: 0 8px 20px rgba(0,0,0,.25); }
   .ring::before { content: ''; position: absolute; inset: 7px; border-radius: 50%; background: var(--sky-deeper); }
@@ -484,7 +487,7 @@
     .finds { grid-template-columns: 1fr; } .find.wide { grid-column: auto; }
     .bento { grid-template-columns: 1fr; grid-template-areas: "score" "trial" "test" "comp" "ba" "creators" "es"; }
     .sc { grid-template-columns: 1fr; }
-    .minis3 { grid-template-columns: repeat(3, 1fr); }
+    .minis3 { grid-template-columns: 1fr 1fr; }
     .car { grid-template-columns: 1fr; }
     .car > div::after { display: none; }
     .road::before { left: 22px; right: auto; top: 22px; bottom: 22px; width: 2px; height: auto; background: linear-gradient(180deg, var(--sky-deep), var(--sky), var(--gold)); }
@@ -768,16 +771,12 @@
     <div class="bento">
       <div class="bx score reveal">
         <span class="tag">A series I ran on Instagram (in Spanish)</span>
-        <h3>"Rentable o no?": real Airbnbs, analyzed on camera</h3>
-        <p>I broke down real listings and zones: revenue, costs, what's really left, a score and the fixes. Tap a video for sound.</p>
-        <div class="sc">
-          <div class="minis3"><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-1.mp4" poster="/assets/rankbreeze/rate-1.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>Colonia Americana: worth it?</span></div><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-2.mp4" poster="/assets/rankbreeze/rate-2.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>Looks luxe, loses $12.5K MXN/mo</span></div><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-3.mp4" poster="/assets/rankbreeze/rate-3.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>What a GDL Airbnb really makes</span></div></div>
-          <div class="sc-card">
-            <div class="sc-top"><div class="ring" id="ring"><b>7.4<small>/ 10</small></b></div><p><b>At RankBreeze:</b> same format, with RankBreeze data, ending in "check your own score".</p></div>
-            <div class="cats"><div class="cat"><div class="row2">Photos <b>8/10</b></div><div class="meter"><i class="" style="--w:80%"></i></div></div><div class="cat"><div class="row2">Title <b>5/10</b></div><div class="meter"><i class="low" style="--w:50%"></i></div></div><div class="cat"><div class="row2">Amenities <b>7/10</b></div><div class="meter"><i class="" style="--w:70%"></i></div></div><div class="cat"><div class="row2">Pricing <b>6/10</b></div><div class="meter"><i class="low" style="--w:60%"></i></div></div><div class="cat"><div class="row2">Reviews <b>9/10</b></div><div class="meter"><i class="" style="--w:90%"></i></div></div></div>
-            <div class="fixes"><span class="tag">Top fixes</span><ul><li>Lead with the view, not the bed.</li><li>Title: say why guests come.</li><li>Price weekends and events up.</li></ul></div>
-            <p class="sc-note">Example scorecard, for illustration.</p>
-          </div>
+        <h3>Real Airbnbs, scored &amp; analyzed on camera</h3>
+        <p>Listing audits with a score out of 10, plus "worth it or not?" breakdowns: revenue, costs, what's really left, and the fixes. Tap a video for sound.</p>
+        <div class="minis3"><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-4.mp4" poster="/assets/rankbreeze/rate-4.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>A student’s listing, scored 6.0/10</span></div><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-1.mp4" poster="/assets/rankbreeze/rate-1.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>Colonia Americana: worth it?</span></div><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-2.mp4" poster="/assets/rankbreeze/rate-2.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>Looks luxe, loses $12.5K MXN/mo</span></div><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-3.mp4" poster="/assets/rankbreeze/rate-3.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>What a GDL Airbnb really makes</span></div></div>
+        <div class="sc-card">
+          <div class="sc-top"><div class="ring" id="ring"><b>6.0<small>/ 10</small></b></div><p><b>A real audit, on camera:</b> a student's first listing in Asunción, Paraguay scored 6.0/10. The gallery got a 4/10, so the photos were fix #1.</p></div>
+          <p class="sc-rb"><b>At RankBreeze:</b> the same format, powered by RankBreeze data, ending with "check your own score".</p>
         </div>
       </div>
       <div class="bx trial reveal">
@@ -826,7 +825,7 @@
         <p>I managed 50+ creators and affiliates for my e-commerce brand. I pick for fit and results:</p>
         <ul class="checks"><li>Audience = real hosts</li><li>Trusted in the niche</li><li>Proven clicks &amp; sales</li><li class="no">Just looks good</li></ul>
       </div>
-      <div class="bx es reveal">
+      <div class="bx esx reveal">
         <span class="tag">New markets</span>
         <h3>Spanish-speaking hosts</h3>
         <div class="flags" aria-label="Mexico, Spain, Colombia, Argentina, Chile">🇲🇽🇪🇸🇨🇴🇦🇷🇨🇱</div>
@@ -1015,7 +1014,7 @@
   if (ring) new IntersectionObserver((es, o) => es.forEach(e => {
     if (!e.isIntersecting) return; o.disconnect();
     const t0 = performance.now();
-    const tick = t => { const p = Math.min((t - t0) / 1400, 1); ring.style.setProperty('--p', 74 * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick); };
+    const tick = t => { const p = Math.min((t - t0) / 1400, 1); ring.style.setProperty('--p', 60 * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick); };
     requestAnimationFrame(tick);
   }), { threshold: .4 }).observe(ring);
 

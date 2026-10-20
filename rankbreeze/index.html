@@ -822,7 +822,7 @@
       </div></div></div>
       <div class="phone reveal"><div class="screen reelscr">
         <img class="poster" src="/assets/rankbreeze/ig-feature.jpg?v=2" alt="">
-        <video src="/assets/rankbreeze/ig-feature.mp4?v=2" poster="/assets/rankbreeze/ig-feature.jpg?v=2" muted loop playsinline autoplay preload="metadata"></video>
+        <video src="/assets/rankbreeze/ig-feature.mp4?v=3" poster="/assets/rankbreeze/ig-feature.jpg?v=2" muted loop playsinline autoplay preload="metadata"></video>
         <div class="shade"></div>
         <div class="rtop"><span>Reels</span><span>📷</span></div>
         <div class="subs" id="subs" aria-hidden="true"></div>
@@ -1199,14 +1199,14 @@
   const onFab = () => fab.classList.toggle('on', window.scrollY > hero.offsetHeight * .8 && !inAudit);
   window.addEventListener('scroll', onFab, { passive: true });
 
-  // Reel concept: subtitles + punch-in zoom, synced to the clip's own clock
+  // Reel concept: subtitles + slow push-in, synced to the clip's own clock
   const subs = document.getElementById('subs'), rv = document.querySelector('.reelscr video');
   if (subs && rv) {
     const lines = [
       { t: 0.0, w: [[0, 'Your'], [.35, 'listing']] },
-      { t: 1.4, w: [[1.4, "didn't"], [1.7, 'get'], [1.95, 'worse.']] },
-      { t: 2.9, w: [[2.9, 'It'], [3.15, 'got'], [3.4, '<em>buried.</em>']] },
-      { t: 4.3, w: [[4.3, '<em class="c">Check</em>'], [4.65, 'yours'], [5.0, '👇']] }
+      { t: 1.3, w: [[1.3, "didn't"], [1.6, 'get'], [1.85, 'worse.']] },
+      { t: 2.7, w: [[2.7, 'It'], [2.95, 'got'], [3.2, '<em>buried.</em>']] },
+      { t: 4.1, w: [[4.1, '<em class="c">Check</em>'], [4.45, 'yours'], [4.8, '👇']] }
     ];
     let curLine = null, curCount = 0;
     const render = () => {
@@ -1215,7 +1215,7 @@
       const words = line.w.filter(([wt]) => t >= wt);
       if (line !== curLine || words.length < curCount) { subs.innerHTML = ''; curLine = line; curCount = 0; }
       for (; curCount < words.length; curCount++) subs.insertAdjacentHTML('beforeend', `<span>${words[curCount][1]}</span> `);
-      const z = t < 3.2 ? 1.02 + .03 * (t / 3.2) : 1.13 + .03 * ((t - 3.2) / 3.2);
+      const p = Math.min(t / (rv.duration || 5.9), 1), z = 1.02 + .06 * Math.sin(Math.PI * p);  // slow in-and-out, same scale at the loop seam
       rv.style.transform = `scale(${z.toFixed(4)})`;
       requestAnimationFrame(render);
     };

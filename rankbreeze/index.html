@@ -9,7 +9,7 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjM0E2RTk2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMjI0OTZBIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTUiIGZpbGw9InVybCgjZykiLz48cG9seWdvbiBwb2ludHM9IjMyLDEzIDU0LDMzIDEwLDMzIiBmaWxsPSIjRkRGQUY1Ii8+PHJlY3QgeD0iMTciIHk9IjMxIiB3aWR0aD0iMzAiIGhlaWdodD0iMjIiIHJ4PSIzIiBmaWxsPSIjRkRGQUY1Ii8+PHBhdGggZD0iTTMyIDQxLjVjLTEuOC0zLTctMi03IDEuNiAwIDMgMy42IDUgNyA2LjkgMy40LTEuOSA3LTMuOSA3LTYuOSAwLTMuNi01LjItNC42LTctMS42eiIgZmlsbD0iI0M4N0Q4NyIvPjwvc3ZnPgo=">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Lexend+Deca:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
     /* ===== PALETA DE MARCA — Sofía Retif (azul protagonista) ===== */
@@ -188,6 +188,97 @@
   .fab { position: fixed; right: 18px; bottom: 18px; z-index: 55; background: var(--gold); color: var(--sky-deeper); font-weight: 700; font-size: 14px; text-decoration: none; border-radius: 99px; padding: 12px 18px; box-shadow: 0 12px 28px rgba(35,75,107,.28); opacity: 0; transform: translateY(16px); pointer-events: none; transition: opacity .35s, transform .35s; }
   .fab.on { opacity: 1; transform: none; pointer-events: auto; }
   .fab:hover { transform: translateY(-2px); }
+
+  /* INSTAGRAM CONCEPT (RankBreeze brand) */
+  .igs { --rb-navy: #1E2043; --rb-ink: #05053A; --rb-purple: #A161FF; --rb-cyan: #5DDDF6; --rb-indigo: #4B4FA8; --rb-orange: #FF8A0E; --rb-lav: #F9F5FF;
+    background: radial-gradient(60% 50% at 80% 10%, rgba(161,97,255,.28), transparent 60%), radial-gradient(50% 40% at 10% 90%, rgba(93,221,246,.18), transparent 60%), var(--rb-navy); color: #fff; overflow: hidden; }
+  .igs h2 { color: #fff; } .igs h2 em { background: linear-gradient(90deg, var(--rb-purple), var(--rb-cyan)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .igs .eyebrow { color: var(--rb-cyan); } .igs .sub { color: rgba(255,255,255,.78); }
+  .ig-stage { display: grid; grid-template-columns: 1fr 330px 330px; gap: 28px; align-items: center; margin-top: 40px; }
+  .kit { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 22px; padding: 24px; }
+  .kit .tag { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--rb-cyan); }
+  .kit h3 { font-family: 'Lexend Deca', sans-serif; font-weight: 700; font-size: 22px; margin: 6px 0 14px; }
+  .sw { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .sw div { aspect-ratio: 1; border-radius: 12px; border: 1px solid rgba(255,255,255,.18); }
+  .sw-l { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 6px; font-size: 10px; color: rgba(255,255,255,.6); text-align: center; }
+  .type { margin-top: 18px; padding: 14px 16px; border-radius: 14px; background: rgba(255,255,255,.06); font-family: 'Lexend Deca', sans-serif; }
+  .type b { display: block; font-size: 34px; font-weight: 800; line-height: 1; }
+  .type span { font-size: 13px; color: rgba(255,255,255,.75); }
+  .kit ul { list-style: none; margin-top: 18px; }
+  .kit li { position: relative; padding-left: 22px; font-size: 14px; color: rgba(255,255,255,.85); margin-top: 9px; }
+  .kit li::before { content: '✓'; position: absolute; left: 0; color: var(--rb-cyan); font-weight: 700; }
+  .phone { width: 330px; height: 680px; border-radius: 48px; padding: 11px; background: #0B0C1E; box-shadow: 0 30px 70px rgba(0,0,0,.5), inset 0 0 0 2px #2a2c48; position: relative; }
+  .phone::before { content: ''; position: absolute; top: 20px; left: 50%; transform: translateX(-50%); width: 96px; height: 26px; border-radius: 20px; background: #000; z-index: 5; }
+  .screen { width: 100%; height: 100%; border-radius: 38px; overflow: hidden; background: #fff; color: #111; position: relative; font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+  .scroll { height: 100%; overflow-y: auto; scrollbar-width: none; }
+  .scroll::-webkit-scrollbar { display: none; }
+  .sbar { display: flex; justify-content: space-between; align-items: center; padding: 14px 26px 6px; font-size: 13px; font-weight: 600; }
+  .igtop { display: flex; justify-content: space-between; align-items: center; padding: 8px 16px; font-weight: 700; font-size: 17px; }
+  .igtop span:last-child { letter-spacing: 6px; font-size: 16px; }
+  .prof { display: flex; align-items: center; gap: 18px; padding: 6px 16px 0; }
+  .av { width: 78px; height: 78px; border-radius: 50%; padding: 3px; background: linear-gradient(135deg, var(--rb-purple), var(--rb-cyan)); flex: none; }
+  .av div { width: 100%; height: 100%; border-radius: 50%; background: var(--rb-navy) url('/assets/rankbreeze/rb-mark.png') center/62% no-repeat; border: 3px solid #fff; }
+  .pstats { display: flex; gap: 16px; font-size: 12.5px; }
+  .pstats b { display: block; font-size: 16px; }
+  .pname { padding: 10px 16px 0; font-size: 13px; line-height: 1.4; }
+  .pname b { font-size: 13.5px; }
+  .pname a { color: #00376b; font-weight: 600; text-decoration: none; }
+  .pbtns { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 12px 16px 4px; }
+  .pbtns span { text-align: center; font-size: 13px; font-weight: 600; padding: 7px 0; border-radius: 8px; background: #efefef; }
+  .pbtns span:first-child { background: #0095F6; color: #fff; }
+  .hls { display: flex; gap: 12px; padding: 12px 16px; overflow-x: auto; scrollbar-width: none; }
+  .hl { text-align: center; font-size: 11px; flex: none; }
+  .hl div { width: 58px; height: 58px; border-radius: 50%; border: 1px solid #ddd; padding: 3px; margin-bottom: 4px; }
+  .hl div i { display: grid; place-items: center; width: 100%; height: 100%; border-radius: 50%; font-style: normal; font-size: 20px; background: var(--rb-navy); }
+  .hl:nth-child(2) div i { background: linear-gradient(135deg, var(--rb-purple), var(--rb-cyan)); }
+  .hl:nth-child(3) div i { background: var(--rb-lav); }
+  .hl:nth-child(4) div i { background: var(--rb-orange); }
+  .igtabs { display: flex; justify-content: space-around; border-top: 1px solid #eee; padding: 10px 0 8px; font-size: 16px; color: #999; }
+  .igtabs span:first-child { color: #111; border-bottom: 1.5px solid #111; padding-bottom: 6px; }
+  .grid9 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+  .igt { position: relative; aspect-ratio: 3/4; overflow: hidden; font-family: 'Lexend Deca', sans-serif; display: flex; flex-direction: column; justify-content: center; padding: 8px; color: #fff; background: var(--rb-navy); transition: transform .25s; }
+  .igt:hover { transform: scale(1.04); z-index: 2; }
+  .igt .ic { position: absolute; top: 6px; right: 6px; font-size: 10px; opacity: .95; }
+  .igt.reel { background-size: cover; background-position: center; justify-content: flex-end; padding: 6px; }
+  .igt.reel::after { content: ''; position: absolute; inset: 40% 0 0; background: linear-gradient(transparent, rgba(5,5,58,.75)); }
+  .cap { position: relative; z-index: 1; font-weight: 800; font-size: 9.5px; line-height: 1.25; text-align: center; text-shadow: 0 1px 4px rgba(0,0,0,.6); }
+  .cap em { font-style: normal; background: var(--rb-purple); border-radius: 3px; padding: 0 3px; }
+  .cap em.c { background: var(--rb-cyan); color: var(--rb-ink); text-shadow: none; }
+  .igt .lbl { font-size: 6.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--rb-cyan); }
+  .igt .big { font-weight: 800; font-size: 15px; line-height: 1.05; margin: 3px 0; }
+  .igt .grad { background: linear-gradient(90deg, var(--rb-purple), var(--rb-cyan)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .igt .sm { font-size: 7.5px; color: rgba(255,255,255,.75); }
+  .igt .mk { position: absolute; bottom: 6px; left: 8px; width: 14px; height: 14px; background: url('/assets/rankbreeze/rb-mark.png') center/contain no-repeat; }
+  .igt.g { background: linear-gradient(140deg, var(--rb-purple), var(--rb-cyan)); }
+  .igt.lav { background: var(--rb-lav); color: var(--rb-navy); }
+  .igt.lav .big { font-size: 22px; color: var(--rb-purple); }
+  .igt.lav .sm { color: var(--rb-navy); }
+  .igt.or { background: var(--rb-orange); color: var(--rb-ink); }
+  .igt.or .sm { color: var(--rb-ink); }
+  .ring2 { width: 46px; height: 46px; border-radius: 50%; margin: 2px auto 4px; display: grid; place-items: center; background: conic-gradient(var(--rb-cyan) 60%, rgba(255,255,255,.18) 0); position: relative; }
+  .ring2::before { content: ''; position: absolute; inset: 5px; border-radius: 50%; background: var(--rb-navy); }
+  .ring2 b { position: relative; font-size: 12px; }
+  .ab { display: flex; gap: 4px; margin-top: 5px; } .ab span { flex: 1; text-align: center; font-size: 7.5px; font-weight: 700; padding: 3px 0; border-radius: 4px; background: rgba(255,255,255,.12); }
+  .ab span.win { background: var(--rb-orange); color: var(--rb-ink); }
+  /* reel phone */
+  .reelscr { background: #000; color: #fff; }
+  .reelscr video, .reelscr .poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .reelscr .shade { position: absolute; inset: 0; background: linear-gradient(rgba(0,0,0,.35), transparent 18%, transparent 55%, rgba(5,5,58,.85)); }
+  .rtop { position: absolute; top: 46px; left: 18px; right: 18px; display: flex; justify-content: space-between; font-weight: 700; font-size: 18px; z-index: 2; }
+  .subs { position: absolute; left: 14px; right: 60px; top: 56%; z-index: 3; text-align: center; font-family: 'Lexend Deca', sans-serif; font-weight: 800; font-size: 25px; line-height: 1.15; text-shadow: 0 2px 10px rgba(0,0,0,.55); }
+  .subs span { display: inline-block; animation: pop .35s cubic-bezier(.2,1.4,.4,1) both; }
+  .subs em { font-style: normal; display: inline-block; background: var(--rb-purple); border-radius: 8px; padding: 0 8px; text-shadow: none; }
+  .subs em.c { background: var(--rb-cyan); color: var(--rb-ink); }
+  @keyframes pop { from { transform: scale(.6); opacity: 0; } to { transform: none; opacity: 1; } }
+  .ract { position: absolute; right: 12px; bottom: 120px; z-index: 3; display: grid; gap: 18px; text-align: center; font-size: 22px; }
+  .ract small { display: block; font-size: 10px; font-weight: 600; margin-top: 2px; }
+  .rinfo { position: absolute; left: 14px; right: 64px; bottom: 26px; z-index: 3; font-size: 13px; line-height: 1.35; }
+  .rinfo .who { display: flex; align-items: center; gap: 8px; font-weight: 700; margin-bottom: 8px; }
+  .rinfo .who i { width: 30px; height: 30px; border-radius: 50%; background: var(--rb-navy) url('/assets/rankbreeze/rb-mark.png') center/62% no-repeat; border: 1.5px solid #fff; }
+  .rinfo .who span { border: 1px solid rgba(255,255,255,.7); border-radius: 8px; padding: 2px 9px; font-size: 12px; }
+  .rinfo .cta { display: inline-block; margin-top: 8px; background: var(--rb-orange); color: var(--rb-ink); font-weight: 700; font-size: 12px; border-radius: 8px; padding: 6px 10px; font-family: 'Lexend Deca', sans-serif; }
+  .rinfo .aud { font-size: 11.5px; opacity: .85; margin-top: 8px; }
+  .ig-note { margin-top: 26px; font-size: 13px; color: rgba(255,255,255,.6); font-style: italic; }
 
   /* FINDINGS */
   .audit { background: var(--white); }
@@ -474,6 +565,8 @@
     .ideas, .exp { grid-template-columns: 1fr 1fr; }
     .flips { grid-template-columns: 1fr 1fr; }
     .finds { grid-template-columns: 1fr 1fr; }
+    .ig-stage { grid-template-columns: 330px 330px; justify-content: center; }
+    .kit { grid-column: 1 / -1; order: 3; }
     .bento { grid-template-columns: 1fr; grid-template-areas: "score" "creators"; }
     .pbento { grid-template-columns: 1fr 1fr; grid-template-areas: "trial test" "trial comp" "ba ba" "es es"; }
     .tiles { grid-template-columns: repeat(3, 1fr); }
@@ -500,6 +593,10 @@
     .ideas, .exp, .flips { grid-template-columns: 1fr; }
     .road { grid-template-columns: 1fr; gap: 6px; }
     .finds { grid-template-columns: 1fr; } .find.wide { grid-column: auto; }
+    .ig-stage { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 300px; overflow-x: auto; scroll-snap-type: x mandatory; justify-content: start; margin-right: -16px; padding: 0 16px 10px 0; scrollbar-width: none; }
+    .ig-stage > * { scroll-snap-align: center; }
+    .kit { grid-column: auto; order: 3; width: 300px; }
+    .phone { width: 300px; height: 620px; }
     .bento { grid-template-columns: 1fr; grid-template-areas: "score" "creators"; }
     .pbento { grid-template-columns: 1fr; grid-template-areas: "trial" "test" "comp" "ba" "es"; }
     .sc { grid-template-columns: 1fr; }
@@ -518,7 +615,7 @@
   @media (prefers-reduced-motion: reduce) {
     .spark path { transition: none; stroke-dashoffset: 0; }
     .loop svg { animation: none !important; }
-    .hook { animation: none !important; }
+    .hook, .subs span { animation: none !important; }
     .marquee, .float, .tick-track, .proofs figure:first-child img, .step::after { animation: none !important; }
     .flip-in, .reveal { transition: none; }
   }
@@ -534,6 +631,7 @@
     <a class="t" href="#audit">Findings</a>
     <a class="t" href="#funnel">Funnel</a>
     <a class="t" href="#english">English</a>
+    <a class="t" href="#instagram">Instagram</a>
     <a class="t" href="#host">Host</a>
         <a class="t" href="#ideas">Ideas</a>
     <a class="t" href="#camera">On camera</a>
@@ -684,6 +782,55 @@
         <span class="goal">Lead · free tax assessment</span>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM CONCEPT -->
+<section class="igs" id="instagram">
+  <div class="wrap">
+    <span class="eyebrow">Concept · @rankbreeze, with me on it</span>
+    <h2>Your Instagram, <em>with me on camera.</em></h2>
+    <p class="sub">Your colors, your type, your logo. Me talking to hosts, with subtitles in your palette. Scroll the profile, watch the reel.</p>
+    <div class="ig-stage">
+      <div class="kit reveal">
+        <span class="tag">Your brand, kept</span>
+        <h3>Uniform from post #1</h3>
+        <div class="sw"><div style="background:#1E2043"></div><div style="background:#A161FF"></div><div style="background:#5DDDF6"></div><div style="background:#FF8A0E"></div><div style="background:#F9F5FF"></div></div>
+        <div class="sw-l"><span>Navy</span><span>Purple</span><span>Cyan</span><span>Orange</span><span>Lavender</span></div>
+        <div class="type"><b>Aa</b><span>Lexend Deca · Supercharge your guest bookings</span></div>
+        <ul><li>Same type, colors and logo on every post</li><li>Me on camera, subtitles in your colors</li><li>A mix: reels, carousels, data posts, A/B tests</li><li>Every post points to a free trial</li></ul>
+      </div>
+      <div class="phone reveal"><div class="screen"><div class="scroll">
+        <div class="sbar"><span>9:41</span><span>▂▄▆ ◔</span></div>
+        <div class="igtop"><span>rankbreeze ⌄</span><span>⊕ ≡</span></div>
+        <div class="prof"><div class="av"><div></div></div><div class="pstats"><div><b>752</b>followers</div><div><b>21</b>following</div></div></div>
+        <div class="pname"><b>Rankbreeze | Supercharge Your Guest Bookings</b><br>Rank higher. Price smarter. Book more. 🚀<br>🎥 Weekly listing tips with Sofía<br>🌎 Now in English &amp; Spanish<br><a href="https://rankbreeze.com" target="_blank" rel="noopener">rankbreeze.com</a></div>
+        <div class="pbtns"><span>Follow</span><span>Message</span></div>
+        <div class="hls"><div class="hl"><div><i>🏆</i></div>Wins</div><div class="hl"><div><i>💡</i></div>Tips</div><div class="hl"><div><i>🧪</i></div>A/B tests</div><div class="hl"><div><i>▶️</i></div>Demo</div><div class="hl"><div><i>🇲🇽</i></div>Español</div></div>
+        <div class="igtabs"><span>▦</span><span>▶</span><span>☺</span></div>
+        <div class="grid9">
+          <div class="igt reel" style="background-image:url('/assets/rankbreeze/ig-reel-1.jpg')"><span class="ic">▶</span><div class="cap">Your listing didn't get worse. It got <em>buried.</em></div></div>
+          <div class="igt"><span class="lbl">Case study</span><div class="big">Page 14 → <span class="grad">Page 2</span></div><span class="sm">in 20 days</span><span class="mk"></span></div>
+          <div class="igt g"><span class="ic">❐</span><div class="big">5 photo fixes that move your rank</div><span class="sm" style="color:#fff">Swipe →</span></div>
+          <div class="igt reel" style="background-image:url('/assets/rankbreeze/ig-reel-2.jpg')"><span class="ic">▶</span><div class="cap">I tested <em class="c">one photo</em> for 30 days 👀</div></div>
+          <div class="igt lav"><span class="lbl" style="color:#A161FF">Hosts on Rankbreeze</span><div class="big">140%</div><span class="sm">total search impressions</span></div>
+          <div class="igt" style="text-align:center"><span class="lbl">Rate my listing · Ep. 1</span><div class="ring2"><b>6.0</b></div><span class="sm">3 fixes inside →</span></div>
+          <div class="igt reel" style="background-image:url('/assets/rankbreeze/ig-reel-3.jpg')"><span class="ic">▶</span><div class="cap">Stop <em>guessing</em> your price.</div></div>
+          <div class="igt or"><span class="ic">❐</span><div class="big">Why isn't my listing showing up?</div><span class="sm">Swipe →</span></div>
+          <div class="igt"><span class="lbl">A/B test</span><div class="big" style="font-size:12px">Which title got more clicks?</div><div class="ab"><span>Title A</span><span class="win">Title B ✓</span></div></div>
+        </div>
+      </div></div></div>
+      <div class="phone reveal"><div class="screen reelscr">
+        <img class="poster" src="/assets/rankbreeze/ig-feature.jpg" alt="">
+        <video src="/assets/rankbreeze/ig-feature.mp4" poster="/assets/rankbreeze/ig-feature.jpg" muted loop playsinline autoplay preload="metadata"></video>
+        <div class="shade"></div>
+        <div class="rtop"><span>Reels</span><span>📷</span></div>
+        <div class="subs" id="subs" aria-hidden="true"></div>
+        <div class="ract"><div>♡<small>Like</small></div><div>💬<small>Comment</small></div><div>➤<small>Share</small></div><div>⋯</div></div>
+        <div class="rinfo"><div class="who"><i></i>rankbreeze<span>Follow</span></div>Your listing didn't get worse. It got buried. Here's how to check yours 👇<br><span class="cta">Check your rank free →</span><div class="aud">♫ Original audio · rankbreeze</div></div>
+      </div></div>
+    </div>
+    <p class="ig-note">Concept mockup made for this application. Not an official Rankbreeze account or post.</p>
   </div>
 </section>
 
@@ -1051,6 +1198,21 @@
   new IntersectionObserver(es => es.forEach(e => { inAudit = e.isIntersecting; onFab(); }), { threshold: .05 }).observe(audit);
   const onFab = () => fab.classList.toggle('on', window.scrollY > hero.offsetHeight * .8 && !inAudit);
   window.addEventListener('scroll', onFab, { passive: true });
+
+  // Reel concept: word-by-word subtitles in RankBreeze colors
+  const subs = document.getElementById('subs');
+  if (subs) {
+    const lines = [['Your', 'listing'], ["didn't", 'get', 'worse.'], ['It', 'got', '<em>buried.</em>'], ["Here's", 'how', 'to'], ['<em class="c">check</em>', 'yours', '👇']];
+    let li = 0, wi = 0;
+    const step = () => {
+      const line = lines[li];
+      if (wi === 0) subs.innerHTML = '';
+      subs.insertAdjacentHTML('beforeend', `<span>${line[wi]}</span> `);
+      wi++;
+      if (wi >= line.length) { wi = 0; li = (li + 1) % lines.length; setTimeout(step, 900); } else setTimeout(step, 260);
+    };
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) subs.innerHTML = "It got <em>buried.</em>"; else step();
+  }
 
   // Findings filter
   const chips = [...document.querySelectorAll('.fchip')], finds = [...document.querySelectorAll('.find')];

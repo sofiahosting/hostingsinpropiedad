@@ -159,6 +159,102 @@
   .kpi, .eng, .job, .idea, .en-card { transition: opacity .7s ease, transform .3s; }
   .kpi:hover, .eng:hover, .job:hover { transform: translateY(-4px); }
 
+  /* CONTEXT → ACTION → RESULT */
+  .car { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 26px; }
+  .car > div { position: relative; background: #fff; border-radius: 18px; padding: 18px 20px; box-shadow: 0 10px 26px rgba(35,75,107,.07); }
+  .car > div:not(:last-child)::after { content: '→'; position: absolute; right: -7px; top: 50%; transform: translate(50%, -50%); color: var(--sky-deep); font-weight: 700; z-index: 2; }
+  .car .lbl { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-radius: 99px; padding: 4px 10px; margin-bottom: 8px; background: var(--sky-pale); color: var(--sky-deep); }
+  .car > div:nth-child(2) .lbl { background: #F6EFDF; color: var(--gold-dark); }
+  .car > div:last-child { background: var(--sky-deeper); color: rgba(255,255,255,.88); }
+  .car > div:last-child .lbl { background: var(--gold); color: var(--sky-deeper); }
+  .car p { font-size: 15px; line-height: 1.5; }
+  .car > div:last-child b { color: #fff; }
+  .case .car > div { box-shadow: none; }
+  .ba { margin: 22px 0 6px; display: grid; gap: 12px; max-width: 640px; }
+  .ba-row .lbl2 { display: flex; justify-content: space-between; font-size: 14px; color: var(--mid); margin-bottom: 6px; }
+  .ba-row .lbl2 b { color: var(--sky-deeper); font-size: 16px; }
+  .ba-bar { height: 34px; border-radius: 10px; width: 0; transition: width 1.4s cubic-bezier(.2,.8,.2,1) .2s; display: flex; align-items: center; padding-left: 12px; font-size: 13px; font-weight: 700; color: #fff; white-space: nowrap; }
+  .ba-bar.before { background: var(--rose); }
+  .ba-bar.after { background: linear-gradient(90deg, var(--sky-deep), var(--sky)); }
+  .show .ba-bar { width: var(--w); }
+  .drop { display: inline-block; margin-left: 8px; background: var(--gold); color: var(--sky-deeper); font-size: 12px; font-weight: 700; border-radius: 99px; padding: 3px 9px; }
+
+  /* IDEAS BENTO */
+  .bento { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-areas: "score score trial test" "score score trial comp" "ba ba creators es"; gap: 14px; margin-top: 34px; }
+  .bx { background: #fff; border: 1px solid var(--beige-dark); border-radius: 22px; padding: 22px; display: flex; flex-direction: column; transition: opacity .7s ease, transform .3s, box-shadow .3s; }
+  .bx:hover { transform: translateY(-4px); box-shadow: 0 18px 38px rgba(35,75,107,.12); }
+  .bx .tag { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dark); }
+  .bx h3 { font-family: 'Playfair Display', serif; font-size: 21px; line-height: 1.2; color: var(--sky-deeper); margin: 6px 0 8px; }
+  .bx p { font-size: 14px; color: var(--mid); }
+  .bx.score { grid-area: score; background: var(--sky-deeper); border: 0; color: #fff; }
+  .bx.score h3 { color: #fff; } .bx.score p { color: rgba(255,255,255,.78); } .bx.score .tag { color: var(--gold); }
+  .bx.trial { grid-area: trial; background: var(--sky-pale); border-color: var(--sky-light); }
+  .bx.test { grid-area: test; } .bx.comp { grid-area: comp; }
+  .bx.bax { grid-area: ba; } .bx.creators { grid-area: creators; background: var(--beige); }
+  .bx.es { grid-area: es; background: linear-gradient(150deg, #F6EFDF, #fff); }
+  /* listing score mock */
+  .sc { display: grid; grid-template-columns: 1.15fr .85fr; gap: 18px; margin-top: 16px; align-items: start; }
+  .minis3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .mini span { display: block; font-size: 12px; line-height: 1.3; color: rgba(255,255,255,.85); margin-top: 6px; }
+  .mini .reel { border-radius: 12px; box-shadow: 0 10px 24px rgba(0,0,0,.3); }
+  .mini .snd { width: 26px; height: 26px; font-size: 12px; bottom: 6px; right: 6px; }
+  .sc-top { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; }
+  .sc-top p { font-size: 13px; color: rgba(255,255,255,.8); }
+  .sc-top p b { color: #fff; }
+  .ring { position: relative; flex: none; width: 72px; height: 72px; border-radius: 50%; display: grid; place-items: center; background: conic-gradient(var(--gold) calc(var(--p, 0) * 1%), rgba(255,255,255,.25) 0); box-shadow: 0 8px 20px rgba(0,0,0,.25); }
+  .ring::before { content: ''; position: absolute; inset: 7px; border-radius: 50%; background: var(--sky-deeper); }
+  .ring b { position: relative; font-family: 'Playfair Display', serif; font-size: 22px; line-height: 1; text-align: center; }
+  .ring b small { display: block; font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 600; opacity: .7; }
+  .cats { display: grid; gap: 9px; }
+  .cat .row2 { display: flex; justify-content: space-between; font-size: 13px; color: rgba(255,255,255,.85); margin-bottom: 4px; }
+  .cat .row2 b { color: #fff; }
+  .meter { height: 8px; border-radius: 99px; background: rgba(255,255,255,.15); overflow: hidden; }
+  .meter i { display: block; height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, var(--sky), var(--sky-light)); transition: width 1.2s cubic-bezier(.2,.8,.2,1) .3s; }
+  .meter i.low { background: linear-gradient(90deg, var(--rose), #E5A3AB); }
+  .show .meter i { width: var(--w); }
+  .fixes { margin-top: 14px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); border-radius: 14px; padding: 12px 14px; }
+  .fixes .tag { color: var(--gold); }
+  .fixes li { font-size: 13.5px; color: rgba(255,255,255,.88); margin: 6px 0 0 16px; }
+  .sc-note { margin-top: 14px; font-size: 13px; color: rgba(255,255,255,.7); font-style: italic; }
+  /* 14-day trial */
+  .days { list-style: none; position: relative; margin-top: 14px; padding-left: 26px; }
+  .days::before { content: ''; position: absolute; left: 8px; top: 6px; bottom: 6px; width: 3px; border-radius: 3px; background: var(--sky-light); }
+  .days::after { content: ''; position: absolute; left: 8px; top: 6px; width: 3px; height: 0; border-radius: 3px; background: linear-gradient(180deg, var(--sky-deep), var(--gold)); transition: height 2.2s ease .3s; }
+  .show .days::after { height: calc(100% - 12px); }
+  .days li { position: relative; font-size: 13.5px; color: var(--dark); padding: 5px 0; }
+  .days li::before { content: ''; position: absolute; left: -23px; top: 10px; width: 11px; height: 11px; border-radius: 50%; background: #fff; border: 2px solid var(--sky-deep); }
+  .days li:last-child::before { background: var(--gold); border-color: var(--gold); }
+  .days li b { display: inline-block; min-width: 46px; font-size: 11.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--sky-deep); }
+  /* test loop */
+  .loop { position: relative; width: 150px; height: 150px; margin: 14px auto 6px; }
+  .loop svg { position: absolute; inset: 0; animation: spin 14s linear infinite; }
+  .loop span { position: absolute; font-size: 11.5px; font-weight: 700; color: var(--sky-deeper); background: var(--sky-pale); border-radius: 99px; padding: 4px 9px; white-space: nowrap; transform: translate(-50%, -50%); }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  /* competitor watch */
+  .watch { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .watch span { font-size: 12.5px; font-weight: 600; color: var(--sky-deep); background: var(--sky-pale); border-radius: 99px; padding: 5px 10px; }
+  .watch span.who { background: var(--sky-deeper); color: #fff; }
+  /* before/after slider */
+  .slider { position: relative; margin-top: 14px; border-radius: 16px; overflow: hidden; height: 190px; user-select: none; --pos: 50%; }
+  .slider .pane { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: 0 24px; }
+  .slider .pane.bef { background: repeating-linear-gradient(135deg, #EDE7DC 0 12px, #E6DFD2 12px 24px); color: var(--mid); }
+  .slider .pane.aft { background: linear-gradient(135deg, var(--sky-deep), var(--sky-deeper)); color: #fff; clip-path: inset(0 0 0 var(--pos)); align-items: flex-end; text-align: right; }
+  .slider .pane b { font-family: 'Playfair Display', serif; font-size: 34px; line-height: 1.05; }
+  .slider .pane small { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; opacity: .8; margin-bottom: 4px; }
+  .slider .pane span { font-size: 13.5px; margin-top: 4px; }
+  .slider .handle { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 3px; background: #fff; transform: translateX(-50%); box-shadow: 0 0 0 1px rgba(0,0,0,.08); pointer-events: none; }
+  .slider .handle::after { content: '⇆'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 36px; height: 36px; border-radius: 50%; background: #fff; color: var(--sky-deeper); display: grid; place-items: center; font-weight: 700; box-shadow: 0 6px 16px rgba(0,0,0,.2); }
+  .slider input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+  /* creators */
+  .checks { list-style: none; margin-top: 12px; }
+  .checks li { font-size: 13.5px; color: var(--dark); padding: 4px 0 4px 24px; position: relative; }
+  .checks li::before { content: '✓'; position: absolute; left: 0; top: 4px; width: 17px; height: 17px; border-radius: 50%; background: var(--sky-deep); color: #fff; font-size: 10px; display: grid; place-items: center; font-weight: 700; }
+  .checks li.no::before { content: '✕'; background: var(--rose); }
+  .flags { font-size: 21px; letter-spacing: 1px; white-space: nowrap; margin: 8px 0 6px; }
+  .es-nums { display: flex; gap: 14px; margin-top: auto; padding-top: 10px; }
+  .es-nums b { display: block; font-family: 'Playfair Display', serif; font-size: 26px; color: var(--sky-deeper); line-height: 1; }
+  .es-nums span { font-size: 12px; color: var(--mid); }
+
   /* FIT TABLE */
   .fit { display: grid; gap: 10px; margin-top: 36px; }
   .row { display: grid; grid-template-columns: 1fr 1.5fr; gap: 0; border-radius: 16px; overflow: hidden; border: 1px solid var(--beige-dark); background: #fff; }
@@ -325,6 +421,7 @@
     .engine { grid-template-columns: 1fr 1fr; }
     .ideas, .exp { grid-template-columns: 1fr 1fr; }
     .flips { grid-template-columns: 1fr 1fr; }
+    .bento { grid-template-columns: 1fr 1fr; grid-template-areas: "score score" "trial test" "trial comp" "ba ba" "creators es"; }
     .tiles { grid-template-columns: repeat(3, 1fr); }
     .nav-links a.t { display: none; }
   }
@@ -348,6 +445,11 @@
     .marquee img { height: 190px; }
     .ideas, .exp, .flips { grid-template-columns: 1fr; }
     .road { grid-template-columns: 1fr; gap: 6px; }
+    .bento { grid-template-columns: 1fr; grid-template-areas: "score" "trial" "test" "comp" "ba" "creators" "es"; }
+    .sc { grid-template-columns: 1fr; }
+    .minis3 { grid-template-columns: repeat(3, 1fr); }
+    .car { grid-template-columns: 1fr; }
+    .car > div::after { display: none; }
     .road::before { left: 22px; right: auto; top: 22px; bottom: 22px; width: 2px; height: auto; background: linear-gradient(180deg, var(--sky-deep), var(--sky), var(--gold)); }
     .stage { display: grid; grid-template-columns: 46px 1fr; gap: 14px; }
     .stage .card { margin-top: 0; height: auto; margin-bottom: 14px; }
@@ -359,6 +461,7 @@
   }
   @media (prefers-reduced-motion: reduce) {
     .spark path { transition: none; stroke-dashoffset: 0; }
+    .loop svg { animation: none !important; }
     .marquee, .float, .tick-track, .proofs figure:first-child img, .step::after { animation: none !important; }
     .flip-in, .reveal { transition: none; }
   }
@@ -373,6 +476,7 @@
     <a class="t" href="#funnel">Funnel</a>
     <a class="t" href="#english">English</a>
     <a class="t" href="#host">Host</a>
+    <a class="t" href="#ideas">Ideas</a>
     <a class="t" href="#camera">On camera</a>
     <a class="t" href="#growth">Growth</a>
     <a class="t" href="#plan">90 days</a>
@@ -408,13 +512,17 @@
 <!-- FUNNEL CASE -->
 <section class="funnel" id="funnel">
   <div class="wrap">
-    <span class="eyebrow">Case 01 · A funnel I designed &amp; operated</span>
+    <span class="eyebrow">Case 01 · A monthly webinar funnel I designed &amp; ran</span>
     <h2>A system, not a class. <em>$20K USD in sales.</em></h2>
     <p class="sub">Every piece built and run by me. Five steps, one number at the end.</p>
-    <div class="formula">Landing → email/WhatsApp nurture → live class → high-ticket offer → $20K USD in sales</div>
+    <div class="car">
+      <div class="reveal"><span class="lbl">Context</span><p>I sold a high-ticket Airbnb course to a Spanish-speaking audience, through a free webinar I ran every month.</p></div>
+      <div class="reveal"><span class="lbl">Action</span><p>Built the whole funnel: landing, ads, reminder emails, a WhatsApp community, the live class and the offer.</p></div>
+      <div class="reveal"><span class="lbl">Result</span><p><b>300+ people</b> into the WhatsApp group each month, and one launch closed <b>$20K USD</b>.</p></div>
+    </div>
     <div class="steps">
-      <div class="step reveal"><div class="n">1</div><h3>Sign-up</h3><p>Landing page fed by reels, carousels and Meta Ads. Free checklist as the hook.</p><div class="m"><b>300+</b><span>sign-ups</span></div></div>
-      <div class="step reveal"><div class="n">2</div><h3>Reminders</h3><p>3 reminder emails, timed to the class, plus a WhatsApp community.</p><div class="m"><b>225</b><span>joined the WhatsApp group</span></div></div>
+      <div class="step reveal"><div class="n">1</div><h3>Sign-up</h3><p>Landing page fed by reels, carousels and Meta Ads. Free checklist as the hook.</p><div class="m"><b>Monthly</b><span>a new webinar every month</span></div></div>
+      <div class="step reveal"><div class="n">2</div><h3>Reminders</h3><p>3 reminder emails, timed to the class, plus a WhatsApp community.</p><div class="m"><b>300+</b><span>into the WhatsApp group</span></div></div>
       <div class="step reveal"><div class="n">3</div><h3>Live class</h3><p>90 minutes on YouTube Live: teach first, then present the offer.</p><div class="m"><b>90 min</b><span>live, then evergreen replay</span></div></div>
       <div class="step reveal"><div class="n">4</div><h3>Offer</h3><p>2 tiers. 5 sales emails, each mirrored by a carousel the same day.</p><div class="m"><b>5 + 5</b><span>emails + carousels in 7 days</span></div></div>
       <div class="step win reveal"><div class="n">5</div><h3>Close</h3><p>High-ticket bootcamp enrollments through Stripe.</p><div class="m"><b>$20K</b><span>USD · 20 enrollments</span></div></div>
@@ -440,23 +548,25 @@
 <!-- GROWTH CASES -->
 <section id="growth" style="padding-bottom:64px">
   <div class="wrap">
-    <span class="eyebrow">Growth · judged by revenue</span>
-    <h2>Paid acquisition aimed at hosts. <em>Measured to the dollar.</em></h2>
+    <span class="eyebrow">Case 02 · Bonzo · content + paid for hosts</span>
+    <h2>Better content. <em>10× cheaper leads.</em></h2>
     <div class="cases">
       <article class="case b reveal">
-        <span class="k">Case 02 · B2B paid acquisition · hosts</span>
-        <h3>Zero leads → a fully booked sales calendar</h3>
-        <div class="flowline"><span>Meta Ads</span><i>→</i><span>Bilingual landing</span><i>→</i><span>Booked call</span></div>
+        <h3>From $10+ per unfiltered lead → under $1, fully booked</h3>
+        <div class="ba">
+          <div class="ba-row"><div class="lbl2">Before me <b>$10+ per lead</b></div><div class="ba-bar before" style="--w:100%">unfiltered leads</div></div>
+          <div class="ba-row"><div class="lbl2">After my content <b>&lt;$1 per lead <span class="drop">−90%+</span></b></div><div class="ba-bar after" style="--w:12%"></div></div>
+        </div>
+        <div class="car">
+          <div><span class="lbl">Context</span><p>Bonzo (tax &amp; compliance for Airbnb owners in Mexico) ran videos that cost <b>$10+ per lead</b>, and the leads weren't filtered.</p></div>
+          <div><span class="lbl">Action</span><p>I took over their content: host-focused videos in English and Spanish, bilingual landing pages, and tracking tied to booked calls.</p></div>
+          <div><span class="lbl">Result</span><p><b>Under $1 per lead</b>, better-qualified, and a <b>fully booked</b> sales calendar.</p></div>
+        </div>
         <div class="res">
           <div><b>500+</b><span>leads in 2026</span></div>
           <div><b>&lt;$1</b><span>USD cost per lead</span></div>
-          <div><b>$2K</b><span>USD/mo max budget</span></div>
+          <div><b>Full</b><span>sales calendar</span></div>
         </div>
-        <ul>
-          <li>Bonzo (tax &amp; accounting for Airbnb hosts): launched their first Meta campaigns across 8 cities.</li>
-          <li>Built EN/ES landing pages for their US expansion.</li>
-          <li>UTMs + pixel + weekly reporting tied to booked calls, not clicks.</li>
-        </ul>
       </article>
     </div>
   </div>
@@ -590,6 +700,84 @@
   </div>
 </section>
 
+<!-- IDEAS -->
+<section id="ideas">
+  <div class="wrap">
+    <span class="eyebrow">Ideas I'd bring to the table</span>
+    <h2>Things I've already done <em>that fit RankBreeze.</em></h2>
+    <p class="sub">Ideas to explore together. Drag, hover, play.</p>
+    <div class="bento">
+      <div class="bx score reveal">
+        <span class="tag">A series I ran on Instagram (in Spanish)</span>
+        <h3>"Rentable o no?": real Airbnbs, analyzed on camera</h3>
+        <p>I broke down real listings and zones: revenue, costs, what's really left, a score and the fixes. Tap a video for sound.</p>
+        <div class="sc">
+          <div class="minis3"><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-1.mp4" poster="/assets/rankbreeze/rate-1.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>Colonia Americana: worth it?</span></div><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-2.mp4" poster="/assets/rankbreeze/rate-2.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>Looks luxe, loses $12.5K MXN/mo</span></div><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-3.mp4" poster="/assets/rankbreeze/rate-3.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>What a GDL Airbnb really makes</span></div></div>
+          <div class="sc-card">
+            <div class="sc-top"><div class="ring" id="ring"><b>7.4<small>/ 10</small></b></div><p><b>At RankBreeze:</b> same format, with RankBreeze data, ending in "check your own score".</p></div>
+            <div class="cats"><div class="cat"><div class="row2">Photos <b>8/10</b></div><div class="meter"><i class="" style="--w:80%"></i></div></div><div class="cat"><div class="row2">Title <b>5/10</b></div><div class="meter"><i class="low" style="--w:50%"></i></div></div><div class="cat"><div class="row2">Amenities <b>7/10</b></div><div class="meter"><i class="" style="--w:70%"></i></div></div><div class="cat"><div class="row2">Pricing <b>6/10</b></div><div class="meter"><i class="low" style="--w:60%"></i></div></div><div class="cat"><div class="row2">Reviews <b>9/10</b></div><div class="meter"><i class="" style="--w:90%"></i></div></div></div>
+            <div class="fixes"><span class="tag">Top fixes</span><ul><li>Lead with the view, not the bed.</li><li>Title: say why guests come.</li><li>Price weekends and events up.</li></ul></div>
+            <p class="sc-note">Example scorecard, for illustration.</p>
+          </div>
+        </div>
+      </div>
+      <div class="bx trial reveal">
+        <span class="tag">Onboarding</span>
+        <h3>14 days that build a habit</h3>
+        <p>Get trial users to add a listing and see a win early, so the trial ends with a habit, not a cancel.</p>
+        <ul class="days">
+          <li><b>Day 0</b> Add your listing</li>
+          <li><b>Day 1</b> See where you rank</li>
+          <li><b>Day 3</b> Fix one thing your score flags</li>
+          <li><b>Day 5</b> Start your first A/B test</li>
+          <li><b>Day 8</b> Views → bookings: your funnel</li>
+          <li><b>Day 12</b> Your before / after so far</li>
+          <li><b>Day 14</b> Keep the momentum</li>
+        </ul>
+      </div>
+      <div class="bx test reveal">
+        <span class="tag">Test everything</span>
+        <h3>Build, test, keep the winner</h3>
+        <div class="loop" aria-hidden="true">
+          <svg viewBox="0 0 150 150"><circle cx="75" cy="75" r="56" fill="none" stroke="var(--sky-light)" stroke-width="3" stroke-dasharray="10 8"/><path d="M75 19 l7 -5 M75 19 l7 5" stroke="var(--sky-deep)" stroke-width="3" stroke-linecap="round"/></svg>
+          <span style="left:50%;top:6%">Landing pages</span><span style="left:94%;top:50%">A/B tests</span><span style="left:50%;top:94%">Funnels</span><span style="left:6%;top:50%">Posts</span>
+        </div>
+        <p>One variable at a time. Kill the losers fast.</p>
+      </div>
+      <div class="bx comp reveal">
+        <span class="tag">Competitor watch</span>
+        <h3>Learn what works for them</h3>
+        <p>Then do it better, for hosts.</p>
+        <div class="watch"><span class="who">IntelliHost</span><span class="who">+ others</span><span>Messaging</span><span>Offers &amp; pricing</span><span>Ads</span><span>Top content</span></div>
+      </div>
+      <div class="bx bax reveal">
+        <span class="tag">Customer proof</span>
+        <h3>Before &amp; after, from real hosts</h3>
+        <p>Turn customer wins into the content that sells the next trial. Drag to compare →</p>
+        <div class="slider">
+          <div class="pane bef"><small>Before</small><b>Page 14</b><span>Quiet calendar, guessing what's wrong</span></div>
+          <div class="pane aft"><small>After</small><b>Page 2</b><span>Data-backed fixes, more bookings</span></div>
+          <div class="handle"></div>
+          <input type="range" min="5" max="95" value="50" aria-label="Compare before and after">
+        </div>
+      </div>
+      <div class="bx creators reveal">
+        <span class="tag">Creators &amp; affiliates</span>
+        <h3>The right faces, not just pretty ones</h3>
+        <p>I managed 50+ creators and affiliates for my e-commerce brand. I pick for fit and results:</p>
+        <ul class="checks"><li>Audience = real hosts</li><li>Trusted in the niche</li><li>Proven clicks &amp; sales</li><li class="no">Just looks good</li></ul>
+      </div>
+      <div class="bx es reveal">
+        <span class="tag">New markets</span>
+        <h3>Spanish-speaking hosts</h3>
+        <div class="flags" aria-label="Mexico, Spain, Colombia, Argentina, Chile">🇲🇽🇪🇸🇨🇴🇦🇷🇨🇱</div>
+        <p>A big, under-served audience that already follows me.</p>
+        <div class="es-nums"><div><b>50K+</b><span>followers</span></div><div><b>150+</b><span>students</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- VIDEOS -->
 <section class="vid-sec dark-sec" id="camera">
   <div class="wrap vid-head">
@@ -659,22 +847,6 @@
         <li><i>12–24s</i><span>"Airbnb re-ranks you constantly. If you're not tracking it, you find out from an empty calendar."</span></li>
         <li><i>24–30s</i><span>"I check mine in RankBreeze. Link's below — see where yours actually shows up."</span></li>
       </ul>
-    </div>
-  </div>
-</section>
-
-<!-- SPANISH UPSIDE -->
-<section>
-  <div class="wrap es">
-    <div class="reveal">
-      <span class="eyebrow">The upside nobody else brings</span>
-      <h2>A Spanish-speaking host market, <em>ready on day one.</em></h2>
-      <p class="sub">RankBreeze speaks English today. Mexico, Spain, Colombia, Argentina and US Hispanic hosts are a huge, under-served audience — and they already follow me. I can test that channel without slowing the English one.</p>
-    </div>
-    <div class="es-card reveal">
-      <b>50K+</b><p>Spanish-speaking hosts and future hosts on IG + TikTok</p>
-      <b>150+</b><p>hosts who already paid me to teach them Airbnb</p>
-      <b>EN + ES</b><p>Fully bilingual: scripts, emails, landing pages and calls</p>
     </div>
   </div>
 </section>
@@ -778,6 +950,21 @@
   });
   const heroNums = document.querySelectorAll('.float b[data-count]');
   heroNums.forEach(countUp);
+
+  // Listing score ring fills when visible
+  const ring = document.getElementById('ring');
+  if (ring) new IntersectionObserver((es, o) => es.forEach(e => {
+    if (!e.isIntersecting) return; o.disconnect();
+    const t0 = performance.now();
+    const tick = t => { const p = Math.min((t - t0) / 1400, 1); ring.style.setProperty('--p', 74 * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick); };
+    requestAnimationFrame(tick);
+  }), { threshold: .4 }).observe(ring);
+
+  // Before / after slider
+  document.querySelectorAll('.slider').forEach(sl => {
+    const r = sl.querySelector('input');
+    r.addEventListener('input', () => sl.style.setProperty('--pos', r.value + '%'));
+  });
 
   // Flip cards: hover on desktop, tap anywhere
   document.querySelectorAll('.flip').forEach(f => f.addEventListener('click', () => f.classList.toggle('on')));

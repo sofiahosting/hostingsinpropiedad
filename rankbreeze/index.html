@@ -179,6 +179,16 @@
   .show .ba-bar { width: var(--w); }
   .drop { display: inline-block; margin-left: 8px; background: var(--gold); color: var(--sky-deeper); font-size: 12px; font-weight: 700; border-radius: 99px; padding: 3px 9px; }
 
+  /* HERO HOOK + FLOATING BUTTON */
+  .hook { display: flex; gap: 14px; align-items: center; max-width: 520px; margin-bottom: 26px; text-decoration: none; color: #fff; background: rgba(255,255,255,.1); border: 1.5px solid var(--gold); border-radius: 18px; padding: 14px 18px; font-size: 15px; line-height: 1.4; animation: glow 2.6s ease-in-out infinite; transition: background .25s, transform .25s; }
+  .hook:hover { background: rgba(255,255,255,.18); transform: translateY(-2px); }
+  .hook b { color: var(--gold); }
+  .hk-ic { flex: none; width: 44px; height: 44px; border-radius: 12px; background: var(--gold); display: grid; place-items: center; font-size: 22px; }
+  @keyframes glow { 0%,100% { box-shadow: 0 0 0 0 rgba(200,169,110,.0); } 50% { box-shadow: 0 0 0 7px rgba(200,169,110,.22); } }
+  .fab { position: fixed; right: 18px; bottom: 18px; z-index: 55; background: var(--gold); color: var(--sky-deeper); font-weight: 700; font-size: 14px; text-decoration: none; border-radius: 99px; padding: 12px 18px; box-shadow: 0 12px 28px rgba(35,75,107,.28); opacity: 0; transform: translateY(16px); pointer-events: none; transition: opacity .35s, transform .35s; }
+  .fab.on { opacity: 1; transform: none; pointer-events: auto; }
+  .fab:hover { transform: translateY(-2px); }
+
   /* FINDINGS */
   .audit { background: var(--white); }
   .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
@@ -214,8 +224,12 @@
   .grade a { display: inline-block; margin-top: 6px; background: var(--sky-deep); color: #fff; font-weight: 700; font-size: 12.5px; border-radius: 99px; padding: 6px 12px; text-decoration: none; }
   .audit-note { margin-top: 20px; font-size: 14px; color: var(--mid); font-style: italic; }
 
+  /* PLAN BENTO */
+  .pbento { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-areas: "trial test comp" "trial ba es"; gap: 14px; margin-top: 18px; }
+  .pb-head { margin-top: 44px; font-family: 'Playfair Display', serif; font-size: 24px; color: var(--sky-deeper); }
+
   /* IDEAS BENTO */
-  .bento { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-areas: "score score trial test" "score score trial comp" "ba ba creators es"; gap: 14px; margin-top: 34px; }
+  .bento { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-areas: "score score score creators"; gap: 14px; margin-top: 34px; }
   .bx { background: #fff; border: 1px solid var(--beige-dark); border-radius: 22px; padding: 22px; display: flex; flex-direction: column; transition: opacity .7s ease, transform .3s, box-shadow .3s; }
   .bx:hover { transform: translateY(-4px); box-shadow: 0 18px 38px rgba(35,75,107,.12); }
   .bx .tag { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dark); }
@@ -223,7 +237,7 @@
   .bx p { font-size: 14px; color: var(--mid); }
   .bx.score { grid-area: score; background: var(--sky-deeper); border: 0; color: #fff; }
   .bx.score h3 { color: #fff; } .bx.score p { color: rgba(255,255,255,.78); } .bx.score .tag { color: var(--gold); }
-  .bx.trial { grid-area: trial; background: var(--sky-pale); border-color: var(--sky-light); }
+  .bx.trial { grid-area: trial; background: #fff; border-color: var(--sky-light); }
   .bx.test { grid-area: test; } .bx.comp { grid-area: comp; }
   .bx.bax { grid-area: ba; } .bx.creators { grid-area: creators; background: var(--beige); }
   .bx.esx { grid-area: es; background: linear-gradient(150deg, #F6EFDF, #fff); }
@@ -460,7 +474,8 @@
     .ideas, .exp { grid-template-columns: 1fr 1fr; }
     .flips { grid-template-columns: 1fr 1fr; }
     .finds { grid-template-columns: 1fr 1fr; }
-    .bento { grid-template-columns: 1fr 1fr; grid-template-areas: "score score" "trial test" "trial comp" "ba ba" "creators es"; }
+    .bento { grid-template-columns: 1fr; grid-template-areas: "score" "creators"; }
+    .pbento { grid-template-columns: 1fr 1fr; grid-template-areas: "trial test" "trial comp" "ba ba" "es es"; }
     .tiles { grid-template-columns: repeat(3, 1fr); }
     .nav-links a.t { display: none; }
   }
@@ -485,7 +500,8 @@
     .ideas, .exp, .flips { grid-template-columns: 1fr; }
     .road { grid-template-columns: 1fr; gap: 6px; }
     .finds { grid-template-columns: 1fr; } .find.wide { grid-column: auto; }
-    .bento { grid-template-columns: 1fr; grid-template-areas: "score" "trial" "test" "comp" "ba" "creators" "es"; }
+    .bento { grid-template-columns: 1fr; grid-template-areas: "score" "creators"; }
+    .pbento { grid-template-columns: 1fr; grid-template-areas: "trial" "test" "comp" "ba" "es"; }
     .sc { grid-template-columns: 1fr; }
     .minis3 { grid-template-columns: 1fr 1fr; }
     .car { grid-template-columns: 1fr; }
@@ -502,6 +518,7 @@
   @media (prefers-reduced-motion: reduce) {
     .spark path { transition: none; stroke-dashoffset: 0; }
     .loop svg { animation: none !important; }
+    .hook { animation: none !important; }
     .marquee, .float, .tick-track, .proofs figure:first-child img, .step::after { animation: none !important; }
     .flip-in, .reveal { transition: none; }
   }
@@ -510,14 +527,15 @@
 <body>
 
 <div id="progress" aria-hidden="true"></div>
+<a class="fab" id="fab" href="#audit">🔍 8 findings from my trial</a>
 <nav id="nav">
   <a class="logo" href="#top">Sofía <span>× RankBreeze</span></a>
   <div class="nav-links">
+    <a class="t" href="#audit">Findings</a>
     <a class="t" href="#funnel">Funnel</a>
     <a class="t" href="#english">English</a>
     <a class="t" href="#host">Host</a>
-    <a class="t" href="#audit">Findings</a>
-    <a class="t" href="#ideas">Ideas</a>
+        <a class="t" href="#ideas">Ideas</a>
     <a class="t" href="#camera">On camera</a>
     <a class="t" href="#growth">Growth</a>
     <a class="t" href="#plan">90 days</a>
@@ -532,10 +550,10 @@
       <div class="pill">Made for RankBreeze · <b>Marketing Manager</b></div>
       <h1>I've been the host you sell to. <em>And I know how to reach them.</em></h1>
       <p class="lead">I managed <b>33 Airbnb listings</b> in Guadalajara, I teach hosts on camera to <b>50K+ followers</b>, and I've been a <b>Marketing Director</b>. I judge my content by sign-ups and sales, not likes.</p>
-      <div class="chips"><span>🏠 33 listings managed</span><span>🎥 On camera</span><span>✉️ Email</span><span>📣 Paid acquisition</span><span>🚀 Launches</span><span>📊 Funnels</span><span>🇺🇸🇲🇽 EN + ES</span></div>
+      <a class="hook" href="#audit"><span class="hk-ic">🔍</span><span><b>I tried RankBreeze for 14 days.</b><br>8 easy wins I noticed, plus my ideas for growth →</span></a>
       <div class="actions">
-        <a class="btn" href="#funnel">See the funnel ↓</a>
-        <a class="ghost" href="#plan">How I'd start</a>
+        <a class="btn" href="#audit">See what I found ↓</a>
+        <a class="ghost" href="#funnel">See my funnel</a>
       </div>
     </div>
     <div class="hero-photo">
@@ -549,6 +567,27 @@
 
 <!-- TICKER -->
 <div class="ticker" aria-hidden="true"><div class="tick-track"><span>🏠 33 listings managed</span><i>✦</i><span>⭐ 4.8 · 1,400+ reviews</span><i>✦</i><span>🚀 $20K launch</span><i>✦</i><span>🎯 500+ leads under $1</span><i>✦</i><span>📱 50K+ followers</span><i>✦</i><span>🎥 On camera, EN + ES</span><i>✦</i><span>✉️ Email that sells</span><i>✦</i><span>📊 Outcomes, not likes</span><i>✦</i><span>🏠 33 listings managed</span><i>✦</i><span>⭐ 4.8 · 1,400+ reviews</span><i>✦</i><span>🚀 $20K launch</span><i>✦</i><span>🎯 500+ leads under $1</span><i>✦</i><span>📱 50K+ followers</span><i>✦</i><span>🎥 On camera, EN + ES</span><i>✦</i><span>✉️ Email that sells</span><i>✦</i><span>📊 Outcomes, not likes</span><i>✦</i></div></div>
+
+<!-- FINDINGS -->
+<section class="audit" id="audit">
+  <div class="wrap">
+    <span class="eyebrow">Fresh eyes · I tried RankBreeze</span>
+    <h2>What I noticed <em>in my 14-day trial.</em></h2>
+    <p class="sub">Easy wins I found as a user. Written to help, not to criticize.</p>
+    <div class="filters" role="group" aria-label="Filter findings"><button class="fchip on" type="button" data-f="all">All<i>8</i></button><button class="fchip" type="button" data-f="conv">Conversion<i>2</i></button><button class="fchip" type="button" data-f="act">Activation<i>2</i></button><button class="fchip" type="button" data-f="rev">Revenue<i>1</i></button><button class="fchip" type="button" data-f="trust">Trust<i>2</i></button><button class="fchip" type="button" data-f="seo">SEO<i>1</i></button></div>
+    <div class="finds">
+      <article class="find reveal" data-cat="conv"><div class="top"><span class="ftag conv">Conversion</span><span class="fnum">01</span></div><h3>The trial says $1, but I got in for free</h3><div><span class="k">Noticed</span><p>The sign-up mentions a $1 charge, yet I never paid.</p></div><div class="opp"><span class="k">Opportunity</span><p>Align the copy with the flow (or fix the payment step). Trust starts at step one.</p></div></article>
+      <article class="find reveal" data-cat="act"><div class="top"><span class="ftag act">Activation</span><span class="fnum">02</span></div><h3>14 days, zero emails</h3><div><span class="k">Noticed</span><p>I didn’t get a single email during my trial.</p></div><div class="opp"><span class="k">Opportunity</span><p>An onboarding sequence that gets hosts to sync a listing and see a first win.</p></div></article>
+      <article class="find wide reveal" data-cat="conv"><div class="top"><span class="ftag conv">Conversion</span><span class="fnum">03</span></div><h3>Pricing copy doesn’t match the slider</h3><div><span class="k">Noticed</span><p>With the slider on 7 listings, the text reads “10 listings”, and $6 is per listing, not the total.</p></div><div class="mock"><span class="lbl3">Slider: 7 listings</span><div class="was">“manage your 10 listings with only $6.00 per month”</div><div class="now">7 listings · $6 each · $42/month</div></div><div class="opp"><span class="k">Opportunity</span><p>Make the line dynamic, right where people decide to buy.</p></div></article>
+      <article class="find wide reveal" data-cat="rev"><div class="top"><span class="ftag rev">Revenue</span><span class="fnum">04</span></div><h3>The done-for-you service is hidden</h3><div><span class="k">Noticed</span><p>“Services” is its own tab, with very little copy.</p></div><div class="mock grade"><b>D</b><span>Your listing scored a D.<br><a href="#audit" onclick="return false">Want us to fix it for you? →</a></span></div><div class="opp"><span class="k">Opportunity</span><p>Sell it in the flow, at the exact moment it’s needed.</p></div></article>
+      <article class="find reveal" data-cat="seo"><div class="top"><span class="ftag seo">SEO</span><span class="fnum">05</span></div><h3>The blog stopped in December 2025</h3><div><span class="k">Noticed</span><p>The most recent post is almost a year old.</p></div><div class="opp"><span class="k">Opportunity</span><p>Restart it with host search intent. I’ve built programmatic SEO before (78 pages).</p></div></article>
+      <article class="find reveal" data-cat="trust"><div class="top"><span class="ftag trust">Trust</span><span class="fnum">06</span></div><h3>The help center shows the old plans</h3><div><span class="k">Noticed</span><p>It still lists Starter, Standard and Scaling with a 15% quarterly discount; the app says 10%.</p></div><div class="opp"><span class="k">Opportunity</span><p>Update the docs, so support and billing tell the same story.</p></div></article>
+      <article class="find wide reveal" data-cat="trust"><div class="top"><span class="ftag trust">Trust</span><span class="fnum">07</span></div><h3>“Market Data” is marked “Coming”</h3><div><span class="k">Noticed</span><p>The footer says it’s on the way, but the feature already exists.</p></div><div class="opp"><span class="k">Opportunity</span><p>A quick win: announce it as live (and make it a launch moment).</p></div></article>
+      <article class="find wide reveal" data-cat="act"><div class="top"><span class="ftag act">Activation</span><span class="fnum">08</span></div><h3>Dynamic pricing needs a PMS</h3><div><span class="k">Noticed</span><p>Many small hosts manage straight in Airbnb, with no PMS.</p></div><div class="opp"><span class="k">Opportunity</span><p>Say it clearly before they try it, so it doesn’t turn into frustration and cancellations.</p></div></article>
+    </div>
+    <p class="audit-note">Each one is small. Together, they’re the difference between a trial and a customer.</p>
+  </div>
+</section>
 
 <!-- FUNNEL CASE -->
 <section class="funnel" id="funnel">
@@ -648,6 +687,33 @@
   </div>
 </section>
 
+<!-- IDEAS -->
+<section id="ideas">
+  <div class="wrap">
+    <span class="eyebrow">Already done, ready for RankBreeze</span>
+    <h2>Things I've already done <em>that fit RankBreeze.</em></h2>
+    <p class="sub">Formats I've run before. Tap the videos for sound.</p>
+    <div class="bento">
+      <div class="bx score reveal">
+        <span class="tag">A series I ran on Instagram (in Spanish)</span>
+        <h3>Real Airbnbs, scored &amp; analyzed on camera</h3>
+        <p>Listing audits with a score out of 10, plus "worth it or not?" breakdowns: revenue, costs, what's really left, and the fixes. Tap a video for sound.</p>
+        <div class="minis3"><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-4.mp4" poster="/assets/rankbreeze/rate-4.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>A student’s listing, scored 6.0/10</span></div><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-1.mp4" poster="/assets/rankbreeze/rate-1.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>Colonia Americana: worth it?</span></div><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-2.mp4" poster="/assets/rankbreeze/rate-2.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>Looks luxe, loses $12.5K MXN/mo</span></div><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-3.mp4" poster="/assets/rankbreeze/rate-3.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>What a GDL Airbnb really makes</span></div></div>
+        <div class="sc-card">
+          <div class="sc-top"><div class="ring" id="ring"><b>6.0<small>/ 10</small></b></div><p><b>A real audit, on camera:</b> a student's first listing in Asunción, Paraguay scored 6.0/10. The gallery got a 4/10, so the photos were fix #1.</p></div>
+          <p class="sc-rb"><b>At RankBreeze:</b> the same format, powered by RankBreeze data, ending with "check your own score".</p>
+        </div>
+      </div>
+      <div class="bx creators reveal">
+        <span class="tag">Creators &amp; affiliates</span>
+        <h3>The right faces, not just pretty ones</h3>
+        <p>I managed 50+ creators and affiliates for my e-commerce brand. I pick for fit and results:</p>
+        <ul class="checks"><li>Audience = real hosts</li><li>Trusted in the niche</li><li>Proven clicks &amp; sales</li><li class="no">Just looks good</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- NUMBERS -->
 <section class="nums">
   <div class="wrap">
@@ -741,101 +807,6 @@
   </div>
 </section>
 
-<!-- FINDINGS -->
-<section class="audit" id="audit">
-  <div class="wrap">
-    <span class="eyebrow">Fresh eyes · I tried RankBreeze</span>
-    <h2>What I noticed <em>in my 14-day trial.</em></h2>
-    <p class="sub">Easy wins I found as a user. Written to help, not to criticize.</p>
-    <div class="filters" role="group" aria-label="Filter findings"><button class="fchip on" type="button" data-f="all">All<i>8</i></button><button class="fchip" type="button" data-f="conv">Conversion<i>2</i></button><button class="fchip" type="button" data-f="act">Activation<i>2</i></button><button class="fchip" type="button" data-f="rev">Revenue<i>1</i></button><button class="fchip" type="button" data-f="trust">Trust<i>2</i></button><button class="fchip" type="button" data-f="seo">SEO<i>1</i></button></div>
-    <div class="finds">
-      <article class="find reveal" data-cat="conv"><div class="top"><span class="ftag conv">Conversion</span><span class="fnum">01</span></div><h3>The trial says $1, but I got in for free</h3><div><span class="k">Noticed</span><p>The sign-up mentions a $1 charge, yet I never paid.</p></div><div class="opp"><span class="k">Opportunity</span><p>Align the copy with the flow (or fix the payment step). Trust starts at step one.</p></div></article>
-      <article class="find reveal" data-cat="act"><div class="top"><span class="ftag act">Activation</span><span class="fnum">02</span></div><h3>14 days, zero emails</h3><div><span class="k">Noticed</span><p>I didn’t get a single email during my trial.</p></div><div class="opp"><span class="k">Opportunity</span><p>An onboarding sequence that gets hosts to sync a listing and see a first win.</p></div></article>
-      <article class="find wide reveal" data-cat="conv"><div class="top"><span class="ftag conv">Conversion</span><span class="fnum">03</span></div><h3>Pricing copy doesn’t match the slider</h3><div><span class="k">Noticed</span><p>With the slider on 7 listings, the text reads “10 listings”, and $6 is per listing, not the total.</p></div><div class="mock"><span class="lbl3">Slider: 7 listings</span><div class="was">“manage your 10 listings with only $6.00 per month”</div><div class="now">7 listings · $6 each · $42/month</div></div><div class="opp"><span class="k">Opportunity</span><p>Make the line dynamic, right where people decide to buy.</p></div></article>
-      <article class="find wide reveal" data-cat="rev"><div class="top"><span class="ftag rev">Revenue</span><span class="fnum">04</span></div><h3>The done-for-you service is hidden</h3><div><span class="k">Noticed</span><p>“Services” is its own tab, with very little copy.</p></div><div class="mock grade"><b>D</b><span>Your listing scored a D.<br><a href="#audit" onclick="return false">Want us to fix it for you? →</a></span></div><div class="opp"><span class="k">Opportunity</span><p>Sell it in the flow, at the exact moment it’s needed.</p></div></article>
-      <article class="find reveal" data-cat="seo"><div class="top"><span class="ftag seo">SEO</span><span class="fnum">05</span></div><h3>The blog stopped in December 2025</h3><div><span class="k">Noticed</span><p>The most recent post is almost a year old.</p></div><div class="opp"><span class="k">Opportunity</span><p>Restart it with host search intent. I’ve built programmatic SEO before (78 pages).</p></div></article>
-      <article class="find reveal" data-cat="trust"><div class="top"><span class="ftag trust">Trust</span><span class="fnum">06</span></div><h3>The help center shows the old plans</h3><div><span class="k">Noticed</span><p>It still lists Starter, Standard and Scaling with a 15% quarterly discount; the app says 10%.</p></div><div class="opp"><span class="k">Opportunity</span><p>Update the docs, so support and billing tell the same story.</p></div></article>
-      <article class="find wide reveal" data-cat="trust"><div class="top"><span class="ftag trust">Trust</span><span class="fnum">07</span></div><h3>“Market Data” is marked “Coming”</h3><div><span class="k">Noticed</span><p>The footer says it’s on the way, but the feature already exists.</p></div><div class="opp"><span class="k">Opportunity</span><p>A quick win: announce it as live (and make it a launch moment).</p></div></article>
-      <article class="find wide reveal" data-cat="act"><div class="top"><span class="ftag act">Activation</span><span class="fnum">08</span></div><h3>Dynamic pricing needs a PMS</h3><div><span class="k">Noticed</span><p>Many small hosts manage straight in Airbnb, with no PMS.</p></div><div class="opp"><span class="k">Opportunity</span><p>Say it clearly before they try it, so it doesn’t turn into frustration and cancellations.</p></div></article>
-    </div>
-    <p class="audit-note">Each one is small. Together, they’re the difference between a trial and a customer.</p>
-  </div>
-</section>
-
-<!-- IDEAS -->
-<section id="ideas">
-  <div class="wrap">
-    <span class="eyebrow">Ideas I'd bring to the table</span>
-    <h2>Things I've already done <em>that fit RankBreeze.</em></h2>
-    <p class="sub">Ideas to explore together. Drag, hover, play.</p>
-    <div class="bento">
-      <div class="bx score reveal">
-        <span class="tag">A series I ran on Instagram (in Spanish)</span>
-        <h3>Real Airbnbs, scored &amp; analyzed on camera</h3>
-        <p>Listing audits with a score out of 10, plus "worth it or not?" breakdowns: revenue, costs, what's really left, and the fixes. Tap a video for sound.</p>
-        <div class="minis3"><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-4.mp4" poster="/assets/rankbreeze/rate-4.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>A student’s listing, scored 6.0/10</span></div><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-1.mp4" poster="/assets/rankbreeze/rate-1.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>Colonia Americana: worth it?</span></div><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-2.mp4" poster="/assets/rankbreeze/rate-2.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>Looks luxe, loses $12.5K MXN/mo</span></div><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-3.mp4" poster="/assets/rankbreeze/rate-3.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>What a GDL Airbnb really makes</span></div></div>
-        <div class="sc-card">
-          <div class="sc-top"><div class="ring" id="ring"><b>6.0<small>/ 10</small></b></div><p><b>A real audit, on camera:</b> a student's first listing in Asunción, Paraguay scored 6.0/10. The gallery got a 4/10, so the photos were fix #1.</p></div>
-          <p class="sc-rb"><b>At RankBreeze:</b> the same format, powered by RankBreeze data, ending with "check your own score".</p>
-        </div>
-      </div>
-      <div class="bx trial reveal">
-        <span class="tag">Onboarding</span>
-        <h3>14 days that build a habit</h3>
-        <p>Get trial users to add a listing and see a win early, so the trial ends with a habit, not a cancel.</p>
-        <ul class="days">
-          <li><b>Day 0</b> Add your listing</li>
-          <li><b>Day 1</b> See where you rank</li>
-          <li><b>Day 3</b> Fix one thing your score flags</li>
-          <li><b>Day 5</b> Start your first A/B test</li>
-          <li><b>Day 8</b> Views → bookings: your funnel</li>
-          <li><b>Day 12</b> Your before / after so far</li>
-          <li><b>Day 14</b> Keep the momentum</li>
-        </ul>
-      </div>
-      <div class="bx test reveal">
-        <span class="tag">Test everything</span>
-        <h3>Build, test, keep the winner</h3>
-        <div class="loop" aria-hidden="true">
-          <svg viewBox="0 0 150 150"><circle cx="75" cy="75" r="56" fill="none" stroke="var(--sky-light)" stroke-width="3" stroke-dasharray="10 8"/><path d="M75 19 l7 -5 M75 19 l7 5" stroke="var(--sky-deep)" stroke-width="3" stroke-linecap="round"/></svg>
-          <span style="left:50%;top:6%">Landing pages</span><span style="left:94%;top:50%">A/B tests</span><span style="left:50%;top:94%">Funnels</span><span style="left:6%;top:50%">Posts</span>
-        </div>
-        <p>One variable at a time. Kill the losers fast.</p>
-      </div>
-      <div class="bx comp reveal">
-        <span class="tag">Competitor watch</span>
-        <h3>Learn what works for them</h3>
-        <p>Then do it better, for hosts.</p>
-        <div class="watch"><span class="who">IntelliHost</span><span class="who">+ others</span><span>Messaging</span><span>Offers &amp; pricing</span><span>Ads</span><span>Top content</span></div>
-      </div>
-      <div class="bx bax reveal">
-        <span class="tag">Customer proof</span>
-        <h3>Before &amp; after, from real hosts</h3>
-        <p>Turn customer wins into the content that sells the next trial. Drag to compare →</p>
-        <div class="slider">
-          <div class="pane bef"><small>Before</small><b>Page 14</b><span>Quiet calendar, guessing what's wrong</span></div>
-          <div class="pane aft"><small>After</small><b>Page 2</b><span>Data-backed fixes, more bookings</span></div>
-          <div class="handle"></div>
-          <input type="range" min="5" max="95" value="50" aria-label="Compare before and after">
-        </div>
-      </div>
-      <div class="bx creators reveal">
-        <span class="tag">Creators &amp; affiliates</span>
-        <h3>The right faces, not just pretty ones</h3>
-        <p>I managed 50+ creators and affiliates for my e-commerce brand. I pick for fit and results:</p>
-        <ul class="checks"><li>Audience = real hosts</li><li>Trusted in the niche</li><li>Proven clicks &amp; sales</li><li class="no">Just looks good</li></ul>
-      </div>
-      <div class="bx esx reveal">
-        <span class="tag">New markets</span>
-        <h3>Spanish-speaking hosts</h3>
-        <div class="flags" aria-label="Mexico, Spain, Colombia, Argentina, Chile">🇲🇽🇪🇸🇨🇴🇦🇷🇨🇱</div>
-        <p>A big, under-served audience that already follows me.</p>
-        <div class="es-nums"><div><b>50K+</b><span>followers</span></div><div><b>150+</b><span>students</span></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- VIDEOS -->
 <section class="vid-sec dark-sec" id="camera">
   <div class="wrap vid-head">
@@ -916,9 +887,59 @@
     <h2>How I'd approach <em>the first 90 days.</em></h2>
     <p class="sub">A starting point to align with you, not a fixed plan.</p>
     <div class="road">
-      <div class="stage reveal"><div class="dot">1</div><div class="card"><div class="when">Days 1–30</div><h3>Listen &amp; learn</h3><p class="q">“Where do hosts get stuck between first visit and trial?”</p><ul><li>Listen to the team and to hosts.</li><li>Walk the funnel with the data.</li></ul><div class="out"><i>Output</i>A one-page funnel map</div></div></div>
-      <div class="stage reveal"><div class="dot">2</div><div class="card"><div class="when">Days 31–60</div><h3>Test, one thing at a time</h3><p class="q">“Which message makes a host say: that’s my problem?”</p><ul><li>Hooks, pages and emails, one variable at a time.</li><li>Keep what works, drop what doesn’t.</li></ul><div class="out"><i>Output</i>A simple, shared test log</div></div></div>
-      <div class="stage reveal"><div class="dot">3</div><div class="card"><div class="when">Days 61–90</div><h3>Scale what works</h3><p class="q">“What actually moved the numbers, and how do we get more of it?”</p><ul><li>Double down on what’s proven.</li><li>Recap results in plain English.</li></ul><div class="out"><i>Output</i>A plain-English results recap</div></div></div>
+      <div class="stage reveal"><div class="dot">1</div><div class="card"><div class="when">Days 1–30</div><h3>Listen &amp; learn</h3><p class="q">“Where do hosts get stuck between first visit and trial?”</p><ul><li>Listen to the team and to hosts.</li><li>Walk the funnel with the data.</li><li>Watch competitors like IntelliHost: what works for them.</li></ul><div class="out"><i>Output</i>A one-page funnel map</div></div></div>
+      <div class="stage reveal"><div class="dot">2</div><div class="card"><div class="when">Days 31–60</div><h3>Test, one thing at a time</h3><p class="q">“Which message makes a host say: that’s my problem?”</p><ul><li>Landing pages, A/B tests, funnels and posts.</li><li>A 14-day trial onboarding that gets hosts to add their listings and use the tools.</li></ul><div class="out"><i>Output</i>A simple, shared test log</div></div></div>
+      <div class="stage reveal"><div class="dot">3</div><div class="card"><div class="when">Days 61–90</div><h3>Scale what works</h3><p class="q">“What actually moved the numbers, and how do we get more of it?”</p><ul><li>Before &amp; after results from real customers, as content.</li><li>Open Spanish-speaking markets.</li></ul><div class="out"><i>Output</i>A plain-English results recap</div></div></div>
+    </div>
+    <h3 class="pb-head reveal">What that could look like</h3>
+    <div class="pbento">
+      <div class="bx trial reveal">
+        <span class="tag">Onboarding</span>
+        <h3>14 days that build a habit</h3>
+        <p>Get trial users to add a listing and see a win early, so the trial ends with a habit, not a cancel.</p>
+        <ul class="days">
+          <li><b>Day 0</b> Add your listing</li>
+          <li><b>Day 1</b> See where you rank</li>
+          <li><b>Day 3</b> Fix one thing your score flags</li>
+          <li><b>Day 5</b> Start your first A/B test</li>
+          <li><b>Day 8</b> Views → bookings: your funnel</li>
+          <li><b>Day 12</b> Your before / after so far</li>
+          <li><b>Day 14</b> Keep the momentum</li>
+        </ul>
+      </div>
+      <div class="bx test reveal">
+        <span class="tag">Test everything</span>
+        <h3>Build, test, keep the winner</h3>
+        <div class="loop" aria-hidden="true">
+          <svg viewBox="0 0 150 150"><circle cx="75" cy="75" r="56" fill="none" stroke="var(--sky-light)" stroke-width="3" stroke-dasharray="10 8"/><path d="M75 19 l7 -5 M75 19 l7 5" stroke="var(--sky-deep)" stroke-width="3" stroke-linecap="round"/></svg>
+          <span style="left:50%;top:6%">Landing pages</span><span style="left:94%;top:50%">A/B tests</span><span style="left:50%;top:94%">Funnels</span><span style="left:6%;top:50%">Posts</span>
+        </div>
+        <p>One variable at a time. Kill the losers fast.</p>
+      </div>
+      <div class="bx comp reveal">
+        <span class="tag">Competitor watch</span>
+        <h3>Learn what works for them</h3>
+        <p>Then do it better, for hosts.</p>
+        <div class="watch"><span class="who">IntelliHost</span><span class="who">+ others</span><span>Messaging</span><span>Offers &amp; pricing</span><span>Ads</span><span>Top content</span></div>
+      </div>
+      <div class="bx bax reveal">
+        <span class="tag">Customer proof</span>
+        <h3>Before &amp; after, from real hosts</h3>
+        <p>Turn customer wins into the content that sells the next trial. Drag to compare →</p>
+        <div class="slider">
+          <div class="pane bef"><small>Before</small><b>Page 14</b><span>Quiet calendar, guessing what's wrong</span></div>
+          <div class="pane aft"><small>After</small><b>Page 2</b><span>Data-backed fixes, more bookings</span></div>
+          <div class="handle"></div>
+          <input type="range" min="5" max="95" value="50" aria-label="Compare before and after">
+        </div>
+      </div>
+      <div class="bx esx reveal">
+        <span class="tag">New markets</span>
+        <h3>Spanish-speaking hosts</h3>
+        <div class="flags" aria-label="Mexico, Spain, Colombia, Argentina, Chile">🇲🇽🇪🇸🇨🇴🇦🇷🇨🇱</div>
+        <p>A big, under-served audience that already follows me.</p>
+        <div class="es-nums"><div><b>50K+</b><span>followers</span></div><div><b>150+</b><span>students</span></div></div>
+      </div>
     </div>
     <div class="board reveal">
       <div class="board-head"><h3>Your success list → the numbers I'd watch</h3><span>Targets we'd set together.</span></div>
@@ -1023,6 +1044,13 @@
     const r = sl.querySelector('input');
     r.addEventListener('input', () => sl.style.setProperty('--pos', r.value + '%'));
   });
+
+  // Floating "findings" button: visible after the hero, hidden while the section is on screen
+  const fab = document.getElementById('fab'), hero = document.getElementById('top'), audit = document.getElementById('audit');
+  let inAudit = false;
+  new IntersectionObserver(es => es.forEach(e => { inAudit = e.isIntersecting; onFab(); }), { threshold: .05 }).observe(audit);
+  const onFab = () => fab.classList.toggle('on', window.scrollY > hero.offsetHeight * .8 && !inAudit);
+  window.addEventListener('scroll', onFab, { passive: true });
 
   // Findings filter
   const chips = [...document.querySelectorAll('.fchip')], finds = [...document.querySelectorAll('.find')];

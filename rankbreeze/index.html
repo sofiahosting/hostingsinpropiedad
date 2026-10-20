@@ -179,6 +179,41 @@
   .show .ba-bar { width: var(--w); }
   .drop { display: inline-block; margin-left: 8px; background: var(--gold); color: var(--sky-deeper); font-size: 12px; font-weight: 700; border-radius: 99px; padding: 3px 9px; }
 
+  /* FINDINGS */
+  .audit { background: var(--white); }
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+  .fchip { font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer; border: 1px solid var(--sky-light); background: #fff; color: var(--sky-deep); border-radius: 99px; padding: 7px 14px; transition: background .25s, color .25s; }
+  .fchip.on { background: var(--sky-deeper); border-color: var(--sky-deeper); color: #fff; }
+  .fchip i { font-style: normal; opacity: .6; margin-left: 4px; }
+  .finds { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 22px; }
+  .find { background: #fff; border: 1px solid var(--beige-dark); border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 10px; transition: opacity .7s ease, transform .3s, box-shadow .3s; }
+  .find:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(35,75,107,.12); }
+  .find.hide { display: none; }
+  .find .top { display: flex; justify-content: space-between; align-items: center; }
+  .find .fnum { font-family: 'Playfair Display', serif; font-size: 26px; color: var(--sky-light); line-height: 1; }
+  .ftag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; border-radius: 99px; padding: 4px 10px; }
+  .ftag.conv { background: #F6EFDF; color: var(--gold-dark); }
+  .ftag.act { background: var(--sky-pale); color: var(--sky-deep); }
+  .ftag.rev { background: #F7E6E8; color: #A85A65; }
+  .ftag.trust { background: #EEF0F2; color: #59636E; }
+  .ftag.seo { background: #E8F1EA; color: #4F7A5A; }
+  .find h3 { font-size: 16px; line-height: 1.3; color: var(--sky-deeper); }
+  .find .k { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mid); display: block; margin-bottom: 2px; }
+  .find p { font-size: 13.5px; color: var(--mid); }
+  .find .opp { margin-top: auto; background: var(--sky-pale); border-radius: 12px; padding: 10px 12px; }
+  .find .opp .k { color: var(--sky-deep); }
+  .find .opp p { color: var(--sky-deeper); }
+  .find.wide { grid-column: span 2; }
+  .mock { border-radius: 12px; border: 1px dashed var(--sky-light); padding: 10px 12px; font-size: 13px; }
+  .mock .was { color: #A85A65; text-decoration: line-through; }
+  .mock .now { color: var(--sky-deeper); font-weight: 700; margin-top: 4px; }
+  .mock .lbl3 { font-size: 10.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mid); }
+  .grade { display: flex; align-items: center; gap: 12px; }
+  .grade b { width: 44px; height: 44px; border-radius: 12px; background: #F7E6E8; color: #A85A65; font-family: 'Playfair Display', serif; font-size: 26px; display: grid; place-items: center; flex: none; }
+  .grade span { flex: 1; }
+  .grade a { display: inline-block; margin-top: 6px; background: var(--sky-deep); color: #fff; font-weight: 700; font-size: 12.5px; border-radius: 99px; padding: 6px 12px; text-decoration: none; }
+  .audit-note { margin-top: 20px; font-size: 14px; color: var(--mid); font-style: italic; }
+
   /* IDEAS BENTO */
   .bento { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-areas: "score score trial test" "score score trial comp" "ba ba creators es"; gap: 14px; margin-top: 34px; }
   .bx { background: #fff; border: 1px solid var(--beige-dark); border-radius: 22px; padding: 22px; display: flex; flex-direction: column; transition: opacity .7s ease, transform .3s, box-shadow .3s; }
@@ -421,6 +456,7 @@
     .engine { grid-template-columns: 1fr 1fr; }
     .ideas, .exp { grid-template-columns: 1fr 1fr; }
     .flips { grid-template-columns: 1fr 1fr; }
+    .finds { grid-template-columns: 1fr 1fr; }
     .bento { grid-template-columns: 1fr 1fr; grid-template-areas: "score score" "trial test" "trial comp" "ba ba" "creators es"; }
     .tiles { grid-template-columns: repeat(3, 1fr); }
     .nav-links a.t { display: none; }
@@ -445,6 +481,7 @@
     .marquee img { height: 190px; }
     .ideas, .exp, .flips { grid-template-columns: 1fr; }
     .road { grid-template-columns: 1fr; gap: 6px; }
+    .finds { grid-template-columns: 1fr; } .find.wide { grid-column: auto; }
     .bento { grid-template-columns: 1fr; grid-template-areas: "score" "trial" "test" "comp" "ba" "creators" "es"; }
     .sc { grid-template-columns: 1fr; }
     .minis3 { grid-template-columns: repeat(3, 1fr); }
@@ -476,6 +513,7 @@
     <a class="t" href="#funnel">Funnel</a>
     <a class="t" href="#english">English</a>
     <a class="t" href="#host">Host</a>
+    <a class="t" href="#audit">Findings</a>
     <a class="t" href="#ideas">Ideas</a>
     <a class="t" href="#camera">On camera</a>
     <a class="t" href="#growth">Growth</a>
@@ -697,6 +735,27 @@
         <p>$889K MXN booked that year. I know what it feels like when a listing slips in search and the calendar goes quiet — and what it takes to fix it. That's the story RankBreeze needs told to hosts, by someone they believe.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- FINDINGS -->
+<section class="audit" id="audit">
+  <div class="wrap">
+    <span class="eyebrow">Fresh eyes · I tried RankBreeze</span>
+    <h2>What I noticed <em>in my 14-day trial.</em></h2>
+    <p class="sub">Easy wins I found as a user. Written to help, not to criticize.</p>
+    <div class="filters" role="group" aria-label="Filter findings"><button class="fchip on" type="button" data-f="all">All<i>8</i></button><button class="fchip" type="button" data-f="conv">Conversion<i>2</i></button><button class="fchip" type="button" data-f="act">Activation<i>2</i></button><button class="fchip" type="button" data-f="rev">Revenue<i>1</i></button><button class="fchip" type="button" data-f="trust">Trust<i>2</i></button><button class="fchip" type="button" data-f="seo">SEO<i>1</i></button></div>
+    <div class="finds">
+      <article class="find reveal" data-cat="conv"><div class="top"><span class="ftag conv">Conversion</span><span class="fnum">01</span></div><h3>The trial says $1, but I got in for free</h3><div><span class="k">Noticed</span><p>The sign-up mentions a $1 charge, yet I never paid.</p></div><div class="opp"><span class="k">Opportunity</span><p>Align the copy with the flow (or fix the payment step). Trust starts at step one.</p></div></article>
+      <article class="find reveal" data-cat="act"><div class="top"><span class="ftag act">Activation</span><span class="fnum">02</span></div><h3>14 days, zero emails</h3><div><span class="k">Noticed</span><p>I didn’t get a single email during my trial.</p></div><div class="opp"><span class="k">Opportunity</span><p>An onboarding sequence that gets hosts to sync a listing and see a first win.</p></div></article>
+      <article class="find wide reveal" data-cat="conv"><div class="top"><span class="ftag conv">Conversion</span><span class="fnum">03</span></div><h3>Pricing copy doesn’t match the slider</h3><div><span class="k">Noticed</span><p>With the slider on 7 listings, the text reads “10 listings”, and $6 is per listing, not the total.</p></div><div class="mock"><span class="lbl3">Slider: 7 listings</span><div class="was">“manage your 10 listings with only $6.00 per month”</div><div class="now">7 listings · $6 each · $42/month</div></div><div class="opp"><span class="k">Opportunity</span><p>Make the line dynamic, right where people decide to buy.</p></div></article>
+      <article class="find wide reveal" data-cat="rev"><div class="top"><span class="ftag rev">Revenue</span><span class="fnum">04</span></div><h3>The done-for-you service is hidden</h3><div><span class="k">Noticed</span><p>“Services” is its own tab, with very little copy.</p></div><div class="mock grade"><b>D</b><span>Your listing scored a D.<br><a href="#audit" onclick="return false">Want us to fix it for you? →</a></span></div><div class="opp"><span class="k">Opportunity</span><p>Sell it in the flow, at the exact moment it’s needed.</p></div></article>
+      <article class="find reveal" data-cat="seo"><div class="top"><span class="ftag seo">SEO</span><span class="fnum">05</span></div><h3>The blog stopped in December 2025</h3><div><span class="k">Noticed</span><p>The most recent post is almost a year old.</p></div><div class="opp"><span class="k">Opportunity</span><p>Restart it with host search intent. I’ve built programmatic SEO before (78 pages).</p></div></article>
+      <article class="find reveal" data-cat="trust"><div class="top"><span class="ftag trust">Trust</span><span class="fnum">06</span></div><h3>The help center shows the old plans</h3><div><span class="k">Noticed</span><p>It still lists Starter, Standard and Scaling with a 15% quarterly discount; the app says 10%.</p></div><div class="opp"><span class="k">Opportunity</span><p>Update the docs, so support and billing tell the same story.</p></div></article>
+      <article class="find wide reveal" data-cat="trust"><div class="top"><span class="ftag trust">Trust</span><span class="fnum">07</span></div><h3>“Market Data” is marked “Coming”</h3><div><span class="k">Noticed</span><p>The footer says it’s on the way, but the feature already exists.</p></div><div class="opp"><span class="k">Opportunity</span><p>A quick win: announce it as live (and make it a launch moment).</p></div></article>
+      <article class="find wide reveal" data-cat="act"><div class="top"><span class="ftag act">Activation</span><span class="fnum">08</span></div><h3>Dynamic pricing needs a PMS</h3><div><span class="k">Noticed</span><p>Many small hosts manage straight in Airbnb, with no PMS.</p></div><div class="opp"><span class="k">Opportunity</span><p>Say it clearly before they try it, so it doesn’t turn into frustration and cancellations.</p></div></article>
+    </div>
+    <p class="audit-note">Each one is small. Together, they’re the difference between a trial and a customer.</p>
   </div>
 </section>
 
@@ -965,6 +1024,13 @@
     const r = sl.querySelector('input');
     r.addEventListener('input', () => sl.style.setProperty('--pos', r.value + '%'));
   });
+
+  // Findings filter
+  const chips = [...document.querySelectorAll('.fchip')], finds = [...document.querySelectorAll('.find')];
+  chips.forEach(c => c.addEventListener('click', () => {
+    chips.forEach(x => x.classList.toggle('on', x === c));
+    finds.forEach(f => { const hit = c.dataset.f === 'all' || f.dataset.cat === c.dataset.f; f.classList.toggle('hide', !hit); if (hit) f.classList.add('show'); });
+  }));
 
   // Flip cards: hover on desktop, tap anywhere
   document.querySelectorAll('.flip').forEach(f => f.addEventListener('click', () => f.classList.toggle('on')));

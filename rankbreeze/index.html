@@ -682,7 +682,7 @@
 <body>
 
 <div id="progress" aria-hidden="true"></div>
-<a class="fab" id="fab" href="#plan">🚀 What I'd do in the role</a>
+<a class="fab" id="fab" href="#instagram">🚀 What I'd do in the role</a>
 <nav id="nav">
   <a class="logo" href="#top">Sofía <span>× RankBreeze</span></a>
   <div class="nav-links">
@@ -1331,8 +1331,8 @@
     r.addEventListener('input', () => sl.style.setProperty('--pos', r.value + '%'));
   });
 
-  // Floating "what I'd do in the role" button: visible after the hero, hidden while the plan is on screen
-  const fab = document.getElementById('fab'), hero = document.getElementById('top'), planSec = document.getElementById('plan');
+  // Floating "what I'd do in the role" button: jumps to the Instagram concept (start of the plan block), hidden while it's on screen
+  const fab = document.getElementById('fab'), hero = document.getElementById('top'), planSec = document.getElementById('instagram');
   let inPlan = false;
   new IntersectionObserver(es => es.forEach(e => { inPlan = e.isIntersecting; onFab(); }), { threshold: .05 }).observe(planSec);
   const onFab = () => fab.classList.toggle('on', window.scrollY > hero.offsetHeight * .8 && !inPlan);

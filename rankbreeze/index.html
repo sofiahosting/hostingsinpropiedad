@@ -398,6 +398,25 @@
   .es-nums b { display: block; font-family: 'Playfair Display', serif; font-size: 26px; color: var(--sky-deeper); line-height: 1; }
   .es-nums span { font-size: 12px; color: var(--mid); }
 
+  /* MASTERCLASS CONCEPT (inside the Instagram section) */
+  .mc { display: grid; grid-template-columns: 1.1fr .9fr; gap: 44px; align-items: center; margin-top: 56px; background: #fff; color: var(--dark); border-radius: 28px; padding: 40px; box-shadow: 0 30px 70px rgba(0,0,0,.35); }
+  .igs .mc .eyebrow { color: #A161FF; }
+  .mc h3 { font-family: 'Lexend Deca', sans-serif; font-weight: 800; font-size: clamp(28px, 3.2vw, 40px); line-height: 1.08; letter-spacing: -.5px; color: #1E2043; margin: 4px 0 12px; }
+  .mc-copy > p { font-size: 16px; color: var(--mid); }
+  .mc-flow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 16px 0 6px; font-size: 13px; font-weight: 600; }
+  .mc-flow span { background: #F3ECFF; color: #4B4FA8; border-radius: 99px; padding: 6px 12px; }
+  .mc-flow span:last-child { background: #FF8A0E; color: #05053A; }
+  .mc-flow i { font-style: normal; color: #A161FF; font-weight: 700; }
+  .mc-k { margin-top: 20px; font-size: 12px !important; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #4B4FA8 !important; }
+  .heads { list-style: none; margin-top: 8px; display: grid; gap: 6px; }
+  .heads li { display: flex; gap: 10px; align-items: flex-start; font-size: 14.5px; color: #1E2043; padding: 8px 12px; border-radius: 12px; background: #F7F7FB; }
+  .heads li span { flex: none; width: 22px; height: 22px; border-radius: 6px; background: #fff; color: #4B4FA8; font-size: 12px; font-weight: 700; display: grid; place-items: center; box-shadow: 0 0 0 1px #E6E3F5; }
+  .heads li.on { background: #F3ECFF; font-weight: 600; }
+  .heads li.on span { background: #A161FF; color: #fff; box-shadow: none; }
+  .mc-poster img { width: 100%; border-radius: 18px; box-shadow: 0 24px 50px rgba(30,32,67,.3); transform: rotate(1.5deg); transition: transform .4s; }
+  .mc-poster img:hover { transform: rotate(0) scale(1.02); }
+  .mc-poster figcaption { text-align: center; font-size: 13px; color: var(--mid); margin-top: 14px; }
+
   /* FIT TABLE */
   .fit { display: grid; gap: 10px; margin-top: 36px; }
   .row { display: grid; grid-template-columns: 1fr 1.5fr; gap: 0; border-radius: 16px; overflow: hidden; border: 1px solid var(--beige-dark); background: #fff; }
@@ -556,7 +575,7 @@
 
   @media (max-width: 960px) {
     .num-grid { grid-template-columns: repeat(3, 1fr); }
-    .host-grid, .dash, .cases, .es, .proofs { grid-template-columns: 1fr; gap: 28px; }
+    .host-grid, .dash, .cases, .es, .proofs, .mc { grid-template-columns: 1fr; gap: 28px; }
     .steps { grid-template-columns: 1fr 1fr; }
     .en-grid { grid-template-columns: 1fr 1fr; }
     .step::after { display: none; }
@@ -597,6 +616,7 @@
     .ig-stage > * { scroll-snap-align: center; }
     .kit { grid-column: auto; order: 3; width: 300px; }
     .phone { width: 300px; height: 620px; }
+    .mc { padding: 22px; }
     .bento { grid-template-columns: 1fr; grid-template-areas: "score" "creators"; }
     .pbento { grid-template-columns: 1fr; grid-template-areas: "trial" "test" "comp" "ba" "es"; }
     .sc { grid-template-columns: 1fr; }
@@ -830,6 +850,17 @@
         <div class="ract"><div>♡<small>Like</small></div><div>💬<small>Comment</small></div><div>➤<small>Share</small></div><div>⋯</div></div>
         <div class="rinfo"><div class="who"><i></i>rankbreeze<span>Follow</span></div>Your listing didn't get worse. It got buried. Here's how to check yours 👇<br><span class="cta">Check your rank free →</span><div class="aud">♫ Original audio · rankbreeze</div></div>
       </div></div>
+    </div>
+    <div class="mc reveal">
+      <div class="mc-copy">
+        <span class="eyebrow">Concept · a masterclass for Rankbreeze</span>
+        <h3>A free masterclass that ends in a trial.</h3>
+        <p>Teach the 3 ranking levers live, show them inside Rankbreeze, then open the trial. The same system as my $20K launch, in your brand.</p>
+        <div class="mc-flow"><span>Free class</span><i>→</i><span>Live demo</span><i>→</i><span>Trial offer</span><i>→</i><span>Onboarding</span></div>
+        <p class="mc-k">Headlines I'd A/B test</p>
+        <ol class="heads"><li class="on"><span>A</span>Back to page 1: 3 data-backed fixes to get your Airbnb booked more</li><li><span>B</span>Why your Airbnb isn’t showing up (and how to fix it in 30 days)</li><li><span>C</span>Page 14 → Page 2: how hosts climb Airbnb search</li><li><span>D</span>Your listing didn’t get worse. It got buried.</li><li><span>E</span>Stop guessing: the price, photos and title that actually book</li><li><span>F</span>The 3 ranking levers Airbnb doesn’t tell you about</li></ol>
+      </div>
+      <figure class="mc-poster"><img src="/assets/rankbreeze/masterclass-poster.jpg" alt="Concept Instagram post for a free Rankbreeze masterclass: Back to page 1, 3 data-backed fixes to get your Airbnb booked more, live today with Sofía Retif" loading="lazy"><figcaption>The launch post, in your brand</figcaption></figure>
     </div>
     <p class="ig-note">Concept mockup made for this application. Not an official Rankbreeze account or post.</p>
   </div>

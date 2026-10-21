@@ -52,8 +52,8 @@
   .logo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 19px; color: #fff; text-decoration: none; }
   .logo span { font-style: italic; font-weight: 500; }
   nav.scrolled .logo { color: var(--sky-deeper); }
-  .nav-links { display: flex; gap: 18px; align-items: center; }
-  .nav-links a.t { font-size: 13.5px; font-weight: 500; color: rgba(255,255,255,.85); text-decoration: none; }
+  .nav-links { display: flex; gap: 15px; align-items: center; }
+  .nav-links a.t { font-size: 13px; font-weight: 500; color: rgba(255,255,255,.85); text-decoration: none; }
   nav.scrolled .nav-links a.t { color: var(--sky-deep); }
   .nav-cta { font-size: 13px; font-weight: 600; color: #fff; text-decoration: none; border: 1.5px solid rgba(255,255,255,.5); padding: 8px 18px; border-radius: 99px; }
   nav.scrolled .nav-cta { color: var(--sky-deep); border-color: var(--sky-deep); }
@@ -417,6 +417,37 @@
   .mc-poster img:hover { transform: rotate(0) scale(1.02); }
   .mc-poster figcaption { text-align: center; font-size: 13px; color: var(--mid); margin-top: 14px; }
 
+  /* HOST JOURNEY */
+  .jr { background: var(--white); }
+  .jr-road { position: relative; height: 170px; margin-top: 36px; }
+  .jr-path { position: absolute; left: 0; right: 0; top: 10px; width: 100%; height: 120px; }
+  .jr-path path { fill: none; stroke: var(--sky-light); stroke-width: 4; stroke-dasharray: 10 10; animation: dash 30s linear infinite; }
+  @keyframes dash { to { stroke-dashoffset: -400; } }
+  .jr-stop { position: absolute; left: var(--x); top: 22px; transform: translateX(-50%); background: none; border: 0; padding: 0; cursor: pointer; font: inherit; display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--mid); }
+  .jr-dot { width: 64px; height: 64px; border-radius: 50%; background: #fff; border: 3px solid var(--sky-light); display: grid; place-items: center; font-size: 28px; box-shadow: 0 10px 24px rgba(35,75,107,.12); transition: transform .3s, border-color .3s, background .3s; }
+  .jr-stop b { font-size: 14px; white-space: nowrap; }
+  .jr-stop:hover .jr-dot { transform: translateY(-4px); }
+  .jr-stop.on .jr-dot { border-color: var(--sky-deep); background: var(--sky-pale); transform: scale(1.12); }
+  .jr-stop.on b { color: var(--sky-deeper); }
+  .jr-stop:focus-visible { outline: 3px solid var(--sky); outline-offset: 4px; border-radius: 12px; }
+  .jr-car { position: absolute; top: -8px; left: 10%; transform: translateX(-50%); font-size: 26px; transition: left .7s cubic-bezier(.2,.8,.2,1); filter: drop-shadow(0 4px 6px rgba(0,0,0,.15)); }
+  .jr-panels { margin-top: 10px; }
+  .jr-panel { display: none; background: var(--sky-pale); border-radius: 24px; padding: 28px; }
+  .jr-panel.on { display: block; animation: up .45s ease both; }
+  .jr-stage { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fff; background: var(--sky-deep); border-radius: 99px; padding: 4px 11px; }
+  .jr-head h3 { font-family: 'Playfair Display', serif; font-size: clamp(24px, 3vw, 34px); color: var(--sky-deeper); margin: 10px 0 4px; }
+  .jr-q { font-family: 'Playfair Display', serif; font-style: italic; font-size: 18px; color: var(--sky-deep); }
+  .jr-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 20px; }
+  .jr-c { background: #fff; border-radius: 16px; padding: 16px; }
+  .jr-c span { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 6px; }
+  .jr-c p { font-size: 14.5px; color: var(--dark); line-height: 1.45; }
+  .jr-c.rb { background: #1E2043; } .jr-c.rb span { color: #5DDDF6; } .jr-c.rb p { color: #fff; font-weight: 600; }
+  .jr-c.lead { background: var(--gold); } .jr-c.lead span { color: var(--sky-deeper); } .jr-c.lead p { color: var(--sky-deeper); font-weight: 700; font-size: 16px; }
+  .jr-funnel { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; justify-content: center; margin-top: 22px; font-size: 13px; font-weight: 600; }
+  .jr-funnel span { background: var(--sky-pale); color: var(--sky-deep); border-radius: 99px; padding: 6px 12px; transition: background .3s, color .3s; }
+  .jr-funnel span.on { background: var(--sky-deep); color: #fff; }
+  .jr-funnel i { font-style: normal; color: var(--sky); }
+
   /* FIT TABLE */
   .fit { display: grid; gap: 10px; margin-top: 36px; }
   .row { display: grid; grid-template-columns: 1fr 1.5fr; gap: 0; border-radius: 16px; overflow: hidden; border: 1px solid var(--beige-dark); background: #fff; }
@@ -576,6 +607,7 @@
   @media (max-width: 960px) {
     .num-grid { grid-template-columns: repeat(3, 1fr); }
     .host-grid, .dash, .cases, .es, .proofs, .mc { grid-template-columns: 1fr; gap: 28px; }
+    .jr-cards { grid-template-columns: 1fr 1fr; } .jr-c.lead { grid-column: 1 / -1; }
     .steps { grid-template-columns: 1fr 1fr; }
     .en-grid { grid-template-columns: 1fr 1fr; }
     .step::after { display: none; }
@@ -617,6 +649,12 @@
     .kit { grid-column: auto; order: 3; width: 300px; }
     .phone { width: 300px; height: 620px; }
     .mc { padding: 22px; }
+    .jr-road { height: auto; display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding: 30px 2px 6px; margin-right: -16px; }
+    .jr-path, .jr-car { display: none; }
+    .jr-stop { position: static; transform: none; flex: none; }
+    .jr-dot { width: 54px; height: 54px; font-size: 24px; }
+    .jr-panel { padding: 20px; }
+    .jr-cards { grid-template-columns: 1fr; }
     .bento { grid-template-columns: 1fr; grid-template-areas: "score" "creators"; }
     .pbento { grid-template-columns: 1fr; grid-template-areas: "trial" "test" "comp" "ba" "es"; }
     .sc { grid-template-columns: 1fr; }
@@ -634,7 +672,7 @@
   }
   @media (prefers-reduced-motion: reduce) {
     .spark path { transition: none; stroke-dashoffset: 0; }
-    .loop svg { animation: none !important; }
+    .loop svg, .jr-path path { animation: none !important; }
     .hook, .subs span { animation: none !important; }
     .marquee, .float, .tick-track, .proofs figure:first-child img, .step::after { animation: none !important; }
     .flip-in, .reveal { transition: none; }
@@ -653,6 +691,7 @@
     <a class="t" href="#growth">Growth</a>
     <a class="t" href="#english">English</a>
     <a class="t" href="#instagram">Instagram</a>
+    <a class="t" href="#journey">Journey</a>
     <a class="t" href="#ideas">Ideas</a>
     <a class="t" href="#host">Host</a>
     <a class="t" href="#camera">On camera</a>
@@ -863,6 +902,73 @@
       <figure class="mc-poster"><img src="/assets/rankbreeze/masterclass-poster.jpg?v=9" alt="Concept Instagram post for a free Rankbreeze masterclass: Why your Airbnb isn’t showing up (and how to fix it in 30 days), live today with Sofía Retif" loading="lazy"><figcaption>The launch post, in your brand</figcaption></figure>
     </div>
     <p class="ig-note">Concept mockup made for this application. Not an official Rankbreeze account or post.</p>
+  </div>
+</section>
+
+<!-- HOST JOURNEY -->
+<section class="jr" id="journey">
+  <div class="wrap">
+    <span class="eyebrow">The host journey</span>
+    <h2>Content for every stage. <em>A lead at every step.</em></h2>
+    <p class="sub">From the first listing to a portfolio: hosts see themselves in the content, and each stage has its own webinar, lead magnet and next step. Tap a stage.</p>
+    <div class="jr-road reveal">
+      <svg class="jr-path" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 80 C 150 10, 250 110, 400 60 S 650 0, 800 60 S 950 90, 1000 40"/></svg>
+      <div class="jr-car" id="jrCar" aria-hidden="true">🏠</div>
+      <button class="jr-stop on" type="button" data-i="0" style="--x:10%"><span class="jr-dot">🚀</span><b>1. Publish</b></button><button class="jr-stop" type="button" data-i="1" style="--x:30%"><span class="jr-dot">🔍</span><b>2. Invisible</b></button><button class="jr-stop" type="button" data-i="2" style="--x:50%"><span class="jr-dot">🛠️</span><b>3. Optimize</b></button><button class="jr-stop" type="button" data-i="3" style="--x:70%"><span class="jr-dot">📈</span><b>4. Grow</b></button><button class="jr-stop" type="button" data-i="4" style="--x:90%"><span class="jr-dot">🏢</span><b>5. Scale</b></button>
+    </div>
+    <div class="jr-panels reveal">
+        <div class="jr-panel on" data-i="0">
+          <div class="jr-head"><span class="jr-stage">Awareness</span><h3>My first listing is live</h3><p class="jr-q">“I just listed my place. Now what?”</p></div>
+          <div class="jr-cards">
+            <div class="jr-c"><span>🎬 Content</span><p>Carousel: 5 things to set before you hit publish. Reel: your first 72 hours on Airbnb.</p></div>
+            <div class="jr-c"><span>🎙️ Webinar</span><p>Launch your first listing right</p></div>
+            <div class="jr-c"><span>🎁 Lead magnet</span><p>Launch checklist (PDF)</p></div>
+            <div class="jr-c rb"><span>⚡ Rankbreeze solves it</span><p>Listing optimization score</p></div>
+            <div class="jr-c lead"><span>🎯 Lead we capture</span><p>Email</p></div>
+          </div>
+        </div>
+        <div class="jr-panel" data-i="1">
+          <div class="jr-head"><span class="jr-stage">Interest</span><h3>Why isn’t it showing up?</h3><p class="jr-q">“I’m live, but nobody finds me.”</p></div>
+          <div class="jr-cards">
+            <div class="jr-c"><span>🎬 Content</span><p>Reel: your listing didn’t get worse, it got buried. Carousel: how Airbnb ranks you.</p></div>
+            <div class="jr-c"><span>🎙️ Webinar</span><p>Why your Airbnb isn’t showing up (and how to fix it in 30 days)</p></div>
+            <div class="jr-c"><span>🎁 Lead magnet</span><p>Free rank check</p></div>
+            <div class="jr-c rb"><span>⚡ Rankbreeze solves it</span><p>Search rankings</p></div>
+            <div class="jr-c lead"><span>🎯 Lead we capture</span><p>Rank check sign-up</p></div>
+          </div>
+        </div>
+        <div class="jr-panel" data-i="2">
+          <div class="jr-head"><span class="jr-stage">Trial</span><h3>Views, but no bookings</h3><p class="jr-q">“People see it. They just don’t book.”</p></div>
+          <div class="jr-cards">
+            <div class="jr-c"><span>🎬 Content</span><p>Series: I tested one photo for 30 days. “Rate my listing” episodes.</p></div>
+            <div class="jr-c"><span>🎙️ Webinar</span><p>Live listing teardown</p></div>
+            <div class="jr-c"><span>🎁 Lead magnet</span><p>9-point listing audit</p></div>
+            <div class="jr-c rb"><span>⚡ Rankbreeze solves it</span><p>A/B testing + booking funnel</p></div>
+            <div class="jr-c lead"><span>🎯 Lead we capture</span><p>Free trial</p></div>
+          </div>
+        </div>
+        <div class="jr-panel" data-i="3">
+          <div class="jr-head"><span class="jr-stage">Conversion</span><h3>Booked, but priced right?</h3><p class="jr-q">“My calendar is full. Am I leaving money on the table?”</p></div>
+          <div class="jr-cards">
+            <div class="jr-c"><span>🎬 Content</span><p>Reel: stop guessing your price. Carousel: price for peak season.</p></div>
+            <div class="jr-c"><span>🎙️ Webinar</span><p>Price for peak season</p></div>
+            <div class="jr-c"><span>🎁 Lead magnet</span><p>Seasonal pricing calendar</p></div>
+            <div class="jr-c rb"><span>⚡ Rankbreeze solves it</span><p>Dynamic pricing + market data</p></div>
+            <div class="jr-c lead"><span>🎯 Lead we capture</span><p>Paid plan</p></div>
+          </div>
+        </div>
+        <div class="jr-panel" data-i="4">
+          <div class="jr-head"><span class="jr-stage">Expansion</span><h3>From 1 to 10+ listings</h3><p class="jr-q">“I want more properties without more chaos.”</p></div>
+          <div class="jr-cards">
+            <div class="jr-c"><span>🎬 Content</span><p>Story: what managing 33 listings taught me. Carousel: systems that scale.</p></div>
+            <div class="jr-c"><span>🎙️ Webinar</span><p>From 1 to 10 listings: systems that scale</p></div>
+            <div class="jr-c"><span>🎁 Lead magnet</span><p>Scaling playbook</p></div>
+            <div class="jr-c rb"><span>⚡ Rankbreeze solves it</span><p>Multi-listing plans + done-for-you service</p></div>
+            <div class="jr-c lead"><span>🎯 Lead we capture</span><p>Demo call / upgrade</p></div>
+          </div>
+        </div>
+    </div>
+    <div class="jr-funnel reveal"><span>Awareness</span><i>→</i><span>Interest</span><i>→</i><span>Trial</span><i>→</i><span>Conversion</span><i>→</i><span>Expansion</span></div>
   </div>
 </section>
 
@@ -1255,6 +1361,24 @@
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) { rv.pause(); subs.innerHTML = 'It got <em>buried.</em>'; }
     else requestAnimationFrame(render);
   }
+
+  // Host journey: tap a stage (auto-tour until the visitor interacts)
+  const jrStops = [...document.querySelectorAll('.jr-stop')], jrPanels = [...document.querySelectorAll('.jr-panel')], jrCar = document.getElementById('jrCar'), jrFun = [...document.querySelectorAll('.jr-funnel span')];
+  let jrI = 0, jrTimer = null;
+  const jrGo = i => {
+    jrI = i;
+    jrStops.forEach((b, k) => { b.classList.toggle('on', k === i); b.setAttribute('aria-pressed', k === i); });
+    jrPanels.forEach((p, k) => p.classList.toggle('on', k === i));
+    jrFun.forEach((f, k) => f.classList.toggle('on', k === i));
+    if (jrCar) jrCar.style.left = jrStops[i].style.getPropertyValue('--x');
+  };
+  jrStops.forEach((b, i) => b.addEventListener('click', () => { clearInterval(jrTimer); jrGo(i); }));
+  document.querySelector('.jr-panels')?.addEventListener('pointerenter', () => clearInterval(jrTimer));
+  const jrSec = document.getElementById('journey');
+  if (jrSec && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting) { o.disconnect(); jrTimer = setInterval(() => jrGo((jrI + 1) % jrStops.length), 4500); } }), { threshold: .4 }).observe(jrSec);
+  }
+  jrGo(0);
 
   // Findings filter
   const chips = [...document.querySelectorAll('.fchip')], finds = [...document.querySelectorAll('.find')];

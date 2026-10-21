@@ -943,13 +943,13 @@
   <div class="wrap">
     <span class="eyebrow">Already done, ready for RankBreeze</span>
     <h2>Things I've already done <em>that fit RankBreeze.</em></h2>
-    <p class="sub">Formats I've run before. Tap the videos for sound.</p>
+    <p class="sub">Formats I've run before.</p>
     <div class="bento">
       <div class="bx score reveal">
         <span class="tag">A series I ran on Instagram (in Spanish)</span>
         <h3>Real Airbnbs, scored &amp; analyzed on camera</h3>
-        <p>Listing audits with a score out of 10, plus "worth it or not?" breakdowns: revenue, costs, what's really left, and the fixes. Tap a video for sound.</p>
-        <div class="minis3"><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-4.mp4" poster="/assets/rankbreeze/rate-4.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>A student’s listing, scored 6.0/10</span></div><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-1.mp4" poster="/assets/rankbreeze/rate-1.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>Colonia Americana: worth it?</span></div><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-2.mp4" poster="/assets/rankbreeze/rate-2.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>Looks luxe, loses $12.5K MXN/mo</span></div><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-3.mp4" poster="/assets/rankbreeze/rate-3.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div><span>What a GDL Airbnb really makes</span></div></div>
+        <p>Listing audits with a score out of 10, plus "worth it or not?" breakdowns: revenue, costs, what's really left, and the fixes.</p>
+        <div class="minis3"><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-4.mp4" poster="/assets/rankbreeze/rate-4.jpg" muted loop playsinline preload="none" data-silent></video></div><span>A student’s listing, scored 6.0/10</span></div><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-1.mp4" poster="/assets/rankbreeze/rate-1.jpg" muted loop playsinline preload="none" data-silent></video></div><span>Colonia Americana: worth it?</span></div><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-2.mp4" poster="/assets/rankbreeze/rate-2.jpg" muted loop playsinline preload="none" data-silent></video></div><span>Looks luxe, loses $12.5K MXN/mo</span></div><div class="mini"><div class="reel"><video src="/assets/rankbreeze/rate-3.mp4" poster="/assets/rankbreeze/rate-3.jpg" muted loop playsinline preload="none" data-silent></video></div><span>What a GDL Airbnb really makes</span></div></div>
         <div class="sc-card">
           <div class="sc-top"><div class="ring" id="ring"><b>6.0<small>/ 10</small></b></div><p><b>A real audit, on camera:</b> a student's first listing in Asunción, Paraguay scored 6.0/10. The gallery got a 4/10, so the photos were fix #1.</p></div>
           <p class="sc-rb"><b>At RankBreeze:</b> the same format, powered by RankBreeze data, ending with "check your own score".</p>
@@ -1408,9 +1408,10 @@
   }), { threshold: .5 });
   vids.forEach(v => {
     vio.observe(v);
+    if (v.hasAttribute('data-silent')) return;  // listing-analysis clips stay muted (Spanish audio)
     v.addEventListener('click', () => {
       const on = v.muted;
-      vids.forEach(o => { o.muted = true; o.nextElementSibling.textContent = '🔇'; });
+      vids.forEach(o => { o.muted = true; if (o.nextElementSibling) o.nextElementSibling.textContent = '🔇'; });
       v.muted = !on; v.nextElementSibling.textContent = v.muted ? '🔇' : '🔊';
       v.play().catch(() => {});
     });

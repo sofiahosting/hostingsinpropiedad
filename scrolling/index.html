@@ -53,11 +53,11 @@
   nav.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line);padding:11px 28px}
   .logo{font-family:var(--display);font-size:28px;text-decoration:none;letter-spacing:.02em;line-height:1}
   .logo span{background:var(--black);color:var(--yellow);padding:2px 8px 0;border-radius:6px;margin-left:4px}
-  .nav-links{display:flex;align-items:center;gap:20px}
+  .nav-links{display:flex;align-items:center;gap:16px}
   .nav-links .t{font-size:14px;font-weight:500;text-decoration:none;color:var(--grey);transition:color .2s}
   .nav-links .t:hover{color:var(--black)}
   .nav-cta{background:var(--black);color:var(--white);padding:9px 18px;border-radius:999px;font-size:14px;font-weight:600;text-decoration:none}
-  @media (max-width:1060px){.nav-links .t{display:none}}
+  @media (max-width:1120px){.nav-links .t{display:none}}
 
   /* floating button */
   .fab{position:fixed;right:20px;bottom:20px;z-index:55;background:var(--black);color:var(--yellow);font-weight:700;padding:14px 20px;border-radius:999px;text-decoration:none;box-shadow:0 12px 30px rgba(0,0,0,.25);transition:opacity .3s,transform .3s;display:flex;align-items:center;gap:8px}
@@ -188,6 +188,66 @@
   .flip.bonus .front{background:var(--yellow-soft);border-color:#f1dc6a}
   @media (max-width:900px){.fit-grid{grid-template-columns:1fr 1fr}}
   @media (max-width:600px){.fit-grid{grid-template-columns:1fr}}
+
+  /* PLUG INTO SCROLLING */
+  .rrr{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+  .r3{border-radius:22px;padding:26px;background:var(--card);border:1px solid var(--line-dark);display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden}
+  .r3 .big{font-family:var(--display);font-size:64px;line-height:.85;color:var(--yellow)}
+  .r3 .what{font-size:14px;color:var(--grey2)}
+  .r3 .ask{margin-top:auto;background:#2a2a2a;border-radius:14px;padding:14px 16px;font-size:14.5px;color:#eee}
+  .r3 .ask b{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--yellow);margin-bottom:4px}
+  .r3 .num3{position:absolute;right:18px;top:14px;font-family:var(--display);font-size:22px;color:#444}
+  .verticals{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:22px;font-size:14px;color:var(--grey2)}
+  .verticals span{border:1px solid var(--line-dark);color:var(--white);padding:6px 12px;border-radius:999px;font-weight:600;font-size:13px}
+  .checklist{margin-top:28px;background:var(--yellow);color:var(--black);border-radius:22px;padding:22px 26px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
+  .checklist h3{font-family:var(--display);font-weight:400;font-size:30px;line-height:1;margin-right:8px}
+  .checklist span{font-size:14px;font-weight:600}
+  .checklist span::before{content:"✓";display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--black);color:var(--yellow);font-size:11px;margin-right:6px;vertical-align:1px}
+  .cases-h{margin-top:56px;display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}
+  .cases-h h3{font-family:var(--display);font-weight:400;font-size:clamp(34px,4.4vw,52px);line-height:.95}
+  .cases-h h3 em{font-style:normal;color:var(--yellow)}
+  .cases-h p{font-size:14px;color:var(--grey2)}
+  .sc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+  .scase{background:var(--white);color:var(--black);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:6px}
+  .scase .tag{font-size:12px;font-weight:600;color:var(--grey)}
+  .scase b{font-family:var(--display);font-weight:400;font-size:62px;line-height:.9}
+  .scase .m{font-size:15px;font-weight:600}
+  .scase .who{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-size:14px;font-weight:700}
+  .scase .who small{display:block;font-weight:500;color:var(--grey)}
+  @media (max-width:860px){.rrr,.sc{grid-template-columns:1fr}}
+
+  /* CONTRACTS */
+  .rights{margin-top:56px;display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;background:var(--black);color:var(--white);border-radius:24px;padding:32px}
+  .rights h3{font-family:var(--display);font-weight:400;font-size:clamp(36px,4.4vw,52px);line-height:.95}
+  .rights h3 em{font-style:normal;color:var(--yellow)}
+  .rights .sub{color:var(--grey2);font-size:15px;margin-top:10px}
+  .rights ul{list-style:none;display:grid;gap:12px}
+  .rights li{display:grid;grid-template-columns:30px 1fr;gap:12px;font-size:15px;color:#ddd}
+  .rights li .k{width:30px;height:30px;border-radius:9px;background:var(--yellow);color:var(--black);display:grid;place-items:center;font-weight:800;font-size:13px}
+  .rights li b{color:var(--white)}
+  .terms{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+  .terms i{font-style:normal;font-size:12px;font-weight:600;border:1px solid #444;border-radius:999px;padding:3px 9px;color:#eee}
+  .rflow{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding-top:20px;border-top:1px solid var(--line-dark);font-size:13px;font-weight:600}
+  .rflow span{background:#1f1f1f;border:1px solid var(--line-dark);padding:7px 12px;border-radius:999px}
+  .rflow span.y{background:var(--yellow);color:var(--black);border-color:var(--yellow)}
+  .rflow i{font-style:normal;color:var(--grey)}
+  @media (max-width:860px){.rights{grid-template-columns:1fr;padding:24px}}
+
+  /* CONTENT FOR SCROLLING */
+  .cf-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
+  .cf .tile{aspect-ratio:9/14;border-radius:18px;background:var(--black);color:var(--white);padding:18px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;transition:transform .3s}
+  .cf:hover .tile{transform:translateY(-6px) rotate(-1deg)}
+  .cf .tile::after{content:"";position:absolute;inset:auto -30% -40% -30%;height:60%;background:radial-gradient(closest-side,rgba(255,212,0,.35),transparent);pointer-events:none}
+  .cf .tile .top{display:flex;justify-content:space-between;font-size:12px;font-weight:600;color:var(--grey2)}
+  .cf .tile .hk{font-family:var(--display);font-size:clamp(28px,2.6vw,36px);line-height:.95;position:relative;z-index:1}
+  .cf .tile .hk em{font-style:normal;color:var(--yellow)}
+  .cf .tile .pl{width:40px;height:40px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;position:relative;z-index:1}
+  .cf h3{font-size:17px;margin-top:14px}
+  .cf p{font-size:14px;color:var(--grey);margin-top:4px}
+  .cf .aud{display:inline-block;margin-top:10px;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--yellow-soft)}
+  .cf .aud.cr{background:var(--black);color:var(--yellow)}
+  @media (max-width:960px){.cf-grid{grid-template-columns:1fr 1fr}}
+  @media (max-width:480px){.cf-grid{grid-template-columns:1fr}.cf .tile{aspect-ratio:4/3}}
 
   /* RESULTS (Bonzo) */
   .res-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;margin-top:36px}
@@ -334,9 +394,10 @@
     <a class="t" href="#webinar">Webinar</a>
     <a class="t" href="#ugc">UGC</a>
     <a class="t" href="#fit">Why me</a>
-    <a class="t" href="#results">Results</a>
+    <a class="t" href="#plug">Plug-in</a>
     <a class="t" href="#system">Creator system</a>
     <a class="t" href="#community">Community</a>
+    <a class="t" href="#content">Content</a>
     <a class="t" href="#plan">90 days</a>
     <a class="t" href="#experience">Experience</a>
     <a class="nav-cta" href="mailto:sofiaretif@gmail.com?subject=UGC%20Manager%20%E2%80%94%20Scrolling">Email me</a>
@@ -432,15 +493,15 @@
         <p class="sub">App demos, tutorials, talking heads and tours, for paying brands. Tap any video for sound.</p>
       </div>
       <div class="tabs" role="tablist" aria-label="Filter by language">
-        <button class="on" data-f="all" role="tab">All <small>9</small></button>
+        <button class="on" data-f="all" role="tab">All <small>11</small></button>
         <button data-f="en" role="tab">English <small>4</small></button>
-        <button data-f="es" role="tab">Español <small>5</small></button>
+        <button data-f="es" role="tab">Español <small>7</small></button>
       </div>
     </div>
 
     <div class="ugc-grid">
       <article class="ucard reveal" data-l="es">
-        <div class="reel"><span class="brand">Canva</span><span class="lang">ES</span><video src="/assets/portfolio/clip-5.mp4" poster="/assets/portfolio/clip-5.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div>
+        <div class="reel"><span class="brand">Canva</span><span class="lang">ES</span><video src="/assets/scrolling/canva-links.mp4" poster="/assets/scrolling/canva-links.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div>
         <h3>How to add hyperlinks in Canva</h3>
         <p>Reply-to-a-comment tutorial: a real host guide, built step by step in the app.</p>
         <div class="fmt"><span class="k">App demo</span><span>Tutorial</span><span>Screen + face</span></div>
@@ -458,6 +519,12 @@
         <div class="fmt"><span class="k">Paid ad</span><span>Talking head</span><span>US audience</span></div>
       </article>
       <article class="ucard reveal" data-l="es">
+        <div class="reel"><span class="brand">Canva</span><span class="lang">ES</span><video src="/assets/scrolling/canva-automate.mp4" poster="/assets/scrolling/canva-automate.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div>
+        <h3>Automate your Airbnb with one guest guide</h3>
+        <p>Pain-point hook, then the template on screen: arrival, Wi-Fi, tips and house rules.</p>
+        <div class="fmt"><span class="k">Talking head</span><span>Template offer</span></div>
+      </article>
+      <article class="ucard reveal" data-l="es">
         <div class="reel"><span class="brand">Las Rosas Square</span><span class="lang">ES</span><video src="/assets/portfolio/clip-3.mp4" poster="/assets/portfolio/clip-3.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div>
         <h3>Before / after: the apartment tour</h3>
         <p>Hospitality tour with a POV hook, quick cuts and on-screen text.</p>
@@ -468,6 +535,12 @@
         <h3>Report your rental income, avoid the fines</h3>
         <p>A dry compliance topic, made simple for foreign owners.</p>
         <div class="fmt"><span class="k">Paid ad</span><span>Explainer</span></div>
+      </article>
+      <article class="ucard reveal" data-l="es">
+        <div class="reel"><span class="brand">Canva</span><span class="lang">ES</span><video src="/assets/scrolling/canva-guide.mp4" poster="/assets/scrolling/canva-guide.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div>
+        <h3>Building a guest manual in Canva</h3>
+        <p>Episode 11 of a series: check-in steps and house manual, built live on a tablet.</p>
+        <div class="fmt"><span class="k">App demo</span><span>Series</span><span>Screen + face</span></div>
       </article>
       <article class="ucard reveal" data-l="es">
         <div class="reel"><span class="brand">Las Rosas Square</span><span class="lang">ES</span><video src="/assets/portfolio/clip-4.mp4" poster="/assets/portfolio/clip-4.jpg" muted loop playsinline preload="none"></video><span class="snd">🔇</span></div>
@@ -538,10 +611,38 @@
   </div>
 </section>
 
-<!-- RESULTS -->
-<section id="results" style="padding-top:24px">
+<!-- PLUG INTO SCROLLING -->
+<section class="dark" id="plug">
   <div class="wrap">
-    <span class="eyebrow">04 · Performance, not views · Bonzo</span>
+    <span class="eyebrow">04 · How I'd plug into Scrolling</span>
+    <h2>Recycle. Remix. Remake. <em>I'd keep it fed.</em></h2>
+    <p class="sub">Your approach turns creator footage into many more ads with faceless UGC, AI and motion design. My job would be to make sure every creator delivers footage that's built to be remixed.</p>
+    <div class="verticals">Built for <span>Mobile games</span><span>Subscription apps</span> · brands like <span>Disney</span><span>Hasbro</span><span>Crayola</span><span>PikPok</span><span>Codeway</span></div>
+    <div class="rrr">
+      <div class="r3 reveal"><span class="num3">01</span><div class="big">Recycle</div><p class="what">Re-cut what already works into fresh versions.</p><div class="ask"><b>What I'd get from creators</b>Clean raw footage: no burned-in captions or music, every take labeled.</div></div>
+      <div class="r3 reveal"><span class="num3">02</span><div class="big">Remix</div><p class="what">Faceless edits and AI versions built from the same shoot.</p><div class="ask"><b>What I'd get from creators</b>Faceless shots: hands, screen recordings and voiceover as separate files.</div></div>
+      <div class="r3 reveal"><span class="num3">03</span><div class="big">Remake</div><p class="what">New angles, motion design and animation on top.</p><div class="ask"><b>What I'd get from creators</b>Multiple hooks per concept, so one shoot becomes many tests.</div></div>
+    </div>
+    <div class="checklist reveal">
+      <h3>Creator delivery checklist</h3>
+      <span>Raw files, no captions</span><span>3+ hooks per script</span><span>Hands &amp; screen B-roll</span><span>Separate VO track</span><span>9:16, good light &amp; audio</span><span>Usage rights signed</span>
+    </div>
+    <div class="cases-h">
+      <h3>Results I'd want <em>to help repeat.</em></h3>
+      <p>Your case studies, from scrolling.media</p>
+    </div>
+    <div class="sc">
+      <div class="scase reveal"><span class="tag">Mobile game · UGC</span><b data-count="1" data-fmt="{}M+">1M+</b><span class="m">downloads in 6 weeks</span><div class="who">SORRY! World<small>Gameberry Labs</small></div></div>
+      <div class="scase reveal"><span class="tag">Kids gaming app · UGC &amp; AI</span><b data-count="69" data-fmt="{}%">69%</b><span class="m">lower cost per trial</span><div class="who">TruPlay Games<small>Subscription app</small></div></div>
+      <div class="scase reveal"><span class="tag">Mobile game · UGC &amp; animated</span><b data-count="40" data-fmt="+{}%">+40%</b><span class="m">higher ROAS, 2× monthly purchases</span><div class="who">Post Apo Tycoon<small>Powerplay</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section id="results">
+  <div class="wrap">
+    <span class="eyebrow">05 · Performance, not views · Bonzo</span>
     <h2>Same budget. <em>10× cheaper leads.</em></h2>
     <div class="res-wrap">
       <div class="res-card reveal">
@@ -571,7 +672,7 @@
 <!-- SYSTEM -->
 <section id="system" style="background:var(--surface)">
   <div class="wrap">
-    <span class="eyebrow">05 · How I'd run 50+ creators a month</span>
+    <span class="eyebrow">06 · How I'd run 50+ creators a month</span>
     <h2>Seven stages. <em>One number each.</em></h2>
     <p class="sub">Tap a stage. A starting point to align with your current process, not a replacement for it.</p>
     <div class="pipe" id="pipe">
@@ -603,13 +704,27 @@
         <div class="insight"><b>Then the question you asked for:</b> which creator profiles win? Pivot results by <b>niche × format × hook</b> every month, and source more of the winners.</div>
       </div>
     </div>
+
+    <div class="rights reveal" id="rights">
+      <div>
+        <h3>Contracts &amp; <em>usage rights.</em></h3>
+        <p class="sub">Clear terms up front keep creators happy and clients protected.</p>
+      </div>
+      <ul>
+        <li><span class="k">01</span><span><b>Your contract template, every time.</b> No custom side deals.</span></li>
+        <li><span class="k">02</span><span><b>Negotiate each term on its own,</b> then bundle by volume for repeat creators.<span class="terms"><i>Rate</i><i>Deliverables</i><i>Usage rights</i><i>Exclusivity</i></span></span></li>
+        <li><span class="k">03</span><span><b>Signed before anyone films.</b> No contract, no shoot.</span></li>
+        <li><span class="k">04</span><span><b>Tracked in the roster:</b> usage-rights expiry and payment dates, flagged before they lapse.</span></li>
+      </ul>
+      <div class="rflow"><span>Negotiate</span><i>→</i><span>Bundle</span><i>→</i><span class="y">Sign</span><i>→</i><span>Film</span><i>→</i><span>Pay on time</span><i>→</i><span>Renew or expire</span></div>
+    </div>
   </div>
 </section>
 
 <!-- COMMUNITY -->
 <section class="dark" id="community">
   <div class="wrap">
-    <span class="eyebrow">06 · Community</span>
+    <span class="eyebrow">07 · Community</span>
     <h2>1,000 → 2,000. <em>Qualified, not just more.</em></h2>
     <p class="sub">How I'd think about doubling the community while keeping the quality bar. Ideas to align on, not fixed targets.</p>
     <div class="grow reveal">
@@ -623,6 +738,7 @@
         <p class="s">Daily outreach, plus channels that bring creators to us.</p>
         <ul>
           <li><span class="e">🔎</span><span><b>Search by niche</b><small>TikTok / IG search for gaming, apps, kids &amp; wellness creators already making ads.</small></span></li>
+          <li><span class="e">💬</span><span><b>Where creators look for work</b><small>WhatsApp and Telegram groups, Skool communities, Discord servers and UGC Facebook groups. I'm in them as a UGC creator myself.</small></span></li>
           <li><span class="e">🤝</span><span><b>Referrals from Tier A</b><small>Your best creators know other good creators. Reward the intro.</small></span></li>
           <li><span class="e">🎙️</span><span><b>Open webinar as the front door</b><small>A free monthly class for UGC creators → application form.</small></span></li>
           <li><span class="e">📝</span><span><b>One scored application form</b><small>Portfolio, niche, devices, rates. Filter before the first call.</small></span></li>
@@ -642,10 +758,45 @@
   </div>
 </section>
 
-<!-- PLAN -->
-<section id="plan">
+<!-- CONTENT FOR SCROLLING -->
+<section id="content">
   <div class="wrap">
-    <span class="eyebrow">07 · First 90 days</span>
+    <span class="eyebrow">08 · Content for Scrolling</span>
+    <h2>Your own channels. <em>On camera, by me.</em></h2>
+    <p class="sub">You mentioned the role includes content too. Four series I'd pitch for Scrolling's own Instagram, TikTok and LinkedIn: two for brands, two for creators.</p>
+    <div class="cf-grid">
+      <div class="cf reveal">
+        <div class="tile"><div class="top"><span>Series 01</span><span>Reel</span></div><div class="hk">Why this hook <em>stopped the scroll</em></div><div class="pl"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M6 4l15 8-15 8z"/></svg></div></div>
+        <h3>Hook teardown</h3>
+        <p>I break down the first 3 seconds of a winning ad: the angle, the pacing, the CTA.</p>
+        <span class="aud">For brands</span>
+      </div>
+      <div class="cf reveal">
+        <div class="tile"><div class="top"><span>Series 02</span><span>Vlog</span></div><div class="hk">POV: we shoot <em>12 hooks</em> for one game ad</div><div class="pl"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M6 4l15 8-15 8z"/></svg></div></div>
+        <h3>Behind the scenes</h3>
+        <p>Inside a UGC shoot: the brief, the setup, the takes, the faceless B-roll.</p>
+        <span class="aud">For brands</span>
+      </div>
+      <div class="cf reveal">
+        <div class="tile"><div class="top"><span>Series 03</span><span>Split screen</span></div><div class="hk">1 raw clip → <em>5 ads</em></div><div class="pl"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M6 4l15 8-15 8z"/></svg></div></div>
+        <h3>Before / after: the AI remix</h3>
+        <p>Raw creator footage next to the finished remixes. Shows Recycle, Remix, Remake in 20 seconds.</p>
+        <span class="aud">For brands</span>
+      </div>
+      <div class="cf reveal">
+        <div class="tile"><div class="top"><span>Series 04</span><span>Reel + carousel</span></div><div class="hk">3 mistakes that get your <em>UGC rejected</em></div><div class="pl"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M6 4l15 8-15 8z"/></svg></div></div>
+        <h3>Tips for creators</h3>
+        <p>Short, practical lessons that also bring new creators into the community.</p>
+        <span class="aud cr">For creators</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAN -->
+<section id="plan" style="background:var(--surface)">
+  <div class="wrap">
+    <span class="eyebrow">09 · First 90 days</span>
     <h2>Listen. Standardize. <em>Scale.</em></h2>
     <p class="sub">How I'd approach the first three months. A starting point to align with you, not a fixed plan.</p>
     <div class="plan">
@@ -659,7 +810,7 @@
 <!-- HOW THIS PAGE WAS MADE -->
 <section class="made" id="made">
   <div class="wrap">
-    <span class="eyebrow" style="color:#3a3300">08 · Behind this page</span>
+    <span class="eyebrow" style="color:#3a3300">10 · Behind this page</span>
     <h2>This page? <em>Built with Claude.</em></h2>
     <p class="sub">I said I'd show you how I build landing pages this fast. Here it is: this one went from your job post to a live link in a single working session, with Claude as my production partner.</p>
     <div class="made-steps">
@@ -676,7 +827,7 @@
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="wrap">
-    <span class="eyebrow">09 · Experience</span>
+    <span class="eyebrow">11 · Experience</span>
     <h2>Creator, operator, <em>Marketing Director.</em></h2>
     <div class="exp">
       <div class="job hl reveal"><div class="when">2024 · Present</div><h3>UGC Creator</h3><div class="org">Canva, Bonzo, OnTop, Las Rosas Square +</div><p>Scripted, shot and edited UGC in English and Spanish for 20+ brands.</p></div>
@@ -755,7 +906,7 @@
     io.unobserve(e.target);
   }), { threshold: .15 });
   document.querySelectorAll('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 4) * 70 + 'ms'; io.observe(el); });
-  document.querySelectorAll('.grow, .res-card').forEach(el => io.observe(el));
+  document.querySelectorAll('.grow, .res-card, .scase').forEach(el => io.observe(el));
 
   // Webinar: load YouTube only on click
   const yt = document.getElementById('yt');

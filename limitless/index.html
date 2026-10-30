@@ -23,7 +23,7 @@
     --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;overflow-x:hidden}
   body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   img{display:block;max-width:100%}
   a{color:var(--gold-d)}
@@ -177,6 +177,7 @@
   }
 
   @media (max-width:380px){.chip{font-size:11px}.chip b{font-size:14px}.c1{left:-8px}.c2{right:-8px}}
+  @media (min-width:1220px){.c2{right:-50px!important}}
   @media (min-width:700px){
     .stats{grid-template-columns:repeat(4,1fr)}
     .steps{grid-template-columns:1fr 1fr}
@@ -192,7 +193,7 @@
     .hero .wrap{grid-template-columns:1.2fr .8fr;gap:48px}
     .hero h1{font-size:clamp(38px,4.6vw,58px)}
     .hero-photo{max-width:400px;margin-top:0}
-    .c1{left:-60px}.c2{right:-50px}.c3{left:-40px}
+    .c1{left:-60px}.c2{right:-10px}.c3{left:-40px}
     .steps{grid-template-columns:repeat(4,1fr)}
     .step{grid-template-columns:1fr}
     .funnel-panel{padding:64px 48px}

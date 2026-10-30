@@ -498,7 +498,8 @@
   });
   const fillRing = t => {
     const r = parseFloat(t.dataset.rate) || 0;
-    t.querySelector('.fg').style.strokeDashoffset = RING * (1 - r / 10);
+    const fg = t.querySelector('.fg');
+    if (r) fg.style.strokeDashoffset = RING * (1 - r / 10); else fg.style.display = 'none';
   };
 
   // Nav, progress, active link, floating button

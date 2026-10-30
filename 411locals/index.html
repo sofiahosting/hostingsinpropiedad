@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sofia Retif × 411 Locals</title>
+<meta name="description" content="Sofia Retif — direct-response ad creative for Meta. Hooks, UGC-style video ads and creative testing, made for the 411 Locals Director of Ad Creative Strategy role.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Cpath d='M24 18l22 14-22 14z' fill='%23FFD400'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/assets/411locals/hero-sofia.webp">
+<style>
+  :root{
+    --black:#000; --ink:#0f0f10; --card:#1f1f1f; --line:#e0e0e0; --line-dark:#333;
+    --grey:#717171; --grey2:#8f8f8f; --surface:#f5f5f5; --white:#fff;
+    --yellow:#FFD400; --yellow-soft:#FFF6C2;
+    --display:"Bebas Neue",Impact,sans-serif; --sans:"Geist",system-ui,-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:64px}
+  body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img,video{display:block;max-width:100%}
+  a{color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+  section{padding:64px 0}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--grey)}
+  .eyebrow::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 3px rgba(255,212,0,.25)}
+  h1,h2{font-family:var(--display);font-weight:400;line-height:.92;letter-spacing:.005em}
+  h2{font-size:clamp(42px,6.4vw,84px);margin:14px 0 14px}
+  h2 em,h1 em{font-style:normal;background:linear-gradient(transparent 58%,var(--yellow) 58%,var(--yellow) 92%,transparent 92%);padding:0 .06em}
+  .dark h2 em{background:none;color:var(--yellow)}
+  .sub{font-size:17px;color:var(--grey);max-width:600px}
+  .dark{background:var(--black);color:var(--white)}
+  .dark .sub,.dark .eyebrow{color:var(--grey2)}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--yellow);color:var(--black);font-weight:700;padding:15px 24px;border-radius:999px;text-decoration:none;transition:transform .2s,box-shadow .2s;font-size:16px}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(255,212,0,.35)}
+  .ghost{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;border:1.5px solid currentColor;text-decoration:none;font-weight:600;transition:background .2s,color .2s}
+  .ghost:hover{background:var(--black);color:var(--white)}
+  .dark .ghost:hover{background:var(--white);color:var(--black)}
+  .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  @media (min-width:700px){.wrap{padding:0 24px}section{padding:88px 0}.sub{font-size:18px}}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.tick-track{animation:none}}
+
+  /* progress + nav */
+  #progress{position:fixed;top:0;left:0;height:3px;background:var(--yellow);z-index:60;width:0}
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 16px;transition:background .3s,box-shadow .3s,padding .3s}
+  nav.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line);padding:10px 16px}
+  .logo{font-family:var(--display);font-size:26px;text-decoration:none;letter-spacing:.02em;line-height:1}
+  .logo span{background:var(--black);color:var(--yellow);padding:2px 8px 0;border-radius:6px;margin-left:4px}
+  .nav-links{display:flex;align-items:center;gap:18px}
+  .nav-links .t{display:none;font-size:14px;font-weight:500;text-decoration:none;color:var(--grey);transition:color .2s;padding-bottom:2px}
+  .nav-links .t:hover,.nav-links .t.on{color:var(--black)}
+  .nav-links .t.on{box-shadow:0 2px 0 var(--yellow)}
+  .nav-cta{background:var(--black);color:var(--white);padding:9px 16px;border-radius:999px;font-size:14px;font-weight:600;text-decoration:none}
+  @media (min-width:960px){nav,nav.scrolled{padding-left:28px;padding-right:28px}.nav-links .t{display:inline}}
+
+  .fab{position:fixed;right:16px;bottom:16px;z-index:55;background:var(--black);color:var(--yellow);font-weight:700;padding:14px 20px;border-radius:999px;text-decoration:none;box-shadow:0 12px 30px rgba(0,0,0,.25);transition:opacity .3s,transform .3s}
+  .fab.hide{opacity:0;transform:translateY(20px);pointer-events:none}
+
+  /* HERO */
+  .hero{padding:104px 0 56px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;opacity:.45;mask-image:radial-gradient(ellipse at 30% 30%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at 30% 30%,#000 30%,transparent 75%)}
+  .hero .wrap{position:relative;display:grid;gap:40px;align-items:center}
+  .pill{display:inline-flex;flex-wrap:wrap;gap:6px;align-items:center;background:var(--black);color:var(--white);font-size:12.5px;padding:8px 14px;border-radius:999px;font-weight:500}
+  .pill b{color:var(--yellow)}
+  .hero h1{font-size:clamp(50px,8vw,104px);margin:20px 0 20px}
+  .hero h1 small{display:block;font-size:.5em;line-height:1;color:var(--grey);margin-bottom:6px}
+  .lead{font-size:18px;color:#3a3a3a;max-width:540px}
+  .lead b{color:var(--black)}
+  .metrics-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+  .metrics-chips span{font-size:13px;font-weight:700;border:1.5px solid var(--black);padding:6px 12px;border-radius:999px;background:var(--white)}
+  .hero-photo{position:relative;justify-self:center;max-width:300px;width:100%}
+  .hero-photo .bg{position:absolute;inset:12% 2% 0;background:var(--yellow);border-radius:28px;transform:rotate(-3deg)}
+  .hero-photo img{position:relative;width:100%;height:auto;filter:drop-shadow(0 24px 40px rgba(0,0,0,.18))}
+  .float{position:absolute;background:var(--white);border-radius:14px;padding:10px 14px;box-shadow:0 14px 34px rgba(0,0,0,.14);font-size:12px;color:var(--grey);line-height:1.25;animation:bob 5s ease-in-out infinite}
+  .float b{display:block;font-family:var(--display);font-size:28px;color:var(--black);font-weight:400;line-height:1}
+  .f1{top:20%;left:-6%}.f2{top:50%;right:-6%;animation-delay:-1.6s}.f3{bottom:8%;left:-4%;animation-delay:-3.2s}
+  @keyframes bob{50%{transform:translateY(-10px)}}
+  @media (min-width:900px){.hero{padding:132px 0 70px}.hero .wrap{grid-template-columns:1.15fr .85fr;gap:48px}.hero-photo{max-width:380px}.f1{left:-12%}.f2{right:-10%}.f3{left:-6%}.lead{font-size:19px}}
+
+  .ticker{background:var(--black);color:var(--white);overflow:hidden;white-space:nowrap;padding:14px 0;border-block:3px solid var(--yellow)}
+  .tick-track{display:inline-flex;gap:28px;animation:tick 38s linear infinite;font-family:var(--display);font-size:24px;letter-spacing:.03em}
+  .tick-track i{color:var(--yellow);font-style:normal}
+  @keyframes tick{to{transform:translateX(-50%)}}
+
+  /* NUMBERS */
+  .num-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+  .num{border:1px solid var(--line);border-radius:20px;padding:20px 16px;background:var(--white);transition:transform .3s,border-color .3s}
+  .num:hover{transform:translateY(-4px);border-color:var(--black)}
+  .num b{font-family:var(--display);font-weight:400;font-size:46px;line-height:1;display:block}
+  .num span{font-size:13px;color:var(--grey);display:block;margin-top:4px}
+  .num.hl{background:var(--yellow);border-color:var(--yellow)}
+  .num.hl span{color:#3a3300}
+  @media (min-width:900px){.num-grid{grid-template-columns:repeat(4,1fr);gap:16px}.num{padding:26px 22px}.num b{font-size:60px}}
+
+  /* HOOKS */
+  .hooks{display:grid;gap:16px;margin-top:32px}
+  .hk{background:var(--card);border:1px solid var(--line-dark);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:16px;position:relative;transition:transform .3s,border-color .3s}
+  .hk:hover{transform:translateY(-6px);border-color:var(--yellow)}
+  .hk.best{border-color:var(--yellow)}
+  .hk .top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+  .hk .angle{font-size:12px;font-weight:700;background:var(--yellow);color:var(--black);padding:5px 10px;border-radius:8px}
+  .hk .rank{font-family:var(--display);font-size:24px;color:#555;line-height:1}
+  .hk blockquote{font-family:var(--display);font-size:clamp(28px,3vw,34px);line-height:1;color:var(--white)}
+  .hk blockquote::before{content:"“";color:var(--yellow)}
+  .hk blockquote::after{content:"”";color:var(--yellow)}
+  .hk .m{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:auto}
+  .hk .m div{background:#151515;border:1px solid var(--line-dark);border-radius:12px;padding:10px}
+  .hk .m b{display:block;font-family:var(--display);font-weight:400;font-size:28px;line-height:1;color:var(--yellow)}
+  .hk .m span{font-size:11.5px;color:var(--grey2)}
+  .hk .why{font-size:14.5px;color:#d6d6d6;border-top:1px solid var(--line-dark);padding-top:14px}
+  .hk .why b{color:var(--white)}
+  @media (min-width:900px){.hooks{grid-template-columns:repeat(3,1fr)}}
+  .cpl{margin-top:20px;background:var(--card);border:1px solid var(--line-dark);border-radius:22px;padding:22px}
+  .cpl h3{font-family:var(--display);font-weight:400;font-size:30px;line-height:1;margin-bottom:16px}
+  .cpl h3 em{font-style:normal;color:var(--yellow)}
+  .crow{display:grid;grid-template-columns:96px 1fr 56px;gap:10px;align-items:center;margin-top:10px;font-size:13px;color:var(--grey2)}
+  .crow b{color:var(--white);text-align:right;font-size:15px}
+  .cbar{height:26px;background:#2a2a2a;border-radius:8px;overflow:hidden}
+  .cbar i{display:block;height:100%;width:0;background:var(--yellow);border-radius:8px;transition:width 1.4s cubic-bezier(.2,.7,.2,1)}
+  .cpl.in .cbar i{width:var(--w)}
+  .cpl p{font-size:12.5px;color:var(--grey2);margin-top:14px}
+
+  /* VIDEOS */
+  .vid-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px}
+  .reel{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:#111;cursor:pointer;transition:transform .3s,box-shadow .3s}
+  .reel:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.18)}
+  .reel video{width:100%;height:100%;object-fit:cover}
+  .reel .brand{position:absolute;top:10px;left:10px;background:rgba(0,0,0,.72);color:var(--white);font-size:11px;font-weight:700;padding:4px 9px;border-radius:999px;backdrop-filter:blur(6px)}
+  .reel .lang{position:absolute;top:10px;right:10px;background:var(--yellow);color:var(--black);font-size:10px;font-weight:800;padding:4px 7px;border-radius:6px;letter-spacing:.04em}
+  .reel .cap{position:absolute;left:0;right:0;bottom:0;padding:40px 12px 12px;background:linear-gradient(transparent,rgba(0,0,0,.85));color:var(--white)}
+  .reel .cap b{display:block;font-size:13.5px;line-height:1.2}
+  .reel .cap small{display:inline-block;margin-top:6px;font-size:10.5px;font-weight:700;background:var(--yellow);color:var(--black);padding:2px 7px;border-radius:5px}
+  .reel .snd{position:absolute;top:40px;right:10px;width:28px;height:28px;border-radius:50%;background:rgba(0,0,0,.6);display:grid;place-items:center;font-size:12px}
+  .reel.ext{display:grid;place-items:center;text-decoration:none;color:var(--white);background:linear-gradient(160deg,#1f1f1f,#000)}
+  .reel.ext .pl{width:56px;height:56px;border-radius:50%;background:var(--yellow);display:grid;place-items:center}
+  @media (min-width:900px){.vid-grid{grid-template-columns:repeat(4,1fr);gap:16px}}
+  .roles{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+  .roles span{font-size:13px;font-weight:600;background:var(--surface);padding:7px 12px;border-radius:999px}
+  .roles span::before{content:"✓";display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--black);color:var(--yellow);font-size:10px;margin-right:6px;vertical-align:1px}
+
+  /* PROCESS */
+  .made{background:var(--yellow)}
+  .made h2 em{background:var(--black);color:var(--yellow)}
+  .made .sub,.made .eyebrow{color:#3a3300}
+  .made .eyebrow::before{background:var(--black);box-shadow:none}
+  .steps{display:grid;gap:14px;margin-top:28px}
+  .ms{background:var(--white);border-radius:18px;padding:20px;border:2px solid var(--black);box-shadow:5px 5px 0 var(--black);transition:transform .2s,box-shadow .2s;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;align-items:start}
+  .ms:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--black)}
+  .ms .n{grid-row:span 2;font-family:var(--display);font-size:52px;line-height:.85;background:var(--black);color:var(--yellow);width:56px;height:56px;border-radius:14px;display:grid;place-items:center;padding-top:4px}
+  .ms h3{font-size:18px;line-height:1.2}
+  .ms p{font-size:14px;color:#444}
+  @media (min-width:600px){.steps{grid-template-columns:1fr 1fr}}
+  @media (min-width:1000px){.steps{grid-template-columns:repeat(4,1fr)}.ms{grid-template-columns:1fr}.ms .n{grid-row:auto;margin-bottom:8px}}
+  .loop{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-weight:700;font-size:14px}
+  .loop span{background:var(--black);color:var(--white);padding:8px 14px;border-radius:999px}
+  .loop i{font-style:normal}
+
+  /* TOOLS */
+  .tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+  .tool{border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:8px}
+  .tool .e{width:44px;height:44px;border-radius:12px;background:var(--surface);display:grid;place-items:center;font-size:22px}
+  .tool h3{font-size:16px;line-height:1.2}
+  .tool p{font-size:13px;color:var(--grey)}
+  .tool .rate{margin-top:auto;display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px}
+  .tool .meter{flex:1;height:6px;background:#eee;border-radius:3px;overflow:hidden}
+  .tool .meter i{display:block;height:100%;width:0;background:var(--black);transition:width 1.2s}
+  @media (min-width:900px){.tool-grid{grid-template-columns:repeat(5,1fr);gap:14px}}
+
+  /* WHY */
+  .why-grid{display:grid;gap:14px;margin-top:28px}
+  .wcard{background:var(--card);border:1px solid var(--line-dark);border-radius:20px;padding:22px}
+  .wcard .tag{font-size:12px;font-weight:700;color:var(--yellow);letter-spacing:.04em;text-transform:uppercase}
+  .wcard h3{font-family:var(--display);font-weight:400;font-size:38px;line-height:1;margin:6px 0 8px}
+  .wcard p{font-size:15px;color:#d6d6d6}
+  .wcard p b{color:var(--white)}
+  @media (min-width:800px){.why-grid{grid-template-columns:1fr 1fr}}
+
+  /* CONTACT */
+  .contact{text-align:center}
+  .contact .sub{margin:0 auto}
+  .contact .actions{justify-content:center}
+  .facts{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:24px}
+  .facts span{background:#1c1c1c;border:1px solid var(--line-dark);padding:8px 14px;border-radius:999px;font-size:14px}
+  footer{background:var(--black);color:var(--grey2);text-align:center;font-size:13px;padding:0 16px 40px;line-height:1.8}
+  footer a{color:var(--white);font-weight:600}
+</style>
+</head>
+<body>
+
+<div id="progress" aria-hidden="true"></div>
+<a class="fab hide" id="fab" href="mailto:sofiaretif@gmail.com?subject=Director%20of%20Ad%20Creative%20Strategy%20%E2%80%94%20411%20Locals">✉ Email me</a>
+
+<nav id="nav">
+  <a class="logo" href="#top">Sofia <span>× 411</span></a>
+  <div class="nav-links">
+    <a class="t" href="#numbers">Numbers</a>
+    <a class="t" href="#hooks">Hooks</a>
+    <a class="t" href="#videos">Videos</a>
+    <a class="t" href="#process">Process</a>
+    <a class="t" href="#tools">Tools</a>
+    <a class="t" href="#why">Why 411</a>
+    <a class="nav-cta" href="mailto:sofiaretif@gmail.com?subject=Director%20of%20Ad%20Creative%20Strategy%20%E2%80%94%20411%20Locals">Email me</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-text">
+      <div class="pill">Made for 411 Locals · <b>Director of Ad Creative Strategy</b></div>
+      <h1><small>Sofia Retif —</small>Direct-Response Ad Creative <em>for Meta</em></h1>
+      <p class="lead">I write hooks, script and edit UGC-style video ads, and judge them by <b>CPL, CTR and hook rate</b>.</p>
+      <div class="metrics-chips"><span>Hooks</span><span>Scripts</span><span>Creator direction</span><span>Editing</span><span>Testing</span></div>
+      <div class="actions">
+        <a class="btn" href="mailto:sofiaretif@gmail.com?subject=Director%20of%20Ad%20Creative%20Strategy%20%E2%80%94%20411%20Locals">✉ sofiaretif@gmail.com</a>
+        <a class="ghost" href="#hooks">See the hooks ↓</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="bg"></div>
+      <img src="/assets/411locals/hero-sofia.webp" width="640" height="1097" alt="Sofia Retif holding her laptop" fetchpriority="high">
+      <div class="float f1"><b>6% CTR</b>on my best ad</div>
+      <div class="float f2"><b>1,000+</b>leads in 2026</div>
+      <div class="float f3"><b>50+</b>creators managed</div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="tick-track">
+  <span>1,000+ leads in 2026</span><i>✦</i><span>6.04% CTR on the best hook</span><i>✦</i><span>~$0.80 per conversation</span><i>✦</i><span>50+ creators managed</span><i>✦</i><span>$20K course launch</span><i>✦</i><span>3 hooks per angle</span><i>✦</i><span>Read in 48–72h</span><i>✦</i>
+  <span>1,000+ leads in 2026</span><i>✦</i><span>6.04% CTR on the best hook</span><i>✦</i><span>~$0.80 per conversation</span><i>✦</i><span>50+ creators managed</span><i>✦</i><span>$20K course launch</span><i>✦</i><span>3 hooks per angle</span><i>✦</i><span>Read in 48–72h</span><i>✦</i>
+</div></div>
+
+<!-- NUMBERS -->
+<section id="numbers">
+  <div class="wrap">
+    <span class="eyebrow">01 · Key numbers</span>
+    <h2>Judged by results, <em>not by likes.</em></h2>
+    <div class="num-grid">
+      <div class="num hl reveal"><b data-count="1000" data-fmt="{}+" data-comma="1">1,000+</b><span>leads in 2026 for a US-facing client</span></div>
+      <div class="num reveal"><b data-count="6" data-fmt="{}%">6%</b><span>CTR on my best ad</span></div>
+      <div class="num reveal"><b data-count="50" data-fmt="{}+">50+</b><span>creators managed</span></div>
+      <div class="num reveal"><b data-count="20" data-fmt="${}K">$20K</b><span>course launch</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOOKS -->
+<section class="dark" id="hooks">
+  <div class="wrap">
+    <span class="eyebrow">02 · Hooks that converted</span>
+    <h2>Three hooks. <em>Three angles.</em></h2>
+    <p class="sub">Each hook tests a different reason to stop scrolling.</p>
+
+    <div class="hooks">
+      <article class="hk best reveal">
+        <div class="top"><span class="angle">Curiosity + specific number</span><span class="rank">#1</span></div>
+        <blockquote>Why does Airbnb charge you 3% and your neighbor 15.5%?</blockquote>
+        <div class="m">
+          <div><b data-count="167" data-fmt="{}">167</b><span>WhatsApp conversations</span></div>
+          <div><b>~$0.80</b><span>per conversation</span></div>
+          <div><b>6.04%</b><span>CTR</span></div>
+        </div>
+        <p class="why"><b>Why it worked:</b> two oddly specific numbers open a gap the viewer wants closed. The answer is the offer.</p>
+      </article>
+      <article class="hk reveal">
+        <div class="top"><span class="angle">Pain + personal story</span><span class="rank">#2</span></div>
+        <blockquote>If you have an Airbnb and your accountant isn't specialized, you're almost certainly overpaying</blockquote>
+        <div class="m">
+          <div><b data-count="268" data-fmt="{}">268</b><span>WhatsApp conversations</span></div>
+          <div><b>~$1.10</b><span>per conversation</span></div>
+          <div><b>Most</b><span>volume of the three</span></div>
+        </div>
+        <p class="why"><b>Why it worked:</b> it names a money leak the viewer already suspects, told as a lived story instead of a pitch.</p>
+      </article>
+      <article class="hk reveal">
+        <div class="top"><span class="angle">Authority</span><span class="rank">#3</span></div>
+        <blockquote>As someone who's managed Airbnb properties, I recommend an accountant who only does short-term rentals</blockquote>
+        <div class="m">
+          <div><b data-count="186" data-fmt="{}">186</b><span>WhatsApp conversations</span></div>
+          <div><b>~$1.40</b><span>per conversation</span></div>
+          <div><b>Peer</b><span>credibility first</span></div>
+        </div>
+        <p class="why"><b>Why it worked:</b> it leads with who's talking. A peer's recommendation earns trust before the ask.</p>
+      </article>
+    </div>
+
+    <div class="cpl reveal">
+      <h3>Cost per conversation, <em>side by side</em></h3>
+      <div class="crow"><span>Curiosity</span><div class="cbar"><i style="--w:57%"></i></div><b>$0.80</b></div>
+      <div class="crow"><span>Pain + story</span><div class="cbar"><i style="--w:79%"></i></div><b>$1.10</b></div>
+      <div class="crow"><span>Authority</span><div class="cbar"><i style="--w:100%"></i></div><b>$1.40</b></div>
+      <p>Approximate cost per WhatsApp conversation. Lower is better.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos">
+  <div class="wrap">
+    <span class="eyebrow">03 · Video ads</span>
+    <h2>UGC-style ads. <em>Scripted &amp; edited by me.</em></h2>
+    <p class="sub">Bonzo and Canva. Tap any video for sound.</p>
+
+    <div class="vid-grid">
+      <!-- VIDEO 1 — PEGAR LINK en data-src (un .mp4 se reproduce aquí; un link de Instagram/TikTok/YouTube se abre en otra pestaña) -->
+      <div class="vslot reveal" data-src="/assets/scrolling/bonzo-1.mp4" data-poster="/assets/scrolling/bonzo-1.jpg" data-brand="Bonzo" data-lang="ES" data-title="3% or 15.5%?" data-fmt="Question hook"></div>
+      <!-- VIDEO 2 — PEGAR LINK -->
+      <div class="vslot reveal" data-src="/assets/rankbreeze/en-1.mp4" data-poster="/assets/rankbreeze/en-1.jpg" data-brand="Bonzo" data-lang="EN" data-title="US owners in Mexico" data-fmt="Paid ad"></div>
+      <!-- VIDEO 3 — PEGAR LINK -->
+      <div class="vslot reveal" data-src="/assets/rankbreeze/en-4.mp4" data-poster="/assets/rankbreeze/en-4.jpg" data-brand="Bonzo" data-lang="EN" data-title="20% less profitable?" data-fmt="Question hook"></div>
+      <!-- VIDEO 4 — PEGAR LINK -->
+      <div class="vslot reveal" data-src="/assets/scrolling/canva-links.mp4" data-poster="/assets/scrolling/canva-links.jpg" data-brand="Canva" data-lang="ES" data-title="Hyperlinks in Canva" data-fmt="App demo"></div>
+    </div>
+
+    <div class="roles">
+      <span>Hook &amp; script</span><span>Creator brief &amp; direction</span><span>Edit in CapCut</span><span>Voice with ElevenLabs</span><span>Launch &amp; read the numbers</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="made" id="process">
+  <div class="wrap">
+    <span class="eyebrow">04 · Process</span>
+    <h2>How I build <em>a winning ad.</em></h2>
+    <p class="sub">A simple loop, run every week.</p>
+    <div class="steps">
+      <div class="ms reveal"><span class="n">1</span><h3>One angle per video</h3><p>One reason to buy per ad, so the data tells you which reason works.</p></div>
+      <div class="ms reveal"><span class="n">2</span><h3>Three hook variations per angle</h3><p>Same body, three openings. The first 3 seconds are the test.</p></div>
+      <div class="ms reveal"><span class="n">3</span><h3>Launch and read in 48–72h</h3><p>Hook rate and CTR first, then cost per lead.</p></div>
+      <div class="ms reveal"><span class="n">4</span><h3>Kill losers, iterate winners</h3><p>Cut what doesn't hold attention. New hooks on the angle that does.</p></div>
+    </div>
+    <div class="loop reveal"><span>1 angle</span><i>→</i><span>3 hooks</span><i>→</i><span>48–72h</span><i>→</i><span>Kill / iterate</span><i>↺</i></div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section id="tools">
+  <div class="wrap">
+    <span class="eyebrow">05 · Tools</span>
+    <h2>My stack, <em>self-rated.</em></h2>
+    <div class="tool-grid">
+      <!-- TU RATING: escribe un número del 1 al 10 en data-rate de cada herramienta (ej. data-rate="9"). Vacío = se ve [X/10] -->
+      <div class="tool reveal" data-rate=""><span class="e">✍️</span><h3>Claude</h3><p>Hooks, scripts, angle research</p><div class="rate"><span class="meter"><i></i></span><span class="v">[X/10]</span></div></div>
+      <div class="tool reveal" data-rate=""><span class="e">🎬</span><h3>CapCut</h3><p>Editing, captions, pacing</p><div class="rate"><span class="meter"><i></i></span><span class="v">[X/10]</span></div></div>
+      <div class="tool reveal" data-rate=""><span class="e">🎨</span><h3>Canva</h3><p>Statics, thumbnails, overlays</p><div class="rate"><span class="meter"><i></i></span><span class="v">[X/10]</span></div></div>
+      <div class="tool reveal" data-rate=""><span class="e">🎙️</span><h3>ElevenLabs</h3><p>Voiceovers</p><div class="rate"><span class="meter"><i></i></span><span class="v">[X/10]</span></div></div>
+      <div class="tool reveal" data-rate=""><span class="e">📊</span><h3>Meta Ads Manager</h3><p>Launch, test, read results</p><div class="rate"><span class="meter"><i></i></span><span class="v">[X/10]</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="dark" id="why">
+  <div class="wrap">
+    <span class="eyebrow">06 · Why 411 Locals</span>
+    <h2>I've lived <em>your clients' problem.</em></h2>
+    <p class="sub">Local service businesses need cheap, steady leads, every week. I've written ads for one and run another myself.</p>
+    <div class="why-grid">
+      <div class="wcard reveal"><span class="tag">Client · Bonzo</span><h3>A service business on WhatsApp</h3><p>An accounting service for Airbnb hosts. Every lead was a WhatsApp conversation, and I judged each ad by <b>what that conversation cost</b>.</p></div>
+      <div class="wcard reveal"><span class="tag">My own business</span><h3>30+ Airbnb properties</h3><p>I ran my own short-term rental business with <b>30+ properties</b>. When bookings slow down, you feel it the same week.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact dark" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow">Let's talk</span>
+    <h2>Hey, 411 Locals. <em>Let's lower your CPL.</em></h2>
+    <p class="sub">Send me one client and I'll come back with an angle and three hooks for it.</p>
+    <div class="facts">
+      <span>📍 Guadalajara, Mexico</span>
+      <span>💬 English &amp; Spanish</span>
+      <span>🌎 Remote</span>
+    </div>
+    <div class="actions">
+      <a class="btn" href="mailto:sofiaretif@gmail.com?subject=Director%20of%20Ad%20Creative%20Strategy%20%E2%80%94%20411%20Locals">sofiaretif@gmail.com</a>
+      <a class="ghost" href="/cvportfolio/">CV &amp; portfolio</a>
+      <a class="ghost" href="https://www.linkedin.com/in/sofiaretif" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <a href="mailto:sofiaretif@gmail.com">sofiaretif@gmail.com</a> · <a href="/cvportfolio/">sofiaretif.com/cvportfolio</a><br>
+  Made by Sofia Retif for the 411 Locals Director of Ad Creative Strategy role · not an official 411 Locals page · 2026
+</footer>
+
+<script>
+  // Video slots: .mp4 plays inline; any other link opens in a new tab
+  document.querySelectorAll('.vslot').forEach(s => {
+    const d = s.dataset, tags = `<span class="brand">${d.brand}</span><span class="lang">${d.lang}</span>`,
+      cap = `<div class="cap"><b>${d.title}</b><small>${d.fmt}</small></div>`;
+    s.innerHTML = /\.mp4(\?|$)/i.test(d.src)
+      ? `<div class="reel">${tags}<video src="${d.src}" poster="${d.poster || ''}" muted loop playsinline preload="none"></video><span class="snd">🔇</span>${cap}</div>`
+      : `<a class="reel ext" href="${d.src}" target="_blank" rel="noopener">${tags}<span class="pl"><svg width="22" height="22" viewBox="0 0 24 24" fill="#000"><path d="M6 4l15 8-15 8z"/></svg></span>${cap}</a>`;
+  });
+
+  // Tool ratings: fill from data-rate, keep [X/10] if empty
+  document.querySelectorAll('.tool').forEach(t => {
+    const r = parseFloat(t.dataset.rate);
+    if (r) { t.querySelector('.v').textContent = r + '/10'; t.querySelector('.meter i').style.width = r * 10 + '%'; }
+  });
+
+  // Nav, progress, active link, floating button
+  const nav = document.getElementById('nav'), bar = document.getElementById('progress'), fab = document.getElementById('fab');
+  const links = [...document.querySelectorAll('.nav-links .t')];
+  const secs = links.map(a => document.querySelector(a.getAttribute('href')));
+  const onScroll = () => {
+    nav.classList.toggle('scrolled', scrollY > 60);
+    const h = document.documentElement; bar.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
+    let cur = -1; secs.forEach((s, i) => { if (s.getBoundingClientRect().top < 140) cur = i; });
+    links.forEach((a, i) => a.classList.toggle('on', i === cur));
+    fab.classList.toggle('hide', scrollY < 500 || innerHeight + scrollY > h.scrollHeight - 400);
+  };
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // Count-up
+  const countUp = el => {
+    const end = +el.dataset.count, t0 = performance.now(), d = 1400;
+    const step = t => {
+      const p = Math.min((t - t0) / d, 1), v = Math.round(end * (1 - Math.pow(1 - p, 3)));
+      el.textContent = el.dataset.fmt.replace('{}', el.dataset.comma ? v.toLocaleString('en-US') : v);
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+
+  // Reveal (+ count-up inside)
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('in');
+    e.target.querySelectorAll('[data-count]').forEach(countUp);
+    io.unobserve(e.target);
+  }), { threshold: .15 });
+  document.querySelectorAll('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 4) * 60 + 'ms'; io.observe(el); });
+
+  // Videos: autoplay muted in view, tap for sound
+  const reels = [...document.querySelectorAll('.reel:not(.ext)')];
+  const vio = new IntersectionObserver(es => es.forEach(e => {
+    const v = e.target.querySelector('video');
+    if (e.isIntersecting) { v.preload = 'auto'; v.play().catch(() => {}); }
+    else { v.pause(); if (!v.muted) { v.muted = true; e.target.querySelector('.snd').textContent = '🔇'; } }
+  }), { threshold: .6 });
+  reels.forEach(r => {
+    vio.observe(r);
+    r.addEventListener('click', () => {
+      const v = r.querySelector('video'), on = v.muted;
+      reels.forEach(o => { o.querySelector('video').muted = true; o.querySelector('.snd').textContent = '🔇'; });
+      v.muted = !on; r.querySelector('.snd').textContent = on ? '🔊' : '🔇';
+      if (on) { v.currentTime = 0; v.play().catch(() => {}); }
+    });
+  });
+</script>
+</body>
+</html>

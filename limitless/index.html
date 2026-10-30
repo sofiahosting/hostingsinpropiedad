@@ -53,7 +53,7 @@
   .ghost:hover{background:var(--ink);color:var(--gold-l);transform:translateY(-3px)}
 
   /* HERO */
-  .hero{padding:44px 0 56px;overflow:hidden;background:radial-gradient(90% 70% at 85% 30%,#fbe7b8 0%,rgba(251,231,184,0) 60%),radial-gradient(60% 50% at 0% 0%,#fff 0%,rgba(255,255,255,0) 70%),var(--cream)}
+  .hero{padding:56px 0 72px;overflow:hidden;background:radial-gradient(90% 70% at 85% 30%,#fbe7b8 0%,rgba(251,231,184,0) 60%),radial-gradient(60% 50% at 0% 0%,#fff 0%,rgba(255,255,255,0) 70%),var(--cream)}
   .hero .wrap{display:grid;gap:30px;align-items:center}
   .tag{display:inline-block;font-size:13px;color:var(--muted);background:var(--white);border:1px solid var(--line);padding:8px 16px;border-radius:999px;box-shadow:0 6px 16px rgba(168,122,34,.08)}
   .tag b{color:var(--ink)}
@@ -63,9 +63,9 @@
   .hero-text{min-width:0}
   .hero h1{font-size:clamp(32px,6.4vw,58px);letter-spacing:.03em;margin-bottom:24px}
   .hero h1 .hl{display:inline-block;white-space:normal}
-  .hero .lead{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:540px}
+  .hero .lead{font-size:clamp(18px,2.2vw,22px);color:var(--muted);max-width:540px}
   .hero .lead b{color:var(--ink)}
-  .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;align-items:center}
+  .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;align-items:center}
 
   .hero-photo{position:relative;justify-self:center;width:100%;max-width:310px;margin-top:10px}
   .sun{position:absolute;inset:-8% -18% 10%;background:repeating-conic-gradient(from 0deg,rgba(212,156,51,.13) 0 6deg,transparent 6deg 18deg);border-radius:50%;-webkit-mask-image:radial-gradient(circle,#000 30%,transparent 70%);mask-image:radial-gradient(circle,#000 30%,transparent 70%);animation:spin 60s linear infinite}
@@ -86,14 +86,6 @@
   .track{display:flex;gap:28px;width:max-content;animation:marquee 32s linear infinite;font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase}
   .track i{font-style:normal;color:var(--gold)}
   @keyframes marquee{to{transform:translateX(-50%)}}
-
-  /* LOOM */
-  .loom-sec{padding-top:84px}
-  .video{max-width:860px;margin:30px auto 0;aspect-ratio:16/9;border-radius:var(--r);overflow:hidden;background:var(--ink);position:relative;box-shadow:var(--shadow);border:6px solid var(--white)}
-  .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-  .video .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;color:#ddd;font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;background:radial-gradient(70% 70% at 50% 40%,#2a2215 0%,#111 70%)}
-  .video .ph i{width:76px;height:76px;border-radius:50%;background:var(--grad);display:grid;place-items:center;animation:pulse 2.6s ease-in-out infinite}
-  .video .ph i::after{content:"";border-left:20px solid var(--ink);border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:6px}
 
   /* NUMBERS */
   .stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:36px}
@@ -195,7 +187,8 @@
   }
   @media (min-width:960px){
     section{padding:104px 0}
-    .hero{padding:64px 0 90px}
+    .hero{padding:72px 0 110px;min-height:min(86vh,760px);display:flex;align-items:center}
+    .hero .wrap{width:100%}
     .hero .wrap{grid-template-columns:1.2fr .8fr;gap:48px}
     .hero h1{font-size:clamp(38px,4.6vw,58px)}
     .hero-photo{max-width:400px;margin-top:0}
@@ -219,13 +212,11 @@
 <header class="hero">
   <div class="wrap">
     <div class="hero-text">
-      <span class="tag rv">Made for The Limitless Agency · <b>Client Success Manager</b></span>
-      <span class="hello rv">Sofia Retif <span class="wave-hand">👋</span></span>
+      <span class="hello rv" style="margin-top:0">Sofia Retif <span class="wave-hand">👋</span></span>
       <h1 class="rv">Client success for <span class="hl">performance marketing<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 14 C 60 4, 120 4, 170 11 S 260 16, 297 6"/></svg></span></h1>
       <p class="lead rv">I turn ad results into <b>decisions clients understand</b>, and keep them growing.</p>
       <div class="actions rv">
         <a class="btn btn-gold pulse" href="mailto:sofiaretif@gmail.com?subject=Client%20Success%20Manager%20%E2%80%94%20Sofia%20Retif">Book a call</a>
-        <a class="ghost" href="#video">Watch the intro ▶</a>
       </div>
     </div>
     <div class="hero-photo">
@@ -245,20 +236,8 @@
   <span>1,000+ leads in 2026</span><i>✦</i><span>~$0.80 per conversation</span><i>✦</i><span>6% CTR</span><i>✦</i><span>Up to 5 clients at once</span><i>✦</i><span>30+ properties reported monthly</span><i>✦</i><span>Cost per lead, no jargon</span><i>✦</i>
 </div></div>
 
-<!-- LOOM -->
-<section class="loom-sec center" id="video">
-  <div class="wrap">
-    <span class="eyebrow rv">Quick intro</span>
-    <h2 class="rv">Hi, nice to meet you</h2>
-    <!-- PEGAR LINK LOOM: pega el link de compartir de Loom en data-loom (ej. https://www.loom.com/share/abc123) -->
-    <div class="video rv" id="loom" data-loom="">
-      <div class="ph"><i></i>Video walkthrough</div>
-    </div>
-  </div>
-</section>
-
 <!-- 2. NUMBERS -->
-<section style="padding-top:0">
+<section style="padding-top:88px">
   <div class="wrap">
     <span class="eyebrow rv">Track record</span>
     <h2 class="rv">The numbers</h2>
@@ -377,13 +356,6 @@
 </footer>
 
 <script>
-  // Loom: turn the share link in data-loom into an embed
-  (function(){
-    var box=document.getElementById('loom'),url=(box.getAttribute('data-loom')||'').trim();
-    var m=url.match(/loom\.com\/(?:share|embed)\/([a-zA-Z0-9]+)/);
-    if(!m) return;
-    box.innerHTML='<iframe src="https://www.loom.com/embed/'+m[1]+'?hide_owner=true&hide_share=true&hide_title=true" allowfullscreen loading="lazy" title="Sofia Retif — video walkthrough"></iframe>';
-  })();
   // Reveal on scroll (staggered) + count-up
   (function(){
     var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;

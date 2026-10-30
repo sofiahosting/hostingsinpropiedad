@@ -170,7 +170,8 @@
   .tool .rate{margin-top:auto;display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px}
   .tool .meter{flex:1;height:6px;background:#eee;border-radius:3px;overflow:hidden}
   .tool .meter i{display:block;height:100%;width:0;background:var(--black);transition:width 1.2s}
-  @media (min-width:900px){.tool-grid{grid-template-columns:repeat(5,1fr);gap:14px}}
+  .tool:last-child{grid-column:1/-1}
+  @media (min-width:900px){.tool-grid{grid-template-columns:repeat(5,1fr);gap:14px}.tool:last-child{grid-column:auto}}
 
   /* WHY */
   .why-grid{display:grid;gap:14px;margin-top:28px}

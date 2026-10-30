@@ -60,7 +60,9 @@
   .hello{display:block;font-size:15px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-d);margin:22px 0 10px}
   .wave-hand{display:inline-block;animation:wave 2.4s ease-in-out infinite;transform-origin:70% 80%}
   @keyframes wave{0%,60%,100%{transform:rotate(0)}10%,30%{transform:rotate(16deg)}20%,40%{transform:rotate(-8deg)}}
-  .hero h1{font-size:clamp(32px,6.4vw,64px);letter-spacing:.03em;margin-bottom:20px}
+  .hero-text{min-width:0}
+  .hero h1{font-size:clamp(32px,6.4vw,58px);letter-spacing:.03em;margin-bottom:24px}
+  .hero h1 .hl{display:inline-block;white-space:normal}
   .hero .lead{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:540px}
   .hero .lead b{color:var(--ink)}
   .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;align-items:center}
@@ -139,7 +141,7 @@
   .case-nums{background:var(--grad);border-radius:var(--r);padding:28px 22px;display:grid;grid-template-columns:1fr 1fr;gap:20px;box-shadow:0 24px 50px rgba(212,156,51,.35);transform:rotate(1deg);transition:transform .4s}
   .case-nums:hover{transform:rotate(0) scale(1.01)}
   .case-nums div:first-child{grid-column:1/-1}
-  .case-nums b{display:block;font-size:clamp(38px,8vw,60px);font-weight:800;line-height:1;letter-spacing:-.02em}
+  .case-nums b{display:block;font-size:clamp(34px,4.4vw,52px);font-weight:800;line-height:1;letter-spacing:-.02em}
   .case-nums span{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
 
   /* REPORTING */
@@ -194,7 +196,8 @@
   @media (min-width:960px){
     section{padding:104px 0}
     .hero{padding:64px 0 90px}
-    .hero .wrap{grid-template-columns:1.15fr .85fr;gap:40px}
+    .hero .wrap{grid-template-columns:1.2fr .8fr;gap:48px}
+    .hero h1{font-size:clamp(38px,4.6vw,58px)}
     .hero-photo{max-width:400px;margin-top:0}
     .c1{left:-60px}.c2{right:-50px}.c3{left:-40px}
     .steps{grid-template-columns:repeat(4,1fr)}
@@ -204,7 +207,7 @@
     .funnel::before{left:8%;right:8%;top:30px;bottom:auto;width:auto;height:3px;background:repeating-linear-gradient(90deg,var(--gold) 0 10px,transparent 10px 18px);background-size:18px 3px;animation:flowX 1s linear infinite}
     @keyframes flowX{to{background-position:18px 0}}
     .fstep{grid-template-columns:1fr;justify-items:center;text-align:center;gap:14px}
-    .case{grid-template-columns:1.2fr .8fr;gap:34px;align-items:center}
+    .case{grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
     .reporting .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
     .quote{margin-top:0}
   }

@@ -87,6 +87,11 @@
   .track i{font-style:normal;color:var(--gold)}
   @keyframes marquee{to{transform:translateX(-50%)}}
 
+  /* A QUICK HELLO */
+  .hello-sec{padding:88px 0 72px}
+  .loom{max-width:860px;margin:34px auto 0;aspect-ratio:16/9;border-radius:20px;overflow:hidden;position:relative;background:var(--ink);border:1px solid var(--gold);outline:1px solid var(--gold-l);outline-offset:8px;box-shadow:0 24px 50px rgba(168,122,34,.18)}
+  .loom iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
   /* NUMBERS */
   .stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:36px}
   .stat{background:var(--white);border-radius:var(--r);padding:24px 18px;box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden}
@@ -186,6 +191,7 @@
   }
   @media (min-width:960px){
     section{padding:104px 0}
+    .hello-sec{padding:120px 0 104px}
     .hero{padding:72px 0 110px;min-height:min(86vh,760px);display:flex;align-items:center}
     .hero .wrap{width:100%}
     .hero .wrap{grid-template-columns:1.2fr .8fr;gap:48px}
@@ -237,8 +243,19 @@
   <span>8 years in marketing</span><i>✦</i><span>Up to 5 clients at once</span><i>✦</i><span>30+ properties with monthly owner reports</span><i>✦</i><span>1,000+ leads in 2026</span><i>✦</i>
 </div></div>
 
+<!-- A QUICK HELLO -->
+<section class="hello-sec center">
+  <div class="wrap">
+    <span class="eyebrow rv">Loom</span>
+    <h2 class="rv">A quick hello</h2>
+    <div class="loom rv">
+      <iframe src="https://www.loom.com/embed/7871ed73430e4806bba3b2f030cfc901?hide_owner=true&amp;hide_share=true&amp;hide_title=true" allowfullscreen title="A quick hello from Sofia Retif"></iframe>
+    </div>
+  </div>
+</section>
+
 <!-- 2. NUMBERS -->
-<section style="padding-top:88px">
+<section style="padding-top:0">
   <div class="wrap">
     <span class="eyebrow rv">Track record</span>
     <h2 class="rv">The numbers</h2>

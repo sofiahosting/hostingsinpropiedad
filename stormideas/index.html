@@ -11,230 +11,428 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="../assets/cvportfolio/hero-sofia.webp">
 <style>
 :root{
   --bone:#FBFBF9;--ink:#020202;--text:#151515;--grey:#999999;--red:#E03749;
-  --line:rgba(2,2,2,.12);--soft:#F2F1EC;
+  --line:rgba(2,2,2,.12);--soft:#F1F0EB;
   --cond:"Barlow Condensed","Arial Narrow",sans-serif;--body:"Jost",system-ui,sans-serif;
   --gut:20px;--max:1180px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bone);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html,body{overflow-x:clip}
+.hero{overflow-x:clip}
 a{color:inherit}
-img,iframe{display:block;max-width:100%}
+img,video,iframe{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .i{width:1em;height:1em;flex:none}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
 .h{font-family:var(--cond);font-weight:700;text-transform:uppercase;letter-spacing:.01em;line-height:.95;color:var(--ink)}
 .eyebrow{font-family:var(--cond);font-weight:600;font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--grey)}
-.red{color:var(--red)}
+.lbl{font-family:var(--cond);font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--grey)}
+strong{font-weight:500;color:var(--ink)}
 
 /* top bar */
-.top{position:sticky;top:0;z-index:20;background:rgba(251,251,249,.9);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top{position:sticky;top:0;z-index:30;background:rgba(251,251,249,.9);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:16px}
 .mono{font-family:var(--cond);font-weight:700;font-size:20px;letter-spacing:.04em;text-decoration:none;color:var(--ink)}
 .mono span{color:var(--red)}
-.top .role{font-family:var(--cond);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);text-align:right}
-.top .role b{color:var(--ink);font-weight:600}
-
-/* buttons */
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;text-decoration:none;font-family:var(--cond);font-weight:700;font-size:19px;letter-spacing:.08em;text-transform:uppercase;padding:15px 26px;border-radius:2px;transition:background .25s,transform .25s}
-.btn .i{transition:transform .25s}
-.btn:hover{background:var(--ink)}
-.btn:hover .i{transform:translateX(4px)}
+.top nav{display:flex;gap:16px;overflow-x:auto;scrollbar-width:none}
+.top nav::-webkit-scrollbar{display:none}
+.top nav a{font-family:var(--cond);font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--grey);transition:color .2s;white-space:nowrap}
+.top nav a:hover{color:var(--red)}
 
 /* hero */
-.hero{padding:56px 0 0}
-.hero .eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:22px}
-.hero .eyebrow::before{content:"";width:36px;height:2px;background:var(--red)}
-.hero h1{font-size:clamp(58px,15vw,150px);line-height:.86}
-.hero h1 .sub{display:block;font-size:clamp(26px,5.4vw,58px);line-height:1;margin-top:18px;max-width:17ch}
-.hero .lead{font-size:clamp(19px,2.2vw,23px);line-height:1.5;max-width:34ch;margin-top:28px;color:var(--text)}
-.hero-row{display:flex;flex-wrap:wrap;align-items:center;gap:18px 28px;margin-top:32px}
-.note{display:flex;align-items:center;gap:10px;font-size:14px;color:#555;max-width:36ch;line-height:1.45}
+.hero{padding:40px 0 0;position:relative}
+.hero-grid{display:grid;gap:8px;align-items:end}
+.hero .eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.hero .eyebrow::before{content:"";width:36px;height:2px;background:var(--red);flex:none}
+.hero h1{font-size:clamp(64px,16vw,150px);line-height:.84}
+.hero h1 .sub{display:block;font-size:clamp(26px,5vw,52px);line-height:1;margin-top:16px;max-width:16ch}
+.hero .lead{font-size:clamp(18px,2vw,21px);line-height:1.5;max-width:36ch;margin-top:22px}
+.note{display:flex;align-items:center;gap:10px;font-size:14px;color:#555;max-width:36ch;line-height:1.45;margin-top:20px}
 .note .i{color:var(--red);font-size:18px}
-.loom{margin-top:40px;aspect-ratio:16/9;border:1px solid var(--line);background:var(--soft);overflow:hidden}
-.loom:empty{display:none}
-.loom iframe{width:100%;height:100%;border:0}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.facts span{font-family:var(--cond);font-weight:600;font-size:14px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);padding:5px 10px;border-radius:999px;background:#fff}
+
+.portrait{position:relative;width:min(100%,420px);margin:12px auto 0;aspect-ratio:4/5}
+.portrait .disc{position:absolute;left:8%;right:8%;bottom:0;aspect-ratio:1;border-radius:50%;background:var(--red)}
+.portrait .ring{position:absolute;left:2%;right:2%;bottom:-4%;aspect-ratio:1;border-radius:50%;border:1px solid var(--ink);opacity:.25}
+.portrait img{position:absolute;left:50%;bottom:0;transform:translateX(-50%);height:100%;width:auto;max-width:none;object-fit:contain}
+.stamp{position:absolute;top:2%;left:-2%;width:112px;height:112px;z-index:3}
+.stamp svg{width:100%;height:100%;animation:spin 22s linear infinite}
+.stamp text{font-family:var(--cond);font-weight:700;font-size:11.5px;letter-spacing:.2em;fill:var(--ink)}
+.stamp .core{position:absolute;inset:34%;border-radius:50%;background:var(--ink);color:var(--bone);display:grid;place-items:center;font-size:18px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.chip{position:absolute;z-index:3;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--ink);padding:8px 12px 8px 8px;box-shadow:4px 4px 0 var(--ink);animation:bob 5s ease-in-out infinite}
+.chip .ic{width:30px;height:30px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-size:15px}
+.chip b{display:block;font-family:var(--cond);font-weight:700;font-size:19px;line-height:1;color:var(--ink)}
+.chip small{display:block;font-size:11px;line-height:1.2;color:#666}
+.chip.c1{right:-2%;top:20%}
+.chip.c2{left:-4%;top:50%;animation-delay:-1.6s}
+.chip.c3{right:0;bottom:10%;animation-delay:-3.2s}
+@keyframes bob{50%{transform:translateY(-8px)}}
 
 /* marquee */
-.marquee{margin-top:56px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);overflow:hidden;white-space:nowrap;padding:14px 0}
-.marquee .track{display:inline-flex;animation:slide 38s linear infinite}
-.marquee span{font-family:var(--cond);font-weight:700;font-size:22px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);padding-right:28px}
-.marquee span::after{content:"/";color:var(--red);padding-left:28px}
+.marquee{margin-top:40px;background:var(--red);overflow:hidden;white-space:nowrap;padding:14px 0;transform:rotate(-1.5deg);width:104%;margin-left:-2%}
+.marquee .track{display:inline-flex;animation:slide 34s linear infinite}
+.marquee span{font-family:var(--cond);font-weight:700;font-size:24px;letter-spacing:.06em;text-transform:uppercase;color:#fff;padding-right:26px}
+.marquee span::after{content:"✦";color:var(--ink);padding-left:26px}
 @keyframes slide{to{transform:translateX(-50%)}}
 
 /* numbers */
-.nums{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
-.num{padding:30px 0 28px;border-top:1px solid var(--line)}
-.num:nth-child(odd){padding-right:16px}
+.nums{display:grid;grid-template-columns:1fr 1fr;margin-top:56px;border-top:1px solid var(--ink)}
+.num{padding:24px 14px 22px 0;border-bottom:1px solid var(--line)}
 .num:nth-child(even){padding-left:16px;border-left:1px solid var(--line)}
-.num:last-child{grid-column:1/-1;padding-left:0;border-left:0}
-.num .pre{display:block;font-family:var(--cond);font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);height:18px}
-.num .v{display:block;font-family:var(--cond);font-weight:700;font-size:clamp(54px,9vw,84px);line-height:1;color:var(--red);font-variant-numeric:tabular-nums}
-.num .l{display:block;font-size:15px;line-height:1.4;margin-top:8px;color:var(--text);max-width:22ch}
+.num .pre{display:block;height:16px}
+.num .v{display:block;font-family:var(--cond);font-weight:700;font-size:clamp(50px,8vw,76px);line-height:1;color:var(--red);font-variant-numeric:tabular-nums}
+.num .l{display:block;font-size:14px;line-height:1.35;margin-top:6px;max-width:20ch}
 
-/* role fit index */
-.fit{margin-top:64px}
-.fit-head{display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--ink)}
-.fit-row{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 0;border-bottom:1px solid var(--line);text-decoration:none;font-size:17px;line-height:1.4;transition:padding .3s,color .3s}
-.fit-row b{font-family:var(--cond);font-weight:700;font-size:28px;color:var(--red);flex:none}
-.fit-row:hover{padding-left:10px;color:var(--ink)}
+/* fit */
+.fit{margin-top:72px;display:grid;gap:28px}
+.fit h2{font-size:clamp(38px,6vw,64px)}
+.fit h2 span{color:var(--red)}
+.fit-list{border-top:1px solid var(--ink)}
+.fit-row{display:grid;grid-template-columns:30px 1fr auto;align-items:center;gap:14px;padding:15px 0;border-bottom:1px solid var(--line);text-decoration:none;font-size:16px;line-height:1.4;transition:padding .3s}
+.fit-row .ck{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--red);color:var(--red);display:grid;place-items:center;font-size:14px;transition:background .3s,color .3s}
+.fit-row b{font-family:var(--cond);font-weight:700;font-size:24px;color:var(--ink)}
+.fit-row:hover{padding-left:8px}
+.fit-row:hover .ck{background:var(--red);color:#fff}
 
 /* sections */
-.sec{padding:88px 0 0}
-.sec-head{display:flex;align-items:baseline;gap:18px;padding-bottom:22px;border-bottom:1px solid var(--ink);margin-bottom:40px}
-.sec-head .n{font-family:var(--cond);font-weight:700;font-size:clamp(60px,10vw,110px);line-height:.8;color:var(--red)}
-.sec-head h2{font-size:clamp(34px,6vw,64px)}
+.sec{padding:96px 0 0}
+.sec-head{display:flex;align-items:flex-end;gap:16px;margin-bottom:36px}
+.sec-head .n{font-family:var(--cond);font-weight:700;font-size:clamp(76px,13vw,150px);line-height:.75;color:transparent;-webkit-text-stroke:2px var(--red)}
+.sec-head .n.solid{color:var(--red);-webkit-text-stroke:0}
+.sec-head h2{font-size:clamp(34px,6vw,66px)}
+.sec-head p{font-size:16px;color:#555;margin-top:8px;max-width:44ch}
 .ul{position:relative;display:inline-block;padding-bottom:6px}
-.ul::after{content:"";position:absolute;left:0;bottom:-2px;height:4px;width:100%;background:var(--red);transform:scaleX(1);transform-origin:left}
+.ul::after{content:"";position:absolute;left:0;bottom:-2px;height:5px;width:100%;background:var(--red);transform-origin:left}
 .js .rv .ul::after,.js .ul.rv::after{transform:scaleX(0);transition:transform .9s cubic-bezier(.7,0,.2,1) .25s}
 .js .rv.in .ul::after,.js .ul.rv.in::after{transform:scaleX(1)}
+.grid2{display:grid;gap:36px}
+.block{margin-top:64px}
+.sub-h{font-family:var(--cond);font-weight:700;font-size:28px;text-transform:uppercase;line-height:1;color:var(--ink);display:flex;align-items:baseline;justify-content:space-between;gap:6px 12px;flex-wrap:wrap}
+.sub-h small{font-family:var(--body);font-weight:400;font-size:14px;text-transform:none;color:#666;letter-spacing:0}
 
-.grid2{display:grid;gap:40px}
-.copy p+p{margin-top:16px}
-.copy p{max-width:58ch}
-.copy strong{font-weight:500;color:var(--ink)}
+/* 01 clients */
+.owners{display:grid;gap:28px;align-items:center}
+.big30{font-family:var(--cond);font-weight:700;font-size:clamp(130px,26vw,260px);line-height:.78;color:var(--red);letter-spacing:-.02em}
+.big30-cap{font-family:var(--cond);font-weight:700;font-size:clamp(28px,4vw,40px);line-height:1;text-transform:uppercase;color:var(--ink);margin-top:14px;max-width:15ch}
+.big30-cap span{color:var(--red)}
+.owners-copy{margin-top:16px;max-width:42ch;font-size:16px}
+.cadence{display:flex;gap:4px;margin-top:20px;flex-wrap:wrap}
+.cadence span{width:30px;height:30px;border:1px solid var(--ink);display:grid;place-items:center;font-family:var(--cond);font-weight:700;font-size:12px;color:var(--ink);transition:background .3s,color .3s}
+.js .owners .rv.in .cadence span{background:var(--ink);color:var(--bone)}
+.cadence span:nth-child(2){transition-delay:.08s}.cadence span:nth-child(3){transition-delay:.16s}.cadence span:nth-child(4){transition-delay:.24s}.cadence span:nth-child(5){transition-delay:.32s}.cadence span:nth-child(6){transition-delay:.4s}.cadence span:nth-child(7){transition-delay:.48s}.cadence span:nth-child(8){transition-delay:.56s}.cadence span:nth-child(9){transition-delay:.64s}.cadence span:nth-child(10){transition-delay:.72s}.cadence span:nth-child(11){transition-delay:.8s}.cadence span:nth-child(12){transition-delay:.88s}
 
-.roles{list-style:none;border-top:1px solid var(--line)}
-.roles li{display:grid;grid-template-columns:44px 1fr;gap:4px 14px;padding:22px 0;border-bottom:1px solid var(--line)}
-.roles .ic{grid-row:span 2;width:44px;height:44px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-size:20px;color:var(--red)}
-.roles h3{font-family:var(--cond);font-weight:700;font-size:24px;text-transform:uppercase;line-height:1.1;color:var(--ink)}
-.roles .meta{font-family:var(--cond);font-weight:500;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
-.roles p{grid-column:2;font-size:16px;margin-top:6px}
+.report{background:#fff;border:1px solid var(--ink);box-shadow:10px 10px 0 var(--red);transform:rotate(1deg)}
+.report .rh{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.report .rh b{font-family:var(--cond);font-weight:700;font-size:22px;text-transform:uppercase;color:var(--ink);line-height:1}
+.report .rh .tag{font-family:var(--cond);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;background:var(--ink);color:var(--bone);padding:3px 8px}
+.report .rb{padding:18px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.kpi{border:1px solid var(--line);padding:10px}
+.kpi .lbl{font-size:12px;display:block}
+.kpi .bar{height:64px;display:flex;align-items:flex-end;margin-top:8px}
+.kpi .bar i{display:block;width:100%;background:var(--ink);transform-origin:bottom;transition:transform 1s cubic-bezier(.2,.7,.2,1) .2s}
+.kpi.rev .bar i{height:64px}
+.kpi.exp .bar i{height:28px;background:var(--grey)}
+.kpi.pro .bar i{height:36px;background:var(--red)}
+.js .report .kpi .bar i{transform:scaleY(0)}
+.js .report.in .kpi .bar i{transform:scaleY(1)}
+.js .report .kpi.exp .bar i{transition-delay:.4s}.js .report .kpi.pro .bar i{transition-delay:.6s}
+.plan{margin-top:14px;border-top:1px dashed var(--line);padding-top:12px}
+.plan .lbl{color:var(--red);font-weight:700}
+.plan ul{list-style:none;margin-top:6px}
+.plan li{display:flex;align-items:center;gap:10px;padding:6px 0;font-size:15px}
+.plan li .i{color:var(--red);font-size:15px}
+.report .rf{padding:10px 18px;border-top:1px solid var(--line);font-size:12px;color:#888}
 
-.pull{margin-top:56px;padding:34px 0 0;border-top:4px solid var(--red);max-width:900px}
-.pull blockquote{font-family:var(--cond);font-weight:600;font-size:clamp(30px,5vw,52px);line-height:1.05;text-transform:uppercase;color:var(--ink)}
-.pull blockquote em{font-style:normal;color:var(--red)}
+.role{display:flex;gap:14px;align-items:center;padding:18px;border:1px solid var(--ink);background:#fff;margin-top:40px}
+.role .ic{width:50px;height:50px;flex:none;border-radius:50%;background:var(--ink);color:var(--bone);display:grid;place-items:center;font-size:22px}
+.role h3{font-family:var(--cond);font-weight:700;font-size:24px;line-height:1.05;text-transform:uppercase;color:var(--ink)}
+.role p{font-size:15px;color:#555;line-height:1.4;margin-top:2px}
+.quote-band{margin-top:72px;background:var(--ink);color:var(--bone);padding:48px 0}
+.quote-band blockquote{font-family:var(--cond);font-weight:700;font-size:clamp(32px,5.6vw,64px);line-height:1;text-transform:uppercase;max-width:20ch}
+.quote-band em{font-style:normal;color:var(--red)}
 
-/* feedback card */
-.sub-h{font-family:var(--cond);font-weight:700;font-size:26px;text-transform:uppercase;color:var(--ink);margin-bottom:12px}
-.review{border:1px solid var(--ink);background:#fff}
-.review .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 18px;border-bottom:1px solid var(--line);font-family:var(--cond);font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
-.review .bar b{color:var(--ink);font-weight:700}
-.review .bar .dot{width:8px;height:8px;border-radius:50%;background:var(--red);display:inline-block;margin-right:8px}
-.cmt{display:grid;grid-template-columns:34px 1fr;gap:14px;padding:22px 18px}
+/* 02 creative */
+.brief-flow{display:grid;gap:18px;align-items:center;margin-top:18px}
+.brief{background:var(--ink);color:var(--bone);padding:22px}
+.brief .lbl{color:var(--red);display:block;margin-bottom:12px}
+.brief dl{display:grid;gap:12px}
+.brief dt{font-family:var(--cond);font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+.brief dd{font-size:16px;line-height:1.35}
+.arrow{justify-self:center;font-size:34px;color:var(--red);transform:rotate(90deg)}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.shots figure{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--soft)}
+.shots img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.shots figure:hover img{transform:scale(1.05)}
+.shots figcaption{position:absolute;left:6px;bottom:6px;z-index:2;font-family:var(--cond);font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;background:var(--bone);padding:2px 7px}
+
+.review{border:1px solid var(--ink);background:#fff;margin-top:56px}
+.review .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 18px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.review .bar b{font-family:var(--cond);font-weight:700;font-size:18px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.review .dot{width:8px;height:8px;border-radius:50%;background:var(--red);display:inline-block;margin-right:8px}
+.review .body{display:grid}
+.cmt{display:grid;grid-template-columns:36px 1fr;gap:14px;padding:22px 18px}
 .cmt+.cmt{border-top:1px dashed var(--line)}
-.cmt .mk{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:18px}
+.cmt .mk{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-size:18px}
 .cmt.bad .mk{background:var(--soft);color:var(--grey)}
 .cmt.good .mk{background:var(--red);color:#fff}
-.cmt .who{font-family:var(--cond);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin-bottom:4px}
-.cmt.bad q{color:var(--grey);text-decoration:line-through;text-decoration-color:rgba(153,153,153,.6)}
-.cmt q{font-size:18px;line-height:1.45;quotes:"“" "”"}
+.cmt .lbl{margin-bottom:4px}
+.cmt q{font-size:19px;line-height:1.45;quotes:"“" "”"}
+.cmt.bad q{color:var(--grey);text-decoration:line-through}
 .cmt.good q{color:var(--ink)}
-.cmt .tag{display:inline-block;margin-top:10px;font-family:var(--cond);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);padding:3px 8px;margin-right:6px;color:var(--text)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tags span{font-family:var(--cond);font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);padding:3px 8px}
 
-.hooks{margin-top:64px}
-.hooks .top-line{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:8px}
-.hook{display:grid;grid-template-columns:auto 1fr;gap:4px 18px;padding:26px 0;border-bottom:1px solid var(--line)}
-.hook:first-of-type{border-top:1px solid var(--ink)}
-.hook .k{font-family:var(--cond);font-weight:700;font-size:20px;color:var(--grey);line-height:1.3}
-.hook q{font-family:var(--cond);font-weight:600;font-size:clamp(23px,3.4vw,32px);line-height:1.15;color:var(--ink);quotes:"“" "”"}
-.badges{grid-column:2;display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--cond);font-weight:700;font-size:16px;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px;background:var(--red);color:#fff}
-.badge.o{background:transparent;color:var(--red);border:1.5px solid var(--red)}
+.ads{display:grid;gap:40px;margin-top:18px;align-items:center}
+.phone{width:min(280px,78vw);justify-self:center;background:var(--ink);border-radius:34px;padding:10px;box-shadow:12px 12px 0 var(--red);transform:rotate(-2deg)}
+.phone .scr{border-radius:26px;overflow:hidden;background:#fff}
+.phone .head{display:flex;align-items:center;gap:8px;padding:10px 12px;font-size:12px;line-height:1.2}
+.phone .head .av{width:26px;height:26px;border-radius:50%;background:var(--red)}
+.phone .head small{display:block;color:#888;font-size:10px}
+.phone .cap{padding:0 12px 8px;font-size:12.5px;line-height:1.35;color:#111}
+.phone .media{position:relative;aspect-ratio:9/14;background:#111}
+.phone .cta{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;font-size:12px;background:#f4f4f4}
+.phone .cta b{background:var(--ink);color:#fff;padding:5px 10px;border-radius:4px;font-size:11px}
 
-/* AI cards */
-.cards{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
-.card{background:var(--bone);padding:30px 24px 28px;display:flex;flex-direction:column;gap:14px;transition:background .3s}
+/* ads manager panel */
+.am{background:#fff;border:1px solid var(--ink);box-shadow:0 30px 60px -36px rgba(0,0,0,.45);min-width:0}
+.am-top{display:flex;align-items:center;gap:10px;padding:11px 14px;background:var(--ink);color:var(--bone)}
+.am-top .i{font-size:20px;color:#fff}
+.am-top b{font-family:var(--cond);font-weight:700;font-size:18px;letter-spacing:.06em;text-transform:uppercase}
+.am-top span{margin-left:auto;font-size:12px;color:#aaa;white-space:nowrap}
+.am-tabs{display:flex;gap:4px;padding:10px 14px 0;border-bottom:1px solid var(--line)}
+.am-tabs span{font-family:var(--cond);font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;color:#888;border-bottom:3px solid transparent}
+.am-tabs span.on{color:var(--ink);border-color:var(--red)}
+.am-sum{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}
+.am-sum div{padding:14px;border-left:1px solid var(--line)}
+.am-sum div:first-child{border-left:0}
+.am-sum b{display:block;font-family:var(--cond);font-weight:700;font-size:clamp(26px,4vw,36px);line-height:1;color:var(--red)}
+.am-sum small{display:block;font-size:12px;color:#777;margin-top:4px;line-height:1.25}
+.am-tbl{overflow-x:auto}
+.am table{width:100%;border-collapse:collapse;font-size:14px;min-width:540px}
+.am th{text-align:right;font-family:var(--cond);font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#888;padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+.am th:first-child,.am td:first-child{text-align:left}
+.am td{padding:12px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.am td:first-child{white-space:normal}
+.am tr:last-child td{border-bottom:0}
+.am .nm{display:flex;align-items:center;gap:10px}
+.am .nm i{width:9px;height:9px;border-radius:50%;background:#2ea44f;flex:none;box-shadow:0 0 0 3px rgba(46,164,79,.18)}
+.am .nm b{font-family:var(--cond);font-weight:700;font-size:15px;color:var(--ink);display:block;line-height:1.2}
+.am .nm small{display:block;font-size:12px;color:#888;line-height:1.3}
+.am .best{color:var(--red);font-weight:500}
+.am .ctr{display:inline-flex;align-items:center;gap:8px}
+.am .ctr u{display:inline-block;height:6px;background:var(--red);text-decoration:none;border-radius:3px;transform-origin:left;transition:transform 1s .3s}
+.js .am .ctr u{transform:scaleX(0)}
+.js .am.in .ctr u{transform:scaleX(1)}
+.am .muted{color:#bbb}
+
+/* video tiles */
+.reel{position:relative;width:100%;height:100%;display:block;overflow:hidden;background:#111}
+.reel img,.reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.reel .play{position:absolute;inset:0;display:grid;place-items:center}
+.reel .play span{width:52px;height:52px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-size:20px;box-shadow:0 6px 20px rgba(0,0,0,.3);transition:transform .25s}
+.reel:hover .play span{transform:scale(1.1)}
+.reel.on .play{display:none}
+
+/* 03 AI */
+.term{background:#111;color:#e9e9e4;border-radius:10px;overflow:hidden;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13.5px;line-height:1.65;box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+.term .tb{display:flex;align-items:center;gap:7px;padding:11px 14px;background:#1c1c1c}
+.term .tb i{width:11px;height:11px;border-radius:50%;background:#444}
+.term .tb i:first-child{background:var(--red)}
+.term .tb span{margin-left:10px;color:#888;font-size:12px}
+.term .tbody{padding:18px 18px 20px}
+.ln{display:block;white-space:pre-wrap}
+.ln .p{color:var(--red)}
+.ln .ok{color:#8bd48b}
+.ln .dim,.ln.dim{color:#8a8a8a}
+.js .term .ln{opacity:0;transform:translateX(-6px);transition:opacity .35s,transform .35s}
+.js .term.in .ln{opacity:1;transform:none}
+.cursor{display:inline-block;width:8px;height:15px;background:var(--red);vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+.sites{display:grid;grid-auto-flow:column;grid-auto-columns:82%;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:18px 2px;scrollbar-width:thin}
+.site{scroll-snap-align:start;text-decoration:none;display:block}
+.site .frame{border:1px solid var(--ink);background:#fff;transition:transform .35s,box-shadow .35s}
+.site:hover .frame{transform:translateY(-6px) rotate(-.6deg);box-shadow:8px 8px 0 var(--red)}
+.site .chrome{display:flex;align-items:center;gap:6px;padding:7px 10px;border-bottom:1px solid var(--line)}
+.site .chrome i{width:8px;height:8px;border-radius:50%;background:var(--soft);border:1px solid var(--line)}
+.site .chrome span{margin-left:8px;font-size:11px;color:#888;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.site img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top}
+.site p{display:flex;justify-content:space-between;gap:10px;margin-top:10px;font-family:var(--cond);font-weight:700;font-size:18px;text-transform:uppercase;color:var(--ink)}
+.site p span{color:var(--red);font-weight:600;font-size:15px;letter-spacing:.06em}
+
+.belt{overflow:hidden;margin-top:18px;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.belt .track{display:flex;gap:12px;width:max-content;animation:slide 40s linear infinite}
+.belt:hover .track{animation-play-state:paused}
+.belt img{width:172px;height:215px;object-fit:cover;flex:none;border-radius:4px}
+
+.cards{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:56px}
+.card{background:var(--bone);padding:26px 22px 24px;display:flex;flex-direction:column;gap:12px;transition:background .3s}
 .card:hover{background:#fff}
 .card .ic{font-size:26px;color:var(--red)}
-.card h3{font-family:var(--cond);font-weight:700;font-size:26px;line-height:1.05;text-transform:uppercase;color:var(--ink)}
-.card p{font-size:16px}
-.delta{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);display:flex;align-items:center;flex-wrap:wrap;gap:10px;font-family:var(--cond);font-weight:700;font-size:22px;text-transform:uppercase;color:var(--ink)}
+.card h3{font-family:var(--cond);font-weight:700;font-size:24px;line-height:1.05;text-transform:uppercase;color:var(--ink)}
+.card p{font-size:15px;line-height:1.5}
+.delta{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-family:var(--cond);font-weight:700;font-size:22px;text-transform:uppercase;color:var(--ink)}
 .delta s{color:var(--grey);text-decoration-thickness:2px}
 .delta .i{color:var(--red);font-size:18px}
-.card.principle{background:var(--ink);color:var(--bone)}
-.card.principle h3{color:var(--bone)}
-.card.principle .big{font-family:var(--cond);font-weight:700;font-size:clamp(36px,5vw,48px);line-height:.95;text-transform:uppercase;margin-top:auto;color:var(--bone)}
-.card.principle .big span{color:var(--red)}
 
-/* risk */
-.steps{list-style:none;display:grid;gap:0;counter-reset:s;border-left:1px solid var(--ink);margin-left:8px}
-.steps li{position:relative;padding:0 0 30px 28px}
+.mem{display:grid;gap:28px;align-items:center}
+.files{list-style:none;display:grid;gap:8px}
+.files li{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;align-items:center;padding:12px 14px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--red);transition:transform .3s}
+.files li:hover{transform:translateX(6px)}
+.files .i{grid-row:span 2;font-size:20px;color:var(--ink)}
+.files code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;color:var(--ink)}
+.files span{font-size:14px;color:#666;line-height:1.35}
+.bigstat{font-family:var(--cond);font-weight:700;font-size:clamp(90px,16vw,170px);line-height:.8;color:var(--red)}
+.bigstat-cap{font-family:var(--cond);font-weight:700;font-size:26px;line-height:1.05;text-transform:uppercase;color:var(--ink);margin-top:10px;max-width:16ch}
+.bigstat-txt{margin-top:12px;max-width:40ch;font-size:16px}
+
+.principle{margin-top:64px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;border:1px solid var(--ink);padding:28px 24px;background:#fff}
+.principle p{font-family:var(--cond);font-weight:700;font-size:clamp(40px,7vw,80px);line-height:.9;text-transform:uppercase;color:var(--ink)}
+.principle p span{color:var(--red)}
+.principle small{max-width:34ch;font-size:15px;color:#555}
+
+/* 04 risk */
+.steps{list-style:none;border-left:2px solid var(--ink);margin-left:10px}
+.steps li{position:relative;padding:0 0 26px 30px}
 .steps li:last-child{padding-bottom:0}
-.steps li::before{content:"";position:absolute;left:-7px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--bone);border:2px solid var(--ink)}
-.steps li.flag::before{background:var(--red);border-color:var(--red)}
-.steps .lab{font-family:var(--cond);font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:var(--grey)}
-.steps li.flag .lab{color:var(--red)}
-.steps p{margin-top:4px;max-width:52ch}
+.steps li::before{content:"";position:absolute;left:-9px;top:4px;width:16px;height:16px;border-radius:50%;background:var(--bone);border:2px solid var(--ink)}
+.steps li.flag::before{background:var(--red);border-color:var(--red);box-shadow:0 0 0 6px rgba(224,55,73,.18)}
+.steps .lbl{color:var(--ink);font-weight:700}
+.steps li.flag .lbl{color:var(--red)}
+.steps p{margin-top:2px;max-width:46ch;font-size:16px}
+.price{background:var(--red);color:#fff;padding:34px 28px;position:relative;overflow:hidden}
+.price blockquote{font-family:var(--cond);font-weight:700;font-size:clamp(34px,5vw,58px);line-height:.95;text-transform:uppercase;position:relative;z-index:1}
+.price::after{content:"$";position:absolute;right:-10px;bottom:-60px;font-family:var(--cond);font-weight:700;font-size:260px;line-height:1;color:rgba(255,255,255,.14)}
 
-/* stories */
-.vids{display:grid;gap:28px;margin-top:8px}
-.vid .cap{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px solid var(--ink);margin-bottom:14px}
+/* 05 stories */
+.vids{display:grid;gap:22px}
+.vid .cap{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 0;border-bottom:2px solid var(--ink);margin-bottom:12px}
 .vid .cap .h{font-size:22px}
-.vid .cap .v{font-family:var(--cond);font-weight:700;font-size:22px;color:var(--red);white-space:nowrap}
-.frame{position:relative;height:600px;background:var(--soft);overflow:hidden;border:1px solid var(--line)}
-.frame iframe{position:relative;z-index:1;width:100%;height:100%;border:0}
-.frame .ph{position:absolute;inset:0;display:grid;place-items:center;color:var(--grey);font-size:40px}
-.vid a.open{display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-family:var(--cond);font-weight:600;font-size:15px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
+.vid .cap .v{font-family:var(--cond);font-weight:700;font-size:24px;color:var(--red);white-space:nowrap}
+.frame-tt{position:relative;height:580px;background:var(--soft);overflow:hidden;border:1px solid var(--line)}
+.frame-tt iframe{position:relative;z-index:1;width:100%;height:100%;border:0}
+.frame-tt .ph{position:absolute;inset:0;display:grid;place-items:center;color:var(--grey);font-size:40px}
+.vid a.open{display:inline-flex;align-items:center;gap:8px;margin-top:10px;font-family:var(--cond);font-weight:600;font-size:15px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
 .vid a.open .i{color:var(--red)}
-.love{margin-top:48px;font-family:var(--cond);font-weight:600;font-size:clamp(26px,4vw,40px);line-height:1.1;text-transform:uppercase;color:var(--ink);max-width:24ch}
-.love span{color:var(--red)}
-.fandom{margin-top:24px}
+.ugc{display:grid;grid-auto-flow:column;grid-auto-columns:46%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:16px 2px 12px;scrollbar-width:thin}
+.ugc figure{scroll-snap-align:start}
+.ugc .reel{aspect-ratio:9/16;height:auto;border-radius:6px}
+.ugc figcaption{margin-top:8px;font-family:var(--cond);font-weight:700;font-size:16px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.ugc figcaption span{display:block;font-family:var(--body);font-weight:400;font-size:13px;letter-spacing:0;text-transform:none;color:#777}
+.love{margin-top:56px;display:grid;gap:10px}
+.love p{font-family:var(--cond);font-weight:700;font-size:clamp(30px,5vw,54px);line-height:1;text-transform:uppercase;color:var(--ink);max-width:22ch}
+.love p span{color:var(--red)}
 .fandom:empty{display:none}
 
+/* stack */
+.stack{display:flex;flex-wrap:wrap;gap:10px}
+.tool{display:inline-flex;align-items:center;gap:9px;padding:10px 16px 10px 12px;border:1px solid var(--ink);background:#fff;font-family:var(--cond);font-weight:700;font-size:18px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);transition:transform .25s,box-shadow .25s}
+.tool:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--red)}
+.tool .i{font-size:18px}
+.tool.hl{background:var(--red);color:#fff;border-color:var(--red)}
+.stack-note{margin-top:16px;font-size:15px;color:#555;max-width:60ch}
+
 /* process */
-.process{list-style:none;display:grid;gap:0;border-top:1px solid var(--ink)}
-.process li{padding:28px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:52px 1fr;gap:6px 16px;align-items:start}
-.process .ic{grid-row:span 2;width:52px;height:52px;border-radius:50%;background:var(--ink);color:var(--bone);display:grid;place-items:center;font-size:22px;transition:background .3s}
-.process li:hover .ic{background:var(--red)}
-.process .st{font-family:var(--cond);font-weight:600;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
-#storm .sec-head{border-bottom:0;margin-bottom:12px}
-.process h3{font-family:var(--cond);font-weight:700;font-size:26px;line-height:1.05;text-transform:uppercase;color:var(--ink)}
-.process p{grid-column:2;font-size:16px;color:#444}
+.process{list-style:none;display:grid;gap:12px}
+.process li{padding:22px 20px;border:1px solid var(--ink);background:#fff;display:grid;grid-template-columns:52px 1fr;gap:4px 16px;align-items:start;transition:transform .3s,box-shadow .3s}
+.process li:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--red)}
+.process .ic{grid-row:span 3;width:52px;height:52px;border-radius:50%;background:var(--ink);color:var(--bone);display:grid;place-items:center;font-size:22px}
+.process .st{font-family:var(--cond);font-weight:700;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
+.process h3{font-family:var(--cond);font-weight:700;font-size:24px;line-height:1.05;text-transform:uppercase;color:var(--ink)}
+.process p{font-size:15px;color:#555;line-height:1.45}
 
 /* footer */
-footer{margin-top:110px;background:var(--ink);color:var(--bone);padding:72px 0 36px}
-footer .h{color:var(--bone);font-size:clamp(64px,16vw,170px);line-height:.85}
+footer{margin-top:110px;background:var(--ink);color:var(--bone);padding:64px 0 32px;overflow:hidden}
+.foot-grid{display:grid;gap:24px;align-items:end}
+footer .h{color:var(--bone);font-size:clamp(76px,17vw,180px);line-height:.82}
 footer .h span{color:var(--red)}
-.links{display:grid;gap:0;margin-top:44px;border-top:1px solid rgba(251,251,249,.2)}
+.foot-photo{position:relative;width:min(240px,58vw);aspect-ratio:507/900;justify-self:center}
+.foot-photo::before{content:"";position:absolute;left:-12%;right:-12%;bottom:4%;aspect-ratio:1;border-radius:50%;background:var(--red)}
+.foot-photo img{position:relative;width:100%;height:100%;object-fit:contain}
+.links{display:grid;margin-top:36px;border-top:1px solid rgba(251,251,249,.2)}
 .links a{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 0;border-bottom:1px solid rgba(251,251,249,.2);text-decoration:none;font-size:18px;transition:color .25s,padding .25s}
 .links a span{display:flex;align-items:center;gap:12px;min-width:0;overflow-wrap:anywhere}
 .links a .i{color:var(--red);font-size:20px}
 .links a:hover{color:var(--red);padding-left:8px}
-.avail{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:36px;font-family:var(--cond);font-weight:600;font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+.avail{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;font-family:var(--cond);font-weight:600;font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
 .avail b{color:var(--bone);font-weight:600}
 .avail .dot{width:8px;height:8px;border-radius:50%;background:var(--red);display:inline-block;margin-right:8px;vertical-align:middle;animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{50%{opacity:.3}}
-.fine{margin-top:40px;font-size:13px;color:#777}
+.fine{margin-top:36px;font-size:13px;color:#777}
 
 /* reveal */
 .js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 .js .rv.in{opacity:1;transform:none}
 .js .rv.d1{transition-delay:.1s}.js .rv.d2{transition-delay:.2s}.js .rv.d3{transition-delay:.3s}.js .rv.d4{transition-delay:.4s}
+.js .report.rv.in{transform:rotate(1deg)}
+.js .phone.rv.in{transform:rotate(-2deg)}
 
 @media (min-width:720px){
   :root{--gut:40px}
-  .nums{grid-template-columns:repeat(5,1fr)}
-  .num,.num:nth-child(odd),.num:nth-child(even),.num:last-child{grid-column:auto;padding:36px 18px 32px;border-left:1px solid var(--line)}
-  .num:first-child{border-left:0;padding-left:0}
-  .cards{grid-template-columns:1fr 1fr}
+  .top nav{gap:22px}
+  .nums{grid-template-columns:repeat(3,1fr)}
+  .num,.num:nth-child(even){padding:28px 18px 24px;border-left:1px solid var(--line)}
+  .num:nth-child(3n+1){border-left:0;padding-left:0}
+  .brief-flow{grid-template-columns:1fr auto 1.3fr}
+  .arrow{transform:none}
   .vids{grid-template-columns:1fr 1fr}
-  .process{grid-template-columns:repeat(4,1fr);border-top:0}
-  .process li{grid-template-columns:1fr;border-top:1px solid var(--ink);border-bottom:0;padding:28px 22px 0 0}
-  .process .ic{grid-row:auto;margin-bottom:14px}
-  .process p{grid-column:auto}
+  .sites{grid-auto-columns:46%}
+  .cards{grid-template-columns:1fr 1fr}
+  .ugc{grid-auto-columns:23%}
+  .process{grid-template-columns:1fr 1fr}
   .links{grid-template-columns:repeat(3,1fr);column-gap:28px}
+  .review .body{grid-template-columns:1fr 1fr}
+  .cmt+.cmt{border-top:0;border-left:1px dashed var(--line)}
 }
 @media (min-width:960px){
-  .grid2{grid-template-columns:1.05fr 1fr;gap:64px}
-  .hero{padding-top:84px}
-  .hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:end}
-  .hero .lead{margin-top:0}
-  .sec{padding-top:120px}
+  .hero{padding-top:56px}
+  .hero-grid{grid-template-columns:1.2fr 1fr;gap:32px}
+  .portrait{margin:0;width:100%;max-width:440px;justify-self:end}
+  .nums{grid-template-columns:repeat(6,1fr)}
+  .num,.num:nth-child(even),.num:nth-child(3n+1){border-left:1px solid var(--line);padding:28px 14px 24px}
+  .num:first-child{border-left:0;padding-left:0}
+  .fit{grid-template-columns:1fr 1.5fr;gap:56px;align-items:start}
+  .owners{grid-template-columns:1fr 1.1fr;gap:64px}
+  .grid2{grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .ads{grid-template-columns:auto 1fr;gap:56px}
+  .sec{padding-top:128px}
+  .sites{grid-auto-flow:row;grid-template-columns:repeat(4,minmax(0,1fr));overflow:visible}
   .cards{grid-template-columns:repeat(4,1fr)}
+  .mem{grid-template-columns:1fr 1.4fr;gap:64px}
+  .ugc{grid-auto-flow:row;grid-template-columns:repeat(5,minmax(0,1fr));overflow:visible}
+  .process{grid-template-columns:repeat(4,1fr)}
+  .process li{grid-template-columns:1fr}
+  .process .ic{grid-row:auto;margin-bottom:12px}
+  .foot-grid{grid-template-columns:1fr auto}
 }
 @media (max-width:480px){
-  .top .role{font-size:11px;letter-spacing:.1em}
-  .frame{height:560px}
+  .sec-head{flex-direction:column;align-items:flex-start;gap:10px}
+  .cadence span{width:22px;height:24px;font-size:11px}
+  .am table{min-width:430px;font-size:13px}
+  .am .nm small{display:none}
+  .chip{transform:scale(.88)}
+  .chip.c1{right:-4%}
+  .stamp{width:92px;height:92px}
+  .frame-tt{height:560px}
+  .top nav a{font-size:12px;letter-spacing:.1em}
+  .am-sum div{padding:12px 10px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .marquee .track,.avail .dot{animation:none}
-  .js .rv{opacity:1;transform:none;transition:none}
-  .js .rv .ul::after,.js .ul.rv::after{transform:scaleX(1);transition:none}
-  .btn,.btn .i,.links a,.card,.process .ic{transition:none}
+  .marquee .track,.belt .track,.stamp svg,.chip,.avail .dot,.cursor{animation:none}
+  .js .rv,.js .term .ln{opacity:1;transform:none;transition:none}
+  .js .report.rv{transform:rotate(1deg)}
+  .js .phone.rv{transform:rotate(-2deg)}
+  .js .rv .ul::after,.js .ul.rv::after,.js .report .kpi .bar i,.js .am .ctr u{transform:none;transition:none}
+  .cadence span,.links a,.card,.process li,.site .frame,.tool,.files li,.fit-row{transition:none}
 }
 </style>
 <script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('js')</script>
@@ -246,28 +444,36 @@ footer .h span{color:var(--red)}
 <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></g></symbol>
 <symbol id="i-sparkles" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></g></symbol>
 <symbol id="i-briefcase" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></g></symbol>
-<symbol id="i-house" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></g></symbol>
 <symbol id="i-x" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></g></symbol>
-<symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></g></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></g></symbol>
 <symbol id="i-terminal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></g></symbol>
-<symbol id="i-bar-chart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></g></symbol>
 <symbol id="i-file-text" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></g></symbol>
-<symbol id="i-shield-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></g></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></g></symbol>
+<symbol id="i-brain" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></g></symbol>
 <symbol id="i-ear" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0"/><path d="M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4"/></g></symbol>
 <symbol id="i-clipboard-list" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></g></symbol>
 <symbol id="i-message-square" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></g></symbol>
 <symbol id="i-flag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></g></symbol>
-<symbol id="i-play" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></g></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><polygon fill="currentColor" points="7 4 20 12 7 20 7 4"/></symbol>
 <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></g></symbol>
 <symbol id="i-linkedin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></g></symbol>
 <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></g></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></g></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></g></symbol>
+<symbol id="i-claude" viewBox="0 0 24 24"><path fill="currentColor" d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></symbol>
+<symbol id="i-meta" viewBox="0 0 24 24"><path fill="currentColor" d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z"/></symbol>
+<symbol id="i-notion" viewBox="0 0 24 24"><path fill="currentColor" d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></symbol>
+<symbol id="i-canva" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zM6.962 7.68c.754 0 1.337.549 1.405 1.2.069.583-.171 1.097-.822 1.406-.343.171-.48.172-.549.069-.034-.069 0-.137.069-.206.617-.514.617-.926.548-1.508-.034-.378-.308-.618-.583-.618-1.2 0-2.914 2.674-2.674 4.629.103.754.549 1.646 1.509 1.646.308 0 .65-.103.96-.24.5-.264.799-.47 1.097-.8-.073-.885.704-2.046 1.851-2.046.515 0 .926.205.96.583.068.514-.377.582-.514.582s-.378-.034-.378-.17c-.034-.138.309-.07.275-.378-.035-.206-.24-.274-.446-.274-.72 0-1.131.994-1.029 1.611.035.275.172.549.447.549.205 0 .514-.31.617-.755.068-.308.343-.514.583-.514.102 0 .17.034.205.171v.138c-.034.137-.137.548-.102.651 0 .069.034.171.17.171.092 0 .436-.18.777-.459.117-.59.253-1.298.253-1.357.034-.24.137-.48.617-.48.103 0 .171.034.205.171v.138l-.136.617c.445-.583 1.097-.994 1.508-.994.172 0 .309.102.309.274 0 .103 0 .274-.069.446-.137.377-.309.96-.412 1.474 0 .137.035.274.207.274.171 0 .685-.206 1.096-.754l.007-.004c-.002-.068-.007-.134-.007-.202 0-.411.035-.754.104-.994.068-.274.411-.514.617-.514.103 0 .205.069.205.171 0 .035 0 .103-.034.137-.137.446-.24.857-.24 1.269 0 .24.034.582.102.788 0 .034.035.069.07.069.068 0 .548-.445.89-1.028-.308-.206-.48-.549-.48-.96 0-.72.446-1.097.858-1.097.343 0 .617.24.617.72 0 .308-.103.65-.274.96h.102a.77.77 0 0 0 .584-.24.293.293 0 0 1 .134-.117c.335-.425.83-.74 1.41-.74.48 0 .924.205.959.582.068.515-.378.618-.515.618l-.002-.002c-.138 0-.377-.035-.377-.172 0-.137.309-.068.274-.376-.034-.206-.24-.275-.446-.275-.686 0-1.13.891-1.028 1.611.034.275.171.583.445.583.206 0 .515-.308.652-.754.068-.274.343-.514.583-.514.103 0 .17.034.205.171 0 .069 0 .206-.137.652-.17.308-.171.48-.137.617.034.274.171.48.309.583.034.034.068.102.068.102 0 .069-.034.138-.137.138-.034 0-.068 0-.103-.035-.514-.205-.72-.548-.789-.891-.205.24-.445.377-.72.377-.445 0-.89-.411-.96-.926a1.609 1.609 0 0 1 .075-.649c-.203.13-.422.203-.623.203h-.17c-.447.652-.927 1.098-1.27 1.303a.896.896 0 0 1-.377.104c-.068 0-.171-.035-.205-.104-.095-.152-.156-.392-.193-.667-.481.527-1.145.805-1.453.805-.343 0-.548-.206-.582-.55v-.376c.102-.754.377-1.2.377-1.337a.074.074 0 0 0-.069-.07c-.24 0-1.028.824-1.166 1.373l-.103.445c-.068.309-.377.515-.582.515-.103 0-.172-.035-.206-.172v-.137l.046-.233c-.435.31-.87.508-1.075.508-.308 0-.48-.172-.514-.412-.206.274-.445.412-.754.412-.352 0-.696-.24-.862-.593-.244.275-.523.553-.852.764-.48.309-1.028.549-1.68.549-.582 0-1.097-.309-1.371-.583-.412-.377-.651-.96-.686-1.509-.205-1.68.823-3.84 2.4-4.8.378-.205.755-.343 1.132-.343zm9.77 3.291c-.104 0-.172.172-.172.343 0 .274.137.583.309.755a1.74 1.74 0 0 0 .102-.583c0-.343-.137-.515-.24-.515z"/></symbol>
+<symbol id="i-mailchimp" viewBox="0 0 24 24"><path fill="currentColor" d="M11.267 0C6.791-.015-1.82 10.246 1.397 12.964l.79.669a3.88 3.88 0 0 0-.22 1.792c.084.84.518 1.644 1.22 2.266.666.59 1.542.964 2.392.964 1.406 3.24 4.62 5.228 8.386 5.34 4.04.12 7.433-1.776 8.854-5.182.093-.24.488-1.316.488-2.267 0-.956-.54-1.352-.885-1.352-.01-.037-.078-.286-.172-.586-.093-.3-.19-.51-.19-.51.375-.563.382-1.065.332-1.35-.053-.353-.2-.653-.496-.964-.296-.311-.902-.63-1.753-.868l-.446-.124c-.002-.019-.024-1.053-.043-1.497-.014-.32-.042-.822-.197-1.315-.186-.668-.508-1.253-.911-1.627 1.112-1.152 1.806-2.422 1.804-3.511-.003-2.095-2.576-2.729-5.746-1.416l-.672.285A678.22 678.22 0 0 0 12.7.504C12.304.159 11.817.002 11.267 0zm.073.873c.166 0 .322.019.465.058.297.084 1.28 1.224 1.28 1.224s-1.826 1.013-3.52 2.426c-2.28 1.757-4.005 4.311-5.037 7.082-.811.158-1.526.618-1.963 1.253-.261-.218-.748-.64-.834-.804-.698-1.326.761-3.902 1.781-5.357C5.834 3.44 9.37.867 11.34.873zm3.286 3.273c.04-.002.06.05.028.074-.143.11-.299.26-.413.414a.04.04 0 0 0 .031.064c.659.004 1.587.235 2.192.574.041.023.012.103-.034.092-.915-.21-2.414-.369-3.97.01-1.39.34-2.45.863-3.224 1.426-.04.028-.086-.023-.055-.06.896-1.035 1.999-1.935 2.987-2.44.034-.018.07.019.052.052-.079.143-.23.447-.278.678-.007.035.032.063.062.042.615-.42 1.684-.868 2.622-.926zm3.023 3.205l.056.001a.896.896 0 0 1 .456.146c.534.355.61 1.216.638 1.845.015.36.059 1.229.074 1.478.034.571.184.651.487.751.17.057.33.098.563.164.706.198 1.125.4 1.39.658.157.162.23.333.253.497.083.608-.472 1.36-1.942 2.041-1.607.746-3.557.935-4.904.785l-.471-.053c-1.078-.145-1.693 1.247-1.046 2.201.417.615 1.552 1.015 2.688 1.015 2.604 0 4.605-1.111 5.35-2.072a.987.987 0 0 0 .06-.085c.036-.055.006-.085-.04-.054-.608.416-3.31 2.069-6.2 1.571 0 0-.351-.057-.672-.182-.255-.1-.788-.344-.853-.891 2.333.72 3.801.039 3.801.039a.072.072 0 0 0 .042-.072.067.067 0 0 0-.074-.06s-1.911.283-3.718-.378c.197-.64.72-.408 1.51-.345a11.045 11.045 0 0 0 3.647-.394c.818-.234 1.892-.697 2.727-1.356.281.618.38 1.299.38 1.299s.219-.04.4.073c.173.106.299.326.213.895-.176 1.063-.628 1.926-1.387 2.72a5.714 5.714 0 0 1-1.666 1.244c-.34.18-.704.334-1.087.46-2.863.935-5.794-.093-6.739-2.3a3.545 3.545 0 0 1-.189-.522c-.403-1.455-.06-3.2 1.008-4.299.065-.07.132-.153.132-.256 0-.087-.055-.179-.102-.243-.374-.543-1.669-1.466-1.409-3.254.187-1.284 1.31-2.189 2.357-2.135.089.004.177.01.266.015.453.027.85.085 1.223.1.625.028 1.187-.063 1.853-.618.225-.187.405-.35.71-.401.028-.005.092-.028.215-.028zm.022 2.18a.42.42 0 0 0-.06.005c-.335.054-.347.468-.228 1.04.068.32.187.595.32.765.175-.02.343-.022.498 0 .089-.205.104-.557.024-.942-.112-.535-.261-.872-.554-.868zm-3.66 1.546a1.724 1.724 0 0 0-1.016.326c-.16.117-.311.28-.29.378.008.032.031.056.088.063.131.015.592-.217 1.122-.25.374-.023.684.094.923.2.239.104.386.173.443.113.037-.038.026-.11-.031-.204-.118-.192-.36-.387-.618-.497a1.601 1.601 0 0 0-.621-.129zm4.082.81c-.171-.003-.313.186-.317.42-.004.236.131.43.303.432.172.003.314-.185.318-.42.004-.236-.132-.429-.304-.432zm-3.58.172c-.05 0-.102.002-.155.008-.311.05-.483.152-.593.247-.094.082-.152.173-.152.237a.075.075 0 0 0 .075.076c.07 0 .228-.063.228-.063a1.98 1.98 0 0 1 1.001-.104c.157.018.23.027.265-.026.01-.016.022-.049-.01-.1-.063-.103-.311-.269-.66-.275zm2.26.4c-.127 0-.235.051-.283.148-.075.154.035.363.246.466.21.104.443.063.52-.09.075-.155-.035-.364-.246-.467a.542.542 0 0 0-.237-.058zm-11.635.024c.048 0 .098 0 .149.003.73.04 1.806.6 2.052 2.19.217 1.41-.128 2.843-1.449 3.069-.123.02-.248.029-.374.026-1.22-.033-2.539-1.132-2.67-2.435-.145-1.44.591-2.548 1.894-2.811.117-.024.252-.04.398-.042zm-.07.927a1.144 1.144 0 0 0-.847.364c-.38.418-.439.988-.366 1.19.027.073.07.094.1.098.064.008.16-.039.22-.2a1.2 1.2 0 0 0 .017-.052 1.58 1.58 0 0 1 .157-.37.689.689 0 0 1 .955-.199c.266.174.369.5.255.81-.058.161-.154.469-.133.721.043.511.357.717.64.738.274.01.466-.143.515-.256.029-.067.005-.107-.011-.125-.043-.053-.113-.037-.18-.021a.638.638 0 0 1-.16.022.347.347 0 0 1-.294-.148c-.078-.12-.073-.3.013-.504.011-.028.025-.058.04-.092.138-.308.368-.825.11-1.317-.195-.37-.513-.602-.894-.65a1.135 1.135 0 0 0-.138-.01z"/></symbol>
+<symbol id="i-googleanalytics" viewBox="0 0 24 24"><path fill="currentColor" d="M22.84 2.9982v17.9987c.0086 1.6473-1.3197 2.9897-2.967 2.9984a2.9808 2.9808 0 01-.3677-.0208c-1.528-.226-2.6477-1.5558-2.6105-3.1V3.1204c-.0369-1.5458 1.0856-2.8762 2.6157-3.1 1.6361-.1915 3.1178.9796 3.3093 2.6158.014.1201.0208.241.0202.3619zM4.1326 18.0548c-1.6417 0-2.9726 1.331-2.9726 2.9726C1.16 22.6691 2.4909 24 4.1326 24s2.9726-1.3309 2.9726-2.9726-1.331-2.9726-2.9726-2.9726zm7.8728-9.0098c-.0171 0-.0342 0-.0513.0003-1.6495.0904-2.9293 1.474-2.891 3.1256v7.9846c0 2.167.9535 3.4825 2.3505 3.763 1.6118.3266 3.1832-.7152 3.5098-2.327.04-.1974.06-.3983.0593-.5998v-8.9585c.003-1.6474-1.33-2.9852-2.9773-2.9882z"/></symbol>
 <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></symbol>
+<symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></g></symbol>
 </svg>
 
 <header class="top">
   <div class="wrap">
     <a class="mono" href="#top">SR<span>.</span></a>
-    <div class="role">For <b>Storm Ideas</b> · AI-First Creative Account Manager</div>
+    <nav aria-label="Sections"><a href="#clients">Clients</a><a href="#creative">Creative</a><a href="#ai">AI</a><a href="#risk">Risk</a><a href="#stories">Stories</a></nav>
   </div>
 </header>
 
@@ -276,18 +482,26 @@ footer .h span{color:var(--red)}
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <p class="eyebrow rv">Sofia Retif — Portfolio</p>
     <div class="hero-grid">
-      <h1 class="h rv d1">Sofia Retif<span class="sub">AI-first account management for <span class="ul rv d2">entertainment brands</span></span></h1>
       <div>
+        <p class="eyebrow rv">For Storm Ideas · AI-First Creative Account Manager</p>
+        <h1 class="h rv d1">Sofia Retif<span class="sub">AI-first account management for <span class="ul rv d2">entertainment brands</span></span></h1>
         <p class="lead rv d2">I own client relationships, turn creative vision into clear briefs, and use AI agents to do the heavy lifting.</p>
-        <div class="hero-row rv d3">
-          <a class="btn" href="mailto:sofiaretif@gmail.com">Let's talk <svg class="i"><use href="#i-arrow-right"/></svg></a>
-          <p class="note"><svg class="i"><use href="#i-sparkles"/></svg><span>This page was built in under 20 minutes with Claude. That's how I work.</span></p>
+        <p class="note rv d3"><svg class="i"><use href="#i-sparkles"/></svg><span>This page was built in ~30 minutes with Claude. That's how I work.</span></p>
+        <div class="facts rv d4"><span>Bilingual EN / ES</span><span>9:00–5:30 PT</span><span>Contractor-ready</span><span>Master's in Digital Business</span></div>
+      </div>
+      <div class="portrait rv d2">
+        <div class="ring"></div><div class="disc"></div>
+        <img src="../assets/cvportfolio/hero-sofia.webp" alt="Sofia Retif holding a laptop" width="640" height="1096" fetchpriority="high">
+        <div class="stamp" aria-hidden="true">
+          <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><circle cx="60" cy="60" r="59" fill="#FBFBF9" stroke="#020202"/><text><textPath href="#circ">AI-FIRST ✦ ACCOUNT MANAGER ✦ STORM ✦ </textPath></text></svg>
+          <span class="core"><svg class="i"><use href="#i-sparkles"/></svg></span>
         </div>
+        <div class="chip c1"><span class="ic"><svg class="i"><use href="#i-users"/></svg></span><div><b>30+ owners</b><small>monthly meetings</small></div></div>
+        <div class="chip c2"><span class="ic"><svg class="i"><use href="#i-eye"/></svg></span><div><b>1.1M</b><small>views, top video</small></div></div>
+        <div class="chip c3"><span class="ic"><svg class="i"><use href="#i-claude"/></svg></span><div><b>Claude Code</b><small>daily driver</small></div></div>
       </div>
     </div>
-    <div class="loom rv"><!-- LOOM --></div>
   </div>
   <div class="marquee" aria-hidden="true">
     <div class="track">
@@ -297,24 +511,27 @@ footer .h span{color:var(--red)}
   </div>
 </section>
 
-<!-- NUMBERS -->
-<section aria-label="Numbers">
+<section aria-label="Numbers and role fit">
   <div class="wrap">
     <div class="nums">
       <div class="num rv"><span class="pre"></span><span class="v" data-to="8">8</span><span class="l">Years in marketing</span></div>
-      <div class="num rv d1"><span class="pre">Up to</span><span class="v" data-to="5">5</span><span class="l">Clients managed at once</span></div>
-      <div class="num rv d2"><span class="pre"></span><span class="v" data-to="30" data-suf="+">30+</span><span class="l">Client properties with monthly reporting</span></div>
-      <div class="num rv d3"><span class="pre"></span><span class="v" data-to="50" data-suf="+">50+</span><span class="l">Creators briefed and managed</span></div>
-      <div class="num rv d4"><span class="pre"></span><span class="v" data-to="1.1" data-dec="1" data-suf="M">1.1M</span><span class="l">Views on my top video</span></div>
+      <div class="num rv d1"><span class="pre lbl">Up to</span><span class="v" data-to="5">5</span><span class="l">Clients managed at once</span></div>
+      <div class="num rv d2"><span class="pre"></span><span class="v" data-to="30" data-suf="+">30+</span><span class="l">Property owners, met with monthly</span></div>
+      <div class="num rv d1"><span class="pre"></span><span class="v" data-to="50" data-suf="+">50+</span><span class="l">Creators briefed and managed</span></div>
+      <div class="num rv d2"><span class="pre"></span><span class="v" data-to="1000" data-suf="+" data-sep="1">1,000+</span><span class="l">Leads for one client in 2026</span></div>
+      <div class="num rv d3"><span class="pre"></span><span class="v" data-to="1.1" data-dec="1" data-suf="M">1.1M</span><span class="l">Views on my top video</span></div>
     </div>
 
     <div class="fit">
-      <div class="fit-head rv"><span class="eyebrow">What the role asks for</span><span class="eyebrow">Proof on this page</span></div>
-      <a class="fit-row rv" href="#clients"><span>Own client confidence and communicate before they follow up</span><b>01</b></a>
-      <a class="fit-row rv" href="#creative"><span>Translate vision into briefs and give feedback the team can act on</span><b>02</b></a>
-      <a class="fit-row rv" href="#ai"><span>Delegate whole pieces of work to AI, and review it with a critical eye</span><b>03</b></a>
-      <a class="fit-row rv" href="#risk"><span>Diagnose issues, escalate early with evidence and a recommendation</span><b>04</b></a>
-      <a class="fit-row rv" href="#stories"><span>Understand why audiences care about characters, stories and worlds</span><b>05</b></a>
+      <h2 class="h rv">You asked for.<br><span style="color:var(--red)">I bring.</span></h2>
+      <div class="fit-list">
+        <a class="fit-row rv" href="#clients"><span class="ck"><svg class="i"><use href="#i-check"/></svg></span><span>Own client confidence, communicate before they follow up</span><b>01</b></a>
+        <a class="fit-row rv" href="#creative"><span class="ck"><svg class="i"><use href="#i-check"/></svg></span><span>Turn vision into briefs, give feedback the team can act on</span><b>02</b></a>
+        <a class="fit-row rv" href="#ai"><span class="ck"><svg class="i"><use href="#i-check"/></svg></span><span>Delegate whole pieces of work to AI, review it critically</span><b>03</b></a>
+        <a class="fit-row rv" href="#ai-systems"><span class="ck"><svg class="i"><use href="#i-check"/></svg></span><span>Encode methods into reusable workflows agents can run</span><b>03</b></a>
+        <a class="fit-row rv" href="#risk"><span class="ck"><svg class="i"><use href="#i-check"/></svg></span><span>Diagnose, escalate early with evidence and a recommendation</span><b>04</b></a>
+        <a class="fit-row rv" href="#stories"><span class="ck"><svg class="i"><use href="#i-check"/></svg></span><span>Get why audiences care about characters, stories and worlds</span><b>05</b></a>
+      </div>
     </div>
   </div>
 </section>
@@ -322,77 +539,103 @@ footer .h span{color:var(--red)}
 <!-- 01 -->
 <section class="sec" id="clients">
   <div class="wrap">
-    <div class="sec-head rv"><span class="n">01</span><h2 class="h"><span class="ul">Client relationships</span></h2></div>
-    <div class="grid2">
-      <div class="copy rv">
-        <p>For two years I was <strong>Marketing Director at Gersten Financial Planning</strong> in San Diego, the client-facing marketing lead. I handled <strong>up to 5 clients at once</strong>: briefs, timelines, QA, KPI reporting and client meetings.</p>
-        <p>I also ran <strong>30+ short-term rentals, mostly owned by other people</strong>. Every owner got a monthly meeting: revenue, expenses and the plan for next month.</p>
-        <p>Same rule in both jobs: <strong>clients should know what happens next before they have to ask.</strong> That's how you build confidence, and confident clients are the ones whose accounts grow.</p>
+    <div class="sec-head rv"><span class="n">01</span><div><h2 class="h"><span class="ul">Client relationships</span></h2><p>Clients should know what happens next before they have to ask.</p></div></div>
+    <div class="owners">
+      <div class="rv">
+        <p class="big30" data-to="30" data-suf="+">30+</p>
+        <p class="big30-cap">Airbnb owners. <span>One meeting each, every month.</span></p>
+        <p class="owners-copy">I ran 30+ short-term rentals, mostly owned by other people. Every month I sat down with each owner and walked them through <strong>revenue, expenses and profit</strong>, then agreed on <strong>an action plan</strong> for the month ahead.</p>
+        <div class="cadence" aria-label="Twelve monthly meetings a year"><span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span><span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span></div>
       </div>
-      <ul class="roles">
-        <li class="rv d1">
-          <span class="ic"><svg class="i"><use href="#i-briefcase"/></svg></span>
-          <h3>Marketing Director</h3>
-          <span class="meta">Gersten Financial Planning · San Diego · 2 yrs</span>
-          <p>Up to 5 clients at once. Briefs, timelines, QA, KPI reports, client meetings.</p>
-        </li>
-        <li class="rv d2">
-          <span class="ic"><svg class="i"><use href="#i-house"/></svg></span>
-          <h3>Short-term rental portfolio</h3>
-          <span class="meta">30+ properties · mostly owned by others</span>
-          <p>Monthly meeting with each owner on revenue, expenses and next month's plan.</p>
-        </li>
-      </ul>
+      <div class="report rv d1" aria-label="Monthly owner report layout">
+        <div class="rh"><b>Monthly owner report</b><span class="tag">Owner 1 of 30+</span></div>
+        <div class="rb">
+          <div class="kpis">
+            <div class="kpi rev"><span class="lbl">Revenue</span><div class="bar"><i></i></div></div>
+            <div class="kpi exp"><span class="lbl">Expenses</span><div class="bar"><i></i></div></div>
+            <div class="kpi pro"><span class="lbl">Profit</span><div class="bar"><i></i></div></div>
+          </div>
+          <div class="plan">
+            <span class="lbl">Action plan · next month</span>
+            <ul>
+              <li><svg class="i"><use href="#i-check"/></svg>What we change, and why</li>
+              <li><svg class="i"><use href="#i-check"/></svg>Who does it, and by when</li>
+              <li><svg class="i"><use href="#i-check"/></svg>What the owner can expect</li>
+            </ul>
+          </div>
+        </div>
+        <p class="rf">Same structure for every owner, every month. No surprises.</p>
+      </div>
     </div>
-    <figure class="pull rv">
-      <blockquote>“Clients don't leave because of one bad month. They leave when they <em>don't understand what's going on.</em>”</blockquote>
-    </figure>
+    <div class="role rv"><span class="ic"><svg class="i"><use href="#i-briefcase"/></svg></span><div><h3>Marketing Director · Gersten Financial Planning</h3><p>San Diego, 2 years. The client-facing marketing lead for up to 5 clients at once: briefs, timelines, QA, KPI reports and client meetings.</p></div></div>
+  </div>
+  <div class="quote-band rv">
+    <div class="wrap"><blockquote>“Clients don't leave because of one bad month. They leave when they <em>don't understand what's going on.</em>”</blockquote></div>
   </div>
 </section>
 
 <!-- 02 -->
 <section class="sec" id="creative">
   <div class="wrap">
-    <div class="sec-head rv"><span class="n">02</span><h2 class="h"><span class="ul">Creative judgment</span></h2></div>
-    <div class="grid2">
-      <div class="copy rv">
-        <h3 class="sub-h">From vision to brief</h3>
-        <p>For my brand <strong>Daily Me</strong> I briefed <strong>50+ creators</strong>: the hook, the key messages and exactly what to show on camera. Then I tracked which videos actually sold, and fed that back into the next brief.</p>
-        <p>A good brief makes the creative better and the review shorter. Same with feedback: if it can't be acted on, it isn't feedback.</p>
+    <div class="sec-head rv"><span class="n">02</span><div><h2 class="h"><span class="ul">Creative judgment</span></h2><p>Knowing what works on social, and saying it so the team can act on it.</p></div></div>
+
+    <h3 class="sub-h rv">From vision to brief <small>50+ creators briefed for my brand, Daily Me</small></h3>
+    <div class="brief-flow">
+      <div class="brief rv">
+        <span class="lbl">Creator brief</span>
+        <dl>
+          <div><dt>Hook</dt><dd>The first line that stops the scroll</dd></div>
+          <div><dt>Key messages</dt><dd>What the viewer must remember</dd></div>
+          <div><dt>On camera</dt><dd>Exactly what to show, and when</dd></div>
+          <div><dt>Then</dt><dd>Track which videos actually sold</dd></div>
+        </dl>
       </div>
-      <div class="rv d1">
-        <h3 class="sub-h">How I give feedback</h3>
-        <div class="review">
-          <div class="bar"><span><i class="dot"></i><b>Review</b> · cut v2</span><span>@ 0:04</span></div>
-          <div class="cmt bad">
-            <span class="mk"><svg class="i"><use href="#i-x"/></svg></span>
-            <div><p class="who">Vague</p><q>Make it pop more.</q></div>
-          </div>
-          <div class="cmt good">
-            <span class="mk"><svg class="i"><use href="#i-check"/></svg></span>
-            <div><p class="who">Specific</p><q>The hook lands at second 4; move the price reveal to the first 2 seconds and cut the logo intro.</q>
-              <div><span class="tag">Timestamp</span><span class="tag">What to move</span><span class="tag">What to cut</span></div></div>
-          </div>
-        </div>
+      <span class="arrow rv d1"><svg class="i"><use href="#i-arrow-right"/></svg></span>
+      <div class="shots rv d2">
+        <figure><img src="../assets/cvportfolio/dailyme-1.webp" alt="Daily Me journal on the beach" width="640" height="800" loading="lazy"><figcaption>Product</figcaption></figure>
+        <figure><button class="reel" data-src="../assets/portfolio/clip-2.mp4" aria-label="Play Daily Me video"><img src="../assets/portfolio/clip-2.jpg" alt="Daily Me creator video" width="320" height="568" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Video</figcaption></figure>
+        <figure><img src="../assets/cvportfolio/dailyme-2.webp" alt="Daily Me journal lifestyle shot" width="640" height="800" loading="lazy"><figcaption>Lifestyle</figcaption></figure>
       </div>
     </div>
 
-    <div class="hooks">
-      <div class="top-line rv"><h3 class="sub-h">Real hooks, real results</h3><span class="eyebrow">Meta ads</span></div>
-      <div class="hook rv">
-        <span class="k">A</span>
-        <q>Why does Airbnb charge you 3% and your neighbor 15.5%?</q>
-        <div class="badges"><span class="badge">6% CTR</span><span class="badge o">~$0.80 per conversation</span></div>
+    <div class="review rv">
+      <div class="bar"><b><i class="dot"></i>How I give feedback</b><span class="lbl">Review · cut v2 · @ 0:04</span></div>
+      <div class="body">
+        <div class="cmt bad"><span class="mk"><svg class="i"><use href="#i-x"/></svg></span><div><p class="lbl">Vague</p><q>Make it pop more.</q></div></div>
+        <div class="cmt good"><span class="mk"><svg class="i"><use href="#i-check"/></svg></span><div><p class="lbl">Specific</p><q>The hook lands at second 4; move the price reveal to the first 2 seconds and cut the logo intro.</q><div class="tags"><span>Timestamp</span><span>What to move</span><span>What to cut</span></div></div></div>
       </div>
-      <div class="hook rv">
-        <span class="k">B</span>
-        <q>Renting on Airbnb and haven't registered your tax ID?</q>
-        <div class="badges"><span class="badge">3.8% CTR</span></div>
-      </div>
-      <div class="hook rv">
-        <span class="k">C</span>
-        <q>If you have an Airbnb and your accountant isn't specialized…</q>
-        <div class="badges"><span class="badge">268 conversations</span></div>
+    </div>
+
+    <div class="block">
+      <h3 class="sub-h rv">Hooks I scripted, straight from Ads Manager <small>Meta ads for an accounting firm client, 2026</small></h3>
+      <div class="ads">
+        <div class="phone rv" aria-label="Meta ad with hook A">
+          <div class="scr">
+            <div class="head"><span class="av"></span><div><b>Sponsored</b><small>Hook A</small></div></div>
+            <p class="cap">Why does Airbnb charge you 3% and your neighbor 15.5%?</p>
+            <div class="media"><button class="reel" data-src="../assets/scrolling/bonzo-1.mp4" aria-label="Play ad video"><img src="../assets/scrolling/bonzo-1.jpg" alt="Ad video frame" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button></div>
+            <div class="cta"><span>Chat on WhatsApp</span><b>Send message</b></div>
+          </div>
+        </div>
+        <div class="am rv d1" aria-label="Ads Manager style results table">
+          <div class="am-top"><svg class="i"><use href="#i-meta"/></svg><b>Ads Manager</b><span>Messaging campaigns · 2026</span></div>
+          <div class="am-tabs"><span>Campaigns</span><span>Ad sets</span><span class="on">Ads</span></div>
+          <div class="am-sum">
+            <div><b data-to="1000" data-suf="+" data-sep="1">1,000+</b><small>Leads in 2026</small></div>
+            <div><b>6%</b><small>Best CTR</small></div>
+            <div><b>~$0.80</b><small>Best cost per conversation</small></div>
+          </div>
+          <div class="am-tbl">
+            <table>
+              <thead><tr><th>Ad</th><th>Results</th><th>Cost / result</th><th>CTR</th></tr></thead>
+              <tbody>
+                <tr><td><div class="nm"><i></i><div><b>Hook A · 3% vs 15.5%</b><small>“Why does Airbnb charge you 3%…”</small></div></div></td><td>167</td><td class="best">~$0.80</td><td><span class="ctr"><u style="width:60px"></u><span class="best">6.0%</span></span></td></tr>
+                <tr><td><div class="nm"><i></i><div><b>Hook B · Tax ID</b><small>“Renting on Airbnb and haven't registered…”</small></div></div></td><td class="muted">—</td><td class="muted">—</td><td><span class="ctr"><u style="width:38px"></u>3.8%</span></td></tr>
+                <tr><td><div class="nm"><i></i><div><b>Hook C · Specialized accountant</b><small>“If you have an Airbnb and your accountant…”</small></div></div></td><td class="best">268</td><td>~$0.90</td><td class="muted">—</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -401,35 +644,66 @@ footer .h span{color:var(--red)}
 <!-- 03 -->
 <section class="sec" id="ai">
   <div class="wrap">
-    <div class="sec-head rv"><span class="n">03</span><h2 class="h"><span class="ul">AI in my real work</span></h2></div>
-    <div class="copy rv" style="margin-bottom:36px">
-      <p>Not a search box. I <strong>delegate whole pieces of work</strong> to AI agents, review what comes back with a critical eye, and keep refining how I brief them so the quality compounds. When something works, I turn it into a <strong>reusable workflow</strong> instead of doing it by hand again.</p>
+    <div class="sec-head rv"><span class="n">03</span><div><h2 class="h"><span class="ul">AI in my real work</span></h2><p>Not a search box. I hand AI whole pieces of work, then review everything that comes back.</p></div></div>
+
+    <div class="term rv" aria-label="How this page was made">
+      <div class="tb"><i></i><i></i><i></i><span>claude — sofiaretif.com</span></div>
+      <div class="tbody">
+<span class="ln" style="transition-delay:.1s"><span class="p">›</span> Build my portfolio page for the AI-First Creative Account Manager role at Storm Ideas</span>
+<span class="ln dim" style="transition-delay:.5s">  Reading the job post · pulling brand colors and type from stormideas.com</span>
+<span class="ln" style="transition-delay:.9s"><span class="ok">✓</span> Mapped every requirement to proof from my real work</span>
+<span class="ln" style="transition-delay:1.3s"><span class="ok">✓</span> Wrote copy · designed sections · reused my photos and videos</span>
+<span class="ln" style="transition-delay:1.7s"><span class="ok">✓</span> Checked desktop + mobile · published to sofiaretif.com/stormideas</span>
+<span class="ln" style="transition-delay:2.1s"><span class="p">›</span> Less text, more images. Make it fun.</span>
+<span class="ln" style="transition-delay:2.5s"><span class="ok">✓</span> Done. <span class="dim">Total: ~30 minutes</span> <span class="cursor"></span></span>
+      </div>
     </div>
+
+    <div class="block">
+      <h3 class="sub-h rv">Landing pages, built with Claude Code <small>1–2 days → ~30 minutes</small></h3>
+      <div class="sites">
+        <a class="site rv" href="https://sofiaretif.com/" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>sofiaretif.com</span></div><img src="../assets/stormideas/web-course.webp" alt="Online course landing page" width="960" height="600" loading="lazy"></div><p>Course sales page <span>Live</span></p></a>
+        <a class="site rv d1" href="https://sofiaretif.com/masterclass.html" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>sofiaretif.com/masterclass</span></div><img src="../assets/stormideas/web-masterclass.webp" alt="Masterclass landing page" width="960" height="600" loading="lazy"></div><p>Masterclass funnel <span>Live</span></p></a>
+        <a class="site rv d2" href="https://sofiaretif.com/blog/" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>sofiaretif.com/blog</span></div><img src="../assets/stormideas/web-blog.webp" alt="Programmatic SEO blog" width="960" height="600" loading="lazy"></div><p>Programmatic blog <span>78 pages</span></p></a>
+        <a class="site rv d3" href="https://sofiaretif.com/cvportfolio" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>sofiaretif.com/cvportfolio</span></div><img src="../assets/stormideas/web-cv.webp" alt="Marketing portfolio page" width="960" height="600" loading="lazy"></div><p>Marketing portfolio <span>Live</span></p></a>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3 class="sub-h rv">235 on-brand slides, zero Canva <small>A carousel generator I built with Claude from Daily Me's brand book</small></h3>
+      <div class="belt" aria-label="Daily Me carousel covers">
+        <div class="track">
+          <img src="../assets/stormideas/car-1.webp" alt="" width="432" height="540" loading="lazy"><img src="../assets/stormideas/car-4.webp" alt="" width="432" height="540" loading="lazy"><img src="../assets/stormideas/car-2.webp" alt="" width="432" height="540" loading="lazy"><img src="../assets/stormideas/car-6.webp" alt="" width="432" height="540" loading="lazy"><img src="../assets/stormideas/car-3.webp" alt="" width="432" height="540" loading="lazy"><img src="../assets/stormideas/car-9.webp" alt="" width="432" height="540" loading="lazy"><img src="../assets/stormideas/car-5.webp" alt="" width="432" height="540" loading="lazy"><img src="../assets/stormideas/car-10.webp" alt="" width="432" height="540" loading="lazy"><img src="../assets/stormideas/car-7.webp" alt="" width="432" height="540" loading="lazy"><img src="../assets/stormideas/car-8.webp" alt="" width="432" height="540" loading="lazy">
+          <img src="../assets/stormideas/car-1.webp" alt="" width="432" height="540" loading="lazy"><img src="../assets/stormideas/car-4.webp" alt="" width="432" height="540" loading="lazy"><img src="../assets/stormideas/car-2.webp" alt="" width="432" height="540" loading="lazy"><img src="../assets/stormideas/car-6.webp" alt="" width="432" height="540" loading="lazy"><img src="../assets/stormideas/car-3.webp" alt="" width="432" height="540" loading="lazy"><img src="../assets/stormideas/car-9.webp" alt="" width="432" height="540" loading="lazy"><img src="../assets/stormideas/car-5.webp" alt="" width="432" height="540" loading="lazy"><img src="../assets/stormideas/car-10.webp" alt="" width="432" height="540" loading="lazy"><img src="../assets/stormideas/car-7.webp" alt="" width="432" height="540" loading="lazy"><img src="../assets/stormideas/car-8.webp" alt="" width="432" height="540" loading="lazy">
+        </div>
+      </div>
+    </div>
+
     <div class="cards">
-      <article class="card rv">
-        <svg class="i ic"><use href="#i-terminal"/></svg>
-        <h3>Landing pages with Claude Code</h3>
-        <p>End to end: structure, copy, design, code and publishing. Including this page.</p>
-        <div class="delta"><s>1–2 days</s><svg class="i"><use href="#i-arrow-right"/></svg>&lt;20 min</div>
-      </article>
-      <article class="card rv d1">
-        <svg class="i ic"><use href="#i-bar-chart"/></svg>
-        <h3>Claude connected to Meta Ads</h3>
-        <p>Plans campaigns and pulls performance reports straight from the ad account. Weekly reporting became a repeatable workflow.</p>
-        <div class="delta"><s>~3 hrs</s><svg class="i"><use href="#i-arrow-right"/></svg>&lt;30 min</div>
-      </article>
-      <article class="card rv d2">
-        <svg class="i ic"><use href="#i-file-text"/></svg>
-        <h3>Branded audit reports</h3>
-        <p>A reusable AI workflow that produces a branded 10-page audit report for AuditBnB, every time.</p>
-        <div class="delta">10 pages · on brand · reusable</div>
-      </article>
-      <article class="card principle rv d3">
-        <svg class="i ic"><use href="#i-shield-check"/></svg>
-        <h3>I stay the editor</h3>
-        <p>I review AI output against strategy, facts and brand. It's never finished work until I've checked it.</p>
-        <p class="big">AI drafts.<br><span>I decide.</span></p>
-      </article>
+      <article class="card rv"><svg class="i ic"><use href="#i-meta"/></svg><h3>Claude × Meta Ads</h3><p>Connected to the ad account to plan campaigns and pull reports.</p><div class="delta"><s>~3 hrs</s><svg class="i"><use href="#i-arrow-right"/></svg>&lt;30 min</div></article>
+      <article class="card rv d1"><svg class="i ic"><use href="#i-file-text"/></svg><h3>Branded audit reports</h3><p>An AI workflow that turns a listing into a branded 10-page audit (AuditBnB).</p><div class="delta">10 pages · on brand</div></article>
+      <article class="card rv d2"><svg class="i ic"><use href="#i-layers"/></svg><h3>Programmatic SEO</h3><p>One generator: data files in, a whole blog out. Built to scale in waves to 500+.</p><div class="delta">78 pages · wave 1</div></article>
+      <article class="card rv d3"><svg class="i ic"><use href="#i-terminal"/></svg><h3>Pages end to end</h3><p>Structure, copy, design, code, publishing. This page included.</p><div class="delta"><s>1–2 days</s><svg class="i"><use href="#i-arrow-right"/></svg>~30 min</div></article>
+    </div>
+
+    <div class="block mem" id="ai-systems">
+      <div class="rv">
+        <p class="bigstat" data-to="49">49</p>
+        <p class="bigstat-cap">Context files my agents read before every task</p>
+        <p class="bigstat-txt">Brand rules, client preferences, past decisions and what never to do again. Every agent starts briefed, and every correction becomes a rule the next one follows.</p>
+      </div>
+      <ul class="files">
+        <li class="rv"><svg class="i"><use href="#i-brain"/></svg><code>brand-palette.md</code><span>Fixed palette per brand. Never deviate.</span></li>
+        <li class="rv d1"><svg class="i"><use href="#i-brain"/></svg><code>gender-neutral-copy.md</code><span>Half the audience is men. Write for everyone.</span></li>
+        <li class="rv d2"><svg class="i"><use href="#i-brain"/></svg><code>carousel-style.md</code><span>Tested, rejected, reverted: no Impact font, ever.</span></li>
+        <li class="rv d3"><svg class="i"><use href="#i-brain"/></svg><code>ad-copy-rules.md</code><span>Sell the result, not the tool.</span></li>
+        <li class="rv d4"><svg class="i"><use href="#i-brain"/></svg><code>client-sync.md</code><span>Renew a contract → update the tracker and calendar too.</span></li>
+      </ul>
+    </div>
+
+    <div class="principle rv">
+      <p>AI drafts.<br><span>I decide.</span></p>
+      <small>I review every output against strategy, facts and brand. It's never finished work until I've checked it.</small>
     </div>
   </div>
 </section>
@@ -437,17 +711,15 @@ footer .h span{color:var(--red)}
 <!-- 04 -->
 <section class="sec" id="risk">
   <div class="wrap">
-    <div class="sec-head rv"><span class="n">04</span><h2 class="h"><span class="ul">Catching risk early</span></h2></div>
+    <div class="sec-head rv"><span class="n">04</span><div><h2 class="h"><span class="ul">Catching risk early</span></h2><p>Diagnose first. Then escalate with evidence and a fix.</p></div></div>
     <div class="grid2">
       <ol class="steps">
-        <li class="rv"><span class="lab">Early test</span><p>An ad was getting very cheap clicks.</p></li>
-        <li class="flag rv d1"><span class="lab">Diagnosed</span><p>The hook promised more than the service could deliver.</p></li>
-        <li class="flag rv d2"><span class="lab">Flagged, with a fix</span><p>I raised it <strong>before</strong> scaling the budget, not after, and proposed an honest rewrite.</p></li>
-        <li class="rv d3"><span class="lab">Rewritten</span><p>An honest hook. Higher cost per click, better-fit leads.</p></li>
+        <li class="rv"><span class="lbl">Early test</span><p>An ad was getting very cheap clicks.</p></li>
+        <li class="flag rv d1"><span class="lbl">Diagnosed</span><p>The hook promised more than the service could deliver.</p></li>
+        <li class="flag rv d2"><span class="lbl">Flagged, with a fix</span><p>Raised it <strong>before</strong> scaling the budget, with an honest rewrite ready.</p></li>
+        <li class="rv d3"><span class="lbl">Result</span><p>Higher cost per click. Better-fit leads.</p></li>
       </ol>
-      <figure class="pull rv" style="margin-top:0">
-        <blockquote>“Cheap clicks that turn into angry calls <em>aren't cheap.</em>”</blockquote>
-      </figure>
+      <div class="price rv d1"><blockquote>“Cheap clicks that turn into angry calls aren't cheap.”</blockquote></div>
     </div>
   </div>
 </section>
@@ -455,36 +727,68 @@ footer .h span{color:var(--red)}
 <!-- 05 -->
 <section class="sec" id="stories">
   <div class="wrap">
-    <div class="sec-head rv"><span class="n">05</span><h2 class="h"><span class="ul">Stories people follow</span></h2></div>
-    <div class="copy rv" style="margin-bottom:36px">
-      <p>I build audiences that come back for the next episode: a TikTok that reached <strong>1.1M views</strong>, and a day-by-day <strong>“20-day challenge”</strong> series with <strong>205K views on episode one</strong>.</p>
-    </div>
+    <div class="sec-head rv"><span class="n">05</span><div><h2 class="h"><span class="ul">Stories people follow</span></h2><p>I build audiences that come back for the next episode.</p></div></div>
     <div class="vids">
       <div class="vid rv">
         <div class="cap"><span class="h">Top video</span><span class="v">1.1M views</span></div>
-        <div class="frame"><span class="ph"><svg class="i"><use href="#i-play"/></svg></span><iframe src="https://www.tiktok.com/player/v1/7532594637559696696?rel=0&amp;description=0&amp;music_info=0" title="TikTok video with 1.1M views" loading="lazy" allow="fullscreen; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="frame-tt"><span class="ph"><svg class="i"><use href="#i-play"/></svg></span><iframe src="https://www.tiktok.com/player/v1/7532594637559696696?rel=0&amp;description=0&amp;music_info=0" title="TikTok video with 1.1M views" loading="lazy" allow="fullscreen; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
         <a class="open" href="https://www.tiktok.com/@sofiahosting/video/7532594637559696696" target="_blank" rel="noopener"><svg class="i"><use href="#i-tiktok"/></svg>Watch on TikTok</a>
       </div>
       <div class="vid rv d1">
         <div class="cap"><span class="h">20-day challenge · Ep. 1</span><span class="v">205K views</span></div>
-        <div class="frame"><span class="ph"><svg class="i"><use href="#i-play"/></svg></span><iframe src="https://www.tiktok.com/player/v1/7553833859729591570?rel=0&amp;description=0&amp;music_info=0" title="20-day challenge series, episode one, 205K views" loading="lazy" allow="fullscreen; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="frame-tt"><span class="ph"><svg class="i"><use href="#i-play"/></svg></span><iframe src="https://www.tiktok.com/player/v1/7553833859729591570?rel=0&amp;description=0&amp;music_info=0" title="20-day challenge series, episode one, 205K views" loading="lazy" allow="fullscreen; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
         <a class="open" href="https://www.tiktok.com/@sofiahosting/video/7553833859729591570" target="_blank" rel="noopener"><svg class="i"><use href="#i-tiktok"/></svg>Watch on TikTok</a>
       </div>
     </div>
-    <p class="love rv">What I love about entertainment: <span>why audiences fall for characters, stories and worlds.</span></p>
-    <div class="fandom rv"><!-- MI SERIE/FANDOM FAVORITO (opcional) --></div>
+
+    <div class="block">
+      <h3 class="sub-h rv">Content I've made for brands <small>Tap to play</small></h3>
+      <div class="ugc">
+        <figure class="rv"><button class="reel" data-src="../assets/scrolling/canva-links.mp4" aria-label="Play Canva video"><img src="../assets/scrolling/canva-links.jpg" alt="Canva tutorial video" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Canva<span>Feature tutorial</span></figcaption></figure>
+        <figure class="rv d1"><button class="reel" data-src="../assets/scrolling/ontop.mp4" aria-label="Play OnTop video"><img src="../assets/scrolling/ontop.jpg" alt="OnTop UGC video" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>OnTop<span>UGC ad</span></figcaption></figure>
+        <figure class="rv d2"><button class="reel" data-src="../assets/scrolling/canva-automate.mp4" aria-label="Play Canva automation video"><img src="../assets/scrolling/canva-automate.jpg" alt="Canva automation video" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Canva<span>Workflow hack</span></figcaption></figure>
+        <figure class="rv d3"><button class="reel" data-src="../assets/portfolio/clip-3.mp4" aria-label="Play Las Rosas Square video"><img src="../assets/portfolio/clip-3.jpg" alt="Las Rosas Square tour video" width="320" height="568" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Las Rosas Square<span>Property tour</span></figcaption></figure>
+        <figure class="rv d4"><button class="reel" data-src="../assets/scrolling/bonzo-2.mp4" aria-label="Play ad video"><img src="../assets/scrolling/bonzo-2.jpg" alt="Direct-response ad video" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Accounting firm<span>Direct-response ad</span></figcaption></figure>
+      </div>
+    </div>
+
+    <div class="love rv">
+      <span class="lbl">Why entertainment</span>
+      <p>What I love: <span>why audiences fall for characters, stories and worlds.</span></p>
+    </div>
+    <div class="fandom"><!-- MI SERIE/FANDOM FAVORITO (opcional) --></div>
+  </div>
+</section>
+
+<!-- STACK -->
+<section class="sec" id="stack">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="n solid">✦</span><div><h2 class="h"><span class="ul">My stack</span></h2><p>The tools I use every week.</p></div></div>
+    <div class="stack rv">
+      <span class="tool hl"><svg class="i"><use href="#i-claude"/></svg>Claude Code</span>
+      <span class="tool"><svg class="i"><use href="#i-meta"/></svg>Meta Ads Manager</span>
+      <span class="tool"><svg class="i"><use href="#i-notion"/></svg>Notion</span>
+      <span class="tool"><svg class="i"><use href="#i-canva"/></svg>Canva</span>
+      <span class="tool">CapCut</span>
+      <span class="tool">ElevenLabs</span>
+      <span class="tool"><svg class="i"><use href="#i-mailchimp"/></svg>Mailchimp</span>
+      <span class="tool"><svg class="i"><use href="#i-googleanalytics"/></svg>GA4</span>
+      <span class="tool"><svg class="i"><use href="#i-tiktok"/></svg>TikTok</span>
+      <span class="tool"><svg class="i"><use href="#i-instagram"/></svg>Instagram</span>
+    </div>
+    <p class="stack-note rv">I already run my to-dos for every business in Notion, with Claude connected to it. Airtable, Monday, Asana and Slack work the same way: owners, dates, status, one source of truth.</p>
   </div>
 </section>
 
 <!-- PROCESS -->
 <section class="sec" id="storm">
   <div class="wrap">
-    <div class="sec-head rv"><span class="n red">→</span><h2 class="h"><span class="ul">How I'd work at Storm</span></h2></div>
+    <div class="sec-head rv"><span class="n solid">→</span><div><h2 class="h"><span class="ul">How I'd work at Storm</span></h2></div></div>
     <ol class="process">
-      <li class="rv"><span class="ic"><svg class="i"><use href="#i-ear"/></svg></span><span class="st">Step 01</span><h3>Listen &amp; map stakeholders</h3><p>Strategy, stakeholders, commercial context and pressure points. Who decides, who approves, what success looks like.</p></li>
-      <li class="rv d1"><span class="ic"><svg class="i"><use href="#i-clipboard-list"/></svg></span><span class="st">Step 02</span><h3>Brief with clear owners and dates</h3><p>Ambiguity turned into owners, dependencies and dates, in records people and agents can pick up.</p></li>
-      <li class="rv d2"><span class="ic"><svg class="i"><use href="#i-message-square"/></svg></span><span class="st">Step 03</span><h3>Review with specific feedback</h3><p>Protect the client's intent, improve the work, challenge what's off-strategy or wrong for the platform.</p></li>
-      <li class="rv d3"><span class="ic"><svg class="i"><use href="#i-flag"/></svg></span><span class="st">Step 04</span><h3>Report, flag risks, find growth</h3><p>Scope pressure, risks and opportunities surfaced early, with evidence, options and a recommendation.</p></li>
+      <li class="rv"><span class="ic"><svg class="i"><use href="#i-ear"/></svg></span><span class="st">Step 01</span><h3>Listen &amp; map stakeholders</h3><p>Strategy, pressure points, who decides, who approves.</p></li>
+      <li class="rv d1"><span class="ic"><svg class="i"><use href="#i-clipboard-list"/></svg></span><span class="st">Step 02</span><h3>Brief with clear owners and dates</h3><p>Records that people and agents can pick up and run.</p></li>
+      <li class="rv d2"><span class="ic"><svg class="i"><use href="#i-message-square"/></svg></span><span class="st">Step 03</span><h3>Review with specific feedback</h3><p>Protect the intent. Challenge what's off-strategy.</p></li>
+      <li class="rv d3"><span class="ic"><svg class="i"><use href="#i-flag"/></svg></span><span class="st">Step 04</span><h3>Report, flag risks, find growth</h3><p>Scope pressure and opportunities, surfaced early.</p></li>
     </ol>
   </div>
 </section>
@@ -493,35 +797,53 @@ footer .h span{color:var(--red)}
 
 <footer>
   <div class="wrap">
-    <p class="h rv">Let's<br>talk<span>.</span></p>
+    <div class="foot-grid">
+      <p class="h rv">Let's<br>talk<span>.</span></p>
+      <div class="foot-photo rv d1"><img src="../assets/cvportfolio/contact-sofia.webp" alt="Sofia Retif with a matcha" width="507" height="900" loading="lazy"></div>
+    </div>
     <nav class="links" aria-label="Contact">
       <a href="mailto:sofiaretif@gmail.com"><span><svg class="i"><use href="#i-mail"/></svg>sofiaretif@gmail.com</span><svg class="i"><use href="#i-arrow-up-right"/></svg></a>
       <a href="https://www.linkedin.com/in/sofiaretif" target="_blank" rel="noopener"><span><svg class="i"><use href="#i-linkedin"/></svg>LinkedIn</span><svg class="i"><use href="#i-arrow-up-right"/></svg></a>
       <a href="https://sofiaretif.com/cvportfolio"><span><svg class="i"><use href="#i-globe"/></svg>sofiaretif.com/cvportfolio</span><svg class="i"><use href="#i-arrow-up-right"/></svg></a>
     </nav>
-    <div class="avail"><span><i class="dot"></i>Available <b>9:00–5:30 PT</b></span><span><b>Contractor-ready</b></span></div>
+    <div class="avail"><span><i class="dot"></i>Available <b>9:00–5:30 PT</b></span><span><b>Contractor-ready</b></span><span><b>Bilingual EN / ES</b></span></div>
     <p class="fine">Sofia Retif · Built with Claude for Storm Ideas</p>
   </div>
 </footer>
 
 <script>
 (function(){
+  document.querySelectorAll('.reel').forEach(function(b){
+    b.addEventListener('click',function(){
+      if(b.classList.contains('on'))return;
+      document.querySelectorAll('.reel.on video').forEach(function(v){v.pause()});
+      var v=document.createElement('video');
+      v.src=b.dataset.src;v.controls=true;v.autoplay=true;v.playsInline=true;
+      b.querySelector('img').replaceWith(v);b.classList.add('on');v.play().catch(function(){});
+    });
+  });
   if(!document.documentElement.classList.contains('js'))return;
   var io=new IntersectionObserver(function(es){
     es.forEach(function(e){
       if(!e.isIntersecting)return;
       e.target.classList.add('in');
-      e.target.querySelectorAll('.v[data-to]').forEach(count);
+      e.target.querySelectorAll('[data-to]').forEach(count);
       io.unobserve(e.target);
     });
   },{threshold:.15,rootMargin:'0px 0px -6% 0px'});
-  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  document.querySelectorAll('.rv,.term').forEach(function(el){io.observe(el)});
+  setTimeout(function(){
+    document.querySelectorAll('.rv:not(.in),.term:not(.in)').forEach(function(el){
+      var r=el.getBoundingClientRect();
+      if(r.top<innerHeight&&r.bottom>0){el.classList.add('in');el.querySelectorAll('[data-to]').forEach(count)}
+    });
+  },1500);
   function count(el){
-    var to=parseFloat(el.dataset.to),dec=+(el.dataset.dec||0),suf=el.dataset.suf||'',t0=null,dur=1400;
+    var to=parseFloat(el.dataset.to),dec=+(el.dataset.dec||0),suf=el.dataset.suf||'',sep=el.dataset.sep,t0=null,dur=1400;
     function step(t){
       if(!t0)t0=t;
-      var p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);
-      el.textContent=(to*e).toFixed(dec)+suf;
+      var p=Math.min((t-t0)/dur,1),n=to*(1-Math.pow(1-p,3)),s=sep?Math.round(n).toLocaleString('en-US'):n.toFixed(dec);
+      el.textContent=s+suf;
       if(p<1)requestAnimationFrame(step);
     }
     requestAnimationFrame(step);

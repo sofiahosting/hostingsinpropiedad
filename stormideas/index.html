@@ -459,6 +459,14 @@ footer .h span{color:var(--red)}
 .js .notes li.rv.in{transform:rotate(-1.2deg)}
 .js .notes li.rv.in:nth-child(even){transform:rotate(1.4deg)}
 
+
+.tt{position:absolute;inset:0;display:grid;place-items:center;background:radial-gradient(120% 80% at 30% 20%,#2a2a2a,#050505);color:#fff;width:100%}
+.tt-logo{position:absolute;top:18px;right:18px;font-size:28px;color:#fff}
+.tt-play{width:76px;height:76px;border-radius:50%;background:var(--red);display:grid;place-items:center;font-size:28px;box-shadow:0 0 0 12px rgba(224,55,73,.18);transition:transform .25s}
+.tt:hover .tt-play{transform:scale(1.08)}
+.tt-cap{position:absolute;bottom:22px;left:0;right:0;text-align:center;font-family:var(--cond);font-weight:700;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:#bbb}
+.frame-tt iframe{position:absolute;inset:0}
+
 /* reveal */
 .js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 .js .rv.in{opacity:1;transform:none}
@@ -714,7 +722,7 @@ footer .h span{color:var(--red)}
       <div class="rvw-top"><b><i class="dot"></i>How I give feedback</b><span class="lbl">Example review · creator video · cut v2</span></div>
       <div class="rvw-body">
         <div class="rvw-player">
-          <div class="rvw-video"><span class="rec">Cut v2</span><button class="reel" data-src="../assets/portfolio/clip-2.mp4" data-prev="../assets/stormideas/clips/dailyme.mp4" aria-label="Play video"><img src="../assets/portfolio/clip-2.jpg" alt="Creator video under review" width="320" height="568" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button></div>
+          <div class="rvw-video"><span class="rec">Cut v2</span><button class="reel" data-src="../assets/stormideas/full/dailyme.mp4" data-prev="../assets/stormideas/clips/dailyme.mp4" aria-label="Play video"><img src="../assets/portfolio/clip-2.jpg" alt="Creator video under review" width="320" height="568" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button></div>
           <div class="rvw-line" style="--pos:5.8%"><span class="track"></span><span class="fill"></span><span class="head"></span>
             <button class="mkr on" style="left:5.8%" data-i="0" aria-label="Comment at 00:03">1</button>
             <button class="mkr" style="left:44.2%" data-i="1" aria-label="Comment at 00:23">2</button>
@@ -738,7 +746,7 @@ footer .h span{color:var(--red)}
           <div class="scr">
             <div class="head"><span class="av"></span><div><b>Sponsored</b><small>Hook A</small></div></div>
             <p class="cap">Why does Airbnb charge you 3% and your neighbor 15.5%?</p>
-            <div class="media"><button class="reel" data-src="../assets/scrolling/bonzo-1.mp4" data-prev="../assets/stormideas/clips/bonzo-1.mp4" aria-label="Play ad video"><img src="../assets/scrolling/bonzo-1.jpg" alt="Ad video frame" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button></div>
+            <div class="media"><button class="reel" data-src="../assets/stormideas/full/bonzo-1.mp4" data-prev="../assets/stormideas/clips/bonzo-1.mp4" aria-label="Play ad video"><img src="../assets/scrolling/bonzo-1.jpg" alt="Ad video frame" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button></div>
             <div class="cta"><span>Chat on WhatsApp</span><b>Send message</b></div>
           </div>
         </div>
@@ -862,12 +870,12 @@ footer .h span{color:var(--red)}
     <div class="vids">
       <div class="vid rv">
         <div class="cap"><span class="h">Top video</span><span class="v">1.1M views</span></div>
-        <div class="frame-tt"><span class="ph"><svg class="i"><use href="#i-play"/></svg></span><iframe src="https://www.tiktok.com/player/v1/7532594637559696696?rel=0&amp;description=0&amp;music_info=0" title="TikTok video with 1.1M views" loading="lazy" allow="fullscreen; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="frame-tt"><button class="tt" data-id="7532594637559696696" aria-label="Play: TikTok video with 1.1M views"><svg class="i tt-logo"><use href="#i-tiktok"/></svg><span class="tt-play"><svg class="i"><use href="#i-play"/></svg></span><span class="tt-cap">Tap to play on TikTok</span></button></div>
         <a class="open" href="https://www.tiktok.com/@sofiahosting/video/7532594637559696696" target="_blank" rel="noopener"><svg class="i"><use href="#i-tiktok"/></svg>Watch on TikTok</a>
       </div>
       <div class="vid rv d1">
         <div class="cap"><span class="h">20-day challenge · Ep. 1</span><span class="v">205K views</span></div>
-        <div class="frame-tt"><span class="ph"><svg class="i"><use href="#i-play"/></svg></span><iframe src="https://www.tiktok.com/player/v1/7553833859729591570?rel=0&amp;description=0&amp;music_info=0" title="20-day challenge series, episode one, 205K views" loading="lazy" allow="fullscreen; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="frame-tt"><button class="tt" data-id="7553833859729591570" aria-label="Play: 20-day challenge series, episode one, 205K views"><svg class="i tt-logo"><use href="#i-tiktok"/></svg><span class="tt-play"><svg class="i"><use href="#i-play"/></svg></span><span class="tt-cap">Tap to play on TikTok</span></button></div>
         <a class="open" href="https://www.tiktok.com/@sofiahosting/video/7553833859729591570" target="_blank" rel="noopener"><svg class="i"><use href="#i-tiktok"/></svg>Watch on TikTok</a>
       </div>
     </div>
@@ -875,11 +883,11 @@ footer .h span{color:var(--red)}
     <div class="block">
       <h3 class="sub-h rv">Content I've made for brands <small>Tap to play</small></h3>
       <div class="ugc">
-        <figure class="rv"><button class="reel" data-src="../assets/scrolling/canva-links.mp4" data-prev="../assets/stormideas/clips/canva-links.mp4" aria-label="Play Canva video"><img src="../assets/scrolling/canva-links.jpg" alt="Canva tutorial video" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Canva<span>Feature tutorial</span></figcaption></figure>
-        <figure class="rv d1"><button class="reel" data-src="../assets/scrolling/ontop.mp4" data-prev="../assets/stormideas/clips/ontop.mp4" aria-label="Play OnTop video"><img src="../assets/scrolling/ontop.jpg" alt="OnTop UGC video" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>OnTop<span>UGC ad</span></figcaption></figure>
-        <figure class="rv d2"><button class="reel" data-src="../assets/scrolling/canva-automate.mp4" data-prev="../assets/stormideas/clips/canva-automate.mp4" aria-label="Play Canva automation video"><img src="../assets/scrolling/canva-automate.jpg" alt="Canva automation video" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Canva<span>Workflow hack</span></figcaption></figure>
-        <figure class="rv d3"><button class="reel" data-src="../assets/portfolio/clip-3.mp4" data-prev="../assets/stormideas/clips/rosas.mp4" aria-label="Play Las Rosas Square video"><img src="../assets/portfolio/clip-3.jpg" alt="Las Rosas Square tour video" width="320" height="568" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Las Rosas Square<span>Property tour</span></figcaption></figure>
-        <figure class="rv d4"><button class="reel" data-src="../assets/scrolling/bonzo-2.mp4" data-prev="../assets/stormideas/clips/bonzo-2.mp4" aria-label="Play ad video"><img src="../assets/scrolling/bonzo-2.jpg" alt="Direct-response ad video" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Accounting firm<span>Direct-response ad</span></figcaption></figure>
+        <figure class="rv"><button class="reel" data-src="../assets/stormideas/full/canva-links.mp4" data-prev="../assets/stormideas/clips/canva-links.mp4" aria-label="Play Canva video"><img src="../assets/scrolling/canva-links.jpg" alt="Canva tutorial video" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Canva<span>Feature tutorial</span></figcaption></figure>
+        <figure class="rv d1"><button class="reel" data-src="../assets/stormideas/full/ontop.mp4" data-prev="../assets/stormideas/clips/ontop.mp4" aria-label="Play OnTop video"><img src="../assets/scrolling/ontop.jpg" alt="OnTop UGC video" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>OnTop<span>UGC ad</span></figcaption></figure>
+        <figure class="rv d2"><button class="reel" data-src="../assets/stormideas/full/canva-automate.mp4" data-prev="../assets/stormideas/clips/canva-automate.mp4" aria-label="Play Canva automation video"><img src="../assets/scrolling/canva-automate.jpg" alt="Canva automation video" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Canva<span>Workflow hack</span></figcaption></figure>
+        <figure class="rv d3"><button class="reel" data-src="../assets/stormideas/full/rosas.mp4" data-prev="../assets/stormideas/clips/rosas.mp4" aria-label="Play Las Rosas Square video"><img src="../assets/portfolio/clip-3.jpg" alt="Las Rosas Square tour video" width="320" height="568" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Las Rosas Square<span>Property tour</span></figcaption></figure>
+        <figure class="rv d4"><button class="reel" data-src="../assets/stormideas/full/bonzo-2.mp4" data-prev="../assets/stormideas/clips/bonzo-2.mp4" aria-label="Play ad video"><img src="../assets/scrolling/bonzo-2.jpg" alt="Direct-response ad video" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Accounting firm<span>Direct-response ad</span></figcaption></figure>
       </div>
     </div>
 
@@ -948,16 +956,23 @@ footer .h span{color:var(--red)}
   var bar=document.querySelector('.progress');
   if(bar)addEventListener('scroll',function(){var h=document.documentElement;bar.style.transform='scaleX('+(h.scrollTop/(h.scrollHeight-h.clientHeight||1))+')'},{passive:true});
   if(!reduce&&'IntersectionObserver' in window){
+    var playing=[];
     var po=new IntersectionObserver(function(es){es.forEach(function(e){
       var b=e.target;if(b.classList.contains('on'))return;
       var v=b.querySelector('video.prev');
       if(e.isIntersecting){
         if(!v){v=document.createElement('video');v.className='prev';v.muted=true;v.loop=true;v.playsInline=true;v.setAttribute('playsinline','');v.src=b.dataset.prev;b.insertBefore(v,b.querySelector('.play'))}
         v.play().catch(function(){});
-      }else if(v){v.pause()}
+        playing=playing.filter(function(x){return x!==v});playing.push(v);
+        while(playing.length>2){playing.shift().pause()}
+      }else if(v){v.pause();playing=playing.filter(function(x){return x!==v})}
     })},{threshold:.35});
     document.querySelectorAll('.reel[data-prev]').forEach(function(b){po.observe(b)});
   }
+  document.querySelectorAll('.tt').forEach(function(b){b.addEventListener('click',function(){
+    var f=document.createElement('iframe');f.src='https://www.tiktok.com/player/v1/'+b.dataset.id+'?autoplay=1&rel=0&description=0&music_info=0';
+    f.allow='autoplay; fullscreen; encrypted-media; picture-in-picture';f.allowFullscreen=true;f.title=b.getAttribute('aria-label');b.replaceWith(f);
+  })});
   var rv=document.getElementById('review');
   if(rv){
     var items=rv.querySelectorAll('.rvw-list li'),mk=rv.querySelectorAll('.mkr'),line=rv.querySelector('.rvw-line'),now=rv.querySelector('.now'),cur=0,timer;
@@ -969,9 +984,9 @@ footer .h span{color:var(--red)}
   document.querySelectorAll('.reel').forEach(function(b){
     b.addEventListener('click',function(){
       if(b.classList.contains('on'))return;
-      document.querySelectorAll('.reel.on video').forEach(function(v){v.pause()});
+      document.querySelectorAll('.reel video').forEach(function(v){v.pause()});
       var v=document.createElement('video');
-      v.src=b.dataset.src;v.controls=true;v.autoplay=true;v.playsInline=true;
+      v.preload='auto';v.src=b.dataset.src;v.controls=true;v.autoplay=true;v.playsInline=true;
       b.querySelectorAll('img,video').forEach(function(n){n.remove()});b.insertBefore(v,b.firstChild);b.classList.add('on');v.play().catch(function(){});
     });
   });

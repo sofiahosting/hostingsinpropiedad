@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sofia Retif · Marketing Portfolio</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%232F6188'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-style='italic' font-weight='700' font-size='26' fill='%23ffffff' text-anchor='middle'%3ESR%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="../assets/cvportfolio/hero-sofia.webp">
 <meta name="description" content="Growth & social marketer who turns content, creators and ads into revenue. Case studies, top content, ads and UGC by Sofia Retif González.">
 <meta name="theme-color" content="#2F6188">
 <meta property="og:title" content="Sofia Retif · Marketing Portfolio">
@@ -113,6 +115,7 @@ nav.scrolled .cta:hover{background:var(--deep);color:#fff}
   .hero{padding:110px 0 44px}
   .hero-grid{grid-template-columns:1.15fr 1fr;gap:28px}
   .hero-copy{padding-bottom:56px}
+  .hero-photo{align-self:stretch;aspect-ratio:auto;width:100%;max-width:480px;min-height:520px;margin:64px 0 0 auto}
   .counters{grid-template-columns:repeat(5,1fr);gap:12px}
 }
 
@@ -230,6 +233,11 @@ ul.dots li:before{content:"";position:absolute;left:0;top:9px;width:8px;height:8
 .arrows button{width:46px;height:46px;border-radius:50%;background:#fff;border:1.5px solid var(--light);color:var(--deep);display:grid;place-items:center;font-size:20px;transition:all .25s}
 .arrows button:hover{background:var(--deep);color:#fff;border-color:var(--deep)}
 @media(min-width:760px){.arrows{display:flex}.reel{width:232px}}
+.en-block{margin-top:56px;padding-top:44px;border-top:1px dashed var(--light)}
+.en-h{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,36px);line-height:1.15;color:var(--deeper);margin-top:6px}
+.en-h em{color:var(--deep)}
+.en-grid{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 16px 26px;margin:0 -16px}
+@media(min-width:1000px){.en-grid{justify-content:center;overflow:visible}}
 .hint{text-align:center;color:var(--deep);font-size:13px;font-weight:500;margin-bottom:12px;opacity:.85}
 .hint span{display:inline-block;animation:side 1.6s ease-in-out infinite}
 @keyframes side{50%{transform:translateX(6px)}}
@@ -334,9 +342,9 @@ footer{background:#1d3f5a;color:rgba(255,255,255,.7);text-align:center;padding:2
   <a class="logo" href="#top">Sofia <span>Retif</span></a>
   <ul>
     <li><a href="#content">Content</a></li>
+    <li><a href="#ugc">Videos</a></li>
     <li><a href="#ads">Ads</a></li>
     <li><a href="#work">Case studies</a></li>
-    <li><a href="#ugc">UGC</a></li>
     <li><a href="#about">About</a></li>
   </ul>
   <a class="cta" href="mailto:sofiaretif@gmail.com"><svg class="i"><use href="#i-mail"/></svg>Let's talk</a>
@@ -454,6 +462,235 @@ footer{background:#1d3f5a;color:rgba(255,255,255,.7);text-align:center;padding:2
       <a class="open" href="https://www.tiktok.com/@sofiahosting/video/7553833859729591570" target="_blank" rel="noopener">Watch on TikTok <svg class="i"><use href="#i-arrow-right"/></svg></a>
     </article>
   </div>
+</div></section>
+
+<!-- ============ UGC ============ -->
+<section id="ugc" class="bg-beige"><div class="wrap">
+  <div class="sec-head center reveal">
+    <div class="eyebrow">UGC for brands</div>
+    <h2>Creator content for <em>apps &amp; brands</em></h2>
+    <p>I'm on the creator side too: app demos, ad creatives, product videos and property tours, for my own brand and for others.</p>
+  </div>
+  <div class="filters reveal" role="group" aria-label="Filter videos by brand">
+    <button class="on" data-f="all">All</button>
+    <button data-f="dailyme">Daily Me</button>
+    <button data-f="canva">Canva</button>
+    <button data-f="bonzo">Bonzo</button>
+    <button data-f="ontop">Ontop</button>
+    <button data-f="rosas">Las Rosas Square</button>
+    <button data-f="airbnb">Airbnb</button>
+  </div>
+  <p class="hint reveal">Tap a video to watch with sound · Swipe <span>→</span></p>
+  <div class="strip-wrap">
+    <div class="strip" id="strip">
+      <button class="reel reveal" data-b="dailyme" data-src="../assets/cvportfolio/ugc/dailyme-a.mp4" aria-label="Play Daily Me video: Self-love journal">
+        <span class="tag rose">Daily Me</span>
+        <video src="../assets/cvportfolio/ugc/dailyme-a.mp4" poster="../assets/cvportfolio/ugc/dailyme-a.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Self-love journal<small>Product video</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="bonzo" data-src="../assets/cvportfolio/ugc/bonzo-c.mp4" aria-label="Play Bonzo video: Is your accountant specialized?">
+        <span class="tag gold">Bonzo</span>
+        <video src="../assets/cvportfolio/ugc/bonzo-c.mp4" poster="../assets/cvportfolio/ugc/bonzo-c.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Is your accountant specialized?<small>Ad creative · 268 conversations</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="rosas" data-src="../assets/cvportfolio/ugc/rosas-c.mp4" aria-label="Play Las Rosas Square video: Investment alert">
+        <span class="tag rose">Las Rosas Square</span>
+        <video src="../assets/cvportfolio/ugc/rosas-c.mp4" poster="../assets/cvportfolio/ugc/rosas-c.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Investment alert<small>Property tour</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="canva" data-src="../assets/scrolling/canva-links.mp4" aria-label="Play Canva video: Hyperlinks in Canva">
+        <span class="tag sky">Canva</span>
+        <video src="../assets/scrolling/canva-links.mp4" poster="../assets/scrolling/canva-links.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Hyperlinks in Canva<small>App demo</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="ontop" data-src="../assets/cvportfolio/ugc/ontop-2.mp4" aria-label="Play Ontop video: Working for clients abroad">
+        <span class="tag">Ontop</span>
+        <video src="../assets/cvportfolio/ugc/ontop-2.mp4" poster="../assets/cvportfolio/ugc/ontop-2.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Working for clients abroad<small>App demo · via Goldfish agency</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="airbnb" data-src="../assets/cvportfolio/ugc/airbnb-a.mp4" aria-label="Play Airbnb video: Lessons from hosting">
+        <span class="tag">Airbnb</span>
+        <video src="../assets/cvportfolio/ugc/airbnb-a.mp4" poster="../assets/cvportfolio/ugc/airbnb-a.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Lessons from hosting<small>Educational reel</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="dailyme" data-src="../assets/cvportfolio/ugc/dailyme-b.mp4" aria-label="Play Daily Me video: 365 days of journaling">
+        <span class="tag rose">Daily Me</span>
+        <video src="../assets/cvportfolio/ugc/dailyme-b.mp4" poster="../assets/cvportfolio/ugc/dailyme-b.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">365 days of journaling<small>Product explainer</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="bonzo" data-src="../assets/scrolling/bonzo-1.mp4" aria-label="Play Bonzo video: 3% vs 15.5% fees">
+        <span class="tag gold">Bonzo</span>
+        <video src="../assets/scrolling/bonzo-1.mp4" poster="../assets/scrolling/bonzo-1.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">3% vs 15.5% fees<small>Ad creative · 6% CTR</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="rosas" data-src="../assets/cvportfolio/ugc/rosas-a.mp4" aria-label="Play Las Rosas Square video: Living in Chapalita">
+        <span class="tag rose">Las Rosas Square</span>
+        <video src="../assets/cvportfolio/ugc/rosas-a.mp4" poster="../assets/cvportfolio/ugc/rosas-a.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Living in Chapalita<small>Lifestyle tour</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="airbnb" data-src="../assets/cvportfolio/ugc/airbnb-b.mp4" aria-label="Play Airbnb video: Buy or rent?">
+        <span class="tag">Airbnb</span>
+        <video src="../assets/cvportfolio/ugc/airbnb-b.mp4" poster="../assets/cvportfolio/ugc/airbnb-b.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Buy or rent?<small>Educational reel</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="dailyme" data-src="../assets/cvportfolio/ugc/dailyme-c.mp4" aria-label="Play Daily Me video: A gift that lasts">
+        <span class="tag rose">Daily Me</span>
+        <video src="../assets/cvportfolio/ugc/dailyme-c.mp4" poster="../assets/cvportfolio/ugc/dailyme-c.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">A gift that lasts<small>Valentine's promo</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="ontop" data-src="../assets/scrolling/ontop.mp4" aria-label="Play Ontop video: Get paid in USD">
+        <span class="tag">Ontop</span>
+        <video src="../assets/scrolling/ontop.mp4" poster="../assets/scrolling/ontop.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Get paid in USD<small>App demo · via Goldfish agency</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="rosas" data-src="../assets/cvportfolio/ugc/rosas-b.mp4" aria-label="Play Las Rosas Square video: First look at the building">
+        <span class="tag rose">Las Rosas Square</span>
+        <video src="../assets/cvportfolio/ugc/rosas-b.mp4" poster="../assets/cvportfolio/ugc/rosas-b.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">First look at the building<small>Property tour</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="canva" data-src="../assets/scrolling/canva-automate.mp4" aria-label="Play Canva video: Automate your guest guide">
+        <span class="tag sky">Canva</span>
+        <video src="../assets/scrolling/canva-automate.mp4" poster="../assets/scrolling/canva-automate.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Automate your guest guide<small>Talking head</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="dailyme" data-src="../assets/cvportfolio/ugc/dailyme-d.mp4" aria-label="Play Daily Me video: Close your year">
+        <span class="tag rose">Daily Me</span>
+        <video src="../assets/cvportfolio/ugc/dailyme-d.mp4" poster="../assets/cvportfolio/ugc/dailyme-d.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Close your year<small>Seasonal promo</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="airbnb" data-src="../assets/cvportfolio/ugc/airbnb-c.mp4" aria-label="Play Airbnb video: Starting from zero">
+        <span class="tag">Airbnb</span>
+        <video src="../assets/cvportfolio/ugc/airbnb-c.mp4" poster="../assets/cvportfolio/ugc/airbnb-c.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Starting from zero<small>Educational reel</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="bonzo" data-src="../assets/scrolling/bonzo-2.mp4" aria-label="Play Bonzo video: Tax service for hosts">
+        <span class="tag gold">Bonzo</span>
+        <video src="../assets/scrolling/bonzo-2.mp4" poster="../assets/scrolling/bonzo-2.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Tax service for hosts<small>Ad creative</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="dailyme" data-src="../assets/cvportfolio/ugc/dailyme-e.mp4" aria-label="Play Daily Me video: Clarity for 2026">
+        <span class="tag rose">Daily Me</span>
+        <video src="../assets/cvportfolio/ugc/dailyme-e.mp4" poster="../assets/cvportfolio/ugc/dailyme-e.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Clarity for 2026<small>Product video</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="rosas" data-src="../assets/portfolio/clip-3.mp4" aria-label="Play Las Rosas Square video: Short-term stay">
+        <span class="tag rose">Las Rosas Square</span>
+        <video src="../assets/portfolio/clip-3.mp4" poster="../assets/portfolio/clip-3.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Short-term stay<small>Property tour</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="canva" data-src="../assets/scrolling/canva-guide.mp4" aria-label="Play Canva video: Guest manual, ep. 11">
+        <span class="tag sky">Canva</span>
+        <video src="../assets/scrolling/canva-guide.mp4" poster="../assets/scrolling/canva-guide.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Guest manual, ep. 11<small>Series</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="dailyme" data-src="../assets/cvportfolio/ugc/dailyme-f.mp4" aria-label="Play Daily Me video: Packing orders">
+        <span class="tag rose">Daily Me</span>
+        <video src="../assets/cvportfolio/ugc/dailyme-f.mp4" poster="../assets/cvportfolio/ugc/dailyme-f.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Packing orders<small>Behind the scenes</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="dailyme" data-src="../assets/portfolio/clip-2.mp4" aria-label="Play Daily Me video: My journal brand">
+        <span class="tag rose">Daily Me</span>
+        <video src="../assets/portfolio/clip-2.mp4" poster="../assets/portfolio/clip-2.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">My journal brand<small>Product video</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="bonzo" data-src="../assets/scrolling/bonzo-5.mp4" aria-label="Play Bonzo video: Tax service for hosts">
+        <span class="tag gold">Bonzo</span>
+        <video src="../assets/scrolling/bonzo-5.mp4" poster="../assets/scrolling/bonzo-5.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Tax service for hosts<small>Ad creative</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="bonzo" data-src="../assets/scrolling/bonzo-7.mp4" aria-label="Play Bonzo video: Tax service for hosts">
+        <span class="tag gold">Bonzo</span>
+        <video src="../assets/scrolling/bonzo-7.mp4" poster="../assets/scrolling/bonzo-7.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Tax service for hosts<small>Ad creative</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="bonzo" data-src="../assets/cvportfolio/ugc/bonzo-x1.mp4" aria-label="Play Bonzo video: Taxes for your Airbnb, in one platform">
+        <span class="tag gold">Bonzo</span>
+        <video src="../assets/cvportfolio/ugc/bonzo-x1.mp4" poster="../assets/cvportfolio/ugc/bonzo-x1.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Taxes for your Airbnb, in one platform<small>Ad creative</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="bonzo" data-src="../assets/cvportfolio/ugc/bonzo-x2.mp4" aria-label="Play Bonzo video: Does the SAT know what you earn?">
+        <span class="tag gold">Bonzo</span>
+        <video src="../assets/cvportfolio/ugc/bonzo-x2.mp4" poster="../assets/cvportfolio/ugc/bonzo-x2.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Does the SAT know what you earn?<small>Ad creative</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="bonzo" data-src="../assets/cvportfolio/ugc/bonzo-x3.mp4" aria-label="Play Bonzo video: Is the SAT taking your profits?">
+        <span class="tag gold">Bonzo</span>
+        <video src="../assets/cvportfolio/ugc/bonzo-x3.mp4" poster="../assets/cvportfolio/ugc/bonzo-x3.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Is the SAT taking your profits?<small>Ad creative</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="bonzo" data-src="../assets/cvportfolio/ugc/bonzo-x4.mp4" aria-label="Play Bonzo video: Individual or company?">
+        <span class="tag gold">Bonzo</span>
+        <video src="../assets/cvportfolio/ugc/bonzo-x4.mp4" poster="../assets/cvportfolio/ugc/bonzo-x4.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Individual or company?<small>Educational reel</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="bonzo" data-src="../assets/cvportfolio/ugc/bonzo-x5.mp4" aria-label="Play Bonzo video: 3 legal ways to pay less tax">
+        <span class="tag gold">Bonzo</span>
+        <video src="../assets/cvportfolio/ugc/bonzo-x5.mp4" poster="../assets/cvportfolio/ugc/bonzo-x5.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">3 legal ways to pay less tax<small>Educational reel</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="bonzo" data-src="../assets/cvportfolio/ugc/bonzo-x6.mp4" aria-label="Play Bonzo video: Every booking creates taxes">
+        <span class="tag gold">Bonzo</span>
+        <video src="../assets/cvportfolio/ugc/bonzo-x6.mp4" poster="../assets/cvportfolio/ugc/bonzo-x6.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Every booking creates taxes<small>Ad creative</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="bonzo" data-src="../assets/cvportfolio/ugc/bonzo-x7.mp4" aria-label="Play Bonzo video: 3 mistakes that trigger an audit">
+        <span class="tag gold">Bonzo</span>
+        <video src="../assets/cvportfolio/ugc/bonzo-x7.mp4" poster="../assets/cvportfolio/ugc/bonzo-x7.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">3 mistakes that trigger an audit<small>Long-form explainer</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="bonzo" data-src="../assets/cvportfolio/ugc/bonzo-x8.mp4" aria-label="Play Bonzo video: Growing past 2–3 Airbnbs">
+        <span class="tag gold">Bonzo</span>
+        <video src="../assets/cvportfolio/ugc/bonzo-x8.mp4" poster="../assets/cvportfolio/ugc/bonzo-x8.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Growing past 2–3 Airbnbs<small>Ad creative</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="bonzo" data-src="../assets/cvportfolio/ugc/bonzo-x9.mp4" aria-label="Play Bonzo video: Hosts forget the tax side">
+        <span class="tag gold">Bonzo</span>
+        <video src="../assets/cvportfolio/ugc/bonzo-x9.mp4" poster="../assets/cvportfolio/ugc/bonzo-x9.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Hosts forget the tax side<small>Ad creative</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+    </div>
+    <div class="arrows">
+      <button id="prev" aria-label="Previous videos"><svg class="i"><use href="#i-chevron-left"/></svg></button>
+      <button id="next" aria-label="Next videos"><svg class="i"><use href="#i-chevron-right"/></svg></button>
+    </div>
+  </div>
+
+  <div class="en-block">
+    <div class="sec-head center reveal" style="margin-bottom:18px">
+      <div class="eyebrow">In English</div>
+      <h3 class="en-h">On camera <em>in English</em></h3>
+      <p>Ads for Bonzo aimed at US and Canadian owners with Airbnbs in Mexico. Same energy, native-level English.</p>
+    </div>
+    <div class="en-grid">
+      <button class="reel reveal" data-b="en" data-src="../assets/cvportfolio/ugc/en-4.mp4" aria-label="Play English video: "Is your Mexican Airbnb 20% less profitable?"">
+        <span class="tag gold">Bonzo · EN</span>
+        <video src="../assets/cvportfolio/ugc/en-4.mp4" poster="../assets/cvportfolio/ugc/en-4.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">"Is your Mexican Airbnb 20% less profitable?"<small>Tax strategy hook</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="en" data-src="../assets/cvportfolio/ugc/en-1.mp4" aria-label="Play English video: US owners with rental income in Mexico">
+        <span class="tag gold">Bonzo · EN</span>
+        <video src="../assets/cvportfolio/ugc/en-1.mp4" poster="../assets/cvportfolio/ugc/en-1.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">US owners with rental income in Mexico<small>Lead ad</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="en" data-src="../assets/cvportfolio/ugc/en-2.mp4" aria-label="Play English video: Report your rental income, avoid the fines">
+        <span class="tag gold">Bonzo · EN</span>
+        <video src="../assets/cvportfolio/ugc/en-2.mp4" poster="../assets/cvportfolio/ugc/en-2.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">Report your rental income, avoid the fines<small>Compliance explainer</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+      <button class="reel reveal" data-b="en" data-src="../assets/cvportfolio/ugc/en-3.mp4" aria-label="Play English video: "We handle compliance for you."">
+        <span class="tag gold">Bonzo · EN</span>
+        <video src="../assets/cvportfolio/ugc/en-3.mp4" poster="../assets/cvportfolio/ugc/en-3.jpg" muted loop playsinline preload="none"></video>
+        <span class="cap">"We handle compliance for you."<small>Brand trust</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="testi">
+    <div class="card tcard reveal" style="--d:0s"><span class="qm">“</span><div class="stars">★★★★★</div><p>The client loved the video! They even want you to make a second one.</p><div class="who"><span class="av">L</span><div><b>Luciana M.</b><small>Canva</small></div></div></div>
+    <div class="card tcard reveal" style="--d:.1s"><span class="qm">“</span><div class="stars">★★★★★</div><p>It's really great — genuinely impressed.</p><div class="who"><span class="av">J</span><div><b>Jorge</b><small>Bonzo</small></div></div></div>
+    <div class="card tcard reveal" style="--d:.2s"><span class="qm">“</span><div class="stars">★★★★★</div><p>Great video, I really liked it.</p><div class="who"><span class="av">X</span><div><b>Ximena</b><small>Las Rosas Square</small></div></div></div>
+  </div>
+  <p class="note-sm">Real reviews from brands I've worked with (translated from Spanish).</p>
 </div></section>
 
 <!-- ============ ADS & HOOKS ============ -->
@@ -655,90 +892,6 @@ footer{background:#1d3f5a;color:rgba(255,255,255,.7);text-align:center;padding:2
   </article>
 </div></section>
 
-<!-- ============ UGC ============ -->
-<section id="ugc" class="bg-beige"><div class="wrap">
-  <div class="sec-head center reveal">
-    <div class="eyebrow">UGC for brands</div>
-    <h2>Creator content for <em>apps &amp; brands</em></h2>
-    <p>I'm on the creator side too: app demos, ad creatives, product videos and property tours, for my own brand and for others.</p>
-  </div>
-  <div class="filters reveal" role="group" aria-label="Filter videos by brand">
-    <button class="on" data-f="all">All</button>
-    <button data-f="dailyme">Daily Me</button>
-    <button data-f="canva">Canva</button>
-    <button data-f="bonzo">Bonzo</button>
-    <button data-f="ontop">Ontop</button>
-    <button data-f="rosas">Las Rosas Square</button>
-  </div>
-  <p class="hint reveal">Tap a video to watch with sound · Swipe <span>→</span></p>
-  <div class="strip-wrap">
-    <div class="strip" id="strip">
-      <button class="reel reveal" data-b="dailyme" data-src="../assets/portfolio/clip-2.mp4" aria-label="Play Daily Me product video">
-        <span class="tag rose">Daily Me</span>
-        <video src="../assets/portfolio/clip-2.mp4" poster="../assets/portfolio/clip-2.jpg" muted loop playsinline preload="none"></video>
-        <span class="cap">My journal brand<small>Product video</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
-      </button>
-      <!-- PEGAR LINK VIDEO CANVA -->
-      <button class="reel reveal" data-b="canva" data-src="../assets/scrolling/canva-links.mp4" aria-label="Play Canva video: hyperlinks in Canva">
-        <span class="tag sky">Canva</span>
-        <video src="../assets/scrolling/canva-links.mp4" poster="../assets/scrolling/canva-links.jpg" muted loop playsinline preload="none"></video>
-        <span class="cap">Hyperlinks in Canva<small>App demo</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
-      </button>
-      <button class="reel reveal" data-b="bonzo" data-src="../assets/scrolling/bonzo-1.mp4" aria-label="Play Bonzo ad creative">
-        <span class="tag gold">Bonzo</span>
-        <video src="../assets/scrolling/bonzo-1.mp4" poster="../assets/scrolling/bonzo-1.jpg" muted loop playsinline preload="none"></video>
-        <span class="cap">Tax service for hosts<small>Ad creative</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
-      </button>
-      <!-- PEGAR LINK VIDEO ONTOP -->
-      <button class="reel reveal" data-b="ontop" data-src="../assets/scrolling/ontop.mp4" aria-label="Play Ontop video: get paid in USD">
-        <span class="tag">Ontop</span>
-        <video src="../assets/scrolling/ontop.mp4" poster="../assets/scrolling/ontop.jpg" muted loop playsinline preload="none"></video>
-        <span class="cap">Get paid in USD<small>App demo · via Goldfish agency</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
-      </button>
-      <button class="reel reveal" data-b="rosas" data-src="../assets/portfolio/clip-3.mp4" aria-label="Play Las Rosas Square property tour">
-        <span class="tag rose">Las Rosas Square</span>
-        <video src="../assets/portfolio/clip-3.mp4" poster="../assets/portfolio/clip-3.jpg" muted loop playsinline preload="none"></video>
-        <span class="cap">Short-term stay<small>Property tour</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
-      </button>
-      <button class="reel reveal" data-b="canva" data-src="../assets/scrolling/canva-automate.mp4" aria-label="Play Canva video: automate your guest guide">
-        <span class="tag sky">Canva</span>
-        <video src="../assets/scrolling/canva-automate.mp4" poster="../assets/scrolling/canva-automate.jpg" muted loop playsinline preload="none"></video>
-        <span class="cap">Automate your guest guide<small>Talking head</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
-      </button>
-      <button class="reel reveal" data-b="bonzo" data-src="../assets/scrolling/bonzo-2.mp4" aria-label="Play Bonzo ad creative">
-        <span class="tag gold">Bonzo</span>
-        <video src="../assets/scrolling/bonzo-2.mp4" poster="../assets/scrolling/bonzo-2.jpg" muted loop playsinline preload="none"></video>
-        <span class="cap">Tax service for hosts<small>Ad creative</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
-      </button>
-      <button class="reel reveal" data-b="canva" data-src="../assets/scrolling/canva-guide.mp4" aria-label="Play Canva video: guest manual episode 11">
-        <span class="tag sky">Canva</span>
-        <video src="../assets/scrolling/canva-guide.mp4" poster="../assets/scrolling/canva-guide.jpg" muted loop playsinline preload="none"></video>
-        <span class="cap">Guest manual, ep. 11<small>Series</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
-      </button>
-      <button class="reel reveal" data-b="bonzo" data-src="../assets/scrolling/bonzo-5.mp4" aria-label="Play Bonzo ad creative">
-        <span class="tag gold">Bonzo</span>
-        <video src="../assets/scrolling/bonzo-5.mp4" poster="../assets/scrolling/bonzo-5.jpg" muted loop playsinline preload="none"></video>
-        <span class="cap">Tax service for hosts<small>Ad creative</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
-      </button>
-      <button class="reel reveal" data-b="bonzo" data-src="../assets/scrolling/bonzo-7.mp4" aria-label="Play Bonzo ad creative">
-        <span class="tag gold">Bonzo</span>
-        <video src="../assets/scrolling/bonzo-7.mp4" poster="../assets/scrolling/bonzo-7.jpg" muted loop playsinline preload="none"></video>
-        <span class="cap">Tax service for hosts<small>Ad creative</small></span><span class="ply"><svg class="i"><use href="#i-play"/></svg></span>
-      </button>
-    </div>
-    <div class="arrows">
-      <button id="prev" aria-label="Previous videos"><svg class="i"><use href="#i-chevron-left"/></svg></button>
-      <button id="next" aria-label="Next videos"><svg class="i"><use href="#i-chevron-right"/></svg></button>
-    </div>
-  </div>
-
-  <div class="testi">
-    <div class="card tcard reveal" style="--d:0s"><span class="qm">“</span><div class="stars">★★★★★</div><p>The client loved the video! They even want you to make a second one.</p><div class="who"><span class="av">L</span><div><b>Luciana M.</b><small>Canva</small></div></div></div>
-    <div class="card tcard reveal" style="--d:.1s"><span class="qm">“</span><div class="stars">★★★★★</div><p>It's really great — genuinely impressed.</p><div class="who"><span class="av">J</span><div><b>Jorge</b><small>Bonzo</small></div></div></div>
-    <div class="card tcard reveal" style="--d:.2s"><span class="qm">“</span><div class="stars">★★★★★</div><p>Great video, I really liked it.</p><div class="who"><span class="av">X</span><div><b>Ximena</b><small>Las Rosas Square</small></div></div></div>
-  </div>
-  <p class="note-sm">Real reviews from brands I've worked with (translated from Spanish).</p>
-</div></section>
 
 <div class="vbox" id="vbox" role="dialog" aria-modal="true" aria-label="Video player">
   <button class="x" id="vclose" aria-label="Close video"><svg class="i"><use href="#i-x"/></svg></button>
@@ -779,9 +932,9 @@ footer{background:#1d3f5a;color:rgba(255,255,255,.7);text-align:center;padding:2
       <h2>My <em>background</em></h2>
     </div>
     <ul class="timeline reveal">
-      <li><b>Founder · Daily Me</b><span>DTC e-commerce brand · 2023 – present</span></li>
-      <li><b>Founder &amp; educator · Online course &amp; bootcamp</b><span>150+ students across Latin America · 2025 – present</span></li>
-      <li><b>Marketing Operations Consultant</b><span>Up to 5 clients at a time · 2025 – present</span></li>
+      <li><b>Founder · Daily Me</b><span>DTC e-commerce brand · 2023</span></li>
+      <li><b>Founder &amp; educator · Online course &amp; bootcamp</b><span>150+ students across Latin America · 2025</span></li>
+      <li><b>Marketing Operations Consultant</b><span>Up to 5 clients at a time · 2020 – 2025</span></li>
       <li><b>Marketing Director · Gersten Financial Planning</b><span>San Diego, USA · 2021 – 2023</span></li>
       <li><b>Marketing Assistant · BDP agency</b><span>Mexico · 2018 – 2021</span></li>
     </ul>
@@ -834,7 +987,7 @@ footer{background:#1d3f5a;color:rgba(255,255,255,.7);text-align:center;padding:2
   document.getElementById('next').onclick = function(){ strip.scrollBy({left:strip.clientWidth*.8, behavior:'smooth'}); };
   var canHover = window.matchMedia('(hover: hover)').matches;
   var vbox = document.getElementById('vbox'), vvid = document.getElementById('vvid');
-  reels.forEach(function(r){
+  document.querySelectorAll('.reel').forEach(function(r){
     var v = r.querySelector('video');
     if(canHover && !reduce){
       r.addEventListener('mouseenter', function(){ v.play().catch(function(){}); });

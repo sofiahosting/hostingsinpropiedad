@@ -257,7 +257,7 @@ strong{font-weight:500;color:var(--ink)}
 .cursor{display:inline-block;width:8px;height:15px;background:var(--red);vertical-align:-2px;animation:blink 1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
 
-.sites{display:grid;grid-auto-flow:column;grid-auto-columns:82%;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:18px 2px;scrollbar-width:thin}
+.sites-old{display:grid;grid-auto-flow:column;grid-auto-columns:82%;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:18px 2px;scrollbar-width:thin}
 .site{scroll-snap-align:start;text-decoration:none;display:block}
 .site .frame{border:1px solid var(--ink);background:#fff;transition:transform .35s,box-shadow .35s}
 .site:hover .frame{transform:translateY(-6px) rotate(-.6deg);box-shadow:8px 8px 0 var(--red)}
@@ -368,6 +368,97 @@ footer .h span{color:var(--red)}
 @keyframes pulse{50%{opacity:.3}}
 .fine{margin-top:36px;font-size:13px;color:#777}
 
+
+/* progress */
+.progress{position:fixed;top:0;left:0;right:0;height:3px;background:var(--red);transform-origin:left;transform:scaleX(0);z-index:40}
+.num .ni{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--soft);color:var(--red);font-size:17px;margin-bottom:10px;transition:background .3s,color .3s}
+.num:hover .ni{background:var(--red);color:#fff}
+.js .sec-head .n{transition:color .9s ease .35s}
+.js .sec-head.in .n{color:var(--red)}
+
+/* properties */
+.props{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:48px;position:relative}
+.props figure{position:relative;aspect-ratio:1;overflow:hidden;background:var(--soft)}
+.props figure:first-of-type{grid-column:span 2;grid-row:span 2}
+.props img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.props figure:hover img{transform:scale(1.07)}
+.props .tagline{position:absolute;left:12px;top:12px;z-index:2;display:flex;align-items:center;gap:8px;background:var(--red);color:#fff;font-family:var(--cond);font-weight:700;font-size:15px;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px}
+.proofs{display:grid;gap:14px;margin-top:14px}
+.proof{background:#fff;border:1px solid var(--line);padding:10px;transition:transform .35s,box-shadow .35s}
+.proof:hover{transform:translateY(-4px);box-shadow:6px 6px 0 var(--ink)}
+.proof img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain;max-height:300px;background:#fff}
+.proof p{display:flex;align-items:center;gap:8px;margin-top:8px;font-family:var(--cond);font-weight:700;font-size:16px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.proof p .i{color:var(--red)}
+
+/* review tool */
+.rvw{border:1px solid var(--ink);background:#fff;margin-top:56px}
+.rvw-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:12px 18px;border-bottom:1px solid var(--line)}
+.rvw-top b{font-family:var(--cond);font-weight:700;font-size:18px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.rvw-top .dot{width:8px;height:8px;border-radius:50%;background:var(--red);display:inline-block;margin-right:8px;animation:pulse 1.6s ease-in-out infinite}
+.rvw-body{display:grid;gap:0}
+.rvw-player{padding:18px;background:#111;display:flex;flex-direction:column;gap:12px}
+.rvw-video{position:relative;width:min(220px,60%);aspect-ratio:9/16;margin:0 auto;border-radius:8px;overflow:hidden;background:#000}
+.rvw-video video,.rvw-video img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rvw-video .rec{position:absolute;left:8px;top:8px;z-index:2;font-family:var(--cond);font-weight:700;font-size:12px;letter-spacing:.12em;background:var(--red);color:#fff;padding:2px 7px}
+.rvw-line{position:relative;height:30px}
+.rvw-line .track{position:absolute;left:0;right:0;top:13px;height:4px;background:#333;border-radius:2px}
+.rvw-line .fill{position:absolute;left:0;top:13px;height:4px;background:#888;border-radius:2px;width:var(--pos,5.8%);transition:width .8s cubic-bezier(.2,.7,.2,1)}
+.rvw-line .head{position:absolute;top:4px;width:2px;height:22px;background:#fff;left:var(--pos,5.8%);transition:left .8s cubic-bezier(.2,.7,.2,1)}
+.mkr{position:absolute;top:6px;width:18px;height:18px;margin-left:-9px;border-radius:50%;background:var(--red);border:2px solid #111;color:#fff;font-family:var(--cond);font-weight:700;font-size:11px;display:grid;place-items:center;transition:transform .25s}
+.mkr.on,.mkr:hover{transform:scale(1.35)}
+.rvw-tc{display:flex;justify-content:space-between;font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#aaa}
+.rvw-tc b{color:#fff;font-weight:400}
+.rvw-list{list-style:none}
+.rvw-list li{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;padding:18px;border-bottom:1px solid var(--line);cursor:pointer;transition:background .3s;position:relative}
+.rvw-list li::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red);transform:scaleY(0);transition:transform .35s}
+.rvw-list li.on{background:#FFF6F7}
+.rvw-list li.on::before{transform:scaleY(1)}
+.rvw-list .ts{font-family:ui-monospace,Menlo,monospace;font-size:13px;font-weight:600;background:var(--ink);color:#fff;padding:4px 8px;height:fit-content;border-radius:3px}
+.rvw-list li.on .ts{background:var(--red)}
+.rvw-list b{display:block;font-family:var(--cond);font-weight:700;font-size:22px;line-height:1.05;text-transform:uppercase;color:var(--ink)}
+.rvw-list p{font-size:15px;color:#444;line-height:1.45;margin-top:4px}
+.rvw-list .who{display:flex;align-items:center;gap:6px;margin-top:8px;font-size:12px;color:#888}
+.rvw-list .who i{width:18px;height:18px;border-radius:50%;background:var(--red);color:#fff;font-style:normal;font-family:var(--cond);font-weight:700;font-size:10px;display:grid;place-items:center}
+.rvw-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:12px 18px;background:var(--soft)}
+.rvw-foot .no{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--grey)}
+.rvw-foot .no s{text-decoration-thickness:1.5px}
+.rvw-foot .formula{font-family:var(--cond);font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.rvw-foot .formula span{color:var(--red)}
+
+/* sites belt */
+.sitebelt .track{gap:18px;animation-duration:46s;padding:16px 0 22px}
+.sitebelt .site{width:300px;flex:none}
+.sitebelt img{width:100%;height:auto;border-radius:0;box-shadow:none}
+@media (min-width:720px){
+  .props{grid-template-columns:repeat(5,1fr)}
+  .proofs{grid-template-columns:1.3fr 1fr}
+  .rvw-body{grid-template-columns:minmax(260px,.8fr) 1.2fr}
+  .rvw-list{border-left:1px solid var(--line)}
+  .sitebelt .site{width:380px}
+}
+@media (prefers-reduced-motion:reduce){
+  .progress{display:none}
+  .rvw-top .dot{animation:none}
+  .js .sec-head .n{transition:none;color:var(--red)}
+}
+
+
+.loop{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:20px}
+.loop span{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--bone);padding:8px 12px;font-family:var(--cond);font-weight:700;font-size:15px;letter-spacing:.06em;text-transform:uppercase}
+.loop span .i{color:var(--red)}
+.loop .ar{color:var(--red);font-size:18px}
+.notes{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.notes li{background:#FFF6D9;padding:16px 16px 18px;box-shadow:0 10px 18px -12px rgba(0,0,0,.35);transform:rotate(-1.2deg);transition:transform .3s;position:relative}
+.notes li:nth-child(even){transform:rotate(1.4deg);background:#FDE7EA}
+.notes li:nth-child(3){background:#E9F1FB}
+.notes li::before{content:"";position:absolute;top:-8px;left:50%;width:46px;height:16px;margin-left:-23px;background:rgba(224,55,73,.35)}
+.notes li:hover{transform:rotate(0) scale(1.04);z-index:2}
+.notes b{display:block;font-family:var(--cond);font-weight:700;font-size:21px;line-height:1.05;text-transform:uppercase;color:var(--ink)}
+.notes span{display:block;font-size:14px;line-height:1.4;color:#444;margin-top:6px}
+.notes li:last-child{grid-column:1/-1}
+.js .notes li.rv.in{transform:rotate(-1.2deg)}
+.js .notes li.rv.in:nth-child(even){transform:rotate(1.4deg)}
+
 /* reveal */
 .js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 .js .rv.in{opacity:1;transform:none}
@@ -395,7 +486,7 @@ footer .h span{color:var(--red)}
 @media (min-width:960px){
   .hero{padding-top:56px}
   .hero-grid{grid-template-columns:1.2fr 1fr;gap:32px}
-  .portrait{margin:0;width:100%;max-width:440px;justify-self:end}
+  .portrait{margin:56px 0 0;width:100%;max-width:500px;justify-self:end;align-self:start}
   .nums{grid-template-columns:repeat(6,1fr)}
   .num,.num:nth-child(even),.num:nth-child(3n+1){border-left:1px solid var(--line);padding:28px 14px 24px}
   .num:first-child{border-left:0;padding-left:0}
@@ -440,6 +531,12 @@ footer .h span{color:var(--red)}
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-home-heart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></g></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></g></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></g></symbol>
+<symbol id="i-trending-up" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></g></symbol>
+<symbol id="i-clapper" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z"/><path d="m6.2 5.3 3.1 3.9"/><path d="m12.4 3.4 3.1 4"/><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></g></symbol>
+<symbol id="i-award" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></g></symbol>
 <symbol id="i-arrow-right" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></g></symbol>
 <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></g></symbol>
 <symbol id="i-sparkles" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></g></symbol>
@@ -470,6 +567,7 @@ footer .h span{color:var(--red)}
 <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></g></symbol>
 </svg>
 
+<div class="progress" aria-hidden="true"></div>
 <header class="top">
   <div class="wrap">
     <a class="mono" href="#top">SR<span>.</span></a>
@@ -514,23 +612,23 @@ footer .h span{color:var(--red)}
 <section aria-label="Numbers and role fit">
   <div class="wrap">
     <div class="nums">
-      <div class="num rv"><span class="pre"></span><span class="v" data-to="8">8</span><span class="l">Years in marketing</span></div>
-      <div class="num rv d1"><span class="pre lbl">Up to</span><span class="v" data-to="5">5</span><span class="l">Clients managed at once</span></div>
-      <div class="num rv d2"><span class="pre"></span><span class="v" data-to="30" data-suf="+">30+</span><span class="l">Property owners, met with monthly</span></div>
-      <div class="num rv d1"><span class="pre"></span><span class="v" data-to="50" data-suf="+">50+</span><span class="l">Creators briefed and managed</span></div>
-      <div class="num rv d2"><span class="pre"></span><span class="v" data-to="1000" data-suf="+" data-sep="1">1,000+</span><span class="l">Leads for one client in 2026</span></div>
-      <div class="num rv d3"><span class="pre"></span><span class="v" data-to="1.1" data-dec="1" data-suf="M">1.1M</span><span class="l">Views on my top video</span></div>
+      <div class="num rv"><span class="ni"><svg class="i"><use href="#i-award"/></svg></span><span class="v" data-to="8">8</span><span class="l">Years in marketing</span></div>
+      <div class="num rv d1"><span class="ni"><svg class="i"><use href="#i-briefcase"/></svg></span><span class="v" data-to="5">5</span><span class="l">Clients at once, at most</span></div>
+      <div class="num rv d2"><span class="ni"><svg class="i"><use href="#i-home-heart"/></svg></span><span class="v" data-to="30" data-suf="+">30+</span><span class="l">Property owners, met with monthly</span></div>
+      <div class="num rv d1"><span class="ni"><svg class="i"><use href="#i-users"/></svg></span><span class="v" data-to="50" data-suf="+">50+</span><span class="l">Creators briefed and managed</span></div>
+      <div class="num rv d2"><span class="ni"><svg class="i"><use href="#i-trending-up"/></svg></span><span class="v" data-to="1000" data-suf="+" data-sep="1">1,000+</span><span class="l">Leads for one client in 2026</span></div>
+      <div class="num rv d3"><span class="ni"><svg class="i"><use href="#i-eye"/></svg></span><span class="v" data-to="1.1" data-dec="1" data-suf="M">1.1M</span><span class="l">Views on my top video</span></div>
     </div>
 
     <div class="fit">
       <h2 class="h rv">You asked for.<br><span style="color:var(--red)">I bring.</span></h2>
       <div class="fit-list">
-        <a class="fit-row rv" href="#clients"><span class="ck"><svg class="i"><use href="#i-check"/></svg></span><span>Own client confidence, communicate before they follow up</span><b>01</b></a>
-        <a class="fit-row rv" href="#creative"><span class="ck"><svg class="i"><use href="#i-check"/></svg></span><span>Turn vision into briefs, give feedback the team can act on</span><b>02</b></a>
-        <a class="fit-row rv" href="#ai"><span class="ck"><svg class="i"><use href="#i-check"/></svg></span><span>Delegate whole pieces of work to AI, review it critically</span><b>03</b></a>
-        <a class="fit-row rv" href="#ai-systems"><span class="ck"><svg class="i"><use href="#i-check"/></svg></span><span>Encode methods into reusable workflows agents can run</span><b>03</b></a>
-        <a class="fit-row rv" href="#risk"><span class="ck"><svg class="i"><use href="#i-check"/></svg></span><span>Diagnose, escalate early with evidence and a recommendation</span><b>04</b></a>
-        <a class="fit-row rv" href="#stories"><span class="ck"><svg class="i"><use href="#i-check"/></svg></span><span>Get why audiences care about characters, stories and worlds</span><b>05</b></a>
+        <a class="fit-row rv" href="#clients"><span class="ck"><svg class="i"><use href="#i-users"/></svg></span><span>Own client confidence, communicate before they follow up</span><b>01</b></a>
+        <a class="fit-row rv" href="#creative"><span class="ck"><svg class="i"><use href="#i-message-square"/></svg></span><span>Turn vision into briefs, give feedback the team can act on</span><b>02</b></a>
+        <a class="fit-row rv" href="#ai"><span class="ck"><svg class="i"><use href="#i-sparkles"/></svg></span><span>Delegate whole pieces of work to AI, review it critically</span><b>03</b></a>
+        <a class="fit-row rv" href="#ai-systems"><span class="ck"><svg class="i"><use href="#i-layers"/></svg></span><span>Encode methods into reusable workflows agents can run</span><b>03</b></a>
+        <a class="fit-row rv" href="#risk"><span class="ck"><svg class="i"><use href="#i-flag"/></svg></span><span>Diagnose, escalate early with evidence and a recommendation</span><b>04</b></a>
+        <a class="fit-row rv" href="#stories"><span class="ck"><svg class="i"><use href="#i-clapper"/></svg></span><span>Get why audiences care about characters, stories and worlds</span><b>05</b></a>
       </div>
     </div>
   </div>
@@ -567,6 +665,20 @@ footer .h span{color:var(--red)}
         <p class="rf">Same structure for every owner, every month. No surprises.</p>
       </div>
     </div>
+    <div class="props rv">
+      <span class="tagline"><svg class="i"><use href="#i-home-heart"/></svg>Real listings I operated</span>
+      <figure><img src="../assets/stormideas/depa-2.webp" alt="Living room with city view" width="600" height="600" loading="lazy"></figure>
+      <figure><img src="../assets/stormideas/depa-6.webp" alt="Loft kitchen" width="600" height="600" loading="lazy"></figure>
+      <figure><img src="../assets/stormideas/depa-3.webp" alt="Loft bedroom" width="600" height="600" loading="lazy"></figure>
+      <figure><img src="../assets/stormideas/depa-4.webp" alt="Kitchen and dining" width="600" height="600" loading="lazy"></figure>
+      <figure><img src="../assets/stormideas/depa-5.webp" alt="Balcony" width="600" height="600" loading="lazy"></figure>
+      <figure><img src="../assets/stormideas/depa-7.webp" alt="Open living area" width="600" height="600" loading="lazy"></figure>
+      <figure><img src="../assets/stormideas/depa-8.webp" alt="Bedroom" width="600" height="600" loading="lazy"></figure>
+    </div>
+    <div class="proofs">
+      <figure class="proof rv"><img src="../assets/proof-dashboard.jpg" alt="Airbnb earnings dashboard by month" width="1400" height="924" loading="lazy"><p><svg class="i"><use href="#i-chart"/></svg>The numbers behind every owner meeting</p></figure>
+      <figure class="proof rv d1"><img src="../assets/proof-listings.jpg" alt="Multi-calendar across listings" width="1100" height="534" loading="lazy"><p><svg class="i"><use href="#i-calendar"/></svg>Every listing, one calendar</p></figure>
+    </div>
     <div class="role rv"><span class="ic"><svg class="i"><use href="#i-briefcase"/></svg></span><div><h3>Marketing Director · Gersten Financial Planning</h3><p>San Diego, 2 years. The client-facing marketing lead for up to 5 clients at once: briefs, timelines, QA, KPI reports and client meetings.</p></div></div>
   </div>
   <div class="quote-band rv">
@@ -593,17 +705,30 @@ footer .h span{color:var(--red)}
       <span class="arrow rv d1"><svg class="i"><use href="#i-arrow-right"/></svg></span>
       <div class="shots rv d2">
         <figure><img src="../assets/cvportfolio/dailyme-1.webp" alt="Daily Me journal on the beach" width="640" height="800" loading="lazy"><figcaption>Product</figcaption></figure>
-        <figure><button class="reel" data-src="../assets/portfolio/clip-2.mp4" aria-label="Play Daily Me video"><img src="../assets/portfolio/clip-2.jpg" alt="Daily Me creator video" width="320" height="568" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Video</figcaption></figure>
+        <figure><img src="../assets/cvportfolio/dailyme-3.webp" alt="Daily Me journal detail" width="640" height="800" loading="lazy"><figcaption>Detail</figcaption></figure>
         <figure><img src="../assets/cvportfolio/dailyme-2.webp" alt="Daily Me journal lifestyle shot" width="640" height="800" loading="lazy"><figcaption>Lifestyle</figcaption></figure>
       </div>
     </div>
 
-    <div class="review rv">
-      <div class="bar"><b><i class="dot"></i>How I give feedback</b><span class="lbl">Review · cut v2 · @ 0:04</span></div>
-      <div class="body">
-        <div class="cmt bad"><span class="mk"><svg class="i"><use href="#i-x"/></svg></span><div><p class="lbl">Vague</p><q>Make it pop more.</q></div></div>
-        <div class="cmt good"><span class="mk"><svg class="i"><use href="#i-check"/></svg></span><div><p class="lbl">Specific</p><q>The hook lands at second 4; move the price reveal to the first 2 seconds and cut the logo intro.</q><div class="tags"><span>Timestamp</span><span>What to move</span><span>What to cut</span></div></div></div>
+    <div class="rvw rv" id="review">
+      <div class="rvw-top"><b><i class="dot"></i>How I give feedback</b><span class="lbl">Example review · creator video · cut v2</span></div>
+      <div class="rvw-body">
+        <div class="rvw-player">
+          <div class="rvw-video"><span class="rec">Cut v2</span><button class="reel" data-src="../assets/portfolio/clip-2.mp4" data-prev="../assets/stormideas/clips/dailyme.mp4" aria-label="Play video"><img src="../assets/portfolio/clip-2.jpg" alt="Creator video under review" width="320" height="568" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button></div>
+          <div class="rvw-line" style="--pos:5.8%"><span class="track"></span><span class="fill"></span><span class="head"></span>
+            <button class="mkr on" style="left:5.8%" data-i="0" aria-label="Comment at 00:03">1</button>
+            <button class="mkr" style="left:44.2%" data-i="1" aria-label="Comment at 00:23">2</button>
+            <button class="mkr" style="left:82.7%" data-i="2" aria-label="Comment at 00:43">3</button>
+          </div>
+          <div class="rvw-tc"><b class="now">00:03</b><span>00:52</span></div>
+        </div>
+        <ol class="rvw-list">
+          <li class="on" data-pos="5.8%" data-tc="00:03"><span class="ts">00:03</span><div><b>Hook is too slow</b><p>Open on the question. Cut the 2-second logo intro so the hook lands in the first second.</p><span class="who"><i>SR</i>Sofia · Hook</span></div></li>
+          <li data-pos="44.2%" data-tc="00:23"><span class="ts">00:23</span><div><b>Music is too loud</b><p>It fights the voiceover. Duck it under the voice so the key message is clear.</p><span class="who"><i>SR</i>Sofia · Audio</span></div></li>
+          <li data-pos="82.7%" data-tc="00:43"><span class="ts">00:43</span><div><b>Missing a CTA</b><p>Add one clear next step, on screen and in the voiceover, before the last beat.</p><span class="who"><i>SR</i>Sofia · CTA</span></div></li>
+        </ol>
       </div>
+      <div class="rvw-foot"><span class="no"><svg class="i"><use href="#i-x"/></svg>Not: <s>“Make it pop more.”</s></span><span class="formula">Timestamp <span>+</span> Problem <span>+</span> Fix</span></div>
     </div>
 
     <div class="block">
@@ -613,7 +738,7 @@ footer .h span{color:var(--red)}
           <div class="scr">
             <div class="head"><span class="av"></span><div><b>Sponsored</b><small>Hook A</small></div></div>
             <p class="cap">Why does Airbnb charge you 3% and your neighbor 15.5%?</p>
-            <div class="media"><button class="reel" data-src="../assets/scrolling/bonzo-1.mp4" aria-label="Play ad video"><img src="../assets/scrolling/bonzo-1.jpg" alt="Ad video frame" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button></div>
+            <div class="media"><button class="reel" data-src="../assets/scrolling/bonzo-1.mp4" data-prev="../assets/stormideas/clips/bonzo-1.mp4" aria-label="Play ad video"><img src="../assets/scrolling/bonzo-1.jpg" alt="Ad video frame" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button></div>
             <div class="cta"><span>Chat on WhatsApp</span><b>Send message</b></div>
           </div>
         </div>
@@ -661,12 +786,10 @@ footer .h span{color:var(--red)}
 
     <div class="block">
       <h3 class="sub-h rv">Landing pages, built with Claude Code <small>1–2 days → ~30 minutes</small></h3>
-      <div class="sites">
-        <a class="site rv" href="https://sofiaretif.com/" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>sofiaretif.com</span></div><img src="../assets/stormideas/web-course.webp" alt="Online course landing page" width="960" height="600" loading="lazy"></div><p>Course sales page <span>Live</span></p></a>
-        <a class="site rv d1" href="https://sofiaretif.com/masterclass.html" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>sofiaretif.com/masterclass</span></div><img src="../assets/stormideas/web-masterclass.webp" alt="Masterclass landing page" width="960" height="600" loading="lazy"></div><p>Masterclass funnel <span>Live</span></p></a>
-        <a class="site rv d2" href="https://sofiaretif.com/blog/" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>sofiaretif.com/blog</span></div><img src="../assets/stormideas/web-blog.webp" alt="Programmatic SEO blog" width="960" height="600" loading="lazy"></div><p>Programmatic blog <span>78 pages</span></p></a>
-        <a class="site rv d3" href="https://sofiaretif.com/cvportfolio" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>sofiaretif.com/cvportfolio</span></div><img src="../assets/stormideas/web-cv.webp" alt="Marketing portfolio page" width="960" height="600" loading="lazy"></div><p>Marketing portfolio <span>Live</span></p></a>
-      </div>
+      <div class="belt sitebelt"><div class="track">
+        <a class="site" href="https://sofiaretif.com/" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>sofiaretif.com</span></div><img src="../assets/stormideas/web-course.webp" alt="Course sales page landing page" width="960" height="600" loading="lazy"></div><p>Course sales page <span>Live</span></p></a><a class="site" href="https://sofiaretif.com/aprende-conmigo.html" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>sofiaretif.com/aprende-conmigo</span></div><img src="../assets/stormideas/web-aprende.webp" alt="Product catalog landing page" width="960" height="600" loading="lazy"></div><p>Product catalog <span>Live</span></p></a><a class="site" href="https://sofiaretif.com/bootcamp-septiembre.html" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>sofiaretif.com/bootcamp</span></div><img src="../assets/stormideas/web-bootcamp.webp" alt="Live bootcamp launch landing page" width="960" height="600" loading="lazy"></div><p>Live bootcamp launch <span>Live</span></p></a><a class="site" href="https://sofiaretif.com/taller-zona.html" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>sofiaretif.com/taller-zona</span></div><img src="../assets/stormideas/web-taller.webp" alt="Workshop sign-up landing page" width="960" height="600" loading="lazy"></div><p>Workshop sign-up <span>Live</span></p></a><a class="site" href="https://sofiaretif.com/portfolio/" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>sofiaretif.com/portfolio</span></div><img src="../assets/stormideas/web-ugc.webp" alt="UGC media kit landing page" width="960" height="600" loading="lazy"></div><p>UGC media kit <span>EN</span></p></a><a class="site" href="https://sofiaretif.com/cvportfolio" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>sofiaretif.com/cvportfolio</span></div><img src="../assets/stormideas/web-cv.webp" alt="Marketing portfolio landing page" width="960" height="600" loading="lazy"></div><p>Marketing portfolio <span>EN</span></p></a>
+        <a class="site" aria-hidden="true" tabindex="-1" href="https://sofiaretif.com/" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>sofiaretif.com</span></div><img src="../assets/stormideas/web-course.webp" alt="Course sales page landing page" width="960" height="600" loading="lazy"></div><p>Course sales page <span>Live</span></p></a><a class="site" aria-hidden="true" tabindex="-1" href="https://sofiaretif.com/aprende-conmigo.html" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>sofiaretif.com/aprende-conmigo</span></div><img src="../assets/stormideas/web-aprende.webp" alt="Product catalog landing page" width="960" height="600" loading="lazy"></div><p>Product catalog <span>Live</span></p></a><a class="site" aria-hidden="true" tabindex="-1" href="https://sofiaretif.com/bootcamp-septiembre.html" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>sofiaretif.com/bootcamp</span></div><img src="../assets/stormideas/web-bootcamp.webp" alt="Live bootcamp launch landing page" width="960" height="600" loading="lazy"></div><p>Live bootcamp launch <span>Live</span></p></a><a class="site" aria-hidden="true" tabindex="-1" href="https://sofiaretif.com/taller-zona.html" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>sofiaretif.com/taller-zona</span></div><img src="../assets/stormideas/web-taller.webp" alt="Workshop sign-up landing page" width="960" height="600" loading="lazy"></div><p>Workshop sign-up <span>Live</span></p></a><a class="site" aria-hidden="true" tabindex="-1" href="https://sofiaretif.com/portfolio/" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>sofiaretif.com/portfolio</span></div><img src="../assets/stormideas/web-ugc.webp" alt="UGC media kit landing page" width="960" height="600" loading="lazy"></div><p>UGC media kit <span>EN</span></p></a><a class="site" aria-hidden="true" tabindex="-1" href="https://sofiaretif.com/cvportfolio" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>sofiaretif.com/cvportfolio</span></div><img src="../assets/stormideas/web-cv.webp" alt="Marketing portfolio landing page" width="960" height="600" loading="lazy"></div><p>Marketing portfolio <span>EN</span></p></a>
+      </div></div>
     </div>
 
     <div class="block">
@@ -688,16 +811,24 @@ footer .h span{color:var(--red)}
 
     <div class="block mem" id="ai-systems">
       <div class="rv">
+        <span class="lbl">AI that remembers every client</span>
         <p class="bigstat" data-to="49">49</p>
-        <p class="bigstat-cap">Context files my agents read before every task</p>
-        <p class="bigstat-txt">Brand rules, client preferences, past decisions and what never to do again. Every agent starts briefed, and every correction becomes a rule the next one follows.</p>
+        <p class="bigstat-cap">Rules my AI already knows before it starts</p>
+        <p class="bigstat-txt">I never re-explain a brand. When a client corrects something once, I save it as a rule, and every future task follows it automatically.</p>
+        <div class="loop">
+          <span><svg class="i"><use href="#i-message-square"/></svg>Client corrects once</span>
+          <svg class="i ar"><use href="#i-arrow-right"/></svg>
+          <span><svg class="i"><use href="#i-brain"/></svg>Saved as a rule</span>
+          <svg class="i ar"><use href="#i-arrow-right"/></svg>
+          <span><svg class="i"><use href="#i-check"/></svg>Never repeated</span>
+        </div>
       </div>
-      <ul class="files">
-        <li class="rv"><svg class="i"><use href="#i-brain"/></svg><code>brand-palette.md</code><span>Fixed palette per brand. Never deviate.</span></li>
-        <li class="rv d1"><svg class="i"><use href="#i-brain"/></svg><code>gender-neutral-copy.md</code><span>Half the audience is men. Write for everyone.</span></li>
-        <li class="rv d2"><svg class="i"><use href="#i-brain"/></svg><code>carousel-style.md</code><span>Tested, rejected, reverted: no Impact font, ever.</span></li>
-        <li class="rv d3"><svg class="i"><use href="#i-brain"/></svg><code>ad-copy-rules.md</code><span>Sell the result, not the tool.</span></li>
-        <li class="rv d4"><svg class="i"><use href="#i-brain"/></svg><code>client-sync.md</code><span>Renew a contract → update the tracker and calendar too.</span></li>
+      <ul class="notes">
+        <li class="rv"><b>Brand colors</b><span>Each brand has a fixed palette. AI never improvises one.</span></li>
+        <li class="rv d1"><b>Write for everyone</b><span>Over half the audience is men, so no copy written only for women.</span></li>
+        <li class="rv d2"><b>Fonts the client rejected</b><span>We tested Impact. The client hated it. It never comes back.</span></li>
+        <li class="rv d3"><b>Ad copy rule</b><span>Sell the result the customer gets, not the tool behind it.</span></li>
+        <li class="rv d4"><b>Keep records in sync</b><span>New contract? Update the tracker and the calendar too.</span></li>
       </ul>
     </div>
 
@@ -744,11 +875,11 @@ footer .h span{color:var(--red)}
     <div class="block">
       <h3 class="sub-h rv">Content I've made for brands <small>Tap to play</small></h3>
       <div class="ugc">
-        <figure class="rv"><button class="reel" data-src="../assets/scrolling/canva-links.mp4" aria-label="Play Canva video"><img src="../assets/scrolling/canva-links.jpg" alt="Canva tutorial video" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Canva<span>Feature tutorial</span></figcaption></figure>
-        <figure class="rv d1"><button class="reel" data-src="../assets/scrolling/ontop.mp4" aria-label="Play OnTop video"><img src="../assets/scrolling/ontop.jpg" alt="OnTop UGC video" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>OnTop<span>UGC ad</span></figcaption></figure>
-        <figure class="rv d2"><button class="reel" data-src="../assets/scrolling/canva-automate.mp4" aria-label="Play Canva automation video"><img src="../assets/scrolling/canva-automate.jpg" alt="Canva automation video" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Canva<span>Workflow hack</span></figcaption></figure>
-        <figure class="rv d3"><button class="reel" data-src="../assets/portfolio/clip-3.mp4" aria-label="Play Las Rosas Square video"><img src="../assets/portfolio/clip-3.jpg" alt="Las Rosas Square tour video" width="320" height="568" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Las Rosas Square<span>Property tour</span></figcaption></figure>
-        <figure class="rv d4"><button class="reel" data-src="../assets/scrolling/bonzo-2.mp4" aria-label="Play ad video"><img src="../assets/scrolling/bonzo-2.jpg" alt="Direct-response ad video" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Accounting firm<span>Direct-response ad</span></figcaption></figure>
+        <figure class="rv"><button class="reel" data-src="../assets/scrolling/canva-links.mp4" data-prev="../assets/stormideas/clips/canva-links.mp4" aria-label="Play Canva video"><img src="../assets/scrolling/canva-links.jpg" alt="Canva tutorial video" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Canva<span>Feature tutorial</span></figcaption></figure>
+        <figure class="rv d1"><button class="reel" data-src="../assets/scrolling/ontop.mp4" data-prev="../assets/stormideas/clips/ontop.mp4" aria-label="Play OnTop video"><img src="../assets/scrolling/ontop.jpg" alt="OnTop UGC video" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>OnTop<span>UGC ad</span></figcaption></figure>
+        <figure class="rv d2"><button class="reel" data-src="../assets/scrolling/canva-automate.mp4" data-prev="../assets/stormideas/clips/canva-automate.mp4" aria-label="Play Canva automation video"><img src="../assets/scrolling/canva-automate.jpg" alt="Canva automation video" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Canva<span>Workflow hack</span></figcaption></figure>
+        <figure class="rv d3"><button class="reel" data-src="../assets/portfolio/clip-3.mp4" data-prev="../assets/stormideas/clips/rosas.mp4" aria-label="Play Las Rosas Square video"><img src="../assets/portfolio/clip-3.jpg" alt="Las Rosas Square tour video" width="320" height="568" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Las Rosas Square<span>Property tour</span></figcaption></figure>
+        <figure class="rv d4"><button class="reel" data-src="../assets/scrolling/bonzo-2.mp4" data-prev="../assets/stormideas/clips/bonzo-2.mp4" aria-label="Play ad video"><img src="../assets/scrolling/bonzo-2.jpg" alt="Direct-response ad video" width="720" height="1280" loading="lazy"><span class="play"><span><svg class="i"><use href="#i-play"/></svg></span></span></button><figcaption>Accounting firm<span>Direct-response ad</span></figcaption></figure>
       </div>
     </div>
 
@@ -813,13 +944,35 @@ footer .h span{color:var(--red)}
 
 <script>
 (function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bar=document.querySelector('.progress');
+  if(bar)addEventListener('scroll',function(){var h=document.documentElement;bar.style.transform='scaleX('+(h.scrollTop/(h.scrollHeight-h.clientHeight||1))+')'},{passive:true});
+  if(!reduce&&'IntersectionObserver' in window){
+    var po=new IntersectionObserver(function(es){es.forEach(function(e){
+      var b=e.target;if(b.classList.contains('on'))return;
+      var v=b.querySelector('video.prev');
+      if(e.isIntersecting){
+        if(!v){v=document.createElement('video');v.className='prev';v.muted=true;v.loop=true;v.playsInline=true;v.setAttribute('playsinline','');v.src=b.dataset.prev;b.insertBefore(v,b.querySelector('.play'))}
+        v.play().catch(function(){});
+      }else if(v){v.pause()}
+    })},{threshold:.35});
+    document.querySelectorAll('.reel[data-prev]').forEach(function(b){po.observe(b)});
+  }
+  var rv=document.getElementById('review');
+  if(rv){
+    var items=rv.querySelectorAll('.rvw-list li'),mk=rv.querySelectorAll('.mkr'),line=rv.querySelector('.rvw-line'),now=rv.querySelector('.now'),cur=0,timer;
+    function go(i){cur=i;items.forEach(function(li,j){li.classList.toggle('on',j===i)});mk.forEach(function(m,j){m.classList.toggle('on',j===i)});line.style.setProperty('--pos',items[i].dataset.pos);now.textContent=items[i].dataset.tc}
+    items.forEach(function(li,i){li.addEventListener('click',function(){clearInterval(timer);go(i)})});
+    mk.forEach(function(m,i){m.addEventListener('click',function(){clearInterval(timer);go(i)})});
+    if(!reduce)timer=setInterval(function(){go((cur+1)%items.length)},3200);
+  }
   document.querySelectorAll('.reel').forEach(function(b){
     b.addEventListener('click',function(){
       if(b.classList.contains('on'))return;
       document.querySelectorAll('.reel.on video').forEach(function(v){v.pause()});
       var v=document.createElement('video');
       v.src=b.dataset.src;v.controls=true;v.autoplay=true;v.playsInline=true;
-      b.querySelector('img').replaceWith(v);b.classList.add('on');v.play().catch(function(){});
+      b.querySelectorAll('img,video').forEach(function(n){n.remove()});b.insertBefore(v,b.firstChild);b.classList.add('on');v.play().catch(function(){});
     });
   });
   if(!document.documentElement.classList.contains('js'))return;

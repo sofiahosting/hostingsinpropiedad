@@ -331,6 +331,83 @@ footer{background:#1d3f5a;color:rgba(255,255,255,.7);text-align:center;padding:2
   .track ul{flex-wrap:wrap;justify-content:center;padding:0 16px}
   .track ul[aria-hidden]{display:none}
 }
+
+/* ---------- added: clients, launch funnel, creators, carousels, feedback ---------- */
+.xc-grid{display:grid;gap:28px;align-items:center}
+@media(min-width:880px){.xc-grid{grid-template-columns:1fr 1fr;gap:44px}}
+.x30{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(84px,12vw,140px);line-height:.9;color:var(--deep)}
+.x30cap{font-size:20px;font-weight:700;color:var(--deeper);margin:6px 0 10px}
+.x30cap span{display:block;font-weight:400;color:var(--mid);font-size:16px}
+.xcad{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px}
+.xcad span{width:30px;height:30px;border-radius:8px;background:var(--pale);color:var(--deep);display:grid;place-items:center;font-size:12px;font-weight:700;transition:background .3s,color .3s}
+.xcad span:hover{background:var(--deep);color:#fff}
+.xrep{overflow:hidden;padding:0}
+.xrep .rh{display:flex;justify-content:space-between;align-items:center;background:var(--deeper);color:#fff;padding:14px 20px;font-size:14px}
+.xrep .rh span{font-size:11.5px;background:rgba(255,255,255,.16);padding:3px 10px;border-radius:99px}
+.xrep .rb{padding:20px}
+.xkpi{display:grid;grid-template-columns:80px 1fr;gap:10px;align-items:center;font-size:13px;color:var(--mid);margin-bottom:10px}
+.xkpi i{display:block;height:14px;border-radius:7px;width:0;transition:width 1.3s cubic-bezier(.2,.8,.2,1) .2s}
+.in .xkpi.r i{width:100%;background:var(--deep)} .in .xkpi.e i{width:55%;background:var(--rose)} .in .xkpi.p i{width:45%;background:var(--gold)}
+.xplan{margin-top:14px;background:var(--pale);border-radius:14px;padding:14px 16px}
+.xplan b{font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-d)}
+.xplan li{list-style:none;font-size:14.5px;margin-top:6px}
+.xplan li::before{content:'✓';color:var(--deep);font-weight:700;margin-right:8px}
+.xrep .rf{font-size:12.5px;color:var(--mid);padding:0 20px 16px}
+.xquote{margin:44px auto 0;max-width:860px;text-align:center;font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(22px,2.8vw,32px);color:var(--deeper);line-height:1.3}
+.xquote em{color:var(--sky)}
+.xproc{display:grid;gap:12px;margin-top:34px}
+@media(min-width:620px){.xproc{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.xproc{grid-template-columns:repeat(4,1fr)}}
+.xproc .card{padding:20px}
+.xproc .card:hover{transform:translateY(-5px);box-shadow:var(--shadow-up)}
+.xproc .e{font-size:26px}
+.xproc b{display:block;color:var(--deeper);margin:6px 0 4px;font-size:16px}
+.xproc span{font-size:14px;color:var(--mid)}
+.xpills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px}
+.xpills span{background:var(--deeper);color:#fff;font-size:13.5px;font-weight:600;padding:7px 16px;border-radius:99px}
+.xsteps{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0 4px}
+@media(min-width:760px){.xsteps{grid-template-columns:repeat(4,1fr)}}
+.xstep{background:var(--white);border:1px solid var(--light);border-radius:16px;padding:14px;text-align:center}
+.xstep b{display:block;font-family:'Playfair Display',serif;font-size:30px;color:var(--deeper);line-height:1.1}
+.xstep span{font-size:13px;color:var(--mid)}
+.xstep.bug{background:var(--rose-pale);border-color:var(--rose)} .xstep.bug b{color:var(--rose);text-decoration:line-through;text-decoration-thickness:2px}
+.xstep.win{background:var(--deeper);border-color:var(--deeper)} .xstep.win b,.xstep.win span{color:#fff}
+.xnote{font-size:14px;color:var(--mid);margin-top:8px}
+.xweb{display:flex;gap:14px;align-items:center;margin-top:16px;background:var(--pale);border-radius:16px;padding:12px;text-decoration:none;color:var(--dark);transition:transform .3s}
+.xweb:hover{transform:translateY(-3px)}
+.xweb img{width:130px;border-radius:10px;flex:none}
+.xweb b{display:block;color:var(--deeper)}
+.xweb span{font-size:13.5px;color:var(--mid)}
+.xcre{display:grid;gap:24px;margin-top:22px;background:var(--rose-pale);border-radius:18px;padding:22px}
+@media(min-width:820px){.xcre{grid-template-columns:1fr 1fr}}
+.xcre h4{font-size:17px;color:var(--deeper);margin-bottom:10px}
+.xcre h4 em{font-family:'Playfair Display',serif;color:var(--rose)}
+.xw{display:flex;height:30px;border-radius:8px;overflow:hidden;font-size:12px;font-weight:700}
+.xw div{display:grid;place-items:center;color:var(--deeper)}
+.xwl{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;font-size:13px;color:var(--mid)}
+.xflow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13px;font-weight:600}
+.xflow span{background:#fff;color:var(--deeper);padding:6px 12px;border-radius:99px}
+.xflow span.y{background:var(--deep);color:#fff}
+.xflow i{font-style:normal;color:var(--deep)}
+.xcre p{font-size:13.5px;color:var(--mid);margin-top:10px}
+.xwall{overflow:hidden;padding-bottom:60px}
+.xmarq{display:flex;gap:14px;width:max-content;margin-top:16px;animation:xscroll 60s linear infinite}
+.xmarq.rev{animation-direction:reverse;animation-duration:46s}
+.xmarq img{height:250px;width:auto;border-radius:12px;box-shadow:var(--shadow)}
+.xwall:hover .xmarq{animation-play-state:paused}
+@keyframes xscroll{to{transform:translateX(-50%)}}
+@media(max-width:600px){.xmarq img{height:180px}}
+@media(prefers-reduced-motion:reduce){.xmarq{animation:none}}
+.xfb{display:grid;gap:22px;margin-top:22px;align-items:center}
+@media(min-width:860px){.xfb{grid-template-columns:.8fr 1.2fr}}
+.xfb h4{font-family:'Playfair Display',serif;font-size:24px;color:var(--deeper)}
+.xfb h4 em{color:var(--sky)}
+.xfb p{font-size:14.5px;color:var(--mid);margin-top:6px}
+.xnotes{display:grid;gap:8px}
+.xn{display:grid;grid-template-columns:58px 1fr;gap:10px;background:var(--pale);border-radius:12px;padding:10px 12px;font-size:14px;transition:transform .3s}
+.xn:hover{transform:translateX(6px)}
+.xn code{font-family:inherit;font-weight:700;font-size:12px;color:#fff;background:var(--deep);border-radius:6px;padding:2px 6px;text-align:center;align-self:start}
+.xn b{color:var(--deeper)}
 </style>
 </head>
 <body>
@@ -344,6 +421,7 @@ footer{background:#1d3f5a;color:rgba(255,255,255,.7);text-align:center;padding:2
     <li><a href="#content">Content</a></li>
     <li><a href="#ugc">Videos</a></li>
     <li><a href="#ads">Ads</a></li>
+    <li><a href="#clients">Clients</a></li>
     <li><a href="#work">Case studies</a></li>
     <li><a href="#about">About</a></li>
   </ul>
@@ -682,6 +760,18 @@ footer{background:#1d3f5a;color:rgba(255,255,255,.7);text-align:center;padding:2
 </div></section>
 
 <!-- ============ ADS & HOOKS ============ -->
+<!-- ============ CAROUSELS ============ -->
+<section id="design" class="xwall"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="eyebrow">Social &amp; design</div>
+    <h2>20 carousels. <em>One launch.</em></h2>
+    <p>Designed from an audience poll, on a brand system with rules: blue for free content, gold for the paid offer. In Spanish, for my LatAm audience.</p>
+  </div>
+</div>
+  <div class="xmarq" aria-hidden="true"><img src="../assets/dingus-and-zazzy/mc-01-zona-perfecta.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-02-negociar-dueno.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-03-no-necesitas-comprar.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-04-cuanto-se-gana.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-05-errores-caros.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-06-mi-historia.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-07-valida-tu-zona.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-08-cohost-vs-arbitraje.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-09-es-legal.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-10-invitacion.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-01-zona-perfecta.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-02-negociar-dueno.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-03-no-necesitas-comprar.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-04-cuanto-se-gana.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-05-errores-caros.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-06-mi-historia.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-07-valida-tu-zona.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-08-cohost-vs-arbitraje.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-09-es-legal.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-10-invitacion.jpg" alt="" loading="lazy"></div>
+  <div class="xmarq rev" aria-hidden="true"><img src="../assets/dingus-and-zazzy/bc-01-apertura.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-11-depa-sirve.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/bc-02-objeciones.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-12-cuanto-necesitas.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/bc-03-resultados.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-13-errores-mios.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/bc-04-vip.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-14-mitos.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/bc-05-cierre.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-15-mes-real.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/bc-01-apertura.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-11-depa-sirve.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/bc-02-objeciones.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-12-cuanto-necesitas.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/bc-03-resultados.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-13-errores-mios.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/bc-04-vip.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-14-mitos.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/bc-05-cierre.jpg" alt="" loading="lazy"><img src="../assets/dingus-and-zazzy/mc-15-mes-real.jpg" alt="" loading="lazy"></div>
+</section>
+
 <section id="ads" class="bg-pale"><div class="wrap">
   <div class="sec-head reveal">
     <div class="eyebrow">Ads &amp; hooks that converted</div>
@@ -731,6 +821,42 @@ footer{background:#1d3f5a;color:rgba(255,255,255,.7);text-align:center;padding:2
   </div>
 </div></section>
 
+<!-- ============ CLIENTS ============ -->
+<section id="clients"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="eyebrow">Client &amp; project management</div>
+    <h2>Clients should know what happens next <em>before they ask</em></h2>
+  </div>
+  <div class="xc-grid">
+    <div class="reveal from-left">
+      <div class="x30" data-to="30" data-suffix="+">30+</div>
+      <p class="x30cap">properties. <span>One meeting a month with each owner.</span></p>
+      <p style="color:var(--mid)">I ran 30+ short-term rentals, mostly owned by other people. Every month I sat down with each owner, walked them through <b>revenue, expenses and profit</b>, and we agreed on an action plan for the next month.</p>
+      <div class="xcad" aria-label="Twelve monthly meetings a year"><span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span><span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span></div>
+    </div>
+    <div class="card xrep reveal from-right" aria-label="Monthly owner report layout">
+      <div class="rh"><b>Monthly owner report</b><span>Owner 1 of 30+</span></div>
+      <div class="rb">
+        <div class="xkpi r"><span>Revenue</span><i></i></div>
+        <div class="xkpi e"><span>Expenses</span><i></i></div>
+        <div class="xkpi p"><span>Profit</span><i></i></div>
+        <div class="xplan"><b>Action plan · next month</b>
+          <ul><li>What we change, and why</li><li>Who does it, and by when</li><li>What the owner can expect</li></ul>
+        </div>
+      </div>
+      <p class="rf">Same structure for every owner, every month.</p>
+    </div>
+  </div>
+  <p class="xquote reveal">“Clients don't leave because of one bad month. They leave when they <em>don't understand what's going on.</em>”</p>
+  <div class="xproc">
+    <div class="card reveal" style="--d:0s"><div class="e">🤝</div><b>1. Onboarding</b><span>Access, goals and baseline numbers.</span></div>
+    <div class="card reveal" style="--d:.08s"><div class="e">📞</div><b>2. Weekly calls</b><span>What we spent, what we got, what we change.</span></div>
+    <div class="card reveal" style="--d:.16s"><div class="e">🔍</div><b>3. Funnel diagnosis</b><span>Is the problem the ad, the landing page or the follow-up?</span></div>
+    <div class="card reveal" style="--d:.24s"><div class="e">🚀</div><b>4. Retention</b><span>Bring the next step before the client asks.</span></div>
+  </div>
+  <div class="xpills reveal"><span>Up to 5 client accounts at once</span></div>
+</div></section>
+
 <!-- ============ CASE STUDIES ============ -->
 <section id="work"><div class="wrap">
   <div class="sec-head reveal">
@@ -775,6 +901,19 @@ footer{background:#1d3f5a;color:rgba(255,255,255,.7);text-align:center;padding:2
         </div>
       </div>
     </div>
+    <div class="xcre reveal">
+      <div>
+        <h4>50+ creators, <em>one system.</em></h4>
+        <p style="margin:0 0 10px">A scorecard instead of "I think she's good":</p>
+        <div class="xw"><div style="width:35%;background:var(--sky)">35%</div><div style="width:25%;background:var(--light)">25%</div><div style="width:25%;background:#fff">25%</div><div style="width:15%;background:var(--beige-d)">15%</div></div>
+        <div class="xwl"><span>Performance</span><span>Quality</span><span>Reliability</span><span>Brief fit</span></div>
+      </div>
+      <div>
+        <h4>Contracts &amp; <em>usage rights.</em></h4>
+        <div class="xflow"><span>Negotiate</span><i>→</i><span>Bundle</span><i>→</i><span class="y">Sign</span><i>→</i><span>Film</span><i>→</i><span>Pay on time</span><i>→</i><span>Renew or expire</span></div>
+        <p>Signed before anyone films. Expiry and payment dates tracked.</p>
+      </div>
+    </div>
     <div class="why"><svg class="i"><use href="#i-sparkles"/></svg><div><b>What it shows:</b> I know how to grow a DTC brand through creators and social commerce, and how to run it day to day.</div></div>
   </article>
 
@@ -811,6 +950,14 @@ footer{background:#1d3f5a;color:rgba(255,255,255,.7);text-align:center;padding:2
         </div>
       </div>
     </div>
+    <div class="xsteps reveal">
+      <div class="xstep bug"><b>478</b><span>"leads" in Meta (a pixel bug)</span></div>
+      <div class="xstep"><b>300+</b><span>joined the WhatsApp community</span></div>
+      <div class="xstep"><b>225</b><span>came to the live class</span></div>
+      <div class="xstep win"><b>$20K</b><span>USD from this one launch</span></div>
+    </div>
+    <p class="xnote">Same funnel, different steps. Meta's 478 came from the pixel firing on a button click, not a sign-up, so I fixed the event before spending more. In total, my courses have made $25K+ USD.</p>
+    <a class="xweb reveal" href="https://www.youtube.com/watch?v=xJtwhfGJWx4" target="_blank" rel="noopener"><img src="../assets/scrolling/webinar.jpg" alt="Webinar cover: Tu primer Airbnb" loading="lazy"><div><b>▶ Watch the live class</b><span>"Tu primer Airbnb", the full recording on YouTube (in Spanish).</span></div></a>
     <div class="why"><svg class="i"><use href="#i-sparkles"/></svg><div><b>What it shows:</b> I can plan and execute a full launch end to end and connect every step to revenue.</div></div>
   </article>
 
@@ -839,7 +986,7 @@ footer{background:#1d3f5a;color:rgba(255,255,255,.7);text-align:center;padding:2
         <div class="res">
           <div class="s"><svg class="i"><use href="#i-calendar-check"/></svg><b>0 → full</b><span>from no leads to a fully booked calendar</span></div>
           <div class="s"><svg class="i"><use href="#i-target"/></svg><b>1,000+</b><span>leads in 2026</span></div>
-          <div class="s"><svg class="i"><use href="#i-dollar-sign"/></svg><b>&lt;$1</b><span>USD cost per lead</span></div>
+          <div class="s"><svg class="i"><use href="#i-dollar-sign"/></svg><b>~$0.80</b><span>USD per conversation on the best ad</span></div>
           <div class="s"><svg class="i"><use href="#i-wallet"/></svg><b>$2K</b><span>USD/month max budget</span></div>
         </div>
       </div>
@@ -896,6 +1043,17 @@ footer{background:#1d3f5a;color:rgba(255,255,255,.7);text-align:center;padding:2
     <div class="card step reveal" style="--d:0s"><span class="ic"><svg class="i"><use href="#i-compass"/></svg></span><b>1. Scope &amp; plan</b><span>Turn a messy goal into a clear plan with owners, timelines and briefs.</span></div>
     <div class="card step reveal" style="--d:.1s"><span class="ic"><svg class="i"><use href="#i-rocket"/></svg></span><b>2. Build &amp; launch</b><span>Create the campaigns, funnels and content myself, with QA before anything ships.</span></div>
     <div class="card step reveal" style="--d:.2s"><span class="ic"><svg class="i"><use href="#i-bar-chart-3"/></svg></span><b>3. Measure &amp; document</b><span>Report results with a clear point of view and turn what works into repeatable processes.</span></div>
+  </div>
+  <div class="xfb reveal">
+    <div>
+      <h4>Feedback, <em>no sandwich.</em></h4>
+      <p>When I work with designers, editors and media buyers, my notes say where, what's wrong and how to fix it. Not "make it pop more."</p>
+    </div>
+    <div class="xnotes">
+      <div class="xn"><code>00:03</code><div><b>Hook is too slow.</b> Open on the question. Cut the 2-second logo intro.</div></div>
+      <div class="xn"><code>00:23</code><div><b>Music is too loud.</b> It fights the voiceover. Duck it under the voice.</div></div>
+      <div class="xn"><code>00:43</code><div><b>Missing a CTA.</b> Add one clear next step, on screen and in the voiceover.</div></div>
+    </div>
   </div>
   <div class="ai reveal">
     <h4><svg class="i"><use href="#i-sparkles"/></svg>AI in my daily workflow</h4>

@@ -139,7 +139,7 @@
   .bar-row .lbl b { color: var(--sky-deeper); font-size: 16px; }
   .bar { height: 38px; border-radius: 10px; background: var(--sky-light); width: 0; transition: width 1.4s cubic-bezier(.2,.8,.2,1); }
   .bar.big { background: linear-gradient(90deg, var(--sky-deep), var(--sky)); }
-  .show .bar { width: var(--w); }
+  .show .bar, .show .kpi .bar { width: var(--w); }
   .bars .note { font-size: 13.5px; color: var(--mid); margin-top: 6px; }
   .moves { list-style: none; }
   .moves li { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 16px; font-size: 16px; }
@@ -217,11 +217,104 @@
   .contact .ghost { color: var(--sky-deep); border-color: var(--sky-light); }
   footer { text-align: center; font-size: 13px; color: var(--mid); padding: 24px 24px 40px; background: var(--beige); }
 
+
+  /* CLIENTS */
+  .clients-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-top: 30px; }
+  .big30 { font-family: 'Playfair Display', serif; font-weight: 800; font-size: clamp(80px, 11vw, 140px); line-height: .9; color: var(--sky-deep); }
+  .big30-cap { font-size: 20px; font-weight: 700; color: var(--sky-deeper); margin: 6px 0 12px; }
+  .big30-cap span { display: block; font-weight: 400; color: var(--mid); font-size: 16px; }
+  .cadence { display: flex; gap: 5px; margin-top: 16px; flex-wrap: wrap; }
+  .cadence span { width: 30px; height: 30px; border-radius: 8px; background: var(--sky-pale); color: var(--sky-deep); display: grid; place-items: center; font-size: 12px; font-weight: 700; }
+  .report { background: #fff; border-radius: 22px; box-shadow: 0 18px 44px rgba(35,75,107,.14); overflow: hidden; border: 1px solid var(--sky-light); }
+  .report .rh { display: flex; justify-content: space-between; align-items: center; background: var(--sky-deeper); color: #fff; padding: 14px 20px; font-size: 14px; }
+  .report .rh span { font-size: 11.5px; background: rgba(255,255,255,.15); padding: 3px 10px; border-radius: 99px; }
+  .report .rb { padding: 20px; }
+  .kpi { display: grid; grid-template-columns: 80px 1fr; align-items: center; gap: 10px; font-size: 13px; color: var(--mid); margin-bottom: 10px; }
+  .kpi .bar { height: 14px; border-radius: 7px; width: 0; transition: width 1.2s cubic-bezier(.2,.8,.2,1); }
+  .kpi.r .bar { --w: 100%; background: var(--sky-deep); }
+  .kpi.e .bar { --w: 55%; background: var(--rose); }
+  .kpi.p .bar { --w: 45%; background: var(--gold); }
+  .plan { margin-top: 16px; background: var(--sky-pale); border-radius: 14px; padding: 14px 16px; }
+  .plan b { font-size: 11.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-dark); }
+  .plan li { list-style: none; font-size: 14.5px; margin-top: 6px; }
+  .plan li::before { content: '✓'; color: var(--sky-deep); font-weight: 700; margin-right: 8px; }
+  .report .rf { font-size: 12.5px; color: var(--mid); padding: 0 20px 16px; }
+  .cq { margin: 40px 0 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(22px, 2.8vw, 32px); color: var(--sky-deeper); text-align: center; }
+  .cq em { color: var(--sky); }
+  .proc { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 36px; }
+  .proc > div { background: var(--white); border: 1px solid var(--beige-dark); border-radius: 18px; padding: 18px; position: relative; }
+  .proc > div:not(:last-child)::after { content: '→'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); color: var(--sky-deep); font-weight: 700; z-index: 2; }
+  .proc .ic { font-size: 24px; }
+  .proc h3 { font-size: 16px; color: var(--sky-deeper); margin: 6px 0 4px; }
+  .proc p { font-size: 13.5px; color: var(--mid); }
+  .tag5 { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 18px; }
+  .tag5 span { background: var(--sky-deeper); color: #fff; font-size: 13.5px; font-weight: 600; padding: 7px 16px; border-radius: 99px; }
+
+  /* FUNNEL STEPS (launch) */
+  .fsteps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 26px; }
+  .fstep { background: #fff; border-radius: 16px; padding: 16px; text-align: center; border: 1px solid var(--sky-light); }
+  .fstep b { display: block; font-family: 'Playfair Display', serif; font-size: 30px; color: var(--sky-deeper); line-height: 1.1; }
+  .fstep span { font-size: 13px; color: var(--mid); }
+  .fstep.bug { background: #F7EDEF; border-color: var(--rose); }
+  .fstep.bug b { color: var(--rose); text-decoration: line-through; text-decoration-thickness: 2px; }
+  .fstep.win { background: var(--sky-deeper); border-color: var(--sky-deeper); }
+  .fstep.win b, .fstep.win span { color: #fff; }
+  .webi { display: flex; gap: 16px; align-items: center; margin-top: 18px; background: #fff; border-radius: 16px; padding: 12px; text-decoration: none; color: var(--dark); border: 1px solid var(--sky-light); }
+  .webi img { width: 150px; border-radius: 10px; flex: none; }
+  .webi b { color: var(--sky-deeper); display: block; }
+  .webi span { font-size: 13.5px; color: var(--mid); }
+
+  /* HOOKS */
+  .hooks { display: grid; grid-template-columns: 260px 1fr; gap: 28px; align-items: center; margin-top: 30px; }
+  .phone { background: #111; border-radius: 30px; padding: 10px; box-shadow: 0 20px 44px rgba(0,0,0,.25); }
+  .phone video { width: 100%; aspect-ratio: 9/16; object-fit: cover; border-radius: 22px; cursor: pointer; }
+  .phone p { color: #fff; font-size: 12.5px; padding: 8px 6px 2px; }
+  .am { background: #fff; border-radius: 18px; border: 1px solid var(--sky-light); overflow: hidden; box-shadow: 0 14px 34px rgba(35,75,107,.1); }
+  .am-top { background: #f0f2f5; padding: 12px 18px; font-size: 13px; color: var(--mid); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; }
+  .am-top b { color: #1c2b33; }
+  .am-sum { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid #e4e6eb; }
+  .am-sum div { padding: 14px 18px; }
+  .am-sum b { display: block; font-size: 24px; color: var(--sky-deeper); }
+  .am-sum small { font-size: 12px; color: var(--mid); }
+  .am-tbl { overflow-x: auto; }
+  .am table { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 460px; }
+  .am th { text-align: left; font-weight: 600; color: var(--mid); padding: 10px 18px; border-bottom: 1px solid #e4e6eb; font-size: 12px; }
+  .am td { padding: 12px 18px; border-bottom: 1px solid #f0f2f5; }
+  .am td small { display: block; color: var(--mid); font-size: 12px; }
+  .am .best { color: #0a8a4a; font-weight: 700; }
+  .am .muted { color: #b0b3b8; }
+
+  /* DAILY ME */
+  .dm { background: #F7EDEF; }
+  .dm h2 em { color: var(--rose); }
+  .dm-photos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 30px; }
+  .dm-photos img { border-radius: 16px; aspect-ratio: 4/5; object-fit: cover; width: 100%; }
+  .dm-nums { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 14px; }
+  .dm-nums div { background: #fff; border-radius: 16px; padding: 18px; text-align: center; }
+  .dm-nums b { display: block; font-family: 'Playfair Display', serif; font-size: clamp(26px, 3vw, 36px); color: var(--sky-deeper); line-height: 1.1; }
+  .dm-nums span { font-size: 13px; color: var(--mid); }
+  .dm-does { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .dm-does span { background: #fff; border: 1px solid #ecd3d7; border-radius: 99px; padding: 6px 14px; font-size: 13.5px; }
+  .creators { margin-top: 26px; background: #fff; border-radius: 22px; padding: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .creators h3 { font-size: 18px; color: var(--sky-deeper); margin-bottom: 10px; }
+  .creators h3 em { font-family: 'Playfair Display', serif; color: var(--rose); }
+  .wbar { display: flex; height: 30px; border-radius: 8px; overflow: hidden; font-size: 12px; font-weight: 700; }
+  .wbar div { display: grid; place-items: center; color: var(--sky-deeper); }
+  .wl { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; font-size: 13px; color: var(--mid); }
+  .rflow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 13px; font-weight: 600; }
+  .rflow span { background: var(--sky-pale); color: var(--sky-deeper); padding: 6px 12px; border-radius: 99px; }
+  .rflow span.y { background: var(--sky-deep); color: #fff; }
+  .rflow i { font-style: normal; color: var(--sky-deep); }
+  .creators p { font-size: 13.5px; color: var(--mid); margin-top: 10px; }
+
   @media (max-width: 960px) {
     .num-grid { grid-template-columns: repeat(3, 1fr); }
     .chain { grid-template-columns: 1fr 1fr; }
     .link::after { display: none; }
-    .launch-grid, .launch-media, .minis { grid-template-columns: 1fr; gap: 24px; }
+    .launch-grid, .launch-media, .minis, .clients-grid, .hooks, .creators { grid-template-columns: 1fr; gap: 24px; }
+    .proc, .fsteps, .dm-nums { grid-template-columns: 1fr 1fr; }
+    .proc > div::after { display: none; }
+    .hooks .phone { max-width: 260px; margin: 0 auto; }
     .skill-grid, .exp { grid-template-columns: 1fr 1fr; }
     .flows { grid-template-columns: 1fr 1fr; }
     .plays { grid-template-columns: 1fr 1fr; gap: 26px; }
@@ -240,6 +333,9 @@
     .marquee img { height: 190px; }
     .chain, .skill-grid, .exp, .flows, .plays { grid-template-columns: 1fr; }
     .catch { flex-direction: column; align-items: flex-start; gap: 6px; }
+    .dm-photos { grid-template-columns: 1fr 1fr; }
+    .am-sum b { font-size: 19px; }
+    .webi img { width: 110px; }
   }
   @media (prefers-reduced-motion: reduce) {
     .marquee, .float { animation: none; }
@@ -251,6 +347,7 @@
 <nav id="nav">
   <a class="logo" href="#top">Sofía <span>× Dingus &amp; Zazzy</span></a>
   <div class="nav-links">
+    <a class="t" href="#clients">Clients</a>
     <a class="t" href="#videos">Video</a>
     <a class="t" href="#launch">Work</a>
     <a class="t" href="#claude">Claude</a>
@@ -278,6 +375,43 @@
       <div class="float f2"><b>$25K+</b>course revenue</div>
       <div class="float f3"><b>150+</b>students</div>
     </div>
+  </div>
+</section>
+
+<!-- CLIENTS & PROJECTS -->
+<section id="clients">
+  <div class="wrap">
+    <span class="eyebrow">Client &amp; project management</span>
+    <h2>I own the account. <em>And I do the work.</em></h2>
+    <p class="sub">Clients should know what happens next before they have to ask.</p>
+    <div class="clients-grid">
+      <div class="reveal">
+        <div class="big30">30+</div>
+        <p class="big30-cap">properties. <span>One meeting a month with each owner.</span></p>
+        <p class="sub" style="font-size:16px">I ran 30+ short-term rentals, mostly owned by other people. Every month I sat down with each owner, walked them through <b>revenue, expenses and profit</b>, and we agreed on an action plan for the next month.</p>
+        <div class="cadence" aria-label="Twelve monthly meetings a year"><span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span><span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span></div>
+      </div>
+      <div class="report reveal" aria-label="Monthly owner report layout">
+        <div class="rh"><b>Monthly owner report</b><span>Owner 1 of 30+</span></div>
+        <div class="rb">
+          <div class="kpi r"><span>Revenue</span><div class="bar"></div></div>
+          <div class="kpi e"><span>Expenses</span><div class="bar"></div></div>
+          <div class="kpi p"><span>Profit</span><div class="bar"></div></div>
+          <div class="plan"><b>Action plan · next month</b>
+            <ul><li>What we change, and why</li><li>Who does it, and by when</li><li>What the owner can expect</li></ul>
+          </div>
+        </div>
+        <p class="rf">Same structure for every owner, every month.</p>
+      </div>
+    </div>
+    <p class="cq reveal">"Clients don't leave because of one bad month. They leave when they <em>don't understand what's going on.</em>"</p>
+    <div class="proc">
+      <div class="reveal"><div class="ic">🤝</div><h3>Onboarding</h3><p>Access, goals and baseline numbers.</p></div>
+      <div class="reveal"><div class="ic">📞</div><h3>Weekly calls</h3><p>What we spent, what we got, what we change.</p></div>
+      <div class="reveal"><div class="ic">🔍</div><h3>Funnel diagnosis</h3><p>Is the problem the ad, the landing page or the follow-up?</p></div>
+      <div class="reveal"><div class="ic">🚀</div><h3>Retention</h3><p>Bring the next step before the client asks.</p></div>
+    </div>
+    <div class="tag5 reveal"><span>Up to 5 client accounts at once</span><span>ClickUp updated the same day</span></div>
   </div>
 </section>
 
@@ -351,7 +485,7 @@
     <div class="chain">
       <div class="link reveal"><div class="ic">🔎</div><span class="k">Blog → SEO</span><b>78</b><p>programmatic pages</p></div>
       <div class="link reveal"><div class="ic">📱</div><span class="k">Social</span><b>500K+</b><p>views a month</p></div>
-      <div class="link reveal"><div class="ic">🎟️</div><span class="k">Lead</span><b>225</b><p>people in the live class</p></div>
+      <div class="link reveal"><div class="ic">🎟️</div><span class="k">Lead</span><b>300+</b><p>joined the community</p></div>
       <div class="link reveal"><div class="ic">✉️</div><span class="k">Nurture</span><b>8</b><p>emails, segmented</p></div>
       <div class="link reveal"><div class="ic">💰</div><span class="k">Revenue</span><b>$25K+</b><p>USD from courses</p></div>
     </div>
@@ -380,7 +514,77 @@
       <img class="reveal" src="/assets/dingus-and-zazzy/course-laptop.jpg" alt="Hosting Sin Propiedad course cover on a laptop" loading="lazy">
       <div class="email-frame reveal"><img src="/assets/dingus-and-zazzy/email-launch.jpg" alt="Launch email I wrote and designed" loading="lazy"></div>
     </div>
-    <div class="catch reveal"><b class="n">478 ≠ 225</b><p><b>The analytics catch:</b> Meta counted 478 "Leads"; only 225 people had actually joined. The pixel was firing on a click, not a sign-up — so I fixed the event before scaling spend.</p></div>
+    <div class="fsteps reveal">
+      <div class="fstep bug"><b>478</b><span>"leads" in Meta (the pixel bug)</span></div>
+      <div class="fstep"><b>300+</b><span>joined the WhatsApp community</span></div>
+      <div class="fstep"><b>225</b><span>came to the live class</span></div>
+      <div class="fstep win"><b>$20K</b><span>USD from this one launch</span></div>
+    </div>
+    <div class="catch reveal"><b class="n">478 ≠ 300+</b><p><b>The pixel bug:</b> Meta counted 478 "leads", but the pixel was firing on a button click, not a sign-up. The real numbers are the next steps: 300+ in the community, 225 live. I fixed the event before spending more. In total, my courses have made $25K+ USD.</p></div>
+    <a class="webi reveal" href="https://www.youtube.com/watch?v=xJtwhfGJWx4" target="_blank" rel="noopener"><img src="/assets/scrolling/webinar.jpg" alt="Webinar cover: Tu primer Airbnb" loading="lazy"><div><b>▶ Watch the live class</b><span>"Tu primer Airbnb", the full recording on YouTube (in Spanish). Proof I can teach and present on camera.</span></div></a>
+  </div>
+</section>
+
+<!-- AD HOOKS -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Paid social</span>
+    <h2>Hooks I scripted, <em>straight from Ads Manager.</em></h2>
+    <p class="sub">Meta ads for Bonzo, an accounting firm, 2026. Each hook is a different reason to send a message.</p>
+    <div class="hooks">
+      <div class="phone reveal"><video src="/assets/scrolling/bonzo-1.mp4" poster="/assets/scrolling/bonzo-1.jpg" muted loop playsinline preload="none"></video><p>Hook A · "Why does Airbnb charge you 3% and your neighbor 15.5%?"</p></div>
+      <div class="am reveal">
+        <div class="am-top"><b>Ads Manager</b><span>Messaging campaigns · 2026</span></div>
+        <div class="am-sum">
+          <div><b>1,000+</b><small>leads in 2026</small></div>
+          <div><b>6.0%</b><small>best CTR</small></div>
+          <div><b>~$0.80</b><small>best cost per conversation</small></div>
+        </div>
+        <div class="am-tbl"><table>
+          <thead><tr><th>Ad</th><th>Conversations</th><th>Cost each</th><th>CTR</th></tr></thead>
+          <tbody>
+            <tr><td><b>Hook A · 3% vs 15.5%</b><small>"Why does Airbnb charge you 3%…"</small></td><td>167</td><td class="best">~$0.80</td><td class="best">6.0%</td></tr>
+            <tr><td><b>Hook B · Tax ID</b><small>"Renting on Airbnb and haven't registered…"</small></td><td>40</td><td>~$1.05</td><td>3.8%</td></tr>
+            <tr><td><b>Hook C · Specialized accountant</b><small>"If you have an Airbnb and your accountant…"</small></td><td class="best">268</td><td>~$1.10</td><td class="muted">—</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAILY ME -->
+<section class="dm" id="dailyme">
+  <div class="wrap">
+    <span class="eyebrow">Case study · DTC e-commerce</span>
+    <h2>Daily Me: a brand <em>I run end to end.</em></h2>
+    <p class="sub">My own journaling brand. Founder and only marketing lead since 2023: product, e-commerce, creators, content and ads.</p>
+    <div class="dm-photos">
+      <img class="reveal" src="/assets/cvportfolio/dailyme-1.webp" alt="Daily Me journal on a rock at the beach" loading="lazy">
+      <img class="reveal" src="/assets/cvportfolio/dailyme-2.webp" alt="Daily Me journal open on a beach blanket" loading="lazy">
+      <img class="reveal" src="/assets/cvportfolio/dailyme-3.webp" alt="Hands holding the Daily Me journal" loading="lazy">
+      <img class="reveal" src="/assets/cvportfolio/dailyme-4.webp" alt="Inside pages of the Daily Me journal" loading="lazy">
+    </div>
+    <div class="dm-nums">
+      <div class="reveal"><b>MXN 1M+</b><span>a year (~$55K USD)</span></div>
+      <div class="reveal"><b>~100</b><span>orders a month</span></div>
+      <div class="reveal"><b>~$10K</b><span>USD a year, TikTok Shop GMV</span></div>
+      <div class="reveal"><b>50+</b><span>creators &amp; affiliates</span></div>
+    </div>
+    <div class="dm-does reveal"><span>📦 Product</span><span>🛒 E-commerce + TikTok Shop</span><span>🤳 Creators &amp; affiliates</span><span>🎬 Content</span><span>📣 Paid social</span><span>✉️ Email</span><span>🔎 SEO blog</span></div>
+    <div class="creators reveal">
+      <div>
+        <h3>50+ creators, <em>one system.</em></h3>
+        <p style="margin:0 0 10px">A scorecard instead of "I think she's good":</p>
+        <div class="wbar"><div style="width:35%;background:var(--sky)">35%</div><div style="width:25%;background:var(--sky-light)">25%</div><div style="width:25%;background:#F2DDE0">25%</div><div style="width:15%;background:var(--beige-dark)">15%</div></div>
+        <div class="wl"><span>Performance</span><span>Quality</span><span>Reliability</span><span>Brief fit</span></div>
+      </div>
+      <div>
+        <h3>Contracts &amp; <em>usage rights.</em></h3>
+        <div class="rflow"><span>Negotiate</span><i>→</i><span>Bundle</span><i>→</i><span class="y">Sign</span><i>→</i><span>Film</span><i>→</i><span>Pay on time</span><i>→</i><span>Renew or expire</span></div>
+        <p>Signed before anyone films. Expiry and payment dates tracked.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -447,10 +651,10 @@
     <div class="exp">
       <div class="job reveal"><div class="when">2025</div><h3>Founder &amp; Marketing Lead</h3><div class="org">Sofía Hosting</div><p>$25K+ USD in course revenue, 150+ students. I run all of it.</p></div>
       <div class="job reveal"><div class="when">2026</div><h3>Marketing &amp; Sales Lead</h3><div class="org">AuditBnB (SaaS)</div><p>Go-to-market, funnel, ad copy and email nurture.</p></div>
-      <div class="job reveal"><div class="when">2024</div><h3>Freelance Paid Media &amp; UGC</h3><div class="org">Canva, Bonzo and others</div><p>Bonzo's first Meta Ads + 2 bilingual landing pages for their US launch.</p></div>
-      <div class="job gold reveal"><div class="when">Jun 2021 – May 2023</div><h3>Marketing Director</h3><div class="org">Gersten Financial Planning · San Diego</div><p>The whole marketing department: brand, content, paid, web, email, reporting to leadership.</p></div>
+      <div class="job reveal"><div class="when">2025</div><h3>Freelance Paid Media &amp; UGC</h3><div class="org">Canva, Bonzo and others</div><p>Bonzo's first Meta Ads (1,000+ leads in 2026) + 2 bilingual landing pages for their US launch.</p></div>
+      <div class="job gold reveal"><div class="when">Jun 2021 – May 2023</div><h3>Marketing Director</h3><div class="org">Gersten Financial Planning · San Diego</div><p>The whole marketing department, up to 5 client accounts at once: briefs, timelines, QA, reports and client meetings.</p></div>
       <div class="job gold reveal"><div class="when">Feb 2021 – Sep 2021</div><h3>Marketing Director</h3><div class="org">Looma Ideas (creative agency) · Mexico</div><p>Positioning, content and social for the agency and its client accounts.</p></div>
-      <div class="job reveal"><div class="when">2023</div><h3>Founder</h3><div class="org">Daily Me</div><p>My own journaling brand: e-commerce, lead capture, SEO blog.</p></div>
+      <div class="job reveal"><div class="when">2023</div><h3>Founder</h3><div class="org">Daily Me</div><p>My own journaling brand: MXN 1M+ a year, ~100 orders a month, 50+ creators.</p></div>
     </div>
     <div class="edu">
       <div class="reveal"><b>MSc in Digital Business</b><span>EMLV · École de Management Léonard de Vinci, Paris</span></div>
@@ -514,7 +718,8 @@
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
   // Videos: autoplay muted while visible, tap for sound
-  const vids = [...document.querySelectorAll('.reel video')];
+  const vids = [...document.querySelectorAll('.reel video, .phone video')];
+  const icon = (v, t) => { const n = v.nextElementSibling; if (n && n.classList.contains('snd')) n.textContent = t; };
   const vio = new IntersectionObserver(es => es.forEach(e => {
     const v = e.target;
     if (e.isIntersecting) { v.play().catch(() => {}); } else { v.pause(); }
@@ -523,8 +728,8 @@
     vio.observe(v);
     v.addEventListener('click', () => {
       const on = v.muted;
-      vids.forEach(o => { o.muted = true; o.nextElementSibling.textContent = '🔇'; });
-      v.muted = !on; v.nextElementSibling.textContent = v.muted ? '🔇' : '🔊';
+      vids.forEach(o => { o.muted = true; icon(o, '🔇'); });
+      v.muted = !on; icon(v, v.muted ? '🔇' : '🔊');
       v.play().catch(() => {});
     });
   });

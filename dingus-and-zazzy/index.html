@@ -307,11 +307,20 @@
   .rflow i { font-style: normal; color: var(--sky-deep); }
   .creators p { font-size: 13.5px; color: var(--mid); margin-top: 10px; }
 
+  .fb { margin-top: 34px; background: #fff; border-radius: 22px; padding: 24px; display: grid; grid-template-columns: .8fr 1.2fr; gap: 24px; align-items: center; }
+  .fb h3 { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--sky-deeper); }
+  .fb h3 em { color: var(--sky); }
+  .fb > div > p { font-size: 14.5px; color: var(--mid); margin-top: 6px; }
+  .notes { display: grid; gap: 8px; }
+  .note { display: grid; grid-template-columns: 56px 1fr; gap: 10px; align-items: start; background: var(--sky-pale); border-radius: 12px; padding: 10px 12px; font-size: 14px; }
+  .note code { font-family: 'DM Sans', sans-serif; font-weight: 700; color: #fff; background: var(--sky-deep); border-radius: 6px; padding: 2px 6px; text-align: center; font-size: 12px; }
+  .note b { color: var(--sky-deeper); }
+
   @media (max-width: 960px) {
     .num-grid { grid-template-columns: repeat(3, 1fr); }
     .chain { grid-template-columns: 1fr 1fr; }
     .link::after { display: none; }
-    .launch-grid, .launch-media, .minis, .clients-grid, .hooks, .creators { grid-template-columns: 1fr; gap: 24px; }
+    .launch-grid, .launch-media, .minis, .clients-grid, .hooks, .creators, .fb { grid-template-columns: 1fr; gap: 24px; }
     .proc, .fsteps, .dm-nums { grid-template-columns: 1fr 1fr; }
     .proc > div::after { display: none; }
     .hooks .phone { max-width: 260px; margin: 0 auto; }
@@ -673,6 +682,17 @@
       <div class="play reveal"><div class="dot">2</div><div class="when">Week 2</div><h3>Write the POV</h3><p>One page: what we do, what we don't, which number moves.</p></div>
       <div class="play reveal"><div class="dot">3</div><div class="when">Weekly</div><h3>Decisions, not status</h3><p>ClickUp current the same day. No chasing.</p></div>
       <div class="play reveal"><div class="dot">4</div><div class="when">Monthly</div><h3>What moved revenue</h3><p>Keep, kill, test next — in plain English.</p></div>
+    </div>
+    <div class="fb reveal">
+      <div>
+        <h3>Feedback, <em>no sandwich.</em></h3>
+        <p>When I work with designers, editors and media buyers, my notes say where, what's wrong and how to fix it. Not "make it pop more."</p>
+      </div>
+      <div class="notes">
+        <div class="note"><code>00:03</code><div><b>Hook is too slow.</b> Open on the question. Cut the 2-second logo intro.</div></div>
+        <div class="note"><code>00:23</code><div><b>Music is too loud.</b> It fights the voiceover. Duck it under the voice.</div></div>
+        <div class="note"><code>00:43</code><div><b>Missing a CTA.</b> Add one clear next step, on screen and in the voiceover.</div></div>
+      </div>
     </div>
   </div>
 </section>

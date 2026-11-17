@@ -58,7 +58,7 @@ CTA = {
         "h":   "Da el primer paso con mi curso",
         "p":   "El sistema completo, del inmueble vacío al anuncio publicado, para montar tu primer Airbnb sin propiedad.",
         "btn": "Ver el curso",
-        "href": LINKS["curso"],
+        "href": "/",   # 17-nov-2026: a la página de venta (video, testimonios, precio), no directo al checkout
         "small": "Acceso inmediato · aprende a tu ritmo",
     },
     "bootcamp": {
@@ -82,6 +82,10 @@ CAT = {
     "guias":    {"nombre": "Guías",    "desc": "El paso a paso para montar y operar tu Airbnb sin propiedad."},
     "glosario": {"nombre": "Glosario", "desc": "Los términos del negocio de rentas cortas, explicados fácil."},
 }
+
+# 17-nov-2026: ya no hay Bootcamp en vivo abierto (/curso-en-vivo.html redirige al catálogo).
+# Todo lo que pedía el CTA "bootcamp" ahora vende el curso grabado.
+CTA["bootcamp"] = CTA["curso"]
 
 # ------------------------------------------------------------------ rutas
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -482,9 +486,8 @@ def render_hub(rel_path, canonical_path, kicker, h1, intro, groups, crumbs, titl
 # ------------------------------------------------------------------ sitemap
 CORE_PAGES = [
     ("/", "1.0"),
-    ("/masterclass.html", "0.9"),
+    ("/en-vivo.html", "0.9"),          # /masterclass.html redirige aquí
     ("/aprende-conmigo.html", "0.9"),
-    ("/curso-en-vivo.html", "0.9"),
     ("/asesoria.html", "0.8"),
     ("/estudio-factibilidad.html", "0.7"),
     ("/portafolio", "0.6"),

@@ -382,6 +382,14 @@ def section_html(sec):
         return "<h3>%s</h3>" % esc(sec["h3"]) + "".join(para(esc(p)) for p in sec["p"])
     if "callout" in sec:
         return '<div class="callout">%s</div>' % esc(sec["callout"])
+    if "carrusel" in sec:
+        # carrusel de Instagram deslizable: {"carrusel": "/assets/blog/<slug>", "n": 8, "alt": "...", "nota": "..."}
+        base, n, alt = sec["carrusel"], sec.get("n", 8), sec.get("alt", "Carrusel")
+        imgs = "".join('<img src="%s/%02d.jpg" alt="%s · lámina %d de %d" width="720" height="900" loading="lazy">'
+                       % (base, i, esc(alt), i, n) for i in range(1, n + 1))
+        nota = sec.get("nota", "Desliza para ver todas las láminas →")
+        return ('<figure class="carrusel"><div class="carrusel-track">%s</div>'
+                '<figcaption>%s</figcaption></figure>') % (imgs, esc(nota))
     return ""
 
 

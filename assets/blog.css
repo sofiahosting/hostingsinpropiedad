@@ -278,3 +278,16 @@ article blockquote {
 .blog-footer a { color: var(--sky-light); }
 .blog-footer .links a { margin-right: 18px; }
 .blog-footer .brand { font-family: "Playfair Display", serif; font-size: 18px; color: var(--white); }
+
+/* ---------- Carrusel de Instagram dentro del artículo ---------- */
+.carrusel { margin: 28px 0 32px; }
+.carrusel-track {
+  display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding-bottom: 10px; -webkit-overflow-scrolling: touch;
+}
+.carrusel-track img {
+  flex: 0 0 78%; max-width: 360px; height: auto; aspect-ratio: 4 / 5;
+  border-radius: 14px; scroll-snap-align: start;
+  box-shadow: 0 6px 18px rgba(30, 63, 94, .14);
+}
+.carrusel figcaption { font-size: 13.5px; color: var(--mid); margin-top: 6px; }

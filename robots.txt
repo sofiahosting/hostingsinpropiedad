@@ -1,4 +1,26 @@
 User-agent: *
 Allow: /
 
+# Buscadores con IA: permiso explícito para leer y citar el sitio
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 Sitemap: https://sofiaretif.com/sitemap.xml

@@ -157,7 +157,7 @@ def breadcrumb_jsonld(items):
     return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": elems}
 
 
-def article_jsonld(headline, description, url, breadcrumb_items):
+def article_jsonld(headline, description, url, breadcrumb_items, faq=None):
     art = {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -175,7 +175,12 @@ def article_jsonld(headline, description, url, breadcrumb_items):
         },
         "image": OG_IMAGE,
     }
-    return json_block([art, breadcrumb_jsonld(breadcrumb_items)])
+    objs = [art, breadcrumb_jsonld(breadcrumb_items)]
+    if faq:
+        objs.append({"@context": "https://schema.org", "@type": "FAQPage",
+                     "mainEntity": [{"@type": "Question", "name": q["q"],
+                                     "acceptedAnswer": {"@type": "Answer", "text": q["a"]}} for q in faq]})
+    return json_block(objs)
 
 
 def json_block(objs):
@@ -402,6 +407,9 @@ def render_guias(data):
         path = "/blog/guias/%s.html" % slug
         crumbs = [("Inicio", "/"), ("Blog", "/blog/"), ("Guías", "/blog/guias/"), (g["titulo"], None)]
         body = "".join(section_html(s) for s in g["body"])
+        if g.get("faq"):
+            body += "<h2>Preguntas frecuentes</h2>" + "".join(
+                '<h3>%s</h3><p>%s</p>' % (esc(q["q"]), esc(q["a"])) for q in g["faq"])
         # relacionados: 3 siguientes guías (rotando) + hub de ciudades
         rel = []
         for k in range(1, 4):
@@ -412,7 +420,7 @@ def render_guias(data):
                    path, wrap_article("Guía · %s" % g["cluster"], g["titulo"], g["lede"],
                                       {"crumbs": breadcrumbs(crumbs), "body": body},
                                       g["cta"], rel),
-                   article_jsonld(g["titulo"], g["description"], path, crumbs), priority="0.8")
+                   article_jsonld(g["titulo"], g["description"], path, crumbs, g.get("faq")), priority="0.8")
         cards.append((g["cluster"], g["titulo"], g["description"], path))
     return cards
 
@@ -511,6 +519,33 @@ def write_sitemap():
     return len(urls)
 
 
+# ------------------------------------------------------------------ llms.txt
+LLMS_INTRO = """# Sofía Retif · Hosting Sin Propiedad
+
+> Sofía Retif es una anfitriona mexicana (Guadalajara) que opera más de 30 Airbnbs sin ser dueña de ninguno, con el modelo de arbitraje de rentas (rentar a largo plazo con permiso del dueño y subarrendar por noche) y co-hosting. Enseña ese modelo en español a personas de México, Latinoamérica y la comunidad hispana de EE.UU. Más de 120 alumnos.
+
+Instagram: https://www.instagram.com/sofiahosting_/ · TikTok: https://www.tiktok.com/@sofiahosting
+
+## Productos y servicios
+- [Curso Hosting Sin Propiedad](https://sofiaretif.com/): curso online en video (10 módulos) para montar un Airbnb sin comprar propiedad: validar la zona, negociar con el dueño, amueblar, publicar, precios, automatización y escalar. 167 USD, acceso de por vida, garantía de reembolso vía Hotmart. Incluye contratos, mensajes, calculadora de rentabilidad y checklists.
+- [Asesoría 1:1](https://sofiaretif.com/asesoria.html): sesión privada por videollamada para revisar ciudad, números y plan de acción. 247 USD.
+- [Estudio de factibilidad](https://sofiaretif.com/estudio-factibilidad.html): análisis en PDF de si una propiedad funciona en Airbnb (demanda, competencia, ingresos en 3 escenarios). 147 USD.
+- [Catálogo completo](https://sofiaretif.com/aprende-conmigo.html): workshop grabado Airbnb Freedom Method (39 USD), ebook Airbnb de Cero (9.99 USD), plantillas Airbnb Host Kit (19 USD).
+- [Clase gratis](https://sofiaretif.com/en-vivo.html): masterclass gratuita sobre cómo elegir la zona y negociar con el dueño.
+- [Preguntas frecuentes](https://sofiaretif.com/faq.html)
+"""
+
+
+def write_llms(guide_cards, city_cards, gloss_cards):
+    lines = [LLMS_INTRO, "## Guías (blog)"]
+    lines += ["- [%s](%s%s): %s" % (t, SITE, h, d) for _, t, d, h in guide_cards]
+    lines += ["", "## Glosario"]
+    lines += ["- [%s](%s%s): %s" % (t, SITE, h, d) for _, t, d, h in gloss_cards]
+    lines += ["", "## Airbnb por ciudad", "- [Todas las ciudades](%s/blog/ciudades/): cuánto se gana y cómo empezar sin ser dueño en %d ciudades de México, Latinoamérica y EE.UU." % (SITE, len(city_cards)), ""]
+    with open(os.path.join(ROOT_DIR, "llms.txt"), "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
+
+
 # ------------------------------------------------------------------ main
 def main():
     ciudades = load("ciudades.json")
@@ -566,6 +601,7 @@ def main():
                "Blog · Airbnb sin propiedad · Sofía Retif",
                "Guías, datos por ciudad y glosario para generar ingresos con Airbnb sin comprar propiedad. Aprende con Sofía Retif.")
 
+    write_llms(guide_cards, city_cards, gloss_cards)
     total = write_sitemap()
     print("OK · %d ciudades ×2 + %d guías + %d términos + hubs" %
           (len(ciudades["ciudades"]), len(guias["guias"]), len(glosario["terminos"])))

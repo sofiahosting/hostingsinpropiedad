@@ -39,7 +39,7 @@ FAVICON = ("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMj
 # Enlaces oficiales a productos (NO inventar otros)
 LINKS = {
     "curso":       "https://pay.hotmart.com/N101179190K",
-    "masterclass": "/masterclass.html",
+    "masterclass": "/#guia",   # 19-nov-2026: ya no hay masterclass; el CTA gratis es la guía (Brevo)
     "bootcamp":    "/curso-en-vivo.html",
     "asesoria":    "/asesoria.html",
     "aprende":     "/aprende-conmigo.html",
@@ -48,11 +48,11 @@ LINKS = {
 # Bloques de CTA reutilizables (hacia páginas de venta)
 CTA = {
     "masterclass": {
-        "h":   "Aprende el modelo completo en mi masterclass gratis",
-        "p":   "Te muestro paso a paso cómo generar ingresos con Airbnb sin comprar propiedad, y cómo saber si es rentable en tu ciudad.",
-        "btn": "Reservar mi lugar gratis",
+        "h":   "Descarga gratis mi guía para empezar",
+        "p":   "Cómo empezar en Airbnb sin tener ninguna propiedad: qué es el arbitraje, los 5 pasos y los errores que debes evitar.",
+        "btn": "Quiero la guía gratis",
         "href": LINKS["masterclass"],
-        "small": "Clase en vivo · 100% gratis",
+        "small": "PDF gratis · descarga inmediata",
     },
     "curso": {
         "h":   "Da el primer paso con mi curso",
@@ -486,7 +486,6 @@ def render_hub(rel_path, canonical_path, kicker, h1, intro, groups, crumbs, titl
 # ------------------------------------------------------------------ sitemap
 CORE_PAGES = [
     ("/", "1.0"),
-    ("/en-vivo.html", "0.9"),          # /masterclass.html redirige aquí
     ("/aprende-conmigo.html", "0.9"),
     ("/asesoria.html", "0.8"),
     ("/estudio-factibilidad.html", "0.7"),
@@ -534,7 +533,7 @@ Instagram: https://www.instagram.com/sofiahosting_/ · TikTok: https://www.tikto
 - [Asesoría 1:1](https://sofiaretif.com/asesoria.html): sesión privada por videollamada para revisar ciudad, números y plan de acción. 247 USD.
 - [Estudio de factibilidad](https://sofiaretif.com/estudio-factibilidad.html): análisis en PDF de si una propiedad funciona en Airbnb (demanda, competencia, ingresos en 3 escenarios). 147 USD.
 - [Catálogo completo](https://sofiaretif.com/aprende-conmigo.html): workshop grabado Airbnb Freedom Method (39 USD), ebook Airbnb de Cero (9.99 USD), plantillas Airbnb Host Kit (19 USD).
-- [Clase gratis](https://sofiaretif.com/en-vivo.html): masterclass gratuita sobre cómo elegir la zona y negociar con el dueño.
+- [Guía gratis](https://sofiaretif.com/#guia): PDF gratuito "Cómo empezar en Airbnb sin tener ninguna propiedad" (qué es el arbitraje, los 5 pasos y errores comunes).
 - [Preguntas frecuentes](https://sofiaretif.com/faq.html)
 """
 

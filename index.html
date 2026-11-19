@@ -2254,6 +2254,8 @@ function openWaitlist() {
   document.getElementById('waitlistModal').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
+// sofiaretif.com/#guia abre directo la guía gratis (enlaces del blog y de páginas viejas)
+if (location.hash === '#guia') { window.addEventListener('load', function(){ openWaitlist(); }); }
 function closeModal() {
   document.getElementById('waitlistModal').classList.remove('open');
   document.body.style.overflow = '';

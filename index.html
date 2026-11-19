@@ -2215,15 +2215,16 @@ document.addEventListener('click',function(e){
       <h3 class="modal-title">¿Todavía no te decides?</h3>
       <p class="modal-sub">Déjame tu correo y obtén <strong>acceso inmediato</strong> a mi <strong>guía gratuita</strong> para empezar en el arbitraje de Airbnb.</p>
 
-      <form id="mc-waitlist-form" action="https://sofiaretif.us8.list-manage.com/subscribe/post?u=b6e40ec0a713bd6b97f9d4422&amp;id=273eed67f7&amp;f_id=006fdae1f0" method="post" target="mc-waitlist-iframe">
-        <input class="modal-input" type="text" name="FNAME" placeholder="Tu nombre" required>
+      <!-- CONECTADO A BREVO: formulario "Web - Guía gratis (página principal)".
+           Guarda en "Lead magnet - Guía gratis" (#6) y la principal (#3); entrar a la #6 arranca
+           "Lead magnet GUÍA (página web) - 2 correos" (excluye a quien ya está en Dueño o es cliente). -->
+      <form id="mc-waitlist-form" action="https://0e5f1ede.sibforms.com/serve/MUIFAFXs4j9_fRntAXMw7rpAxcjbu2aJ7PVoJSrLe-xC5c6_xdRi_5Phl5WFUuOOaKS1DHY0bf7XQsM38duy7F36rNqDsBnQQWXIi0JlBth3HmlcFbe_JNRq_WjM_3upI9IUXNzAyw2QuXDxWD5_Zb1exVTZKBT71PrikO8IfARXXAS_y0obqO0OJHqOTxAP9v9OiFuUVgTP5GP8kQ==" method="post" target="mc-waitlist-iframe">
+        <input class="modal-input" type="text" name="NOMBRE" placeholder="Tu nombre" required maxlength="200">
         <input class="modal-input" type="email" name="EMAIL" placeholder="Tu correo electrónico" required>
-        <!-- Hidden field to identify lead magnet subscribers -->
-        <input type="hidden" name="MMERGE3" value="lead magnet">
-        <!-- Etiqueta automatica en Mailchimp: tag "guia" (id 866011) -->
-        <input type="hidden" name="tags" value="866011">
+        <input type="hidden" name="locale" value="es">
+        <input type="hidden" name="html_type" value="simple">
         <div style="position:absolute;left:-5000px;" aria-hidden="true">
-          <input type="text" name="b_b6e40ec0a713bd6b97f9d4422_273eed67f7" tabindex="-1" value="">
+          <input type="text" name="email_address_check" tabindex="-1" value="" autocomplete="off">
         </div>
         <!-- Consent checkbox -->
         <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:1rem;background:var(--beige);border-radius:10px;padding:12px 14px;text-align:left;">
@@ -2260,7 +2261,7 @@ function closeModal() {
 function handleWaitlist(e) {
   const form = document.getElementById('mc-waitlist-form');
   const email = form.querySelector('[name="EMAIL"]').value;
-  const fname = form.querySelector('[name="FNAME"]').value;
+  const fname = form.querySelector('[name="NOMBRE"]').value;
   if (!email || !email.includes('@')) { e.preventDefault(); alert('Por favor ingresa un email válido.'); return; }
   if (!fname.trim()) { e.preventDefault(); alert('Por favor ingresa tu nombre.'); return; }
   setTimeout(() => {
